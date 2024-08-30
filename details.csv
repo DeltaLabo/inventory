@@ -1,0 +1,9 @@
+code,type,subtype,manufacturer,model,description,info
+TERM09CM,heat shrink tubing,9cm wide,,,9cm wide heat shrink tubing; black,
+TERM20MM,heat shrink tubing,20mm diameter,WOER,RSFR-H,20mm diameter; 125 degC 
+TERM25MM,heat shrink tubing,25mm diameter,CONINCA,VW-1,20mm diameter; 125 degC 
+SPAC1865,electrochemical cell spacer,for 18650,,,spacer for 18650 electrochemical cells
+NIBTSTRP,nickel plated battery strip,8mm wide,,,nickel plated battery strip,
+4S40ABMS,battery management system, 16.8V 40A 4S Lithium BMS,,,,,
+
+SEEDE5LO,development board,with LoRa radio,Seeed,LoRa-E5,a LoRa development kit powered by ARM(R) Cortex(R)- M4 Core and Semtech(R) SX126X,
