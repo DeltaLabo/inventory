@@ -1,9 +1,13 @@
 code,type,subtype,manufacturer,model,description,info
 TERM09CM,heat shrink tubing,9cm wide,,,9cm wide heat shrink tubing; black,
-TERM20MM,heat shrink tubing,20mm diameter,WOER,RSFR-H,20mm diameter; 125 degC 
-TERM25MM,heat shrink tubing,25mm diameter,CONINCA,VW-1,20mm diameter; 125 degC 
-SPAC1865,electrochemical cell spacer,for 18650,,,spacer for 18650 electrochemical cells
+TERM20MM,heat shrink tubing,20mm diameter,WOER,RSFR-H,20mm diameter; 125 degC,
+TERM25MM,heat shrink tubing,25mm diameter,CONINCA,VW-1,20mm diameter; 125 degC,
+SPAC1865,electrochemical cell spacer,for 18650,,,spacer for 18650 electrochemical cells,
 NIBTSTRP,nickel plated battery strip,8mm wide,,,nickel plated battery strip,
-4S40ABMS,battery management system, 16.8V 40A 4S Lithium BMS,,,,,
-
-SEEDE5LO,development board,with LoRa radio,Seeed,LoRa-E5,a LoRa development kit powered by ARM(R) Cortex(R)- M4 Core and Semtech(R) SX126X,
+4S40ABMS,battery management system, 16.8V 40A 4S Lithium BMS,,,,
+BUCKP50W,converter board,buck; CC/CV,Atnsinc,XL4015,buck converter; CV/CV; 3.5A 50W,
+SEEDE5LO,development board,ARM M4,Seeed,LoRa-E5,a LoRa development kit powered by ARM(R) Cortex(R)- M4 Core and Semtech(R) SX126X,
+INA219I2,sensor board,INA219,Generic,INA219,voltage current and power sensor; 0-26V; 0-3.2A,
+NUCLEO64,development board,STM32L073,ST,NUCLEO-L073RZ,Arm Cortex M0+; STM32L073,
+STM8AF52,development board,
+STM8AL3L,development board
