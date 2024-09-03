@@ -11,3 +11,7 @@ INA219I2,sensor board,INA219,Generic,INA219,voltage current and power sensor; 0-
 NUCLEO64,development board,STM32L073,ST,NUCLEO-L073RZ,Arm Cortex M0+; STM32L073,
 STM8AF52,development board,
 STM8AL3L,development board
+MSP432P4,development board,MSP432P401R,Texas Instruments,MSP-EXP432P401R,Launchpad development kit 32-bit Low-Power + Performance MCU,
+MSP430BL,development board,MSP430-BSL,OLIMEX,MSP430-BSL,MSP-BSL Bootloader (BSL) Programmer for MSP40(TM) and SimpleLink(TM) MSP432(TM) Microcontrollers,
+SHEKGEMG,development board,SHIELD,OLIMEX,SHIELDS-EKG/EMG,Extension module for Olimex ARDUINO compatible boards,Suitable for electrocardiography and electromyography monitoring and data collection
+ARDMEGA3,development board,Arduino Mega,ARDUINO,Arduino Mega 2560 Rev3,Microcontroller board based on the ATmega2560,
