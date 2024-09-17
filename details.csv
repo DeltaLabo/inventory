@@ -6,7 +6,7 @@ SPAC1865,electrochemical cell spacer,for 18650,,,spacer for 18650 electrochemica
 NIBTSTRP,nickel plated battery strip,8mm wide,,,nickel plated battery strip,
 4S40ABMS,battery management system, 16.8V 40A 4S Lithium BMS,,,,
 BUCKP50W,converter board,buck; CC/CV,Atnsinc,XL4015,buck converter; CV/CV; 3.5A 50W,
-SEEDE5LO,development board,ARM M4,Seeed,LoRa-E5,a LoRa development kit powered by ARM(R) Cortex(R)- M4 Core and Semtech(R) SX126X,
+SEEDE5LO,development board,ARM M4,Seeed,LoRa-E5,a LoRa development kit powered by ARM(R) Cortex(R)-M4 Core and Semtech(R) SX126X,
 INA219I2,sensor board,INA219,Generic,INA219,voltage current and power sensor; 0-26V; 0-3.2A,
 NUCLEO64,development board,STM32L073,ST,NUCLEO-L073RZ,Arm Cortex M0+; STM32L073,
 STM8AF52,development board,
@@ -14,4 +14,8 @@ STM8AL3L,development board
 MSP432P4,development board,MSP432P401R,Texas Instruments,MSP-EXP432P401R,Launchpad development kit 32-bit Low-Power + Performance MCU,
 MSP430BL,development board,MSP430-BSL,OLIMEX,MSP430-BSL,MSP-BSL Bootloader (BSL) Programmer for MSP40(TM) and SimpleLink(TM) MSP432(TM) Microcontrollers,
 SHEKGEMG,development board,SHIELD,OLIMEX,SHIELDS-EKG/EMG,Extension module for Olimex ARDUINO compatible boards,Suitable for electrocardiography and electromyography monitoring and data collection
-ARDMEGA3,development board,Arduino Mega,ARDUINO,Arduino Mega 2560 Rev3,Microcontroller board based on the ATmega2560,
+ARDMEGA3,development board,Arduino Mega,ARDUINO,Arduino Mega 2560 Rev3,Microcontroller dev board based on the ATmega2560,
+UNOR4MIN,development board,Arduino Uno,ARDUINO,Arduino Uno R4 Minima,Microcontroller dev board based on the RENESAS R7FA4M1AB3CFM 48 MHz Arm(R) Cortex(R)-M4,
+ESP32ELE,development board,ELEGOO ESP32,ELEGOO,EL-SM-012,Microcontroller dev board based on the ESP-WROOM-32,
+BMP280DB,sensor board,BMP280,GY,GY-BMP280,Absolute barometric pressure sensor; temperature sensor,
+
