@@ -18,4 +18,13 @@ ARDMEGA3,development board,Arduino Mega,ARDUINO,Arduino Mega 2560 Rev3,Microcont
 UNOR4MIN,development board,Arduino Uno,ARDUINO,Arduino Uno R4 Minima,Microcontroller dev board based on the RENESAS R7FA4M1AB3CFM 48 MHz Arm(R) Cortex(R)-M4,
 ESP32ELE,development board,ELEGOO ESP32,ELEGOO,EL-SM-012,Microcontroller dev board based on the ESP-WROOM-32,
 BMP280DB,sensor board,BMP280,GY,GY-BMP280,Absolute barometric pressure sensor; temperature sensor,
+TCTK1200,sensor,type K thermocouple,Generic,BBIMS0-M4,Type K thermocouple; 0-200 degC; 12000mm wire; M4 screw thread,
+MAX31851,sensor board,type K thermocouple amplifier,Generic,QS2016039,MAX31855; one input,
+MAX31852,sensor board,type K thermocouple amplifier,QiFEi,,MAX31855; one input,
+MAX31858,sensor board,type K thermocouple amplifier,whizoo,MAX31855x8,MAX31855; eight inputs,
+MAX66751,sensor board,type K thermocouple amplifier,Generic,MAX6675,MAX6675; one input,
+HCSR0400,sensor board,ultrasonic sensor, Generic, HC-SR04,Ultrasonic Sensor; 2400cm range; 5V power supply; 30 deg measuring angle
+MBOTFC00,sensor board,limit switch sensor, Generic, Makerbot.com, Limit Switch made by MakerBot.com
+SNA00000,sensor, Water level sensor, Generic,,,
+ACS71200,sensor board, current sensor, Generic, ACS712, Hall Effect-based linear current sensor; 5V power supply; +-30 A range; 66mV/A sensitivity
 
