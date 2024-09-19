@@ -7,10 +7,10 @@ NIBTSTRP,nickel plated battery strip,8mm wide,,,nickel plated battery strip,
 4S40ABMS,battery management system, 16.8V 40A 4S Lithium BMS,,,,
 BUCKP50W,converter board,buck; CC/CV,Atnsinc,XL4015,buck converter; CV/CV; 3.5A 50W,
 SEEDE5LO,development board,ARM M4,Seeed,LoRa-E5,a LoRa development kit powered by ARM(R) Cortex(R)-M4 Core and Semtech(R) SX126X,
-INA219I2,sensor board,INA219,Generic,INA219,voltage current and power sensor; 0-26V; 0-3.2A,
+INA219SS,sensor board,INA219,Generic,INA219,voltage current and power sensor; 0-26V; 0-3.2A,
 NUCLEO64,development board,STM32L073,ST,NUCLEO-L073RZ,Arm Cortex M0+; STM32L073,
-STM8AF52,development board,
-STM8AL3L,development board
+STM8AF52,development board,,,,,
+STM8AL3L,development board,,,,,
 MSP432P4,development board,MSP432P401R,Texas Instruments,MSP-EXP432P401R,Launchpad development kit 32-bit Low-Power + Performance MCU,
 MSP430BL,development board,MSP430-BSL,OLIMEX,MSP430-BSL,MSP-BSL Bootloader (BSL) Programmer for MSP40(TM) and SimpleLink(TM) MSP432(TM) Microcontrollers,
 SHEKGEMG,development board,SHIELD,OLIMEX,SHIELDS-EKG/EMG,Extension module for Olimex ARDUINO compatible boards,Suitable for electrocardiography and electromyography monitoring and data collection
@@ -23,8 +23,16 @@ MAX31851,sensor board,type K thermocouple amplifier,Generic,QS2016039,MAX31855; 
 MAX31852,sensor board,type K thermocouple amplifier,QiFEi,,MAX31855; one input,
 MAX31858,sensor board,type K thermocouple amplifier,whizoo,MAX31855x8,MAX31855; eight inputs,
 MAX66751,sensor board,type K thermocouple amplifier,Generic,MAX6675,MAX6675; one input,
-HCSR0400,sensor board,ultrasonic sensor, Generic, HC-SR04,Ultrasonic Sensor; 2400cm range; 5V power supply; 30 deg measuring angle
-MBOTFC00,sensor board,limit switch sensor, Generic, Makerbot.com, Limit Switch made by MakerBot.com
-SNA00000,sensor, Water level sensor, Generic,,,
-ACS71200,sensor board, current sensor, Generic, ACS712, Hall Effect-based linear current sensor; 5V power supply; +-30 A range; 66mV/A sensitivity
-
+HCSR0400,sensor board,ultrasonic sensor,Generic,HC-SR04,Ultrasonic Sensor; 2400cm range; 5V power supply; 30 deg measuring angle,
+MBOTFC00,sensor board,limit switch sensor,Generic,Makerbot.com,Limit Switch made by MakerBot.com,
+SNA00000,sensor,water level sensor,Generic,,,
+ACS71200,sensor board,current sensor,Generic,ACS712,Hall Effect-based linear current sensor; 5V power supply; +-30 A range; 66mV/A sensitivity,
+YL069000,sensor,YL-69 moisture sensor,Generic,YL-69,Moisture Sensor,
+YL038000,sensor board,for YL-69 moisture sensor,Generic,YL-38,Board of the Moisture sensor YL-69,
+ARDNANO0,development board,Arduino Nano,Generic,Arduino Nano mega32bp,Microcontroller dev board based on mega32BP,
+ITG0MPU0,sensor board,Inertial Measuring Unit,Generic,MPU-6050,,
+VL53LO1X,sensor board,Time of flight,Generic,VL53L0/XV2,Time of flight sensor; laser sensor,
+SMAMTM6I,radio accessories,SMA coax cable,TUOLNK,X002VLR7ZN,SMA male to SMA male coax cable,
+SMAFTUF1,radio accessories,SMA coax cable,TUOLNK,X002Y5I1IN,SMA female to UFL IPX 30cm,
+SMAFTUF2,radio accessories,SMA coax cable,TUOLNK,X002Y5I1IN,SMA female to UFL IPX 15cm,
+SMATUHF1,radio accessories,SMAf to UHF,TUOLNK,X002NE0XQ3,SMA female to UHF,
