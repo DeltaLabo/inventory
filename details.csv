@@ -35,4 +35,7 @@ VL53LO1X,sensor board,Time of flight,Generic,VL53L0/XV2,Time of flight sensor; l
 SMAMTM6I,radio accessories,SMA coax cable,TUOLNK,X002VLR7ZN,SMA male to SMA male coax cable,
 SMAFTUF1,radio accessories,SMA coax cable,TUOLNK,X002Y5I1IN,SMA female to UFL IPX 30cm,
 SMAFTUF2,radio accessories,SMA coax cable,TUOLNK,X002Y5I1IN,SMA female to UFL IPX 15cm,
-SMATUHF1,radio accessories,SMAf to UHF,TUOLNK,X002NE0XQ3,SMA female to UHF,
+SMATUHF1,radio accessories,SMAf to UHF,TUOLNK,X002NE0XQ3,SMA female to UHF,\
+ANTL900M,antenna,LoRa antenna 900MHz,Generic,,
+MCXJPCB0,radio accessories,RF Jack female connector,Generic,CONMCX002-SMD-T,
+ANTGSMFM,antenna,FM antenna 700-1800MHz,Generic,
