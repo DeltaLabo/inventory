@@ -35,4 +35,7 @@ VL53LO1X,sensor board,Time of flight,Generic,VL53L0/XV2,Time of flight sensor; l
 SMAMTM6I,radio accessories,SMA coax cable,TUOLNK,X002VLR7ZN,SMA male to SMA male coax cable,
 SMAFTUF1,radio accessories,SMA coax cable,TUOLNK,X002Y5I1IN,SMA female to UFL IPX 30cm,
 SMAFTUF2,radio accessories,SMA coax cable,TUOLNK,X002Y5I1IN,SMA female to UFL IPX 15cm,
+SMAFTUF3,radio accessories,SAM coax cable,MONO Wireless,MW-C-UJ-10-1,SMA female to UFL 10cm,
 SMATUHF1,radio accessories,SMAf to UHF,TUOLNK,X002NE0XQ3,SMA female to UHF,
+HELESPV3,development board,HELTEC ESP32,HELTEC,WiFi_LoRa_32_V3,Microcontroller dev board based on the ESP32,
+HELESPV2,development board,HELTEC ESP32,HELTEC,WiFi_LoRa_32_V2,Microcontroller dev board based on the ESP32,
