@@ -3,7 +3,7 @@ import pandas as pd
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
-    page_title='Detalles de cursos - CLIE - EIEM - TEC',
+    page_title='Inventario DeltaLAB',
 )
 
 
