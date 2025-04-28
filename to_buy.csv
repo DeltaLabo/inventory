@@ -3,6 +3,6 @@ development board,XIAOESP32C3,ESP,ESP32C3,XIAO ESP32S3 3PCS Pack- 2.4GHz WiFi BL
 development board,RF module,HOPERF,RFM95W,sx1276 Based RF Module 915Mhz Lora Ultra Long Range Transceiver,20,6000,https://a.co/d/2Vv4Q4w
 development board,4G module,Waveshare,SIM7600X,communication Module Multi-band Support 4G/3G/2G GNSS,10,45000,https://www.waveshare.com/sim7600g-h-4g-module.htm?sku=24011
 development board,GPS module,Walfront,UBX-G7020-KT,GPS Module 2.5m accuracy,10,15000,https://a.co/d/1QpNOC2
-sensor board, IMU module, Godiymodules, MCU-20948-001, 9-Axis 9DOF Motion sensor, 20, 6700, www.amazon.com/dp/B0D9XWSL41/
-actuator, Servo Motor, Smraza, SG90 9G, Micro Servo Metal Geared Motor, 10, 1400, www.amazon.com/dp/B07L2SF3R4/
-port, Male connector, SAMTEC, TMM-106-01-L-D-RA, Male to male connector 12 pins 90 degree angle, 75,906, https://www.tme.com/cl/es/details/tmm-106-01-l-d-ra/conectores-placa-placa/samtec/
+sensor board,IMU module,Godiymodules,MCU-20948-001,9-Axis 9DOF Motion sensor,20,6700, www.amazon.com/dp/B0D9XWSL41/
+actuator,Servo Motor,Smraza,SG90 9G,Micro Servo Metal Geared Motor,10,1400,www.amazon.com/dp/B07L2SF3R4/
+port,Male connector,SAMTEC,TMM-106-01-L-D-RA,Male to male connector 12 pins 90 degree angle,75,906,https://www.tme.com/cl/es/details/tmm-106-01-l-d-ra/conectores-placa-placa/samtec/
