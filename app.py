@@ -31,7 +31,7 @@ list = list.merge(locati, on='code', how='left')
 list.drop(columns=["info", "type", "subtype"], inplace=True)
 
 # 🔍 Campo de búsqueda por descripción
-search_term = st.text_input("Buscar por descripción")
+search_term = st.text_input("Search by description")
 
 # Filtrar por término de búsqueda si se ingresó algo
 if search_term:
