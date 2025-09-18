@@ -1,40 +1,42 @@
 import streamlit as st
 import pandas as pd
 
-# Set the title and favicon that appear in the Browser's tab bar.
-st.set_page_config(
-    page_title='Inventario DeltaLAB',
-)
+# Configuración de la página
+st.set_page_config(page_title='Inventario DeltaLAB')
 
-
+# Encabezado
 '''
 # Delta LAB
 #### Inventario
 Escuela de Ingeniería Electromecánica - Tecnológico de Costa Rica
 '''
 
+# Cargar datos
 detail = pd.read_csv("details.csv").fillna("")
 types = detail["type"].unique()
 locati = pd.read_csv("locations.csv").fillna("")
 
-type = st.selectbox(
-    'Type',
-    types
-)
+# Selección de tipo y subtipo
+type = st.selectbox('Type', types)
+subtypes = detail[detail["type"] == type]["subtype"].unique()
+subtype = st.selectbox('Subtype', subtypes)
 
-subtypes = detail[detail["type"]==type]["subtype"].unique()
+# Filtrar por tipo y subtipo
+list = detail[(detail["type"] == type) & (detail["subtype"] == subtype)]
 
-subtype = st.selectbox(
-    'Subtype',
-    subtypes
-)
-
-list = detail[(detail["type"]==type) & (detail["subtype"]==subtype)]
-
+# Unir con ubicaciones
 list = list.merge(locati, on='code', how='left')
 
-list.drop(columns=["info","type","subtype"],inplace=True)
+# Eliminar columnas innecesarias
+list.drop(columns=["info", "type", "subtype"], inplace=True)
 
+# 🔍 Campo de búsqueda por descripción
+search_term = st.text_input("Buscar por descripción")
+
+# Filtrar por término de búsqueda si se ingresó algo
+if search_term:
+    list = list[list["description"].str.contains(search_term, case=False, na=False)]
+
+# Mostrar resultados
 st.markdown("### Detalles:")
-
-st.dataframe(list,hide_index=True)  
+st.dataframe(list, hide_index=True)
