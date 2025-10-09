@@ -85,6 +85,7 @@ PITFTSCR,display/screens,TFT Screen,Adafruit,TFT+Touch,TFT and Touchscreen for R
 SP30X36P,power,solar cell,Uxcell,a17052600ux1661,Polycristal solar cell 30X36,,,
 SP110X95,power,solar panel,Generic,SB-2V550MA,Polycristal solar cell 110X95,,,
 SP130150,power,solar panel,Generic,AP130150MM,Polycristal solar cell 130X150,,,
+SP113210,power,solar panel,Generic,1627003155,Polycristal solar cell 113x210
 FACT24DC,power,power source,MEAN WELL,IRM-60-24ST,power source; 120-240VAC input to 24VDC output,,,
 ACVSM2AM,power,voltage sensor module,RAGUSO,ZMPT101B,voltage sensor module,2mA/2mA,,
 BUCKP50W,power,buck; CC/CV,Atnsinc,XL4015,buck converter; CV/CV; 3.5A 50W,,,
