@@ -119,7 +119,7 @@ STOPDINR,panel accessories,end stopper,PZRT,X003KWFELB,DIN rail blocks end stopp
 
 MG90STP0,actuator,servo,Tower Pro,MG90S,180 degrees;5V;1.8 kg/cm;0.1s/60 degrees,,,
 MSR13900,actuator,servo,Olimex,MSR139,360 degrees;5V;1.3 kg/cm;0.12s/60 degrees,,,
-S51SERVO,actuator,servo,SMRaza,S51,Micro servo of 9 g capacity,,,
+S51SERVO,actuator,servo,SMRaza,S51,180 degrees Micro servo of 9 g capacity,,,
 SG93R180,actuator,servo,Tower Pro,SG92R,Micro servo;180 degrees;3V to 6V DC
 DCACTMOT,actuator,motors,Generic,,DC motor varius sizes,,,
 
@@ -149,3 +149,10 @@ RTC3231R,real time clock,clock,Generic,DS3231,real time clock,,,
 PERFORA1,PCB accessories and modules,perforated plates,Generic,varies,perforated plates for general use
 MS5803PC,PCB accessories and modules,PCB for MS5803,Generic,,Controller PCB for the MS5803,,,
 SEGMEPCB,PCB accessories and modules,PCB for ML3915,WWZMDiB,,10 Segme el Indicator DIY kt FN,,,
+
+CSMD2.2U,SMD,capacitor,,,2.2 uF SMD capacitor,,,
+CSMD1.0N,SMD,capacitor,,,1nF SMD capacitor,,,
+RSM12.4K,SMD,resistor,,,12.04kOhm SMD resistor,,,
+RSM1.00W,SMD,resistor,,,ZERO ohm SMD resistor,,,
+DIO2.DIO,SMD,diodo,,,FG31 GP902 diodo,,,
+RSM.1001,SMD,resistor,,,1001ohm resistor,,,
