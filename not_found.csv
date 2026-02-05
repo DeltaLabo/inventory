@@ -5,6 +5,7 @@ R1KH7217,E,04,5,5
 MAX1044C,E,05,4,4
 INA219CS,E,07,4,4
 INA219SS,E,08,21,21 
+INA219SS,sensor board,INA219,Generic,INA219,voltage current and power sensor; 0-26V; 0-3.2A,,,
 ACVSM2AM,E,12,2,2
 M20Z9990,E,0,1,1
 ACM90707,E,0,6,6
@@ -14,3 +15,36 @@ C1NF7882,E,04,24,24
 
 
 FUSE0239,F,0,14,14
+STEENUBO,J,0,1,1
+STEEFLWA,J,0,1,1
+
+
+
+STEENUBO,fasteners,screws,,,Kit of stainless steel Nuts and Bolts kit of M2 and M3 Hex Head
+STEEFLWA,fasteners,flat washers,,,Kit of stainless steel Flat Washer Set M2 M2.5 M3 M4 M5 M6 M8 M10 M12,,,
+CONNECT,battery accessories,connectors,,T Connector,Nickel T form connection plate for batteries (including 18650 models)
+
+
+
+CAPT470U,passives,capacitor,KEMET,T5430477M016AHE020,tantalum capacitor 16V 470uF 2924 20%,470u,2924
+MAX1044C,passives,converter,MAXIM,MAX1044,switch-capacitor voltaje converter,,,
+CRCW0603,passives,resistor,Mouser Electronics,CRCW0603,1/10 watt 0 ohm,,,
+667ERA12,passives,resistor,Mouser Electronics,667-ERA,12.4k ohm,,,
+C22UFU81,passives,capacitor,Unknown, 815-1358, 2.2 uF,,,
+R1KH7217,passives,resistor,Rohs, 721-7741,1000 ohm,,,
+C1NF7882,passives,capacitor,Mouser Electronics, 788-2963, 1 nF,,,
+ACM90707,passives,filter,Rohs,916-4144,Countermeasure for power line noise,,,
+FUSE0239,passives,fuse,Unknown,523-4725,fuse for protection,,,
+
+
+NIBTSTRP,battery accessories,8mm nickel plated strip,,,nickel plated battery strip,,,
+4S40ABMS,battery accessories,battery management system,,,16.8V 40A 4S Lithium BMS,,,
+
+SEEDE5LO,development board,ARM M4,Seeed,LoRa-E5,a LoRa development kit powered by ARM(R) Cortex(R)-M4 Core and Semtech(R) SX126X,,,
+STM8AF52,development board,STM8AF52,ST,M8AF52,,,,
+STM8AL3L,development board,STM8AL3L,ST,M8AL3L,,,,
+
+
+Found
+HELESPV3,development board,board,HELTEC,HIIT-WB32LAF,development board for esp32,,,
+HELESPV2,development board,board,HELTEC,HIIT-WB32LAF,development board for esp32,,,
