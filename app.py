@@ -34,8 +34,15 @@ list.drop(columns=["info", "type", "subtype"], inplace=True)
 search_term = st.text_input("Search by description")
 
 # Filtrar por término de búsqueda si se ingresó algo
+#if search_term:
+#    list = list[list["description"].str.lower().str.contains(search_term)]
+
 if search_term:
-    list = list[list["description"].str.contains(search_term, case=False, na=False)]
+    # Crear una columna temporal con todas las columnas unidas en minúsculas
+    list = list[list.astype(str).apply(lambda row: " ".join(row).lower(), axis=1).str.contains(search_term.lower())]
+
+if list.empty:
+    st.warning("No se encontraron coincidencias")
 
 # Mostrar resultados
 st.markdown("### Detalles:")

@@ -73,6 +73,7 @@ SMARAPLU,radio accessories,SMA right angle plug,,,SMA rigth angle plug,,,
 XRDSRFN0,radio accessories,UHF coax cable,,,XRDS-RFN Male to axial Extension Cable,,,
 RFLINAMP,radio accessories,RF amplifier,Generic,,High power linear RF amplifier;SMA input/output;12V supply
 C05MODUL,radio accessories,Module Bluetooth,Generic,,Module Bluetooth CH-05
+SPRIANTE,radio accessories,antenna,Adafruit,4269,915 MHz spring antenna,,,
 
 HELESPV3,development board,HELTEC ESP32,HELTEC,WiFi_LoRa_32_V3,Microcontroller dev board based on the ESP32,,,
 HELESPV2,development board,HELTEC ESP32,HELTEC,WiFi_LoRa_32_V2,Microcontroller dev board based on the ESP32,,,
@@ -143,8 +144,7 @@ PIC16F87,PIC,PIC microcontroller,MICROCHIP,181798P,Fast switch,,,
 PIC16F17,PIC,PIC microcontroller,Microchip Technology,PIC16F1786,Fast switching,,,
 
 RFLORA12,transceiver board,RF Transceiver,HopeRF,sx1276,Radio frequency module based on LoRa1276,,,
-
-SPRIANTE,radio accessories,antenna,Adafruit,4269,915 MHz spring antenna,,,
+RFM69HCW,transceiver board,RF Transceiver,Adafruit,RFM69HCW,Radio transceiver development board 433 MHz ISP,,,
 
 ACS724IC,integrated circuit,current sensor,Allegro,ACS724KMATR-20AB-T,hall-effect-based current sensor IC SOIC16,20A,SOIC16,
 
@@ -160,6 +160,8 @@ PERFORA1,PCB accessories and modules,perforated plates,Generic,varies,perforated
 MS5803PC,PCB accessories and modules,PCB for MS5803,Generic,,Controller PCB for the MS5803,,,
 SEGMEPCB,PCB accessories and modules,PCB for ML3915,WWZMDiB,,10 Segme el Indicator DIY kt FN,,,
 TESTPOIN,PCB accessories and modules,Test points,Generic,,Test points for PCBs,,,
+TWOPINCN,PCB accessories and modules,Terminal Connectors,Generic,,2-pin PCB screw terminal block connector,,,
+
 
 CSMD2.2U,SMD,capacitor,,,2.2 uF SMD capacitor,,,
 CSMD1.0N,SMD,capacitor,,,1nF SMD capacitor,,,
@@ -168,4 +170,4 @@ RSM1.00W,SMD,resistor,,,ZERO ohm SMD resistor,,,
 DIO2.DIO,SMD,diodo,,,FG31 GP902 diodo,,,
 RSM.1001,SMD,resistor,,,1001ohm resistor,,,
 
-FILTERX0,Filer accessories,filter connector,DIGITEN,X0024AWJ7R,DIGITEN 2";FilterCompatible Component
+FILTERX0,Filter accessories,filter connector,DIGITEN,X0024AWJ7R,DIGITEN 2";FilterCompatible Component
