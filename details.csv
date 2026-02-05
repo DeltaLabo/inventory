@@ -156,3 +156,6 @@ RSM12.4K,SMD,resistor,,,12.04kOhm SMD resistor,,,
 RSM1.00W,SMD,resistor,,,ZERO ohm SMD resistor,,,
 DIO2.DIO,SMD,diodo,,,FG31 GP902 diodo,,,
 RSM.1001,SMD,resistor,,,1001ohm resistor,,,
+
+LIGHVEML,sensor board,light sensor,Adafruit,VEML7700,ambient light sensor lux units I2C,,,
+TESTPOIN,PCB accessories and modules,Test points,Generic,,Test points for PCBs,,,

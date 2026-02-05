@@ -1,0 +1,10 @@
+code,type,subtype,manufacturer,model,description,value,package,info
+
+TERM09CM,heat shrink tubing,9cm wide,,,9cm wide heat shrink tubing; black,,,
+
+CSMD2.2U,SMD,capacitor,,,2.2 uF SMD capacitor,,,
+CSMD1.0N,SMD,capacitor,,,1 nF SMD capacitor,,,
+RSM12.4K,SMD,resistor,,,12.4 kOhm SMD resistor,,,
+
+
+
