@@ -45,6 +45,7 @@ GPSMODUL,sensor board,GPS module,Walfront,VK2828U7G5LF,GPS Module,,,
 ICM20948,sensor board,ICM20948,ICM,20948,9 DoF Motion sensor (gyroscope compass accelerometer),,,
 YL069000,sensor board,YL-69 moisture sensor,Generic,YL-69,Board of the Moisture sensor YL-69,,,
 VIBRATOR,sensor board,Vibrator module,Generic,75537A,Vibrador
+LIGHVEML,sensor board,light sensor,Adafruit,VEML7700,ambient light sensor lux units I2C,,,
 
 POT10KLI,passives,variable resistor,Generic,RA30NASD100A,Rotary potentiometer;10KΩ,,,
 RESP1R00,passives,power resistor,Vishay,RH501R000FS03,wirewound power resistor;chassis mount,1,RH50,
@@ -158,6 +159,7 @@ RTC3231R,real time clock,clock,Generic,DS3231,real time clock,,,
 PERFORA1,PCB accessories and modules,perforated plates,Generic,varies,perforated plates for general use
 MS5803PC,PCB accessories and modules,PCB for MS5803,Generic,,Controller PCB for the MS5803,,,
 SEGMEPCB,PCB accessories and modules,PCB for ML3915,WWZMDiB,,10 Segme el Indicator DIY kt FN,,,
+TESTPOIN,PCB accessories and modules,Test points,Generic,,Test points for PCBs,,,
 
 CSMD2.2U,SMD,capacitor,,,2.2 uF SMD capacitor,,,
 CSMD1.0N,SMD,capacitor,,,1nF SMD capacitor,,,
