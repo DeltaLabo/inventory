@@ -171,3 +171,9 @@ DIO2.DIO,SMD,diodo,,,FG31 GP902 diodo,,,
 RSM.1001,SMD,resistor,,,1001ohm resistor,,,
 
 FILTERX0,Filter accessories,filter connector,DIGITEN,X0024AWJ7R,DIGITEN 2";FilterCompatible Component
+
+WASHES01,fasteners,washer assortment,,,box with assorted pressure washers of different sizes;1 box;;includes washers of 6;8;10;12 mm,,,
+JSTXHSET,PCB accessories and modules,JST XH assortment,,,4 boxes with JST XH connectors (2 3 4 and 5 pins);4 boxes;;includes connectors of 2;3;4;5 pins,,,
+SCREWSET,fasteners,sheetmetal screw assortment,,Philips pan head,self-tapping sheetmetal screw assortment kit;2 boxes;;includes multiple sizes of Philips pan head screws,,,
+CAPKIT01,passives,ceramic capacitor assortment,Longruner,,multilayer ceramic capacitor kit with 10 values;2 boxes;;includes assorted values of multilayer ceramic capacitors,,,
+CPOLYFIL,passives,polyester film capacitor assortment,,,polyester film capacitor kit;1 box;;includes assorted values of polyester film capacitors,,,
