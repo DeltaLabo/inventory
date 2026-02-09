@@ -1,7 +1,5 @@
 code,type,subtype,manufacturer,model,description,value,package,info
 
-
-
 SPAC1865,battery accessories,18650 cell spacer,,,spacer for 18650 electrochemical cells,,,
 NIBTSTRP,battery accessories,8mm nickel plated strip,,,nickel plated battery strip,,,
 BMS4S40A,battery accessories,battery management system,,1644_7-4S-40A,BMS for 4 batteries in serie for 16.8 V and 40 A maximum,,,
@@ -172,8 +170,15 @@ RSM.1001,SMD,resistor,,,1001ohm resistor,,,
 
 FILTERX0,Filter accessories,filter connector,DIGITEN,X0024AWJ7R,DIGITEN 2";FilterCompatible Component
 
-WASHES01,fasteners,washer assortment,,,box with assorted pressure washers of different sizes;1 box;;includes washers of 6;8;10;12 mm,,,
+WASHSETS,fasteners,washer assortment,,,box with assorted pressure washers of different sizes;1 box;;includes washers of 6;8;10;12 mm,,,
 JSTXHSET,PCB accessories and modules,JST XH assortment,,,4 boxes with JST XH connectors (2 3 4 and 5 pins);4 boxes;;includes connectors of 2;3;4;5 pins,,,
 SCREWSET,fasteners,sheetmetal screw assortment,,Philips pan head,self-tapping sheetmetal screw assortment kit;2 boxes;;includes multiple sizes of Philips pan head screws,,,
 CAPKIT01,passives,ceramic capacitor assortment,Longruner,,multilayer ceramic capacitor kit with 10 values;2 boxes;;includes assorted values of multilayer ceramic capacitors,,,
 CPOLYFIL,passives,polyester film capacitor assortment,,,polyester film capacitor kit;1 box;;includes assorted values of polyester film capacitors,,,
+FOURPINC,PCB accessories and modules,Terminal Connectors,Generic,,4-pin PCB screw terminal block connector,,,
+RESPWR1R,passives,power resistor,Royal,L253,1 Ohm 5 W power resistor,,,
+RESPW10K,passives,power resistor,Royal,L091,10 kOhm 5 W power resistor,,,
+RESIKIT1,passives,resistor,Generic,,kit of resistances,,,
+
+
+
