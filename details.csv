@@ -129,8 +129,6 @@ SRD5VDCS,actuator,Realy,SONGLE,SRD-05-VDC-SL-C,four realy module/30V DC/10A/,,,
 SRD5VDCS,actuator,Realy,SONGLE,SRD-05-VDC-SL-C,two realy module/30V DC/10A/,,,
 JQC3FF5V,actuator,Relay,Hf,JQC-3FF,one relay module/5V DC/10A to 277VAC/15A to 125VAC
 
-
-
 USBTR232,converter,USB converter,Waveshare,USB-RS232/485/TTL/UART,converter for USB to RS232/485/TTL or UART,,,
 USBTSERI,converter,USB converter,Waveshare,USB-4CH SERIAL,converter for USB to 4 serial channels,,,
 
@@ -160,7 +158,6 @@ SEGMEPCB,PCB accessories and modules,PCB for ML3915,WWZMDiB,,10 Segme el Indicat
 TESTPOIN,PCB accessories and modules,Test points,Generic,,Test points for PCBs,,,
 TWOPINCN,PCB accessories and modules,Terminal Connectors,Generic,,2-pin PCB screw terminal block connector,,,
 
-
 CSMD2.2U,SMD,capacitor,,,2.2 uF SMD capacitor,,,
 CSMD1.0N,SMD,capacitor,,,1nF SMD capacitor,,,
 RSM12.4K,SMD,resistor,,,12.04kOhm SMD resistor,,,
@@ -180,5 +177,19 @@ RESPWR1R,passives,power resistor,Royal,L253,1 Ohm 5 W power resistor,,,
 RESPW10K,passives,power resistor,Royal,L091,10 kOhm 5 W power resistor,,,
 RESIKIT1,passives,resistor,Generic,,kit of resistances,,,
 
+LEVERCON,connectors,lever wire connector assortment,Wago,221,assortment of lever wire connectors for splicing;1 box;;includes assorted Wago 221 lever connectors
+JOYSTCK1,sensor board,joystick module,,,joystick module for Arduino projects;1 piece;;includes X-Y axis control and push button,,,,
+RECTIMOD,power,power supply rectifier module,,,AC to DC rectifier power supply module;1 piece;;used for converting AC input to DC output,,,,
+MPX5500D,sensors,differential pressure sensor,NXP,MPX5500DP,differential pressure sensor for measuring air or fluid pressure;1 piece;;range up to 500 kPa,,,,
+NE555MOD,Integrated circuits,timer IC module,,NE555,NE555 timer IC on DIP8 adapter module;1 piece;;classic timer/oscillator IC mounted on DIP8 adapter for prototyping,,,,
+WCMCU333,sensor board,Inertial Measurement Unit,,,WCMCU-333 microcontroller module;1 piece;;general purpose MCU module for embedded projects,,,,
+IRF520MD,power,MOSFET driver module,,IRF520,IRF520 MOSFET module on board;1 piece;;used for controlling high‑power loads with microcontrollers,,,
+M31855K1,sensor board,thermocouple amplifier module,,M31855K,M31855K thermocouple amplifier for type K sensors;1 piece;;used for reading type K thermocouples with digital output,,,
+INMP441M,sensor board,digital MEMS microphone module,,INMP441,INMP441 I2S MEMS microphone module;1 piece;;used for audio input with microcontrollers and DSP projects,,,
+RPSENSEH,modules,Raspberry Pi Sense HAT,Raspberry Pi,Sense HAT,Raspberry Pi Sense HAT module with sensors and LED matrix;1 piece;;includes accelerometer gyroscope magnetometer temperature humidity pressure sensors and an 8x8 RGB LED matrix,,,
+STM8ADIS,modules,STM8A Discovery kit,STMicroelectronics,STM8A-DISCOVERY,STM8A Discovery evaluation board for STM8 microcontrollers;1 piece;;includes onboard debugger user LEDs push buttons and expansion headers
+RASPBPI4,modules,Raspberry Pi 4 Model B,Raspberry Pi,4B,Raspberry Pi 4 single board computer with quad core processor 4GB RAM HDMI USB and GPIO headers;1 piece;;used for embedded projects prototyping and general computing,
+ARGONCAS,accessories,Raspberry Pi case,Argon,One,Argon One aluminum case for Raspberry Pi 4;1 piece;;includes active cooling fan passive heatsink rear port layout power button and magnetic GPIO cover,
+CONNEC14,power,power entry module,Schurter,IEC C14,IEC C14 power entry module with switch and fuse;1 piece;;used for AC mains input connection in power supplies,
 
 
