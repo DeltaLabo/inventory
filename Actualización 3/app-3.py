@@ -43,7 +43,7 @@ else:
                 # Probar extensiones posibles
                 found = False
                 for ext in ["jpg", "png"]:
-                    image_url = f"https://raw.githubusercontent.com/DeltaLabo/inventary_pictures/main/inventory_images/{row['code']}.{ext}"
+                    image_url = f"https://raw.githubusercontent.com/DeltaLabo/inventary_pictures/main/inventory_images_ready/{row['code']}.{ext}"
                     response = requests.get(image_url)
                     if response.status_code == 200:
                         st.image(image_url, width=150)
