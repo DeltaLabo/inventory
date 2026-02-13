@@ -15,7 +15,6 @@ AABATTER,battery,AA batteries,PHILIPS,LR6 MIGNON,Power alkaline batteries/1.5 V
 IONBATTE,battery,ion Lithium batteries,,INR18650MJ1,Ion Lithium batteries/3200mAh/3.6V
 LITHIUMB,battery,ion Lithium batteries,,21700,4000mAh;3.7V,,,
 
-
 SEEDE5LO,development board,ARM M4,Seeed,LoRa-E5,a LoRa development kit powered by ARM(R) Cortex(R)-M4 Core and Semtech(R) SX126X,,,
 NUCLEO64,development board,STM32L073,ST,NUCLEO-L073RZ,Arm Cortex M0+/STM32L073,,,
 MSP432P4,development board,MSP432P401R,Texas Instruments,MSP-EXP432P401R,Launchpad development kit 32-bit Low-Power + Performance MCU,,,
@@ -44,6 +43,11 @@ ICM20948,sensor board,ICM20948,ICM,20948,9 DoF Motion sensor (gyroscope compass 
 YL069000,sensor board,YL-69 moisture sensor,Generic,YL-69,Board of the Moisture sensor YL-69,,,
 VIBRATOR,sensor board,Vibrator module,Generic,75537A,Vibrador
 LIGHVEML,sensor board,light sensor,Adafruit,VEML7700,ambient light sensor lux units I2C,,,
+JOYSTCK1,sensor board,joystick module,,,joystick module for Arduino projects;1 piece;;includes X-Y axis control and push button,,,
+WCMCU333,sensor board,Inertial Measurement Unit,,,WCMCU-333 microcontroller module;1 piece;;general purpose MCU module for embedded projects,,,
+M31855K1,sensor board,thermocouple amplifier module,,M31855K,M31855K thermocouple amplifier for type K sensors;1 piece;;used for reading type K thermocouples with digital output,,,
+INMP441M,sensor board,digital MEMS microphone module,,INMP441,INMP441 I2S MEMS microphone module;1 piece;;used for audio input with microcontrollers and DSP projects,,,
+
 
 POT10KLI,passives,variable resistor,Generic,RA30NASD100A,Rotary potentiometer;10KΩ,,,
 RESP1R00,passives,power resistor,Vishay,RH501R000FS03,wirewound power resistor;chassis mount,1,RH50,
@@ -54,6 +58,13 @@ RESBOOK0,passives,PCB resistor,PINGCON,JT1001,PINGCON SAMPLE BOOK,,,
 FUSE0239,passives,glass fuse,Unknown,523-4725,fuse for protection/4A/125V,,,
 FU101000,passives,glass fuse,Unknown,T3.75A 250V,3.75A/250V,,,
 SIBAFF05,passives,fuse,SIBA,70 172 40,FF 500mA/DMI 1000V
+CAPKIT01,passives,ceramic capacitor assortment,Longruner,,multilayer ceramic capacitor kit with 10 values;2 boxes;;includes assorted values of multilayer ceramic capacitors,,,
+CPOLYFIL,passives,polyester film capacitor assortment,,,polyester film capacitor kit;1 box;;includes assorted values of polyester film capacitors,,,
+RESPWR1R,passives,power resistor,Royal,L253,1 Ohm 5 W power resistor,,,
+RESPW10K,passives,power resistor,Royal,L091,10 kOhm 5 W power resistor,,,
+RESIKIT1,passives,resistor,Generic,,kit of resistances,,,
+POWPOTEC,passives,potentiometer,CTS,,CTS Potentiometers 25 ohms 20% round Lin,,,
+POWRE1R5,passives,power resistor,TE Connectivity,Wirewound, Wirewound resistors Through Hole 1.5 ohms 5% 300ppm 2
 
 
 SMAMTM6I,radio accessories,SMA coax cable,TUOLNK,X002VLR7ZN,SMA male to SMA male coax cable,,,
@@ -78,6 +89,8 @@ HELESPV2,development board,HELTEC ESP32,HELTEC,WiFi_LoRa_32_V2,Microcontroller d
 ARDNANO0,development board,Arduino Nano,Generic,Arduino Nano mega32bp,Microcontroller dev board based on mega32BP,,,
 ORPI3LTS,development board,Orange pi,Orange pi,Orange pi 3 LTS 2G,Allwinner H6;2GB RAM;8GB flash,,,
 XIAO32S3,development board,ESP32,XIAO,S3,XIAO microcontroller based on ESP32S3,,,
+STM8ADIS,development board,STM8A Discovery kit,STMicroelectronics,STM8A-DISCOVERY,STM8A Discovery evaluation board for STM8 microcontrollers;1 piece;;includes onboard debugger user LEDs push buttons and expansion headers
+RASPBPI4,development board,Raspberry Pi 4 Model B,Raspberry Pi,4B,Raspberry Pi 4 single board computer with quad core processor 4GB RAM HDMI USB and GPIO headers;1 piece;;used for embedded projects prototyping and general computing,
 
 
 DISP7SEG,display/screens,7 segment,Sparkfun,SFE-0012-DS,7 segment display,,,
@@ -98,6 +111,9 @@ LM2596DC,power,buck;CC/CV,Generic,LM2596,boost converter; CC/CV;3.5 and 30V at a
 XL4005DC,power,step down,Generic,4005,buck converter;input range 5V~32V DC; output 0.8 V~ 30V DC;5A max,,,
 STEPDOWN,power,step down(buck),Gneric,LM2596,step down;input range 4.5V to 40V; output range 1.25V to 35V DC
 SOSTATMO,power,solid state switchs,FQFER,SSR-40 DD,Solid State
+RECTIMOD,power,power supply rectifier module,,,AC to DC rectifier power supply module;1 piece;;used for converting AC input to DC output,,,
+CONNEC14,power,power entry module,Schurter,IEC C14,IEC C14 power entry module with switch and fuse;1 piece;;used for AC mains input connection in power supplies,
+IRF520MD,power,MOSFET driver module,,IRF520,IRF520 MOSFET module on board;1 piece;;used for controlling high‑power loads with microcontrollers,,,
 
 THTK1200,sensor,type K thermocouple,Generic,BBIMS0-M4,Type K thermocouple; 0-200 degC; 12000mm wire; M4 screw thread,,,
 SNA00000,sensor,water level sensor,Generic,,,,,
@@ -106,7 +122,10 @@ CSRESIST,sensor,current sensor,YAGEO,CRCW0603,3 watt 0.025 ohm Current Sense Res
 BATCAPVS,sensor,battery sensor,Unknown,Unknown,Bsttery capacity and voltage display and sensor,,,
 SENE201C,sensor,ph sensor,Thunder magnet,E-201-C,ph sensor for solutions,,,
 RFIDR522,sensor,RFID reader,MFRC522,RC5222,13.56 MHz RFID module;SPI;interface;supports MIFARE cards;3.3 V,,,
+MPX5500D,sensor,differential pressure sensor,NXP,MPX5500DP,differential pressure sensor for measuring air or fluid pressure;1 piece;;range up to 500 kPa,,,
 
+RTC3231R,electronic modules,clock,Generic,DS3231,real time clock,,,
+RPSENSEH,electronic modules,Raspberry Pi Sense HAT,Raspberry Pi,Sense HAT,Raspberry Pi Sense HAT module with sensors and LED matrix;1 piece;;includes accelerometer gyroscope magnetometer temperature humidity pressure sensors and an 8x8 RGB LED matrix,,,
 
 CABLEGLA,fasteners,cable glands,,,Kit with cable glands (water sealers) class IP68 size PG16 PG13.5 PG11 PG9 PG7
 TORNM234,fasteners,screws,SUTEMRIBOR,Screws,from M2 M3 and M4 size,,,
@@ -132,9 +151,10 @@ JQC3FF5V,actuator,Relay,Hf,JQC-3FF,one relay module/5V DC/10A to 277VAC/15A to 1
 USBTR232,converter,USB converter,Waveshare,USB-RS232/485/TTL/UART,converter for USB to RS232/485/TTL or UART,,,
 USBTSERI,converter,USB converter,Waveshare,USB-4CH SERIAL,converter for USB to 4 serial channels,,,
 
-
 M20Z9990,connectors,Mouser Electronics,M20-9990245, 5V-EXT 5V-INT,,,,
 CMM12PIN,connectors,pin angle connectors,SAMTEC,TMM-106-01-LD-RA,Connectors with 12 pins at a angle of 90°,,,
+LEVERCON,connectors,lever wire connector assortment,Wago,221,assortment of lever wire connectors for splicing;1 box;;includes assorted Wago 221 lever connectors
+HEADER50,connectors,rectangular header,Samtec,NPPN-252AFCN-RC 4,Rectangular connector 2-row 25x2 (50 pins),,,Right-angle termination
 
 PIC16F87,PIC,PIC microcontroller,MICROCHIP,181798P,Fast switch,,,
 PIC16F17,PIC,PIC microcontroller,Microchip Technology,PIC16F1786,Fast switching,,,
@@ -142,21 +162,21 @@ PIC16F17,PIC,PIC microcontroller,Microchip Technology,PIC16F1786,Fast switching,
 RFLORA12,transceiver board,RF Transceiver,HopeRF,sx1276,Radio frequency module based on LoRa1276,,,
 RFM69HCW,transceiver board,RF Transceiver,Adafruit,RFM69HCW,Radio transceiver development board 433 MHz ISP,,,
 
-ACS724IC,integrated circuit,current sensor,Allegro,ACS724KMATR-20AB-T,hall-effect-based current sensor IC SOIC16,20A,SOIC16,
-
 SPRINGKI,springs,compression,Dianruii,KP-051-300,Compression springs assortment kit,,,
 
-STEPMSHD,shield,Stepper Motor,,,Stepper motor shield for Arduino UNO,,,
-DATAMODU,shield,data module,Generic,,Data registration module for Arduino,,,
-PROTOSHI,shield,protoshield,Generic,,shield for prototypes;accessories for Arduino plates
-SHIELNET,shield,Ethernet shield,Generic,,Ethernet network expansion card for Arduino
-RTC3231R,real time clock,clock,Generic,DS3231,real time clock,,,
+STEPMSHD,shields and cases,Stepper Motor,,,Stepper motor shield for Arduino UNO,,,
+DATAMODU,shields and cases,data module,Generic,,Data registration module for Arduino,,,
+PROTOSHI,shields and cases,protoshield,Generic,,shield for prototypes;accessories for Arduino plates
+SHIELNET,shields and cases,Ethernet shield,Generic,,Ethernet network expansion card for Arduino
+ARGONCAS,shields and cases,Raspberry Pi case,Argon,One,Argon One aluminum case for Raspberry Pi 4;1 piece;;includes active cooling fan passive heatsink rear port layout power button and magnetic GPIO cover,
 
-PERFORA1,PCB accessories and modules,perforated plates,Generic,varies,perforated plates for general use
-MS5803PC,PCB accessories and modules,PCB for MS5803,Generic,,Controller PCB for the MS5803,,,
-SEGMEPCB,PCB accessories and modules,PCB for ML3915,WWZMDiB,,10 Segme el Indicator DIY kt FN,,,
-TESTPOIN,PCB accessories and modules,Test points,Generic,,Test points for PCBs,,,
-TWOPINCN,PCB accessories and modules,Terminal Connectors,Generic,,2-pin PCB screw terminal block connector,,,
+PERFORA1,PCB accessories,perforated plates,Generic,varies,perforated plates for general use
+MS5803PC,PCB accessories,PCB for MS5803,Generic,,Controller PCB for the MS5803,,,
+SEGMEPCB,PCB accessories,PCB for ML3915,WWZMDiB,,10 Segme el Indicator DIY kt FN,,,
+TESTPOIN,PCB accessories,Test points,Generic,,Test points for PCBs,,,
+TWOPINCN,PCB accessories,Terminal Connectors,Generic,,2-pin PCB screw terminal block connector,,,
+JSTXHSET,PCB accessories,JST XH assortment,,,4 boxes with JST XH connectors (2 3 4 and 5 pins);4 boxes;;includes connectors of 2;3;4;5 pins,,,
+FOURPINC,PCB accessories,Terminal Connectors,Generic,,4-pin PCB screw terminal block connector,,,
 
 CSMD2.2U,SMD,capacitor,,,2.2 uF SMD capacitor,,,
 CSMD1.0N,SMD,capacitor,,,1nF SMD capacitor,,,
@@ -165,31 +185,23 @@ RSM1.00W,SMD,resistor,,,ZERO ohm SMD resistor,,,
 DIO2.DIO,SMD,diodo,,,FG31 GP902 diodo,,,
 RSM.1001,SMD,resistor,,,1001ohm resistor,,,
 
-FILTERX0,Filter accessories,filter connector,DIGITEN,X0024AWJ7R,DIGITEN 2";FilterCompatible Component
+FILTERX0,Filter accessories,filter connector,DIGITEN,X0024AWJ7R,DIGITEN 2" FilterCompatible Component
 
 WASHSETS,fasteners,washer assortment,,,box with assorted pressure washers of different sizes;1 box;;includes washers of 6;8;10;12 mm,,,
-JSTXHSET,PCB accessories and modules,JST XH assortment,,,4 boxes with JST XH connectors (2 3 4 and 5 pins);4 boxes;;includes connectors of 2;3;4;5 pins,,,
 SCREWSET,fasteners,sheetmetal screw assortment,,Philips pan head,self-tapping sheetmetal screw assortment kit;2 boxes;;includes multiple sizes of Philips pan head screws,,,
-CAPKIT01,passives,ceramic capacitor assortment,Longruner,,multilayer ceramic capacitor kit with 10 values;2 boxes;;includes assorted values of multilayer ceramic capacitors,,,
-CPOLYFIL,passives,polyester film capacitor assortment,,,polyester film capacitor kit;1 box;;includes assorted values of polyester film capacitors,,,
-FOURPINC,PCB accessories and modules,Terminal Connectors,Generic,,4-pin PCB screw terminal block connector,,,
-RESPWR1R,passives,power resistor,Royal,L253,1 Ohm 5 W power resistor,,,
-RESPW10K,passives,power resistor,Royal,L091,10 kOhm 5 W power resistor,,,
-RESIKIT1,passives,resistor,Generic,,kit of resistances,,,
 
-LEVERCON,connectors,lever wire connector assortment,Wago,221,assortment of lever wire connectors for splicing;1 box;;includes assorted Wago 221 lever connectors
-JOYSTCK1,sensor board,joystick module,,,joystick module for Arduino projects;1 piece;;includes X-Y axis control and push button,,,
-RECTIMOD,power,power supply rectifier module,,,AC to DC rectifier power supply module;1 piece;;used for converting AC input to DC output,,,
-MPX5500D,sensors,differential pressure sensor,NXP,MPX5500DP,differential pressure sensor for measuring air or fluid pressure;1 piece;;range up to 500 kPa,,,
 NE555MOD,Integrated circuits,timer IC module,,NE555,NE555 timer IC on DIP8 adapter module;1 piece;;classic timer/oscillator IC mounted on DIP8 adapter for prototyping,,,
-WCMCU333,sensor board,Inertial Measurement Unit,,,WCMCU-333 microcontroller module;1 piece;;general purpose MCU module for embedded projects,,,
-IRF520MD,power,MOSFET driver module,,IRF520,IRF520 MOSFET module on board;1 piece;;used for controlling high‑power loads with microcontrollers,,,
-M31855K1,sensor board,thermocouple amplifier module,,M31855K,M31855K thermocouple amplifier for type K sensors;1 piece;;used for reading type K thermocouples with digital output,,,
-INMP441M,sensor board,digital MEMS microphone module,,INMP441,INMP441 I2S MEMS microphone module;1 piece;;used for audio input with microcontrollers and DSP projects,,,
-RPSENSEH,modules,Raspberry Pi Sense HAT,Raspberry Pi,Sense HAT,Raspberry Pi Sense HAT module with sensors and LED matrix;1 piece;;includes accelerometer gyroscope magnetometer temperature humidity pressure sensors and an 8x8 RGB LED matrix,,,
-STM8ADIS,modules,STM8A Discovery kit,STMicroelectronics,STM8A-DISCOVERY,STM8A Discovery evaluation board for STM8 microcontrollers;1 piece;;includes onboard debugger user LEDs push buttons and expansion headers
-RASPBPI4,modules,Raspberry Pi 4 Model B,Raspberry Pi,4B,Raspberry Pi 4 single board computer with quad core processor 4GB RAM HDMI USB and GPIO headers;1 piece;;used for embedded projects prototyping and general computing,
-ARGONCAS,accessories,Raspberry Pi case,Argon,One,Argon One aluminum case for Raspberry Pi 4;1 piece;;includes active cooling fan passive heatsink rear port layout power button and magnetic GPIO cover,
-CONNEC14,power,power entry module,Schurter,IEC C14,IEC C14 power entry module with switch and fuse;1 piece;;used for AC mains input connection in power supplies,
+INTCTBOX,Integrated circuits,IC box,,,IC box
+ACS724IC,integrated circuits,current sensor,Allegro,ACS724KMATR-20AB-T,hall-effect-based current sensor IC SOIC16,20A,SOIC16,
 
+PLUGEBD3,DIN accesories,plug-in bridge,Allen-Bradley,1492-EBD3,Plug-in bridge for terminal blocks  Two circuits,,DIN rail compatible,
+ENDS35MM,DIN accesories,din rail end support,Schneider Electric,NSYTRAABV35,End support for DIN rail E/NS 35 N,,,Plastic snap-on
+PLUGDWD3,DIN accesories,plug-in bridge,Allen-Bradley,1492-WD3,Plug-in bridge for terminal blocks Two circuits,,DIN rail compatible,
+PLUG20F3,DIN accesories,plug-in bridge,Allen-Bradley,1492-WTF3,Plug-in bridge for terminal blocks  Three circuits,,DIN rail compatible,
+ENDS35CH,DIN accesories,din rail end support,Chint,EW35,End support for DIN rail 35mm,,,Plastic snap-on
+TCOV500V,DIN accesories,terminal block end cover,Eaton,AC-UT-10,Terminal block end cover for DIN rail mounted terminal blocks,,,Plastic snap-on
+GNDN35MM,DIN accesories,ground terminal block,Woertz,3436/4V,Protective conductor terminal block for DIN rail 35mm,,,DIN rail compatible
+DINPLKIT,DIN accesories,Assembly Kit,,,DIN rail accessory mounting kit
+
+ORSERKIT,mechanical,o-ring kit,Universal Series,O-Ring Service Kit,Universal series O-ring service kit with assorted sizes,,,Assorted sealing rings
 
