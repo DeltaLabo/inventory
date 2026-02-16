@@ -47,7 +47,7 @@ JOYSTCK1,sensor board,joystick module,,,joystick module for Arduino projects;1 p
 WCMCU333,sensor board,Inertial Measurement Unit,,,WCMCU-333 microcontroller module;1 piece;;general purpose MCU module for embedded projects,,,
 M31855K1,sensor board,thermocouple amplifier module,,M31855K,M31855K thermocouple amplifier for type K sensors;1 piece;;used for reading type K thermocouples with digital output,,,
 INMP441M,sensor board,digital MEMS microphone module,,INMP441,INMP441 I2S MEMS microphone module;1 piece;;used for audio input with microcontrollers and DSP projects,,,
-
+INACVSEN,sensor board,current sensor,,INA219,current and voltage sensor I2C protocol 26 V 3.2 A continuos current (DC),,,
 
 POT10KLI,passives,variable resistor,Generic,RA30NASD100A,Rotary potentiometer;10KΩ,,,
 RESP1R00,passives,power resistor,Vishay,RH501R000FS03,wirewound power resistor;chassis mount,1,RH50,
