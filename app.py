@@ -57,11 +57,11 @@ else:
                 st.markdown(f"**Descripción:** {row['description']}")
 
                 # Mostrar ubicación solo si hay valor
-                if "location" in row and row["location"].strip() != "":
+                if "location" in row:
                     st.markdown(f"**Ubicación:** {row['location']}")
 
                 # Mostrar sublocalización solo si hay valor
-                if "sublocation" in row and row["sublocation"].strip() != "":
+                if "sublocation" in row:
                     st.markdown(f"**Sublocalización:** {row['sublocation']}")        
 
         st.markdown("---")
