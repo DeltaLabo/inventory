@@ -48,6 +48,8 @@ WCMCU333,sensor board,Inertial Measurement Unit,,,WCMCU-333 microcontroller modu
 M31855K1,sensor board,thermocouple amplifier module,,M31855K,M31855K thermocouple amplifier for type K sensors;1 piece;;used for reading type K thermocouples with digital output,,,
 INMP441M,sensor board,digital MEMS microphone module,,INMP441,INMP441 I2S MEMS microphone module;1 piece;;used for audio input with microcontrollers and DSP projects,,,
 INACVSEN,sensor board,current sensor,,INA219,current and voltage sensor I2C protocol 26 V 3.2 A continuos current (DC),,,
+AHBMP280,sensor board,temperature humidity and pressure sensor,,AHT20 + BMP2801,pressure humidity and temperature sensor,,,
+
 
 POT10KLI,passives,variable resistor,Generic,RA30NASD100A,Rotary potentiometer;10KΩ,,,
 RESP1R00,passives,power resistor,Vishay,RH501R000FS03,wirewound power resistor;chassis mount,1,RH50,
@@ -92,13 +94,11 @@ XIAO32S3,development board,ESP32,XIAO,S3,XIAO microcontroller based on ESP32S3,,
 STM8ADIS,development board,STM8A Discovery kit,STMicroelectronics,STM8A-DISCOVERY,STM8A Discovery evaluation board for STM8 microcontrollers;1 piece;;includes onboard debugger user LEDs push buttons and expansion headers
 RASPBPI4,development board,Raspberry Pi 4 Model B,Raspberry Pi,4B,Raspberry Pi 4 single board computer with quad core processor 4GB RAM HDMI USB and GPIO headers;1 piece;;used for embedded projects prototyping and general computing,
 
-
 DISP7SEG,display/screens,7 segment,Sparkfun,SFE-0012-DS,7 segment display,,,
 LCD16X20,display/screens,LCD 16x2,Sparkfun,ADM16.2K,Display 16x2,,,
 DISPLCD0,display/screens,LCD,Generic,1602A,Display,,,
 PITFTSCR,display/screens,TFT Screen,Adafruit,TFT+Touch,TFT and Touchscreen for Raspberry Pi 320x240 and 2.8",,,
 OLEDSCRE,display/screens,OLED Screen,SparkFun, 128X64,
-
 
 SP30X36P,power,solar cell,Uxcell,a17052600ux1661,Polycristal solar cell 30X36,,,
 SP110X95,power,solar panel,Generic,SB-2V550MA,Polycristal solar cell 110X95,,,
@@ -111,6 +111,8 @@ LM2596DC,power,buck;CC/CV,Generic,LM2596,boost converter; CC/CV;3.5 and 30V at a
 XL4005DC,power,step down,Generic,4005,buck converter;input range 5V~32V DC; output 0.8 V~ 30V DC;5A max,,,
 STEPDOWN,power,step down(buck),Gneric,LM2596,step down;input range 4.5V to 40V; output range 1.25V to 35V DC
 SOSTATMO,power,solid state switchs,FQFER,SSR-40 DD,Solid State
+SLSTAT25,power,solid state switchs,FPMOK,SSR-25 DA,Solid State
+
 RECTIMOD,power,power supply rectifier module,,,AC to DC rectifier power supply module;1 piece;;used for converting AC input to DC output,,,
 CONNEC14,power,power entry module,Schurter,IEC C14,IEC C14 power entry module with switch and fuse;1 piece;;used for AC mains input connection in power supplies,
 IRF520MD,power,MOSFET driver module,,IRF520,IRF520 MOSFET module on board;1 piece;;used for controlling high‑power loads with microcontrollers,,,
@@ -207,3 +209,5 @@ ORSERKIT,mechanical,o-ring kit,Universal Series,O-Ring Service Kit,Universal ser
 
 IMANEORD,magnet,neodymium,,,Small round neodymium magnets,,,
 IMANEORT,magnet,neodymium,,,Small rectangular neodymium magnets,,,
+
+HEATMK2B,pcb,heatbed,,MK2B,PCB Heatbed MK2B Dual Power supports 12V 24V,,,3D printer heated bed dual power
