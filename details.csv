@@ -112,10 +112,10 @@ XL4005DC,power,step down,Generic,4005,buck converter;input range 5V~32V DC; outp
 STEPDOWN,power,step down(buck),Gneric,LM2596,step down;input range 4.5V to 40V; output range 1.25V to 35V DC
 SOSTATMO,power,solid state switchs,FQFER,SSR-40 DD,Solid State
 SLSTAT25,power,solid state switchs,FPMOK,SSR-25 DA,Solid State
-
 RECTIMOD,power,power supply rectifier module,,,AC to DC rectifier power supply module;1 piece;;used for converting AC input to DC output,,,
 CONNEC14,power,power entry module,Schurter,IEC C14,IEC C14 power entry module with switch and fuse;1 piece;;used for AC mains input connection in power supplies,
 IRF520MD,power,MOSFET driver module,,IRF520,IRF520 MOSFET module on board;1 piece;;used for controlling high‑power loads with microcontrollers,,,
+TPS63020,power,step down converter module,Generic,TPS63020,Step up - step down converter module based on the TPS63020 IC;1 piece;;input voltage range 5.5V to 36V; output voltage adjustable from 1.2V to 30V;3A max,,,
 
 THTK1200,sensor,type K thermocouple,Generic,BBIMS0-M4,Type K thermocouple; 0-200 degC; 12000mm wire; M4 screw thread,,,
 SNA00000,sensor,water level sensor,Generic,,,,,
