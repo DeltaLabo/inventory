@@ -69,3 +69,6 @@ approved catalog, with "Crear nuevo…" text inputs for new choices. Render thes
 outside the submission form to refresh subtypes immediately, and clear the selected
 subtype when the type changes. New categories become shared choices only after
 the addition PR is merged; do not add a separate taxonomy service or database.
+Manufacturer on new additions is an optional searchable selectbox with
+`accept_new_options=True`, using approved nonempty manufacturer names as suggestions.
+Deduplicate suggestions case-insensitively without modifying existing catalog rows.

@@ -28,6 +28,8 @@ archivo principal. Los CSV se resuelven desde la ubicación del código.
   Para productos nuevos, Tipo y Subtipo son menús desplegables. Los subtipos dependen
   del tipo elegido. «Crear nuevo…» permite escribir un tipo o subtipo que aún no
   exista; se incorpora a las opciones al aprobar y fusionar el ingreso.
+  Fabricante es opcional y permite buscar entre los fabricantes existentes o escribir
+  uno nuevo y presionar Enter. Los fabricantes nuevos también se incorporan al aprobar el ingreso.
 - **Editar:** usa la misma contraseña de ingresos. Elegir un producto existente y
   corregir descripción, clasificación, fabricante, modelo u otras especificaciones.
   Activar «Corregir ubicación o cantidades» para corregir una ubicación concreta y

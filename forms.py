@@ -118,11 +118,18 @@ def addition_form(client, details, locations, password):
     with st.form("addition_form"):
         item = dict(classification)
         if existing_code is None:
-            for name, label in (
-                ("description", "Descripción"),
-                ("manufacturer", "Fabricante (opcional)"), ("model", "Modelo (opcional)"),
-            ):
-                item[name] = st.text_input(label, key=f"addition_field_{name}", max_chars=300)
+            item["description"] = st.text_input("Descripción", key="addition_field_description", max_chars=300)
+            manufacturers = {}
+            for value in sorted(set(details["manufacturer"]), key=lambda value: (value.casefold(), value)):
+                if value:
+                    manufacturers.setdefault(value.casefold(), value)
+            item["manufacturer"] = st.selectbox(
+                "Fabricante (opcional)", list(manufacturers.values()), index=None, accept_new_options=True,
+                placeholder="Buscá o escribí un fabricante",
+                help="Escribí para buscar entre los existentes. Si no aparece, escribí el nombre nuevo y presioná Enter.",
+                key="addition_field_manufacturer",
+            ) or ""
+            item["model"] = st.text_input("Modelo (opcional)", key="addition_field_model", max_chars=300)
         quantity = st.number_input("Cantidad que ingresa", min_value=1, max_value=1000000, step=1, key="addition_field_quantity")
         location = st.text_input("Caja / ubicación", key="addition_field_location", max_chars=80)
         sublocation = st.text_input("Compartimento", key="addition_field_sublocation", max_chars=80)

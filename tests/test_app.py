@@ -88,9 +88,15 @@ class AppTests(unittest.TestCase):
             app.radio[0].set_value("Ingresar").run()
             self.assertEqual(len(app.exception), 0)
             self.assertFalse(any("Código" in text.label for text in app.text_input))
+            manufacturer = app.selectbox(key="addition_field_manufacturer")
+            self.assertTrue(manufacturer.proto.accept_new_options)
+            self.assertIsNone(manufacturer.value)
+            self.assertIn("SONGLE", manufacturer.options)
+            self.assertEqual(len(manufacturer.options), len({value.casefold() for value in manufacturer.options}))
             app.selectbox(key="addition_field_type_choice").select("sensor").run()
             app.selectbox(key="addition_field_subtype_choice").select("Crear nuevo…").run()
             app.text_input(key="addition_field_new_subtype").set_value("light").run()
+            app.selectbox(key="addition_field_manufacturer").select("SONGLE")
             app.text_input(key="addition_field_description").set_value("Sensor nuevo")
             app.text_input(key="addition_field_location").set_value("A")
             app.text_input(key="addition_field_sublocation").set_value("01")
@@ -103,6 +109,7 @@ class AppTests(unittest.TestCase):
             app.button[0].click().run()
             self.assertEqual(len(app.exception), 0)
             propose.assert_called_once()
+            self.assertEqual(propose.call_args.args[1]["manufacturer"], "SONGLE")
             self.assertIn("Solicitud enviada", app.success[0].value)
             with self.assertRaises(KeyError):
                 app.session_state["addition_field_password"]
