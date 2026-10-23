@@ -8,7 +8,7 @@ from io import StringIO
 import re
 import secrets
 import string
-from urllib.parse import quote
+from urllib.parse import quote, urlsplit
 from uuid import UUID
 from zoneinfo import ZoneInfo
 
@@ -22,6 +22,10 @@ MOVEMENT_COLUMNS = (
     "person", "project", "available_after",
 )
 EDITABLE_FIELDS = tuple(name for name in DETAIL_COLUMNS if name != "code")
+PURCHASE_COLUMNS = (
+    "id", "timestamp", "description", "manufacturer", "model", "quantity",
+    "project", "person", "link", "notes",
+)
 
 
 def new_product_code(existing_codes, issued_at=None):
@@ -143,6 +147,54 @@ class GitHubInventory:
     def snapshot(self):
         sha = self.head()
         return parse_data(self.read_file("details.csv", sha), self.read_file("locations.csv", sha))
+
+    def purchase_snapshot(self):
+        text = self.read_file("purchase_requests.csv", self.head(), optional=True)
+        return read_rows(text, PURCHASE_COLUMNS)[1] if text is not None else []
+
+    def request_purchase(self, request_id, description, quantity, project, person, link,
+                         manufacturer="", model="", notes=""):
+        operation = UUID(request_id).hex
+        link = required(link, "Product link", 2000)
+        try:
+            url = urlsplit(link)
+            valid_link = (url.scheme in ("http", "https") and bool(url.hostname)
+                          and not url.username and not url.password
+                          and not any(c.isspace() for c in link))
+            url.port  # Reject malformed port numbers too.
+        except ValueError:
+            valid_link = False
+        if not valid_link:
+            raise ValueError("Product link must be a valid http:// or https:// URL without spaces or login details.")
+        expected = {
+            "id": operation, "description": required(description, "Description"),
+            "quantity": str(positive_integer(quantity)), "project": required(project, "Project"),
+            "person": required(person, "Requested by", 100), "link": link,
+        }
+        for name, value in (("manufacturer", manufacturer), ("model", model), ("notes", notes)):
+            expected[name] = required(value, name.title()) if str(value).strip() else ""
+        for attempt in range(3):
+            parent = self.head()
+            text = self.read_file("purchase_requests.csv", parent, optional=True)
+            columns, rows = read_rows(text, PURCHASE_COLUMNS) if text is not None else (list(PURCHASE_COLUMNS), [])
+            previous = next((row for row in rows if row["id"] == operation), None)
+            if previous:
+                if any(previous[key] != value for key, value in expected.items()):
+                    raise ValueError("This request was already recorded with different details. Start another purchase request.")
+                return operation
+            rows.append(dict.fromkeys(columns, "") | expected | {
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+            })
+            commit = self._commit(parent, {
+                "purchase_requests.csv": write_rows(columns, rows),
+            }, f"Record purchase request {operation}")
+            try:
+                self._request("PATCH", f"/git/refs/heads/{quote(self.branch, safe='/')}",
+                              payload={"sha": commit, "force": False})
+                return operation
+            except Conflict:
+                if attempt == 2:
+                    raise
 
     def _commit(self, parent, changes, message):
         commit = self._request("GET", f"/git/commits/{parent}")

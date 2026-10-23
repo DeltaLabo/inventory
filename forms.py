@@ -46,9 +46,11 @@ def show_completed(kind):
     if kind in ("addition", "edit"):
         st.success("Request submitted. Changes take effect after the pull request is approved and merged.")
         st.link_button("View pull request on GitHub", result)
+    elif kind == "purchase":
+        st.success("Purchase request recorded. It is now included in the quotation list.")
     else:
         st.success(f"Withdrawal recorded. Remaining after this withdrawal: {result}.")
-    button_label = {"addition": "Record another addition", "edit": "Edit another product", "withdrawal": "Record another withdrawal"}[kind]
+    button_label = {"addition": "Record another addition", "edit": "Edit another product", "withdrawal": "Record another withdrawal", "purchase": "Request another purchase"}[kind]
     if st.button(button_label):
         st.session_state.pop(f"{kind}_result", None)
         st.session_state.pop(f"{kind}_id", None)

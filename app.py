@@ -7,6 +7,7 @@ import streamlit as st
 from inventory import build_inventory, filter_inventory, load_data, validate_data
 from forms import addition_form, edit_form, settings, withdrawal_form
 from github_inventory import GitHubError, GitHubInventory
+from purchases import purchases
 
 
 ROOT = Path(__file__).resolve().parent
@@ -88,7 +89,7 @@ def main():
     except (OSError, ValueError, pd.errors.ParserError) as error:
         st.error(f"Could not load inventory: {error}")
         st.stop()
-    action = st.radio("What would you like to do?", ("Browse", "Add", "Edit", "Withdraw"), horizontal=True)
+    action = st.radio("What would you like to do?", ("Browse", "Add", "Edit", "Withdraw", "Purchases"), horizontal=True)
     if action == "Add":
         addition_form(client, details, locations, config["add_password"])
     elif action == "Edit":
@@ -100,6 +101,8 @@ def main():
         edit_form(client, details, locations, config["add_password"])
     elif action == "Withdraw":
         withdrawal_form(client, details, locations, config["withdraw_password"], live_data.clear)
+    elif action == "Purchases":
+        purchases(client, config)
     else:
         st.subheader("Inventory")
         if client and st.button("Refresh stock"):

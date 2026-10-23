@@ -33,6 +33,34 @@ Streamlit Cloud. CSV paths are resolved relative to the source files.
 - **Withdraw:** use the shared withdrawal password, select a product and its box
   and bag, and enter the quantity and person recording it. The balance and movement
   are saved immediately in one GitHub commit, without waiting for approval.
+- **Purchases:** view and download the full shared quotation list without a password.
+  To submit a request, use the same password as Withdraw. Requests are saved directly
+  in GitHub and appear in the shared list immediately, without a pull request.
+
+### Purchase requests and quotations
+
+Use **Purchases** to request items from Amazon, Temu, AliExpress, MicroJPM or any
+other supplier. **Description**, **Quantity requested**, **Project**, **Requested by**
+and **Product link** are required. Paste an HTTP or HTTPS link to the exact product
+or variant. Manufacturer, model/variant and specifications/notes are optional.
+Project is required for purchases even when it is implied by an inventory box.
+No additional secret is needed: **Withdrawal password** authorizes purchase requests.
+
+The full list keeps every request, its project, requester, quantity and product link.
+Requests for the same product remain separate so project allocations are retained.
+**Download full quotation list (CSV)** exports all requests with English column names,
+ready to open in a spreadsheet for quotation work. Links are clickable in the app.
+User-entered spreadsheet formulas are exported as text. **Refresh purchase list**
+fetches the latest GitHub list; reads otherwise use a 15-second cache. Saving a
+request clears that cache. The screen does not poll automatically.
+
+This records purchase requests, not orders, approvals or additions to physical stock.
+There is no automatic deletion or purchased-status workflow. Use **Request another
+purchase** after success. Retry the same form and data after an uncertain write;
+its UUID prevents duplicate requests. Concurrent submissions preserve one another.
+The CSV and requester/project information are public, like the inventory repository.
+The legacy `to_buy.csv` is independent and is not automatically imported, since its
+old rows lack project and requester information.
 
 For a new product, **Type** and **Subtype** are dropdowns populated from the approved
 catalog. Subtypes depend on the selected type. Choose **Create new…** to enter a
@@ -52,7 +80,7 @@ and bag are requested only when the product has no registered stock location yet
 **Recorded by** means the person adding units, making a withdrawal or requesting
 a correction. Enter a name or initials; this is not the item's owner or project
 owner. The password authorizes the operation, while this field records who did it.
-**Project or note** is optional. A project-specific box already identifies the
+**Project or note** on additions and withdrawals is optional. A project-specific box already identifies the
 project, so there is no need to repeat it. Names and notes are stored in the public
 repository; enter only the information needed for the record.
 
@@ -151,6 +179,9 @@ any merge conflict involving quantities.
   are nonnegative integers, with `available` no greater than `units`. Internal
   column names remain `location` and `sublocation` for compatibility.
 - `to_buy.csv`: an independent shopping list.
+- `purchase_requests.csv`: shared purchase requests with UUID, UTC timestamp,
+  description, manufacturer, model, quantity, required project and requester, product
+  link and optional notes. Saved directly to GitHub without changing inventory stock.
 - `smd.csv` and `not_found.csv`: auxiliary lists awaiting reconciliation. They keep
   their old references and are not imported automatically or used to change stock.
 - `usage_log.csv`: historical records retained as entered. They do not explain all
@@ -207,6 +238,9 @@ passwords, forms, approval, retries and concurrent withdrawals; category creatio
 manufacturer and box suggestions, nonblocking occupied-bag warnings, automatic
 restocking locations, random ID reservations, legacy searches/images, and provisional
 count warning compatibility.
+Purchase checks also cover required projects and links, use of the withdrawal
+password, full quotation exports, safe spreadsheet text, concurrent submissions,
+retry recovery, read failures and preservation of physical inventory.
 
 Use English for the interface, documentation and maintained descriptive inventory
 text. Preserve product identifiers, brands, links, physical box/bag labels and audit

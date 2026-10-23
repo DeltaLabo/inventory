@@ -81,6 +81,56 @@ class AppTests(unittest.TestCase):
         app.radio[0].set_value("Browse").run()
         self.assertEqual(len(app.dataframe), 1)
 
+    def test_purchase_uses_withdrawal_password_and_refreshes_full_list(self):
+        self.configure_forms()
+        row = {"id": "existing", "timestamp": "2026-10-22T12:00:00+00:00", "description": "Existing request",
+               "manufacturer": "", "model": "", "quantity": "1", "project": "Another project", "person": "Other intern",
+               "link": "https://example.com/item", "notes": ""}
+        with patch("github_inventory.GitHubInventory.purchase_snapshot", return_value=[row]), \
+             patch("github_inventory.GitHubInventory.request_purchase", return_value="saved") as submit:
+            app = self.open_app()
+            app.radio[0].set_value("Purchases").run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertEqual(app.dataframe[0].value["Project"].tolist(), ["Another project"])
+            app.text_input(key="purchase_field_description").set_value("New sensor")
+            app.text_input(key="purchase_field_project").set_value("Robot")
+            app.text_input(key="purchase_field_person").set_value("Intern")
+            app.text_input(key="purchase_field_link").set_value("https://example.com/sensor")
+            app.text_input(key="purchase_field_password").set_value("test-add")
+            next(button for button in app.button if button.label == "Add purchase request").click().run()
+            submit.assert_not_called()
+            self.assertEqual(app.error[0].value, "Incorrect password.")
+            app.text_input(key="purchase_field_password").set_value("test-take")
+            next(button for button in app.button if button.label == "Add purchase request").click().run()
+            self.assertEqual(len(app.exception), 0)
+            submit.assert_called_once()
+            self.assertEqual(submit.call_args.args[3:6], ("Robot", "Intern", "https://example.com/sensor"))
+            self.assertTrue(any("Purchase request recorded" in message.value for message in app.success))
+            with self.assertRaises(KeyError):
+                app.session_state["purchase_field_password"]
+
+    def test_public_purchase_list_is_available_without_secrets_but_submission_is_disabled(self):
+        app = self.open_app()
+        app.radio[0].set_value("Purchases").run()
+        self.assertEqual(len(app.exception), 0)
+        self.assertTrue(any("not enabled" in message.value for message in app.info))
+        self.assertEqual(len(app.text_input), 0)
+        self.assertEqual(len(app.get("download_button")), 1)
+
+    def test_purchase_read_failure_disables_form(self):
+        from github_inventory import GitHubError
+
+        self.configure_forms()
+        with patch("github_inventory.GitHubInventory.purchase_snapshot", side_effect=GitHubError("offline")):
+            from purchases import live_purchases
+            live_purchases.clear()
+            app = self.open_app()
+            app.radio[0].set_value("Purchases").run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertTrue(any("Could not load the purchase list" in message.value for message in app.error))
+            self.assertEqual(len(app.text_input), 0)
+            live_purchases.clear()
+
     def test_addition_requires_its_password_and_does_not_ask_for_code(self):
         self.configure_forms()
         with patch("github_inventory.GitHubInventory.propose_addition", return_value="https://github.com/DeltaLabo/inventory/pull/123") as propose:
@@ -227,7 +277,7 @@ class AppTests(unittest.TestCase):
         self.configure_forms()
         with patch("github_inventory.GitHubInventory.propose_edit", return_value="https://github.com/DeltaLabo/inventory/pull/124") as edit:
             app = self.open_app()
-            self.assertEqual(app.radio[0].options, ["Browse", "Add", "Edit", "Withdraw"])
+            self.assertEqual(app.radio[0].options, ["Browse", "Add", "Edit", "Withdraw", "Purchases"])
             app.radio[0].set_value("Edit").run()
             self.assertEqual(len(app.exception), 0)
             before = app.text_input(key="edit_field_description").value

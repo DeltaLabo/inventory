@@ -4,7 +4,8 @@ This is a small Streamlit inventory with public browsing, password-protected
 additions and edits via GitHub PR, and immediate withdrawals via atomic GitHub commits.
 Keep it simple: no separate database or server. `app.py` is the only application
 entry point; `inventory.py` has import-safe CSV helpers and validation,
-`forms.py` holds the three protected forms, and `github_inventory.py` handles GitHub.
+`forms.py` holds the inventory forms, `purchases.py` holds the purchase list/form
+and quotation export, and `github_inventory.py` handles GitHub.
 UI, messages, maintained descriptive inventory text and user documentation are English.
 Preserve identifiers, brand names, URLs, physical labels and historical audit entries.
 
@@ -39,7 +40,7 @@ while ambiguous/missing source data remain unresolved. Never fix these by guessi
 Keep network calls optional, bounded, and cached.
 Tests must mock GitHub; never submit real PRs or stock movements as a test.
 
-The top-level actions are Browse, Add, Edit, Withdraw. Edits reuse the
+The top-level actions are Browse, Add, Edit, Withdraw, Purchases. Edits reuse the
 addition password and propose changes on `inventory/edit-<id>` branches. Prefill the
 form and freeze its original snapshot until another product/location is selected.
 Compare only changed fields with the latest data before proposing an edit; preserve
@@ -92,8 +93,9 @@ Keep the internal CSV/API column names `location` and `sublocation` unchanged.
 Recorded by means the person who records an addition, performs a withdrawal, or
 submits an edit; it is not the owner of an item or project. The user accepted this
 purpose after clarification. Keep it on these forms unless explicitly changed.
-Project or note remains optional; a project-specific box already identifies the
-project, so users do not need to repeat it. Do not add project selection requirements.
+Project or note remains optional on inventory additions and withdrawals; a
+project-specific box already identifies the project. Purchase requests are different:
+the user explicitly requires Project on those, along with requester and product link.
 
 User workflow rule: different bags or physical characteristics mean independent
 records; similar legacy codes/names are never sufficient evidence to merge them.
@@ -113,3 +115,21 @@ as verified physical data. No overnight automation or additional work was reques
 English translation: keep legacy provisional-note detection for pending requests
 created before translation. Display all validation warnings in English. Do not
 translate entered audit history or change CSV/API field names as a language change.
+
+Purchases use the existing withdrawal password (INVENTORY_WITHDRAW_PASSWORD),
+never a new secret. Public users can view/download the complete quotation list;
+only submitting requires the password. Require description, positive integer
+quantity, Project, Requested by and a valid HTTP/HTTPS product URL without embedded
+login details. Manufacturer, model/variant and notes are optional. Accept any supplier;
+do not fetch user-supplied links. Preserve each request's project/person/quantity even
+when links match; never merge projects or guess missing legacy project information.
+Save purchase_requests.csv with UUID and UTC timestamp directly via an atomic,
+non-forced GitHub commit. Retry concurrent changes, and recover uncertain writes
+by the same request UUID without duplication or silently accepting changed details.
+Purchase requests never modify stock or place orders. No approval or completion
+workflow was requested. Legacy to_buy.csv stays independent; do not import it.
+CSV exports include all requests and protect spreadsheet cells from interpreting
+user-entered formulas. Purchase-list reads are cached 15 seconds, with manual refresh
+and invalidation after save. If the list cannot be read, disable purchase submission.
+Use mocked GitHub tests for validation, concurrency, uncertain writes, full export,
+password reuse and form behavior. Do not submit real requests as a test.
