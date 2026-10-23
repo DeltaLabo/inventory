@@ -72,11 +72,11 @@ the addition PR is merged; do not add a separate taxonomy service or database.
 Manufacturer on new additions is an optional searchable selectbox with
 `accept_new_options=True`, using approved nonempty manufacturer names as suggestions.
 Deduplicate suggestions case-insensitively without modifying existing catalog rows.
-Box/location on all additions is also a searchable selectbox with
+Box on new products or first-time stock entry is a searchable selectbox with
 `accept_new_options=True`, populated from nonempty approved stock locations.
 New boxes become shared suggestions after merging the addition. Preserve existing
 box labels and keep compartment entry separate.
-On additions, compartment is a nonnegative integer input. Place box and compartment
+When a new box/bag must be assigned, Bolsa is a nonnegative integer input. Place both
 outside the submission form so an existing-occupancy warning updates immediately.
 Check only the selected box, treating 01 and 1 as the same numeric compartment;
 preserve an existing label for CSV references. The warning never blocks submission:
@@ -87,3 +87,24 @@ there are several. Ask for a new location only if none exists yet. Reject a stal
 restock location in the backend instead of silently creating a different slot.
 Use Caja and Bolsa consistently in Spanish UI labels, messages and documentation.
 Keep the internal CSV/API column names `location` and `sublocation` unchanged.
+
+Responsable means the person who records an addition, performs a withdrawal, or
+submits an edit; it is not the owner of an item or project. The user accepted this
+purpose after clarification. Keep it on these forms unless explicitly changed.
+Proyecto o nota remains optional; a project-specific box already identifies the
+project, so users do not need to repeat it. Do not add project selection requirements.
+
+User workflow rule: different bags or physical characteristics mean independent
+records; similar legacy codes/names are never sufficient evidence to merge them.
+Conversely, different products can share a box/bag while keeping distinct IDs.
+
+Actualizar existencias only clears the 15-second read cache and fetches GitHub;
+it does not write balances or movements. There is no automatic polling. If the
+remote read fails, show local read-only data with a warning and disable write forms.
+
+Deployment was verified on Streamlit after secrets were configured by the user.
+Never request, reveal or commit those secrets as part of routine maintenance.
+Keep README aligned with implemented behavior and retain unresolved data warnings
+in Editar. All application changes through the Caja/Bolsa terminology update were
+pushed to main; do not treat the nine placeholder fichas or provisional relay counts
+as verified physical data. No overnight automation or additional work was requested.

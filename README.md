@@ -22,8 +22,8 @@ archivo principal. Los CSV se resuelven desde la ubicación del código.
 - **Consultar:** búsqueda y filtros sin contraseña. También permite descargar los
   resultados y consultar imágenes opcionales.
 - **Ingresar:** requiere la contraseña de ingresos. Elegir un producto nuevo o
-  más unidades de un producto existente; indicar cantidad, caja, bolsa y
-  responsable. Un producto nuevo recibe un ID automático permanente. La app crea
+  más unidades de un producto existente; indicar cantidad y responsable, y definir
+  caja y bolsa solo si todavía no están registradas. Un producto nuevo recibe un ID automático permanente. La app crea
   una pull request; las existencias se incorporan al aprobarla y **fusionarla**.
   Para productos nuevos, Tipo y Subtipo son menús desplegables. Los subtipos dependen
   del tipo elegido. «Crear nuevo…» permite escribir un tipo o subtipo que aún no
@@ -47,8 +47,20 @@ archivo principal. Los CSV se resuelven desde la ubicación del código.
   su caja y bolsa, indicar cantidad y responsable. El saldo y el movimiento se guardan
   inmediatamente en un único commit de GitHub, sin esperar aprobación.
 
-Los campos «Proyecto o nota» son opcionales. Los nombres o iniciales y las notas
+**Responsable** es quien registra el ingreso, hace el retiro o solicita la corrección;
+no es el dueño del producto ni del proyecto. Se indica nombre o iniciales para dejar
+constancia de quién registró el movimiento. Las contraseñas autorizan la operación;
+el campo Responsable documenta a la persona que la realizó.
+
+**Proyecto o nota** es opcional. Si la caja ya identifica el proyecto, no hace falta
+repetirlo. Los nombres o iniciales y las notas
 quedan en el repositorio público: usar únicamente la información necesaria.
+
+**Caja** identifica la caja y **Bolsa** el número de bolsa dentro de ella. Compartir
+caja y bolsa no fusiona productos: los módulos de 2 y 4 relés, por ejemplo, mantienen
+fichas e IDs diferentes aunque estén juntos. Las bolsas o características distintas
+se mantienen como registros independientes; el parecido entre códigos anteriores
+no demuestra que sean el mismo producto.
 
 No se permiten retiros de productos con códigos ambiguos, combinaciones de caja y bolsa duplicadas,
 saldos inválidos o cantidades insuficientes. Primero hay que conciliar esos datos.
@@ -59,8 +71,10 @@ El resto del inventario sigue disponible.
 Crear un token de GitHub de acceso detallado limitado a `DeltaLabo/inventory`, con
 permisos **Contents: Read and write** y **Pull requests: Read and write**. La cuenta
 propietaria del token debe tener acceso al repositorio y permiso para crear ramas,
-pull requests y actualizar la rama principal. Respetar las reglas de la organización;
-si `main` exige pull requests para todo cambio, los retiros directos no funcionarán
+pull requests, etiquetas de reserva de IDs y actualizar la rama principal.
+No reemplazar el token por la deploy key del repositorio: la app usa la API de GitHub.
+Respetar las reglas de la organización: si `main` exige pull requests para todo
+cambio, los retiros directos no funcionarán
 con esas reglas y habrá que ajustar el despliegue o el flujo.
 
 En los ajustes de la app de Streamlit, sección **Secrets**, agregar:
@@ -84,7 +98,10 @@ No usar literalmente los ejemplos ni reutilizar la contraseña publicada antigua
 
 Sin token, la consulta usa los CSV locales y los formularios están deshabilitados.
 Con token, consulta la rama configurada de GitHub y mantiene una caché de 15 segundos.
-«Actualizar existencias» actualiza la consulta; un retiro exitoso invalida la caché.
+**Actualizar existencias** vuelve a consultar GitHub y evita la caché: no modifica
+cantidades ni registra movimientos. Un retiro exitoso también invalida la caché.
+Los 15 segundos son la vigencia de los datos guardados para la próxima consulta;
+la pantalla no se actualiza automáticamente en segundo plano.
 Si GitHub no responde, la consulta usa la copia local con aviso y deshabilita cambios.
 
 Si falla la conexión al guardar, reintentar el mismo formulario con los mismos datos:
@@ -130,8 +147,8 @@ retiros posteriores antes de aceptar la corrección.
 
 ## Actualizar datos
 
-- `details.csv`: fichas de productos. Conservar los códigos como texto, incluidos
-  sus ceros y puntos. Cada producto debe tener un código único.
+- `details.csv`: fichas de productos. Conservar los IDs como texto, sin renombrarlos
+  después de asignados. Cada producto debe tener un código único.
   `previous_code` es una referencia histórica opcional, no una identidad compartida:
   no usarla para fusionar fichas. Los productos nuevos dejan este campo vacío.
 - `locations.csv`: una fila por código, caja y bolsa. `units` es la
@@ -162,6 +179,17 @@ Confirmar físicamente las diferencias antes de renombrar códigos o asignar sal
 Cuando el usuario autoriza cantidades provisionales, la nota de la ficha comienza
 con `Conteo provisional:` y aparece en «Datos por revisar» hasta verificarla.
 
+### Pendientes de datos
+
+La migración de IDs no completa descripciones, especificaciones o existencias que
+no se conocen. Esas fichas continúan pendientes en Editar; no inventar datos para
+eliminar los avisos. Los registros sin caja ni bolsa conservan cantidades desconocidas.
+
+Los relés están en A / 12 con fichas independientes: `GPQM1026` es el módulo de 4
+relés, con 4 unidades provisionales, y `SINW1026` es el módulo de 2 relés, con 2
+unidades provisionales. El usuario autorizó ese reparto para avanzar; falta el
+conteo físico. Al confirmarlo, corregir los saldos y la nota `Conteo provisional:`.
+
 La app no escribe CSVs en el disco temporal de Streamlit. Los cambios se guardan
 por la API de GitHub. Los retiros revisan el saldo más reciente, afectan una sola
 caja y bolsa y reintentan ante cambios simultáneos, sin forzar el historial de Git.
@@ -187,7 +215,10 @@ python -m unittest discover -s tests -v
 Las versiones antiguas de la aplicación están en el historial de Git.
 
 Las pruebas usan un GitHub simulado; no publican registros ni modifican el inventario
-real. Cubren contraseñas, formularios, aprobación, reintentos y retiros simultáneos.
+real. Cubren contraseñas, formularios, aprobación, reintentos y retiros simultáneos;
+también la selección/creación de categorías, sugerencias de fabricante y caja,
+avisos de bolsa ocupada sin bloqueo, reposición en la bolsa ya registrada,
+IDs aleatorios con reservas y búsqueda/fotos mediante los códigos anteriores.
 
 Referencias de configuración: [Secrets de Streamlit](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/secrets-management),
 [árboles y commits de GitHub](https://docs.github.com/en/rest/git/trees),
