@@ -72,7 +72,7 @@ def browse(details, locations):
 def main():
     st.set_page_config(page_title="Delta LAB inventory", layout="wide")
     st.title("Delta LAB inventory")
-    st.caption("School of Electromechanical Engineering — Costa Rica Institute of Technology")
+    st.caption("Electromechanical Engineering School - Tecnológico de Costa Rica")
     config = settings()
     client = None
     try:
