@@ -70,8 +70,8 @@ def browse(details, locations):
 
 
 def main():
-    st.set_page_config(page_title="DeltaLAB Inventory", layout="wide")
-    st.title("Delta LAB")
+    st.set_page_config(page_title="Delta LAB inventory", layout="wide")
+    st.title("Delta LAB inventory")
     st.caption("School of Electromechanical Engineering — Costa Rica Institute of Technology")
     config = settings()
     client = None
