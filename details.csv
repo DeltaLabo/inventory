@@ -41,7 +41,6 @@ UVSENSOR,sensor board,UV sensor,SparkFun,AS7331,Spectral UV A-B-C sensor,,,
 GPSMODUL,sensor board,GPS module,Walfront,VK2828U7G5LF,GPS Module,,,
 ICM20948,sensor board,ICM20948,ICM,20948,9 DoF Motion sensor (gyroscope compass accelerometer),,,
 YL069000,sensor board,YL-69 moisture sensor,Generic,YL-69,Board of the Moisture sensor YL-69,,,
-VIBRATOR,sensor board,Vibrator module,Generic,75537A,Vibrador
 LIGHVEML,sensor board,light sensor,Adafruit,VEML7700,ambient light sensor lux units I2C,,,
 JOYSTCK1,sensor board,joystick module,,,joystick module for Arduino projects;1 piece;;includes X-Y axis control and push button,,,
 WCMCU333,sensor board,Inertial Measurement Unit,,,WCMCU-333 microcontroller module;1 piece;;general purpose MCU module for embedded projects,,,
