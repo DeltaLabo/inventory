@@ -115,6 +115,27 @@ def addition_form(client, details, locations, password):
         # Outside the form so subtypes update immediately when the type changes.
         classification = addition_classification(details)
         st.caption("Usá «Crear nuevo…» si falta una opción. Se incorpora al catálogo cuando se apruebe el ingreso.")
+    # These rerun independently so occupancy is visible before submission.
+    boxes = sorted({value for value in locations["location"] if value}, key=str.casefold)
+    location = st.selectbox(
+        "Caja / ubicación", boxes, index=None, accept_new_options=True,
+        placeholder="Buscá o escribí una caja",
+        help="Elegí una caja existente o escribí una nueva y presioná Enter. Se incorpora cuando se apruebe el ingreso.",
+        key="addition_field_location",
+    ) or ""
+    compartment = st.number_input(
+        "Compartimento", min_value=0, value=None, step=1,
+        placeholder="Número de compartimento", key="addition_field_sublocation",
+    )
+    sublocation = "" if compartment is None else str(compartment)
+    if location and compartment is not None:
+        numbers = locations["sublocation"].map(lambda value: int(value) if value.isascii() and value.isdigit() else None)
+        occupied = locations[locations["location"].eq(location) & numbers.eq(compartment)]
+        if not occupied.empty:
+            # Keep the existing spelling, e.g. 01, for exact CSV references.
+            own_stock = occupied[occupied["code"].eq(existing_code)]
+            sublocation = (own_stock if not own_stock.empty else occupied).iloc[0]["sublocation"]
+            st.warning(f"El compartimento {compartment} de la caja {location} ya tiene productos registrados. Podés continuar y guardar otro producto en la misma bolsa.")
     with st.form("addition_form"):
         item = dict(classification)
         if existing_code is None:
@@ -131,14 +152,6 @@ def addition_form(client, details, locations, password):
             ) or ""
             item["model"] = st.text_input("Modelo (opcional)", key="addition_field_model", max_chars=300)
         quantity = st.number_input("Cantidad que ingresa", min_value=1, max_value=1000000, step=1, key="addition_field_quantity")
-        boxes = sorted({value for value in locations["location"] if value}, key=str.casefold)
-        location = st.selectbox(
-            "Caja / ubicación", boxes, index=None, accept_new_options=True,
-            placeholder="Buscá o escribí una caja",
-            help="Elegí una caja existente o escribí una nueva y presioná Enter. Se incorpora cuando se apruebe el ingreso.",
-            key="addition_field_location",
-        ) or ""
-        sublocation = st.text_input("Compartimento", key="addition_field_sublocation", max_chars=80)
         person = st.text_input("Responsable (nombre o iniciales)", key="addition_field_person", max_chars=100)
         project = st.text_input("Proyecto o nota (opcional)", key="addition_field_project", max_chars=300)
         entered = st.text_input("Contraseña de ingresos", type="password", key="addition_field_password")

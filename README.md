@@ -32,6 +32,9 @@ archivo principal. Los CSV se resuelven desde la ubicación del código.
   uno nuevo y presionar Enter. Los fabricantes nuevos también se incorporan al aprobar el ingreso.
   Caja / ubicación permite buscar cajas existentes o escribir una nueva y presionar
   Enter. La caja nueva aparece entre las opciones al aprobar y fusionar el ingreso.
+  Compartimento es un número entero desde cero. Si ya hay productos en ese número
+  de la caja elegida, aparece un aviso antes de enviar. El aviso permite continuar:
+  distintos productos pueden compartir la misma bolsa sin fusionar sus fichas.
 - **Editar:** usa la misma contraseña de ingresos. Elegir un producto existente y
   corregir descripción, clasificación, fabricante, modelo u otras especificaciones.
   Activar «Corregir ubicación o cantidades» para corregir una ubicación concreta y

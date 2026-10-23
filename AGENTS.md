@@ -76,3 +76,8 @@ Box/location on all additions is also a searchable selectbox with
 `accept_new_options=True`, populated from nonempty approved stock locations.
 New boxes become shared suggestions after merging the addition. Preserve existing
 box labels and keep compartment entry separate.
+On additions, compartment is a nonnegative integer input. Place box and compartment
+outside the submission form so an existing-occupancy warning updates immediately.
+Check only the selected box, treating 01 and 1 as the same numeric compartment;
+preserve an existing label for CSV references. The warning never blocks submission:
+different product IDs may share a compartment and must not be merged.
