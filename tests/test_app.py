@@ -88,9 +88,10 @@ class AppTests(unittest.TestCase):
             app.radio[0].set_value("Ingresar").run()
             self.assertEqual(len(app.exception), 0)
             self.assertFalse(any("Código" in text.label for text in app.text_input))
+            app.selectbox(key="addition_field_type_choice").select("sensor").run()
+            app.selectbox(key="addition_field_subtype_choice").select("Crear nuevo…").run()
+            app.text_input(key="addition_field_new_subtype").set_value("light").run()
             app.text_input(key="addition_field_description").set_value("Sensor nuevo")
-            app.text_input(key="addition_field_type").set_value("sensor")
-            app.text_input(key="addition_field_subtype").set_value("light")
             app.text_input(key="addition_field_location").set_value("A")
             app.text_input(key="addition_field_sublocation").set_value("01")
             app.text_input(key="addition_field_person").set_value("Intern")
@@ -105,6 +106,32 @@ class AppTests(unittest.TestCase):
             self.assertIn("Solicitud enviada", app.success[0].value)
             with self.assertRaises(KeyError):
                 app.session_state["addition_field_password"]
+
+    def test_addition_can_create_type_and_subtype_and_resets_subtype_when_type_changes(self):
+        self.configure_forms()
+        with patch("github_inventory.GitHubInventory.propose_addition", return_value="https://github.com/DeltaLabo/inventory/pull/125") as propose:
+            app = self.open_app()
+            app.radio[0].set_value("Ingresar").run()
+            self.assertTrue(app.selectbox(key="addition_field_subtype_choice").disabled)
+            app.selectbox(key="addition_field_type_choice").select("actuator").run()
+            self.assertIn("servo", app.selectbox(key="addition_field_subtype_choice").options)
+            app.selectbox(key="addition_field_subtype_choice").select("servo").run()
+            app.selectbox(key="addition_field_type_choice").select("Crear nuevo…").run()
+            app.text_input(key="addition_field_new_type").set_value("Medición óptica").run()
+            self.assertIsNone(app.selectbox(key="addition_field_subtype_choice").value)
+            self.assertNotIn("servo", app.selectbox(key="addition_field_subtype_choice").options)
+            app.selectbox(key="addition_field_subtype_choice").select("Crear nuevo…").run()
+            app.text_input(key="addition_field_new_subtype").set_value("Fotómetros").run()
+            app.text_input(key="addition_field_description").set_value("Fotómetro de prueba")
+            app.text_input(key="addition_field_location").set_value("A")
+            app.text_input(key="addition_field_sublocation").set_value("01")
+            app.text_input(key="addition_field_person").set_value("Intern")
+            app.text_input(key="addition_field_password").set_value("test-add")
+            app.button[0].click().run()
+            self.assertEqual(len(app.exception), 0)
+            propose.assert_called_once()
+            self.assertEqual(propose.call_args.args[1]["type"], "Medición óptica")
+            self.assertEqual(propose.call_args.args[1]["subtype"], "Fotómetros")
 
     def test_withdrawal_requires_password_and_shows_receipt_without_resubmitting(self):
         self.configure_forms()

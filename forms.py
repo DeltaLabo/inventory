@@ -69,6 +69,29 @@ def product_label(row):
     return f"{description} · {row['code']}"
 
 
+def addition_classification(details):
+    create_new = "Crear nuevo…"
+    types = sorted({value for value in details["type"] if value}, key=str.casefold)
+    choice = st.selectbox("Tipo", [*types, create_new], index=None,
+                          placeholder="Elegí un tipo", key="addition_field_type_choice")
+    item_type = st.text_input("Nuevo tipo", max_chars=300, key="addition_field_new_type").strip() if choice == create_new else (choice or "")
+    # Reuse the spelling of a known type rather than introduce a case variant.
+    if choice == create_new:
+        item_type = next((value for value in types if value.casefold() == item_type.casefold()), item_type)
+    if st.session_state.get("addition_type_context") != item_type:
+        st.session_state.pop("addition_field_subtype_choice", None)
+        st.session_state.pop("addition_field_new_subtype", None)
+        st.session_state["addition_type_context"] = item_type
+    subtypes = sorted({value for value in details.loc[details["type"].eq(item_type), "subtype"] if value}, key=str.casefold)
+    subtype_choice = st.selectbox("Subtipo", [*subtypes, create_new], index=None,
+                                  placeholder="Elegí un subtipo", disabled=not item_type,
+                                  key="addition_field_subtype_choice")
+    subtype = st.text_input("Nuevo subtipo", max_chars=300, key="addition_field_new_subtype").strip() if subtype_choice == create_new else (subtype_choice or "")
+    if subtype_choice == create_new:
+        subtype = next((value for value in subtypes if value.casefold() == subtype.casefold()), subtype)
+    return {"type": item_type, "subtype": subtype}
+
+
 def addition_form(client, details, locations, password):
     st.subheader("Ingresar al inventario")
     st.caption("Completá los datos; el identificador se asigna automáticamente. El ingreso queda pendiente de aprobación.")
@@ -80,6 +103,7 @@ def addition_form(client, details, locations, password):
     request_id = operation_id("addition")
     mode = st.radio("¿Qué vas a ingresar?", ("Producto nuevo", "Más unidades de un producto existente"))
     existing_code = None
+    classification = {}
     if mode != "Producto nuevo":
         eligible = details[~details["code"].duplicated(keep=False)]
         if eligible.empty:
@@ -87,11 +111,15 @@ def addition_form(client, details, locations, password):
             return
         products = {row["code"]: product_label(row) for _, row in eligible.iterrows()}
         existing_code = st.selectbox("Producto", sorted(products, key=products.get), format_func=products.get)
+    else:
+        # Outside the form so subtypes update immediately when the type changes.
+        classification = addition_classification(details)
+        st.caption("Usá «Crear nuevo…» si falta una opción. Se incorpora al catálogo cuando se apruebe el ingreso.")
     with st.form("addition_form"):
-        item = {}
+        item = dict(classification)
         if existing_code is None:
             for name, label in (
-                ("description", "Descripción"), ("type", "Tipo"), ("subtype", "Subtipo"),
+                ("description", "Descripción"),
                 ("manufacturer", "Fabricante (opcional)"), ("model", "Modelo (opcional)"),
             ):
                 item[name] = st.text_input(label, key=f"addition_field_{name}", max_chars=300)

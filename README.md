@@ -25,6 +25,9 @@ archivo principal. Los CSV se resuelven desde la ubicación del código.
   más unidades de un producto existente; indicar cantidad, caja, compartimento y
   responsable. Un producto nuevo recibe un ID automático permanente. La app crea
   una pull request; las existencias se incorporan al aprobarla y **fusionarla**.
+  Para productos nuevos, Tipo y Subtipo son menús desplegables. Los subtipos dependen
+  del tipo elegido. «Crear nuevo…» permite escribir un tipo o subtipo que aún no
+  exista; se incorpora a las opciones al aprobar y fusionar el ingreso.
 - **Editar:** usa la misma contraseña de ingresos. Elegir un producto existente y
   corregir descripción, clasificación, fabricante, modelo u otras especificaciones.
   Activar «Corregir ubicación o cantidades» para corregir una ubicación concreta y

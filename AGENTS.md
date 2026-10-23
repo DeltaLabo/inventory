@@ -63,3 +63,9 @@ historical references and image fallback. Preserve it on edits. New products lea
 it blank. Never use it as a merge key; multiple distinct variants may share a legacy
 reference. Historical/auxiliary CSVs intentionally retain old references and are
 not authoritative stock sources. Complete stub descriptions only from user evidence.
+
+For new additions, Type and Subtype are dependent dropdowns populated from the
+approved catalog, with "Crear nuevo…" text inputs for new choices. Render these
+outside the submission form to refresh subtypes immediately, and clear the selected
+subtype when the type changes. New categories become shared choices only after
+the addition PR is merged; do not add a separate taxonomy service or database.
