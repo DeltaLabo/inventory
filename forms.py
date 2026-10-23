@@ -64,7 +64,8 @@ def show_completed(kind):
 
 
 def product_label(row):
-    description = row["description"] or row["model"] or row["subtype"] or "Descripción pendiente"
+    pending = f"Ficha pendiente ({row['previous_code']})" if row.get("previous_code") else "Descripción pendiente"
+    description = row["description"] or row["model"] or row["subtype"] or pending
     return f"{description} · {row['code']}"
 
 

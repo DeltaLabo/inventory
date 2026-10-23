@@ -1,212 +1,189 @@
-code,type,subtype,manufacturer,model,description,value,package,info
-
-SPAC1865,battery accessories,18650 cell spacer,,,spacer for 18650 electrochemical cells,,,
-NIBTSTRP,battery accessories,8mm nickel plated strip,,,nickel plated battery strip,,,
-BMS4S40A,battery accessories,battery management system,,1644_7-4S-40A,BMS for 4 batteries in serie for 16.8 V and 40 A maximum,,,
-BMS3S40A,battery accessories,battery management system,,1644_1-3S-40A,BMS for 3 batteries in serie for 12.6 V and 40 A maximum,,,
-CHARGERB,battery accessories,charger module type C,,,Lithium Battery Charger USB interface Fast Charging Board with protection circuit
-BPPBMS3S,battery accessories,battery protection plate,,,Battery protection plate 3S 25A;Li-ion 18650 BMS PCM with balance for battery cell pack
-
-ALKALINE,battery,alkaline batteries,several,,battery/diameter 32mm/1.5V,,,
-BTTERYSV,battery,alkaline batteries,several,,batteries/Carbon-Zinc/9V,,,
-BIGBATTE,battery,ion Lithium battery,Generic,LiFePO4,6000mAh/3.2V/diameter 32mm
-ALKBATTE,battery,AAA batteries,Kendal,LR03 AM4,alkaline batteries/1.5V 
-AABATTER,battery,AA batteries,PHILIPS,LR6 MIGNON,Power alkaline batteries/1.5 V
-IONBATTE,battery,ion Lithium batteries,,INR18650MJ1,Ion Lithium batteries/3200mAh/3.6V
-LITHIUMB,battery,ion Lithium batteries,,21700,4000mAh;3.7V,,,
-
-SEEDE5LO,development board,ARM M4,Seeed,LoRa-E5,a LoRa development kit powered by ARM(R) Cortex(R)-M4 Core and Semtech(R) SX126X,,,
-NUCLEO64,development board,STM32L073,ST,NUCLEO-L073RZ,Arm Cortex M0+/STM32L073,,,
-MSP432P4,development board,MSP432P401R,Texas Instruments,MSP-EXP432P401R,Launchpad development kit 32-bit Low-Power + Performance MCU,,,
-MSP430BL,development board,MSP430-BSL,OLIMEX,MSP430-BSL,MSP-BSL Bootloader (BSL) Programmer for MSP40(TM) and SimpleLink(TM) MSP432(TM) Microcontrollers,,,
-SHIELDEK,development board,SHIELD,OLIMEX,SHIELDS-EKG/EMG,Extension module for Olimex ARDUINO compatible boards,,,
-ARDMEGA3,development board,Arduino Mega,ARDUINO,Arduino Mega 2560 Rev3,Microcontroller dev board based on the ATmega2560,,,
-MEGADIN3,development board,Arduino Mega,ARDUINO,DIN Rail Module,Arduino Mega DIN module;2560;R3,,,
-UNOR4MIN,development board,Arduino Uno,ARDUINO,Arduino Uno R4 Minima,Microcontroller dev board based on the RENESAS R7FA4M1AB3CFM 48 MHz Arm(R) Cortex(R)-M4,,,
-ESP32ELE,development board,ELEGOO ESP32,ELEGOO,EL-SM-012,Microcontroller dev board based on the ESP-WROOM-32,,,
-STM32FBP,development board, STM32,STM,STM32,Microcontroller dev board based on the ARM Cortex-M3,,,
-
-
-BMP280SB,sensor board,BMP280,GY,GY-BMP280,Absolute barometric pressure sensor; temperature sensor,,,
-BME280SB,sensor board,BME280,GY,GY-BMEP,Absolute barometric pressure sensor; temperature sensor; humidity sensor,,,
-MAX31855,sensor board,type K thermocouple amplifier,QiFei or Generic,QS2016039,MAX31855; one input,,,
-MAX31858,sensor board,type K thermocouple amplifier,whizoo,MAX31855x8,MAX31855; eight inputs,,,
-MAX66751,sensor board,type K thermocouple amplifier,Generic,MAX6675,MAX6675; one input,,,
-HCSR0400,sensor board,ultrasonic sensor,Generic,HC-SR04,Ultrasonic Sensor/2400cm range/5V power supply/30 deg measuring angle,,,
-MBOTFC00,sensor board,limit switch sensor,Generic,Makerbot.com,Limit Switch made by MakerBot.com,,,
-ITG0MPU0,sensor board,Inertial Measuring Unit,Generic,MPU-6050,,,,
-VL53LO1X,sensor board,Time of flight,Generic,VL53L0/XV2,Time of flight sensor; laser sensor,,,
-ACS71200,sensor board,current sensor,Generic,ACS712,Hall Effect-based linear current sensor/5V power supply; +-30 A range; 66mV/A sensitivity,,,
-UVSENSOR,sensor board,UV sensor,SparkFun,AS7331,Spectral UV A-B-C sensor,,,
-GPSMODUL,sensor board,GPS module,Walfront,VK2828U7G5LF,GPS Module,,,
-ICM20948,sensor board,ICM20948,ICM,20948,9 DoF Motion sensor (gyroscope compass accelerometer),,,
-YL069000,sensor board,YL-69 moisture sensor,Generic,YL-69,Board of the Moisture sensor YL-69,,,
-LIGHVEML,sensor board,light sensor,Adafruit,VEML7700,ambient light sensor lux units I2C,,,
-JOYSTCK1,sensor board,joystick module,,,joystick module for Arduino projects;1 piece;;includes X-Y axis control and push button,,,
-WCMCU333,sensor board,Inertial Measurement Unit,,,WCMCU-333 microcontroller module;1 piece;;general purpose MCU module for embedded projects,,,
-M31855K1,sensor board,thermocouple amplifier module,,M31855K,M31855K thermocouple amplifier for type K sensors;1 piece;;used for reading type K thermocouples with digital output,,,
-INMP441M,sensor board,digital MEMS microphone module,,INMP441,INMP441 I2S MEMS microphone module;1 piece;;used for audio input with microcontrollers and DSP projects,,,
-INACVSEN,sensor board,current sensor,,INA219,current and voltage sensor I2C protocol 26 V 3.2 A continuos current (DC),,,
-AHBMP280,sensor board,temperature humidity and pressure sensor,,AHT20 + BMP2801,pressure humidity and temperature sensor,,,
-
-
-POT10KLI,passives,variable resistor,Generic,RA30NASD100A,Rotary potentiometer;10KΩ,,,
-RESP1R00,passives,power resistor,Vishay,RH501R000FS03,wirewound power resistor;chassis mount,1,RH50,
-RESP0R50,passives,power resistor,DALE,M2228,wirewound power resistor;chassis mount,0.5,RH50,
-RESP0R30,passives,power resistor,DALE,M2205,wirewound power resistor;chassis mount,0.3,RH50,
-RESP0R75,passives,power resistor,DALE,M21334,wirewound power resistor;chassis mount,0.75,RH50,
-RESBOOK0,passives,PCB resistor,PINGCON,JT1001,PINGCON SAMPLE BOOK,,,
-FUSE0239,passives,glass fuse,Unknown,523-4725,fuse for protection/4A/125V,,,
-FU101000,passives,glass fuse,Unknown,T3.75A 250V,3.75A/250V,,,
-SIBAFF05,passives,fuse,SIBA,70 172 40,FF 500mA/DMI 1000V
-CAPKIT01,passives,ceramic capacitor assortment,Longruner,,multilayer ceramic capacitor kit with 10 values;2 boxes;;includes assorted values of multilayer ceramic capacitors,,,
-CPOLYFIL,passives,polyester film capacitor assortment,,,polyester film capacitor kit;1 box;;includes assorted values of polyester film capacitors,,,
-RESPWR1R,passives,power resistor,Royal,L253,1 Ohm 5 W power resistor,,,
-RESPW10K,passives,power resistor,Royal,L091,10 kOhm 5 W power resistor,,,
-RESIKIT1,passives,resistor,Generic,,kit of resistances,,,
-POWPOTEC,passives,potentiometer,CTS,,CTS Potentiometers 25 ohms 20% round Lin,,,
-POWRE1R5,passives,power resistor,TE Connectivity,Wirewound, Wirewound resistors Through Hole 1.5 ohms 5% 300ppm 2
-
-
-SMAMTM6I,radio accessories,SMA coax cable,TUOLNK,X002VLR7ZN,SMA male to SMA male coax cable,,,
-ANTL900M,radio accessories,LoRa antenna 900MHz,Generic,,,,,
-ANTL9002,radio accessories,LoRa antenna 900MHz,Generic,,,,,
-MCXJPCB0,radio accessories,RF Jack female connector,Generic,CONMCX002-SMD-T,,,,
-ANTGSMFM,radio accessories,FM antenna 700-1800MHz,Generic,,,,,
-SMAFTUF1,radio accessories,SMA coax cable,TUOLNK,X002Y5I1IN,SMA female to UFL IPX 30cm,,,
-SMAFTUF2,radio accessories,SMA coax cable,TUOLNK,X002Y5I1IN,SMA female to UFL IPX 15cm,,,
-SMAFTUF3,radio accessories,SMA coax cable,MONO Wireless,MW-C-UJ-10-1,SMA female to UFL 10cm,,,
-SMATUHF1,radio accessories,SMAf to UHF,TUOLNK,X002NE0XQ3,SMA female to UHF,,,
-A24GXIAO,radio accessories,antenna,SEEED,BH2210240004,2.4GHz rod antenna for XIAO ESP32C3,,, 
-SMAFLANG,radio accessories,SMAf to SMAf,,,4 hole flange mount SMA RF connector,,,
-SMARAPLU,radio accessories,SMA right angle plug,,,SMA rigth angle plug,,,
-XRDSRFN0,radio accessories,UHF coax cable,,,XRDS-RFN Male to axial Extension Cable,,,
-RFLINAMP,radio accessories,RF amplifier,Generic,,High power linear RF amplifier;SMA input/output;12V supply
-C05MODUL,radio accessories,Module Bluetooth,Generic,,Module Bluetooth CH-05
-SPRIANTE,radio accessories,antenna,Adafruit,4269,915 MHz spring antenna,,,
-
-HELESPV3,development board,HELTEC ESP32,HELTEC,WiFi_LoRa_32_V3,Microcontroller dev board based on the ESP32,,,
-HELESPV2,development board,HELTEC ESP32,HELTEC,WiFi_LoRa_32_V2,Microcontroller dev board based on the ESP32,,,
-ARDNANO0,development board,Arduino Nano,Generic,Arduino Nano mega32bp,Microcontroller dev board based on mega32BP,,,
-ORPI3LTS,development board,Orange pi,Orange pi,Orange pi 3 LTS 2G,Allwinner H6;2GB RAM;8GB flash,,,
-XIAO32S3,development board,ESP32,XIAO,S3,XIAO microcontroller based on ESP32S3,,,
-STM8ADIS,development board,STM8A Discovery kit,STMicroelectronics,STM8A-DISCOVERY,STM8A Discovery evaluation board for STM8 microcontrollers;1 piece;;includes onboard debugger user LEDs push buttons and expansion headers
-RASPBPI4,development board,Raspberry Pi 4 Model B,Raspberry Pi,4B,Raspberry Pi 4 single board computer with quad core processor 4GB RAM HDMI USB and GPIO headers;1 piece;;used for embedded projects prototyping and general computing,
-
-DISP7SEG,display/screens,7 segment,Sparkfun,SFE-0012-DS,7 segment display,,,
-LCD16X20,display/screens,LCD 16x2,Sparkfun,ADM16.2K,Display 16x2,,,
-DISPLCD0,display/screens,LCD,Generic,1602A,Display,,,
-PITFTSCR,display/screens,TFT Screen,Adafruit,TFT+Touch,TFT and Touchscreen for Raspberry Pi 320x240 and 2.8",,,
-OLEDSCRE,display/screens,OLED Screen,SparkFun, 128X64,
-
-SP30X36P,power,solar cell,Uxcell,a17052600ux1661,Polycristal solar cell 30X36,,,
-SP110X95,power,solar panel,Generic,SB-2V550MA,Polycristal solar cell 110X95,,,
-SP130150,power,solar panel,Generic,AP130150MM,Polycristal solar cell 130X150,,,
-SP113210,power,solar panel,Generic,1627003155,Polycristal solar cell 113x210
-FACT24DC,power,power source,MEAN WELL,IRM-60-24ST,power source; 120-240VAC input to 24VDC output,,,
-ACVSM2AM,power,voltage sensor module,RAGUSO,ZMPT101B,voltage sensor module,2mA/2mA,,
-BUCKP50W,power,buck; CC/CV,Atnsinc,XL4015,buck converter; CV/CV; 3.5A 50W,,,
-LM2596DC,power,buck;CC/CV,Generic,LM2596,boost converter; CC/CV;3.5 and 30V at a voltage of 4V and 30V,,,
-XL4005DC,power,step down,Generic,4005,buck converter;input range 5V~32V DC; output 0.8 V~ 30V DC;5A max,,,
-STEPDOWN,power,step down(buck),Gneric,LM2596,step down;input range 4.5V to 40V; output range 1.25V to 35V DC
-SOSTATMO,power,solid state switchs,FQFER,SSR-40 DD,Solid State
-SLSTAT25,power,solid state switchs,FPMOK,SSR-25 DA,Solid State
-RECTIMOD,power,power supply rectifier module,,,AC to DC rectifier power supply module;1 piece;;used for converting AC input to DC output,,,
-CONNEC14,power,power entry module,Schurter,IEC C14,IEC C14 power entry module with switch and fuse;1 piece;;used for AC mains input connection in power supplies,
-IRF520MD,power,MOSFET driver module,,IRF520,IRF520 MOSFET module on board;1 piece;;used for controlling high‑power loads with microcontrollers,,,
-UPDOWNCO,power,step up-down converter module,Generic,TPS63020,Step up - step down converter module based on the TPS63020 IC;1 piece;;input voltage range 5.5V to 36V; output voltage adjustable from 1.2V to 30V;3A max,,,
-
-THTK1200,sensor,type K thermocouple,Generic,BBIMS0-M4,Type K thermocouple; 0-200 degC; 12000mm wire; M4 screw thread,,,
-SNA00000,sensor,water level sensor,Generic,,,,,
-HRSENSOR,sensor,pulse sensor module,keyestudio,XD-58C,Heart rate sensor,,,
-CSRESIST,sensor,current sensor,YAGEO,CRCW0603,3 watt 0.025 ohm Current Sense Resistor - Through hole,,,
-BATCAPVS,sensor,battery sensor,Unknown,Unknown,Bsttery capacity and voltage display and sensor,,,
-SENE201C,sensor,ph sensor,Thunder magnet,E-201-C,ph sensor for solutions,,,
-RFIDR522,sensor,RFID reader,MFRC522,RC5222,13.56 MHz RFID module;SPI;interface;supports MIFARE cards;3.3 V,,,
-MPX5500D,sensor,differential pressure sensor,NXP,MPX5500DP,differential pressure sensor for measuring air or fluid pressure;1 piece;;range up to 500 kPa,,,
-
-RTC3231R,electronic modules,clock,Generic,DS3231,real time clock,,,
-RPSENSEH,electronic modules,Raspberry Pi Sense HAT,Raspberry Pi,Sense HAT,Raspberry Pi Sense HAT module with sensors and LED matrix;1 piece;;includes accelerometer gyroscope magnetometer temperature humidity pressure sensors and an 8x8 RGB LED matrix,,,
-
-CABLEGLA,fasteners,cable glands,,,Kit with cable glands (water sealers) class IP68 size PG16 PG13.5 PG11 PG9 PG7
-TORNM234,fasteners,screws,SUTEMRIBOR,Screws,from M2 M3 and M4 size,,,
-
-MOUNTC45,panel accessories,mounting bracket,Jienk,X003R8225J,C45 DIN rail mounting bracket,,DIN,
-STOPDINR,panel accessories,end stopper,PZRT,X003KWFELB,DIN rail blocks end stopper,,DIN,
-
-MG90STP0,actuator,servo,Tower Pro,MG90S,180 degrees;5V;1.8 kg/cm;0.1s/60 degrees,,,
-MSR13900,actuator,servo,Olimex,MSR139,360 degrees;5V;1.3 kg/cm;0.12s/60 degrees,,,
-SERVOS51,actuator,servo,SMRaza,S51,180 degrees Micro servo of 9 g capacity,,,
-SG93R180,actuator,servo,Tower Pro,SG92R,Micro servo;180 degrees;3V to 6V DC
-DXW90SER,actuator,servo,Generic,DXW90,Micro servo/60 degrees/4.8 V/9g capacity,,,
-SG90SERV,actuator,servo,TZT,SG90,Micro servo of 9 g capacity,,,
-A0090SER,actuator,servo,Generic,A0090,Micro servo/180 degrees/9g capacity
-DCACTMOT,actuator,motors,Generic,,DC motor varius sizes,,,
-VIBRATOR,actuator,Vibrator motor module,ITEAD,75537A-Y24Q-30,Coin vibration motor(ERM Eccentric)3.3 V or 5V DC,,,
-RTE24005,actuator,Relay,Potter&Brumfield,RTE24005F,RELAY/5V DC/8A/250VAC,,
-RT314A12,actuator,Relay,SCHRACK,RT314A12,RELAY/12V DC/16A/250VAC,,,
-GPQM1026,actuator,Relay,SONGLE,SRD-05-VDC-SL-C,four relay module/30V DC/10A/,,,Conteo provisional: 4 unidades asignadas por solicitud del usuario; pendiente de conteo fisico. Codigo anterior SRD5VDCS.
-SINW1026,actuator,Relay,SONGLE,SRD-05-VDC-SL-C,two relay module/30V DC/10A/,,,Conteo provisional: 2 unidades asignadas por solicitud del usuario; pendiente de conteo fisico. Codigo anterior SRD5VDCS.
-JQC3FF5V,actuator,Relay,Hf,JQC-3FF,one relay module/5V DC/10A to 277VAC/15A to 125VAC
-
-USBTR232,converter,USB converter,Waveshare,USB-RS232/485/TTL/UART,converter for USB to RS232/485/TTL or UART,,,
-USBTSERI,converter,USB converter,Waveshare,USB-4CH SERIAL,converter for USB to 4 serial channels,,,
-
-M20Z9990,connectors,Mouser Electronics,M20-9990245, 5V-EXT 5V-INT,,,,
-CMM12PIN,connectors,pin angle connectors,SAMTEC,TMM-106-01-LD-RA,Connectors with 12 pins at a angle of 90°,,,
-LEVERCON,connectors,lever wire connector assortment,Wago,221,assortment of lever wire connectors for splicing;1 box;;includes assorted Wago 221 lever connectors
-HEADER50,connectors,rectangular header,Samtec,NPPN-252AFCN-RC 4,Rectangular connector 2-row 25x2 (50 pins),,,Right-angle termination
-
-PIC16F87,PIC,PIC microcontroller,MICROCHIP,181798P,Fast switch,,,
-PIC16F17,PIC,PIC microcontroller,Microchip Technology,PIC16F1786,Fast switching,,,
-
-RFLORA12,transceiver board,RF Transceiver,HopeRF,sx1276,Radio frequency module based on LoRa1276,,,
-RFM69HCW,transceiver board,RF Transceiver,Adafruit,RFM69HCW,Radio transceiver development board 433 MHz ISP,,,
-
-SPRINGKI,springs,compression,Dianruii,KP-051-300,Compression springs assortment kit,,,
-
-STEPMSHD,shields and cases,Stepper Motor,,,Stepper motor shield for Arduino UNO,,,
-DATAMODU,shields and cases,data module,Generic,,Data registration module for Arduino,,,
-PROTOSHI,shields and cases,protoshield,Generic,,shield for prototypes;accessories for Arduino plates
-SHIELNET,shields and cases,Ethernet shield,Generic,,Ethernet network expansion card for Arduino
-ARGONCAS,shields and cases,Raspberry Pi case,Argon,One,Argon One aluminum case for Raspberry Pi 4;1 piece;;includes active cooling fan passive heatsink rear port layout power button and magnetic GPIO cover,
-
-PERFORA1,PCB accessories,perforated plates,Generic,varies,perforated plates for general use
-MS5803PC,PCB accessories,PCB for MS5803,Generic,,Controller PCB for the MS5803,,,
-SEGMEPCB,PCB accessories,PCB for ML3915,WWZMDiB,,10 Segme el Indicator DIY kt FN,,,
-TESTPOIN,PCB accessories,Test points,Generic,,Test points for PCBs,,,
-TWOPINCN,PCB accessories,Terminal Connectors,Generic,,2-pin PCB screw terminal block connector,,,
-JSTXHSET,PCB accessories,JST XH assortment,,,4 boxes with JST XH connectors (2 3 4 and 5 pins);4 boxes;;includes connectors of 2;3;4;5 pins,,,
-FOURPINC,PCB accessories,Terminal Connectors,Generic,,4-pin PCB screw terminal block connector,,,
-
-CSMD2.2U,SMD,capacitor,,,2.2 uF SMD capacitor,,,
-CSMD1.0N,SMD,capacitor,,,1nF SMD capacitor,,,
-RSM12.4K,SMD,resistor,,,12.04kOhm SMD resistor,,,
-RSM1.00W,SMD,resistor,,,ZERO ohm SMD resistor,,,
-DIO2.DIO,SMD,diodo,,,FG31 GP902 diodo,,,
-RSM.1001,SMD,resistor,,,1001ohm resistor,,,
-
-FILTERX0,Filter accessories,filter connector,DIGITEN,X0024AWJ7R,DIGITEN 2" FilterCompatible Component
-
-WASHSETS,fasteners,washer assortment,,,box with assorted pressure washers of different sizes;1 box;;includes washers of 6;8;10;12 mm,,,
-SCREWSET,fasteners,sheetmetal screw assortment,,Philips pan head,self-tapping sheetmetal screw assortment kit;2 boxes;;includes multiple sizes of Philips pan head screws,,,
-
-NE555MOD,Integrated circuits,timer IC module,,NE555,NE555 timer IC on DIP8 adapter module;1 piece;;classic timer/oscillator IC mounted on DIP8 adapter for prototyping,,,
-INTCTBOX,Integrated circuits,IC box,,,IC box
-ACS724IC,integrated circuits,current sensor,Allegro,ACS724KMATR-20AB-T,hall-effect-based current sensor IC SOIC16,20A,SOIC16,
-
-PLUGEBD3,DIN accesories,plug-in bridge,Allen-Bradley,1492-EBD3,Plug-in bridge for terminal blocks  Two circuits,,DIN rail compatible,
-ENDS35MM,DIN accesories,din rail end support,Schneider Electric,NSYTRAABV35,End support for DIN rail E/NS 35 N,,,Plastic snap-on
-PLUGDWD3,DIN accesories,plug-in bridge,Allen-Bradley,1492-WD3,Plug-in bridge for terminal blocks Two circuits,,DIN rail compatible,
-PLUG20F3,DIN accesories,plug-in bridge,Allen-Bradley,1492-WTF3,Plug-in bridge for terminal blocks  Three circuits,,DIN rail compatible,
-ENDS35CH,DIN accesories,din rail end support,Chint,EW35,End support for DIN rail 35mm,,,Plastic snap-on
-TCOV500V,DIN accesories,terminal block end cover,Eaton,AC-UT-10,Terminal block end cover for DIN rail mounted terminal blocks,,,Plastic snap-on
-GNDN35MM,DIN accesories,ground terminal block,Woertz,3436/4V,Protective conductor terminal block for DIN rail 35mm,,,DIN rail compatible
-DINPLKIT,DIN accesories,Assembly Kit,,,DIN rail accessory mounting kit
-
-ORSERKIT,mechanical,o-ring kit,Universal Series,O-Ring Service Kit,Universal series O-ring service kit with assorted sizes,,,Assorted sealing rings
-
-IMANEORD,magnet,neodymium,,,Small round neodymium magnets,,,
-IMANEORT,magnet,neodymium,,,Small rectangular neodymium magnets,,,
-
-HEATMK2B,pcb,heatbed,,MK2B,PCB Heatbed MK2B Dual Power supports 12V 24V,,,3D printer heated bed dual power
+code,type,subtype,manufacturer,model,description,value,package,info,previous_code
+KFCE1026,battery accessories,18650 cell spacer,,,spacer for 18650 electrochemical cells,,,,SPAC1865
+RCDD1026,battery accessories,8mm nickel plated strip,,,nickel plated battery strip,,,,NIBTSTRP
+NVVG1026,battery accessories,battery management system,,1644_7-4S-40A,BMS for 4 batteries in serie for 16.8 V and 40 A maximum,,,,BMS4S40A
+EYNW1026,battery accessories,battery management system,,1644_1-3S-40A,BMS for 3 batteries in serie for 12.6 V and 40 A maximum,,,,BMS3S40A
+LWWQ1026,battery accessories,charger module type C,,,Lithium Battery Charger USB interface Fast Charging Board with protection circuit,,,,CHARGERB
+QBLW1026,battery accessories,battery protection plate,,,Battery protection plate 3S 25A;Li-ion 18650 BMS PCM with balance for battery cell pack,,,,BPPBMS3S
+UWCA1026,battery,alkaline batteries,several,,battery/diameter 32mm/1.5V,,,,ALKALINE
+TJZG1026,battery,alkaline batteries,several,,batteries/Carbon-Zinc/9V,,,,BTTERYSV
+HDWI1026,battery,ion Lithium battery,Generic,LiFePO4,6000mAh/3.2V/diameter 32mm,,,,BIGBATTE
+WZOE1026,battery,AAA batteries,Kendal,LR03 AM4,alkaline batteries/1.5V ,,,,ALKBATTE
+JOYS1026,battery,AA batteries,PHILIPS,LR6 MIGNON,Power alkaline batteries/1.5 V,,,,AABATTER
+YLAW1026,battery,ion Lithium batteries,,INR18650MJ1,Ion Lithium batteries/3200mAh/3.6V,,,,IONBATTE
+RJMF1026,battery,ion Lithium batteries,,21700,4000mAh;3.7V,,,,LITHIUMB
+BKAH1026,development board,ARM M4,Seeed,LoRa-E5,a LoRa development kit powered by ARM(R) Cortex(R)-M4 Core and Semtech(R) SX126X,,,,SEEDE5LO
+VLED1026,development board,STM32L073,ST,NUCLEO-L073RZ,Arm Cortex M0+/STM32L073,,,,NUCLEO64
+NOLF1026,development board,MSP432P401R,Texas Instruments,MSP-EXP432P401R,Launchpad development kit 32-bit Low-Power + Performance MCU,,,,MSP432P4
+ISTQ1026,development board,MSP430-BSL,OLIMEX,MSP430-BSL,MSP-BSL Bootloader (BSL) Programmer for MSP40(TM) and SimpleLink(TM) MSP432(TM) Microcontrollers,,,,MSP430BL
+RZVN1026,development board,SHIELD,OLIMEX,SHIELDS-EKG/EMG,Extension module for Olimex ARDUINO compatible boards,,,,SHIELDEK
+AFTZ1026,development board,Arduino Mega,ARDUINO,Arduino Mega 2560 Rev3,Microcontroller dev board based on the ATmega2560,,,,ARDMEGA3
+IGGA1026,development board,Arduino Mega,ARDUINO,DIN Rail Module,Arduino Mega DIN module;2560;R3,,,,MEGADIN3
+LGMT1026,development board,Arduino Uno,ARDUINO,Arduino Uno R4 Minima,Microcontroller dev board based on the RENESAS R7FA4M1AB3CFM 48 MHz Arm(R) Cortex(R)-M4,,,,UNOR4MIN
+PFZX1026,development board,ELEGOO ESP32,ELEGOO,EL-SM-012,Microcontroller dev board based on the ESP-WROOM-32,,,,ESP32ELE
+YUGP1026,development board, STM32,STM,STM32,Microcontroller dev board based on the ARM Cortex-M3,,,,STM32FBP
+NLTX1026,sensor board,BMP280,GY,GY-BMP280,Absolute barometric pressure sensor; temperature sensor,,,,BMP280SB
+CLTU1026,sensor board,BME280,GY,GY-BMEP,Absolute barometric pressure sensor; temperature sensor; humidity sensor,,,,BME280SB
+XEJY1026,sensor board,type K thermocouple amplifier,QiFei or Generic,QS2016039,MAX31855; one input,,,,MAX31855
+LSFW1026,sensor board,type K thermocouple amplifier,whizoo,MAX31855x8,MAX31855; eight inputs,,,,MAX31858
+JEWF1026,sensor board,type K thermocouple amplifier,Generic,MAX6675,MAX6675; one input,,,,MAX66751
+QQVD1026,sensor board,ultrasonic sensor,Generic,HC-SR04,Ultrasonic Sensor/2400cm range/5V power supply/30 deg measuring angle,,,,HCSR0400
+WHNS1026,sensor board,limit switch sensor,Generic,Makerbot.com,Limit Switch made by MakerBot.com,,,,MBOTFC00
+CIWI1026,sensor board,Inertial Measuring Unit,Generic,MPU-6050,,,,,ITG0MPU0
+MFRQ1026,sensor board,Time of flight,Generic,VL53L0/XV2,Time of flight sensor; laser sensor,,,,VL53LO1X
+OKFD1026,sensor board,current sensor,Generic,ACS712,Hall Effect-based linear current sensor/5V power supply; +-30 A range; 66mV/A sensitivity,,,,ACS71200
+GENU1026,sensor board,UV sensor,SparkFun,AS7331,Spectral UV A-B-C sensor,,,,UVSENSOR
+STCT1026,sensor board,GPS module,Walfront,VK2828U7G5LF,GPS Module,,,,GPSMODUL
+BMVU1026,sensor board,ICM20948,ICM,20948,9 DoF Motion sensor (gyroscope compass accelerometer),,,,ICM20948
+DHQH1026,sensor board,YL-69 moisture sensor,Generic,YL-69,Board of the Moisture sensor YL-69,,,,YL069000
+IUWU1026,sensor board,light sensor,Adafruit,VEML7700,ambient light sensor lux units I2C,,,,LIGHVEML
+EPSI1026,sensor board,joystick module,,,joystick module for Arduino projects;1 piece;;includes X-Y axis control and push button,,,,JOYSTCK1
+IZUP1026,sensor board,Inertial Measurement Unit,,,WCMCU-333 microcontroller module;1 piece;;general purpose MCU module for embedded projects,,,,WCMCU333
+VGHC1026,sensor board,thermocouple amplifier module,,M31855K,M31855K thermocouple amplifier for type K sensors;1 piece;;used for reading type K thermocouples with digital output,,,,M31855K1
+YQPF1026,sensor board,digital MEMS microphone module,,INMP441,INMP441 I2S MEMS microphone module;1 piece;;used for audio input with microcontrollers and DSP projects,,,,INMP441M
+OGML1026,sensor board,current sensor,,INA219,current and voltage sensor I2C protocol 26 V 3.2 A continuos current (DC),,,,INACVSEN
+GFAC1026,sensor board,temperature humidity and pressure sensor,,AHT20 + BMP2801,pressure humidity and temperature sensor,,,,AHBMP280
+MTVT1026,passives,variable resistor,Generic,RA30NASD100A,Rotary potentiometer;10KΩ,,,,POT10KLI
+LIFR1026,passives,power resistor,Vishay,RH501R000FS03,wirewound power resistor;chassis mount,1,RH50,,RESP1R00
+ZFZG1026,passives,power resistor,DALE,M2228,wirewound power resistor;chassis mount,0.5,RH50,,RESP0R50
+NFHV1026,passives,power resistor,DALE,M2205,wirewound power resistor;chassis mount,0.3,RH50,,RESP0R30
+IXAE1026,passives,power resistor,DALE,M21334,wirewound power resistor;chassis mount,0.75,RH50,,RESP0R75
+NPCR1026,passives,PCB resistor,PINGCON,JT1001,PINGCON SAMPLE BOOK,,,,RESBOOK0
+CBUC1026,passives,glass fuse,Unknown,523-4725,fuse for protection/4A/125V,,,,FUSE0239
+YANF1026,passives,glass fuse,Unknown,T3.75A 250V,3.75A/250V,,,,FU101000
+ICAU1026,passives,fuse,SIBA,70 172 40,FF 500mA/DMI 1000V,,,,SIBAFF05
+WTZN1026,passives,ceramic capacitor assortment,Longruner,,multilayer ceramic capacitor kit with 10 values;2 boxes;;includes assorted values of multilayer ceramic capacitors,,,,CAPKIT01
+ESFE1026,passives,polyester film capacitor assortment,,,polyester film capacitor kit;1 box;;includes assorted values of polyester film capacitors,,,,CPOLYFIL
+VRNK1026,passives,power resistor,Royal,L253,1 Ohm 5 W power resistor,,,,RESPWR1R
+OIIF1026,passives,power resistor,Royal,L091,10 kOhm 5 W power resistor,,,,RESPW10K
+QNWW1026,passives,resistor,Generic,,kit of resistances,,,,RESIKIT1
+HCKN1026,passives,potentiometer,CTS,,CTS Potentiometers 25 ohms 20% round Lin,,,,POWPOTEC
+EFWI1026,passives,power resistor,TE Connectivity,Wirewound, Wirewound resistors Through Hole 1.5 ohms 5% 300ppm 2,,,,POWRE1R5
+XPMS1026,radio accessories,SMA coax cable,TUOLNK,X002VLR7ZN,SMA male to SMA male coax cable,,,,SMAMTM6I
+BSVY1026,radio accessories,LoRa antenna 900MHz,Generic,,,,,,ANTL900M
+EFJB1026,radio accessories,LoRa antenna 900MHz,Generic,,,,,,ANTL9002
+LSBC1026,radio accessories,RF Jack female connector,Generic,CONMCX002-SMD-T,,,,,MCXJPCB0
+WHCK1026,radio accessories,FM antenna 700-1800MHz,Generic,,,,,,ANTGSMFM
+SMFJ1026,radio accessories,SMA coax cable,TUOLNK,X002Y5I1IN,SMA female to UFL IPX 30cm,,,,SMAFTUF1
+CYFZ1026,radio accessories,SMA coax cable,TUOLNK,X002Y5I1IN,SMA female to UFL IPX 15cm,,,,SMAFTUF2
+DFMN1026,radio accessories,SMA coax cable,MONO Wireless,MW-C-UJ-10-1,SMA female to UFL 10cm,,,,SMAFTUF3
+JLTY1026,radio accessories,SMAf to UHF,TUOLNK,X002NE0XQ3,SMA female to UHF,,,,SMATUHF1
+WQMB1026,radio accessories,antenna,SEEED,BH2210240004,2.4GHz rod antenna for XIAO ESP32C3,,, ,A24GXIAO
+AGEP1026,radio accessories,SMAf to SMAf,,,4 hole flange mount SMA RF connector,,,,SMAFLANG
+KVCI1026,radio accessories,SMA right angle plug,,,SMA rigth angle plug,,,,SMARAPLU
+UKQT1026,radio accessories,UHF coax cable,,,XRDS-RFN Male to axial Extension Cable,,,,XRDSRFN0
+RPGZ1026,radio accessories,RF amplifier,Generic,,High power linear RF amplifier;SMA input/output;12V supply,,,,RFLINAMP
+LZRX1026,radio accessories,Module Bluetooth,Generic,,Module Bluetooth CH-05,,,,C05MODUL
+QXPC1026,radio accessories,antenna,Adafruit,4269,915 MHz spring antenna,,,,SPRIANTE
+MKDX1026,development board,HELTEC ESP32,HELTEC,WiFi_LoRa_32_V3,Microcontroller dev board based on the ESP32,,,,HELESPV3
+RBAE1026,development board,HELTEC ESP32,HELTEC,WiFi_LoRa_32_V2,Microcontroller dev board based on the ESP32,,,,HELESPV2
+CRUK1026,development board,Arduino Nano,Generic,Arduino Nano mega32bp,Microcontroller dev board based on mega32BP,,,,ARDNANO0
+IENB1026,development board,Orange pi,Orange pi,Orange pi 3 LTS 2G,Allwinner H6;2GB RAM;8GB flash,,,,ORPI3LTS
+JWPC1026,development board,ESP32,XIAO,S3,XIAO microcontroller based on ESP32S3,,,,XIAO32S3
+DELS1026,development board,STM8A Discovery kit,STMicroelectronics,STM8A-DISCOVERY,STM8A Discovery evaluation board for STM8 microcontrollers;1 piece;;includes onboard debugger user LEDs push buttons and expansion headers,,,,STM8ADIS
+VVPL1026,development board,Raspberry Pi 4 Model B,Raspberry Pi,4B,Raspberry Pi 4 single board computer with quad core processor 4GB RAM HDMI USB and GPIO headers;1 piece;;used for embedded projects prototyping and general computing,,,,RASPBPI4
+HBFB1026,display/screens,7 segment,Sparkfun,SFE-0012-DS,7 segment display,,,,DISP7SEG
+LQYY1026,display/screens,LCD 16x2,Sparkfun,ADM16.2K,Display 16x2,,,,LCD16X20
+BZLR1026,display/screens,LCD,Generic,1602A,Display,,,,DISPLCD0
+TPOB1026,display/screens,TFT Screen,Adafruit,TFT+Touch,"TFT and Touchscreen for Raspberry Pi 320x240 and 2.8""",,,,PITFTSCR
+BXVF1026,display/screens,OLED Screen,SparkFun, 128X64,,,,,OLEDSCRE
+TYXP1026,power,solar cell,Uxcell,a17052600ux1661,Polycristal solar cell 30X36,,,,SP30X36P
+TEKA1026,power,solar panel,Generic,SB-2V550MA,Polycristal solar cell 110X95,,,,SP110X95
+AWRS1026,power,solar panel,Generic,AP130150MM,Polycristal solar cell 130X150,,,,SP130150
+ZLLT1026,power,solar panel,Generic,1627003155,Polycristal solar cell 113x210,,,,SP113210
+ELVC1026,power,power source,MEAN WELL,IRM-60-24ST,power source; 120-240VAC input to 24VDC output,,,,FACT24DC
+NTNH1026,power,voltage sensor module,RAGUSO,ZMPT101B,voltage sensor module,2mA/2mA,,,ACVSM2AM
+VUMQ1026,power,buck; CC/CV,Atnsinc,XL4015,buck converter; CV/CV; 3.5A 50W,,,,BUCKP50W
+QVJT1026,power,buck;CC/CV,Generic,LM2596,boost converter; CC/CV;3.5 and 30V at a voltage of 4V and 30V,,,,LM2596DC
+MPAW1026,power,step down,Generic,4005,buck converter;input range 5V~32V DC; output 0.8 V~ 30V DC;5A max,,,,XL4005DC
+UGBK1026,power,step down(buck),Gneric,LM2596,step down;input range 4.5V to 40V; output range 1.25V to 35V DC,,,,STEPDOWN
+XXQO1026,power,solid state switchs,FQFER,SSR-40 DD,Solid State,,,,SOSTATMO
+HJSS1026,power,solid state switchs,FPMOK,SSR-25 DA,Solid State,,,,SLSTAT25
+RCSX1026,power,power supply rectifier module,,,AC to DC rectifier power supply module;1 piece;;used for converting AC input to DC output,,,,RECTIMOD
+XPAP1026,power,power entry module,Schurter,IEC C14,IEC C14 power entry module with switch and fuse;1 piece;;used for AC mains input connection in power supplies,,,,CONNEC14
+YZYN1026,power,MOSFET driver module,,IRF520,IRF520 MOSFET module on board;1 piece;;used for controlling high‑power loads with microcontrollers,,,,IRF520MD
+IAOM1026,power,step up-down converter module,Generic,TPS63020,Step up - step down converter module based on the TPS63020 IC;1 piece;;input voltage range 5.5V to 36V; output voltage adjustable from 1.2V to 30V;3A max,,,,UPDOWNCO
+VBCN1026,sensor,type K thermocouple,Generic,BBIMS0-M4,Type K thermocouple; 0-200 degC; 12000mm wire; M4 screw thread,,,,THTK1200
+ENJJ1026,sensor,water level sensor,Generic,,,,,,SNA00000
+ZQMW1026,sensor,pulse sensor module,keyestudio,XD-58C,Heart rate sensor,,,,HRSENSOR
+VZRW1026,sensor,current sensor,YAGEO,CRCW0603,3 watt 0.025 ohm Current Sense Resistor - Through hole,,,,CSRESIST
+WRNK1026,sensor,battery sensor,Unknown,Unknown,Bsttery capacity and voltage display and sensor,,,,BATCAPVS
+QFTE1026,sensor,ph sensor,Thunder magnet,E-201-C,ph sensor for solutions,,,,SENE201C
+RDMT1026,sensor,RFID reader,MFRC522,RC5222,13.56 MHz RFID module;SPI;interface;supports MIFARE cards;3.3 V,,,,RFIDR522
+NTWB1026,sensor,differential pressure sensor,NXP,MPX5500DP,differential pressure sensor for measuring air or fluid pressure;1 piece;;range up to 500 kPa,,,,MPX5500D
+NYQQ1026,electronic modules,clock,Generic,DS3231,real time clock,,,,RTC3231R
+QBLY1026,electronic modules,Raspberry Pi Sense HAT,Raspberry Pi,Sense HAT,Raspberry Pi Sense HAT module with sensors and LED matrix;1 piece;;includes accelerometer gyroscope magnetometer temperature humidity pressure sensors and an 8x8 RGB LED matrix,,,,RPSENSEH
+BNYK1026,fasteners,cable glands,,,Kit with cable glands (water sealers) class IP68 size PG16 PG13.5 PG11 PG9 PG7,,,,CABLEGLA
+DREU1026,fasteners,screws,SUTEMRIBOR,Screws,from M2 M3 and M4 size,,,,TORNM234
+ZSVI1026,panel accessories,mounting bracket,Jienk,X003R8225J,C45 DIN rail mounting bracket,,DIN,,MOUNTC45
+UHOE1026,panel accessories,end stopper,PZRT,X003KWFELB,DIN rail blocks end stopper,,DIN,,STOPDINR
+KFRY1026,actuator,servo,Tower Pro,MG90S,180 degrees;5V;1.8 kg/cm;0.1s/60 degrees,,,,MG90STP0
+XDUN1026,actuator,servo,Olimex,MSR139,360 degrees;5V;1.3 kg/cm;0.12s/60 degrees,,,,MSR13900
+NYOB1026,actuator,servo,SMRaza,S51,180 degrees Micro servo of 9 g capacity,,,,SERVOS51
+VXYY1026,actuator,servo,Tower Pro,SG92R,Micro servo;180 degrees;3V to 6V DC,,,,SG93R180
+EQUG1026,actuator,servo,Generic,DXW90,Micro servo/60 degrees/4.8 V/9g capacity,,,,DXW90SER
+BICM1026,actuator,servo,TZT,SG90,Micro servo of 9 g capacity,,,,SG90SERV
+ZCWK1026,actuator,servo,Generic,A0090,Micro servo/180 degrees/9g capacity,,,,A0090SER
+SLTB1026,actuator,motors,Generic,,DC motor varius sizes,,,,DCACTMOT
+QGNO1026,actuator,Vibrator motor module,ITEAD,75537A-Y24Q-30,Coin vibration motor(ERM Eccentric)3.3 V or 5V DC,,,,VIBRATOR
+ETBU1026,actuator,Relay,Potter&Brumfield,RTE24005F,RELAY/5V DC/8A/250VAC,,,,RTE24005
+CPGK1026,actuator,Relay,SCHRACK,RT314A12,RELAY/12V DC/16A/250VAC,,,,RT314A12
+GPQM1026,actuator,Relay,SONGLE,SRD-05-VDC-SL-C,four relay module/30V DC/10A/,,,Conteo provisional: 4 unidades asignadas por solicitud del usuario; pendiente de conteo fisico. Codigo anterior SRD5VDCS.,SRD5VDCS
+SINW1026,actuator,Relay,SONGLE,SRD-05-VDC-SL-C,two relay module/30V DC/10A/,,,Conteo provisional: 2 unidades asignadas por solicitud del usuario; pendiente de conteo fisico. Codigo anterior SRD5VDCS.,SRD5VDCS
+TLJR1026,actuator,Relay,Hf,JQC-3FF,one relay module/5V DC/10A to 277VAC/15A to 125VAC,,,,JQC3FF5V
+HJFW1026,converter,USB converter,Waveshare,USB-RS232/485/TTL/UART,converter for USB to RS232/485/TTL or UART,,,,USBTR232
+YKZW1026,converter,USB converter,Waveshare,USB-4CH SERIAL,converter for USB to 4 serial channels,,,,USBTSERI
+PBJN1026,connectors,Mouser Electronics,M20-9990245, 5V-EXT 5V-INT,,,,,M20Z9990
+FLKV1026,connectors,pin angle connectors,SAMTEC,TMM-106-01-LD-RA,Connectors with 12 pins at a angle of 90°,,,,CMM12PIN
+OUMU1026,connectors,lever wire connector assortment,Wago,221,assortment of lever wire connectors for splicing;1 box;;includes assorted Wago 221 lever connectors,,,,LEVERCON
+TKLD1026,connectors,rectangular header,Samtec,NPPN-252AFCN-RC 4,Rectangular connector 2-row 25x2 (50 pins),,,Right-angle termination,HEADER50
+RNOB1026,PIC,PIC microcontroller,MICROCHIP,181798P,Fast switch,,,,PIC16F87
+RPNO1026,PIC,PIC microcontroller,Microchip Technology,PIC16F1786,Fast switching,,,,PIC16F17
+YEWJ1026,transceiver board,RF Transceiver,HopeRF,sx1276,Radio frequency module based on LoRa1276,,,,RFLORA12
+GLMK1026,transceiver board,RF Transceiver,Adafruit,RFM69HCW,Radio transceiver development board 433 MHz ISP,,,,RFM69HCW
+OUJB1026,springs,compression,Dianruii,KP-051-300,Compression springs assortment kit,,,,SPRINGKI
+ZNYY1026,shields and cases,Stepper Motor,,,Stepper motor shield for Arduino UNO,,,,STEPMSHD
+UOAJ1026,shields and cases,data module,Generic,,Data registration module for Arduino,,,,DATAMODU
+LAUM1026,shields and cases,protoshield,Generic,,shield for prototypes;accessories for Arduino plates,,,,PROTOSHI
+XFVL1026,shields and cases,Ethernet shield,Generic,,Ethernet network expansion card for Arduino,,,,SHIELNET
+XTDB1026,shields and cases,Raspberry Pi case,Argon,One,Argon One aluminum case for Raspberry Pi 4;1 piece;;includes active cooling fan passive heatsink rear port layout power button and magnetic GPIO cover,,,,ARGONCAS
+XPGU1026,PCB accessories,perforated plates,Generic,varies,perforated plates for general use,,,,PERFORA1
+CZDB1026,PCB accessories,PCB for MS5803,Generic,,Controller PCB for the MS5803,,,,MS5803PC
+ISWB1026,PCB accessories,PCB for ML3915,WWZMDiB,,10 Segme el Indicator DIY kt FN,,,,SEGMEPCB
+DELT1026,PCB accessories,Test points,Generic,,Test points for PCBs,,,,TESTPOIN
+DDCR1026,PCB accessories,Terminal Connectors,Generic,,2-pin PCB screw terminal block connector,,,,TWOPINCN
+NMGP1026,PCB accessories,JST XH assortment,,,4 boxes with JST XH connectors (2 3 4 and 5 pins);4 boxes;;includes connectors of 2;3;4;5 pins,,,,JSTXHSET
+RHLY1026,PCB accessories,Terminal Connectors,Generic,,4-pin PCB screw terminal block connector,,,,FOURPINC
+OAQN1026,SMD,capacitor,,,2.2 uF SMD capacitor,,,,CSMD2.2U
+KUJM1026,SMD,capacitor,,,1nF SMD capacitor,,,,CSMD1.0N
+FUGI1026,SMD,resistor,,,12.04kOhm SMD resistor,,,,RSM12.4K
+AHLP1026,SMD,resistor,,,ZERO ohm SMD resistor,,,,RSM1.00W
+ZQCV1026,SMD,diodo,,,FG31 GP902 diodo,,,,DIO2.DIO
+NEUJ1026,SMD,resistor,,,1001ohm resistor,,,,RSM.1001
+BSOO1026,Filter accessories,filter connector,DIGITEN,X0024AWJ7R,"DIGITEN 2"" FilterCompatible Component",,,,FILTERX0
+NNAY1026,fasteners,washer assortment,,,box with assorted pressure washers of different sizes;1 box;;includes washers of 6;8;10;12 mm,,,,WASHSETS
+DJMG1026,fasteners,sheetmetal screw assortment,,Philips pan head,self-tapping sheetmetal screw assortment kit;2 boxes;;includes multiple sizes of Philips pan head screws,,,,SCREWSET
+EFTV1026,Integrated circuits,timer IC module,,NE555,NE555 timer IC on DIP8 adapter module;1 piece;;classic timer/oscillator IC mounted on DIP8 adapter for prototyping,,,,NE555MOD
+ZGVN1026,Integrated circuits,IC box,,,IC box,,,,INTCTBOX
+FPER1026,integrated circuits,current sensor,Allegro,ACS724KMATR-20AB-T,hall-effect-based current sensor IC SOIC16,20A,SOIC16,,ACS724IC
+ZTLB1026,DIN accesories,plug-in bridge,Allen-Bradley,1492-EBD3,Plug-in bridge for terminal blocks  Two circuits,,DIN rail compatible,,PLUGEBD3
+UTSB1026,DIN accesories,din rail end support,Schneider Electric,NSYTRAABV35,End support for DIN rail E/NS 35 N,,,Plastic snap-on,ENDS35MM
+KMAE1026,DIN accesories,plug-in bridge,Allen-Bradley,1492-WD3,Plug-in bridge for terminal blocks Two circuits,,DIN rail compatible,,PLUGDWD3
+ISLO1026,DIN accesories,plug-in bridge,Allen-Bradley,1492-WTF3,Plug-in bridge for terminal blocks  Three circuits,,DIN rail compatible,,PLUG20F3
+HHZS1026,DIN accesories,din rail end support,Chint,EW35,End support for DIN rail 35mm,,,Plastic snap-on,ENDS35CH
+ZARV1026,DIN accesories,terminal block end cover,Eaton,AC-UT-10,Terminal block end cover for DIN rail mounted terminal blocks,,,Plastic snap-on,TCOV500V
+OGSF1026,DIN accesories,ground terminal block,Woertz,3436/4V,Protective conductor terminal block for DIN rail 35mm,,,DIN rail compatible,GNDN35MM
+GBME1026,DIN accesories,Assembly Kit,,,DIN rail accessory mounting kit,,,,DINPLKIT
+KDQK1026,mechanical,o-ring kit,Universal Series,O-Ring Service Kit,Universal series O-ring service kit with assorted sizes,,,Assorted sealing rings,ORSERKIT
+WXJI1026,magnet,neodymium,,,Small round neodymium magnets,,,,IMANEORD
+XHDB1026,magnet,neodymium,,,Small rectangular neodymium magnets,,,,IMANEORT
+CGSA1026,pcb,heatbed,,MK2B,PCB Heatbed MK2B Dual Power supports 12V 24V,,,3D printer heated bed dual power,HEATMK2B
+KPNP1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,AOO90SER
+EQHJ1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,CSMD1.0U
+ULSA1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,HALL3144
+VITR1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,LEDSETS1
+FJYE1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,NSYTRAAB
+XIHV1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,POWPOTEN
+IGGO1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,RF433MHZ
+MOIX1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,S51SERVO
+VJHU1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,SIM76000

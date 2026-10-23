@@ -14,14 +14,15 @@ IMAGE_BASE = "https://raw.githubusercontent.com/DeltaLabo/inventory_pictures/mai
 
 
 @st.cache_data(ttl=3600, max_entries=512, show_spinner=False)
-def image_url(code):
-    for extension in ("png", "jpg"):
-        url = f"{IMAGE_BASE}/{code}.{extension}"
-        try:
-            if requests.head(url, timeout=3).status_code == 200:
-                return url
-        except requests.RequestException:
-            return None
+def image_url(code, previous_code=""):
+    for image_code in dict.fromkeys(value for value in (code, previous_code) if value):
+        for extension in ("png", "jpg"):
+            url = f"{IMAGE_BASE}/{image_code}.{extension}"
+            try:
+                if requests.head(url, timeout=3).status_code == 200:
+                    return url
+            except requests.RequestException:
+                return None
     return None
 
 
@@ -60,7 +61,8 @@ def browse(details, locations):
         pages = max(1, (len(codes) + 11) // 12)
         page = st.number_input("Página de imágenes", min_value=1, max_value=pages, step=1)
         for code in codes[(page - 1) * 12:page * 12]:
-            url = image_url(code)
+            product = results[results["code"].eq(code)].iloc[0]
+            url = image_url(code, product.get("previous_code", ""))
             if url:
                 st.image(url, caption=code, width=150)
             else:

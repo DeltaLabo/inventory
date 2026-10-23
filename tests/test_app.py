@@ -23,13 +23,19 @@ class AppTests(unittest.TestCase):
 
         return AppTest.from_file(str(Path(__file__).resolve().parents[1] / "app.py"), default_timeout=15).run()
 
+    def code_for(self, previous_code):
+        from inventory import load_data
+
+        details, _ = load_data(Path(__file__).resolve().parents[1])
+        return details.loc[details["previous_code"].eq(previous_code), "code"].item()
+
     def test_app_opens_with_all_stock_and_no_image_requests(self):
         with patch("requests.head") as head:
             app = self.open_app()
             self.assertEqual(len(app.exception), 0)
             self.assertEqual(app.selectbox[0].value, "Todos")
             data = app.dataframe[0].value
-            self.assertIn("AOO90SER", data["Código"].tolist())
+            self.assertIn(self.code_for("AOO90SER"), data["Código"].tolist())
             relays = data[data["Código"].isin(["GPQM1026", "SINW1026"])]
             self.assertEqual(len(relays), 2)
             self.assertEqual(relays["Ubicación"].tolist(), ["A", "A"])
@@ -53,7 +59,7 @@ class AppTests(unittest.TestCase):
 
         with patch("requests.head", side_effect=requests.Timeout):
             app = self.open_app()
-            app.text_input[0].set_value("WASHSETS").run()
+            app.text_input[0].set_value("GPQM1026").run()
             app.checkbox[0].check().run()
             self.assertEqual(len(app.exception), 0)
             self.assertTrue(any("sin imagen" in caption.value for caption in app.caption))
@@ -166,7 +172,7 @@ class AppTests(unittest.TestCase):
         with patch("github_inventory.GitHubInventory.propose_edit", return_value="https://github.com/DeltaLabo/inventory/pull/124") as edit:
             app = self.open_app()
             app.radio[0].set_value("Editar").run()
-            app.selectbox[0].select("DCACTMOT").run()
+            app.selectbox[0].select(self.code_for("DCACTMOT")).run()
             app.checkbox[0].check().run()
             self.assertEqual(len(app.exception), 0)
             self.assertEqual(app.text_input(key="edit_field_location").value, "A")
@@ -180,6 +186,20 @@ class AppTests(unittest.TestCase):
             args = edit.call_args.args
             self.assertEqual(args[6]["available"], "10")
             self.assertEqual(args[7]["available"], 9)
+
+    def test_migrated_product_finds_legacy_photo_and_remains_searchable_by_old_code(self):
+        from unittest.mock import Mock
+
+        def photo(url, **kwargs):
+            return Mock(status_code=200 if url.endswith("/WASHSETS.png") else 404)
+
+        with patch("requests.head", side_effect=photo) as head:
+            app = self.open_app()
+            app.text_input[0].set_value("WASHSETS").run()
+            self.assertEqual(len(app.dataframe[0].value), 1)
+            app.checkbox[0].check().run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertTrue(any(call.args[0].endswith("/WASHSETS.png") for call in head.call_args_list))
 
 
 if __name__ == "__main__":

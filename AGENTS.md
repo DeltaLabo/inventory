@@ -52,3 +52,14 @@ one compartment, while keeping the two variants distinct. SRD5VDCS was split int
 GPQM1026 (4-relay module, provisional 4 units) and SINW1026 (2-relay module,
 provisional 2 units), both A/12. Keep `Conteo provisional:` notes and validation
 warnings until the user confirms the physical counts. Total stock is still 6.
+
+The user then explicitly authorized migrating remaining active product codes to
+the random format, keeping products/bags/characteristics distinct and pushing the
+result. The migration assigned 186 new IDs, retained the two relay IDs, preserved
+all 177 stock rows, locations and counts, and added nine independent catalog stubs
+for previously orphaned stock. No similar-looking legacy codes were merged.
+`details.csv` now has an optional `previous_code` column for old-code searches,
+historical references and image fallback. Preserve it on edits. New products leave
+it blank. Never use it as a merge key; multiple distinct variants may share a legacy
+reference. Historical/auxiliary CSVs intentionally retain old references and are
+not authoritative stock sources. Complete stub descriptions only from user evidence.

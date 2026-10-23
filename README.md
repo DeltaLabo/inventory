@@ -93,7 +93,12 @@ El ID es permanente y no cambia al editar el producto ni al cambiar de mes.
 La app verifica que esté libre y lo reserva mediante una etiqueta de GitHub
 `inventory-ids/<codigo>`, evitando duplicados incluso entre solicitudes pendientes
 o simultáneas. Conservar esas etiquetas; los códigos reservados no se reutilizan.
-Los códigos anteriores se conservan sin migrarlos.
+El 22/10/2026 se migraron los códigos del inventario activo a ese formato,
+manteniendo los dos IDs de relés ya asignados. El campo `previous_code` conserva
+la referencia anterior y permite seguir buscando por ella y encontrar fotos antiguas.
+No se fusionaron productos por semejanza de códigos. Las nueve ubicaciones sin
+ficha recibieron fichas independientes con sus datos descriptivos pendientes de completar.
+Las bolsas y cantidades registradas se conservaron.
 
 Las propuestas guardan el catálogo/stock calculado en su rama y un comprobante en
 `requests/<id>.json`. Nunca cambian `main` antes de fusionarse. Si hubo otros cambios
@@ -114,12 +119,14 @@ retiros posteriores antes de aceptar la corrección.
 
 - `details.csv`: fichas de productos. Conservar los códigos como texto, incluidos
   sus ceros y puntos. Cada producto debe tener un código único.
+  `previous_code` es una referencia histórica opcional, no una identidad compartida:
+  no usarla para fusionar fichas. Los productos nuevos dejan este campo vacío.
 - `locations.csv`: una fila por código, ubicación y compartimento. `units` es la
   cantidad registrada y `available` la disponible; ambas son enteros no negativos,
   con disponible menor o igual a la cantidad registrada.
 - `to_buy.csv`: lista de compras independiente.
 - `smd.csv` y `not_found.csv`: listas auxiliares pendientes de conciliación;
-  no se importan automáticamente ni cambian existencias.
+  conservan sus referencias antiguas, no se importan automáticamente ni cambian existencias.
 - `usage_log.csv`: registro histórico conservado como referencia. No se usa para
   recalcular existencias porque no explica todos los saldos actuales.
 - `movements.csv`: se crea en GitHub con el primer retiro. Incluye identificador,
@@ -155,6 +162,8 @@ Se buscan por código en `DeltaLabo/inventory_pictures`, carpeta
 `inventory_images_ready`, extensiones PNG y JPG. Son opcionales y se muestran
 solo al activar «Mostrar imágenes», hasta 12 productos por página. Las consultas
 tienen un tiempo máximo y se guardan en caché durante una hora.
+Si no existe una foto con el ID actual, se busca con `previous_code` para preservar
+las fotos existentes después de la migración.
 
 ## Comprobaciones
 
