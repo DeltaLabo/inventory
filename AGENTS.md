@@ -1,10 +1,10 @@
 # Inventory context
 
 This is a small Streamlit inventory with public browsing, password-protected
-additions via GitHub PR, and immediate withdrawals via atomic GitHub commits.
+additions and edits via GitHub PR, and immediate withdrawals via atomic GitHub commits.
 Keep it simple: no separate database or server. `app.py` is the only application
 entry point; `inventory.py` has import-safe CSV helpers and validation,
-`forms.py` holds the two protected forms, and `github_inventory.py` handles GitHub.
+`forms.py` holds the three protected forms, and `github_inventory.py` handles GitHub.
 UI and user documentation are Spanish.
 
 Resolve paths relative to source files. Preserve editable CSVs and codes, including
@@ -33,3 +33,11 @@ Run `python -m unittest discover -s tests -v` for behavior checks and
 while ambiguous/missing source data remain unresolved. Never fix these by guessing.
 Keep network calls optional, bounded, and cached.
 Tests must mock GitHub; never submit real PRs or stock movements as a test.
+
+The top-level actions are Consultar, Ingresar, Editar, Retirar. Edits reuse the
+addition password and propose changes on `inventory/edit-<id>` branches. Prefill the
+form and freeze its original snapshot until another product/location is selected.
+Compare only changed fields with the latest data before proposing an edit; preserve
+unmodified fields and never overwrite intervening withdrawals. Record before/after
+values, responsible person, and a required reason. IDs are immutable. Reject invalid
+balances and destination-location collisions; never merge stock rows automatically.

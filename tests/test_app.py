@@ -129,6 +129,55 @@ class AppTests(unittest.TestCase):
             app.radio[0].set_value("Ingresar").run()
             self.assertEqual(len(app.text_input), 0)
 
+    def test_edit_is_separate_prefilled_and_uses_addition_password(self):
+        self.configure_forms()
+        with patch("github_inventory.GitHubInventory.propose_edit", return_value="https://github.com/DeltaLabo/inventory/pull/124") as edit:
+            app = self.open_app()
+            self.assertEqual(app.radio[0].options, ["Consultar", "Ingresar", "Editar", "Retirar"])
+            app.radio[0].set_value("Editar").run()
+            self.assertEqual(len(app.exception), 0)
+            before = app.text_input(key="edit_field_description").value
+            self.assertTrue(before)
+            app.text_input(key="edit_field_description").set_value(before + " corregido")
+            app.text_input(key="edit_field_person").set_value("Intern")
+            app.text_input(key="edit_field_reason").set_value("Etiqueta verificada")
+            app.text_input(key="edit_field_password").set_value("test-take")
+            app.button[0].click().run()
+            edit.assert_not_called()
+            app.text_input(key="edit_field_password").set_value("test-add")
+            app.button[0].click().run()
+            self.assertEqual(len(app.exception), 0)
+            edit.assert_called_once()
+            args = edit.call_args.args
+            self.assertEqual(args[2]["description"], before)
+            self.assertEqual(args[3]["description"], before + " corregido")
+            self.assertIn("Solicitud enviada", app.success[0].value)
+            app.run()
+            edit.assert_called_once()
+            app.button[0].click().run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertEqual(app.text_input(key="edit_field_password").value, "")
+
+    def test_edit_optional_stock_is_prefilled_and_can_be_submitted_for_review(self):
+        self.configure_forms()
+        with patch("github_inventory.GitHubInventory.propose_edit", return_value="https://github.com/DeltaLabo/inventory/pull/124") as edit:
+            app = self.open_app()
+            app.radio[0].set_value("Editar").run()
+            app.selectbox[0].select("DCACTMOT").run()
+            app.checkbox[0].check().run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertEqual(app.text_input(key="edit_field_location").value, "A")
+            self.assertEqual(app.number_input(key="edit_field_available").value, 10)
+            app.number_input(key="edit_field_available").set_value(9)
+            app.text_input(key="edit_field_person").set_value("Intern")
+            app.text_input(key="edit_field_reason").set_value("Conteo físico")
+            app.text_input(key="edit_field_password").set_value("test-add")
+            app.button[0].click().run()
+            self.assertEqual(len(app.exception), 0)
+            args = edit.call_args.args
+            self.assertEqual(args[6]["available"], "10")
+            self.assertEqual(args[7]["available"], 9)
+
 
 if __name__ == "__main__":
     unittest.main()

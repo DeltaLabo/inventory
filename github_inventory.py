@@ -18,6 +18,7 @@ MOVEMENT_COLUMNS = (
     "id", "timestamp", "code", "location", "sublocation", "quantity",
     "person", "project", "available_after",
 )
+EDITABLE_FIELDS = tuple(name for name in DETAIL_COLUMNS if name != "code")
 
 
 class GitHubError(Exception):
@@ -265,3 +266,88 @@ class GitHubInventory:
                 if attempt == 2:
                     raise
         raise GitHubError("No se pudo guardar el retiro. Vuelva a intentarlo.")
+
+    def propose_edit(self, request_id, code, original_item, updated_item, person, reason,
+                     original_stock=None, updated_stock=None):
+        operation = UUID(request_id).hex
+        branch = f"inventory/edit-{operation}"
+        person = required(person, "Responsable", 100)
+        reason = required(reason, "Motivo de la corrección")
+        if self.head(branch, optional=True):
+            previous = self._pull_request(branch)
+            if previous:
+                return previous["html_url"]
+        else:
+            parent = self.head()
+            columns, details = read_rows(self.read_file("details.csv", parent), DETAIL_COLUMNS)
+            product = unique_product(details, code)
+            changes, audit = {}, {}
+            for name, value in updated_item.items():
+                if name not in EDITABLE_FIELDS:
+                    raise ValueError("El identificador del producto no se puede editar.")
+                value = str(value).strip()
+                original = str(original_item.get(name, "")).strip()
+                if value == original:
+                    continue
+                if product[name].strip() != original:
+                    raise ValueError("La ficha cambió desde que abrió el formulario. Vuelva a seleccionar el producto antes de editar.")
+                audit[name] = {"before": product[name], "after": value}
+                product[name] = value
+            if audit:
+                for name, label in (("description", "Descripción"), ("type", "Tipo"), ("subtype", "Subtipo")):
+                    required(product[name], label)
+                changes["details.csv"] = write_rows(columns, details)
+            stock_audit = {}
+            if updated_stock is not None:
+                if not original_stock or original_stock.get("code") != code:
+                    raise ValueError("Seleccione la ubicación original del producto.")
+                location_columns, locations = read_rows(self.read_file("locations.csv", parent), LOCATION_COLUMNS)
+                key = (code, original_stock["location"], original_stock["sublocation"])
+                matches = [row for row in locations if tuple(row[name].strip() for name in ("code", "location", "sublocation")) == key]
+                if len(matches) != 1:
+                    raise ValueError("La ubicación cambió o está duplicada. Primero debe revisarse el inventario.")
+                row = matches[0]
+                for name, value in updated_stock.items():
+                    if name not in ("location", "sublocation", "units", "available"):
+                        raise ValueError("El identificador del producto no se puede editar.")
+                    value = str(value).strip()
+                    if value == str(original_stock[name]).strip():
+                        continue
+                    if row[name].strip() != str(original_stock[name]).strip():
+                        raise ValueError("Las existencias cambiaron desde que abrió el formulario. Vuelva a seleccionar el producto antes de editar.")
+                    stock_audit[name] = {"before": row[name], "after": value}
+                    row[name] = value
+                if stock_audit:
+                    required(row["location"], "Ubicación", 80)
+                    required(row["sublocation"], "Compartimento", 80)
+                    stock_counts(row)
+                    destination = (code, row["location"].strip(), row["sublocation"].strip())
+                    if any(other is not row and tuple(other[name].strip() for name in ("code", "location", "sublocation")) == destination for other in locations):
+                        raise ValueError("El producto ya tiene existencias en la ubicación de destino; no se pueden unir saldos automáticamente.")
+                    changes["locations.csv"] = write_rows(location_columns, locations)
+            if not changes:
+                raise ValueError("No hay cambios para enviar.")
+            changes[f"requests/{operation}.json"] = json.dumps({
+                "id": operation, "action": "edit", "code": code, "person": person,
+                "reason": reason, "product_changes": audit, "stock_changes": stock_audit,
+                "original_location": original_stock,
+            }, ensure_ascii=False, indent=2) + "\n"
+            commit = self._commit(parent, changes, f"Proponer corrección de inventario: {code}")
+            try:
+                self._request("POST", "/git/refs", payload={"ref": f"refs/heads/{branch}", "sha": commit})
+            except Conflict:
+                previous = self._pull_request(branch)
+                if previous:
+                    return previous["html_url"]
+                raise
+        saved = json.loads(self.read_file(f"requests/{operation}.json", self.head(branch)))
+        result = self._request("POST", "/pulls", payload={
+            "title": f"Corrección de inventario: {saved['code']}", "head": branch, "base": self.branch,
+            "body": (
+                f"Corrección enviada por {saved['person']}.\n\n"
+                f"- Producto: `{saved['code']}`\n- Motivo: {saved['reason']}\n\n"
+                "El identificador se conserva. El comprobante de la solicitud incluye los valores anteriores y propuestos. "
+                "Revisar y fusionar para aplicar. Si hay conflictos de existencias, conservar los retiros posteriores."
+            ),
+        })
+        return result["html_url"]

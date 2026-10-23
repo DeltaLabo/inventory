@@ -224,6 +224,76 @@ class GitHubInventoryTests(unittest.TestCase):
                 db.head()
             self.assertNotIn("private-token", str(error.exception))
 
+    def propose_edit(self, updated=None, original_stock=None, updated_stock=None):
+        original = read_rows(self.db.commits["initial"]["files"]["details.csv"], DETAIL_COLUMNS)[1][0]
+        return self.db.propose_edit(
+            self.request_id, "ITEM0001", original,
+            {"description": "Corrected board"} if updated is None else updated,
+            "Intern", "Verified label", original_stock, updated_stock,
+        )
+
+    def edit_files(self):
+        return self.db.commits[self.db.refs[f"inventory/edit-{self.request_id}"]]["files"]
+
+    def test_edit_preserves_id_and_proposes_only_changed_catalog_fields(self):
+        before = deepcopy(self.db.main_files)
+        self.propose_edit()
+        self.assertEqual(self.db.main_files, before)
+        files = self.edit_files()
+        self.assertEqual(files["locations.csv"], before["locations.csv"])
+        row = read_rows(files["details.csv"], DETAIL_COLUMNS)[1][0]
+        self.assertEqual((row["code"], row["description"]), ("ITEM0001", "Corrected board"))
+        receipt = json.loads(files[f"requests/{self.request_id}.json"])
+        self.assertEqual(receipt["product_changes"]["description"]["before"], "Test board")
+        self.assertEqual(receipt["reason"], "Verified label")
+
+    def test_edit_quantity_and_location_leaves_other_location_and_history_alone(self):
+        original = self.stock()[0].copy()
+        self.propose_edit({}, original, {"location": "B", "units": 4, "available": 3})
+        files = self.edit_files()
+        rows = read_rows(files["locations.csv"], LOCATION_COLUMNS)[1]
+        self.assertEqual((rows[0]["location"], rows[0]["units"], rows[0]["available"]), ("B", "4", "3"))
+        self.assertEqual(rows[1], self.stock()[1])
+        self.assertNotIn("movements.csv", files)
+        self.assertEqual(self.db.refs["main"], "initial")
+
+    def test_edit_rejects_changed_id_invalid_balances_destination_collision_and_noop(self):
+        original = self.stock()[0].copy()
+        cases = [
+            ({"code": "OTHER000"}, None, None),
+            ({}, original, {"units": 1, "available": 2}),
+            ({}, original, {"units": -1}),
+            ({}, original, {"sublocation": "02"}),
+            ({}, None, None),
+        ]
+        for updated, original_stock, updated_stock in cases:
+            with self.subTest(updated=updated, stock=updated_stock), self.assertRaises(ValueError):
+                self.propose_edit(updated, original_stock, updated_stock)
+        self.assertEqual(len(self.db.commits), 1)
+
+    def test_edit_rejects_stale_balance_instead_of_overwriting_a_withdrawal(self):
+        original = self.stock()[0].copy()
+        self.withdraw()
+        with self.assertRaisesRegex(ValueError, "existencias cambiaron"):
+            self.propose_edit({}, original, {"available": 4})
+        self.assertEqual(self.stock()[0]["available"], "3")
+        self.assertEqual(len(self.db.prs), 0)
+
+    def test_edit_does_not_overwrite_unchanged_fields_from_a_stale_form(self):
+        original = self.stock()[0].copy()
+        self.withdraw()
+        self.propose_edit({}, original, {"units": 6, "available": 5})
+        row = read_rows(self.edit_files()["locations.csv"], LOCATION_COLUMNS)[1][0]
+        self.assertEqual((row["units"], row["available"]), ("6", "3"))
+
+    def test_edit_timeout_recovers_same_review_request(self):
+        self.db.timeout_after_pr = True
+        with self.assertRaises(GitHubError):
+            self.propose_edit()
+        url = self.propose_edit()
+        self.assertEqual(self.propose_edit(), url)
+        self.assertEqual(len(self.db.prs), 1)
+
 
 if __name__ == "__main__":
     unittest.main()

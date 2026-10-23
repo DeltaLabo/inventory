@@ -1,7 +1,7 @@
 # Inventario Delta LAB
 
-Inventario con consulta pública, ingresos pendientes de aprobación y retiros
-inmediatos. La interfaz está en español y GitHub guarda los datos.
+Inventario con consulta pública, ingresos y correcciones pendientes de aprobación,
+y retiros inmediatos. La interfaz está en español y GitHub guarda los datos.
 
 Aplicación publicada: https://deltalab-inventory.streamlit.app/
 
@@ -25,6 +25,11 @@ archivo principal. Los CSV se resuelven desde la ubicación del código.
   más unidades de un producto existente; indicar cantidad, caja, compartimento y
   responsable. Un producto nuevo recibe un ID automático permanente. La app crea
   una pull request; las existencias se incorporan al aprobarla y **fusionarla**.
+- **Editar:** usa la misma contraseña de ingresos. Elegir un producto existente y
+  corregir descripción, clasificación, fabricante, modelo u otras especificaciones.
+  Activar «Corregir ubicación o cantidades» para corregir una ubicación concreta y
+  sus saldos. Indicar responsable y motivo. El ID permanece fijo y los cambios se
+  envían a una pull request; no se aplican hasta aprobarla y fusionarla.
 - **Retirar:** requiere la contraseña compartida de retiros. Elegir el producto y
   su ubicación, indicar cantidad y responsable. El saldo y el movimiento se guardan
   inmediatamente en un único commit de GitHub, sin esperar aprobación.
@@ -72,6 +77,7 @@ Si GitHub no responde, la consulta usa la copia local con aviso y deshabilita ca
 Si falla la conexión al guardar, reintentar el mismo formulario con los mismos datos:
 la solicitud conserva un identificador y recupera un cambio ya guardado sin duplicarlo.
 Tras un éxito, usar «Registrar otro ingreso/retiro» para una operación diferente.
+Para otra corrección, usar «Editar otro producto».
 Recargar el navegador o abrir otra sesión inicia solicitudes nuevas: comprobar los
 registros antes de repetir una operación cuyo resultado no se conoce.
 
@@ -89,6 +95,15 @@ en la misma fila de stock, GitHub puede señalar un conflicto: revisar los saldo
 actuales y sumar el ingreso sobre ellos, sin reemplazarlos por una versión vieja.
 Una solicitud cerrada sin fusionar no agrega existencias.
 
+Las correcciones usan ramas `inventory/edit-<id>` y conservan en su comprobante los
+valores anteriores y propuestos junto con el motivo. Los ingresos suman unidades;
+las correcciones reemplazan únicamente los campos que se cambiaron en el formulario.
+Los saldos se revisan nuevamente antes de crear la propuesta para detectar cambios
+simultáneos. Si el campo a corregir ya cambió, hay que volver a seleccionar el producto
+y revisar los datos actualizados. Nunca se unen automáticamente dos ubicaciones con
+stock ni se permite cambiar el ID. Si aparece un conflicto al fusionar, revisar los
+retiros posteriores antes de aceptar la corrección.
+
 ## Actualizar datos
 
 - `details.csv`: fichas de productos. Conservar los códigos como texto, incluidos
@@ -104,7 +119,7 @@ Una solicitud cerrada sin fusionar no agrega existencias.
 - `movements.csv`: se crea en GitHub con el primer retiro. Incluye identificador,
   fecha UTC, producto, caja, compartimento, cantidad, responsable, proyecto y saldo
   posterior. Se guarda junto con el cambio de stock en el mismo commit.
-- `requests/`: comprobantes de ingresos propuestos, incorporados al fusionar cada PR.
+- `requests/`: comprobantes de ingresos y correcciones, incorporados al fusionar cada PR.
 
 Editar los CSV y ejecutar la validación:
 
@@ -123,6 +138,8 @@ La app no escribe CSVs en el disco temporal de Streamlit. Los cambios se guardan
 por la API de GitHub. Los retiros revisan el saldo más reciente, afectan una sola
 ubicación y reintentan ante cambios simultáneos, sin forzar el historial de Git.
 Los ingresos usan una rama independiente por solicitud y requieren tu revisión.
+Las correcciones siguen el mismo flujo de revisión, con el motivo y los valores
+anteriores registrados. Ninguna de estas acciones modifica el registro de retiros.
 
 ## Imágenes
 

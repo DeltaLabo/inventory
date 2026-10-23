@@ -1,4 +1,4 @@
-"""The two password-protected inventory forms; browsing never requires login."""
+"""Password-protected inventory forms; browsing never requires login."""
 
 import hmac
 import os
@@ -43,14 +43,18 @@ def show_completed(kind):
     result = st.session_state.get(f"{kind}_result")
     if result is None:
         return False
-    if kind == "addition":
-        st.success("Solicitud enviada. Las unidades se incorporan cuando se apruebe y fusione la solicitud.")
+    if kind in ("addition", "edit"):
+        st.success("Solicitud enviada. Los cambios se aplican cuando se apruebe y fusione la solicitud.")
         st.link_button("Ver solicitud en GitHub", result)
     else:
         st.success(f"Retiro registrado. Disponible después del retiro: {result}.")
-    if st.button("Registrar otro ingreso" if kind == "addition" else "Registrar otro retiro"):
+    button_label = {"addition": "Registrar otro ingreso", "edit": "Editar otro producto", "withdrawal": "Registrar otro retiro"}[kind]
+    if st.button(button_label):
         st.session_state.pop(f"{kind}_result", None)
         st.session_state.pop(f"{kind}_id", None)
+        if kind == "edit":
+            for key in ("edit_context", "edit_original_item", "edit_original_stock"):
+                st.session_state.pop(key, None)
         # Clear old form fields, especially the password, before another action.
         for key in list(st.session_state):
             if key.startswith(f"{kind}_field_"):
@@ -157,4 +161,81 @@ def withdrawal_form(client, details, locations, password, on_saved):
         st.session_state["withdrawal_result"] = remaining
         st.session_state.pop("withdrawal_field_password", None)
         on_saved()
+        st.rerun()
+
+
+def edit_form(client, details, locations, password):
+    st.subheader("Editar producto")
+    st.caption("Corregí una ficha existente. Se conserva su identificador y los cambios quedan pendientes de aprobación.")
+    if show_completed("edit"):
+        return
+    if client is None or not password:
+        st.info("La edición todavía no está habilitada.")
+        return
+    request_id = operation_id("edit")
+    eligible = details[~details["code"].duplicated(keep=False)]
+    if eligible.empty:
+        st.info("No hay productos con identificación única para editar.")
+        return
+    products = {row["code"]: product_label(row) for _, row in eligible.iterrows()}
+    code = st.selectbox("Producto a editar", sorted(products, key=products.get), format_func=products.get)
+    correct_stock = st.checkbox("Corregir ubicación o cantidades")
+    selected_stock = None
+    if correct_stock:
+        rows = locations[locations["code"].eq(code)]
+        rows = rows[~rows.duplicated(["location", "sublocation"], keep=False)]
+        if rows.empty:
+            st.info("No hay una ubicación única para corregir. Para agregar existencias, usá Ingresar.")
+            return
+        choices = {(row["location"], row["sublocation"]): row.to_dict() for _, row in rows.iterrows()}
+        slot = st.selectbox("Ubicación a corregir", list(choices), format_func=lambda key: f"Caja {key[0]} / {key[1]}")
+        selected_stock = choices[slot]
+        try:
+            stock_counts(selected_stock)
+        except ValueError:
+            st.info("Los saldos originales de esta ubicación son inválidos; revisalos en el CSV antes de editar desde la app.")
+            return
+    context = (code, (selected_stock["location"], selected_stock["sublocation"]) if selected_stock else None)
+    if st.session_state.get("edit_context") != context:
+        for key in list(st.session_state):
+            if key.startswith("edit_field_"):
+                del st.session_state[key]
+        st.session_state["edit_context"] = context
+        st.session_state["edit_original_item"] = eligible[eligible["code"].eq(code)].iloc[0].to_dict()
+        st.session_state["edit_original_stock"] = selected_stock
+    original_item = st.session_state["edit_original_item"]
+    original_stock = st.session_state["edit_original_stock"]
+    with st.form("edit_form"):
+        updated_item = {}
+        for name, label in (
+            ("description", "Descripción"), ("type", "Tipo"), ("subtype", "Subtipo"),
+            ("manufacturer", "Fabricante (opcional)"), ("model", "Modelo (opcional)"),
+            ("value", "Valor / especificación (opcional)"), ("package", "Encapsulado (opcional)"),
+            ("info", "Información adicional (opcional)"),
+        ):
+            updated_item[name] = st.text_input(label, value=original_item[name], key=f"edit_field_{name}")
+        updated_stock = None
+        if original_stock:
+            updated_stock = {
+                "location": st.text_input("Caja / ubicación", value=original_stock["location"], key="edit_field_location", max_chars=80),
+                "sublocation": st.text_input("Compartimento", value=original_stock["sublocation"], key="edit_field_sublocation", max_chars=80),
+                "units": st.number_input("Unidades registradas (saldo corregido)", min_value=0, value=int(original_stock["units"]), step=1, key="edit_field_units"),
+                "available": st.number_input("Disponible (saldo corregido)", min_value=0, value=int(original_stock["available"]), step=1, key="edit_field_available"),
+            }
+        person = st.text_input("Responsable (nombre o iniciales)", key="edit_field_person", max_chars=100)
+        reason = st.text_input("Motivo de la corrección", key="edit_field_reason", max_chars=300)
+        entered = st.text_input("Contraseña de ingresos", type="password", key="edit_field_password")
+        submitted = st.form_submit_button("Enviar corrección para aprobación")
+    if submitted:
+        if not password_matches(entered, password):
+            st.error("Contraseña incorrecta.")
+            return
+        try:
+            with st.spinner("Enviando corrección a GitHub…"):
+                url = client.propose_edit(request_id, code, original_item, updated_item, person, reason, original_stock, updated_stock)
+        except (ValueError, GitHubError) as error:
+            st.error(str(error))
+            return
+        st.session_state["edit_result"] = url
+        st.session_state.pop("edit_field_password", None)
         st.rerun()

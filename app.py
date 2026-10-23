@@ -5,7 +5,7 @@ import requests
 import streamlit as st
 
 from inventory import build_inventory, filter_inventory, load_data, validate_data
-from forms import addition_form, settings, withdrawal_form
+from forms import addition_form, edit_form, settings, withdrawal_form
 from github_inventory import GitHubError, GitHubInventory
 
 
@@ -92,9 +92,11 @@ def main():
     except (OSError, ValueError, pd.errors.ParserError) as error:
         st.error(f"No se pudo cargar el inventario: {error}")
         st.stop()
-    action = st.radio("¿Qué querés hacer?", ("Consultar", "Ingresar", "Retirar"), horizontal=True)
+    action = st.radio("¿Qué querés hacer?", ("Consultar", "Ingresar", "Editar", "Retirar"), horizontal=True)
     if action == "Ingresar":
         addition_form(client, details, locations, config["add_password"])
+    elif action == "Editar":
+        edit_form(client, details, locations, config["add_password"])
     elif action == "Retirar":
         withdrawal_form(client, details, locations, config["withdraw_password"], live_data.clear)
     else:
