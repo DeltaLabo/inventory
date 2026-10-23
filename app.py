@@ -55,7 +55,7 @@ def browse(details, locations):
     labels = {
         "code": "Code", "description": "Description", "manufacturer": "Manufacturer",
         "model": "Model", "location": "Box", "sublocation": "Bag",
-        "units": "Recorded units", "available": "Available", "status": "Notes",
+        "units": "Units", "status": "Notes",
     }
     st.dataframe(results[list(labels)].rename(columns=labels), hide_index=True, width="stretch")
     if show_images:

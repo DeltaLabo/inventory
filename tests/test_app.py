@@ -35,6 +35,9 @@ class AppTests(unittest.TestCase):
             self.assertEqual(len(app.exception), 0)
             self.assertEqual(app.selectbox[0].value, "All")
             data = app.dataframe[0].value
+            self.assertIn("Units", data.columns)
+            self.assertNotIn("Available", data.columns)
+            self.assertNotIn("Recorded units", data.columns)
             self.assertIn(self.code_for("AOO90SER"), data["Code"].tolist())
             relays = data[data["Code"].isin(["GPQM1026", "SINW1026"])]
             self.assertEqual(len(relays), 2)
@@ -362,16 +365,18 @@ class AppTests(unittest.TestCase):
             app.checkbox[0].check().run()
             self.assertEqual(len(app.exception), 0)
             self.assertEqual(app.text_input(key="edit_field_location").value, "A")
-            self.assertEqual(app.number_input(key="edit_field_available").value, 10)
-            app.number_input(key="edit_field_available").set_value(9)
+            self.assertEqual(app.number_input(key="edit_field_units").value, 10)
+            self.assertEqual(len(app.number_input), 1)
+            app.number_input(key="edit_field_units").set_value(9)
             app.text_input(key="edit_field_person").set_value("Intern")
             app.text_input(key="edit_field_reason").set_value("Physical count")
             app.text_input(key="edit_field_password").set_value("test-add")
             app.button[0].click().run()
             self.assertEqual(len(app.exception), 0)
             args = edit.call_args.args
-            self.assertEqual(args[6]["available"], "10")
-            self.assertEqual(args[7]["available"], 9)
+            self.assertEqual(args[6]["units"], "10")
+            self.assertEqual(args[7]["units"], 9)
+            self.assertNotIn("available", args[7])
 
     def test_migrated_product_finds_legacy_photo_and_remains_searchable_by_old_code(self):
         from unittest.mock import Mock

@@ -150,3 +150,17 @@ Cache history reads for 15 seconds, offer refresh and invalidate after withdrawa
 Label local snapshots and surface read/quantity errors rather than silently dropping
 movements or showing a failed remote fetch as an empty report. Preserve all existing
 ledger data; tests must use mocked GitHub and must never make real withdrawals.
+
+The user explicitly requested one stock quantity: locations.csv has columns
+code,location,sublocation,units. Units means currently available stock, never a
+lifetime received count. Additions increase units; withdrawals reduce units and
+append the existing movement ledger atomically. Edit offers a single Units input.
+The migration takes old available values as new units, preserving every code,
+box/bag, zero and unknown balance; never copy old lifetime units over availability.
+Both pandas and GitHub readers accept legacy two-column files, use available as
+the remaining balance and drop it from normalized stock. Stock writes use only
+units. Reject edit snapshots from the old two-column schema until the page is
+refreshed. Existing available_after fields in historical movements/receipts remain
+unchanged and display as Units after withdrawal; they are not live stock columns.
+Review older pending stock PRs against current balances when merging the schema
+change. Auxiliary legacy CSVs are not authoritative stock and remain independent.

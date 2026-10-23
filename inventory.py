@@ -7,7 +7,7 @@ import pandas as pd
 
 
 DETAIL_COLUMNS = ("code", "type", "subtype", "manufacturer", "model", "description", "value", "package", "info")
-LOCATION_COLUMNS = ("code", "location", "sublocation", "units", "available")
+LOCATION_COLUMNS = ("code", "location", "sublocation", "units")
 
 
 def load_data(root):
@@ -19,6 +19,10 @@ def load_data(root):
 
 def _parse_frame(text, name, columns):
     frame = pd.read_csv(StringIO(text), dtype=str, keep_default_na=False)
+    if name == "locations.csv" and "available" in frame.columns:
+        # Legacy files store the current balance in available, not units.
+        frame["units"] = frame["available"]
+        frame = frame.drop(columns="available")
     missing = set(columns) - set(frame.columns)
     if missing:
         raise ValueError(f"{name}: missing columns: {', '.join(sorted(missing))}")
@@ -45,10 +49,9 @@ def validate_data(details, locations):
     for column in ("code", "type", "subtype", "description"):
         for index in details.index[details[column].eq("")]:
             issues.append(f"Catalog, record {index + 1} ({details.at[index, 'code']}): missing {column}.")
-    numeric = locations[["units", "available"]].apply(pd.to_numeric, errors="coerce")
+    numeric = locations[["units"]].apply(pd.to_numeric, errors="coerce")
     valid = numeric.notna().all(axis=1) & numeric.ge(0).all(axis=1)
     valid &= numeric.mod(1).eq(0).all(axis=1)
-    valid &= numeric["available"].le(numeric["units"])
     for index in locations.index[~valid]:
         issues.append(f"{locations.at[index, 'code']}: invalid quantities in box {locations.at[index, 'location']} / bag {locations.at[index, 'sublocation']}.")
     for index in locations.index[locations[["code", "location", "sublocation"]].eq("").any(axis=1)]:

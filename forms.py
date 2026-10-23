@@ -7,7 +7,7 @@ from uuid import uuid4
 import streamlit as st
 from streamlit.errors import StreamlitSecretNotFoundError
 
-from github_inventory import GitHubError, required, stock_counts
+from github_inventory import GitHubError, required, stock_units
 
 
 def settings():
@@ -209,12 +209,12 @@ def withdrawal_form(client, details, locations, password, on_saved):
         if row["code"] not in products or not row["location"] or not row["sublocation"]:
             continue
         try:
-            _, available = stock_counts(row)
+            units = stock_units(row)
         except ValueError:
             continue
-        if available > 0:
+        if units > 0:
             key = (row["code"], row["location"], row["sublocation"])
-            choices[key] = (f"{products[row['code']]} · box {row['location']} / {row['sublocation']} · available {available}", available)
+            choices[key] = (f"{products[row['code']]} · box {row['location']} / bag {row['sublocation']} · units {units}", units)
     if not choices:
         st.info("No available stock has a verifiable product ID, box and bag.")
         return
@@ -270,7 +270,7 @@ def edit_form(client, details, locations, password):
         slot = st.selectbox("Box and bag to correct", list(choices), format_func=lambda key: f"Box {key[0]} / {key[1]}")
         selected_stock = choices[slot]
         try:
-            stock_counts(selected_stock)
+            stock_units(selected_stock)
         except ValueError:
             st.info("The original stock counts for this box and bag are invalid; review the CSV before editing in the app.")
             return
@@ -298,8 +298,7 @@ def edit_form(client, details, locations, password):
             updated_stock = {
                 "location": st.text_input("Box", value=original_stock["location"], key="edit_field_location", max_chars=80),
                 "sublocation": st.text_input("Bag", value=original_stock["sublocation"], key="edit_field_sublocation", max_chars=80),
-                "units": st.number_input("Recorded units (corrected count)", min_value=0, value=int(original_stock["units"]), step=1, key="edit_field_units"),
-                "available": st.number_input("Available units (corrected count)", min_value=0, value=int(original_stock["available"]), step=1, key="edit_field_available"),
+                "units": st.number_input("Units (available now)", min_value=0, value=int(original_stock["units"]), step=1, key="edit_field_units"),
             }
         person = st.text_input("Recorded by (name or initials)", key="edit_field_person", max_chars=100)
         reason = st.text_input("Reason for correction", key="edit_field_reason", max_chars=300)

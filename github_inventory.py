@@ -69,7 +69,14 @@ def read_rows(text, columns):
     if any(None in row for row in rows):
         raise ValueError("Some rows have extra columns; correct the CSV before submitting changes.")
     # Preserve all existing fields and text, including optional extra columns.
-    return list(reader.fieldnames), [{key: value or "" for key, value in row.items()} for row in rows]
+    fields = list(reader.fieldnames)
+    rows = [{key: value or "" for key, value in row.items()} for row in rows]
+    if tuple(columns) == LOCATION_COLUMNS and "available" in fields:
+        # Normalize old snapshots/proposals before any stock operation.
+        fields.remove("available")
+        for row in rows:
+            row["units"] = row.pop("available")
+    return fields, rows
 
 
 def write_rows(columns, rows):
@@ -87,14 +94,11 @@ def unique_product(details, code):
     return matches[0]
 
 
-def stock_counts(row):
-    values = [row[name].strip() for name in ("units", "available")]
-    if any(not value.isascii() or not value.isdigit() for value in values):
+def stock_units(row):
+    value = row["units"].strip()
+    if not value.isascii() or not value.isdigit():
         raise ValueError("Stock counts for this box and bag need review.")
-    units, available = map(int, values)
-    if available > units:
-        raise ValueError("Stock counts for this box and bag need review.")
-    return units, available
+    return int(value)
 
 
 class GitHubInventory:
@@ -270,12 +274,12 @@ class GitHubInventory:
             if existing_code and not matches and any(row["code"].strip() == code for row in locations):
                 raise ValueError("The product box or bag changed. Refresh inventory before adding units.")
             if matches:
-                units, available = stock_counts(matches[0])
-                matches[0].update(units=str(units + quantity), available=str(available + quantity))
+                units = stock_units(matches[0])
+                matches[0]["units"] = str(units + quantity)
             else:
                 locations.append(dict.fromkeys(location_columns, "") | {
                     "code": code, "location": location, "sublocation": sublocation,
-                    "units": str(quantity), "available": str(quantity),
+                    "units": str(quantity),
                 })
             changes["locations.csv"] = write_rows(location_columns, locations)
             changes[f"requests/{operation}.json"] = json.dumps({
@@ -333,11 +337,11 @@ class GitHubInventory:
             matches = [row for row in locations if (row["code"].strip(), row["location"].strip(), row["sublocation"].strip()) == (code, location, sublocation)]
             if len(matches) != 1:
                 raise ValueError("The box and bag combination does not exist or is duplicated. Review inventory first.")
-            _, available = stock_counts(matches[0])
-            if quantity > available:
-                raise ValueError(f"Only {available} units are available in this box and bag.")
-            remaining = available - quantity
-            matches[0]["available"] = str(remaining)
+            units = stock_units(matches[0])
+            if quantity > units:
+                raise ValueError(f"Only {units} units are available in this box and bag.")
+            remaining = units - quantity
+            matches[0]["units"] = str(remaining)
             history.append(dict.fromkeys(columns, "") | expected | {
                 "timestamp": datetime.now(timezone.utc).isoformat(), "available_after": str(remaining),
             })
@@ -387,6 +391,8 @@ class GitHubInventory:
                 changes["details.csv"] = write_rows(columns, details)
             stock_audit = {}
             if updated_stock is not None:
+                if original_stock and "available" in original_stock:
+                    raise ValueError("The stock format changed. Refresh the page before editing quantities.")
                 if not original_stock or original_stock.get("code") != code:
                     raise ValueError("Select the original box and bag for the product.")
                 location_columns, locations = read_rows(self.read_file("locations.csv", parent), LOCATION_COLUMNS)
@@ -396,7 +402,7 @@ class GitHubInventory:
                     raise ValueError("The box and bag combination changed or is duplicated. Review inventory first.")
                 row = matches[0]
                 for name, value in updated_stock.items():
-                    if name not in ("location", "sublocation", "units", "available"):
+                    if name not in ("location", "sublocation", "units"):
                         raise ValueError("The product ID cannot be edited.")
                     value = str(value).strip()
                     if value == str(original_stock[name]).strip():
@@ -408,7 +414,7 @@ class GitHubInventory:
                 if stock_audit:
                     required(row["location"], "Box", 80)
                     required(row["sublocation"], "Bag", 80)
-                    stock_counts(row)
+                    stock_units(row)
                     destination = (code, row["location"].strip(), row["sublocation"].strip())
                     if any(other is not row and tuple(other[name].strip() for name in ("code", "location", "sublocation")) == destination for other in locations):
                         raise ValueError("The product already has stock in the destination box and bag; stock counts cannot be merged automatically.")

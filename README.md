@@ -198,8 +198,9 @@ any merge conflict involving quantities.
 - `details.csv`: product records with unique permanent codes. Keep codes as text.
   `previous_code` is an optional historical reference, never a merge key; multiple
   distinct products can share it. Leave it empty for new products.
-- `locations.csv`: one row per product code, box and bag. `units` and `available`
-  are nonnegative integers, with `available` no greater than `units`. Internal
+- `locations.csv`: one row per product code, box and bag. `units` is the current
+  available quantity, a nonnegative integer. Additions increase it and withdrawals
+  decrease it. There is no separate `available` stock column. Internal
   column names remain `location` and `sublocation` for compatibility.
 - `to_buy.csv`: an independent shopping list.
 - `purchase_requests.csv`: shared purchase requests with UUID, UTC timestamp,
@@ -213,6 +214,20 @@ any merge conflict involving quantities.
   ID, UTC timestamp, product, box, bag, quantity, person, project and remaining balance.
   It is committed atomically with the stock update.
 - `requests/`: receipts for additions and corrections, incorporated when each PR merges.
+
+The single-quantity migration used each old `available` value as the new `units`,
+preserving remaining balances, zeroes, product IDs and box/bag labels. It did not
+restore quantities already withdrawn or infer unknown quantities. Readers also
+accept the old two-column stock format, taking `available` as the current balance;
+subsequent stock writes produce the single-quantity format. Refresh an edit form
+opened before this migration before correcting stock. Review any older pending
+stock PR against the latest balances and keep only the current `units` column
+when resolving merge conflicts.
+
+The historical ledger field `available_after` is retained for compatibility and
+shown as **Units after withdrawal**. It records the remaining quantity at the time
+of that movement, not a second live stock balance. Existing movements and receipts
+are preserved.
 
 Validate CSV changes with:
 
