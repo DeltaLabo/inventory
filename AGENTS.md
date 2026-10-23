@@ -72,3 +72,7 @@ the addition PR is merged; do not add a separate taxonomy service or database.
 Manufacturer on new additions is an optional searchable selectbox with
 `accept_new_options=True`, using approved nonempty manufacturer names as suggestions.
 Deduplicate suggestions case-insensitively without modifying existing catalog rows.
+Box/location on all additions is also a searchable selectbox with
+`accept_new_options=True`, populated from nonempty approved stock locations.
+New boxes become shared suggestions after merging the addition. Preserve existing
+box labels and keep compartment entry separate.

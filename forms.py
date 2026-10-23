@@ -131,7 +131,13 @@ def addition_form(client, details, locations, password):
             ) or ""
             item["model"] = st.text_input("Modelo (opcional)", key="addition_field_model", max_chars=300)
         quantity = st.number_input("Cantidad que ingresa", min_value=1, max_value=1000000, step=1, key="addition_field_quantity")
-        location = st.text_input("Caja / ubicación", key="addition_field_location", max_chars=80)
+        boxes = sorted({value for value in locations["location"] if value}, key=str.casefold)
+        location = st.selectbox(
+            "Caja / ubicación", boxes, index=None, accept_new_options=True,
+            placeholder="Buscá o escribí una caja",
+            help="Elegí una caja existente o escribí una nueva y presioná Enter. Se incorpora cuando se apruebe el ingreso.",
+            key="addition_field_location",
+        ) or ""
         sublocation = st.text_input("Compartimento", key="addition_field_sublocation", max_chars=80)
         person = st.text_input("Responsable (nombre o iniciales)", key="addition_field_person", max_chars=100)
         project = st.text_input("Proyecto o nota (opcional)", key="addition_field_project", max_chars=300)

@@ -30,6 +30,8 @@ archivo principal. Los CSV se resuelven desde la ubicación del código.
   exista; se incorpora a las opciones al aprobar y fusionar el ingreso.
   Fabricante es opcional y permite buscar entre los fabricantes existentes o escribir
   uno nuevo y presionar Enter. Los fabricantes nuevos también se incorporan al aprobar el ingreso.
+  Caja / ubicación permite buscar cajas existentes o escribir una nueva y presionar
+  Enter. La caja nueva aparece entre las opciones al aprobar y fusionar el ingreso.
 - **Editar:** usa la misma contraseña de ingresos. Elegir un producto existente y
   corregir descripción, clasificación, fabricante, modelo u otras especificaciones.
   Activar «Corregir ubicación o cantidades» para corregir una ubicación concreta y
