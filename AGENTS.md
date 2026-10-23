@@ -41,3 +41,4 @@ Compare only changed fields with the latest data before proposing an edit; prese
 unmodified fields and never overwrite intervening withdrawals. Record before/after
 values, responsible person, and a required reason. IDs are immutable. Reject invalid
 balances and destination-location collisions; never merge stock rows automatically.
+Show the global "Datos por revisar" panel only under Editar, not public browsing.

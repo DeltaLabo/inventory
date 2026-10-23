@@ -31,12 +31,6 @@ def live_data(token, repository, branch):
 
 
 def browse(details, locations):
-    issues = validate_data(details, locations)
-    if issues:
-        with st.expander(f"Datos por revisar ({len(issues)})"):
-            for issue in issues:
-                st.write(f"• {issue}")
-
     inventory = build_inventory(details, locations)
     search = st.text_input("Buscar por código, descripción, fabricante, modelo o ubicación")
     types = sorted(inventory["type"].unique(), key=str.casefold)
@@ -96,6 +90,11 @@ def main():
     if action == "Ingresar":
         addition_form(client, details, locations, config["add_password"])
     elif action == "Editar":
+        issues = validate_data(details, locations)
+        if issues:
+            with st.expander(f"Datos por revisar ({len(issues)})"):
+                for issue in issues:
+                    st.write(f"• {issue}")
         edit_form(client, details, locations, config["add_password"])
     elif action == "Retirar":
         withdrawal_form(client, details, locations, config["withdraw_password"], live_data.clear)

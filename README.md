@@ -128,7 +128,7 @@ python inventory.py
 ```
 
 La validación muestra problemas y termina con código 1 si hay datos pendientes.
-La aplicación también los muestra en «Datos por revisar». Los productos sin
+La aplicación también los muestra en «Datos por revisar», solo dentro de **Editar**. Los productos sin
 ubicación muestran cantidades vacías (desconocidas), no cero. Las ubicaciones sin
 ficha siguen visibles en «Sin clasificar». Los códigos duplicados se presentan
 como ambiguos, conservando sus descripciones sin multiplicar las filas de stock.
