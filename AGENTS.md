@@ -81,3 +81,7 @@ outside the submission form so an existing-occupancy warning updates immediately
 Check only the selected box, treating 01 and 1 as the same numeric compartment;
 preserve an existing label for CSV references. The warning never blocks submission:
 different product IDs may share a compartment and must not be merged.
+Restocking an existing product automatically reuses its assigned box/compartment;
+show a read-only caption, or select only among its already registered locations if
+there are several. Ask for a new location only if none exists yet. Reject a stale
+restock location in the backend instead of silently creating a different slot.

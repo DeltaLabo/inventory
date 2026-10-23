@@ -35,6 +35,9 @@ archivo principal. Los CSV se resuelven desde la ubicación del código.
   Compartimento es un número entero desde cero. Si ya hay productos en ese número
   de la caja elegida, aparece un aviso antes de enviar. El aviso permite continuar:
   distintos productos pueden compartir la misma bolsa sin fusionar sus fichas.
+  Al sumar unidades de un producto existente, la app reutiliza su caja y bolsa sin
+  volver a pedirlas. Si tiene varias ubicaciones registradas, solo permite elegir
+  entre ellas. Si aún no tiene ninguna, se define para el primer ingreso.
 - **Editar:** usa la misma contraseña de ingresos. Elegir un producto existente y
   corregir descripción, clasificación, fabricante, modelo u otras especificaciones.
   Activar «Corregir ubicación o cantidades» para corregir una ubicación concreta y

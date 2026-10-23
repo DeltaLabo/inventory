@@ -92,6 +92,43 @@ def addition_classification(details):
     return {"type": item_type, "subtype": subtype}
 
 
+def addition_storage(locations, existing_code=None):
+    if existing_code:
+        assigned = locations[locations["code"].eq(existing_code)]
+        if not assigned.empty:
+            if assigned.duplicated(["location", "sublocation"]).any() or assigned[["location", "sublocation"]].eq("").any().any():
+                st.info("La ubicación de este producto requiere revisión en Editar antes de sumar unidades.")
+                return None
+            slots = list(zip(assigned["location"], assigned["sublocation"]))
+            slot = slots[0] if len(slots) == 1 else st.selectbox(
+                "Ubicación existente", slots,
+                format_func=lambda value: f"Caja {value[0]} / bolsa {value[1]}",
+            )
+            st.caption(f"Las unidades se sumarán en la caja {slot[0]}, bolsa {slot[1]}.")
+            return slot
+        st.info("Este producto aún no tiene ubicación registrada. Definila para ingresar sus primeras unidades.")
+    # These rerun independently so occupancy is visible before submission.
+    boxes = sorted({value for value in locations["location"] if value}, key=str.casefold)
+    location = st.selectbox(
+        "Caja / ubicación", boxes, index=None, accept_new_options=True,
+        placeholder="Buscá o escribí una caja",
+        help="Elegí una caja existente o escribí una nueva y presioná Enter. Se incorpora cuando se apruebe el ingreso.",
+        key="addition_field_location",
+    ) or ""
+    compartment = st.number_input(
+        "Compartimento", min_value=0, value=None, step=1,
+        placeholder="Número de compartimento", key="addition_field_sublocation",
+    )
+    sublocation = "" if compartment is None else str(compartment)
+    if location and compartment is not None:
+        numbers = locations["sublocation"].map(lambda value: int(value) if value.isascii() and value.isdigit() else None)
+        occupied = locations[locations["location"].eq(location) & numbers.eq(compartment)]
+        if not occupied.empty:
+            sublocation = occupied.iloc[0]["sublocation"]
+            st.warning(f"El compartimento {compartment} de la caja {location} ya tiene productos registrados. Podés continuar y guardar otro producto en la misma bolsa.")
+    return location, sublocation
+
+
 def addition_form(client, details, locations, password):
     st.subheader("Ingresar al inventario")
     st.caption("Completá los datos; el identificador se asigna automáticamente. El ingreso queda pendiente de aprobación.")
@@ -115,27 +152,10 @@ def addition_form(client, details, locations, password):
         # Outside the form so subtypes update immediately when the type changes.
         classification = addition_classification(details)
         st.caption("Usá «Crear nuevo…» si falta una opción. Se incorpora al catálogo cuando se apruebe el ingreso.")
-    # These rerun independently so occupancy is visible before submission.
-    boxes = sorted({value for value in locations["location"] if value}, key=str.casefold)
-    location = st.selectbox(
-        "Caja / ubicación", boxes, index=None, accept_new_options=True,
-        placeholder="Buscá o escribí una caja",
-        help="Elegí una caja existente o escribí una nueva y presioná Enter. Se incorpora cuando se apruebe el ingreso.",
-        key="addition_field_location",
-    ) or ""
-    compartment = st.number_input(
-        "Compartimento", min_value=0, value=None, step=1,
-        placeholder="Número de compartimento", key="addition_field_sublocation",
-    )
-    sublocation = "" if compartment is None else str(compartment)
-    if location and compartment is not None:
-        numbers = locations["sublocation"].map(lambda value: int(value) if value.isascii() and value.isdigit() else None)
-        occupied = locations[locations["location"].eq(location) & numbers.eq(compartment)]
-        if not occupied.empty:
-            # Keep the existing spelling, e.g. 01, for exact CSV references.
-            own_stock = occupied[occupied["code"].eq(existing_code)]
-            sublocation = (own_stock if not own_stock.empty else occupied).iloc[0]["sublocation"]
-            st.warning(f"El compartimento {compartment} de la caja {location} ya tiene productos registrados. Podés continuar y guardar otro producto en la misma bolsa.")
+    storage = addition_storage(locations, existing_code)
+    if storage is None:
+        return
+    location, sublocation = storage
     with st.form("addition_form"):
         item = dict(classification)
         if existing_code is None:

@@ -184,7 +184,7 @@ class GitHubInventoryTests(unittest.TestCase):
     def propose(self, existing_code=None):
         return self.db.propose_addition(
             self.request_id, {"description": "A new sensor", "type": "sensor", "subtype": "light"},
-            2, "B", "02", "Intern", existing_code=existing_code,
+            2, "A" if existing_code else "B", "01" if existing_code else "02", "Intern", existing_code=existing_code,
         )
 
     def test_new_product_gets_generated_id_and_only_changes_review_branch(self):
@@ -205,10 +205,15 @@ class GitHubInventoryTests(unittest.TestCase):
         self.propose("ITEM0001")
         files = self.db.commits[self.db.refs[f"inventory/add-{self.request_id}"]]["files"]
         self.assertEqual(files["details.csv"], self.db.main_files["details.csv"])
-        row = read_rows(files["locations.csv"], LOCATION_COLUMNS)[1][-1]
+        row = read_rows(files["locations.csv"], LOCATION_COLUMNS)[1][0]
         self.assertEqual(row["code"], "ITEM0001")
-        self.assertEqual(row["available"], "2")
+        self.assertEqual(row["available"], "7")
         self.assertEqual(self.db.tags, {})
+
+    def test_restock_does_not_create_a_different_location_for_an_already_located_product(self):
+        with self.assertRaisesRegex(ValueError, "ubicación del producto cambió"):
+            self.db.propose_addition(self.request_id, {}, 2, "B", "99", "Intern", existing_code="ITEM0001")
+        self.assertEqual(len(self.db.commits), 1)
 
     def test_code_uses_registration_month_year_and_retries_catalog_collision(self):
         with patch("github_inventory.secrets.choice", side_effect=list("AAAABBBB")):

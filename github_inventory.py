@@ -211,6 +211,8 @@ class GitHubInventory:
             matches = [row for row in locations if (row["code"].strip(), row["location"].strip(), row["sublocation"].strip()) == (code, location, sublocation)]
             if len(matches) > 1:
                 raise ValueError("La ubicación está duplicada. Primero debe revisarse el inventario.")
+            if existing_code and not matches and any(row["code"].strip() == code for row in locations):
+                raise ValueError("La ubicación del producto cambió. Actualice el inventario antes de sumar unidades.")
             if matches:
                 units, available = stock_counts(matches[0])
                 matches[0].update(units=str(units + quantity), available=str(available + quantity))

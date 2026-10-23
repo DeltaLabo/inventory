@@ -171,6 +171,26 @@ class AppTests(unittest.TestCase):
             propose.assert_called_once()
             self.assertEqual(propose.call_args.args[3:5], ("A", "12"))
 
+    def test_restock_uses_assigned_box_and_bag_without_asking_again(self):
+        self.configure_forms()
+        with patch("github_inventory.GitHubInventory.propose_addition", return_value="https://github.com/DeltaLabo/inventory/pull/127") as propose:
+            app = self.open_app()
+            app.radio[0].set_value("Ingresar").run()
+            app.radio[1].set_value("Más unidades de un producto existente").run()
+            app.selectbox[0].select(self.code_for("DCACTMOT")).run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertFalse(any(select.key == "addition_field_location" for select in app.selectbox))
+            self.assertFalse(any(number.key == "addition_field_sublocation" for number in app.number_input))
+            self.assertTrue(any("caja A, bolsa 1" in caption.value for caption in app.caption))
+            app.number_input(key="addition_field_quantity").set_value(2)
+            app.text_input(key="addition_field_person").set_value("Intern")
+            app.text_input(key="addition_field_password").set_value("test-add")
+            app.button[0].click().run()
+            self.assertEqual(len(app.exception), 0)
+            propose.assert_called_once()
+            self.assertEqual(propose.call_args.args[2:5], (2, "A", "1"))
+            self.assertEqual(propose.call_args.args[7], self.code_for("DCACTMOT"))
+
     def test_withdrawal_requires_password_and_shows_receipt_without_resubmitting(self):
         self.configure_forms()
         with patch("github_inventory.GitHubInventory.withdraw", return_value=3) as withdraw:
