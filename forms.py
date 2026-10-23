@@ -7,7 +7,7 @@ from uuid import uuid4
 import streamlit as st
 from streamlit.errors import StreamlitSecretNotFoundError
 
-from github_inventory import GitHubError, stock_counts
+from github_inventory import GitHubError, required, stock_counts
 
 
 def settings():
@@ -222,7 +222,8 @@ def withdrawal_form(client, details, locations, password, on_saved):
     with st.form("withdrawal_form"):
         quantity = st.number_input("Quantity to withdraw", min_value=1, max_value=choices[selected][1], step=1, key="withdrawal_field_quantity")
         person = st.text_input("Recorded by (name or initials)", key="withdrawal_field_person", max_chars=100)
-        project = st.text_input("Project or note (optional)", key="withdrawal_field_project", max_chars=300)
+        project = st.text_input("Project", key="withdrawal_field_project", max_chars=300,
+                                help="Required so withdrawals can be tracked by project.")
         entered = st.text_input("Withdrawal password", type="password", key="withdrawal_field_password")
         submitted = st.form_submit_button("Record withdrawal")
     if submitted:
@@ -231,6 +232,7 @@ def withdrawal_form(client, details, locations, password, on_saved):
             return
         try:
             with st.spinner("Saving withdrawal in GitHub…"):
+                project = required(project, "Project")
                 remaining = client.withdraw(request_id, *selected, quantity, person, project)
         except (ValueError, GitHubError) as error:
             st.error(str(error))

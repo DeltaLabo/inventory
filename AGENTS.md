@@ -5,7 +5,8 @@ additions and edits via GitHub PR, and immediate withdrawals via atomic GitHub c
 Keep it simple: no separate database or server. `app.py` is the only application
 entry point; `inventory.py` has import-safe CSV helpers and validation,
 `forms.py` holds the inventory forms, `purchases.py` holds the purchase list/form
-and quotation export, and `github_inventory.py` handles GitHub.
+and quotation export, `withdrawal_history.py` holds project withdrawal reports,
+and `github_inventory.py` handles GitHub.
 UI, messages, maintained descriptive inventory text and user documentation are English.
 Preserve identifiers, brand names, URLs, physical labels and historical audit entries.
 
@@ -40,7 +41,7 @@ while ambiguous/missing source data remain unresolved. Never fix these by guessi
 Keep network calls optional, bounded, and cached.
 Tests must mock GitHub; never submit real PRs or stock movements as a test.
 
-The top-level actions are Browse, Add, Edit, Withdraw, Purchases. Edits reuse the
+The top-level actions are Browse, Add, Edit, Withdraw, Purchases, History. Edits reuse the
 addition password and propose changes on `inventory/edit-<id>` branches. Prefill the
 form and freeze its original snapshot until another product/location is selected.
 Compare only changed fields with the latest data before proposing an edit; preserve
@@ -93,9 +94,9 @@ Keep the internal CSV/API column names `location` and `sublocation` unchanged.
 Recorded by means the person who records an addition, performs a withdrawal, or
 submits an edit; it is not the owner of an item or project. The user accepted this
 purpose after clarification. Keep it on these forms unless explicitly changed.
-Project or note remains optional on inventory additions and withdrawals; a
-project-specific box already identifies the project. Purchase requests are different:
-the user explicitly requires Project on those, along with requester and product link.
+Project or note remains optional on inventory additions. Project is required on
+new withdrawals and purchase requests so they can be tracked by project. Purchase
+requests also require requester and product link.
 
 User workflow rule: different bags or physical characteristics mean independent
 records; similar legacy codes/names are never sufficient evidence to merge them.
@@ -133,3 +134,19 @@ user-entered formulas. Purchase-list reads are cached 15 seconds, with manual re
 and invalidation after save. If the list cannot be read, disable purchase submission.
 Use mocked GitHub tests for validation, concurrency, uncertain writes, full export,
 password reuse and form behavior. Do not submit real requests as a test.
+
+History is a public read-only view of movements.csv, the existing separate ledger
+committed atomically with stock updates. Filter by exact recorded project and show
+totals per project/product plus individual movements and a filtered CSV download;
+All projects exports the complete log. Never infer movements from stock balances,
+merge distinct codes, or import usage_log.csv as authoritative withdrawal history.
+Show old blank-project entries as No project recorded without rewriting them.
+Keep their entered project/note text intact. Require Project for new withdrawals
+in UI and backend; still recover an existing legacy retry with a blank project.
+Descriptions in reports come from the current catalog, not historical snapshots;
+retain missing/ambiguous catalog products by code and never multiply movements.
+Use the shared spreadsheet_csv export helper to keep entered formulas as text.
+Cache history reads for 15 seconds, offer refresh and invalidate after withdrawal.
+Label local snapshots and surface read/quantity errors rather than silently dropping
+movements or showing a failed remote fetch as an empty report. Preserve all existing
+ledger data; tests must use mocked GitHub and must never make real withdrawals.

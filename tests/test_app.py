@@ -131,6 +131,53 @@ class AppTests(unittest.TestCase):
             self.assertEqual(len(app.text_input), 0)
             live_purchases.clear()
 
+    def test_history_filters_projects_and_displays_totals_without_a_password(self):
+        self.configure_forms()
+        self.config["withdraw_password"] = ""
+        from withdrawal_history import live_withdrawals
+        live_withdrawals.clear()
+        self.addCleanup(live_withdrawals.clear)
+        rows = [dict(id=str(index), timestamp="2026-10-22T12:00:00+00:00",
+                     code="GPQM1026", location="A", sublocation="12", quantity=str(quantity),
+                     available_after="0", person="Intern", project=project)
+                for index, (project, quantity) in enumerate((("Robot", 2), ("Robot", 1), ("Station", 4), ("", 1)))]
+        with patch("github_inventory.GitHubInventory.withdrawal_snapshot", return_value=rows):
+            app = self.open_app()
+            app.radio[0].set_value("History").run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertEqual(len(app.dataframe[1].value), 4)
+            self.assertEqual(len(app.text_input), 0)
+            app.selectbox[0].set_value("Robot").run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertEqual(app.dataframe[0].value["Total withdrawn"].tolist(), [3])
+            self.assertEqual(app.dataframe[1].value["Project"].tolist(), ["Robot", "Robot"])
+            self.assertEqual(len(app.get("download_button")), 1)
+            app.selectbox[0].set_value("").run()
+            self.assertEqual(len(app.dataframe[1].value), 1)
+
+    def test_history_without_token_displays_empty_local_snapshot_and_download(self):
+        app = self.open_app()
+        app.radio[0].set_value("History").run()
+        self.assertEqual(len(app.exception), 0)
+        self.assertTrue(any("local withdrawal-history snapshot" in message.value for message in app.info))
+        self.assertEqual(len(app.text_input), 0)
+        self.assertEqual(len(app.get("download_button")), 1)
+
+    def test_history_read_failure_does_not_show_an_empty_report(self):
+        from github_inventory import GitHubError
+
+        self.configure_forms()
+        with patch("github_inventory.GitHubInventory.withdrawal_snapshot", side_effect=GitHubError("offline")):
+            from withdrawal_history import live_withdrawals
+            live_withdrawals.clear()
+            app = self.open_app()
+            app.radio[0].set_value("History").run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertTrue(any("Could not load withdrawal history" in message.value for message in app.error))
+            self.assertEqual(len(app.dataframe), 0)
+            self.assertEqual(len(app.get("download_button")), 0)
+            live_withdrawals.clear()
+
     def test_addition_requires_its_password_and_does_not_ask_for_code(self):
         self.configure_forms()
         with patch("github_inventory.GitHubInventory.propose_addition", return_value="https://github.com/DeltaLabo/inventory/pull/123") as propose:
@@ -253,6 +300,10 @@ class AppTests(unittest.TestCase):
             withdraw.assert_not_called()
             app.text_input(key="withdrawal_field_password").set_value("test-take")
             app.button[0].click().run()
+            withdraw.assert_not_called()
+            self.assertIn("Project:", app.error[0].value)
+            app.text_input(key="withdrawal_field_project").set_value("Robot")
+            app.button[0].click().run()
             self.assertEqual(len(app.exception), 0)
             self.assertIn("Remaining after this withdrawal: 3", app.success[0].value)
             app.run()
@@ -277,7 +328,7 @@ class AppTests(unittest.TestCase):
         self.configure_forms()
         with patch("github_inventory.GitHubInventory.propose_edit", return_value="https://github.com/DeltaLabo/inventory/pull/124") as edit:
             app = self.open_app()
-            self.assertEqual(app.radio[0].options, ["Browse", "Add", "Edit", "Withdraw", "Purchases"])
+            self.assertEqual(app.radio[0].options, ["Browse", "Add", "Edit", "Withdraw", "Purchases", "History"])
             app.radio[0].set_value("Edit").run()
             self.assertEqual(len(app.exception), 0)
             before = app.text_input(key="edit_field_description").value

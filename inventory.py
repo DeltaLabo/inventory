@@ -98,6 +98,16 @@ def filter_inventory(inventory, search="", item_type="All", subtype="All"):
     return result
 
 
+def spreadsheet_csv(frame):
+    """Export entered values as text rather than executable spreadsheet formulas."""
+    frame = frame.copy()
+    for column in frame:
+        frame[column] = frame[column].map(
+            lambda value: "'" + str(value) if str(value).lstrip().startswith(("=", "+", "-", "@")) else value
+        )
+    return frame.to_csv(index=False).encode("utf-8-sig")
+
+
 if __name__ == "__main__":
     import sys
 

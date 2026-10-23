@@ -152,6 +152,10 @@ class GitHubInventory:
         text = self.read_file("purchase_requests.csv", self.head(), optional=True)
         return read_rows(text, PURCHASE_COLUMNS)[1] if text is not None else []
 
+    def withdrawal_snapshot(self):
+        text = self.read_file("movements.csv", self.head(), optional=True)
+        return read_rows(text, MOVEMENT_COLUMNS)[1] if text is not None else []
+
     def request_purchase(self, request_id, description, quantity, project, person, link,
                          manufacturer="", model="", notes=""):
         operation = UUID(request_id).hex
@@ -322,6 +326,7 @@ class GitHubInventory:
                 if any(previous[key] != value for key, value in expected.items()):
                     raise ValueError("This request was already recorded with different details. Start another withdrawal.")
                 return int(previous["available_after"])
+            required(project, "Project")
             _, details = read_rows(self.read_file("details.csv", parent), DETAIL_COLUMNS)
             unique_product(details, code)
             location_columns, locations = read_rows(self.read_file("locations.csv", parent), LOCATION_COLUMNS)

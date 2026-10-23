@@ -120,7 +120,7 @@ class GitHubInventoryTests(unittest.TestCase):
         return read_rows(self.db.main_files["movements.csv"], MOVEMENT_COLUMNS)[1]
 
     def withdraw(self, quantity=2, request_id=None, person="Intern"):
-        return self.db.withdraw(request_id or self.request_id, "ITEM0001", "A", "01", quantity, person)
+        return self.db.withdraw(request_id or self.request_id, "ITEM0001", "A", "01", quantity, person, "Test project")
 
     def test_withdrawal_updates_only_selected_location_and_commits_history_together(self):
         self.assertEqual(self.withdraw(), 3)

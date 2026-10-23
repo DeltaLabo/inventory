@@ -31,11 +31,34 @@ Streamlit Cloud. CSV paths are resolved relative to the source files.
   bag or quantities** to correct those fields. Enter who recorded the correction
   and why. The ID stays fixed. Corrections also require a merged pull request.
 - **Withdraw:** use the shared withdrawal password, select a product and its box
-  and bag, and enter the quantity and person recording it. The balance and movement
+  and bag, and enter the quantity, project and person recording it. The balance and movement
   are saved immediately in one GitHub commit, without waiting for approval.
 - **Purchases:** view and download the full shared quotation list without a password.
   To submit a request, use the same password as Withdraw. Requests are saved directly
   in GitHub and appear in the shared list immediately, without a pull request.
+- **History:** view withdrawals without a password, filter by project, see product
+  totals and inspect individual movements. Download selected history as CSV;
+  choose **All projects** for the complete log.
+
+### Withdrawals by project
+
+`movements.csv` is the separate withdrawal ledger. Each withdrawal is recorded in
+the same commit as its stock reduction, retaining project, person, quantity, product
+code, box, bag, UTC timestamp and remaining balance. **History** reads this ledger;
+it does not infer withdrawals from current balances or the old `usage_log.csv`.
+New withdrawals require **Project**. Older entries without a project remain unchanged
+and can be selected under **No project recorded**. Existing project/note text is
+preserved as entered; the app does not guess project assignments.
+
+The history shows product totals separately for each project, followed by individual
+withdrawals. Current catalog descriptions are shown as a convenience; codes remain
+visible even if a product is missing from the catalog or its ID is ambiguous.
+Descriptions are not historical snapshots. Product totals count units withdrawn,
+not current stock or purchases, and never combine distinct product IDs.
+
+**Refresh withdrawal history** clears its 15-second read cache. Saving a withdrawal
+also clears both history and stock caches. Without GitHub, the view identifies its
+local snapshot; a failed history read shows an error rather than an empty report.
 
 ### Purchase requests and quotations
 
@@ -80,8 +103,8 @@ and bag are requested only when the product has no registered stock location yet
 **Recorded by** means the person adding units, making a withdrawal or requesting
 a correction. Enter a name or initials; this is not the item's owner or project
 owner. The password authorizes the operation, while this field records who did it.
-**Project or note** on additions and withdrawals is optional. A project-specific box already identifies the
-project, so there is no need to repeat it. Names and notes are stored in the public
+**Project or note** on additions is optional. **Project** is required for new withdrawals
+and purchase requests so they can be tracked by project. Names and notes are stored in the public
 repository; enter only the information needed for the record.
 
 Different bags or physical characteristics mean separate product records. Similar

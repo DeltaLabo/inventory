@@ -7,6 +7,7 @@ import streamlit as st
 
 from forms import operation_id, password_matches, show_completed
 from github_inventory import GitHubError, GitHubInventory, PURCHASE_COLUMNS, read_rows
+from inventory import spreadsheet_csv
 
 
 ROOT = Path(__file__).resolve().parent
@@ -28,13 +29,7 @@ def quotation_frame(rows):
 
 
 def quotation_csv(rows):
-    # User-entered descriptions/notes must remain text when opened in a spreadsheet.
-    frame = quotation_frame(rows)
-    for column in frame:
-        frame[column] = frame[column].map(
-            lambda value: "'" + str(value) if str(value).lstrip().startswith(("=", "+", "-", "@")) else value
-        )
-    return frame.to_csv(index=False).encode("utf-8-sig")
+    return spreadsheet_csv(quotation_frame(rows))
 
 
 def purchase_form(client, password):
