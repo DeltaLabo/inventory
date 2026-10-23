@@ -58,7 +58,7 @@ class InventoryTests(unittest.TestCase):
         self.assertTrue(filter_inventory(result, "[").empty)
 
     def test_validation_reports_duplicates_missing_references_and_invalid_stock(self):
-        details = catalog({"code": "DUP00000"}, {"code": "DUP00000"}, {"code": "ONLYCAT0"})
+        details = catalog({"code": "DUP00000", "info": "Conteo provisional: pendiente"}, {"code": "DUP00000"}, {"code": "ONLYCAT0"})
         locations = stock(
             ["DUP00000", "A", "01", "1", "2"],
             ["DUP00000", "A", "01", "2", "-1"],
@@ -68,6 +68,7 @@ class InventoryTests(unittest.TestCase):
         issues = "\n".join(validate_data(details, locations))
         for expected in ("Código duplicado", "ONLYCAT0", "ORPHAN00", "cantidades inválidas", "ubicación repetida", "falta description", "falta código, ubicación"):
             self.assertIn(expected, issues)
+        self.assertIn("conteo provisional", issues)
 
     def test_load_preserves_codes_and_zero_padded_locations_without_writes(self):
         with tempfile.TemporaryDirectory() as tmp:

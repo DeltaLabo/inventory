@@ -19,7 +19,11 @@ hardcoded password or local CSV-writing usage flow. Read credentials from Stream
 secrets or environment variables. Blank credentials disable each protected form;
 public search remains available. Secrets must never be committed or logged.
 
-New product IDs are `I` + an uppercase UUID, generated from the submission ID.
+New product IDs are four random uppercase ASCII letters plus MMYY of ID issuance
+in America/Costa_Rica, e.g. KQZT1026. IDs remain fixed after assignment. Check current
+catalog/stock codes and atomically reserve `refs/tags/inventory-ids/<code>` to avoid
+collisions with pending/concurrent submissions. Do not delete these reservation tags.
+Submission/movement IDs remain UUIDs; they are separate from product IDs.
 Existing products reuse their original IDs. Additions create a branch and PR;
 only the owner merges them. Withdrawals change exactly one stock location and append
 `movements.csv` in one commit; use non-forced ref updates and re-read after conflicts.
@@ -42,3 +46,9 @@ unmodified fields and never overwrite intervening withdrawals. Record before/aft
 values, responsible person, and a required reason. IDs are immutable. Reject invalid
 balances and destination-location collisions; never merge stock rows automatically.
 Show the global "Datos por revisar" panel only under Editar, not public browsing.
+
+On 2026-10-22 the user explicitly authorized provisional relay counts and sharing
+one compartment, while keeping the two variants distinct. SRD5VDCS was split into
+GPQM1026 (4-relay module, provisional 4 units) and SINW1026 (2-relay module,
+provisional 2 units), both A/12. Keep `Conteo provisional:` notes and validation
+warnings until the user confirms the physical counts. Total stock is still 6.

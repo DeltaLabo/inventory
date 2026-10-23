@@ -30,7 +30,10 @@ class AppTests(unittest.TestCase):
             self.assertEqual(app.selectbox[0].value, "Todos")
             data = app.dataframe[0].value
             self.assertIn("AOO90SER", data["Código"].tolist())
-            self.assertEqual(len(data[data["Código"].eq("SRD5VDCS")]), 2)
+            relays = data[data["Código"].isin(["GPQM1026", "SINW1026"])]
+            self.assertEqual(len(relays), 2)
+            self.assertEqual(relays["Ubicación"].tolist(), ["A", "A"])
+            self.assertEqual(relays["Compartimento"].tolist(), ["12", "12"])
             head.assert_not_called()
 
     def test_punctuation_and_empty_search_results_render(self):
@@ -38,7 +41,7 @@ class AppTests(unittest.TestCase):
         app.text_input[0].set_value("10k(").run()
         self.assertEqual(len(app.exception), 0)
         self.assertEqual(len(app.info), 1)
-        app.text_input[0].set_value("srd5vdcs").run()
+        app.text_input[0].set_value("srd-05-vdc-sl-c").run()
         self.assertEqual(len(app.exception), 0)
         self.assertEqual(len(app.dataframe[0].value), 2)
         app.selectbox[0].select("sensor").run()

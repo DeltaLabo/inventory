@@ -6,8 +6,11 @@ import json
 from datetime import datetime, timezone
 from io import StringIO
 import re
+import secrets
+import string
 from urllib.parse import quote
 from uuid import UUID
+from zoneinfo import ZoneInfo
 
 import requests
 
@@ -19,6 +22,18 @@ MOVEMENT_COLUMNS = (
     "person", "project", "available_after",
 )
 EDITABLE_FIELDS = tuple(name for name in DETAIL_COLUMNS if name != "code")
+
+
+def new_product_code(existing_codes, issued_at=None):
+    """Four random uppercase letters plus registration month/year, never a name."""
+    issued_at = issued_at or datetime.now(ZoneInfo("America/Costa_Rica"))
+    suffix = issued_at.strftime("%m%y")
+    occupied = set(existing_codes)
+    for _ in range(100):
+        code = "".join(secrets.choice(string.ascii_uppercase) for _ in range(4)) + suffix
+        if code not in occupied:
+            return code
+    raise ValueError("No se pudo asignar un identificador libre. Vuelva a intentarlo.")
 
 
 class GitHubError(Exception):
@@ -148,6 +163,22 @@ class GitHubInventory:
         prs = self._request("GET", "/pulls", params={"head": f"{owner}:{branch}", "state": "all", "per_page": 1})
         return prs[0] if prs else None
 
+    def _reserve_product_code(self, parent, occupied):
+        # An atomic Git ref creation arbitrates collisions between concurrent
+        # submissions, including IDs on PRs that have not been merged yet.
+        occupied = set(occupied)
+        for _ in range(100):
+            code = new_product_code(occupied)
+            ref = f"tags/inventory-ids/{code}"
+            try:
+                self._request("POST", "/git/refs", payload={"ref": f"refs/{ref}", "sha": parent})
+                return code
+            except Conflict:
+                if self._request("GET", f"/git/ref/{ref}", optional=True) is None:
+                    raise
+                occupied.add(code)
+        raise ValueError("No se pudo reservar un identificador libre. Vuelva a intentarlo.")
+
     def propose_addition(self, request_id, item, quantity, location, sublocation, person, project="", existing_code=None):
         operation = UUID(request_id).hex
         branch = f"inventory/add-{operation}"
@@ -170,13 +201,11 @@ class GitHubInventory:
                 product = unique_product(details, existing_code)
                 code = product["code"].strip()
             else:
-                code = "I" + operation.upper()
-                if any(row["code"].strip() == code for row in details + locations):
-                    raise ValueError("El identificador ya existe. Inicie una nueva solicitud.")
                 product = {name: str(item.get(name, "")).strip() for name in detail_columns}
-                product["code"] = code
                 for name, label in (("description", "Descripción"), ("type", "Tipo"), ("subtype", "Subtipo")):
                     product[name] = required(product[name], label)
+                code = self._reserve_product_code(parent, {row["code"].strip() for row in details + locations})
+                product["code"] = code
                 details.append(product)
                 changes["details.csv"] = write_rows(detail_columns, details)
             matches = [row for row in locations if (row["code"].strip(), row["location"].strip(), row["sublocation"].strip()) == (code, location, sublocation)]

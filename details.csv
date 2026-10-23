@@ -145,8 +145,8 @@ DCACTMOT,actuator,motors,Generic,,DC motor varius sizes,,,
 VIBRATOR,actuator,Vibrator motor module,ITEAD,75537A-Y24Q-30,Coin vibration motor(ERM Eccentric)3.3 V or 5V DC,,,
 RTE24005,actuator,Relay,Potter&Brumfield,RTE24005F,RELAY/5V DC/8A/250VAC,,
 RT314A12,actuator,Relay,SCHRACK,RT314A12,RELAY/12V DC/16A/250VAC,,,
-SRD5VDCS,actuator,Realy,SONGLE,SRD-05-VDC-SL-C,four realy module/30V DC/10A/,,,
-SRD5VDCS,actuator,Realy,SONGLE,SRD-05-VDC-SL-C,two realy module/30V DC/10A/,,,
+GPQM1026,actuator,Relay,SONGLE,SRD-05-VDC-SL-C,four relay module/30V DC/10A/,,,Conteo provisional: 4 unidades asignadas por solicitud del usuario; pendiente de conteo fisico. Codigo anterior SRD5VDCS.
+SINW1026,actuator,Relay,SONGLE,SRD-05-VDC-SL-C,two relay module/30V DC/10A/,,,Conteo provisional: 2 unidades asignadas por solicitud del usuario; pendiente de conteo fisico. Codigo anterior SRD5VDCS.
 JQC3FF5V,actuator,Relay,Hf,JQC-3FF,one relay module/5V DC/10A to 277VAC/15A to 125VAC
 
 USBTR232,converter,USB converter,Waveshare,USB-RS232/485/TTL/UART,converter for USB to RS232/485/TTL or UART,,,

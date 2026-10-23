@@ -1,5 +1,6 @@
 import base64
 from copy import deepcopy
+from datetime import datetime
 import json
 import unittest
 from unittest.mock import Mock, patch
@@ -8,7 +9,7 @@ from uuid import uuid4
 import requests
 
 from github_inventory import (
-    Conflict, GitHubError, GitHubInventory, MOVEMENT_COLUMNS, read_rows, write_rows,
+    Conflict, GitHubError, GitHubInventory, MOVEMENT_COLUMNS, new_product_code, read_rows, write_rows,
 )
 from inventory import DETAIL_COLUMNS, LOCATION_COLUMNS
 
@@ -30,6 +31,7 @@ class MemoryGitHub(GitHubInventory):
         }
         self.commits = {"initial": {"files": deepcopy(self.files), "parent": None}}
         self.refs = {"main": "initial"}
+        self.tags = {}
         self.trees = {}
         self.prs = {}
         self.serial = 0
@@ -48,6 +50,11 @@ class MemoryGitHub(GitHubInventory):
             if optional and branch not in self.refs:
                 return None
             return {"object": {"sha": self.refs[branch]}}
+        if method == "GET" and path.startswith("/git/ref/tags/"):
+            tag = path.removeprefix("/git/ref/tags/")
+            if optional and tag not in self.tags:
+                return None
+            return {"object": {"sha": self.tags[tag]}}
         if method == "GET" and path.startswith("/contents/"):
             text = self.commits[params["ref"]]["files"].get(path.removeprefix("/contents/"))
             if text is None and optional:
@@ -66,6 +73,12 @@ class MemoryGitHub(GitHubInventory):
             self.commits[key] = {"files": self.trees[payload["tree"]], "parent": payload["parents"][0]}
             return {"sha": key}
         if method == "POST" and path == "/git/refs":
+            if payload["ref"].startswith("refs/tags/"):
+                tag = payload["ref"].removeprefix("refs/tags/")
+                if tag in self.tags:
+                    raise Conflict("tag exists")
+                self.tags[tag] = payload["sha"]
+                return {}
             branch = payload["ref"].removeprefix("refs/heads/")
             if branch in self.refs:
                 raise Conflict("branch exists")
@@ -183,7 +196,8 @@ class GitHubInventoryTests(unittest.TestCase):
         files = self.db.commits[self.db.refs[branch]]["files"]
         details = read_rows(files["details.csv"], DETAIL_COLUMNS)[1]
         code = details[-1]["code"]
-        self.assertEqual(code, "I" + self.request_id.upper())
+        self.assertRegex(code, r"^[A-Z]{4}[0-9]{4}$")
+        self.assertIn("inventory-ids/" + code, self.db.tags)
         self.assertEqual(read_rows(files["locations.csv"], LOCATION_COLUMNS)[1][-1]["code"], code)
         self.assertEqual(json.loads(files[f"requests/{self.request_id}.json"])["person"], "Intern")
 
@@ -194,6 +208,22 @@ class GitHubInventoryTests(unittest.TestCase):
         row = read_rows(files["locations.csv"], LOCATION_COLUMNS)[1][-1]
         self.assertEqual(row["code"], "ITEM0001")
         self.assertEqual(row["available"], "2")
+        self.assertEqual(self.db.tags, {})
+
+    def test_code_uses_registration_month_year_and_retries_catalog_collision(self):
+        with patch("github_inventory.secrets.choice", side_effect=list("AAAABBBB")):
+            self.assertEqual(new_product_code({"AAAA1026"}, datetime(2026, 10, 22)), "BBBB1026")
+        with patch("github_inventory.secrets.choice", return_value="C"):
+            self.assertEqual(new_product_code(set(), datetime(2026, 11, 1)), "CCCC1126")
+
+    def test_pending_request_codes_are_reserved_before_approval(self):
+        self.db.tags["inventory-ids/AAAA1026"] = "initial"
+        with patch("github_inventory.new_product_code", side_effect=["AAAA1026", "BBBB1026"]):
+            self.propose()
+        files = self.db.commits[self.db.refs[f"inventory/add-{self.request_id}"]]["files"]
+        self.assertEqual(read_rows(files["details.csv"], DETAIL_COLUMNS)[1][-1]["code"], "BBBB1026")
+        self.assertEqual(self.db.refs["main"], "initial")
+        self.assertIn("inventory-ids/BBBB1026", self.db.tags)
 
     def test_pr_timeout_recovers_same_request(self):
         self.db.timeout_after_pr = True

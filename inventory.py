@@ -56,6 +56,8 @@ def validate_data(details, locations):
     repeated = locations.duplicated(["code", "location", "sublocation"], keep=False)
     for code in locations.loc[repeated, "code"].unique():
         issues.append(f"{code}: ubicación repetida; verificar sus cantidades.")
+    for code in details.loc[details["info"].str.startswith("Conteo provisional:"), "code"]:
+        issues.append(f"{code}: conteo provisional; confirmar cantidades con un conteo físico y actualizar la nota de la ficha.")
     return issues
 
 
