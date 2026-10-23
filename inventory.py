@@ -21,7 +21,7 @@ def _parse_frame(text, name, columns):
     frame = pd.read_csv(StringIO(text), dtype=str, keep_default_na=False)
     missing = set(columns) - set(frame.columns)
     if missing:
-        raise ValueError(f"{name}: faltan columnas: {', '.join(sorted(missing))}")
+        raise ValueError(f"{name}: missing columns: {', '.join(sorted(missing))}")
     for column in columns:
         frame[column] = frame[column].str.strip()
     return frame
@@ -37,27 +37,28 @@ def parse_data(details_text, locations_text):
 def validate_data(details, locations):
     issues = []
     for code in details.loc[details["code"].duplicated(keep=False), "code"].unique():
-        issues.append(f"Código duplicado en catálogo: {code}. Verificar la identidad antes de usar sus existencias.")
+        issues.append(f"Duplicate catalog code: {code}. Confirm product identity before using its stock.")
     for code in sorted(set(locations["code"]) - set(details["code"])):
-        issues.append(f"{code}: tiene existencias pero no tiene ficha de catálogo.")
+        issues.append(f"{code}: has stock but no catalog record.")
     for code in sorted(set(details["code"]) - set(locations["code"])):
-        issues.append(f"{code}: sin caja, bolsa ni existencias registradas.")
+        issues.append(f"{code}: no registered box, bag or stock.")
     for column in ("code", "type", "subtype", "description"):
         for index in details.index[details[column].eq("")]:
-            issues.append(f"Catálogo, registro {index + 1} ({details.at[index, 'code']}): falta {column}.")
+            issues.append(f"Catalog, record {index + 1} ({details.at[index, 'code']}): missing {column}.")
     numeric = locations[["units", "available"]].apply(pd.to_numeric, errors="coerce")
     valid = numeric.notna().all(axis=1) & numeric.ge(0).all(axis=1)
     valid &= numeric.mod(1).eq(0).all(axis=1)
     valid &= numeric["available"].le(numeric["units"])
     for index in locations.index[~valid]:
-        issues.append(f"{locations.at[index, 'code']}: cantidades inválidas en caja {locations.at[index, 'location']} / bolsa {locations.at[index, 'sublocation']}.")
+        issues.append(f"{locations.at[index, 'code']}: invalid quantities in box {locations.at[index, 'location']} / bag {locations.at[index, 'sublocation']}.")
     for index in locations.index[locations[["code", "location", "sublocation"]].eq("").any(axis=1)]:
-        issues.append(f"Existencias, registro {index + 1}: falta código, caja o bolsa.")
+        issues.append(f"Stock, record {index + 1}: missing code, box or bag.")
     repeated = locations.duplicated(["code", "location", "sublocation"], keep=False)
     for code in locations.loc[repeated, "code"].unique():
-        issues.append(f"{code}: caja y bolsa repetidas; verificar sus cantidades.")
-    for code in details.loc[details["info"].str.startswith("Conteo provisional:"), "code"]:
-        issues.append(f"{code}: conteo provisional; confirmar cantidades con un conteo físico y actualizar la nota de la ficha.")
+        issues.append(f"{code}: duplicate box and bag; verify quantities.")
+    # Recognize older notes too, including pending requests created before translation.
+    for code in details.loc[details["info"].str.startswith(("Provisional count:", "Conteo provisional:")), "code"]:
+        issues.append(f"{code}: provisional count; verify quantities with a physical count and update the record note.")
     return issues
 
 
@@ -70,23 +71,23 @@ def build_inventory(details, locations):
     catalog = details.groupby("code", as_index=False, sort=False).agg(distinct_values)
     merged = catalog.merge(locations, on="code", how="outer", indicator=True)
     merged["status"] = merged["_merge"].astype(str).map({
-        "left_only": "Sin caja ni bolsa; cantidad desconocida",
-        "right_only": "Sin ficha de catálogo; revisar código", "both": "",
+        "left_only": "No box or bag; quantity unknown",
+        "right_only": "No catalog record; check code", "both": "",
     })
     merged = merged.drop(columns="_merge").fillna("")
     duplicates = set(details.loc[details["code"].duplicated(keep=False), "code"])
-    merged.loc[merged["code"].isin(duplicates), "status"] = "Código ambiguo; verificar ficha y existencias"
-    merged["type"] = merged["type"].replace("", "Sin clasificar")
-    merged["subtype"] = merged["subtype"].replace("", "Sin clasificar")
-    merged["description"] = merged["description"].replace("", "Descripción pendiente")
+    merged.loc[merged["code"].isin(duplicates), "status"] = "Code is ambiguous; verify record and stock"
+    merged["type"] = merged["type"].replace("", "Unclassified")
+    merged["subtype"] = merged["subtype"].replace("", "Unclassified")
+    merged["description"] = merged["description"].replace("", "Description missing")
     return merged.sort_values(["code", "location", "sublocation"], kind="stable").reset_index(drop=True)
 
 
-def filter_inventory(inventory, search="", item_type="Todos", subtype="Todos"):
+def filter_inventory(inventory, search="", item_type="All", subtype="All"):
     result = inventory
-    if item_type != "Todos":
+    if item_type != "All":
         result = result[result["type"].eq(item_type)]
-    if subtype != "Todos":
+    if subtype != "All":
         result = result[result["subtype"].eq(subtype)]
     if result.empty:
         return result
@@ -104,10 +105,10 @@ if __name__ == "__main__":
         details, locations = load_data(Path(__file__).resolve().parent)
         issues = validate_data(details, locations)
     except (OSError, ValueError, pd.errors.ParserError) as error:
-        print(f"No se pudo validar: {error}")
+        print(f"Could not validate: {error}")
         sys.exit(1)
     for issue in issues:
         print(issue)
     if not issues:
-        print("Inventario válido.")
+        print("Inventory is valid.")
     sys.exit(1 if issues else 0)

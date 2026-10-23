@@ -44,11 +44,11 @@ def show_completed(kind):
     if result is None:
         return False
     if kind in ("addition", "edit"):
-        st.success("Solicitud enviada. Los cambios se aplican cuando se apruebe y fusione la solicitud.")
-        st.link_button("Ver solicitud en GitHub", result)
+        st.success("Request submitted. Changes take effect after the pull request is approved and merged.")
+        st.link_button("View pull request on GitHub", result)
     else:
-        st.success(f"Retiro registrado. Disponible después del retiro: {result}.")
-    button_label = {"addition": "Registrar otro ingreso", "edit": "Editar otro producto", "withdrawal": "Registrar otro retiro"}[kind]
+        st.success(f"Withdrawal recorded. Remaining after this withdrawal: {result}.")
+    button_label = {"addition": "Record another addition", "edit": "Edit another product", "withdrawal": "Record another withdrawal"}[kind]
     if st.button(button_label):
         st.session_state.pop(f"{kind}_result", None)
         st.session_state.pop(f"{kind}_id", None)
@@ -64,17 +64,17 @@ def show_completed(kind):
 
 
 def product_label(row):
-    pending = f"Ficha pendiente ({row['previous_code']})" if row.get("previous_code") else "Descripción pendiente"
+    pending = f"Incomplete record ({row['previous_code']})" if row.get("previous_code") else "Description missing"
     description = row["description"] or row["model"] or row["subtype"] or pending
     return f"{description} · {row['code']}"
 
 
 def addition_classification(details):
-    create_new = "Crear nuevo…"
+    create_new = "Create new…"
     types = sorted({value for value in details["type"] if value}, key=str.casefold)
-    choice = st.selectbox("Tipo", [*types, create_new], index=None,
-                          placeholder="Elegí un tipo", key="addition_field_type_choice")
-    item_type = st.text_input("Nuevo tipo", max_chars=300, key="addition_field_new_type").strip() if choice == create_new else (choice or "")
+    choice = st.selectbox("Type", [*types, create_new], index=None,
+                          placeholder="Choose a type", key="addition_field_type_choice")
+    item_type = st.text_input("New type", max_chars=300, key="addition_field_new_type").strip() if choice == create_new else (choice or "")
     # Reuse the spelling of a known type rather than introduce a case variant.
     if choice == create_new:
         item_type = next((value for value in types if value.casefold() == item_type.casefold()), item_type)
@@ -83,10 +83,10 @@ def addition_classification(details):
         st.session_state.pop("addition_field_new_subtype", None)
         st.session_state["addition_type_context"] = item_type
     subtypes = sorted({value for value in details.loc[details["type"].eq(item_type), "subtype"] if value}, key=str.casefold)
-    subtype_choice = st.selectbox("Subtipo", [*subtypes, create_new], index=None,
-                                  placeholder="Elegí un subtipo", disabled=not item_type,
+    subtype_choice = st.selectbox("Subtype", [*subtypes, create_new], index=None,
+                                  placeholder="Choose a subtype", disabled=not item_type,
                                   key="addition_field_subtype_choice")
-    subtype = st.text_input("Nuevo subtipo", max_chars=300, key="addition_field_new_subtype").strip() if subtype_choice == create_new else (subtype_choice or "")
+    subtype = st.text_input("New subtype", max_chars=300, key="addition_field_new_subtype").strip() if subtype_choice == create_new else (subtype_choice or "")
     if subtype_choice == create_new:
         subtype = next((value for value in subtypes if value.casefold() == subtype.casefold()), subtype)
     return {"type": item_type, "subtype": subtype}
@@ -97,27 +97,27 @@ def addition_storage(locations, existing_code=None):
         assigned = locations[locations["code"].eq(existing_code)]
         if not assigned.empty:
             if assigned.duplicated(["location", "sublocation"]).any() or assigned[["location", "sublocation"]].eq("").any().any():
-                st.info("La caja o bolsa de este producto requiere revisión en Editar antes de sumar unidades.")
+                st.info("Review this product's box and bag in Edit before adding units.")
                 return None
             slots = list(zip(assigned["location"], assigned["sublocation"]))
             slot = slots[0] if len(slots) == 1 else st.selectbox(
-                "Caja y bolsa registradas", slots,
-                format_func=lambda value: f"Caja {value[0]} / bolsa {value[1]}",
+                "Registered box and bag", slots,
+                format_func=lambda value: f"Box {value[0]} / bag {value[1]}",
             )
-            st.caption(f"Las unidades se sumarán en la caja {slot[0]}, bolsa {slot[1]}.")
+            st.caption(f"Units will be added to box {slot[0]}, bag {slot[1]}.")
             return slot
-        st.info("Este producto aún no tiene caja ni bolsa registradas. Definilas para ingresar sus primeras unidades.")
+        st.info("This product has no registered box or bag. Set them for its first stock entry.")
     # These rerun independently so occupancy is visible before submission.
     boxes = sorted({value for value in locations["location"] if value}, key=str.casefold)
     location = st.selectbox(
-        "Caja", boxes, index=None, accept_new_options=True,
-        placeholder="Buscá o escribí una caja",
-        help="Elegí una caja existente o escribí una nueva y presioná Enter. Se incorpora cuando se apruebe el ingreso.",
+        "Box", boxes, index=None, accept_new_options=True,
+        placeholder="Search for or enter a box",
+        help="Choose an existing box or type a new one and press Enter. It becomes available after the addition is approved and merged.",
         key="addition_field_location",
     ) or ""
     compartment = st.number_input(
-        "Bolsa", min_value=0, value=None, step=1,
-        placeholder="Número de bolsa", key="addition_field_sublocation",
+        "Bag", min_value=0, value=None, step=1,
+        placeholder="Bag number", key="addition_field_sublocation",
     )
     sublocation = "" if compartment is None else str(compartment)
     if location and compartment is not None:
@@ -125,33 +125,33 @@ def addition_storage(locations, existing_code=None):
         occupied = locations[locations["location"].eq(location) & numbers.eq(compartment)]
         if not occupied.empty:
             sublocation = occupied.iloc[0]["sublocation"]
-            st.warning(f"La bolsa {compartment} de la caja {location} ya tiene productos registrados. Podés continuar y guardar otro producto en la misma bolsa.")
+            st.warning(f"Bag {compartment} in box {location} already contains products. You can continue and store another product in the same bag.")
     return location, sublocation
 
 
 def addition_form(client, details, locations, password):
-    st.subheader("Ingresar al inventario")
-    st.caption("Completá los datos; el identificador se asigna automáticamente. El ingreso queda pendiente de aprobación.")
+    st.subheader("Add to inventory")
+    st.caption("Complete the details; new product IDs are assigned automatically. Additions require approval.")
     if show_completed("addition"):
         return
     if client is None or not password:
-        st.info("El registro de ingresos todavía no está habilitado.")
+        st.info("Additions are not enabled yet.")
         return
     request_id = operation_id("addition")
-    mode = st.radio("¿Qué vas a ingresar?", ("Producto nuevo", "Más unidades de un producto existente"))
+    mode = st.radio("What would you like to add?", ("New product", "Restock an existing product"))
     existing_code = None
     classification = {}
-    if mode != "Producto nuevo":
+    if mode != "New product":
         eligible = details[~details["code"].duplicated(keep=False)]
         if eligible.empty:
-            st.info("No hay productos con identificación única para seleccionar.")
+            st.info("No products with unique IDs are available to select.")
             return
         products = {row["code"]: product_label(row) for _, row in eligible.iterrows()}
-        existing_code = st.selectbox("Producto", sorted(products, key=products.get), format_func=products.get)
+        existing_code = st.selectbox("Product", sorted(products, key=products.get), format_func=products.get)
     else:
         # Outside the form so subtypes update immediately when the type changes.
         classification = addition_classification(details)
-        st.caption("Usá «Crear nuevo…» si falta una opción. Se incorpora al catálogo cuando se apruebe el ingreso.")
+        st.caption("Use “Create new…” if an option is missing. It joins the catalog after the addition is approved and merged.")
     storage = addition_storage(locations, existing_code)
     if storage is None:
         return
@@ -159,29 +159,29 @@ def addition_form(client, details, locations, password):
     with st.form("addition_form"):
         item = dict(classification)
         if existing_code is None:
-            item["description"] = st.text_input("Descripción", key="addition_field_description", max_chars=300)
+            item["description"] = st.text_input("Description", key="addition_field_description", max_chars=300)
             manufacturers = {}
             for value in sorted(set(details["manufacturer"]), key=lambda value: (value.casefold(), value)):
                 if value:
                     manufacturers.setdefault(value.casefold(), value)
             item["manufacturer"] = st.selectbox(
-                "Fabricante (opcional)", list(manufacturers.values()), index=None, accept_new_options=True,
-                placeholder="Buscá o escribí un fabricante",
-                help="Escribí para buscar entre los existentes. Si no aparece, escribí el nombre nuevo y presioná Enter.",
+                "Manufacturer (optional)", list(manufacturers.values()), index=None, accept_new_options=True,
+                placeholder="Search for or enter a manufacturer",
+                help="Type to search existing manufacturers. If there is no match, enter a new name and press Enter.",
                 key="addition_field_manufacturer",
             ) or ""
-            item["model"] = st.text_input("Modelo (opcional)", key="addition_field_model", max_chars=300)
-        quantity = st.number_input("Cantidad que ingresa", min_value=1, max_value=1000000, step=1, key="addition_field_quantity")
-        person = st.text_input("Responsable (nombre o iniciales)", key="addition_field_person", max_chars=100)
-        project = st.text_input("Proyecto o nota (opcional)", key="addition_field_project", max_chars=300)
-        entered = st.text_input("Contraseña de ingresos", type="password", key="addition_field_password")
-        submitted = st.form_submit_button("Enviar para aprobación")
+            item["model"] = st.text_input("Model (optional)", key="addition_field_model", max_chars=300)
+        quantity = st.number_input("Quantity to add", min_value=1, max_value=1000000, step=1, key="addition_field_quantity")
+        person = st.text_input("Recorded by (name or initials)", key="addition_field_person", max_chars=100)
+        project = st.text_input("Project or note (optional)", key="addition_field_project", max_chars=300)
+        entered = st.text_input("Addition password", type="password", key="addition_field_password")
+        submitted = st.form_submit_button("Submit for approval")
     if submitted:
         if not password_matches(entered, password):
-            st.error("Contraseña incorrecta.")
+            st.error("Incorrect password.")
             return
         try:
-            with st.spinner("Enviando solicitud a GitHub…"):
+            with st.spinner("Submitting request to GitHub…"):
                 url = client.propose_addition(request_id, item, quantity, location, sublocation, person, project, existing_code)
         except (ValueError, GitHubError) as error:
             st.error(str(error))
@@ -192,12 +192,12 @@ def addition_form(client, details, locations, password):
 
 
 def withdrawal_form(client, details, locations, password, on_saved):
-    st.subheader("Retirar del inventario")
-    st.caption("El retiro descuenta existencias inmediatamente y guarda el responsable y la fecha en GitHub.")
+    st.subheader("Withdraw from inventory")
+    st.caption("Withdrawals reduce stock immediately and record the person and timestamp in GitHub.")
     if show_completed("withdrawal"):
         return
     if client is None or not password:
-        st.info("El registro de retiros todavía no está habilitado.")
+        st.info("Withdrawals are not enabled yet.")
         return
     request_id = operation_id("withdrawal")
     products = {row["code"]: product_label(row) for _, row in details[~details["code"].duplicated(keep=False)].iterrows()}
@@ -212,23 +212,23 @@ def withdrawal_form(client, details, locations, password, on_saved):
             continue
         if available > 0:
             key = (row["code"], row["location"], row["sublocation"])
-            choices[key] = (f"{products[row['code']]} · caja {row['location']} / {row['sublocation']} · disponible {available}", available)
+            choices[key] = (f"{products[row['code']]} · box {row['location']} / {row['sublocation']} · available {available}", available)
     if not choices:
-        st.info("No hay existencias disponibles con identificación, caja y bolsa verificables.")
+        st.info("No available stock has a verifiable product ID, box and bag.")
         return
-    selected = st.selectbox("Producto, caja y bolsa", sorted(choices, key=lambda key: choices[key][0]), format_func=lambda key: choices[key][0])
+    selected = st.selectbox("Product, box and bag", sorted(choices, key=lambda key: choices[key][0]), format_func=lambda key: choices[key][0])
     with st.form("withdrawal_form"):
-        quantity = st.number_input("Cantidad que retirás", min_value=1, max_value=choices[selected][1], step=1, key="withdrawal_field_quantity")
-        person = st.text_input("Responsable (nombre o iniciales)", key="withdrawal_field_person", max_chars=100)
-        project = st.text_input("Proyecto o nota (opcional)", key="withdrawal_field_project", max_chars=300)
-        entered = st.text_input("Contraseña de retiros", type="password", key="withdrawal_field_password")
-        submitted = st.form_submit_button("Registrar retiro")
+        quantity = st.number_input("Quantity to withdraw", min_value=1, max_value=choices[selected][1], step=1, key="withdrawal_field_quantity")
+        person = st.text_input("Recorded by (name or initials)", key="withdrawal_field_person", max_chars=100)
+        project = st.text_input("Project or note (optional)", key="withdrawal_field_project", max_chars=300)
+        entered = st.text_input("Withdrawal password", type="password", key="withdrawal_field_password")
+        submitted = st.form_submit_button("Record withdrawal")
     if submitted:
         if not password_matches(entered, password):
-            st.error("Contraseña incorrecta.")
+            st.error("Incorrect password.")
             return
         try:
-            with st.spinner("Guardando retiro en GitHub…"):
+            with st.spinner("Saving withdrawal in GitHub…"):
                 remaining = client.withdraw(request_id, *selected, quantity, person, project)
         except (ValueError, GitHubError) as error:
             st.error(str(error))
@@ -240,35 +240,35 @@ def withdrawal_form(client, details, locations, password, on_saved):
 
 
 def edit_form(client, details, locations, password):
-    st.subheader("Editar producto")
-    st.caption("Corregí una ficha existente. Se conserva su identificador y los cambios quedan pendientes de aprobación.")
+    st.subheader("Edit product")
+    st.caption("Correct an existing record. Its ID stays unchanged; changes require approval.")
     if show_completed("edit"):
         return
     if client is None or not password:
-        st.info("La edición todavía no está habilitada.")
+        st.info("Editing is not enabled yet.")
         return
     request_id = operation_id("edit")
     eligible = details[~details["code"].duplicated(keep=False)]
     if eligible.empty:
-        st.info("No hay productos con identificación única para editar.")
+        st.info("No products with unique IDs are available to edit.")
         return
     products = {row["code"]: product_label(row) for _, row in eligible.iterrows()}
-    code = st.selectbox("Producto a editar", sorted(products, key=products.get), format_func=products.get)
-    correct_stock = st.checkbox("Corregir caja, bolsa o cantidades")
+    code = st.selectbox("Product to edit", sorted(products, key=products.get), format_func=products.get)
+    correct_stock = st.checkbox("Correct box, bag or quantities")
     selected_stock = None
     if correct_stock:
         rows = locations[locations["code"].eq(code)]
         rows = rows[~rows.duplicated(["location", "sublocation"], keep=False)]
         if rows.empty:
-            st.info("La caja y bolsa no están definidas de forma única. Para agregar existencias, usá Ingresar.")
+            st.info("The box and bag are not uniquely defined. Use Add to register stock.")
             return
         choices = {(row["location"], row["sublocation"]): row.to_dict() for _, row in rows.iterrows()}
-        slot = st.selectbox("Caja y bolsa a corregir", list(choices), format_func=lambda key: f"Caja {key[0]} / {key[1]}")
+        slot = st.selectbox("Box and bag to correct", list(choices), format_func=lambda key: f"Box {key[0]} / {key[1]}")
         selected_stock = choices[slot]
         try:
             stock_counts(selected_stock)
         except ValueError:
-            st.info("Los saldos originales de esta caja y bolsa son inválidos; revisalos en el CSV antes de editar desde la app.")
+            st.info("The original stock counts for this box and bag are invalid; review the CSV before editing in the app.")
             return
     context = (code, (selected_stock["location"], selected_stock["sublocation"]) if selected_stock else None)
     if st.session_state.get("edit_context") != context:
@@ -283,30 +283,30 @@ def edit_form(client, details, locations, password):
     with st.form("edit_form"):
         updated_item = {}
         for name, label in (
-            ("description", "Descripción"), ("type", "Tipo"), ("subtype", "Subtipo"),
-            ("manufacturer", "Fabricante (opcional)"), ("model", "Modelo (opcional)"),
-            ("value", "Valor / especificación (opcional)"), ("package", "Encapsulado (opcional)"),
-            ("info", "Información adicional (opcional)"),
+            ("description", "Description"), ("type", "Type"), ("subtype", "Subtype"),
+            ("manufacturer", "Manufacturer (optional)"), ("model", "Model (optional)"),
+            ("value", "Value / specification (optional)"), ("package", "Package (optional)"),
+            ("info", "Additional information (optional)"),
         ):
             updated_item[name] = st.text_input(label, value=original_item[name], key=f"edit_field_{name}")
         updated_stock = None
         if original_stock:
             updated_stock = {
-                "location": st.text_input("Caja", value=original_stock["location"], key="edit_field_location", max_chars=80),
-                "sublocation": st.text_input("Bolsa", value=original_stock["sublocation"], key="edit_field_sublocation", max_chars=80),
-                "units": st.number_input("Unidades registradas (saldo corregido)", min_value=0, value=int(original_stock["units"]), step=1, key="edit_field_units"),
-                "available": st.number_input("Disponible (saldo corregido)", min_value=0, value=int(original_stock["available"]), step=1, key="edit_field_available"),
+                "location": st.text_input("Box", value=original_stock["location"], key="edit_field_location", max_chars=80),
+                "sublocation": st.text_input("Bag", value=original_stock["sublocation"], key="edit_field_sublocation", max_chars=80),
+                "units": st.number_input("Recorded units (corrected count)", min_value=0, value=int(original_stock["units"]), step=1, key="edit_field_units"),
+                "available": st.number_input("Available units (corrected count)", min_value=0, value=int(original_stock["available"]), step=1, key="edit_field_available"),
             }
-        person = st.text_input("Responsable (nombre o iniciales)", key="edit_field_person", max_chars=100)
-        reason = st.text_input("Motivo de la corrección", key="edit_field_reason", max_chars=300)
-        entered = st.text_input("Contraseña de ingresos", type="password", key="edit_field_password")
-        submitted = st.form_submit_button("Enviar corrección para aprobación")
+        person = st.text_input("Recorded by (name or initials)", key="edit_field_person", max_chars=100)
+        reason = st.text_input("Reason for correction", key="edit_field_reason", max_chars=300)
+        entered = st.text_input("Addition password", type="password", key="edit_field_password")
+        submitted = st.form_submit_button("Submit correction for approval")
     if submitted:
         if not password_matches(entered, password):
-            st.error("Contraseña incorrecta.")
+            st.error("Incorrect password.")
             return
         try:
-            with st.spinner("Enviando corrección a GitHub…"):
+            with st.spinner("Submitting correction to GitHub…"):
                 url = client.propose_edit(request_id, code, original_item, updated_item, person, reason, original_stock, updated_stock)
         except (ValueError, GitHubError) as error:
             st.error(str(error))

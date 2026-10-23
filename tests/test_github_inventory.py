@@ -145,7 +145,7 @@ class GitHubInventoryTests(unittest.TestCase):
         self.assertEqual(self.withdraw(), 3)
         self.assertEqual(self.db.refs["main"], parent)
         self.assertEqual(len(self.history()), 1)
-        with self.assertRaisesRegex(ValueError, "otros datos"):
+        with self.assertRaisesRegex(ValueError, "different details"):
             self.withdraw(1)
 
     def test_timeout_after_saved_change_recovers_without_double_withdrawal(self):
@@ -163,7 +163,7 @@ class GitHubInventoryTests(unittest.TestCase):
 
     def test_concurrent_change_rechecks_available_stock(self):
         self.db.before_patch = lambda: self.withdraw(4, uuid4().hex, "Other intern")
-        with self.assertRaisesRegex(ValueError, "Solo hay 1"):
+        with self.assertRaisesRegex(ValueError, "Only 1"):
             self.withdraw()
         self.assertEqual(len(self.history()), 1)
         self.assertEqual(self.stock()[0]["available"], "1")
@@ -172,12 +172,12 @@ class GitHubInventoryTests(unittest.TestCase):
         original = self.db.main_files["details.csv"]
         columns, rows = read_rows(original, DETAIL_COLUMNS)
         self.db.main_files["details.csv"] = write_rows(columns, rows + rows)
-        with self.assertRaisesRegex(ValueError, "ambiguo"):
+        with self.assertRaisesRegex(ValueError, "ambiguous"):
             self.withdraw()
         self.db.main_files["details.csv"] = original
         columns, rows = read_rows(self.db.main_files["locations.csv"], LOCATION_COLUMNS)
         self.db.main_files["locations.csv"] = write_rows(columns, rows + [rows[0]])
-        with self.assertRaisesRegex(ValueError, "duplicada"):
+        with self.assertRaisesRegex(ValueError, "duplicated"):
             self.withdraw()
         self.assertEqual(len(self.db.commits), 1)
 
@@ -211,7 +211,7 @@ class GitHubInventoryTests(unittest.TestCase):
         self.assertEqual(self.db.tags, {})
 
     def test_restock_does_not_create_a_different_location_for_an_already_located_product(self):
-        with self.assertRaisesRegex(ValueError, "caja o bolsa del producto cambió"):
+        with self.assertRaisesRegex(ValueError, "product box or bag changed"):
             self.db.propose_addition(self.request_id, {}, 2, "B", "99", "Intern", existing_code="ITEM0001")
         self.assertEqual(len(self.db.commits), 1)
 
@@ -309,7 +309,7 @@ class GitHubInventoryTests(unittest.TestCase):
     def test_edit_rejects_stale_balance_instead_of_overwriting_a_withdrawal(self):
         original = self.stock()[0].copy()
         self.withdraw()
-        with self.assertRaisesRegex(ValueError, "existencias cambiaron"):
+        with self.assertRaisesRegex(ValueError, "Stock changed"):
             self.propose_edit({}, original, {"available": 4})
         self.assertEqual(self.stock()[0]["available"], "3")
         self.assertEqual(len(self.db.prs), 0)

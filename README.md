@@ -1,225 +1,217 @@
-# Inventario Delta LAB
+# Delta LAB Inventory
 
-Inventario con consulta pública, ingresos y correcciones pendientes de aprobación,
-y retiros inmediatos. La interfaz está en español y GitHub guarda los datos.
+A simple Streamlit inventory with public browsing, additions and corrections
+submitted for approval, and immediate withdrawals. The interface and documentation
+are in English. GitHub stores the data; no separate database or server is required.
 
-Aplicación publicada: https://deltalab-inventory.streamlit.app/
+Live app: [Delta LAB Inventory](https://deltalab-inventory.streamlit.app/).
 
-## Ejecutar
+## Run locally
 
-Desde este repositorio:
+From this repository:
 
 ```powershell
 python -m pip install -r requirements.txt
 python -m streamlit run app.py
 ```
 
-`app.py` es la única aplicación. En Streamlit Cloud, seleccionar `app.py` como
-archivo principal. Los CSV se resuelven desde la ubicación del código.
+`app.py` is the only application entry point. Select it as the main file in
+Streamlit Cloud. CSV paths are resolved relative to the source files.
 
-## Uso
+## Using the app
 
-- **Consultar:** búsqueda y filtros sin contraseña. También permite descargar los
-  resultados y consultar imágenes opcionales.
-- **Ingresar:** requiere la contraseña de ingresos. Elegir un producto nuevo o
-  más unidades de un producto existente; indicar cantidad y responsable, y definir
-  caja y bolsa solo si todavía no están registradas. Un producto nuevo recibe un ID automático permanente. La app crea
-  una pull request; las existencias se incorporan al aprobarla y **fusionarla**.
-  Para productos nuevos, Tipo y Subtipo son menús desplegables. Los subtipos dependen
-  del tipo elegido. «Crear nuevo…» permite escribir un tipo o subtipo que aún no
-  exista; se incorpora a las opciones al aprobar y fusionar el ingreso.
-  Fabricante es opcional y permite buscar entre los fabricantes existentes o escribir
-  uno nuevo y presionar Enter. Los fabricantes nuevos también se incorporan al aprobar el ingreso.
-  Caja permite buscar cajas existentes o escribir una nueva y presionar
-  Enter. La caja nueva aparece entre las opciones al aprobar y fusionar el ingreso.
-  Bolsa es un número entero desde cero. Si ya hay productos en ese número
-  de la caja elegida, aparece un aviso antes de enviar. El aviso permite continuar:
-  distintos productos pueden compartir la misma bolsa sin fusionar sus fichas.
-  Al sumar unidades de un producto existente, la app reutiliza su caja y bolsa sin
-  volver a pedirlas. Si tiene varias combinaciones de caja y bolsa registradas, solo permite elegir
-  entre ellas. Si aún no tiene ninguna, se define para el primer ingreso.
-- **Editar:** usa la misma contraseña de ingresos. Elegir un producto existente y
-  corregir descripción, clasificación, fabricante, modelo u otras especificaciones.
-  Activar «Corregir caja, bolsa o cantidades» para corregir esos datos.
-  Indicar responsable y motivo. El ID permanece fijo y los cambios se
-  envían a una pull request; no se aplican hasta aprobarla y fusionarla.
-- **Retirar:** requiere la contraseña compartida de retiros. Elegir el producto y
-  su caja y bolsa, indicar cantidad y responsable. El saldo y el movimiento se guardan
-  inmediatamente en un único commit de GitHub, sin esperar aprobación.
+- **Browse:** search and filter without a password, download matching records,
+  and optionally view product images.
+- **Add:** use the addition password to register a new product or restock an
+  existing one. Enter the quantity and the person recording the addition.
+  New products receive a permanent ID automatically. A GitHub pull request is
+  created; stock changes only after it is approved and **merged**.
+- **Edit:** use the addition password to correct an existing product's description,
+  classification, manufacturer, model or specifications. Enable **Correct box,
+  bag or quantities** to correct those fields. Enter who recorded the correction
+  and why. The ID stays fixed. Corrections also require a merged pull request.
+- **Withdraw:** use the shared withdrawal password, select a product and its box
+  and bag, and enter the quantity and person recording it. The balance and movement
+  are saved immediately in one GitHub commit, without waiting for approval.
 
-**Responsable** es quien registra el ingreso, hace el retiro o solicita la corrección;
-no es el dueño del producto ni del proyecto. Se indica nombre o iniciales para dejar
-constancia de quién registró el movimiento. Las contraseñas autorizan la operación;
-el campo Responsable documenta a la persona que la realizó.
+For a new product, **Type** and **Subtype** are dropdowns populated from the approved
+catalog. Subtypes depend on the selected type. Choose **Create new…** to enter a
+missing type or subtype. New choices become shared options after the addition is
+merged. **Manufacturer** is optional: search existing names or type a new name
+and press Enter.
 
-**Proyecto o nota** es opcional. Si la caja ya identifica el proyecto, no hace falta
-repetirlo. Los nombres o iniciales y las notas
-quedan en el repositorio público: usar únicamente la información necesaria.
+**Box** also supports searching existing boxes or entering a new one with Enter.
+**Bag** is a nonnegative integer. An occupied bag produces a warning that allows
+you to continue: different products can share a bag while retaining separate IDs.
+New boxes become shared options after the addition is merged.
 
-**Caja** identifica la caja y **Bolsa** el número de bolsa dentro de ella. Compartir
-caja y bolsa no fusiona productos: los módulos de 2 y 4 relés, por ejemplo, mantienen
-fichas e IDs diferentes aunque estén juntos. Las bolsas o características distintas
-se mantienen como registros independientes; el parecido entre códigos anteriores
-no demuestra que sean el mismo producto.
+When restocking an existing product, its box and bag are reused automatically.
+If several combinations are already registered, choose among those. A new box
+and bag are requested only when the product has no registered stock location yet.
 
-No se permiten retiros de productos con códigos ambiguos, combinaciones de caja y bolsa duplicadas,
-saldos inválidos o cantidades insuficientes. Primero hay que conciliar esos datos.
-El resto del inventario sigue disponible.
+**Recorded by** means the person adding units, making a withdrawal or requesting
+a correction. Enter a name or initials; this is not the item's owner or project
+owner. The password authorizes the operation, while this field records who did it.
+**Project or note** is optional. A project-specific box already identifies the
+project, so there is no need to repeat it. Names and notes are stored in the public
+repository; enter only the information needed for the record.
 
-## Habilitar los formularios en Streamlit
+Different bags or physical characteristics mean separate product records. Similar
+names or old codes do not establish that products are identical. Different products,
+such as two-relay and four-relay modules, can share a box and bag without being merged.
 
-Crear un token de GitHub de acceso detallado limitado a `DeltaLabo/inventory`, con
-permisos **Contents: Read and write** y **Pull requests: Read and write**. La cuenta
-propietaria del token debe tener acceso al repositorio y permiso para crear ramas,
-pull requests, etiquetas de reserva de IDs y actualizar la rama principal.
-No reemplazar el token por la deploy key del repositorio: la app usa la API de GitHub.
-Respetar las reglas de la organización: si `main` exige pull requests para todo
-cambio, los retiros directos no funcionarán
-con esas reglas y habrá que ajustar el despliegue o el flujo.
+Withdrawals are blocked for ambiguous product IDs, duplicate box/bag records,
+invalid balances or insufficient stock. Other inventory remains available.
 
-En los ajustes de la app de Streamlit, sección **Secrets**, agregar:
+## Enable the protected forms
+
+Create a fine-grained GitHub token limited to `DeltaLabo/inventory`, with
+**Contents: Read and write** and **Pull requests: Read and write** permissions.
+Its account needs access to create branches, pull requests and ID reservation
+tags, and update the configured inventory branch. A repository deploy key does
+not replace this token: the app uses the GitHub API.
+
+Repository rules must permit the immediate withdrawal commits. If every change
+to `main` must go through a pull request, adjust the deployment or workflow first.
+
+In the Streamlit app settings, add these entries under **Secrets** using your own
+values for the placeholders:
 
 ```toml
-GITHUB_TOKEN = "TOKEN_PRIVADO_DE_GITHUB"
+GITHUB_TOKEN = "YOUR_PRIVATE_GITHUB_TOKEN"
 INVENTORY_REPOSITORY = "DeltaLabo/inventory"
 INVENTORY_BRANCH = "main"
-INVENTORY_ADD_PASSWORD = "CONTRASEÑA_PARA_INGRESOS"
-INVENTORY_WITHDRAW_PASSWORD = "CONTRASEÑA_COMPARTIDA_PARA_RETIROS"
+INVENTORY_ADD_PASSWORD = "YOUR_ADDITION_PASSWORD"
+INVENTORY_WITHDRAW_PASSWORD = "YOUR_SHARED_WITHDRAWAL_PASSWORD"
 ```
 
-Elegir contraseñas diferentes. La contraseña de retiros puede compartirse con las
-personas que usan el laboratorio. El token y la contraseña de ingresos se entregan
-solo a quienes corresponda; nunca poner el token en el formulario.
+Choose different passwords. Share the withdrawal password with laboratory users
+as needed. Keep the token private and give the addition password only to people
+authorized to submit additions and edits. Never enter the token in an app form.
+For local use, put these settings in `.streamlit/secrets.toml`, which is excluded
+from Git. Environment variables with the same names take precedence.
+Never reuse the old published password or use the placeholders literally.
 
-Para uso local, copiar `.streamlit/secrets.example.toml` a
-`.streamlit/secrets.toml` y completar los valores. Este último está excluido de Git.
-También se admiten variables de entorno con los mismos nombres, con prioridad.
-No usar literalmente los ejemplos ni reutilizar la contraseña publicada antigua.
+Without a token, Browse uses the local CSV snapshot and protected forms are
+disabled. With a token, the app reads the configured GitHub branch and caches a
+snapshot for 15 seconds. **Refresh stock** clears that read cache and fetches
+GitHub again; it does not change quantities or record movements. A successful
+withdrawal also clears the cache. The cache lifetime applies to the next read;
+the screen does not poll or refresh automatically in the background.
+If GitHub cannot be read, the app shows the local snapshot with a warning and
+disables writes.
 
-Sin token, la consulta usa los CSV locales y los formularios están deshabilitados.
-Con token, consulta la rama configurada de GitHub y mantiene una caché de 15 segundos.
-**Actualizar existencias** vuelve a consultar GitHub y evita la caché: no modifica
-cantidades ni registra movimientos. Un retiro exitoso también invalida la caché.
-Los 15 segundos son la vigencia de los datos guardados para la próxima consulta;
-la pantalla no se actualiza automáticamente en segundo plano.
-Si GitHub no responde, la consulta usa la copia local con aviso y deshabilita cambios.
+If saving fails with an uncertain result, retry the same form with the same data.
+Its request ID allows an already saved operation to be recovered without duplication.
+After success, use **Record another addition**, **Record another withdrawal** or
+**Edit another product** for a different operation. Reloading the browser or opening
+another session starts new requests: check the records before repeating an operation
+whose outcome is unknown.
 
-Si falla la conexión al guardar, reintentar el mismo formulario con los mismos datos:
-la solicitud conserva un identificador y recupera un cambio ya guardado sin duplicarlo.
-Tras un éxito, usar «Registrar otro ingreso/retiro» para una operación diferente.
-Para otra corrección, usar «Editar otro producto».
-Recargar el navegador o abrir otra sesión inicia solicitudes nuevas: comprobar los
-registros antes de repetir una operación cuyo resultado no se conoce.
+## Review additions and corrections
 
-## Aprobar ingresos
+Follow the link returned by the app to review the pull request. Check the product
+details, person recording it, box, bag and quantities; approve and merge to accept.
+Use restocking for more units of an existing product so its ID is retained.
 
-La app entrega un enlace a la pull request. Revisar descripción, clasificación,
-responsable, caja, bolsa y cantidades; aprobar y fusionar para aceptar el ingreso.
-Si el producto ya existe, solicitar más unidades del existente para reutilizar su ID.
-Los IDs nuevos tienen **cuatro letras mayúsculas aleatorias y cuatro números**:
-por ejemplo, `KQZT1026`. Los números indican el mes y año de asignación del ID
-(`1026` = octubre de 2026, hora de Costa Rica); no la fecha de compra o fabricación.
-El ID es permanente y no cambia al editar el producto ni al cambiar de mes.
-La app verifica que esté libre y lo reserva mediante una etiqueta de GitHub
-`inventory-ids/<codigo>`, evitando duplicados incluso entre solicitudes pendientes
-o simultáneas. Conservar esas etiquetas; los códigos reservados no se reutilizan.
-El 22/10/2026 se migraron los códigos del inventario activo a ese formato,
-manteniendo los dos IDs de relés ya asignados. El campo `previous_code` conserva
-la referencia anterior y permite seguir buscando por ella y encontrar fotos antiguas.
-No se fusionaron productos por semejanza de códigos. Las nueve combinaciones de caja y bolsa sin
-ficha recibieron fichas independientes con sus datos descriptivos pendientes de completar.
-Las bolsas y cantidades registradas se conservaron.
+New product IDs contain **four random uppercase letters and four digits**, for
+example `KQZT1026`. The digits indicate the month and year the ID was assigned in
+Costa Rica (`1026` means October 2026), not the purchase or manufacturing date.
+The ID stays fixed when details change or a new month begins. The app checks existing
+codes and atomically reserves a GitHub tag `inventory-ids/<code>` to avoid collisions
+between pending or simultaneous submissions. Keep these tags; reserved IDs are
+never reused. Request and movement IDs are separate UUIDs.
 
-Las propuestas guardan el catálogo/stock calculado en su rama y un comprobante en
-`requests/<id>.json`. Nunca cambian `main` antes de fusionarse. Si hubo otros cambios
-en la misma fila de stock, GitHub puede señalar un conflicto: revisar los saldos
-actuales y sumar el ingreso sobre ellos, sin reemplazarlos por una versión vieja.
-Una solicitud cerrada sin fusionar no agrega existencias.
+On October 22, 2026, 186 active codes were migrated to this format, retaining the
+two relay IDs already assigned. The optional `previous_code` field preserves old
+references for searching and image lookup. Similar codes were not merged. Nine
+stock records without catalog entries received separate incomplete catalog records.
+All 177 stock rows, boxes, bags and quantities were preserved.
 
-Las correcciones usan ramas `inventory/edit-<id>` y conservan en su comprobante los
-valores anteriores y propuestos junto con el motivo. Los ingresos suman unidades;
-las correcciones reemplazan únicamente los campos que se cambiaron en el formulario.
-Los saldos se revisan nuevamente antes de crear la propuesta para detectar cambios
-simultáneos. Si el campo a corregir ya cambió, hay que volver a seleccionar el producto
-y revisar los datos actualizados. Nunca se unen automáticamente dos combinaciones de caja y bolsa con
-stock ni se permite cambiar el ID. Si aparece un conflicto al fusionar, revisar los
-retiros posteriores antes de aceptar la corrección.
+Addition proposals save catalog/stock changes on a separate branch and a receipt
+in `requests/<id>.json`. They do not change `main` until merged. A closed, unmerged
+request does not add stock. If other changes affect the same stock row, resolve
+the merge conflict against current balances, adding the requested units without
+replacing later withdrawals with an old balance.
 
-## Actualizar datos
+Corrections use `inventory/edit-<id>` branches. Receipts include the previous and
+proposed values and a required reason. Only fields changed in the form are replaced;
+unchanged fields are retained. The app compares changed fields against the latest
+data before creating the proposal. If they have changed since the form was opened,
+select the product again and review the updated values. IDs cannot be changed and
+stock rows cannot be merged automatically. Check later withdrawals when resolving
+any merge conflict involving quantities.
 
-- `details.csv`: fichas de productos. Conservar los IDs como texto, sin renombrarlos
-  después de asignados. Cada producto debe tener un código único.
-  `previous_code` es una referencia histórica opcional, no una identidad compartida:
-  no usarla para fusionar fichas. Los productos nuevos dejan este campo vacío.
-- `locations.csv`: una fila por código, caja y bolsa. `units` es la
-  cantidad registrada y `available` la disponible; ambas son enteros no negativos,
-  con disponible menor o igual a la cantidad registrada.
-- `to_buy.csv`: lista de compras independiente.
-- `smd.csv` y `not_found.csv`: listas auxiliares pendientes de conciliación;
-  conservan sus referencias antiguas, no se importan automáticamente ni cambian existencias.
-- `usage_log.csv`: registro histórico conservado como referencia. No se usa para
-  recalcular existencias porque no explica todos los saldos actuales.
-- `movements.csv`: se crea en GitHub con el primer retiro. Incluye identificador,
-  fecha UTC, producto, caja, bolsa, cantidad, responsable, proyecto y saldo
-  posterior. Se guarda junto con el cambio de stock en el mismo commit.
-- `requests/`: comprobantes de ingresos y correcciones, incorporados al fusionar cada PR.
+## Data files and validation
 
-Editar los CSV y ejecutar la validación:
+- `details.csv`: product records with unique permanent codes. Keep codes as text.
+  `previous_code` is an optional historical reference, never a merge key; multiple
+  distinct products can share it. Leave it empty for new products.
+- `locations.csv`: one row per product code, box and bag. `units` and `available`
+  are nonnegative integers, with `available` no greater than `units`. Internal
+  column names remain `location` and `sublocation` for compatibility.
+- `to_buy.csv`: an independent shopping list.
+- `smd.csv` and `not_found.csv`: auxiliary lists awaiting reconciliation. They keep
+  their old references and are not imported automatically or used to change stock.
+- `usage_log.csv`: historical records retained as entered. They do not explain all
+  current balances and must not be used to recalculate stock.
+- `movements.csv`: created in GitHub on the first withdrawal. It records the request
+  ID, UTC timestamp, product, box, bag, quantity, person, project and remaining balance.
+  It is committed atomically with the stock update.
+- `requests/`: receipts for additions and corrections, incorporated when each PR merges.
+
+Validate CSV changes with:
 
 ```powershell
 python inventory.py
 ```
 
-La validación muestra problemas y termina con código 1 si hay datos pendientes.
-La aplicación también los muestra en «Datos por revisar», solo dentro de **Editar**. Los productos sin
-caja y bolsa muestran cantidades vacías (desconocidas), no cero. Las combinaciones de caja y bolsa sin
-ficha siguen visibles en «Sin clasificar». Los códigos duplicados se presentan
-como ambiguos, conservando sus descripciones sin multiplicar las filas de stock.
-Confirmar físicamente las diferencias antes de renombrar códigos o asignar saldos.
-Cuando el usuario autoriza cantidades provisionales, la nota de la ficha comienza
-con `Conteo provisional:` y aparece en «Datos por revisar» hasta verificarla.
+Validation reports unresolved data and exits with code 1 while issues remain.
+**Data to review** displays the same issues only under **Edit**. Products without
+a box or bag retain blank, unknown quantities rather than zero. Stock without a
+catalog record remains visible as **Unclassified**. Duplicate catalog codes are
+marked ambiguous without multiplying stock rows.
 
-### Pendientes de datos
+Missing descriptions, specifications and balances require physical evidence.
+Do not invent them to clear warnings. User-authorized provisional counts carry an
+information note beginning with `Provisional count:` and remain flagged until
+verified. Older notes with the original Spanish prefix are also recognized so
+pending requests do not silently lose their warnings.
 
-La migración de IDs no completa descripciones, especificaciones o existencias que
-no se conocen. Esas fichas continúan pendientes en Editar; no inventar datos para
-eliminar los avisos. Los registros sin caja ni bolsa conservan cantidades desconocidas.
+Two relay variants currently share box A, bag 12: `GPQM1026` is the four-relay
+module with 4 provisional units, and `SINW1026` is the two-relay module with 2
+provisional units. The user authorized this temporary allocation; a physical count
+is still needed. Update the balances and provisional notes after confirmation.
 
-Los relés están en A / 12 con fichas independientes: `GPQM1026` es el módulo de 4
-relés, con 4 unidades provisionales, y `SINW1026` es el módulo de 2 relés, con 2
-unidades provisionales. El usuario autorizó ese reparto para avanzar; falta el
-conteo físico. Al confirmarlo, corregir los saldos y la nota `Conteo provisional:`.
+The app never writes inventory CSVs to Streamlit's temporary disk. GitHub stores
+all changes. Withdrawals recheck the latest balance, affect one box/bag and retry
+concurrent updates without forcing Git history. Additions and corrections use
+independent review branches. These operations do not rewrite historical withdrawals.
 
-La app no escribe CSVs en el disco temporal de Streamlit. Los cambios se guardan
-por la API de GitHub. Los retiros revisan el saldo más reciente, afectan una sola
-caja y bolsa y reintentan ante cambios simultáneos, sin forzar el historial de Git.
-Los ingresos usan una rama independiente por solicitud y requieren tu revisión.
-Las correcciones siguen el mismo flujo de revisión, con el motivo y los valores
-anteriores registrados. Ninguna de estas acciones modifica el registro de retiros.
+## Images
 
-## Imágenes
+Images are optional and come from `DeltaLabo/inventory_pictures`, directory
+`inventory_images_ready`, using PNG or JPG filenames matching a product code.
+If the current code has no image, the app tries `previous_code` to retain existing
+photos. Enable **Show images** to display up to 12 products per page. Lookups have
+bounded timeouts and are cached for one hour.
 
-Se buscan por código en `DeltaLabo/inventory_pictures`, carpeta
-`inventory_images_ready`, extensiones PNG y JPG. Son opcionales y se muestran
-solo al activar «Mostrar imágenes», hasta 12 productos por página. Las consultas
-tienen un tiempo máximo y se guardan en caché durante una hora.
-Si no existe una foto con el ID actual, se busca con `previous_code` para preservar
-las fotos existentes después de la migración.
-
-## Comprobaciones
+## Checks and maintenance
 
 ```powershell
 python -m unittest discover -s tests -v
 ```
 
-Las versiones antiguas de la aplicación están en el historial de Git.
+Tests mock GitHub and never submit real pull requests or stock movements. They cover
+passwords, forms, approval, retries and concurrent withdrawals; category creation,
+manufacturer and box suggestions, nonblocking occupied-bag warnings, automatic
+restocking locations, random ID reservations, legacy searches/images, and provisional
+count warning compatibility.
 
-Las pruebas usan un GitHub simulado; no publican registros ni modifican el inventario
-real. Cubren contraseñas, formularios, aprobación, reintentos y retiros simultáneos;
-también la selección/creación de categorías, sugerencias de fabricante y caja,
-avisos de bolsa ocupada sin bloqueo, reposición en la bolsa ya registrada,
-IDs aleatorios con reservas y búsqueda/fotos mediante los códigos anteriores.
+Use English for the interface, documentation and maintained descriptive inventory
+text. Preserve product identifiers, brands, links, physical box/bag labels and audit
+history as recorded. Previous application versions remain in Git history.
 
-Referencias de configuración: [Secrets de Streamlit](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/secrets-management),
-[árboles y commits de GitHub](https://docs.github.com/en/rest/git/trees),
-[actualización de ramas](https://docs.github.com/en/rest/git/refs).
+Configuration references: [Streamlit secrets](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/secrets-management),
+[GitHub trees](https://docs.github.com/en/rest/git/trees),
+[GitHub references](https://docs.github.com/en/rest/git/refs).

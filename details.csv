@@ -128,8 +128,8 @@ SLTB1026,actuator,motors,Generic,,DC motor varius sizes,,,,DCACTMOT
 QGNO1026,actuator,Vibrator motor module,ITEAD,75537A-Y24Q-30,Coin vibration motor(ERM Eccentric)3.3 V or 5V DC,,,,VIBRATOR
 ETBU1026,actuator,Relay,Potter&Brumfield,RTE24005F,RELAY/5V DC/8A/250VAC,,,,RTE24005
 CPGK1026,actuator,Relay,SCHRACK,RT314A12,RELAY/12V DC/16A/250VAC,,,,RT314A12
-GPQM1026,actuator,Relay,SONGLE,SRD-05-VDC-SL-C,four relay module/30V DC/10A/,,,Conteo provisional: 4 unidades asignadas por solicitud del usuario; pendiente de conteo fisico. Codigo anterior SRD5VDCS.,SRD5VDCS
-SINW1026,actuator,Relay,SONGLE,SRD-05-VDC-SL-C,two relay module/30V DC/10A/,,,Conteo provisional: 2 unidades asignadas por solicitud del usuario; pendiente de conteo fisico. Codigo anterior SRD5VDCS.,SRD5VDCS
+GPQM1026,actuator,Relay,SONGLE,SRD-05-VDC-SL-C,four relay module/30V DC/10A/,,,Provisional count: 4 units assigned at the user's request; physical count pending. Previous code SRD5VDCS.,SRD5VDCS
+SINW1026,actuator,Relay,SONGLE,SRD-05-VDC-SL-C,two relay module/30V DC/10A/,,,Provisional count: 2 units assigned at the user's request; physical count pending. Previous code SRD5VDCS.,SRD5VDCS
 TLJR1026,actuator,Relay,Hf,JQC-3FF,one relay module/5V DC/10A to 277VAC/15A to 125VAC,,,,JQC3FF5V
 HJFW1026,converter,USB converter,Waveshare,USB-RS232/485/TTL/UART,converter for USB to RS232/485/TTL or UART,,,,USBTR232
 YKZW1026,converter,USB converter,Waveshare,USB-4CH SERIAL,converter for USB to 4 serial channels,,,,USBTSERI
@@ -158,7 +158,7 @@ OAQN1026,SMD,capacitor,,,2.2 uF SMD capacitor,,,,CSMD2.2U
 KUJM1026,SMD,capacitor,,,1nF SMD capacitor,,,,CSMD1.0N
 FUGI1026,SMD,resistor,,,12.04kOhm SMD resistor,,,,RSM12.4K
 AHLP1026,SMD,resistor,,,ZERO ohm SMD resistor,,,,RSM1.00W
-ZQCV1026,SMD,diodo,,,FG31 GP902 diodo,,,,DIO2.DIO
+ZQCV1026,SMD,diode,,,FG31 GP902 diode,,,,DIO2.DIO
 NEUJ1026,SMD,resistor,,,1001ohm resistor,,,,RSM.1001
 BSOO1026,Filter accessories,filter connector,DIGITEN,X0024AWJ7R,"DIGITEN 2"" FilterCompatible Component",,,,FILTERX0
 NNAY1026,fasteners,washer assortment,,,box with assorted pressure washers of different sizes;1 box;;includes washers of 6;8;10;12 mm,,,,WASHSETS
@@ -178,12 +178,12 @@ KDQK1026,mechanical,o-ring kit,Universal Series,O-Ring Service Kit,Universal ser
 WXJI1026,magnet,neodymium,,,Small round neodymium magnets,,,,IMANEORD
 XHDB1026,magnet,neodymium,,,Small rectangular neodymium magnets,,,,IMANEORT
 CGSA1026,pcb,heatbed,,MK2B,PCB Heatbed MK2B Dual Power supports 12V 24V,,,3D printer heated bed dual power,HEATMK2B
-KPNP1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,AOO90SER
-EQHJ1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,CSMD1.0U
-ULSA1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,HALL3144
-VITR1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,LEDSETS1
-FJYE1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,NSYTRAAB
-XIHV1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,POWPOTEN
-IGGO1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,RF433MHZ
-MOIX1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,S51SERVO
-VJHU1026,,,,,,,,Ficha pendiente de completar; conservada como producto independiente a partir de sus existencias.,SIM76000
+KPNP1026,,,,,,,,Incomplete record; retained as a separate product based on its registered stock.,AOO90SER
+EQHJ1026,,,,,,,,Incomplete record; retained as a separate product based on its registered stock.,CSMD1.0U
+ULSA1026,,,,,,,,Incomplete record; retained as a separate product based on its registered stock.,HALL3144
+VITR1026,,,,,,,,Incomplete record; retained as a separate product based on its registered stock.,LEDSETS1
+FJYE1026,,,,,,,,Incomplete record; retained as a separate product based on its registered stock.,NSYTRAAB
+XIHV1026,,,,,,,,Incomplete record; retained as a separate product based on its registered stock.,POWPOTEN
+IGGO1026,,,,,,,,Incomplete record; retained as a separate product based on its registered stock.,RF433MHZ
+MOIX1026,,,,,,,,Incomplete record; retained as a separate product based on its registered stock.,S51SERVO
+VJHU1026,,,,,,,,Incomplete record; retained as a separate product based on its registered stock.,SIM76000

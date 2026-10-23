@@ -31,16 +31,16 @@ class InventoryTests(unittest.TestCase):
         self.assertEqual(len(result), 2)
         self.assertEqual(result.available.astype(int).sum(), 6)
         self.assertTrue(result.description.str.contains("two relays / four relays", regex=False).all())
-        self.assertTrue(result.status.str.contains("ambiguo").all())
+        self.assertTrue(result.status.str.contains("ambiguous").all())
 
     def test_unmatched_stock_is_visible_and_missing_stock_stays_unknown(self):
         result = build_inventory(catalog({"code": "KNOWN000"}), stock(["ORPHAN00", "A", "01", "3", "2"]))
         orphan = result[result.code.eq("ORPHAN00")].iloc[0]
         known = result[result.code.eq("KNOWN000")].iloc[0]
         self.assertEqual(orphan.available, "2")
-        self.assertEqual(orphan.type, "Sin clasificar")
+        self.assertEqual(orphan.type, "Unclassified")
         self.assertEqual(known.available, "")
-        self.assertIn("desconocida", known.status)
+        self.assertIn("unknown", known.status)
 
     def test_search_is_global_literal_and_case_insensitive(self):
         result = build_inventory(catalog(
@@ -58,7 +58,7 @@ class InventoryTests(unittest.TestCase):
         self.assertTrue(filter_inventory(result, "[").empty)
 
     def test_validation_reports_duplicates_missing_references_and_invalid_stock(self):
-        details = catalog({"code": "DUP00000", "info": "Conteo provisional: pendiente"}, {"code": "DUP00000"}, {"code": "ONLYCAT0"})
+        details = catalog({"code": "DUP00000", "info": "Provisional count: pending"}, {"code": "DUP00000"}, {"code": "ONLYCAT0"})
         locations = stock(
             ["DUP00000", "A", "01", "1", "2"],
             ["DUP00000", "A", "01", "2", "-1"],
@@ -66,9 +66,9 @@ class InventoryTests(unittest.TestCase):
             ["BAD00000", "", "", "inf", "NaN"],
         )
         issues = "\n".join(validate_data(details, locations))
-        for expected in ("Código duplicado", "ONLYCAT0", "ORPHAN00", "cantidades inválidas", "caja y bolsa repetidas", "falta description", "falta código, caja"):
+        for expected in ("Duplicate catalog code", "ONLYCAT0", "ORPHAN00", "invalid quantities", "duplicate box and bag", "missing description", "missing code, box"):
             self.assertIn(expected, issues)
-        self.assertIn("conteo provisional", issues)
+        self.assertIn("provisional count", issues)
 
     def test_load_preserves_codes_and_zero_padded_locations_without_writes(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -85,8 +85,13 @@ class InventoryTests(unittest.TestCase):
     def test_missing_columns_raise_clear_error(self):
         with tempfile.TemporaryDirectory() as tmp:
             Path(tmp, "details.csv").write_text("code\nITEM0000\n", encoding="utf-8")
-            with self.assertRaisesRegex(ValueError, "details.csv: faltan columnas"):
+            with self.assertRaisesRegex(ValueError, "details.csv: missing columns"):
                 load_data(tmp)
+
+    def test_legacy_provisional_notes_still_raise_english_warning(self):
+        details = catalog({"code": "TEST1026", "info": "Conteo provisional: 2 unidades"})
+        issues = validate_data(details, stock())
+        self.assertIn("TEST1026: provisional count; verify quantities with a physical count and update the record note.", issues)
 
 
 if __name__ == "__main__":

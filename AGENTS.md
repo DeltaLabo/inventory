@@ -5,7 +5,8 @@ additions and edits via GitHub PR, and immediate withdrawals via atomic GitHub c
 Keep it simple: no separate database or server. `app.py` is the only application
 entry point; `inventory.py` has import-safe CSV helpers and validation,
 `forms.py` holds the three protected forms, and `github_inventory.py` handles GitHub.
-UI and user documentation are Spanish.
+UI, messages, maintained descriptive inventory text and user documentation are English.
+Preserve identifiers, brand names, URLs, physical labels and historical audit entries.
 
 Resolve paths relative to source files. Preserve editable CSVs and codes, including
 padding zeros and periods. Do not infer physical item identities, rename ambiguous
@@ -38,19 +39,19 @@ while ambiguous/missing source data remain unresolved. Never fix these by guessi
 Keep network calls optional, bounded, and cached.
 Tests must mock GitHub; never submit real PRs or stock movements as a test.
 
-The top-level actions are Consultar, Ingresar, Editar, Retirar. Edits reuse the
+The top-level actions are Browse, Add, Edit, Withdraw. Edits reuse the
 addition password and propose changes on `inventory/edit-<id>` branches. Prefill the
 form and freeze its original snapshot until another product/location is selected.
 Compare only changed fields with the latest data before proposing an edit; preserve
 unmodified fields and never overwrite intervening withdrawals. Record before/after
 values, responsible person, and a required reason. IDs are immutable. Reject invalid
 balances and destination-location collisions; never merge stock rows automatically.
-Show the global "Datos por revisar" panel only under Editar, not public browsing.
+Show the global "Data to review" panel only under Edit, not public browsing.
 
 On 2026-10-22 the user explicitly authorized provisional relay counts and sharing
 one compartment, while keeping the two variants distinct. SRD5VDCS was split into
 GPQM1026 (4-relay module, provisional 4 units) and SINW1026 (2-relay module,
-provisional 2 units), both A/12. Keep `Conteo provisional:` notes and validation
+provisional 2 units), both A/12. Keep `Provisional count:` notes and validation
 warnings until the user confirms the physical counts. Total stock is still 6.
 
 The user then explicitly authorized migrating remaining active product codes to
@@ -65,7 +66,7 @@ reference. Historical/auxiliary CSVs intentionally retain old references and are
 not authoritative stock sources. Complete stub descriptions only from user evidence.
 
 For new additions, Type and Subtype are dependent dropdowns populated from the
-approved catalog, with "Crear nuevo…" text inputs for new choices. Render these
+approved catalog, with "Create new…" text inputs for new choices. Render these
 outside the submission form to refresh subtypes immediately, and clear the selected
 subtype when the type changes. New categories become shared choices only after
 the addition PR is merged; do not add a separate taxonomy service or database.
@@ -76,7 +77,7 @@ Box on new products or first-time stock entry is a searchable selectbox with
 `accept_new_options=True`, populated from nonempty approved stock locations.
 New boxes become shared suggestions after merging the addition. Preserve existing
 box labels and keep compartment entry separate.
-When a new box/bag must be assigned, Bolsa is a nonnegative integer input. Place both
+When a new box/bag must be assigned, Bag is a nonnegative integer input. Place both
 outside the submission form so an existing-occupancy warning updates immediately.
 Check only the selected box, treating 01 and 1 as the same numeric compartment;
 preserve an existing label for CSV references. The warning never blocks submission:
@@ -85,26 +86,30 @@ Restocking an existing product automatically reuses its assigned box/compartment
 show a read-only caption, or select only among its already registered locations if
 there are several. Ask for a new location only if none exists yet. Reject a stale
 restock location in the backend instead of silently creating a different slot.
-Use Caja and Bolsa consistently in Spanish UI labels, messages and documentation.
+Use Box and Bag consistently in English UI labels, messages and documentation.
 Keep the internal CSV/API column names `location` and `sublocation` unchanged.
 
-Responsable means the person who records an addition, performs a withdrawal, or
+Recorded by means the person who records an addition, performs a withdrawal, or
 submits an edit; it is not the owner of an item or project. The user accepted this
 purpose after clarification. Keep it on these forms unless explicitly changed.
-Proyecto o nota remains optional; a project-specific box already identifies the
+Project or note remains optional; a project-specific box already identifies the
 project, so users do not need to repeat it. Do not add project selection requirements.
 
 User workflow rule: different bags or physical characteristics mean independent
 records; similar legacy codes/names are never sufficient evidence to merge them.
 Conversely, different products can share a box/bag while keeping distinct IDs.
 
-Actualizar existencias only clears the 15-second read cache and fetches GitHub;
+Refresh stock only clears the 15-second read cache and fetches GitHub;
 it does not write balances or movements. There is no automatic polling. If the
 remote read fails, show local read-only data with a warning and disable write forms.
 
 Deployment was verified on Streamlit after secrets were configured by the user.
 Never request, reveal or commit those secrets as part of routine maintenance.
 Keep README aligned with implemented behavior and retain unresolved data warnings
-in Editar. All application changes through the Caja/Bolsa terminology update were
-pushed to main; do not treat the nine placeholder fichas or provisional relay counts
+in Edit. All application changes through the Box/Bag terminology update were
+pushed to main; do not treat the nine placeholder records or provisional relay counts
 as verified physical data. No overnight automation or additional work was requested.
+
+English translation: keep legacy provisional-note detection for pending requests
+created before translation. Display all validation warnings in English. Do not
+translate entered audit history or change CSV/API field names as a language change.

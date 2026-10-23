@@ -33,46 +33,46 @@ def live_data(token, repository, branch):
 
 def browse(details, locations):
     inventory = build_inventory(details, locations)
-    search = st.text_input("Buscar por código, descripción, fabricante, modelo, caja o bolsa")
+    search = st.text_input("Search by code, description, manufacturer, model, box or bag")
     types = sorted(inventory["type"].unique(), key=str.casefold)
-    selected_type = st.selectbox("Tipo", ["Todos", *types])
-    type_rows = inventory if selected_type == "Todos" else inventory[inventory["type"] == selected_type]
+    selected_type = st.selectbox("Type", ["All", *types])
+    type_rows = inventory if selected_type == "All" else inventory[inventory["type"] == selected_type]
     subtypes = sorted(type_rows["subtype"].unique(), key=str.casefold)
-    selected_subtype = st.selectbox("Subtipo", ["Todos", *subtypes])
+    selected_subtype = st.selectbox("Subtype", ["All", *subtypes])
     results = filter_inventory(inventory, search, selected_type, selected_subtype)
-    st.caption(f"{len(results)} registros")
+    st.caption(f"{len(results)} records")
     st.download_button(
-        "Descargar resultados CSV", results.to_csv(index=False).encode("utf-8-sig"),
-        file_name="inventario.csv", mime="text/csv",
+        "Download results as CSV", results.to_csv(index=False).encode("utf-8-sig"),
+        file_name="inventory.csv", mime="text/csv",
     )
-    show_images = st.checkbox("Mostrar imágenes", value=False)
+    show_images = st.checkbox("Show images", value=False)
     if results.empty:
-        st.info("No se encontraron coincidencias.")
+        st.info("No matches found.")
         return
 
     labels = {
-        "code": "Código", "description": "Descripción", "manufacturer": "Fabricante",
-        "model": "Modelo", "location": "Caja", "sublocation": "Bolsa",
-        "units": "Unidades registradas", "available": "Disponible", "status": "Observaciones",
+        "code": "Code", "description": "Description", "manufacturer": "Manufacturer",
+        "model": "Model", "location": "Box", "sublocation": "Bag",
+        "units": "Recorded units", "available": "Available", "status": "Notes",
     }
     st.dataframe(results[list(labels)].rename(columns=labels), hide_index=True, width="stretch")
     if show_images:
         codes = results["code"].drop_duplicates().tolist()
         pages = max(1, (len(codes) + 11) // 12)
-        page = st.number_input("Página de imágenes", min_value=1, max_value=pages, step=1)
+        page = st.number_input("Image page", min_value=1, max_value=pages, step=1)
         for code in codes[(page - 1) * 12:page * 12]:
             product = results[results["code"].eq(code)].iloc[0]
             url = image_url(code, product.get("previous_code", ""))
             if url:
                 st.image(url, caption=code, width=150)
             else:
-                st.caption(f"{code}: sin imagen")
+                st.caption(f"{code}: no image")
 
 
 def main():
-    st.set_page_config(page_title="Inventario DeltaLAB", layout="wide")
+    st.set_page_config(page_title="DeltaLAB Inventory", layout="wide")
     st.title("Delta LAB")
-    st.caption("Escuela de Ingeniería Electromecánica — Tecnológico de Costa Rica")
+    st.caption("School of Electromechanical Engineering — Costa Rica Institute of Technology")
     config = settings()
     client = None
     try:
@@ -81,28 +81,28 @@ def main():
                 details, locations = live_data(config["token"], config["repository"], config["branch"])
                 client = GitHubInventory(config["token"], config["repository"], config["branch"])
             except (GitHubError, ValueError) as error:
-                st.warning("No se pudo actualizar desde GitHub. Se muestra la copia local y los cambios están temporalmente deshabilitados.")
+                st.warning("Could not refresh from GitHub. Showing the local copy; changes are temporarily disabled.")
                 details, locations = load_data(ROOT)
         else:
             details, locations = load_data(ROOT)
     except (OSError, ValueError, pd.errors.ParserError) as error:
-        st.error(f"No se pudo cargar el inventario: {error}")
+        st.error(f"Could not load inventory: {error}")
         st.stop()
-    action = st.radio("¿Qué querés hacer?", ("Consultar", "Ingresar", "Editar", "Retirar"), horizontal=True)
-    if action == "Ingresar":
+    action = st.radio("What would you like to do?", ("Browse", "Add", "Edit", "Withdraw"), horizontal=True)
+    if action == "Add":
         addition_form(client, details, locations, config["add_password"])
-    elif action == "Editar":
+    elif action == "Edit":
         issues = validate_data(details, locations)
         if issues:
-            with st.expander(f"Datos por revisar ({len(issues)})"):
+            with st.expander(f"Data to review ({len(issues)})"):
                 for issue in issues:
                     st.write(f"• {issue}")
         edit_form(client, details, locations, config["add_password"])
-    elif action == "Retirar":
+    elif action == "Withdraw":
         withdrawal_form(client, details, locations, config["withdraw_password"], live_data.clear)
     else:
-        st.subheader("Inventario")
-        if client and st.button("Actualizar existencias"):
+        st.subheader("Inventory")
+        if client and st.button("Refresh stock"):
             live_data.clear()
             st.rerun()
         browse(details, locations)
