@@ -97,27 +97,27 @@ def addition_storage(locations, existing_code=None):
         assigned = locations[locations["code"].eq(existing_code)]
         if not assigned.empty:
             if assigned.duplicated(["location", "sublocation"]).any() or assigned[["location", "sublocation"]].eq("").any().any():
-                st.info("La ubicación de este producto requiere revisión en Editar antes de sumar unidades.")
+                st.info("La caja o bolsa de este producto requiere revisión en Editar antes de sumar unidades.")
                 return None
             slots = list(zip(assigned["location"], assigned["sublocation"]))
             slot = slots[0] if len(slots) == 1 else st.selectbox(
-                "Ubicación existente", slots,
+                "Caja y bolsa registradas", slots,
                 format_func=lambda value: f"Caja {value[0]} / bolsa {value[1]}",
             )
             st.caption(f"Las unidades se sumarán en la caja {slot[0]}, bolsa {slot[1]}.")
             return slot
-        st.info("Este producto aún no tiene ubicación registrada. Definila para ingresar sus primeras unidades.")
+        st.info("Este producto aún no tiene caja ni bolsa registradas. Definilas para ingresar sus primeras unidades.")
     # These rerun independently so occupancy is visible before submission.
     boxes = sorted({value for value in locations["location"] if value}, key=str.casefold)
     location = st.selectbox(
-        "Caja / ubicación", boxes, index=None, accept_new_options=True,
+        "Caja", boxes, index=None, accept_new_options=True,
         placeholder="Buscá o escribí una caja",
         help="Elegí una caja existente o escribí una nueva y presioná Enter. Se incorpora cuando se apruebe el ingreso.",
         key="addition_field_location",
     ) or ""
     compartment = st.number_input(
-        "Compartimento", min_value=0, value=None, step=1,
-        placeholder="Número de compartimento", key="addition_field_sublocation",
+        "Bolsa", min_value=0, value=None, step=1,
+        placeholder="Número de bolsa", key="addition_field_sublocation",
     )
     sublocation = "" if compartment is None else str(compartment)
     if location and compartment is not None:
@@ -125,7 +125,7 @@ def addition_storage(locations, existing_code=None):
         occupied = locations[locations["location"].eq(location) & numbers.eq(compartment)]
         if not occupied.empty:
             sublocation = occupied.iloc[0]["sublocation"]
-            st.warning(f"El compartimento {compartment} de la caja {location} ya tiene productos registrados. Podés continuar y guardar otro producto en la misma bolsa.")
+            st.warning(f"La bolsa {compartment} de la caja {location} ya tiene productos registrados. Podés continuar y guardar otro producto en la misma bolsa.")
     return location, sublocation
 
 
@@ -214,9 +214,9 @@ def withdrawal_form(client, details, locations, password, on_saved):
             key = (row["code"], row["location"], row["sublocation"])
             choices[key] = (f"{products[row['code']]} · caja {row['location']} / {row['sublocation']} · disponible {available}", available)
     if not choices:
-        st.info("No hay existencias disponibles con identificación y ubicación verificables.")
+        st.info("No hay existencias disponibles con identificación, caja y bolsa verificables.")
         return
-    selected = st.selectbox("Producto y ubicación", sorted(choices, key=lambda key: choices[key][0]), format_func=lambda key: choices[key][0])
+    selected = st.selectbox("Producto, caja y bolsa", sorted(choices, key=lambda key: choices[key][0]), format_func=lambda key: choices[key][0])
     with st.form("withdrawal_form"):
         quantity = st.number_input("Cantidad que retirás", min_value=1, max_value=choices[selected][1], step=1, key="withdrawal_field_quantity")
         person = st.text_input("Responsable (nombre o iniciales)", key="withdrawal_field_person", max_chars=100)
@@ -254,21 +254,21 @@ def edit_form(client, details, locations, password):
         return
     products = {row["code"]: product_label(row) for _, row in eligible.iterrows()}
     code = st.selectbox("Producto a editar", sorted(products, key=products.get), format_func=products.get)
-    correct_stock = st.checkbox("Corregir ubicación o cantidades")
+    correct_stock = st.checkbox("Corregir caja, bolsa o cantidades")
     selected_stock = None
     if correct_stock:
         rows = locations[locations["code"].eq(code)]
         rows = rows[~rows.duplicated(["location", "sublocation"], keep=False)]
         if rows.empty:
-            st.info("No hay una ubicación única para corregir. Para agregar existencias, usá Ingresar.")
+            st.info("La caja y bolsa no están definidas de forma única. Para agregar existencias, usá Ingresar.")
             return
         choices = {(row["location"], row["sublocation"]): row.to_dict() for _, row in rows.iterrows()}
-        slot = st.selectbox("Ubicación a corregir", list(choices), format_func=lambda key: f"Caja {key[0]} / {key[1]}")
+        slot = st.selectbox("Caja y bolsa a corregir", list(choices), format_func=lambda key: f"Caja {key[0]} / {key[1]}")
         selected_stock = choices[slot]
         try:
             stock_counts(selected_stock)
         except ValueError:
-            st.info("Los saldos originales de esta ubicación son inválidos; revisalos en el CSV antes de editar desde la app.")
+            st.info("Los saldos originales de esta caja y bolsa son inválidos; revisalos en el CSV antes de editar desde la app.")
             return
     context = (code, (selected_stock["location"], selected_stock["sublocation"]) if selected_stock else None)
     if st.session_state.get("edit_context") != context:
@@ -292,8 +292,8 @@ def edit_form(client, details, locations, password):
         updated_stock = None
         if original_stock:
             updated_stock = {
-                "location": st.text_input("Caja / ubicación", value=original_stock["location"], key="edit_field_location", max_chars=80),
-                "sublocation": st.text_input("Compartimento", value=original_stock["sublocation"], key="edit_field_sublocation", max_chars=80),
+                "location": st.text_input("Caja", value=original_stock["location"], key="edit_field_location", max_chars=80),
+                "sublocation": st.text_input("Bolsa", value=original_stock["sublocation"], key="edit_field_sublocation", max_chars=80),
                 "units": st.number_input("Unidades registradas (saldo corregido)", min_value=0, value=int(original_stock["units"]), step=1, key="edit_field_units"),
                 "available": st.number_input("Disponible (saldo corregido)", min_value=0, value=int(original_stock["available"]), step=1, key="edit_field_available"),
             }

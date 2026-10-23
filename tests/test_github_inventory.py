@@ -211,7 +211,7 @@ class GitHubInventoryTests(unittest.TestCase):
         self.assertEqual(self.db.tags, {})
 
     def test_restock_does_not_create_a_different_location_for_an_already_located_product(self):
-        with self.assertRaisesRegex(ValueError, "ubicación del producto cambió"):
+        with self.assertRaisesRegex(ValueError, "caja o bolsa del producto cambió"):
             self.db.propose_addition(self.request_id, {}, 2, "B", "99", "Intern", existing_code="ITEM0001")
         self.assertEqual(len(self.db.commits), 1)
 

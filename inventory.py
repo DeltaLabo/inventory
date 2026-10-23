@@ -41,7 +41,7 @@ def validate_data(details, locations):
     for code in sorted(set(locations["code"]) - set(details["code"])):
         issues.append(f"{code}: tiene existencias pero no tiene ficha de catálogo.")
     for code in sorted(set(details["code"]) - set(locations["code"])):
-        issues.append(f"{code}: sin ubicación ni existencias registradas.")
+        issues.append(f"{code}: sin caja, bolsa ni existencias registradas.")
     for column in ("code", "type", "subtype", "description"):
         for index in details.index[details[column].eq("")]:
             issues.append(f"Catálogo, registro {index + 1} ({details.at[index, 'code']}): falta {column}.")
@@ -50,12 +50,12 @@ def validate_data(details, locations):
     valid &= numeric.mod(1).eq(0).all(axis=1)
     valid &= numeric["available"].le(numeric["units"])
     for index in locations.index[~valid]:
-        issues.append(f"{locations.at[index, 'code']}: cantidades inválidas en ubicación {locations.at[index, 'location']} / {locations.at[index, 'sublocation']}.")
+        issues.append(f"{locations.at[index, 'code']}: cantidades inválidas en caja {locations.at[index, 'location']} / bolsa {locations.at[index, 'sublocation']}.")
     for index in locations.index[locations[["code", "location", "sublocation"]].eq("").any(axis=1)]:
-        issues.append(f"Ubicaciones, registro {index + 1}: falta código, ubicación o compartimento.")
+        issues.append(f"Existencias, registro {index + 1}: falta código, caja o bolsa.")
     repeated = locations.duplicated(["code", "location", "sublocation"], keep=False)
     for code in locations.loc[repeated, "code"].unique():
-        issues.append(f"{code}: ubicación repetida; verificar sus cantidades.")
+        issues.append(f"{code}: caja y bolsa repetidas; verificar sus cantidades.")
     for code in details.loc[details["info"].str.startswith("Conteo provisional:"), "code"]:
         issues.append(f"{code}: conteo provisional; confirmar cantidades con un conteo físico y actualizar la nota de la ficha.")
     return issues
@@ -70,7 +70,7 @@ def build_inventory(details, locations):
     catalog = details.groupby("code", as_index=False, sort=False).agg(distinct_values)
     merged = catalog.merge(locations, on="code", how="outer", indicator=True)
     merged["status"] = merged["_merge"].astype(str).map({
-        "left_only": "Sin ubicación; cantidad desconocida",
+        "left_only": "Sin caja ni bolsa; cantidad desconocida",
         "right_only": "Sin ficha de catálogo; revisar código", "both": "",
     })
     merged = merged.drop(columns="_merge").fillna("")

@@ -22,7 +22,7 @@ archivo principal. Los CSV se resuelven desde la ubicación del código.
 - **Consultar:** búsqueda y filtros sin contraseña. También permite descargar los
   resultados y consultar imágenes opcionales.
 - **Ingresar:** requiere la contraseña de ingresos. Elegir un producto nuevo o
-  más unidades de un producto existente; indicar cantidad, caja, compartimento y
+  más unidades de un producto existente; indicar cantidad, caja, bolsa y
   responsable. Un producto nuevo recibe un ID automático permanente. La app crea
   una pull request; las existencias se incorporan al aprobarla y **fusionarla**.
   Para productos nuevos, Tipo y Subtipo son menús desplegables. Los subtipos dependen
@@ -30,27 +30,27 @@ archivo principal. Los CSV se resuelven desde la ubicación del código.
   exista; se incorpora a las opciones al aprobar y fusionar el ingreso.
   Fabricante es opcional y permite buscar entre los fabricantes existentes o escribir
   uno nuevo y presionar Enter. Los fabricantes nuevos también se incorporan al aprobar el ingreso.
-  Caja / ubicación permite buscar cajas existentes o escribir una nueva y presionar
+  Caja permite buscar cajas existentes o escribir una nueva y presionar
   Enter. La caja nueva aparece entre las opciones al aprobar y fusionar el ingreso.
-  Compartimento es un número entero desde cero. Si ya hay productos en ese número
+  Bolsa es un número entero desde cero. Si ya hay productos en ese número
   de la caja elegida, aparece un aviso antes de enviar. El aviso permite continuar:
   distintos productos pueden compartir la misma bolsa sin fusionar sus fichas.
   Al sumar unidades de un producto existente, la app reutiliza su caja y bolsa sin
-  volver a pedirlas. Si tiene varias ubicaciones registradas, solo permite elegir
+  volver a pedirlas. Si tiene varias combinaciones de caja y bolsa registradas, solo permite elegir
   entre ellas. Si aún no tiene ninguna, se define para el primer ingreso.
 - **Editar:** usa la misma contraseña de ingresos. Elegir un producto existente y
   corregir descripción, clasificación, fabricante, modelo u otras especificaciones.
-  Activar «Corregir ubicación o cantidades» para corregir una ubicación concreta y
-  sus saldos. Indicar responsable y motivo. El ID permanece fijo y los cambios se
+  Activar «Corregir caja, bolsa o cantidades» para corregir esos datos.
+  Indicar responsable y motivo. El ID permanece fijo y los cambios se
   envían a una pull request; no se aplican hasta aprobarla y fusionarla.
 - **Retirar:** requiere la contraseña compartida de retiros. Elegir el producto y
-  su ubicación, indicar cantidad y responsable. El saldo y el movimiento se guardan
+  su caja y bolsa, indicar cantidad y responsable. El saldo y el movimiento se guardan
   inmediatamente en un único commit de GitHub, sin esperar aprobación.
 
 Los campos «Proyecto o nota» son opcionales. Los nombres o iniciales y las notas
 quedan en el repositorio público: usar únicamente la información necesaria.
 
-No se permiten retiros de productos con códigos ambiguos, ubicaciones duplicadas,
+No se permiten retiros de productos con códigos ambiguos, combinaciones de caja y bolsa duplicadas,
 saldos inválidos o cantidades insuficientes. Primero hay que conciliar esos datos.
 El resto del inventario sigue disponible.
 
@@ -97,7 +97,7 @@ registros antes de repetir una operación cuyo resultado no se conoce.
 ## Aprobar ingresos
 
 La app entrega un enlace a la pull request. Revisar descripción, clasificación,
-responsable, ubicación y cantidades; aprobar y fusionar para aceptar el ingreso.
+responsable, caja, bolsa y cantidades; aprobar y fusionar para aceptar el ingreso.
 Si el producto ya existe, solicitar más unidades del existente para reutilizar su ID.
 Los IDs nuevos tienen **cuatro letras mayúsculas aleatorias y cuatro números**:
 por ejemplo, `KQZT1026`. Los números indican el mes y año de asignación del ID
@@ -109,7 +109,7 @@ o simultáneas. Conservar esas etiquetas; los códigos reservados no se reutiliz
 El 22/10/2026 se migraron los códigos del inventario activo a ese formato,
 manteniendo los dos IDs de relés ya asignados. El campo `previous_code` conserva
 la referencia anterior y permite seguir buscando por ella y encontrar fotos antiguas.
-No se fusionaron productos por semejanza de códigos. Las nueve ubicaciones sin
+No se fusionaron productos por semejanza de códigos. Las nueve combinaciones de caja y bolsa sin
 ficha recibieron fichas independientes con sus datos descriptivos pendientes de completar.
 Las bolsas y cantidades registradas se conservaron.
 
@@ -124,7 +124,7 @@ valores anteriores y propuestos junto con el motivo. Los ingresos suman unidades
 las correcciones reemplazan únicamente los campos que se cambiaron en el formulario.
 Los saldos se revisan nuevamente antes de crear la propuesta para detectar cambios
 simultáneos. Si el campo a corregir ya cambió, hay que volver a seleccionar el producto
-y revisar los datos actualizados. Nunca se unen automáticamente dos ubicaciones con
+y revisar los datos actualizados. Nunca se unen automáticamente dos combinaciones de caja y bolsa con
 stock ni se permite cambiar el ID. Si aparece un conflicto al fusionar, revisar los
 retiros posteriores antes de aceptar la corrección.
 
@@ -134,7 +134,7 @@ retiros posteriores antes de aceptar la corrección.
   sus ceros y puntos. Cada producto debe tener un código único.
   `previous_code` es una referencia histórica opcional, no una identidad compartida:
   no usarla para fusionar fichas. Los productos nuevos dejan este campo vacío.
-- `locations.csv`: una fila por código, ubicación y compartimento. `units` es la
+- `locations.csv`: una fila por código, caja y bolsa. `units` es la
   cantidad registrada y `available` la disponible; ambas son enteros no negativos,
   con disponible menor o igual a la cantidad registrada.
 - `to_buy.csv`: lista de compras independiente.
@@ -143,7 +143,7 @@ retiros posteriores antes de aceptar la corrección.
 - `usage_log.csv`: registro histórico conservado como referencia. No se usa para
   recalcular existencias porque no explica todos los saldos actuales.
 - `movements.csv`: se crea en GitHub con el primer retiro. Incluye identificador,
-  fecha UTC, producto, caja, compartimento, cantidad, responsable, proyecto y saldo
+  fecha UTC, producto, caja, bolsa, cantidad, responsable, proyecto y saldo
   posterior. Se guarda junto con el cambio de stock en el mismo commit.
 - `requests/`: comprobantes de ingresos y correcciones, incorporados al fusionar cada PR.
 
@@ -155,7 +155,7 @@ python inventory.py
 
 La validación muestra problemas y termina con código 1 si hay datos pendientes.
 La aplicación también los muestra en «Datos por revisar», solo dentro de **Editar**. Los productos sin
-ubicación muestran cantidades vacías (desconocidas), no cero. Las ubicaciones sin
+caja y bolsa muestran cantidades vacías (desconocidas), no cero. Las combinaciones de caja y bolsa sin
 ficha siguen visibles en «Sin clasificar». Los códigos duplicados se presentan
 como ambiguos, conservando sus descripciones sin multiplicar las filas de stock.
 Confirmar físicamente las diferencias antes de renombrar códigos o asignar saldos.
@@ -164,7 +164,7 @@ con `Conteo provisional:` y aparece en «Datos por revisar» hasta verificarla.
 
 La app no escribe CSVs en el disco temporal de Streamlit. Los cambios se guardan
 por la API de GitHub. Los retiros revisan el saldo más reciente, afectan una sola
-ubicación y reintentan ante cambios simultáneos, sin forzar el historial de Git.
+caja y bolsa y reintentan ante cambios simultáneos, sin forzar el historial de Git.
 Los ingresos usan una rama independiente por solicitud y requieren tu revisión.
 Las correcciones siguen el mismo flujo de revisión, con el motivo y los valores
 anteriores registrados. Ninguna de estas acciones modifica el registro de retiros.

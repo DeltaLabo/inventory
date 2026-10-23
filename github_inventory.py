@@ -86,10 +86,10 @@ def unique_product(details, code):
 def stock_counts(row):
     values = [row[name].strip() for name in ("units", "available")]
     if any(not value.isascii() or not value.isdigit() for value in values):
-        raise ValueError("Las existencias de esta ubicación requieren revisión.")
+        raise ValueError("Las existencias de esta caja y bolsa requieren revisión.")
     units, available = map(int, values)
     if available > units:
-        raise ValueError("Las existencias de esta ubicación requieren revisión.")
+        raise ValueError("Las existencias de esta caja y bolsa requieren revisión.")
     return units, available
 
 
@@ -183,8 +183,8 @@ class GitHubInventory:
         operation = UUID(request_id).hex
         branch = f"inventory/add-{operation}"
         quantity = positive_integer(quantity)
-        location = required(location, "Ubicación", 80)
-        sublocation = required(sublocation, "Compartimento", 80)
+        location = required(location, "Caja", 80)
+        sublocation = required(sublocation, "Bolsa", 80)
         person = required(person, "Responsable", 100)
         project = str(project).strip()[:300]
         if self.head(branch, optional=True):
@@ -210,9 +210,9 @@ class GitHubInventory:
                 changes["details.csv"] = write_rows(detail_columns, details)
             matches = [row for row in locations if (row["code"].strip(), row["location"].strip(), row["sublocation"].strip()) == (code, location, sublocation)]
             if len(matches) > 1:
-                raise ValueError("La ubicación está duplicada. Primero debe revisarse el inventario.")
+                raise ValueError("La combinación de caja y bolsa está duplicada. Primero debe revisarse el inventario.")
             if existing_code and not matches and any(row["code"].strip() == code for row in locations):
-                raise ValueError("La ubicación del producto cambió. Actualice el inventario antes de sumar unidades.")
+                raise ValueError("La caja o bolsa del producto cambió. Actualice el inventario antes de sumar unidades.")
             if matches:
                 units, available = stock_counts(matches[0])
                 matches[0].update(units=str(units + quantity), available=str(available + quantity))
@@ -244,7 +244,7 @@ class GitHubInventory:
             "body": (
                 f"Solicitud de ingreso enviada por {saved['person']}.\n\n"
                 f"- Producto: `{saved['code']}`\n- Cantidad: {saved['quantity']}\n"
-                f"- Ubicación: {saved['location']} / {saved['sublocation']}\n"
+                f"- Caja: {saved['location']} / bolsa: {saved['sublocation']}\n"
                 f"- Proyecto o nota: {saved['project'] or 'Sin especificar'}\n\n"
                 "Las existencias se incorporan al fusionar esta solicitud. "
                 "Si hay conflictos, revisar los saldos actuales antes de fusionar."
@@ -256,8 +256,8 @@ class GitHubInventory:
         operation = UUID(request_id).hex
         quantity = positive_integer(quantity)
         person = required(person, "Responsable", 100)
-        location = required(location, "Ubicación", 80)
-        sublocation = required(sublocation, "Compartimento", 80)
+        location = required(location, "Caja", 80)
+        sublocation = required(sublocation, "Bolsa", 80)
         project = str(project).strip()[:300]
         expected = {"id": operation, "code": code, "location": location, "sublocation": sublocation,
                     "quantity": str(quantity), "person": person, "project": project}
@@ -275,10 +275,10 @@ class GitHubInventory:
             location_columns, locations = read_rows(self.read_file("locations.csv", parent), LOCATION_COLUMNS)
             matches = [row for row in locations if (row["code"].strip(), row["location"].strip(), row["sublocation"].strip()) == (code, location, sublocation)]
             if len(matches) != 1:
-                raise ValueError("La ubicación no existe o está duplicada. Primero debe revisarse el inventario.")
+                raise ValueError("La combinación de caja y bolsa no existe o está duplicada. Primero debe revisarse el inventario.")
             _, available = stock_counts(matches[0])
             if quantity > available:
-                raise ValueError(f"Solo hay {available} unidades disponibles en esta ubicación.")
+                raise ValueError(f"Solo hay {available} unidades disponibles en esta caja y bolsa.")
             remaining = available - quantity
             matches[0]["available"] = str(remaining)
             history.append(dict.fromkeys(columns, "") | expected | {
@@ -331,12 +331,12 @@ class GitHubInventory:
             stock_audit = {}
             if updated_stock is not None:
                 if not original_stock or original_stock.get("code") != code:
-                    raise ValueError("Seleccione la ubicación original del producto.")
+                    raise ValueError("Seleccione la caja y bolsa originales del producto.")
                 location_columns, locations = read_rows(self.read_file("locations.csv", parent), LOCATION_COLUMNS)
                 key = (code, original_stock["location"], original_stock["sublocation"])
                 matches = [row for row in locations if tuple(row[name].strip() for name in ("code", "location", "sublocation")) == key]
                 if len(matches) != 1:
-                    raise ValueError("La ubicación cambió o está duplicada. Primero debe revisarse el inventario.")
+                    raise ValueError("La combinación de caja y bolsa cambió o está duplicada. Primero debe revisarse el inventario.")
                 row = matches[0]
                 for name, value in updated_stock.items():
                     if name not in ("location", "sublocation", "units", "available"):
@@ -349,12 +349,12 @@ class GitHubInventory:
                     stock_audit[name] = {"before": row[name], "after": value}
                     row[name] = value
                 if stock_audit:
-                    required(row["location"], "Ubicación", 80)
-                    required(row["sublocation"], "Compartimento", 80)
+                    required(row["location"], "Caja", 80)
+                    required(row["sublocation"], "Bolsa", 80)
                     stock_counts(row)
                     destination = (code, row["location"].strip(), row["sublocation"].strip())
                     if any(other is not row and tuple(other[name].strip() for name in ("code", "location", "sublocation")) == destination for other in locations):
-                        raise ValueError("El producto ya tiene existencias en la ubicación de destino; no se pueden unir saldos automáticamente.")
+                        raise ValueError("El producto ya tiene existencias en la caja y bolsa de destino; no se pueden unir saldos automáticamente.")
                     changes["locations.csv"] = write_rows(location_columns, locations)
             if not changes:
                 raise ValueError("No hay cambios para enviar.")

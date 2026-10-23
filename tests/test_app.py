@@ -38,8 +38,8 @@ class AppTests(unittest.TestCase):
             self.assertIn(self.code_for("AOO90SER"), data["Código"].tolist())
             relays = data[data["Código"].isin(["GPQM1026", "SINW1026"])]
             self.assertEqual(len(relays), 2)
-            self.assertEqual(relays["Ubicación"].tolist(), ["A", "A"])
-            self.assertEqual(relays["Compartimento"].tolist(), ["12", "12"])
+            self.assertEqual(relays["Caja"].tolist(), ["A", "A"])
+            self.assertEqual(relays["Bolsa"].tolist(), ["12", "12"])
             head.assert_not_called()
 
     def test_punctuation_and_empty_search_results_render(self):

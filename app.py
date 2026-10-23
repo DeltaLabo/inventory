@@ -33,7 +33,7 @@ def live_data(token, repository, branch):
 
 def browse(details, locations):
     inventory = build_inventory(details, locations)
-    search = st.text_input("Buscar por código, descripción, fabricante, modelo o ubicación")
+    search = st.text_input("Buscar por código, descripción, fabricante, modelo, caja o bolsa")
     types = sorted(inventory["type"].unique(), key=str.casefold)
     selected_type = st.selectbox("Tipo", ["Todos", *types])
     type_rows = inventory if selected_type == "Todos" else inventory[inventory["type"] == selected_type]
@@ -52,7 +52,7 @@ def browse(details, locations):
 
     labels = {
         "code": "Código", "description": "Descripción", "manufacturer": "Fabricante",
-        "model": "Modelo", "location": "Ubicación", "sublocation": "Compartimento",
+        "model": "Modelo", "location": "Caja", "sublocation": "Bolsa",
         "units": "Unidades registradas", "available": "Disponible", "status": "Observaciones",
     }
     st.dataframe(results[list(labels)].rename(columns=labels), hide_index=True, width="stretch")

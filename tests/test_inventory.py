@@ -66,7 +66,7 @@ class InventoryTests(unittest.TestCase):
             ["BAD00000", "", "", "inf", "NaN"],
         )
         issues = "\n".join(validate_data(details, locations))
-        for expected in ("Código duplicado", "ONLYCAT0", "ORPHAN00", "cantidades inválidas", "ubicación repetida", "falta description", "falta código, ubicación"):
+        for expected in ("Código duplicado", "ONLYCAT0", "ORPHAN00", "cantidades inválidas", "caja y bolsa repetidas", "falta description", "falta código, caja"):
             self.assertIn(expected, issues)
         self.assertIn("conteo provisional", issues)
 

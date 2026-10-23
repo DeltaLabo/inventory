@@ -85,3 +85,5 @@ Restocking an existing product automatically reuses its assigned box/compartment
 show a read-only caption, or select only among its already registered locations if
 there are several. Ask for a new location only if none exists yet. Reject a stale
 restock location in the backend instead of silently creating a different slot.
+Use Caja and Bolsa consistently in Spanish UI labels, messages and documentation.
+Keep the internal CSV/API column names `location` and `sublocation` unchanged.
