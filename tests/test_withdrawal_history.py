@@ -1,5 +1,6 @@
 from copy import deepcopy
 import unittest
+from unittest.mock import patch
 from uuid import uuid4
 
 import pandas as pd
@@ -13,9 +14,12 @@ class WithdrawalHistoryTests(unittest.TestCase):
     def setUp(self):
         self.db = MemoryGitHub()
         self.details, _ = self.db.snapshot()
+        roster = patch("assistants.load_assistants", return_value=(("TEST00", "Intern"),))
+        roster.start()
+        self.addCleanup(roster.stop)
 
     def withdraw(self, project, quantity=1):
-        return self.db.withdraw(uuid4().hex, "ITEM0001", "A", "01", quantity, "Intern", project)
+        return self.db.withdraw(uuid4().hex, "ITEM0001", "A", "01", quantity, "Intern", project, assistant_id="TEST00")
 
     def test_history_is_separate_and_grouped_by_project_and_product(self):
         self.withdraw("Robot", 2)
