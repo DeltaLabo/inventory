@@ -8,6 +8,7 @@ import streamlit as st
 from streamlit.errors import StreamlitSecretNotFoundError
 
 from github_inventory import GitHubError, required, stock_units
+import assistants as assistant_directory
 
 
 def settings():
@@ -218,10 +219,22 @@ def withdrawal_form(client, details, locations, password, on_saved):
     if not choices:
         st.info("No available stock has a verifiable product ID, box and bag.")
         return
+    if st.button("Refresh assistant list"):
+        assistant_directory.refresh_assistants()
+        st.session_state.pop("withdrawal_field_person", None)
+        st.rerun()
+    try:
+        assistants = dict(assistant_directory.load_assistants())
+    except assistant_directory.AssistantDirectoryError as error:
+        st.error(str(error))
+        return
     selected = st.selectbox("Product, box and bag", sorted(choices, key=lambda key: choices[key][0]), format_func=lambda key: choices[key][0])
     with st.form("withdrawal_form"):
         quantity = st.number_input("Quantity to withdraw", min_value=1, max_value=choices[selected][1], step=1, key="withdrawal_field_quantity")
-        person = st.text_input("Recorded by (name or initials)", key="withdrawal_field_person", max_chars=100)
+        assistant_id = st.selectbox("Recorded by", list(assistants), index=None,
+                                     placeholder="Search for your name",
+                                     format_func=lambda code: f"{assistants[code]} ({code})",
+                                     key="withdrawal_field_person")
         project = st.text_input("Project", key="withdrawal_field_project", max_chars=300,
                                 help="Required so withdrawals can be tracked by project.")
         entered = st.text_input("Withdrawal password", type="password", key="withdrawal_field_password")
@@ -233,7 +246,10 @@ def withdrawal_form(client, details, locations, password, on_saved):
         try:
             with st.spinner("Saving withdrawal in GitHub…"):
                 project = required(project, "Project")
-                remaining = client.withdraw(request_id, *selected, quantity, person, project)
+                if assistant_id not in assistants:
+                    raise ValueError("Select an assistant from the directory.")
+                remaining = client.withdraw(request_id, *selected, quantity, assistants[assistant_id], project,
+                                             assistant_id=assistant_id)
         except (ValueError, GitHubError) as error:
             st.error(str(error))
             return
