@@ -112,6 +112,9 @@ class GitHubInventoryTests(unittest.TestCase):
     def setUp(self):
         self.db = MemoryGitHub()
         self.request_id = uuid4().hex
+        roster = patch("assistants.load_assistants", return_value=(("TEST00", "Intern"), ("OTHER00", "Other intern")))
+        roster.start()
+        self.addCleanup(roster.stop)
 
     def stock(self):
         return read_rows(self.db.main_files["locations.csv"], LOCATION_COLUMNS)[1]
@@ -144,7 +147,8 @@ class GitHubInventoryTests(unittest.TestCase):
         return read_rows(self.db.main_files["movements.csv"], MOVEMENT_COLUMNS)[1]
 
     def withdraw(self, quantity=2, request_id=None, person="Intern"):
-        return self.db.withdraw(request_id or self.request_id, "ITEM0001", "A", "01", quantity, person, "Test project")
+        return self.db.withdraw(request_id or self.request_id, "ITEM0001", "A", "01", quantity, person, "Test project",
+                                assistant_id="TEST00" if person == "Intern" else "OTHER00")
 
     def test_withdrawal_updates_only_selected_location_and_commits_history_together(self):
         self.assertEqual(self.withdraw(), 3)
@@ -153,6 +157,7 @@ class GitHubInventoryTests(unittest.TestCase):
         self.assertEqual(len(self.history()), 1)
         self.assertEqual(self.history()[0]["quantity"], "2")
         self.assertEqual(self.history()[0]["sublocation"], "01")
+        self.assertEqual(self.history()[0]["assistant_id"], "TEST00")
         self.assertTrue(self.history()[0]["timestamp"].endswith("+00:00"))
         self.assertNotIn("movements.csv", self.db.commits["initial"]["files"])
 
