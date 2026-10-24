@@ -15,6 +15,7 @@ from zoneinfo import ZoneInfo
 import requests
 
 from inventory import DETAIL_COLUMNS, LOCATION_COLUMNS, parse_data
+from assistants import assistant_name
 
 
 MOVEMENT_COLUMNS = (
@@ -312,7 +313,7 @@ class GitHubInventory:
         })
         return result["html_url"]
 
-    def withdraw(self, request_id, code, location, sublocation, quantity, person, project=""):
+    def withdraw(self, request_id, code, location, sublocation, quantity, person, project="", *, assistant_id=None):
         operation = UUID(request_id).hex
         quantity = positive_integer(quantity)
         person = required(person, "Recorded by", 100)
@@ -321,16 +322,21 @@ class GitHubInventory:
         project = str(project).strip()[:300]
         expected = {"id": operation, "code": code, "location": location, "sublocation": sublocation,
                     "quantity": str(quantity), "person": person, "project": project}
+        if assistant_id is not None:
+            expected["assistant_id"] = required(assistant_id, "Assistant ID", 100)
         for attempt in range(3):
             parent = self.head()
             history_text = self.read_file("movements.csv", parent, optional=True)
             columns, history = read_rows(history_text, MOVEMENT_COLUMNS) if history_text is not None else (list(MOVEMENT_COLUMNS), [])
             previous = next((row for row in history if row["id"] == operation), None)
             if previous:
-                if any(previous[key] != value for key, value in expected.items()):
+                if any(previous.get(key, "") != value for key, value in expected.items()):
                     raise ValueError("This request was already recorded with different details. Start another withdrawal.")
                 return int(previous["available_after"])
             required(project, "Project")
+            assistant_name(assistant_id, person)
+            if "assistant_id" not in columns:
+                columns.append("assistant_id")
             _, details = read_rows(self.read_file("details.csv", parent), DETAIL_COLUMNS)
             unique_product(details, code)
             location_columns, locations = read_rows(self.read_file("locations.csv", parent), LOCATION_COLUMNS)

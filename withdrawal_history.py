@@ -14,6 +14,7 @@ LABELS = {
     "timestamp": "Withdrawn at (UTC)", "project": "Project", "code": "Code",
     "description": "Current description", "quantity": "Quantity withdrawn",
     "person": "Recorded by", "location": "Box", "sublocation": "Bag",
+    "assistant_id": "Assistant ID",
     "available_after": "Units after withdrawal", "id": "Movement ID",
 }
 
@@ -24,7 +25,7 @@ def live_withdrawals(token, repository, branch):
 
 
 def history_frame(rows, details):
-    frame = pd.DataFrame(rows, columns=MOVEMENT_COLUMNS)
+    frame = pd.DataFrame(rows, columns=[*MOVEMENT_COLUMNS, "assistant_id"], dtype=object).fillna("")
     # A lookup never multiplies movements, even if the catalog has duplicate IDs.
     unique = details[~details["code"].duplicated(keep=False)]
     descriptions = unique.set_index("code")["description"].to_dict()
