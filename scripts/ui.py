@@ -1,6 +1,5 @@
 """Public branding and navigation shared by the separate DeltaLAB apps."""
 
-from html import escape
 import os
 from urllib.parse import urlsplit
 
@@ -33,37 +32,8 @@ def administration_url():
 
 
 def admin_back_button():
-    """Return in the same tab, including from a locked service app."""
-    url = escape(administration_url(), quote=True)
-    st.html(f"""
-        <style>
-        a.deltalab-back {{
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.45rem 0.75rem;
-            border: 1px solid;
-            border-color: color-mix(in srgb, currentColor 25%, transparent);
-            border-radius: 0.5rem;
-            color: inherit;
-            background: transparent;
-            text-decoration: none;
-            font-family: inherit;
-            line-height: 1.5;
-        }}
-        a.deltalab-back:hover {{
-            border-color: currentColor;
-            background: color-mix(in srgb, currentColor 7%, transparent);
-        }}
-        a.deltalab-back:focus-visible {{
-            outline: 2px solid currentColor;
-            outline-offset: 2px;
-        }}
-        </style>
-        <a class="deltalab-back" href="{url}" target="_self">
-            <span aria-hidden="true">←</span> Back to administration
-        </a>
-    """)
+    """Open the portal outside Community Cloud's sandboxed app iframe."""
+    st.link_button("Back to administration", administration_url(), icon=":material/arrow_back:")
 
 
 def app_header(title, logo_path, *, description=None, back=True):

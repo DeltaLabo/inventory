@@ -295,7 +295,8 @@ class AppTests(unittest.TestCase):
             app.button[0].click().run()
             self.assertEqual(len(app.exception), 0)
             self.assertIn("Addition saved", app.success[0].value)
-            self.assertEqual(len(app.get("link_button")), 0)
+            self.assertEqual([item.proto.url for item in app.get("link_button")],
+                             ["https://deltalab-admi.streamlit.app/"])
             app.radio[0].set_value("Browse").run()
             self.assertEqual(app.dataframe[0].value["Units"].tolist(), ["7", "3"])
             app.radio[0].set_value("Edit").run()

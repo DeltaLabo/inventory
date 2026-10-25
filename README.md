@@ -347,8 +347,7 @@ existing PNG source assets and document/PDF logo references.
 
 The app header places its title/school/description on the left and the flat logo
 on the right, stacking on phones (150 px desktop, up to 100 px mobile).
-`scripts/ui.py` keeps this layout consistent. Service apps have a same-tab
-Back to administration button using the confirmed https://deltalab-admi.streamlit.app/.
+`scripts/ui.py` keeps this layout consistent. Service apps have a native Back to administration button using the confirmed https://deltalab-admi.streamlit.app/.
 Optional `ADMIN_APP_URL` overrides this public link; no new secret is required.
 Existing login forms/logout controls appear in the sidebar. Passwords, session
 checks, public views and private-data gates are unchanged; no accounts/registration
