@@ -10,6 +10,7 @@ from scripts.withdrawal_history import live_withdrawals, withdrawal_history
 
 
 from scripts.paths import DATA_DIR, ASSETS_DIR
+from scripts.ui import app_header
 IMAGE_BASE = "https://raw.githubusercontent.com/DeltaLabo/inventory_pictures/main/inventory_images_ready"
 
 
@@ -95,9 +96,7 @@ def browse(details, locations):
 
 def main():
     st.set_page_config(page_title="DeltaLAB: inventory", layout="wide")
-    st.image(str(ASSETS_DIR / "images" / "logo.svg"), width=150)
-    st.title("DeltaLAB: inventory")
-    st.caption("Electromechanical Engineering School - Tecnológico de Costa Rica")
+    app_header("DeltaLAB: inventory", ASSETS_DIR / "images" / "logo.svg")
     config = settings()
     client = None
     try:
