@@ -1,13 +1,20 @@
+import os
 import unittest
 from unittest.mock import patch
 from uuid import uuid4
 
-from scripts.assistants import AssistantDirectoryError, _load_assistants, parse_assistants
+from scripts.assistants import AssistantDirectoryError, _load_assistants, parse_assistants, directory_settings
 from scripts.github_inventory import GitHubError, MOVEMENT_COLUMNS, read_rows, write_rows
 from test_github_inventory import MemoryGitHub
 
 
 class AssistantTests(unittest.TestCase):
+    def test_directory_configuration_uses_assistants_not_the_former_administration_settings(self):
+        with patch.dict(os.environ, {"ASSISTANTS_TOKEN": "test-read-only", "ASSISTANTS_REPOSITORY": "DeltaLabo/assistants",
+                                   "ASSISTANTS_BRANCH": "main", "ADMINISTRATION_REPOSITORY": "DeltaLabo/administration"}), \
+             patch("scripts.assistants.st.secrets", {}):
+            self.assertEqual(directory_settings(), ("test-read-only", "DeltaLabo/assistants", "main"))
+
     def test_directory_keeps_only_names_and_ids_and_preserves_accents(self):
         result = parse_assistants("\ufeffid,nombre,cuenta,e-mail\nB00,Zoé Example,PRIVATE-ACCOUNT,private@example.com\nA00,Álex Sample,OTHER-ACCOUNT,other@example.com\n")
         self.assertEqual(set(result), {("B00", "Zoé Example"), ("A00", "Álex Sample")})
@@ -26,19 +33,19 @@ class AssistantTests(unittest.TestCase):
             client = factory.return_value
             client.head.return_value = "snapshot-sha"
             client.read_file.return_value = "id,nombre,cuenta\nTEST00,Intern,PRIVATE-ACCOUNT\n"
-            self.assertEqual(_load_assistants("private-test-token", "DeltaLabo/administration", "main"), (("TEST00", "Intern"),))
-            factory.assert_called_once_with("private-test-token", "DeltaLabo/administration", "main")
-            client.read_file.assert_called_once_with("data/asistentes.csv", "snapshot-sha")
+            self.assertEqual(_load_assistants("private-test-token", "DeltaLabo/assistants", "main"), (("TEST00", "Intern"),))
+            factory.assert_called_once_with("private-test-token", "DeltaLabo/assistants", "main")
+            client.read_file.assert_called_once_with("data/input/assistants.csv", "snapshot-sha")
 
     def test_unavailable_private_directory_has_actionable_error_without_secret(self):
         _load_assistants.clear()
         self.addCleanup(_load_assistants.clear)
         with patch("scripts.github_inventory.GitHubInventory.head", side_effect=GitHubError("private-token")):
             with self.assertRaises(AssistantDirectoryError) as error:
-                _load_assistants("private-token", "DeltaLabo/administration", "main")
+                _load_assistants("private-token", "DeltaLabo/assistants", "main")
             self.assertNotIn("private-token", str(error.exception))
-        with self.assertRaisesRegex(AssistantDirectoryError, "ADMINISTRATION_TOKEN"):
-            _load_assistants("", "DeltaLabo/administration", "main")
+        with self.assertRaisesRegex(AssistantDirectoryError, "ASSISTANTS_TOKEN"):
+            _load_assistants("", "DeltaLabo/assistants", "main")
 
     def test_withdrawal_rejects_unknown_ids_and_mismatched_names_before_writing(self):
         db = MemoryGitHub()

@@ -1,4 +1,4 @@
-"""Read only assistant IDs and names from the private administration directory."""
+"""Read only assistant IDs and names from the private assistants directory."""
 
 import csv
 from io import StringIO
@@ -8,7 +8,7 @@ import streamlit as st
 from streamlit.errors import StreamlitSecretNotFoundError
 
 
-DIRECTORY_PATH = "data/asistentes.csv"
+DIRECTORY_PATH = "data/input/assistants.csv"
 
 
 class AssistantDirectoryError(ValueError):
@@ -40,9 +40,9 @@ def directory_settings():
             return str(st.secrets.get(name, default))
         except (FileNotFoundError, StreamlitSecretNotFoundError):
             return default
-    return (get("ADMINISTRATION_TOKEN") or get("GITHUB_TOKEN"),
-            get("ADMINISTRATION_REPOSITORY", "DeltaLabo/administration"),
-            get("ADMINISTRATION_BRANCH", "main"))
+    return (get("ASSISTANTS_TOKEN") or get("GITHUB_TOKEN"),
+            get("ASSISTANTS_REPOSITORY", "DeltaLabo/assistants"),
+            get("ASSISTANTS_BRANCH", "main"))
 
 
 @st.cache_data(ttl=300, max_entries=4, show_spinner=False)
@@ -51,12 +51,12 @@ def _load_assistants(token, repository, branch):
     from scripts.github_inventory import GitHubError, GitHubInventory
 
     if not token:
-        raise AssistantDirectoryError("Configure ADMINISTRATION_TOKEN with read access to the private administration repository.")
+        raise AssistantDirectoryError("Configure ASSISTANTS_TOKEN with read access to the private assistants repository.")
     try:
         client = GitHubInventory(token, repository, branch)
         text = client.read_file(DIRECTORY_PATH, client.head())
     except (GitHubError, ValueError):
-        raise AssistantDirectoryError("Could not read the private assistant directory. Check the administration token's repository access, then refresh the list.") from None
+        raise AssistantDirectoryError("Could not read the private assistant directory. Check the assistants token's repository access, then refresh the list.") from None
     try:
         return parse_assistants(text)
     except csv.Error:

@@ -49,7 +49,7 @@ The data paths resolve from the checkout, independently of the working directory
 - **Edit:** use the addition password to correct an existing product's description,
   classification, manufacturer, model or specifications. Enable **Correct box,
   bag or quantities** to correct those fields. Select the assistant recording the correction
-  from the administration directory and enter the reason. The ID stays fixed.
+  from the assistants directory and enter the reason. The ID stays fixed.
   **Save changes** applies the correction immediately.
   Find the record with **Find in box** and **Find in bag**. Either filter can be
   left on All; bag numbers sort numerically and match zero-padded labels such as
@@ -324,8 +324,8 @@ Configuration references: [Streamlit secrets](https://docs.streamlit.io/deploy/s
 
 ## Private assistant directory
 
-Edits and withdrawals select a registered assistant from `DeltaLabo/administration`, a private
-repository. The app reads only ID and full name from `data/asistentes.csv`, caches
+Edits and withdrawals select a registered assistant from `DeltaLabo/assistants`, a private
+repository. The app reads only ID and full name from `data/input/assistants.csv`, caches
 those fields for five minutes, and validates the selection before saving. Use
 **Refresh assistant list** for changes. If the directory cannot be read or the
 selection is invalid, the edit or withdrawal is blocked; public browsing remains available.
@@ -333,9 +333,9 @@ New edit receipts and movements record `assistant_id` alongside the name. Old na
 remain unchanged. A dropdown prevents spelling errors; it does not independently
 authenticate a person using the shared password.
 
-Add `ADMINISTRATION_TOKEN` with **Contents: Read** on `DeltaLabo/administration`
-to inventory's Streamlit Secrets. Optional `ADMINISTRATION_REPOSITORY` and
-`ADMINISTRATION_BRANCH` default to `DeltaLabo/administration` and `main`. Without a
+Add `ASSISTANTS_TOKEN` with **Contents: Read** on `DeltaLabo/assistants`
+to inventory's Streamlit Secrets. Optional `ASSISTANTS_REPOSITORY` and
+`ASSISTANTS_BRANCH` default to `DeltaLabo/assistants` and `main`. Without a
 separate token, the app tries `GITHUB_TOKEN`, which must then also have access to
-the private administration repository. Contact/banking data is not copied or cached.
+the private assistants repository. Contact/banking data is not copied or cached.
 This read-only directory access is separate from inventory's Contents write access.

@@ -216,9 +216,9 @@ never replay them or assume that missing schema-3 metadata means unapplied stock
 Stock and catalog reads are invalidated after successful additions and edits.
 New product ID reservation tags remain necessary for concurrent issuance; keep
 historical tags too. No PR permission or workflow is required for new writes.
-Use Contents Read/write for inventory and separate read-only administration access.
+Use Contents Read/write for inventory and separate read-only assistants access.
 
-Assistant selections for withdrawals come from the private administration CSV via
+Assistant selections for withdrawals come from the private assistants CSV via
 authenticated API access. Read/cache only ID/name, never contact or banking fields.
 The roster cache lasts five minutes with manual refresh. Require a registered ID
 and its matching canonical name on new withdrawals; append assistant_id to the
