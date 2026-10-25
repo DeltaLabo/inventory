@@ -127,7 +127,7 @@ ZCWK1026,actuator,servo,Generic,A0090,Micro servo/180 degrees/9g capacity,,,,A00
 SLTB1026,actuator,motors,Generic,,DC motor varius sizes,,,,DCACTMOT
 QGNO1026,actuator,Vibrator motor module,ITEAD,75537A-Y24Q-30,Coin vibration motor(ERM Eccentric)3.3 V or 5V DC,,,,VIBRATOR
 ETBU1026,actuator,Relay,Potter&Brumfield,RTE24005F,RELAY/5V DC/8A/250VAC,,,,RTE24005
-CPGK1026,actuator,Relay,SCHRACK,RT314A12,RELAY/12V DC/16A/250VAC,,,,RT314A12
+CPGK1026,actuator,Relay,SCHRACK,RT314A12,Power relay,12V DC 16A 250VAC,,,RT314A12
 GPQM1026,actuator,Relay,SONGLE,SRD-05-VDC-SL-C,four relay module/30V DC/10A/,,,Provisional count: 4 units assigned at the user's request; physical count pending. Previous code SRD5VDCS.,SRD5VDCS
 SINW1026,actuator,Relay,SONGLE,SRD-05-VDC-SL-C,two relay module/30V DC/10A/,,,Provisional count: 2 units assigned at the user's request; physical count pending. Previous code SRD5VDCS.,SRD5VDCS
 TLJR1026,actuator,Relay,Hf,JQC-3FF,one relay module/5V DC/10A to 277VAC/15A to 125VAC,,,,JQC3FF5V

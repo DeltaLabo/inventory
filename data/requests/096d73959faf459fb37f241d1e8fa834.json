@@ -1,0 +1,76 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "096d73959faf459fb37f241d1e8fa834",
+  "saved_at": "2026-10-25T06:17:29.798007+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "CPGK1026",
+    "original_item": {
+      "code": "CPGK1026",
+      "type": "actuator",
+      "subtype": "Relay",
+      "manufacturer": "SCHRACK",
+      "model": "RT314A12",
+      "description": "RELAY/12V DC/16A/250VAC",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "RT314A12"
+    },
+    "updated_item": {
+      "description": "Power relay",
+      "type": "actuator",
+      "subtype": "Relay",
+      "manufacturer": "SCHRACK",
+      "model": "RT314A12",
+      "value": "12V DC 16A 250VAC",
+      "package": "",
+      "info": ""
+    },
+    "person": "Maria José Angulo Campos",
+    "reason": "test",
+    "original_stock": {
+      "code": "CPGK1026",
+      "location": "A",
+      "sublocation": "11",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "A",
+      "sublocation": "11",
+      "units": "1"
+    },
+    "assistant_id": "MAC00"
+  },
+  "request": {
+    "id": "096d73959faf459fb37f241d1e8fa834",
+    "action": "edit",
+    "code": "CPGK1026",
+    "person": "Maria José Angulo Campos",
+    "assistant_id": "MAC00",
+    "reason": "test",
+    "product_changes": {
+      "description": {
+        "before": "RELAY/12V DC/16A/250VAC",
+        "after": "Power relay"
+      },
+      "value": {
+        "before": "",
+        "after": "12V DC 16A 250VAC"
+      }
+    },
+    "stock_changes": {},
+    "original_location": {
+      "code": "CPGK1026",
+      "location": "A",
+      "sublocation": "11",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "096d73959faf459fb37f241d1e8fa834",
+    "code": "CPGK1026",
+    "action": "edit"
+  }
+}
