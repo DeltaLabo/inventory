@@ -272,18 +272,55 @@ def edit_form(client, details, locations, password):
     if eligible.empty:
         st.info("No products with unique IDs are available to edit.")
         return
+    def bag_key(value):
+        return str(int(value)) if value.isascii() and value.isdigit() else value
+
+    st.caption("Find a product by its box and bag, or leave both filters on All to browse the full catalog.")
+    box = st.selectbox("Find in box", [None, *sorted({value for value in locations["location"] if value}, key=str.casefold)],
+                       format_func=lambda value: "All boxes" if value is None else value, key="edit_filter_box")
+    matching = locations if box is None else locations[locations["location"].eq(box)]
+    bags = {bag_key(value) for value in matching["sublocation"] if value}
+    bags = sorted(bags, key=lambda value: (0, int(value)) if value.isascii() and value.isdigit() else (1, value.casefold()))
+    bag = st.selectbox("Find in bag", [None, *bags],
+                       format_func=lambda value: "All bags" if value is None else value, key="edit_filter_bag")
+    if bag is not None:
+        matching = matching[matching["sublocation"].map(bag_key).eq(bag)]
+    filter_context = (box, bag)
+    if st.session_state.get("edit_filter_context") != filter_context:
+        for key in ("edit_product_choice", "edit_stock_choice", "edit_correct_stock"):
+            st.session_state.pop(key, None)
+        st.session_state["edit_filter_context"] = filter_context
+    filtering = box is not None or bag is not None
+    if filtering:
+        eligible = eligible[eligible["code"].isin(matching["code"])]
+        if eligible.empty:
+            st.info("No uniquely identified products match this box and bag. Choose another filter or All boxes / All bags.")
+            return
+        labels = {row["code"]: product_label(row) for _, row in eligible.iterrows()}
+        contents = matching[matching["code"].isin(labels)].copy()
+        contents["product"] = contents["code"].map(labels)
+        st.dataframe(contents[["product", "location", "sublocation", "units"]].rename(columns={
+            "product": "Product", "location": "Box", "sublocation": "Bag", "units": "Units",
+        }), hide_index=True, width="stretch")
+        st.caption(f"{len(eligible)} products match. Select one below to correct its record or stock.")
     products = {row["code"]: product_label(row) for _, row in eligible.iterrows()}
-    code = st.selectbox("Product to edit", sorted(products, key=products.get), format_func=products.get)
-    correct_stock = st.checkbox("Correct box, bag or quantities")
+    code = st.selectbox("Product to edit", sorted(products, key=products.get), format_func=products.get, key="edit_product_choice")
+    correct_stock = st.checkbox("Correct box, bag or quantities", value=filtering, key="edit_correct_stock")
     selected_stock = None
     if correct_stock:
         rows = locations[locations["code"].eq(code)]
+        if filtering:
+            rows = rows[rows.index.isin(matching.index)]
         rows = rows[~rows.duplicated(["location", "sublocation"], keep=False)]
         if rows.empty:
             st.info("The box and bag are not uniquely defined. Use Add to register stock.")
             return
         choices = {(row["location"], row["sublocation"]): row.to_dict() for _, row in rows.iterrows()}
-        slot = st.selectbox("Box and bag to correct", list(choices), format_func=lambda key: f"Box {key[0]} / {key[1]}")
+        stock_context = (code, box, bag)
+        if st.session_state.get("edit_stock_context") != stock_context:
+            st.session_state.pop("edit_stock_choice", None)
+            st.session_state["edit_stock_context"] = stock_context
+        slot = st.selectbox("Box and bag to correct", list(choices), format_func=lambda key: f"Box {key[0]} / bag {key[1]}", key="edit_stock_choice")
         selected_stock = choices[slot]
         try:
             stock_units(selected_stock)

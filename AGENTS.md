@@ -164,3 +164,16 @@ refreshed. Existing available_after fields in historical movements/receipts rema
 unchanged and display as Units after withdrawal; they are not live stock columns.
 Review older pending stock PRs against current balances when merging the schema
 change. Auxiliary legacy CSVs are not authoritative stock and remain independent.
+
+Edit supports finding products by existing box and bag before choosing a record.
+Keep Find in box and Find in bag independent, with All boxes/All bags defaults.
+Sort numeric bags numerically; match zero-padded numeric labels without rewriting
+their CSV values. Show matching contents and keep products sharing a bag distinct.
+Filter the product dropdown to matching unique catalog IDs and scope stock-slot
+selection to the matching box/bag, especially for products stored in several places.
+Enable stock correction by default when filtering by storage. Reset stale product,
+slot and form state when the target changes while preserving edit concurrency checks
+and approval requirements. With both filters cleared, unassigned catalog records
+must remain editable. Do not infer identities, merge rows or change stock as a
+side effect of browsing these filters. Cover shared bags and multiple stock slots
+with mocked UI tests.
