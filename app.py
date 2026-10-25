@@ -94,9 +94,9 @@ def browse(details, locations):
 
 
 def main():
-    st.set_page_config(page_title="Delta LAB inventory", layout="wide")
-    st.logo(str(ASSETS_DIR / "images" / "logo.png"))
-    st.title("Delta LAB inventory")
+    st.set_page_config(page_title="DeltaLAB: inventory", layout="wide")
+    st.image(str(ASSETS_DIR / "images" / "logo.png"), width=300)
+    st.title("DeltaLAB: inventory")
     st.caption("Electromechanical Engineering School - Tecnológico de Costa Rica")
     config = settings()
     client = None

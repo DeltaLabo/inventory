@@ -231,3 +231,7 @@ registered ID/name before new edits and store assistant_id in the audit receipt.
 Do not fall back to free text when the roster fails. Preserve historical names and
 recover already-saved edit retries before accessing the roster, including old
 receipts without assistant_id. Refresh assistant list clears the edit selection.
+
+Branding: use `DeltaLAB: inventory` for the app title and browser title. Show the
+logo in the page header at 300 CSS pixels wide (responsive on narrow screens),
+not only as the small navigation logo. Preserve stored field keys and source assets.

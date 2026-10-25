@@ -1,10 +1,10 @@
-# Delta LAB Inventory
+# DeltaLAB Inventory
 
 A simple Streamlit inventory with public browsing and immediate password-protected
 additions, corrections and withdrawals. The interface and documentation
 are in English. GitHub stores the data; no separate database or server is required.
 
-Live app: [Delta LAB Inventory](https://deltalab-inventory.streamlit.app/).
+Live app: [DeltaLAB Inventory](https://deltalab-inventory.streamlit.app/).
 
 ## Run locally
 
