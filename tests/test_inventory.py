@@ -68,6 +68,22 @@ class InventoryTests(unittest.TestCase):
         result = build_inventory(catalog(), stock())
         self.assertTrue(filter_inventory(result, "[").empty)
 
+    def test_storage_category_and_text_filters_intersect_without_merging_slots(self):
+        result = build_inventory(catalog(
+            {"code": "BOARD000", "type": "board", "subtype": "dev", "description": "Target board"},
+            {"code": "OTHER000", "type": "board", "subtype": "io", "description": "Other board"},
+            {"code": "SENSOR00", "type": "sensor", "subtype": "light", "description": "Target sensor"},
+        ), stock(["BOARD000", "A", "01", "2"], ["BOARD000", "B", "1", "3"],
+                 ["OTHER000", "A", "2", "4"], ["SENSOR00", "A", "01", "1"]))
+        selected = filter_inventory(result, "target", "board", "dev", box="A", bag="1")
+        self.assertEqual(selected.code.tolist(), ["BOARD000"])
+        self.assertEqual(selected.sublocation.tolist(), ["01"])
+        self.assertEqual(selected.units.tolist(), ["2"])
+        self.assertEqual(len(filter_inventory(result, bag="01")), 3)
+        self.assertEqual(len(filter_inventory(result, box="B")), 1)
+        self.assertTrue(filter_inventory(result, "sensor", "board", box="A", bag="1").empty)
+        self.assertTrue(filter_inventory(result, box="B", bag="2").empty)
+
     def test_validation_reports_duplicates_missing_references_and_invalid_stock(self):
         details = catalog({"code": "DUP00000", "info": "Provisional count: pending"}, {"code": "DUP00000"}, {"code": "ONLYCAT0"})
         locations = stock(

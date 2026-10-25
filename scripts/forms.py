@@ -9,6 +9,7 @@ from streamlit.errors import StreamlitSecretNotFoundError
 
 from scripts.github_inventory import GitHubError, required, stock_units
 import scripts.assistants as assistant_directory
+from scripts.inventory import bag_key
 
 
 def settings():
@@ -275,9 +276,6 @@ def edit_form(client, details, locations, password, on_saved=None):
     if eligible.empty:
         st.info("No products with unique IDs are available to edit.")
         return
-    def bag_key(value):
-        return str(int(value)) if value.isascii() and value.isdigit() else value
-
     st.caption("Find a product by its box and bag, or leave both filters on All to browse the full catalog.")
     box = st.selectbox("Find in box", [None, *sorted({value for value in locations["location"] if value}, key=str.casefold)],
                        format_func=lambda value: "All boxes" if value is None else value, key="edit_filter_box")

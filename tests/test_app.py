@@ -62,6 +62,46 @@ class AppTests(unittest.TestCase):
         self.assertEqual(len(app.exception), 0)
         self.assertEqual(len(app.info), 1)
 
+    def test_browse_combines_text_categories_box_and_bag_and_clears_them_together(self):
+        from test_inventory import catalog, stock
+
+        details = catalog(
+            {"code": "ITEM0001", "type": "board", "subtype": "dev", "description": "Target board"},
+            {"code": "ITEM0002", "type": "board", "subtype": "dev", "description": "Other board"},
+            {"code": "ITEM0003", "type": "board", "subtype": "io", "description": "Interface"},
+            {"code": "ITEM0004", "type": "sensor", "subtype": "light", "description": "Light"},
+        )
+        locations = stock(["ITEM0001", "A", "01", "2"], ["ITEM0002", "B", "1", "3"],
+                          ["ITEM0003", "A", "2", "4"], ["ITEM0004", "B", "03", "1"])
+        with patch("scripts.inventory.load_data", return_value=(details, locations)):
+            app = self.open_app()
+            app.selectbox(key="browse_box").set_value("A").run()
+            self.assertEqual(len(app.dataframe[0].value), 2)
+            self.assertEqual(app.selectbox(key="browse_bag").options, ["All bags", "1", "2"])
+            app.selectbox(key="browse_bag").set_value("1").run()
+            app.selectbox(key="browse_type").set_value("board").run()
+            app.selectbox(key="browse_subtype").set_value("dev").run()
+            app.text_input(key="browse_search").set_value("target").run()
+            self.assertEqual(app.dataframe[0].value["Code"].tolist(), ["ITEM0001"])
+            self.assertEqual(app.dataframe[0].value["Bag"].tolist(), ["01"])
+            app.selectbox(key="browse_box").set_value("B").run()
+            self.assertEqual(len(app.dataframe), 0)
+            self.assertTrue(any(message.value == "No matches found." for message in app.info))
+            self.assertEqual(app.selectbox(key="browse_subtype").value, "dev")
+            app.text_input(key="browse_search").set_value("board").run()
+            self.assertEqual(app.dataframe[0].value["Code"].tolist(), ["ITEM0002"])
+            app.selectbox(key="browse_type").set_value("sensor").run()
+            self.assertEqual(app.selectbox(key="browse_subtype").value, "All")
+            app.selectbox(key="browse_bag").set_value("3").run()
+            app.selectbox(key="browse_box").set_value("A").run()
+            self.assertIsNone(app.selectbox(key="browse_bag").value)
+            next(button for button in app.button if button.label == "Clear filters").click().run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertEqual(len(app.dataframe[0].value), 4)
+            self.assertEqual(app.text_input(key="browse_search").value, "")
+            self.assertEqual(app.selectbox(key="browse_type").value, "All")
+            self.assertIsNone(app.selectbox(key="browse_box").value)
+
     def test_local_data_and_branding_load_outside_the_repository_working_directory(self):
         with tempfile.TemporaryDirectory() as tmp, chdir(tmp):
             Path("details.csv").write_text("unrelated file", encoding="utf-8")

@@ -37,8 +37,11 @@ The data paths resolve from the checkout, independently of the working directory
 
 ## Using the app
 
-- **Browse:** search and filter without a password, download matching records,
-  and optionally view product images.
+- **Browse:** combine search text, Type, Subtype, Box and Bag without a password.
+  A record must match every selected filter. Subtypes follow the selected type;
+  bags follow the selected box and match numeric labels such as `01` and `1`.
+  Leave any filter on All to widen the search, or use **Clear filters** to reset
+  everything. Download matching records or optionally view their product images.
 - **Add:** use the addition password to register a new product or restock an
   existing one. Enter the quantity and the person recording the addition.
   New products receive a permanent ID automatically. **Save addition** updates

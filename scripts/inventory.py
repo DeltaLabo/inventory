@@ -86,12 +86,21 @@ def build_inventory(details, locations):
     return merged.sort_values(["code", "location", "sublocation"], kind="stable").reset_index(drop=True)
 
 
-def filter_inventory(inventory, search="", item_type="All", subtype="All"):
+def bag_key(value):
+    """Compare numeric bag labels without changing their stored text."""
+    return str(int(value)) if value.isascii() and value.isdigit() else value
+
+
+def filter_inventory(inventory, search="", item_type="All", subtype="All", box=None, bag=None):
     result = inventory
     if item_type != "All":
         result = result[result["type"].eq(item_type)]
     if subtype != "All":
         result = result[result["subtype"].eq(subtype)]
+    if box is not None:
+        result = result[result["location"].eq(box)]
+    if bag is not None:
+        result = result[result["sublocation"].map(bag_key).eq(bag_key(bag))]
     if result.empty:
         return result
     term = search.strip().casefold()

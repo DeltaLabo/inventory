@@ -56,6 +56,15 @@ while ambiguous/missing source data remain unresolved. Never fix these by guessi
 Keep network calls optional, bounded, and cached.
 Tests must mock GitHub; never submit real PRs or stock movements as a test.
 
+Public Browse combines literal text search with Type, Subtype, Box and Bag using
+AND semantics on individual stock rows. Subtypes depend on Type, bags on Box;
+these two pairs remain independently selectable in either order. Reset a dependent
+choice only when it becomes invalid, and retain other active filters even when
+their intersection has no matches. Clear filters resets all selectors and text.
+Numeric bag matching uses the shared bag_key helper without changing stored labels.
+Results, downloads and optional images use the same filtered rows. Keep unassigned
+catalog records visible with All filters; browsing must never change source data.
+
 The top-level actions are Browse, Add, Edit, Withdraw, Purchases, History. Edits reuse the
 addition password and save changes immediately with atomic audit receipts. Prefill the
 form and freeze its original snapshot until another product/location is selected.
