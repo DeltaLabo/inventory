@@ -7,8 +7,8 @@ from uuid import uuid4
 import streamlit as st
 from streamlit.errors import StreamlitSecretNotFoundError
 
-from github_inventory import GitHubError, required, stock_units
-import assistants as assistant_directory
+from scripts.github_inventory import GitHubError, required, stock_units
+import scripts.assistants as assistant_directory
 
 
 def settings():

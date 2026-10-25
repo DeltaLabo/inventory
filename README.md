@@ -18,6 +18,23 @@ python -m streamlit run app.py
 `app.py` is the only application entry point. Select it as the main file in
 Streamlit Cloud. CSV paths are resolved relative to the source files.
 
+## Repository structure
+
+The layout follows the DeltaLabo invoicing repository:
+
+- `app.py`: the Streamlit entry point; keep this path in the deployment settings.
+- `scripts/`: application forms, inventory helpers, GitHub persistence and reports.
+- `data/`: source CSVs, stock balances, purchase requests and withdrawal history.
+- `data/requests/`: permanent addition/edit receipts, including historical receipts.
+- `assets/images/`: shared DeltaLabo branding copied from invoicing; `logo.png`
+  is displayed in the app. Product photographs remain in their existing repository.
+- `tests/`: offline application and persistence checks.
+
+Data and receipts were moved without changing their contents. Both local reads and
+GitHub writes now use `data/`; do not maintain duplicate CSVs at the repository root.
+Downloads are produced in memory, so this app does not need an `output/` directory.
+The data paths resolve from the checkout, independently of the working directory.
+
 ## Using the app
 
 - **Browse:** search and filter without a password, download matching records,
@@ -51,10 +68,10 @@ Streamlit Cloud. CSV paths are resolved relative to the source files.
 
 ### Withdrawals by project
 
-`movements.csv` is the separate withdrawal ledger. Each withdrawal is recorded in
+`data/movements.csv` is the separate withdrawal ledger. Each withdrawal is recorded in
 the same commit as its stock reduction, retaining project, person, quantity, product
 code, box, bag, UTC timestamp and remaining balance. **History** reads this ledger;
-it does not infer withdrawals from current balances or the old `usage_log.csv`.
+it does not infer withdrawals from current balances or the old `data/usage_log.csv`.
 New withdrawals require **Project**. Older entries without a project remain unchanged
 and can be selected under **No project recorded**. Existing project/note text is
 preserved as entered; the app does not guess project assignments.
@@ -91,7 +108,7 @@ There is no automatic deletion or purchased-status workflow. Use **Request anoth
 purchase** after success. Retry the same form and data after an uncertain write;
 its UUID prevents duplicate requests. Concurrent submissions preserve one another.
 The CSV and requester/project information are public, like the inventory repository.
-The legacy `to_buy.csv` is independent and is not automatically imported, since its
+The legacy `data/to_buy.csv` is independent and is not automatically imported, since its
 old rows lack project and requester information.
 
 For a new product, **Type** and **Subtype** are dropdowns populated from the saved
@@ -191,7 +208,7 @@ All 177 stock rows, boxes, bags and quantities were preserved.
 
 Each addition or edit is calculated against the latest GitHub commit, not a CSV
 snapshot from when the form was opened. The app commits the affected CSVs and
-`requests/<uuid>.json` in one atomic update. Non-forced updates retry concurrent
+`data/requests/<uuid>.json` in one atomic update. Non-forced updates retry concurrent
 changes against fresh balances, so simultaneous additions and withdrawals are
 preserved. A receipt records who made the change, its target and quantity or
 before/after fields, and a UTC timestamp. Retrying the same operation after an
@@ -210,25 +227,25 @@ operations do not create review branches, merge CSV snapshots or require automat
 
 ## Data files and validation
 
-- `details.csv`: product records with unique permanent codes. Keep codes as text.
+- `data/details.csv`: product records with unique permanent codes. Keep codes as text.
   `previous_code` is an optional historical reference, never a merge key; multiple
   distinct products can share it. Leave it empty for new products.
-- `locations.csv`: one row per product code, box and bag. `units` is the current
+- `data/locations.csv`: one row per product code, box and bag. `units` is the current
   available quantity, a nonnegative integer. Additions increase it and withdrawals
   decrease it. There is no separate `available` stock column. Internal
   column names remain `location` and `sublocation` for compatibility.
-- `to_buy.csv`: an independent shopping list.
-- `purchase_requests.csv`: shared purchase requests with UUID, UTC timestamp,
+- `data/to_buy.csv`: an independent shopping list.
+- `data/purchase_requests.csv`: shared purchase requests with UUID, UTC timestamp,
   description, manufacturer, model, quantity, required project and requester, product
   link and optional notes. Saved directly to GitHub without changing inventory stock.
-- `smd.csv` and `not_found.csv`: auxiliary lists awaiting reconciliation. They keep
+- `data/smd.csv` and `data/not_found.csv`: auxiliary lists awaiting reconciliation. They keep
   their old references and are not imported automatically or used to change stock.
-- `usage_log.csv`: historical records retained as entered. They do not explain all
+- `data/usage_log.csv`: historical records retained as entered. They do not explain all
   current balances and must not be used to recalculate stock.
-- `movements.csv`: created in GitHub on the first withdrawal. It records the request
+- `data/movements.csv`: created in GitHub on the first withdrawal. It records the request
   ID, UTC timestamp, product, box, bag, quantity, person, project and remaining balance.
   It is committed atomically with the stock update.
-- `requests/`: permanent audit receipts for additions and corrections. New schema-3
+- `data/requests/`: permanent audit receipts for additions and corrections. New schema-3
   receipts are saved atomically with their stock/catalog changes and marked applied.
   Older receipts from merged PRs remain historical and are never replayed.
 
@@ -249,7 +266,7 @@ are preserved.
 Validate CSV changes with:
 
 ```powershell
-python inventory.py
+python -m scripts.inventory
 ```
 
 Validation reports unresolved data and exits with code 1 while issues remain.

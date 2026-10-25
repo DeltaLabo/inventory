@@ -4,8 +4,8 @@ from io import StringIO
 import unittest
 from uuid import uuid4
 
-from github_inventory import GitHubError, PURCHASE_COLUMNS, read_rows
-from purchases import quotation_csv
+from scripts.github_inventory import GitHubError, PURCHASE_COLUMNS, read_rows
+from scripts.purchases import quotation_csv
 from test_github_inventory import MemoryGitHub
 
 
@@ -20,7 +20,7 @@ class PurchaseTests(unittest.TestCase):
         return self.db.request_purchase(self.request_id, **(self.values | changes))
 
     def rows(self):
-        return read_rows(self.db.main_files["purchase_requests.csv"], PURCHASE_COLUMNS)[1]
+        return read_rows(self.db.main_files["data/purchase_requests.csv"], PURCHASE_COLUMNS)[1]
 
     def test_request_persists_all_details_without_changing_stock(self):
         before = deepcopy(self.db.main_files)

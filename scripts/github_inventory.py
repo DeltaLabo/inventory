@@ -14,8 +14,8 @@ from zoneinfo import ZoneInfo
 
 import requests
 
-from inventory import DETAIL_COLUMNS, LOCATION_COLUMNS, parse_data
-from assistants import assistant_name
+from scripts.inventory import DETAIL_COLUMNS, LOCATION_COLUMNS, parse_data
+from scripts.assistants import assistant_name
 
 
 MOVEMENT_COLUMNS = (
@@ -151,14 +151,14 @@ class GitHubInventory:
 
     def snapshot(self):
         sha = self.head()
-        return parse_data(self.read_file("details.csv", sha), self.read_file("locations.csv", sha))
+        return parse_data(self.read_file("data/details.csv", sha), self.read_file("data/locations.csv", sha))
 
     def purchase_snapshot(self):
-        text = self.read_file("purchase_requests.csv", self.head(), optional=True)
+        text = self.read_file("data/purchase_requests.csv", self.head(), optional=True)
         return read_rows(text, PURCHASE_COLUMNS)[1] if text is not None else []
 
     def withdrawal_snapshot(self):
-        text = self.read_file("movements.csv", self.head(), optional=True)
+        text = self.read_file("data/movements.csv", self.head(), optional=True)
         return read_rows(text, MOVEMENT_COLUMNS)[1] if text is not None else []
 
     def request_purchase(self, request_id, description, quantity, project, person, link,
@@ -184,7 +184,7 @@ class GitHubInventory:
             expected[name] = required(value, name.title()) if str(value).strip() else ""
         for attempt in range(3):
             parent = self.head()
-            text = self.read_file("purchase_requests.csv", parent, optional=True)
+            text = self.read_file("data/purchase_requests.csv", parent, optional=True)
             columns, rows = read_rows(text, PURCHASE_COLUMNS) if text is not None else (list(PURCHASE_COLUMNS), [])
             previous = next((row for row in rows if row["id"] == operation), None)
             if previous:
@@ -195,7 +195,7 @@ class GitHubInventory:
                 "timestamp": datetime.now(timezone.utc).isoformat(),
             })
             commit = self._commit(parent, {
-                "purchase_requests.csv": write_rows(columns, rows),
+                "data/purchase_requests.csv": write_rows(columns, rows),
             }, f"Record purchase request {operation}")
             try:
                 self._request("PATCH", f"/git/refs/heads/{quote(self.branch, safe='/')}",
@@ -263,10 +263,10 @@ class GitHubInventory:
         return self._save_change(request_id, submission)
 
     def _save_change(self, request_id, submission):
-        from request_application import request_changes
+        from scripts.request_application import request_changes
 
         operation = UUID(request_id).hex
-        receipt_path = f"requests/{operation}.json"
+        receipt_path = f"data/requests/{operation}.json"
         code = submission.get("existing_code") or submission.get("code")
         for attempt in range(5):
             parent = self.head()
@@ -278,8 +278,8 @@ class GitHubInventory:
                 if saved.get("submission") != submission:
                     raise ValueError("This operation was already saved with different details. Start another operation.")
                 return saved["result"]
-            details_text = self.read_file("details.csv", parent)
-            locations_text = self.read_file("locations.csv", parent)
+            details_text = self.read_file("data/details.csv", parent)
+            locations_text = self.read_file("data/locations.csv", parent)
             if submission["action"] == "addition":
                 columns, details = read_rows(details_text, DETAIL_COLUMNS)
                 _, locations = read_rows(locations_text, LOCATION_COLUMNS)
@@ -344,7 +344,7 @@ class GitHubInventory:
             expected["assistant_id"] = required(assistant_id, "Assistant ID", 100)
         for attempt in range(3):
             parent = self.head()
-            history_text = self.read_file("movements.csv", parent, optional=True)
+            history_text = self.read_file("data/movements.csv", parent, optional=True)
             columns, history = read_rows(history_text, MOVEMENT_COLUMNS) if history_text is not None else (list(MOVEMENT_COLUMNS), [])
             previous = next((row for row in history if row["id"] == operation), None)
             if previous:
@@ -355,9 +355,9 @@ class GitHubInventory:
             assistant_name(assistant_id, person)
             if "assistant_id" not in columns:
                 columns.append("assistant_id")
-            _, details = read_rows(self.read_file("details.csv", parent), DETAIL_COLUMNS)
+            _, details = read_rows(self.read_file("data/details.csv", parent), DETAIL_COLUMNS)
             unique_product(details, code)
-            location_columns, locations = read_rows(self.read_file("locations.csv", parent), LOCATION_COLUMNS)
+            location_columns, locations = read_rows(self.read_file("data/locations.csv", parent), LOCATION_COLUMNS)
             matches = [row for row in locations if (row["code"].strip(), row["location"].strip(), row["sublocation"].strip()) == (code, location, sublocation)]
             if len(matches) != 1:
                 raise ValueError("The box and bag combination does not exist or is duplicated. Review inventory first.")
@@ -370,8 +370,8 @@ class GitHubInventory:
                 "timestamp": datetime.now(timezone.utc).isoformat(), "available_after": str(remaining),
             })
             commit = self._commit(parent, {
-                "locations.csv": write_rows(location_columns, locations),
-                "movements.csv": write_rows(columns, history),
+                "data/locations.csv": write_rows(location_columns, locations),
+                "data/movements.csv": write_rows(columns, history),
             }, f"Record withdrawal {operation}: {code} (-{quantity})")
             try:
                 self._request("PATCH", f"/git/refs/heads/{quote(self.branch, safe='/')}", payload={"sha": commit, "force": False})

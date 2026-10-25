@@ -2,8 +2,8 @@
 
 import re
 
-from github_inventory import EDITABLE_FIELDS, positive_integer, read_rows, required, stock_units, unique_product, write_rows
-from inventory import DETAIL_COLUMNS, LOCATION_COLUMNS
+from scripts.github_inventory import EDITABLE_FIELDS, positive_integer, read_rows, required, stock_units, unique_product, write_rows
+from scripts.inventory import DETAIL_COLUMNS, LOCATION_COLUMNS
 
 
 def request_changes(request, details_text, locations_text):
@@ -28,7 +28,7 @@ def request_changes(request, details_text, locations_text):
             for name in ("description", "type", "subtype"):
                 required(product[name], name.title())
             details.append(product)
-            changes["details.csv"] = write_rows(detail_columns, details)
+            changes["data/details.csv"] = write_rows(detail_columns, details)
         else:
             if request["existing_code"] != code:
                 raise ValueError("The requested restock product ID does not match.")
@@ -44,7 +44,7 @@ def request_changes(request, details_text, locations_text):
             locations.append(dict.fromkeys(location_columns, "") | {
                 "code": code, "location": location, "sublocation": sublocation, "units": str(quantity),
             })
-        changes["locations.csv"] = write_rows(location_columns, locations)
+        changes["data/locations.csv"] = write_rows(location_columns, locations)
     elif request["action"] == "edit":
         required(request.get("reason", ""), "Reason for correction")
         product = unique_product(details, code)
@@ -58,7 +58,7 @@ def request_changes(request, details_text, locations_text):
         if audit:
             for name in ("description", "type", "subtype"):
                 required(product[name], name.title())
-            changes["details.csv"] = write_rows(detail_columns, details)
+            changes["data/details.csv"] = write_rows(detail_columns, details)
         stock_audit = request.get("stock_changes", {})
         if stock_audit:
             original = request.get("original_location")
@@ -81,7 +81,7 @@ def request_changes(request, details_text, locations_text):
             destination = (code, row["location"].strip(), row["sublocation"].strip())
             if any(other is not row and tuple(other[name].strip() for name in ("code", "location", "sublocation")) == destination for other in locations):
                 raise ValueError("The destination already has stock for this product. Rows cannot be merged automatically.")
-            changes["locations.csv"] = write_rows(location_columns, locations)
+            changes["data/locations.csv"] = write_rows(location_columns, locations)
         if not changes:
             raise ValueError("The request has no changes to apply.")
     else:

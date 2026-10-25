@@ -5,16 +5,16 @@ from uuid import uuid4
 
 import pandas as pd
 
-from github_inventory import MOVEMENT_COLUMNS, write_rows
+from scripts.github_inventory import MOVEMENT_COLUMNS, write_rows
 from test_github_inventory import MemoryGitHub
-from withdrawal_history import history_frame, product_totals, project_rows
+from scripts.withdrawal_history import history_frame, product_totals, project_rows
 
 
 class WithdrawalHistoryTests(unittest.TestCase):
     def setUp(self):
         self.db = MemoryGitHub()
         self.details, _ = self.db.snapshot()
-        roster = patch("assistants.load_assistants", return_value=(("TEST00", "Intern"),))
+        roster = patch("scripts.assistants.load_assistants", return_value=(("TEST00", "Intern"),))
         roster.start()
         self.addCleanup(roster.stop)
 
@@ -41,7 +41,7 @@ class WithdrawalHistoryTests(unittest.TestCase):
         row = dict.fromkeys(MOVEMENT_COLUMNS, "") | {
             "id": uuid4().hex, "code": "OLD_CODE", "quantity": "2", "timestamp": "2026-01-01T12:00:00+00:00",
         }
-        self.db.main_files["movements.csv"] = write_rows(MOVEMENT_COLUMNS, [row])
+        self.db.main_files["data/movements.csv"] = write_rows(MOVEMENT_COLUMNS, [row])
         duplicate_details = pd.concat([self.details, self.details], ignore_index=True)
         frame = history_frame(self.db.withdrawal_snapshot(), duplicate_details)
         self.assertEqual(len(frame), 1)
@@ -62,7 +62,7 @@ class WithdrawalHistoryTests(unittest.TestCase):
             "id": operation, "code": "ITEM0001", "location": "A", "sublocation": "01",
             "quantity": "2", "person": "Intern", "available_after": "3",
         }
-        self.db.main_files["movements.csv"] = write_rows(MOVEMENT_COLUMNS, [row])
+        self.db.main_files["data/movements.csv"] = write_rows(MOVEMENT_COLUMNS, [row])
         self.assertEqual(self.db.withdraw(operation, "ITEM0001", "A", "01", 2, "Intern"), 3)
         self.assertEqual(self.db.refs["main"], "initial")
 

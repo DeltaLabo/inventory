@@ -8,10 +8,10 @@ from uuid import uuid4
 
 import requests
 
-from github_inventory import (
+from scripts.github_inventory import (
     Conflict, GitHubError, GitHubInventory, MOVEMENT_COLUMNS, new_product_code, read_rows, write_rows,
 )
-from inventory import DETAIL_COLUMNS, LOCATION_COLUMNS
+from scripts.inventory import DETAIL_COLUMNS, LOCATION_COLUMNS
 
 
 class MemoryGitHub(GitHubInventory):
@@ -23,8 +23,8 @@ class MemoryGitHub(GitHubInventory):
             "code": "ITEM0001", "type": "board", "subtype": "dev", "description": "Test board",
         }
         self.files = {
-            "details.csv": write_rows(DETAIL_COLUMNS, [detail]),
-            "locations.csv": write_rows(LOCATION_COLUMNS, [
+            "data/details.csv": write_rows(DETAIL_COLUMNS, [detail]),
+            "data/locations.csv": write_rows(LOCATION_COLUMNS, [
                 dict(zip(LOCATION_COLUMNS, ["ITEM0001", "A", "01", "5"])),
                 dict(zip(LOCATION_COLUMNS, ["ITEM0001", "A", "02", "3"])),
             ]),
@@ -112,28 +112,28 @@ class GitHubInventoryTests(unittest.TestCase):
     def setUp(self):
         self.db = MemoryGitHub()
         self.request_id = uuid4().hex
-        roster = patch("assistants.load_assistants", return_value=(("TEST00", "Intern"), ("OTHER00", "Other intern")))
+        roster = patch("scripts.assistants.load_assistants", return_value=(("TEST00", "Intern"), ("OTHER00", "Other intern")))
         roster.start()
         self.addCleanup(roster.stop)
 
     def stock(self):
-        return read_rows(self.db.main_files["locations.csv"], LOCATION_COLUMNS)[1]
+        return read_rows(self.db.main_files["data/locations.csv"], LOCATION_COLUMNS)[1]
 
     def test_legacy_withdrawal_uses_available_not_lifetime_units_and_normalizes_schema(self):
-        self.db.main_files["locations.csv"] = "code,location,sublocation,units,available\nITEM0001,A,01,10,3\nITEM0001,A,02,8,0\n"
+        self.db.main_files["data/locations.csv"] = "code,location,sublocation,units,available\nITEM0001,A,01,10,3\nITEM0001,A,02,8,0\n"
         with self.assertRaisesRegex(ValueError, "Only 3"):
             self.withdraw(4)
         self.assertEqual(self.withdraw(2), 1)
         self.assertEqual([row["units"] for row in self.stock()], ["1", "0"])
-        self.assertEqual(self.db.main_files["locations.csv"].splitlines()[0], "code,location,sublocation,units")
+        self.assertEqual(self.db.main_files["data/locations.csv"].splitlines()[0], "code,location,sublocation,units")
         self.assertEqual(self.history()[0]["available_after"], "1")
 
     def test_legacy_restock_adds_to_remaining_units_only(self):
-        self.db.main_files["locations.csv"] = "code,location,sublocation,units,available\nITEM0001,A,01,10,3\n"
+        self.db.main_files["data/locations.csv"] = "code,location,sublocation,units,available\nITEM0001,A,01,10,3\n"
         self.add("ITEM0001")
         files = self.db.main_files
-        self.assertEqual(read_rows(files["locations.csv"], LOCATION_COLUMNS)[1][0]["units"], "5")
-        self.assertEqual(files["locations.csv"].splitlines()[0], "code,location,sublocation,units")
+        self.assertEqual(read_rows(files["data/locations.csv"], LOCATION_COLUMNS)[1][0]["units"], "5")
+        self.assertEqual(files["data/locations.csv"].splitlines()[0], "code,location,sublocation,units")
         self.assertEqual(self.stock()[0]["units"], "5")
 
     def test_old_edit_form_cannot_apply_lifetime_units_as_current_stock(self):
@@ -144,7 +144,7 @@ class GitHubInventoryTests(unittest.TestCase):
         self.assertEqual(self.db.prs, {})
 
     def history(self):
-        return read_rows(self.db.main_files["movements.csv"], MOVEMENT_COLUMNS)[1]
+        return read_rows(self.db.main_files["data/movements.csv"], MOVEMENT_COLUMNS)[1]
 
     def withdraw(self, quantity=2, request_id=None, person="Intern"):
         return self.db.withdraw(request_id or self.request_id, "ITEM0001", "A", "01", quantity, person, "Test project",
@@ -159,7 +159,7 @@ class GitHubInventoryTests(unittest.TestCase):
         self.assertEqual(self.history()[0]["sublocation"], "01")
         self.assertEqual(self.history()[0]["assistant_id"], "TEST00")
         self.assertTrue(self.history()[0]["timestamp"].endswith("+00:00"))
-        self.assertNotIn("movements.csv", self.db.commits["initial"]["files"])
+        self.assertNotIn("data/movements.csv", self.db.commits["initial"]["files"])
 
     def test_overdraw_and_invalid_quantity_never_write(self):
         for quantity in (6, 0, -1, 1.5, True):
@@ -198,14 +198,14 @@ class GitHubInventoryTests(unittest.TestCase):
         self.assertEqual(self.stock()[0]["units"], "1")
 
     def test_ambiguous_products_and_duplicate_locations_are_rejected(self):
-        original = self.db.main_files["details.csv"]
+        original = self.db.main_files["data/details.csv"]
         columns, rows = read_rows(original, DETAIL_COLUMNS)
-        self.db.main_files["details.csv"] = write_rows(columns, rows + rows)
+        self.db.main_files["data/details.csv"] = write_rows(columns, rows + rows)
         with self.assertRaisesRegex(ValueError, "ambiguous"):
             self.withdraw()
-        self.db.main_files["details.csv"] = original
-        columns, rows = read_rows(self.db.main_files["locations.csv"], LOCATION_COLUMNS)
-        self.db.main_files["locations.csv"] = write_rows(columns, rows + [rows[0]])
+        self.db.main_files["data/details.csv"] = original
+        columns, rows = read_rows(self.db.main_files["data/locations.csv"], LOCATION_COLUMNS)
+        self.db.main_files["data/locations.csv"] = write_rows(columns, rows + [rows[0]])
         with self.assertRaisesRegex(ValueError, "duplicated"):
             self.withdraw()
         self.assertEqual(len(self.db.commits), 1)
@@ -217,7 +217,7 @@ class GitHubInventoryTests(unittest.TestCase):
         )
 
     def edit(self, updated=None, original_stock=None, updated_stock=None):
-        original = read_rows(self.db.commits["initial"]["files"]["details.csv"], DETAIL_COLUMNS)[1][0]
+        original = read_rows(self.db.commits["initial"]["files"]["data/details.csv"], DETAIL_COLUMNS)[1][0]
         return self.db.edit(self.request_id, "ITEM0001", original,
                             {"description": "Corrected board"} if updated is None else updated,
                             "Intern", "Verified label", original_stock, updated_stock)
@@ -230,20 +230,20 @@ class GitHubInventoryTests(unittest.TestCase):
         self.assertIn("inventory-ids/" + code, self.db.tags)
         self.assertEqual(list(self.db.refs), ["main"])
         self.assertEqual(self.db.prs, {})
-        details = read_rows(self.db.main_files["details.csv"], DETAIL_COLUMNS)[1]
+        details = read_rows(self.db.main_files["data/details.csv"], DETAIL_COLUMNS)[1]
         self.assertEqual(details[-1]["code"], code)
         self.assertEqual(self.stock()[-1]["code"], code)
         self.assertEqual(self.stock()[-1]["units"], "2")
-        receipt = json.loads(self.db.main_files[f"requests/{self.request_id}.json"])
+        receipt = json.loads(self.db.main_files[f"data/requests/{self.request_id}.json"])
         self.assertEqual(receipt["status"], "applied")
         self.assertEqual(receipt["submission"]["person"], "Intern")
         parent = self.db.commits[self.db.refs["main"]]["parent"]
         self.assertEqual(self.db.commits[parent]["files"], before)
 
     def test_restock_reuses_id_and_only_increases_selected_location(self):
-        catalog = self.db.main_files["details.csv"]
+        catalog = self.db.main_files["data/details.csv"]
         self.add("ITEM0001")
-        self.assertEqual(self.db.main_files["details.csv"], catalog)
+        self.assertEqual(self.db.main_files["data/details.csv"], catalog)
         self.assertEqual([row["units"] for row in self.stock()], ["7", "3"])
         self.assertEqual(self.db.tags, {})
         self.assertEqual(self.db.prs, {})
@@ -254,14 +254,14 @@ class GitHubInventoryTests(unittest.TestCase):
         self.assertEqual(self.db.refs["main"], "initial")
 
     def test_code_uses_registration_month_year_and_retries_catalog_collision(self):
-        with patch("github_inventory.secrets.choice", side_effect=list("AAAABBBB")):
+        with patch("scripts.github_inventory.secrets.choice", side_effect=list("AAAABBBB")):
             self.assertEqual(new_product_code({"AAAA1026"}, datetime(2026, 10, 22)), "BBBB1026")
-        with patch("github_inventory.secrets.choice", return_value="C"):
+        with patch("scripts.github_inventory.secrets.choice", return_value="C"):
             self.assertEqual(new_product_code(set(), datetime(2026, 11, 1)), "CCCC1126")
 
     def test_reserved_ids_are_not_reused(self):
         self.db.tags["inventory-ids/AAAA1026"] = "initial"
-        with patch("github_inventory.new_product_code", side_effect=["AAAA1026", "BBBB1026"]):
+        with patch("scripts.github_inventory.new_product_code", side_effect=["AAAA1026", "BBBB1026"]):
             result = self.add()
         self.assertEqual(result["code"], "BBBB1026")
         self.assertIn("inventory-ids/BBBB1026", self.db.tags)
@@ -292,12 +292,12 @@ class GitHubInventoryTests(unittest.TestCase):
         self.assertEqual(len(self.history()), 1)
 
     def test_edit_preserves_id_and_writes_only_changed_fields_and_receipt(self):
-        locations = self.db.main_files["locations.csv"]
+        locations = self.db.main_files["data/locations.csv"]
         self.edit()
-        row = read_rows(self.db.main_files["details.csv"], DETAIL_COLUMNS)[1][0]
+        row = read_rows(self.db.main_files["data/details.csv"], DETAIL_COLUMNS)[1][0]
         self.assertEqual((row["code"], row["description"]), ("ITEM0001", "Corrected board"))
-        self.assertEqual(self.db.main_files["locations.csv"], locations)
-        receipt = json.loads(self.db.main_files[f"requests/{self.request_id}.json"])
+        self.assertEqual(self.db.main_files["data/locations.csv"], locations)
+        receipt = json.loads(self.db.main_files[f"data/requests/{self.request_id}.json"])
         self.assertEqual(receipt["request"]["product_changes"]["description"]["before"], "Test board")
         self.assertEqual(receipt["request"]["reason"], "Verified label")
         self.assertEqual(self.db.prs, {})
@@ -308,7 +308,7 @@ class GitHubInventoryTests(unittest.TestCase):
         self.edit({}, original, {"location": "B", "units": 3})
         self.assertEqual((self.stock()[0]["location"], self.stock()[0]["units"]), ("B", "3"))
         self.assertEqual(self.stock()[1], second)
-        self.assertNotIn("movements.csv", self.db.main_files)
+        self.assertNotIn("data/movements.csv", self.db.main_files)
 
     def test_edit_rejects_changed_id_invalid_units_collision_and_noop(self):
         original = self.stock()[0].copy()
@@ -350,7 +350,7 @@ class GitHubInventoryTests(unittest.TestCase):
         self.assertEqual(self.db.refs["main"], parent)
 
     def test_old_request_ids_are_not_reapplied(self):
-        self.db.main_files[f"requests/{self.request_id}.json"] = json.dumps({"id": self.request_id, "code": "ITEM0001", "quantity": 2})
+        self.db.main_files[f"data/requests/{self.request_id}.json"] = json.dumps({"id": self.request_id, "code": "ITEM0001", "quantity": 2})
         with self.assertRaisesRegex(ValueError, "older request"):
             self.add("ITEM0001")
         self.assertEqual(self.stock()[0]["units"], "5")

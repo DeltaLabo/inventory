@@ -113,9 +113,10 @@ def spreadsheet_csv(frame):
 
 if __name__ == "__main__":
     import sys
+    from scripts.paths import DATA_DIR
 
     try:
-        details, locations = load_data(Path(__file__).resolve().parent)
+        details, locations = load_data(DATA_DIR)
         issues = validate_data(details, locations)
     except (OSError, ValueError, pd.errors.ParserError) as error:
         print(f"Could not validate: {error}")

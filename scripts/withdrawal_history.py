@@ -1,15 +1,13 @@
 """Read-only project reports from the separately persisted withdrawal ledger."""
 
-from pathlib import Path
-
 import pandas as pd
 import streamlit as st
 
-from github_inventory import GitHubError, GitHubInventory, MOVEMENT_COLUMNS, positive_integer, read_rows
-from inventory import spreadsheet_csv
+from scripts.github_inventory import GitHubError, GitHubInventory, MOVEMENT_COLUMNS, positive_integer, read_rows
+from scripts.inventory import spreadsheet_csv
 
 
-ROOT = Path(__file__).resolve().parent
+from scripts.paths import DATA_DIR
 LABELS = {
     "timestamp": "Withdrawn at (UTC)", "project": "Project", "code": "Code",
     "description": "Current description", "quantity": "Quantity withdrawn",
@@ -55,7 +53,7 @@ def withdrawal_history(client, config, details):
                 st.rerun()
             rows = live_withdrawals(config["token"], config["repository"], config["branch"])
         else:
-            path = ROOT / "movements.csv"
+            path = DATA_DIR / "movements.csv"
             rows = read_rows(path.read_text(encoding="utf-8-sig"), MOVEMENT_COLUMNS)[1] if path.exists() else []
             st.info("Showing the local withdrawal-history snapshot. Connect to GitHub to see the latest withdrawals.")
         frame = history_frame(rows, details)

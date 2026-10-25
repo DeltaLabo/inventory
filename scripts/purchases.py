@@ -1,16 +1,14 @@
 """Purchase requests and a complete quotation export, separate from physical stock."""
 
-from pathlib import Path
-
 import pandas as pd
 import streamlit as st
 
-from forms import operation_id, password_matches, show_completed
-from github_inventory import GitHubError, GitHubInventory, PURCHASE_COLUMNS, read_rows
-from inventory import spreadsheet_csv
+from scripts.forms import operation_id, password_matches, show_completed
+from scripts.github_inventory import GitHubError, GitHubInventory, PURCHASE_COLUMNS, read_rows
+from scripts.inventory import spreadsheet_csv
 
 
-ROOT = Path(__file__).resolve().parent
+from scripts.paths import DATA_DIR
 LABELS = {
     "project": "Project", "description": "Description", "manufacturer": "Manufacturer",
     "model": "Model", "quantity": "Quantity", "person": "Requested by",
@@ -79,7 +77,7 @@ def purchases(client, config):
                 st.rerun()
             rows = live_purchases(config["token"], config["repository"], config["branch"])
         else:
-            path = ROOT / "purchase_requests.csv"
+            path = DATA_DIR / "purchase_requests.csv"
             rows = read_rows(path.read_text(encoding="utf-8-sig"), PURCHASE_COLUMNS)[1] if path.exists() else []
             st.info("Showing the local purchase-list snapshot. Connect to GitHub to see the latest requests.")
     except (GitHubError, ValueError, OSError, pd.errors.ParserError):

@@ -1,17 +1,15 @@
-from pathlib import Path
-
 import pandas as pd
 import requests
 import streamlit as st
 
-from inventory import build_inventory, filter_inventory, load_data, validate_data
-from forms import addition_form, edit_form, settings, withdrawal_form
-from github_inventory import GitHubError, GitHubInventory
-from purchases import purchases
-from withdrawal_history import live_withdrawals, withdrawal_history
+from scripts.inventory import build_inventory, filter_inventory, load_data, validate_data
+from scripts.forms import addition_form, edit_form, settings, withdrawal_form
+from scripts.github_inventory import GitHubError, GitHubInventory
+from scripts.purchases import purchases
+from scripts.withdrawal_history import live_withdrawals, withdrawal_history
 
 
-ROOT = Path(__file__).resolve().parent
+from scripts.paths import DATA_DIR, ASSETS_DIR
 IMAGE_BASE = "https://raw.githubusercontent.com/DeltaLabo/inventory_pictures/main/inventory_images_ready"
 
 
@@ -73,6 +71,7 @@ def browse(details, locations):
 
 def main():
     st.set_page_config(page_title="Delta LAB inventory", layout="wide")
+    st.logo(str(ASSETS_DIR / "images" / "logo.png"))
     st.title("Delta LAB inventory")
     st.caption("Electromechanical Engineering School - Tecnológico de Costa Rica")
     config = settings()
@@ -84,9 +83,9 @@ def main():
                 client = GitHubInventory(config["token"], config["repository"], config["branch"])
             except (GitHubError, ValueError) as error:
                 st.warning("Could not refresh from GitHub. Showing the local copy; changes are temporarily disabled.")
-                details, locations = load_data(ROOT)
+                details, locations = load_data(DATA_DIR)
         else:
-            details, locations = load_data(ROOT)
+            details, locations = load_data(DATA_DIR)
     except (OSError, ValueError, pd.errors.ParserError) as error:
         st.error(f"Could not load inventory: {error}")
         st.stop()

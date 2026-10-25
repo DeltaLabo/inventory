@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from inventory import (
+from scripts.inventory import (
     DETAIL_COLUMNS, LOCATION_COLUMNS, build_inventory, filter_inventory,
     load_data, validate_data,
     parse_data,

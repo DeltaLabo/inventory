@@ -3,11 +3,20 @@
 This is a small Streamlit inventory with public browsing, password-protected
 additions, edits and withdrawals via immediate atomic GitHub commits.
 Keep it simple: no separate database or server. `app.py` is the only application
-entry point; `inventory.py` has import-safe CSV helpers and validation,
-`forms.py` holds the inventory forms, `purchases.py` holds the purchase list/form
-and quotation export, `withdrawal_history.py` holds project withdrawal reports,
-`request_application.py` calculates additions/edits without writes, and
-`github_inventory.py` handles GitHub.
+entry point; `scripts/inventory.py` has import-safe CSV helpers and validation,
+`scripts/forms.py` holds the inventory forms, `scripts/purchases.py` holds the purchase list/form
+and quotation export, `scripts/withdrawal_history.py` holds project withdrawal reports,
+`scripts/request_application.py` calculates additions/edits without writes, and
+`scripts/github_inventory.py` handles GitHub.
+Follow invoicing's repository layout: helper modules are a `scripts` package,
+source CSVs and ledgers live in `data/`, and all permanent audit receipts live in
+`data/requests/`. GitHub reads and atomic writes use these same repository-relative
+paths; never create parallel root-level copies or replay moved receipts. Shared
+branding lives in `assets/images/`, copied from invoicing, with `logo.png` used by
+the app. Product images remain in inventory_pictures. Keep `app.py` at the root
+to preserve the existing Streamlit deployment entry point. Local paths are anchored
+by `scripts/paths.py`; run validation with `python -m scripts.inventory`.
+Downloads stay in memory; do not add an unused output directory or local write flow.
 UI, messages, maintained descriptive inventory text and user documentation are English.
 Preserve identifiers, brand names, URLs, physical labels and historical audit entries.
 
@@ -31,14 +40,14 @@ Submission/movement IDs remain UUIDs; they are separate from product IDs.
 Existing products reuse their original IDs. The user explicitly replaced approval
 with immediate saving: additions and edits use the addition password, write directly
 to the latest configured branch, and create no PRs or GitHub Actions. Withdrawals change exactly one stock location and append
-`movements.csv` in one commit; use non-forced ref updates and re-read after conflicts.
+`data/movements.csv` in one commit; use non-forced ref updates and re-read after conflicts.
 Submission IDs make retries idempotent. Never retry by allocating a new ID after an
 uncertain write. Reject ambiguous products/locations and invalid or insufficient stock.
-`usage_log.csv` is historical only. `not_found.csv`, `smd.csv`, and `to_buy.csv` remain
+`data/usage_log.csv` is historical only. `data/not_found.csv`, `data/smd.csv`, and `data/to_buy.csv` remain
 independent auxiliary sources. No source-data migration is authorized by inference.
 
 Run `python -m unittest discover -s tests -v` for behavior checks and
-`python inventory.py` for source validation. The latter deliberately returns 1
+`python -m scripts.inventory` for source validation. The latter deliberately returns 1
 while ambiguous/missing source data remain unresolved. Never fix these by guessing.
 Keep network calls optional, bounded, and cached.
 Tests must mock GitHub; never submit real PRs or stock movements as a test.
@@ -68,7 +77,7 @@ the random format, keeping products/bags/characteristics distinct and pushing th
 result. The migration assigned 186 new IDs, retained the two relay IDs, preserved
 all 177 stock rows, locations and counts, and added nine independent catalog stubs
 for previously orphaned stock. No similar-looking legacy codes were merged.
-`details.csv` now has an optional `previous_code` column for old-code searches,
+`data/details.csv` now has an optional `previous_code` column for old-code searches,
 historical references and image fallback. Preserve it on edits. New products leave
 it blank. Never use it as a merge key; multiple distinct variants may share a legacy
 reference. Historical/auxiliary CSVs intentionally retain old references and are
@@ -131,7 +140,7 @@ quantity, Project, Requested by and a valid HTTP/HTTPS product URL without embed
 login details. Manufacturer, model/variant and notes are optional. Accept any supplier;
 do not fetch user-supplied links. Preserve each request's project/person/quantity even
 when links match; never merge projects or guess missing legacy project information.
-Save purchase_requests.csv with UUID and UTC timestamp directly via an atomic,
+Save data/purchase_requests.csv with UUID and UTC timestamp directly via an atomic,
 non-forced GitHub commit. Retry concurrent changes, and recover uncertain writes
 by the same request UUID without duplication or silently accepting changed details.
 Purchase requests never modify stock or place orders. No approval or completion
@@ -142,7 +151,7 @@ and invalidation after save. If the list cannot be read, disable purchase submis
 Use mocked GitHub tests for validation, concurrency, uncertain writes, full export,
 password reuse and form behavior. Do not submit real requests as a test.
 
-History is a public read-only view of movements.csv, the existing separate ledger
+History is a public read-only view of data/movements.csv, the existing separate ledger
 committed atomically with stock updates. Filter by exact recorded project and show
 totals per project/product plus individual movements and a filtered CSV download;
 All projects exports the complete log. Never infer movements from stock balances,
@@ -158,7 +167,7 @@ Label local snapshots and surface read/quantity errors rather than silently drop
 movements or showing a failed remote fetch as an empty report. Preserve all existing
 ledger data; tests must use mocked GitHub and must never make real withdrawals.
 
-The user explicitly requested one stock quantity: locations.csv has columns
+The user explicitly requested one stock quantity: data/locations.csv has columns
 code,location,sublocation,units. Units means currently available stock, never a
 lifetime received count. Additions increase units; withdrawals reduce units and
 append the existing movement ledger atomically. Edit offers a single Units input.
@@ -187,7 +196,7 @@ with mocked UI tests.
 
 Immediate-write workflow supersedes all earlier PR-approval descriptions. New
 additions and edits use GitHubInventory.add/edit, calculated against current data,
-with schema-3 requests/UUID.json receipts and the affected CSVs in one commit.
+with schema-3 data/requests/UUID.json receipts and the affected CSVs in one commit.
 Non-forced branch updates retry concurrent writes. The same operation UUID and
 normalized payload recover an uncertain completed save without double counting;
 changed payloads under a saved UUID are rejected. Preserve old merged PR receipts;

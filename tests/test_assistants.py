@@ -2,8 +2,8 @@ import unittest
 from unittest.mock import patch
 from uuid import uuid4
 
-from assistants import AssistantDirectoryError, _load_assistants, parse_assistants
-from github_inventory import GitHubError, MOVEMENT_COLUMNS, read_rows, write_rows
+from scripts.assistants import AssistantDirectoryError, _load_assistants, parse_assistants
+from scripts.github_inventory import GitHubError, MOVEMENT_COLUMNS, read_rows, write_rows
 from test_github_inventory import MemoryGitHub
 
 
@@ -22,7 +22,7 @@ class AssistantTests(unittest.TestCase):
     def test_private_directory_uses_authenticated_api_and_does_not_cache_other_fields(self):
         _load_assistants.clear()
         self.addCleanup(_load_assistants.clear)
-        with patch("github_inventory.GitHubInventory") as factory:
+        with patch("scripts.github_inventory.GitHubInventory") as factory:
             client = factory.return_value
             client.head.return_value = "snapshot-sha"
             client.read_file.return_value = "id,nombre,cuenta\nTEST00,Intern,PRIVATE-ACCOUNT\n"
@@ -33,7 +33,7 @@ class AssistantTests(unittest.TestCase):
     def test_unavailable_private_directory_has_actionable_error_without_secret(self):
         _load_assistants.clear()
         self.addCleanup(_load_assistants.clear)
-        with patch("github_inventory.GitHubInventory.head", side_effect=GitHubError("private-token")):
+        with patch("scripts.github_inventory.GitHubInventory.head", side_effect=GitHubError("private-token")):
             with self.assertRaises(AssistantDirectoryError) as error:
                 _load_assistants("private-token", "DeltaLabo/administration", "main")
             self.assertNotIn("private-token", str(error.exception))
@@ -42,7 +42,7 @@ class AssistantTests(unittest.TestCase):
 
     def test_withdrawal_rejects_unknown_ids_and_mismatched_names_before_writing(self):
         db = MemoryGitHub()
-        with patch("assistants.load_assistants", return_value=(("TEST00", "Intern"),)):
+        with patch("scripts.assistants.load_assistants", return_value=(("TEST00", "Intern"),)):
             for code, name in ((None, "Intern"), ("UNKNOWN", "Intern"), ("TEST00", "Wrong name")):
                 with self.subTest(code=code, name=name), self.assertRaises(AssistantDirectoryError):
                     db.withdraw(uuid4().hex, "ITEM0001", "A", "01", 1, name, "Robot", assistant_id=code)
@@ -51,13 +51,13 @@ class AssistantTests(unittest.TestCase):
     def test_old_history_keeps_its_names_and_new_records_add_assistant_ids(self):
         db = MemoryGitHub()
         old = dict.fromkeys(MOVEMENT_COLUMNS, "") | {"id": uuid4().hex, "person": "Old initials", "quantity": "1"}
-        db.main_files["movements.csv"] = write_rows(MOVEMENT_COLUMNS, [old])
+        db.main_files["data/movements.csv"] = write_rows(MOVEMENT_COLUMNS, [old])
         operation = uuid4().hex
-        with patch("assistants.load_assistants", return_value=(("TEST00", "Intern"),)):
+        with patch("scripts.assistants.load_assistants", return_value=(("TEST00", "Intern"),)):
             db.withdraw(operation, "ITEM0001", "A", "01", 1, "Intern", "Robot", assistant_id="TEST00")
         rows = db.withdrawal_snapshot()
         self.assertEqual({key: rows[0][key] for key in old}, old)
         self.assertEqual(rows[0]["assistant_id"], "")
         self.assertEqual(rows[1]["assistant_id"], "TEST00")
-        with patch("assistants.load_assistants", side_effect=AssertionError("Saved retries must not need directory access")):
+        with patch("scripts.assistants.load_assistants", side_effect=AssertionError("Saved retries must not need directory access")):
             self.assertEqual(db.withdraw(operation, "ITEM0001", "A", "01", 1, "Intern", "Robot", assistant_id="TEST00"), 4)

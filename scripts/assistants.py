@@ -48,7 +48,7 @@ def directory_settings():
 @st.cache_data(ttl=300, max_entries=4, show_spinner=False)
 def _load_assistants(token, repository, branch):
     # Import lazily: the GitHub writer also validates assistant selections.
-    from github_inventory import GitHubError, GitHubInventory
+    from scripts.github_inventory import GitHubError, GitHubInventory
 
     if not token:
         raise AssistantDirectoryError("Configure ADMINISTRATION_TOKEN with read access to the private administration repository.")

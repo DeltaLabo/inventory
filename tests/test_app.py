@@ -1,5 +1,7 @@
 import importlib.util
+from contextlib import chdir
 from pathlib import Path
+import tempfile
 import unittest
 from unittest.mock import patch
 
@@ -11,13 +13,13 @@ class AppTests(unittest.TestCase):
             "token": "", "repository": "DeltaLabo/inventory", "branch": "main",
             "add_password": "", "withdraw_password": "",
         }
-        config_patch = patch("forms.settings", return_value=self.config)
+        config_patch = patch("scripts.forms.settings", return_value=self.config)
         config_patch.start()
         self.addCleanup(config_patch.stop)
         network_patch = patch("requests.request", side_effect=AssertionError("Tests must not access GitHub"))
         network_patch.start()
         self.addCleanup(network_patch.stop)
-        roster_patch = patch("assistants.load_assistants", return_value=(("TEST00", "Intern"), ("OTHER00", "Other intern")))
+        roster_patch = patch("scripts.assistants.load_assistants", return_value=(("TEST00", "Intern"), ("OTHER00", "Other intern")))
         roster_patch.start()
         self.addCleanup(roster_patch.stop)
 
@@ -27,9 +29,9 @@ class AppTests(unittest.TestCase):
         return AppTest.from_file(str(Path(__file__).resolve().parents[1] / "app.py"), default_timeout=15).run()
 
     def code_for(self, previous_code):
-        from inventory import load_data
+        from scripts.inventory import load_data
 
-        details, _ = load_data(Path(__file__).resolve().parents[1])
+        details, _ = load_data(Path(__file__).resolve().parents[1] / "data")
         return details.loc[details["previous_code"].eq(previous_code), "code"].item()
 
     def test_app_opens_with_all_stock_and_no_image_requests(self):
@@ -60,6 +62,20 @@ class AppTests(unittest.TestCase):
         self.assertEqual(len(app.exception), 0)
         self.assertEqual(len(app.info), 1)
 
+    def test_local_data_and_branding_load_outside_the_repository_working_directory(self):
+        with tempfile.TemporaryDirectory() as tmp, chdir(tmp):
+            Path("details.csv").write_text("unrelated file", encoding="utf-8")
+            app = self.open_app()
+            self.assertEqual(len(app.exception), 0)
+            self.assertIn(self.code_for("AOO90SER"), app.dataframe[0].value["Code"].tolist())
+            app.radio[0].set_value("Purchases").run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertEqual(len(app.error), 0)
+            app.radio[0].set_value("History").run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertEqual(len(app.error), 0)
+            self.assertEqual(Path("details.csv").read_text(encoding="utf-8"), "unrelated file")
+
     def test_missing_images_are_optional_and_network_failures_are_handled(self):
         import requests
 
@@ -71,10 +87,10 @@ class AppTests(unittest.TestCase):
             self.assertTrue(any("no image" in caption.value for caption in app.caption))
 
     def configure_forms(self):
-        from inventory import load_data
+        from scripts.inventory import load_data
 
         self.config.update(token="test-only-token", add_password="test-add", withdraw_password="test-take")
-        snapshot_patch = patch("github_inventory.GitHubInventory.snapshot", return_value=load_data(Path(__file__).resolve().parents[1]))
+        snapshot_patch = patch("scripts.github_inventory.GitHubInventory.snapshot", return_value=load_data(Path(__file__).resolve().parents[1] / "data"))
         snapshot_patch.start()
         self.addCleanup(snapshot_patch.stop)
 
@@ -92,8 +108,8 @@ class AppTests(unittest.TestCase):
         row = {"id": "existing", "timestamp": "2026-10-22T12:00:00+00:00", "description": "Existing request",
                "manufacturer": "", "model": "", "quantity": "1", "project": "Another project", "person": "Other intern",
                "link": "https://example.com/item", "notes": ""}
-        with patch("github_inventory.GitHubInventory.purchase_snapshot", return_value=[row]), \
-             patch("github_inventory.GitHubInventory.request_purchase", return_value="saved") as submit:
+        with patch("scripts.github_inventory.GitHubInventory.purchase_snapshot", return_value=[row]), \
+             patch("scripts.github_inventory.GitHubInventory.request_purchase", return_value="saved") as submit:
             app = self.open_app()
             app.radio[0].set_value("Purchases").run()
             self.assertEqual(len(app.exception), 0)
@@ -124,11 +140,11 @@ class AppTests(unittest.TestCase):
         self.assertEqual(len(app.get("download_button")), 1)
 
     def test_purchase_read_failure_disables_form(self):
-        from github_inventory import GitHubError
+        from scripts.github_inventory import GitHubError
 
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.purchase_snapshot", side_effect=GitHubError("offline")):
-            from purchases import live_purchases
+        with patch("scripts.github_inventory.GitHubInventory.purchase_snapshot", side_effect=GitHubError("offline")):
+            from scripts.purchases import live_purchases
             live_purchases.clear()
             app = self.open_app()
             app.radio[0].set_value("Purchases").run()
@@ -140,14 +156,14 @@ class AppTests(unittest.TestCase):
     def test_history_filters_projects_and_displays_totals_without_a_password(self):
         self.configure_forms()
         self.config["withdraw_password"] = ""
-        from withdrawal_history import live_withdrawals
+        from scripts.withdrawal_history import live_withdrawals
         live_withdrawals.clear()
         self.addCleanup(live_withdrawals.clear)
         rows = [dict(id=str(index), timestamp="2026-10-22T12:00:00+00:00",
                      code="GPQM1026", location="A", sublocation="12", quantity=str(quantity),
                      available_after="0", person="Intern", project=project)
                 for index, (project, quantity) in enumerate((("Robot", 2), ("Robot", 1), ("Station", 4), ("", 1)))]
-        with patch("github_inventory.GitHubInventory.withdrawal_snapshot", return_value=rows):
+        with patch("scripts.github_inventory.GitHubInventory.withdrawal_snapshot", return_value=rows):
             app = self.open_app()
             app.radio[0].set_value("History").run()
             self.assertEqual(len(app.exception), 0)
@@ -170,11 +186,11 @@ class AppTests(unittest.TestCase):
         self.assertEqual(len(app.get("download_button")), 1)
 
     def test_history_read_failure_does_not_show_an_empty_report(self):
-        from github_inventory import GitHubError
+        from scripts.github_inventory import GitHubError
 
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.withdrawal_snapshot", side_effect=GitHubError("offline")):
-            from withdrawal_history import live_withdrawals
+        with patch("scripts.github_inventory.GitHubInventory.withdrawal_snapshot", side_effect=GitHubError("offline")):
+            from scripts.withdrawal_history import live_withdrawals
             live_withdrawals.clear()
             app = self.open_app()
             app.radio[0].set_value("History").run()
@@ -186,7 +202,7 @@ class AppTests(unittest.TestCase):
 
     def test_addition_requires_its_password_and_does_not_ask_for_code(self):
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.add", return_value={"id": "test-operation", "code": "TEST1026"}) as propose:
+        with patch("scripts.github_inventory.GitHubInventory.add", return_value={"id": "test-operation", "code": "TEST1026"}) as propose:
             app = self.open_app()
             app.radio[0].set_value("Add").run()
             self.assertEqual(len(app.exception), 0)
@@ -227,9 +243,9 @@ class AppTests(unittest.TestCase):
 
         db = MemoryGitHub()
         self.config.update(token="test-direct-ui", add_password="test-add", withdraw_password="test-take")
-        with patch("github_inventory.GitHubInventory.snapshot", side_effect=db.snapshot), \
-             patch("github_inventory.GitHubInventory.add", side_effect=db.add), \
-             patch("github_inventory.GitHubInventory.edit", side_effect=db.edit):
+        with patch("scripts.github_inventory.GitHubInventory.snapshot", side_effect=db.snapshot), \
+             patch("scripts.github_inventory.GitHubInventory.add", side_effect=db.add), \
+             patch("scripts.github_inventory.GitHubInventory.edit", side_effect=db.edit):
             app = self.open_app()
             app.radio[0].set_value("Add").run()
             app.radio[1].set_value("Restock an existing product").run()
@@ -258,7 +274,7 @@ class AppTests(unittest.TestCase):
 
     def test_addition_can_create_type_and_subtype_and_resets_subtype_when_type_changes(self):
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.add", return_value={"id": "test-operation", "code": "TEST1026"}) as propose:
+        with patch("scripts.github_inventory.GitHubInventory.add", return_value={"id": "test-operation", "code": "TEST1026"}) as propose:
             app = self.open_app()
             app.radio[0].set_value("Add").run()
             self.assertTrue(app.selectbox(key="addition_field_subtype_choice").disabled)
@@ -284,7 +300,7 @@ class AppTests(unittest.TestCase):
 
     def test_compartment_warning_is_per_box_nonblocking_and_clears_for_unused_number(self):
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.add", return_value={"id": "test-operation", "code": "TEST1026"}) as propose:
+        with patch("scripts.github_inventory.GitHubInventory.add", return_value={"id": "test-operation", "code": "TEST1026"}) as propose:
             app = self.open_app()
             app.radio[0].set_value("Add").run()
             app.selectbox(key="addition_field_type_choice").select("actuator").run()
@@ -310,7 +326,7 @@ class AppTests(unittest.TestCase):
 
     def test_restock_uses_assigned_box_and_bag_without_asking_again(self):
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.add", return_value={"id": "test-operation", "code": "TEST1026"}) as propose:
+        with patch("scripts.github_inventory.GitHubInventory.add", return_value={"id": "test-operation", "code": "TEST1026"}) as propose:
             app = self.open_app()
             app.radio[0].set_value("Add").run()
             app.radio[1].set_value("Restock an existing product").run()
@@ -330,7 +346,7 @@ class AppTests(unittest.TestCase):
 
     def test_withdrawal_requires_password_and_shows_receipt_without_resubmitting(self):
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.withdraw", return_value=3) as withdraw:
+        with patch("scripts.github_inventory.GitHubInventory.withdraw", return_value=3) as withdraw:
             app = self.open_app()
             app.radio[0].set_value("Withdraw").run()
             self.assertEqual(len(app.exception), 0)
@@ -358,10 +374,10 @@ class AppTests(unittest.TestCase):
             self.assertEqual(app.text_input(key="withdrawal_field_password").value, "")
 
     def test_remote_read_failure_keeps_local_search_available_and_disables_writes(self):
-        from github_inventory import GitHubError
+        from scripts.github_inventory import GitHubError
 
         self.config.update(token="unavailable-token", add_password="test-add")
-        with patch("github_inventory.GitHubInventory.snapshot", side_effect=GitHubError("offline")):
+        with patch("scripts.github_inventory.GitHubInventory.snapshot", side_effect=GitHubError("offline")):
             app = self.open_app()
             self.assertEqual(len(app.exception), 0)
             self.assertEqual(len(app.dataframe), 1)
@@ -371,7 +387,7 @@ class AppTests(unittest.TestCase):
 
     def test_edit_is_separate_prefilled_and_uses_addition_password(self):
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.edit", return_value={"id": "test-operation", "code": "TEST1026"}) as edit:
+        with patch("scripts.github_inventory.GitHubInventory.edit", return_value={"id": "test-operation", "code": "TEST1026"}) as edit:
             app = self.open_app()
             self.assertEqual(app.radio[0].options, ["Browse", "Add", "Edit", "Withdraw", "Purchases", "History"])
             app.radio[0].set_value("Edit").run()
@@ -399,11 +415,11 @@ class AppTests(unittest.TestCase):
             self.assertEqual(app.text_input(key="edit_field_password").value, "")
 
     def test_edit_product_switch_replaces_browser_fields_and_preserves_same_product_draft(self):
-        from inventory import load_data
+        from scripts.inventory import load_data
 
         self.configure_forms()
-        details, _ = load_data(Path(__file__).resolve().parents[1])
-        with patch("github_inventory.GitHubInventory.edit", return_value={"id": "test-operation", "code": "TEST1026"}) as edit:
+        details, _ = load_data(Path(__file__).resolve().parents[1] / "data")
+        with patch("scripts.github_inventory.GitHubInventory.edit", return_value={"id": "test-operation", "code": "TEST1026"}) as edit:
             app = self.open_app()
             app.radio[0].set_value("Edit").run()
             first = app.selectbox(key="edit_product_choice").value
@@ -445,7 +461,7 @@ class AppTests(unittest.TestCase):
 
     def test_edit_optional_stock_is_prefilled_and_saved_immediately(self):
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.edit", return_value={"id": "test-operation", "code": "TEST1026"}) as edit:
+        with patch("scripts.github_inventory.GitHubInventory.edit", return_value={"id": "test-operation", "code": "TEST1026"}) as edit:
             app = self.open_app()
             app.radio[0].set_value("Edit").run()
             app.selectbox(key="edit_product_choice").select(self.code_for("DCACTMOT")).run()
@@ -467,7 +483,7 @@ class AppTests(unittest.TestCase):
 
     def test_edit_finds_shared_bag_and_submits_the_selected_products_stock(self):
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.edit", return_value={"id": "test-operation", "code": "TEST1026"}) as edit:
+        with patch("scripts.github_inventory.GitHubInventory.edit", return_value={"id": "test-operation", "code": "TEST1026"}) as edit:
             app = self.open_app()
             app.radio[0].set_value("Edit").run()
             app.selectbox(key="edit_filter_box").set_value("A").run()
@@ -494,16 +510,16 @@ class AppTests(unittest.TestCase):
 
     def test_edit_box_filter_switches_stock_slot_without_carrying_previous_form_edits(self):
         import pandas as pd
-        from inventory import load_data
+        from scripts.inventory import load_data
 
         self.configure_forms()
         self.config["token"] = "test-edit-multiple-slots"
-        details, locations = load_data(Path(__file__).resolve().parents[1])
+        details, locations = load_data(Path(__file__).resolve().parents[1] / "data")
         code = self.code_for("DCACTMOT")
         locations = pd.concat([locations, pd.DataFrame([{
             "code": code, "location": "TESTBOX", "sublocation": "01", "units": "7",
         }])], ignore_index=True)
-        with patch("github_inventory.GitHubInventory.snapshot", return_value=(details, locations)):
+        with patch("scripts.github_inventory.GitHubInventory.snapshot", return_value=(details, locations)):
             app = self.open_app()
             app.radio[0].set_value("Edit").run()
             app.selectbox(key="edit_filter_box").set_value("A").run()
