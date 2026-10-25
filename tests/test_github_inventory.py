@@ -33,11 +33,9 @@ class MemoryGitHub(GitHubInventory):
         self.refs = {"main": "initial"}
         self.tags = {}
         self.trees = {}
-        self.prs = {}
         self.serial = 0
         self.before_patch = None
         self.timeout_after_patch = False
-        self.timeout_after_pr = False
 
     @property
     def main_files(self):
@@ -79,20 +77,6 @@ class MemoryGitHub(GitHubInventory):
                     raise Conflict("tag exists")
                 self.tags[tag] = payload["sha"]
                 return {}
-            branch = payload["ref"].removeprefix("refs/heads/")
-            if branch in self.refs:
-                raise Conflict("branch exists")
-            self.refs[branch] = payload["sha"]
-            return {}
-        if method == "GET" and path == "/pulls":
-            return [self.prs[params["head"]]] if params["head"] in self.prs else []
-        if method == "POST" and path == "/pulls":
-            key = "DeltaLabo:" + payload["head"]
-            self.prs[key] = {"html_url": f"https://github.com/DeltaLabo/inventory/pull/{len(self.prs) + 1}"}
-            if self.timeout_after_pr:
-                self.timeout_after_pr = False
-                raise GitHubError("response lost")
-            return self.prs[key]
         if method == "PATCH" and path.startswith("/git/refs/heads/"):
             if self.before_patch:
                 callback, self.before_patch = self.before_patch, None
@@ -141,7 +125,6 @@ class GitHubInventoryTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "stock format changed"):
             self.edit({}, original, {"units": 8})
         self.assertEqual(self.db.refs["main"], "initial")
-        self.assertEqual(self.db.prs, {})
 
     def history(self):
         return read_rows(self.db.main_files["data/movements.csv"], MOVEMENT_COLUMNS)[1]
@@ -229,7 +212,6 @@ class GitHubInventoryTests(unittest.TestCase):
         self.assertRegex(code, r"^[A-Z]{4}[0-9]{4}$")
         self.assertIn("inventory-ids/" + code, self.db.tags)
         self.assertEqual(list(self.db.refs), ["main"])
-        self.assertEqual(self.db.prs, {})
         details = read_rows(self.db.main_files["data/details.csv"], DETAIL_COLUMNS)[1]
         self.assertEqual(details[-1]["code"], code)
         self.assertEqual(self.stock()[-1]["code"], code)
@@ -246,7 +228,6 @@ class GitHubInventoryTests(unittest.TestCase):
         self.assertEqual(self.db.main_files["data/details.csv"], catalog)
         self.assertEqual([row["units"] for row in self.stock()], ["7", "3"])
         self.assertEqual(self.db.tags, {})
-        self.assertEqual(self.db.prs, {})
 
     def test_restock_does_not_create_a_different_location(self):
         with self.assertRaisesRegex(ValueError, "product box or bag changed"):
@@ -283,7 +264,6 @@ class GitHubInventoryTests(unittest.TestCase):
         self.db.before_patch = lambda: self.add("ITEM0001", uuid4().hex)
         self.add("ITEM0001")
         self.assertEqual(self.stock()[0]["units"], "9")
-        self.assertEqual(self.db.prs, {})
 
     def test_addition_preserves_concurrent_withdrawal(self):
         self.db.before_patch = lambda: self.withdraw(2, uuid4().hex)
@@ -300,7 +280,6 @@ class GitHubInventoryTests(unittest.TestCase):
         receipt = json.loads(self.db.main_files[f"data/requests/{self.request_id}.json"])
         self.assertEqual(receipt["request"]["product_changes"]["description"]["before"], "Test board")
         self.assertEqual(receipt["request"]["reason"], "Verified label")
-        self.assertEqual(self.db.prs, {})
 
     def test_edit_quantity_and_location_preserves_other_location(self):
         original = self.stock()[0].copy()

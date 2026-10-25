@@ -32,7 +32,6 @@ class PurchaseTests(unittest.TestCase):
         for name, text in before.items():
             self.assertEqual(self.db.main_files[name], text)
         self.assertEqual(self.db.purchase_snapshot(), self.rows())
-        self.assertEqual(self.db.prs, {})
 
     def test_required_fields_and_invalid_links_never_write(self):
         for changes in ({"description": ""}, {"project": " "}, {"person": ""}, {"quantity": 0},

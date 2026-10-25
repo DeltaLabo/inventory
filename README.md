@@ -108,8 +108,6 @@ There is no automatic deletion or purchased-status workflow. Use **Request anoth
 purchase** after success. Retry the same form and data after an uncertain write;
 its UUID prevents duplicate requests. Concurrent submissions preserve one another.
 The CSV and requester/project information are public, like the inventory repository.
-The legacy `data/to_buy.csv` is independent and is not automatically imported, since its
-old rows lack project and requester information.
 
 For a new product, **Type** and **Subtype** are dropdowns populated from the saved
 catalog. Subtypes depend on the selected type. Choose **Create new…** to enter a
@@ -234,7 +232,6 @@ operations do not create review branches, merge CSV snapshots or require automat
   available quantity, a nonnegative integer. Additions increase it and withdrawals
   decrease it. There is no separate `available` stock column. Internal
   column names remain `location` and `sublocation` for compatibility.
-- `data/to_buy.csv`: an independent shopping list.
 - `data/purchase_requests.csv`: shared purchase requests with UUID, UTC timestamp,
   description, manufacturer, model, quantity, required project and requester, product
   link and optional notes. Saved directly to GitHub without changing inventory stock.
@@ -254,9 +251,7 @@ preserving remaining balances, zeroes, product IDs and box/bag labels. It did no
 restore quantities already withdrawn or infer unknown quantities. Readers also
 accept the old two-column stock format, taking `available` as the current balance;
 subsequent stock writes produce the single-quantity format. Refresh an edit form
-opened before this migration before correcting stock. Review any older pending
-stock PR against the latest balances and keep only the current `units` column
-when resolving merge conflicts.
+opened before this migration before correcting stock.
 
 The historical ledger field `available_after` is retained for compatibility and
 shown as **Units after withdrawal**. It records the remaining quantity at the time

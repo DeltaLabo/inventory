@@ -269,7 +269,6 @@ class AppTests(unittest.TestCase):
             app.radio[0].set_value("Browse").run()
             self.assertEqual(set(app.dataframe[0].value["Description"]), {"Corrected board"})
             self.assertEqual(app.dataframe[0].value["Units"].tolist(), ["7", "3"])
-        self.assertEqual(db.prs, {})
         self.assertEqual(list(db.refs), ["main"])
 
     def test_addition_can_create_type_and_subtype_and_resets_subtype_when_type_changes(self):

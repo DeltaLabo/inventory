@@ -43,8 +43,12 @@ to the latest configured branch, and create no PRs or GitHub Actions. Withdrawal
 `data/movements.csv` in one commit; use non-forced ref updates and re-read after conflicts.
 Submission IDs make retries idempotent. Never retry by allocating a new ID after an
 uncertain write. Reject ambiguous products/locations and invalid or insufficient stock.
-`data/usage_log.csv` is historical only. `data/not_found.csv`, `data/smd.csv`, and `data/to_buy.csv` remain
+`data/usage_log.csv` is historical only. `data/not_found.csv` and `data/smd.csv` remain
 independent auxiliary sources. No source-data migration is authorized by inference.
+Cleanup removed unused branding variants and the obsolete PR simulator in tests.
+Keep only the displayed logo in assets; do not recopy unused invoicing images.
+The fake GitHub rejects PR operations as unexpected requests. Historical receipts
+and unique auxiliary data are retained even when they are not read by the app.
 
 Run `python -m unittest discover -s tests -v` for behavior checks and
 `python -m scripts.inventory` for source validation. The latter deliberately returns 1
@@ -144,7 +148,7 @@ Save data/purchase_requests.csv with UUID and UTC timestamp directly via an atom
 non-forced GitHub commit. Retry concurrent changes, and recover uncertain writes
 by the same request UUID without duplication or silently accepting changed details.
 Purchase requests never modify stock or place orders. No approval or completion
-workflow was requested. Legacy to_buy.csv stays independent; do not import it.
+workflow was requested. Do not automatically import legacy shopping lists.
 CSV exports include all requests and protect spreadsheet cells from interpreting
 user-entered formulas. Purchase-list reads are cached 15 seconds, with manual refresh
 and invalidation after save. If the list cannot be read, disable purchase submission.
@@ -178,8 +182,7 @@ the remaining balance and drop it from normalized stock. Stock writes use only
 units. Reject edit snapshots from the old two-column schema until the page is
 refreshed. Existing available_after fields in historical movements/receipts remain
 unchanged and display as Units after withdrawal; they are not live stock columns.
-Review older pending stock PRs against current balances when merging the schema
-change. Auxiliary legacy CSVs are not authoritative stock and remain independent.
+Auxiliary legacy CSVs are not authoritative stock and remain independent.
 
 Edit supports finding products by existing box and bag before choosing a record.
 Keep Find in box and Find in bag independent, with All boxes/All bags defaults.
