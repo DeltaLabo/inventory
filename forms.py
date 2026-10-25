@@ -338,6 +338,16 @@ def edit_form(client, details, locations, password, on_saved=None):
         st.session_state["edit_context"] = context
         st.session_state["edit_original_item"] = eligible[eligible["code"].eq(code)].iloc[0].to_dict()
         st.session_state["edit_original_stock"] = selected_stock
+        # Explicit values tell the browser to replace existing keyed widgets.
+        # Deleting state alone can leave the previous product visible in a form.
+        for name in ("description", "type", "subtype", "manufacturer", "model", "value", "package", "info"):
+            st.session_state[f"edit_field_{name}"] = st.session_state["edit_original_item"][name]
+        if selected_stock:
+            for name in ("location", "sublocation"):
+                st.session_state[f"edit_field_{name}"] = selected_stock[name]
+            st.session_state["edit_field_units"] = int(selected_stock["units"])
+        for name in ("person", "reason", "password"):
+            st.session_state[f"edit_field_{name}"] = ""
     original_item = st.session_state["edit_original_item"]
     original_stock = st.session_state["edit_original_stock"]
     with st.form("edit_form"):
@@ -348,13 +358,13 @@ def edit_form(client, details, locations, password, on_saved=None):
             ("value", "Value / specification (optional)"), ("package", "Package (optional)"),
             ("info", "Additional information (optional)"),
         ):
-            updated_item[name] = st.text_input(label, value=original_item[name], key=f"edit_field_{name}")
+            updated_item[name] = st.text_input(label, key=f"edit_field_{name}")
         updated_stock = None
         if original_stock:
             updated_stock = {
-                "location": st.text_input("Box", value=original_stock["location"], key="edit_field_location", max_chars=80),
-                "sublocation": st.text_input("Bag", value=original_stock["sublocation"], key="edit_field_sublocation", max_chars=80),
-                "units": st.number_input("Units (available now)", min_value=0, value=int(original_stock["units"]), step=1, key="edit_field_units"),
+                "location": st.text_input("Box", key="edit_field_location", max_chars=80),
+                "sublocation": st.text_input("Bag", key="edit_field_sublocation", max_chars=80),
+                "units": st.number_input("Units (available now)", min_value=0, step=1, key="edit_field_units"),
             }
         person = st.text_input("Recorded by (name or initials)", key="edit_field_person", max_chars=100)
         reason = st.text_input("Reason for correction", key="edit_field_reason", max_chars=300)

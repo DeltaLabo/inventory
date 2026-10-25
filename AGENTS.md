@@ -46,6 +46,11 @@ Tests must mock GitHub; never submit real PRs or stock movements as a test.
 The top-level actions are Browse, Add, Edit, Withdraw, Purchases, History. Edits reuse the
 addition password and save changes immediately with atomic audit receipts. Prefill the
 form and freeze its original snapshot until another product/location is selected.
+When the target changes, explicitly seed the keyed form fields in session state
+before rendering, including stock values and blank recorder/reason/password.
+Deleting keys and changing widget defaults alone can leave the browser showing
+the previous product. Verify the explicit widget update as well as returned values
+in UI tests. Preserve the frozen snapshot and correction fields on same-target retries.
 Compare only changed fields with the latest data before proposing an edit; preserve
 unmodified fields and never overwrite intervening withdrawals. Record before/after
 values, responsible person, and a required reason. IDs are immutable. Reject invalid

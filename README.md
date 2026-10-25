@@ -37,6 +37,8 @@ Streamlit Cloud. CSV paths are resolved relative to the source files.
   a bag remain separate. When a box or bag is selected, stock correction is enabled
   by default and limited to the matching locations of the selected product. Clear
   both filters to find catalog records with no registered stock location.
+  Selecting another product or stock location reloads its fields and clears the
+  previous correction's recorder, reason and password.
 - **Withdraw:** use the shared withdrawal password, select a product and its box
   and bag, and enter the quantity, project and person recording it. The balance and movement
   are saved immediately in one GitHub commit, without waiting for approval.

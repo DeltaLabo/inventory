@@ -398,6 +398,51 @@ class AppTests(unittest.TestCase):
             self.assertEqual(len(app.exception), 0)
             self.assertEqual(app.text_input(key="edit_field_password").value, "")
 
+    def test_edit_product_switch_replaces_browser_fields_and_preserves_same_product_draft(self):
+        from inventory import load_data
+
+        self.configure_forms()
+        details, _ = load_data(Path(__file__).resolve().parents[1])
+        with patch("github_inventory.GitHubInventory.edit", return_value={"id": "test-operation", "code": "TEST1026"}) as edit:
+            app = self.open_app()
+            app.radio[0].set_value("Edit").run()
+            first = app.selectbox(key="edit_product_choice").value
+            app.text_input(key="edit_field_description").set_value("First product draft")
+            app.button[0].click().run()
+            app.text_input(key="edit_field_person").set_value("Previous recorder")
+            app.text_input(key="edit_field_reason").set_value("Previous reason")
+            app.text_input(key="edit_field_password").set_value("test-add")
+            code = self.code_for("DCACTMOT")
+            app.selectbox(key="edit_product_choice").select(code).run()
+            expected = details.loc[details["code"].eq(code)].iloc[0].to_dict()
+            for name in ("description", "type", "subtype", "manufacturer", "model", "value", "package", "info"):
+                field = app.text_input(key=f"edit_field_{name}")
+                self.assertEqual(field.value, expected[name])
+                # AppTest accepts new defaults even when a real browser retains
+                # its keyed field. Check the explicit browser update as well.
+                self.assertTrue(field.proto.set_value)
+                self.assertEqual(field.proto.value, expected[name])
+            for name in ("person", "reason", "password"):
+                self.assertEqual(app.text_input(key=f"edit_field_{name}").value, "")
+            app.text_input(key="edit_field_description").set_value("Corrected motor description")
+            app.button[0].click().run()
+            app.run()
+            self.assertEqual(app.text_input(key="edit_field_description").value, "Corrected motor description")
+            self.assertEqual(app.session_state["edit_original_item"], expected)
+            app.selectbox(key="edit_product_choice").select(first).run()
+            self.assertEqual(app.text_input(key="edit_field_description").value,
+                             details.loc[details["code"].eq(first), "description"].item())
+            app.selectbox(key="edit_product_choice").select(code).run()
+            app.text_input(key="edit_field_description").set_value("Verified motor")
+            app.text_input(key="edit_field_person").set_value("Intern")
+            app.text_input(key="edit_field_reason").set_value("Verified label")
+            app.text_input(key="edit_field_password").set_value("test-add")
+            app.button[0].click().run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertEqual(edit.call_args.args[1], code)
+            self.assertEqual(edit.call_args.args[2], expected)
+            self.assertEqual(edit.call_args.args[3]["description"], "Verified motor")
+
     def test_edit_optional_stock_is_prefilled_and_saved_immediately(self):
         self.configure_forms()
         with patch("github_inventory.GitHubInventory.edit", return_value={"id": "test-operation", "code": "TEST1026"}) as edit:
