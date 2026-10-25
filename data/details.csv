@@ -117,7 +117,7 @@ BNYK1026,fasteners,cable glands,,,Kit with cable glands (water sealers) class IP
 DREU1026,fasteners,screws,SUTEMRIBOR,Screws,from M2 M3 and M4 size,,,,TORNM234
 ZSVI1026,panel accessories,mounting bracket,Jienk,X003R8225J,C45 DIN rail mounting bracket,,DIN,,MOUNTC45
 UHOE1026,panel accessories,end stopper,PZRT,X003KWFELB,DIN rail blocks end stopper,,DIN,,STOPDINR
-KFRY1026,actuator,servo,Tower Pro,MG90S,180 degrees;5V;1.8 kg/cm;0.1s/60 degrees,,,,MG90STP0
+KFRY1026,actuator,servo,Tower Pro,MG90S,Microservo,180 degrees; 5V; 1.8 kg/cm; 0.1s/60 degrees,,,MG90STP0
 XDUN1026,actuator,servo,Olimex,MSR139,360 degrees;5V;1.3 kg/cm;0.12s/60 degrees,,,,MSR13900
 NYOB1026,actuator,servo,SMRaza,S51,180 degrees Micro servo of 9 g capacity,,,,SERVOS51
 VXYY1026,actuator,servo,Tower Pro,SG92R,Micro servo;180 degrees;3V to 6V DC,,,,SG93R180
