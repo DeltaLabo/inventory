@@ -186,7 +186,7 @@ class AppTests(unittest.TestCase):
 
     def test_addition_requires_its_password_and_does_not_ask_for_code(self):
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.propose_addition", return_value="https://github.com/DeltaLabo/inventory/pull/123") as propose:
+        with patch("github_inventory.GitHubInventory.add", return_value={"id": "test-operation", "code": "TEST1026"}) as propose:
             app = self.open_app()
             app.radio[0].set_value("Add").run()
             self.assertEqual(len(app.exception), 0)
@@ -218,13 +218,47 @@ class AppTests(unittest.TestCase):
             propose.assert_called_once()
             self.assertEqual(propose.call_args.args[1]["manufacturer"], "SONGLE")
             self.assertEqual(propose.call_args.args[3], "A")
-            self.assertIn("Request submitted", app.success[0].value)
+            self.assertIn("Addition saved", app.success[0].value)
             with self.assertRaises(KeyError):
                 app.session_state["addition_field_password"]
 
+    def test_direct_add_and_edit_update_browse_immediately_without_pr_links(self):
+        from test_github_inventory import MemoryGitHub
+
+        db = MemoryGitHub()
+        self.config.update(token="test-direct-ui", add_password="test-add", withdraw_password="test-take")
+        with patch("github_inventory.GitHubInventory.snapshot", side_effect=db.snapshot), \
+             patch("github_inventory.GitHubInventory.add", side_effect=db.add), \
+             patch("github_inventory.GitHubInventory.edit", side_effect=db.edit):
+            app = self.open_app()
+            app.radio[0].set_value("Add").run()
+            app.radio[1].set_value("Restock an existing product").run()
+            app.number_input(key="addition_field_quantity").set_value(2)
+            app.text_input(key="addition_field_person").set_value("Tester")
+            app.text_input(key="addition_field_password").set_value("test-add")
+            app.button[0].click().run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertIn("Addition saved", app.success[0].value)
+            self.assertEqual(len(app.get("link_button")), 0)
+            app.radio[0].set_value("Browse").run()
+            self.assertEqual(app.dataframe[0].value["Units"].tolist(), ["7", "3"])
+            app.radio[0].set_value("Edit").run()
+            app.text_input(key="edit_field_description").set_value("Corrected board")
+            app.text_input(key="edit_field_person").set_value("Tester")
+            app.text_input(key="edit_field_reason").set_value("Corrected name")
+            app.text_input(key="edit_field_password").set_value("test-add")
+            app.button[0].click().run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertIn("Changes saved", app.success[0].value)
+            app.radio[0].set_value("Browse").run()
+            self.assertEqual(set(app.dataframe[0].value["Description"]), {"Corrected board"})
+            self.assertEqual(app.dataframe[0].value["Units"].tolist(), ["7", "3"])
+        self.assertEqual(db.prs, {})
+        self.assertEqual(list(db.refs), ["main"])
+
     def test_addition_can_create_type_and_subtype_and_resets_subtype_when_type_changes(self):
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.propose_addition", return_value="https://github.com/DeltaLabo/inventory/pull/125") as propose:
+        with patch("github_inventory.GitHubInventory.add", return_value={"id": "test-operation", "code": "TEST1026"}) as propose:
             app = self.open_app()
             app.radio[0].set_value("Add").run()
             self.assertTrue(app.selectbox(key="addition_field_subtype_choice").disabled)
@@ -250,7 +284,7 @@ class AppTests(unittest.TestCase):
 
     def test_compartment_warning_is_per_box_nonblocking_and_clears_for_unused_number(self):
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.propose_addition", return_value="https://github.com/DeltaLabo/inventory/pull/126") as propose:
+        with patch("github_inventory.GitHubInventory.add", return_value={"id": "test-operation", "code": "TEST1026"}) as propose:
             app = self.open_app()
             app.radio[0].set_value("Add").run()
             app.selectbox(key="addition_field_type_choice").select("actuator").run()
@@ -276,7 +310,7 @@ class AppTests(unittest.TestCase):
 
     def test_restock_uses_assigned_box_and_bag_without_asking_again(self):
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.propose_addition", return_value="https://github.com/DeltaLabo/inventory/pull/127") as propose:
+        with patch("github_inventory.GitHubInventory.add", return_value={"id": "test-operation", "code": "TEST1026"}) as propose:
             app = self.open_app()
             app.radio[0].set_value("Add").run()
             app.radio[1].set_value("Restock an existing product").run()
@@ -337,7 +371,7 @@ class AppTests(unittest.TestCase):
 
     def test_edit_is_separate_prefilled_and_uses_addition_password(self):
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.propose_edit", return_value="https://github.com/DeltaLabo/inventory/pull/124") as edit:
+        with patch("github_inventory.GitHubInventory.edit", return_value={"id": "test-operation", "code": "TEST1026"}) as edit:
             app = self.open_app()
             self.assertEqual(app.radio[0].options, ["Browse", "Add", "Edit", "Withdraw", "Purchases", "History"])
             app.radio[0].set_value("Edit").run()
@@ -357,16 +391,16 @@ class AppTests(unittest.TestCase):
             args = edit.call_args.args
             self.assertEqual(args[2]["description"], before)
             self.assertEqual(args[3]["description"], before + " corrected")
-            self.assertIn("Request submitted", app.success[0].value)
+            self.assertIn("Changes saved", app.success[0].value)
             app.run()
             edit.assert_called_once()
             app.button[0].click().run()
             self.assertEqual(len(app.exception), 0)
             self.assertEqual(app.text_input(key="edit_field_password").value, "")
 
-    def test_edit_optional_stock_is_prefilled_and_can_be_submitted_for_review(self):
+    def test_edit_optional_stock_is_prefilled_and_saved_immediately(self):
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.propose_edit", return_value="https://github.com/DeltaLabo/inventory/pull/124") as edit:
+        with patch("github_inventory.GitHubInventory.edit", return_value={"id": "test-operation", "code": "TEST1026"}) as edit:
             app = self.open_app()
             app.radio[0].set_value("Edit").run()
             app.selectbox(key="edit_product_choice").select(self.code_for("DCACTMOT")).run()
@@ -388,7 +422,7 @@ class AppTests(unittest.TestCase):
 
     def test_edit_finds_shared_bag_and_submits_the_selected_products_stock(self):
         self.configure_forms()
-        with patch("github_inventory.GitHubInventory.propose_edit", return_value="https://github.com/DeltaLabo/inventory/pull/999") as edit:
+        with patch("github_inventory.GitHubInventory.edit", return_value={"id": "test-operation", "code": "TEST1026"}) as edit:
             app = self.open_app()
             app.radio[0].set_value("Edit").run()
             app.selectbox(key="edit_filter_box").set_value("A").run()

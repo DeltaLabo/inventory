@@ -219,11 +219,6 @@ class GitHubInventory:
         })
         return result["sha"]
 
-    def _pull_request(self, branch):
-        owner = self.repository.split("/")[0]
-        prs = self._request("GET", "/pulls", params={"head": f"{owner}:{branch}", "state": "all", "per_page": 1})
-        return prs[0] if prs else None
-
     def _reserve_product_code(self, parent, occupied):
         # An atomic Git ref creation arbitrates collisions between concurrent
         # submissions, including IDs on PRs that have not been merged yet.
@@ -240,78 +235,101 @@ class GitHubInventory:
                 occupied.add(code)
         raise ValueError("Could not reserve an unused product ID. Please try again.")
 
-    def propose_addition(self, request_id, item, quantity, location, sublocation, person, project="", existing_code=None):
+    def add(self, request_id, item, quantity, location, sublocation, person, project="", existing_code=None):
+        product = {name: str(item.get(name, "")).strip() for name in DETAIL_COLUMNS if name != "code"}
+        if existing_code is None:
+            for name in ("description", "type", "subtype"):
+                required(product[name], name.title())
+        submission = {
+            "action": "addition", "item": product if existing_code is None else None,
+            "quantity": positive_integer(quantity), "location": required(location, "Box", 80),
+            "sublocation": required(sublocation, "Bag", 80), "person": required(person, "Recorded by", 100),
+            "project": str(project).strip()[:300], "existing_code": existing_code,
+        }
+        return self._save_change(request_id, submission)
+
+    def edit(self, request_id, code, original_item, updated_item, person, reason,
+             original_stock=None, updated_stock=None):
+        if original_stock and "available" in original_stock:
+            raise ValueError("The stock format changed. Refresh the page before editing quantities.")
+        submission = {
+            "action": "edit", "code": required(code, "Product code", 80),
+            "original_item": {name: str(value).strip() for name, value in original_item.items()},
+            "updated_item": {name: str(value).strip() for name, value in updated_item.items()},
+            "person": required(person, "Recorded by", 100), "reason": required(reason, "Reason for correction"),
+            "original_stock": {name: str(value).strip() for name, value in original_stock.items()} if original_stock else None,
+            "updated_stock": {name: str(value).strip() for name, value in updated_stock.items()} if updated_stock is not None else None,
+        }
+        return self._save_change(request_id, submission)
+
+    def _save_change(self, request_id, submission):
+        from request_application import request_changes
+
         operation = UUID(request_id).hex
-        branch = f"inventory/add-{operation}"
-        quantity = positive_integer(quantity)
-        location = required(location, "Box", 80)
-        sublocation = required(sublocation, "Bag", 80)
-        person = required(person, "Recorded by", 100)
-        project = str(project).strip()[:300]
-        if self.head(branch, optional=True):
-            previous = self._pull_request(branch)
-            if previous:
-                return previous["html_url"]
-            # Recover a branch saved before a PR-creation timeout.
-        else:
+        receipt_path = f"requests/{operation}.json"
+        code = submission.get("existing_code") or submission.get("code")
+        for attempt in range(5):
             parent = self.head()
-            detail_columns, details = read_rows(self.read_file("details.csv", parent), DETAIL_COLUMNS)
-            location_columns, locations = read_rows(self.read_file("locations.csv", parent), LOCATION_COLUMNS)
-            changes = {}
-            if existing_code:
-                product = unique_product(details, existing_code)
-                code = product["code"].strip()
+            previous = self.read_file(receipt_path, parent, optional=True)
+            if previous is not None:
+                saved = json.loads(previous)
+                if saved.get("schema_version") != 3:
+                    raise ValueError("This operation belongs to an older request. Start another operation; its stock will not be counted twice.")
+                if saved.get("submission") != submission:
+                    raise ValueError("This operation was already saved with different details. Start another operation.")
+                return saved["result"]
+            details_text = self.read_file("details.csv", parent)
+            locations_text = self.read_file("locations.csv", parent)
+            if submission["action"] == "addition":
+                columns, details = read_rows(details_text, DETAIL_COLUMNS)
+                _, locations = read_rows(locations_text, LOCATION_COLUMNS)
+                if code is None:
+                    code = self._reserve_product_code(parent, {row["code"].strip() for row in details + locations})
+                product = None
+                if submission["existing_code"] is None:
+                    product = dict.fromkeys(columns, "") | submission["item"] | {"code": code}
+                change = {"id": operation, "action": "addition", "code": code,
+                          **{name: submission[name] for name in ("quantity", "location", "sublocation", "person", "project", "existing_code")},
+                          "item": product}
             else:
-                product = {name: str(item.get(name, "")).strip() for name in detail_columns}
-                for name, label in (("description", "Description"), ("type", "Type"), ("subtype", "Subtype")):
-                    product[name] = required(product[name], label)
-                code = self._reserve_product_code(parent, {row["code"].strip() for row in details + locations})
-                product["code"] = code
-                details.append(product)
-                changes["details.csv"] = write_rows(detail_columns, details)
-            matches = [row for row in locations if (row["code"].strip(), row["location"].strip(), row["sublocation"].strip()) == (code, location, sublocation)]
-            if len(matches) > 1:
-                raise ValueError("The box and bag combination is duplicated. Review inventory first.")
-            if existing_code and not matches and any(row["code"].strip() == code for row in locations):
-                raise ValueError("The product box or bag changed. Refresh inventory before adding units.")
-            if matches:
-                units = stock_units(matches[0])
-                matches[0]["units"] = str(units + quantity)
-            else:
-                locations.append(dict.fromkeys(location_columns, "") | {
-                    "code": code, "location": location, "sublocation": sublocation,
-                    "units": str(quantity),
-                })
-            changes["locations.csv"] = write_rows(location_columns, locations)
-            changes[f"requests/{operation}.json"] = json.dumps({
-                "id": operation, "code": code, "quantity": quantity,
-                "location": location, "sublocation": sublocation,
-                "person": person, "project": project,
+                if submission["original_item"].get("code") != code:
+                    raise ValueError("The original product ID does not match the selected product.")
+                audit = {}
+                for name, value in submission["updated_item"].items():
+                    if name not in EDITABLE_FIELDS:
+                        raise ValueError("The product ID cannot be edited.")
+                    before = submission["original_item"].get(name, "")
+                    if value != before:
+                        audit[name] = {"before": before, "after": value}
+                stock_audit = {}
+                if submission["updated_stock"] is not None:
+                    original = submission["original_stock"]
+                    if not original or original.get("code") != code:
+                        raise ValueError("Select the original box and bag for the product.")
+                    for name, value in submission["updated_stock"].items():
+                        if name not in ("location", "sublocation", "units"):
+                            raise ValueError("The product ID cannot be edited.")
+                        if value != original[name]:
+                            stock_audit[name] = {"before": original[name], "after": value}
+                change = {"id": operation, "action": "edit", "code": code, "person": submission["person"],
+                          "reason": submission["reason"], "product_changes": audit, "stock_changes": stock_audit,
+                          "original_location": submission["original_stock"]}
+            changes = request_changes(change, details_text, locations_text)
+            result = {"id": operation, "code": code, "action": submission["action"]}
+            if submission["action"] == "addition":
+                result["quantity"] = submission["quantity"]
+            changes[receipt_path] = json.dumps({
+                "schema_version": 3, "status": "applied", "id": operation,
+                "saved_at": datetime.now(timezone.utc).isoformat(),
+                "submission": submission, "request": change, "result": result,
             }, ensure_ascii=False, indent=2) + "\n"
-            commit = self._commit(parent, changes, f"Propose addition of {quantity} units: {code}")
+            commit = self._commit(parent, changes, f"Save inventory {submission['action']} {operation}: {code}")
             try:
-                self._request("POST", "/git/refs", payload={"ref": f"refs/heads/{branch}", "sha": commit})
+                self._request("PATCH", f"/git/refs/heads/{quote(self.branch, safe='/')}", payload={"sha": commit, "force": False})
+                return result
             except Conflict:
-                previous = self._pull_request(branch)
-                if previous:
-                    return previous["html_url"]
-                raise
-        # The persisted request is authoritative when recovering a previous attempt.
-        branch_head = self.head(branch)
-        saved = json.loads(self.read_file(f"requests/{operation}.json", branch_head))
-        result = self._request("POST", "/pulls", payload={
-            "title": f"Inventory addition: {saved['code']} (+{saved['quantity']})",
-            "head": branch, "base": self.branch,
-            "body": (
-                f"Addition requested by {saved['person']}.\n\n"
-                f"- Product: `{saved['code']}`\n- Quantity: {saved['quantity']}\n"
-                f"- Box: {saved['location']} / bag: {saved['sublocation']}\n"
-                f"- Project or note: {saved['project'] or 'Not specified'}\n\n"
-                "Stock is added when this pull request is merged. "
-                "If conflicts occur, review current stock counts before merging."
-            ),
-        })
-        return result["html_url"]
+                if attempt == 4:
+                    raise
 
     def withdraw(self, request_id, code, location, sublocation, quantity, person, project="", *, assistant_id=None):
         operation = UUID(request_id).hex
@@ -364,90 +382,3 @@ class GitHubInventory:
                 if attempt == 2:
                     raise
         raise GitHubError("Could not save the withdrawal. Please try again.")
-
-    def propose_edit(self, request_id, code, original_item, updated_item, person, reason,
-                     original_stock=None, updated_stock=None):
-        operation = UUID(request_id).hex
-        branch = f"inventory/edit-{operation}"
-        person = required(person, "Recorded by", 100)
-        reason = required(reason, "Reason for correction")
-        if self.head(branch, optional=True):
-            previous = self._pull_request(branch)
-            if previous:
-                return previous["html_url"]
-        else:
-            parent = self.head()
-            columns, details = read_rows(self.read_file("details.csv", parent), DETAIL_COLUMNS)
-            product = unique_product(details, code)
-            changes, audit = {}, {}
-            for name, value in updated_item.items():
-                if name not in EDITABLE_FIELDS:
-                    raise ValueError("The product ID cannot be edited.")
-                value = str(value).strip()
-                original = str(original_item.get(name, "")).strip()
-                if value == original:
-                    continue
-                if product[name].strip() != original:
-                    raise ValueError("The record changed after you opened the form. Select the product again before editing.")
-                audit[name] = {"before": product[name], "after": value}
-                product[name] = value
-            if audit:
-                for name, label in (("description", "Description"), ("type", "Type"), ("subtype", "Subtype")):
-                    required(product[name], label)
-                changes["details.csv"] = write_rows(columns, details)
-            stock_audit = {}
-            if updated_stock is not None:
-                if original_stock and "available" in original_stock:
-                    raise ValueError("The stock format changed. Refresh the page before editing quantities.")
-                if not original_stock or original_stock.get("code") != code:
-                    raise ValueError("Select the original box and bag for the product.")
-                location_columns, locations = read_rows(self.read_file("locations.csv", parent), LOCATION_COLUMNS)
-                key = (code, original_stock["location"], original_stock["sublocation"])
-                matches = [row for row in locations if tuple(row[name].strip() for name in ("code", "location", "sublocation")) == key]
-                if len(matches) != 1:
-                    raise ValueError("The box and bag combination changed or is duplicated. Review inventory first.")
-                row = matches[0]
-                for name, value in updated_stock.items():
-                    if name not in ("location", "sublocation", "units"):
-                        raise ValueError("The product ID cannot be edited.")
-                    value = str(value).strip()
-                    if value == str(original_stock[name]).strip():
-                        continue
-                    if row[name].strip() != str(original_stock[name]).strip():
-                        raise ValueError("Stock changed after you opened the form. Select the product again before editing.")
-                    stock_audit[name] = {"before": row[name], "after": value}
-                    row[name] = value
-                if stock_audit:
-                    required(row["location"], "Box", 80)
-                    required(row["sublocation"], "Bag", 80)
-                    stock_units(row)
-                    destination = (code, row["location"].strip(), row["sublocation"].strip())
-                    if any(other is not row and tuple(other[name].strip() for name in ("code", "location", "sublocation")) == destination for other in locations):
-                        raise ValueError("The product already has stock in the destination box and bag; stock counts cannot be merged automatically.")
-                    changes["locations.csv"] = write_rows(location_columns, locations)
-            if not changes:
-                raise ValueError("There are no changes to submit.")
-            changes[f"requests/{operation}.json"] = json.dumps({
-                "id": operation, "action": "edit", "code": code, "person": person,
-                "reason": reason, "product_changes": audit, "stock_changes": stock_audit,
-                "original_location": original_stock,
-            }, ensure_ascii=False, indent=2) + "\n"
-            commit = self._commit(parent, changes, f"Propose inventory correction: {code}")
-            try:
-                self._request("POST", "/git/refs", payload={"ref": f"refs/heads/{branch}", "sha": commit})
-            except Conflict:
-                previous = self._pull_request(branch)
-                if previous:
-                    return previous["html_url"]
-                raise
-        saved = json.loads(self.read_file(f"requests/{operation}.json", self.head(branch)))
-        result = self._request("POST", "/pulls", payload={
-            "title": f"Inventory correction: {saved['code']}", "head": branch, "base": self.branch,
-            "body": (
-                f"Correction requested by {saved['person']}.\n\n"
-                f"- Product: `{saved['code']}`\n- Reason: {saved['reason']}\n\n"
-                "The product ID is unchanged. The request record includes previous and proposed values. "
-                "Review and merge to apply. If stock conflicts occur, preserve later withdrawals."
-            ),
-        })
-        return result["html_url"]

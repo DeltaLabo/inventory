@@ -1,7 +1,7 @@
 # Delta LAB Inventory
 
-A simple Streamlit inventory with public browsing, additions and corrections
-submitted for approval, and immediate withdrawals. The interface and documentation
+A simple Streamlit inventory with public browsing and immediate password-protected
+additions, corrections and withdrawals. The interface and documentation
 are in English. GitHub stores the data; no separate database or server is required.
 
 Live app: [Delta LAB Inventory](https://deltalab-inventory.streamlit.app/).
@@ -24,12 +24,12 @@ Streamlit Cloud. CSV paths are resolved relative to the source files.
   and optionally view product images.
 - **Add:** use the addition password to register a new product or restock an
   existing one. Enter the quantity and the person recording the addition.
-  New products receive a permanent ID automatically. A GitHub pull request is
-  created; stock changes only after it is approved and **merged**.
+  New products receive a permanent ID automatically. **Save addition** updates
+  stock immediately and records the operation in GitHub. No pull request or approval is needed.
 - **Edit:** use the addition password to correct an existing product's description,
   classification, manufacturer, model or specifications. Enable **Correct box,
   bag or quantities** to correct those fields. Enter who recorded the correction
-  and why. The ID stays fixed. Corrections also require a merged pull request.
+  and why. The ID stays fixed. **Save changes** applies the correction immediately.
   Find the record with **Find in box** and **Find in bag**. Either filter can be
   left on All; bag numbers sort numerically and match zero-padded labels such as
   `01` and `1` without changing the stored labels. The matching contents appear
@@ -92,16 +92,16 @@ The CSV and requester/project information are public, like the inventory reposit
 The legacy `to_buy.csv` is independent and is not automatically imported, since its
 old rows lack project and requester information.
 
-For a new product, **Type** and **Subtype** are dropdowns populated from the approved
+For a new product, **Type** and **Subtype** are dropdowns populated from the saved
 catalog. Subtypes depend on the selected type. Choose **Create new…** to enter a
-missing type or subtype. New choices become shared options after the addition is
-merged. **Manufacturer** is optional: search existing names or type a new name
+missing type or subtype. New choices become shared options when the addition is
+saved. **Manufacturer** is optional: search existing names or type a new name
 and press Enter.
 
 **Box** also supports searching existing boxes or entering a new one with Enter.
 **Bag** is a nonnegative integer. An occupied bag produces a warning that allows
 you to continue: different products can share a bag while retaining separate IDs.
-New boxes become shared options after the addition is merged.
+New boxes become shared options when the addition is saved.
 
 When restocking an existing product, its box and bag are reused automatically.
 If several combinations are already registered, choose among those. A new box
@@ -124,12 +124,12 @@ invalid balances or insufficient stock. Other inventory remains available.
 ## Enable the protected forms
 
 Create a fine-grained GitHub token limited to `DeltaLabo/inventory`, with
-**Contents: Read and write** and **Pull requests: Read and write** permissions.
-Its account needs access to create branches, pull requests and ID reservation
-tags, and update the configured inventory branch. A repository deploy key does
+**Contents: Read and write** permission. Its account needs access to create ID
+reservation tags and update the configured inventory branch. Pull-request permission
+is no longer required; an existing token with that permission will still work. A repository deploy key does
 not replace this token: the app uses the GitHub API.
 
-Repository rules must permit the immediate withdrawal commits. If every change
+Repository rules must permit immediate inventory commits. If every change
 to `main` must go through a pull request, adjust the deployment or workflow first.
 
 In the Streamlit app settings, add these entries under **Secrets** using your own
@@ -154,7 +154,7 @@ Without a token, Browse uses the local CSV snapshot and protected forms are
 disabled. With a token, the app reads the configured GitHub branch and caches a
 snapshot for 15 seconds. **Refresh stock** clears that read cache and fetches
 GitHub again; it does not change quantities or record movements. A successful
-withdrawal also clears the cache. The cache lifetime applies to the next read;
+addition, edit or withdrawal also clears the cache. The cache lifetime applies to the next read;
 the screen does not poll or refresh automatically in the background.
 If GitHub cannot be read, the app shows the local snapshot with a warning and
 disables writes.
@@ -166,18 +166,19 @@ After success, use **Record another addition**, **Record another withdrawal** or
 another session starts new requests: check the records before repeating an operation
 whose outcome is unknown.
 
-## Review additions and corrections
+## Saving additions and corrections
 
-Follow the link returned by the app to review the pull request. Check the product
-details, person recording it, box, bag and quantities; approve and merge to accept.
-Use restocking for more units of an existing product so its ID is retained.
+The addition password authorizes immediate additions and edits. Check the product,
+box, bag and quantity before saving. The confirmation means the data and audit
+receipt have been committed together. There is no PR, owner-approval step or
+GitHub Action. Use restocking for more units of an existing product so its ID is retained.
 
 New product IDs contain **four random uppercase letters and four digits**, for
 example `KQZT1026`. The digits indicate the month and year the ID was assigned in
 Costa Rica (`1026` means October 2026), not the purchase or manufacturing date.
 The ID stays fixed when details change or a new month begins. The app checks existing
 codes and atomically reserves a GitHub tag `inventory-ids/<code>` to avoid collisions
-between pending or simultaneous submissions. Keep these tags; reserved IDs are
+between simultaneous submissions or previously reserved IDs. Keep these tags; reserved IDs are
 never reused. Request and movement IDs are separate UUIDs.
 
 On October 22, 2026, 186 active codes were migrated to this format, retaining the
@@ -186,19 +187,24 @@ references for searching and image lookup. Similar codes were not merged. Nine
 stock records without catalog entries received separate incomplete catalog records.
 All 177 stock rows, boxes, bags and quantities were preserved.
 
-Addition proposals save catalog/stock changes on a separate branch and a receipt
-in `requests/<id>.json`. They do not change `main` until merged. A closed, unmerged
-request does not add stock. If other changes affect the same stock row, resolve
-the merge conflict against current balances, adding the requested units without
-replacing later withdrawals with an old balance.
+Each addition or edit is calculated against the latest GitHub commit, not a CSV
+snapshot from when the form was opened. The app commits the affected CSVs and
+`requests/<uuid>.json` in one atomic update. Non-forced updates retry concurrent
+changes against fresh balances, so simultaneous additions and withdrawals are
+preserved. A receipt records who made the change, its target and quantity or
+before/after fields, and a UTC timestamp. Retrying the same operation after an
+uncertain response recovers its receipt without adding stock twice. Changed details
+under an already-saved operation ID are rejected.
 
-Corrections use `inventory/edit-<id>` branches. Receipts include the previous and
-proposed values and a required reason. Only fields changed in the form are replaced;
-unchanged fields are retained. The app compares changed fields against the latest
-data before creating the proposal. If they have changed since the form was opened,
-select the product again and review the updated values. IDs cannot be changed and
-stock rows cannot be merged automatically. Check later withdrawals when resolving
-any merge conflict involving quantities.
+Corrections replace only fields actually changed in the form. The latest values
+of those fields must still match the original snapshot. If another person changed
+one of them, select the product again and review the updated data. Unmodified fields,
+including intervening withdrawals during a location-only correction, are retained.
+IDs cannot be changed and stock rows cannot be merged automatically.
+
+The earlier PR workflow was retired at the user's request after its pending
+additions had been merged. Its branches and receipts remain in Git history. New
+operations do not create review branches, merge CSV snapshots or require automation.
 
 ## Data files and validation
 
@@ -220,7 +226,9 @@ any merge conflict involving quantities.
 - `movements.csv`: created in GitHub on the first withdrawal. It records the request
   ID, UTC timestamp, product, box, bag, quantity, person, project and remaining balance.
   It is committed atomically with the stock update.
-- `requests/`: receipts for additions and corrections, incorporated when each PR merges.
+- `requests/`: permanent audit receipts for additions and corrections. New schema-3
+  receipts are saved atomically with their stock/catalog changes and marked applied.
+  Older receipts from merged PRs remain historical and are never replayed.
 
 The single-quantity migration used each old `available` value as the new `units`,
 preserving remaining balances, zeroes, product IDs and box/bag labels. It did not
@@ -261,8 +269,9 @@ is still needed. Update the balances and provisional notes after confirmation.
 
 The app never writes inventory CSVs to Streamlit's temporary disk. GitHub stores
 all changes. Withdrawals recheck the latest balance, affect one box/bag and retry
-concurrent updates without forcing Git history. Additions and corrections use
-independent review branches. These operations do not rewrite historical withdrawals.
+concurrent updates without forcing Git history. Additions and corrections use the
+same direct, atomic approach with audit receipts. These operations do not rewrite
+historical withdrawals.
 
 ## Images
 
@@ -279,7 +288,7 @@ python -m unittest discover -s tests -v
 ```
 
 Tests mock GitHub and never submit real pull requests or stock movements. They cover
-passwords, forms, approval, retries and concurrent withdrawals; category creation,
+passwords, forms, immediate saving, retries and concurrent writes; category creation,
 manufacturer and box suggestions, nonblocking occupied-bag warnings, automatic
 restocking locations, random ID reservations, legacy searches/images, and provisional
 count warning compatibility.
@@ -294,3 +303,21 @@ history as recorded. Previous application versions remain in Git history.
 Configuration references: [Streamlit secrets](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/secrets-management),
 [GitHub trees](https://docs.github.com/en/rest/git/trees),
 [GitHub references](https://docs.github.com/en/rest/git/refs).
+
+## Private assistant directory
+
+Withdrawals select a registered assistant from `DeltaLabo/administration`, a private
+repository. The app reads only ID and full name from `data/asistentes.csv`, caches
+those fields for five minutes, and validates the selection before saving. Use
+**Refresh assistant list** for changes. If the directory cannot be read or the
+selection is invalid, the withdrawal is blocked; public browsing remains available.
+New movements record `assistant_id` alongside the name. Old names and blank IDs
+remain unchanged. A dropdown prevents spelling errors; it does not independently
+authenticate a person using the shared password.
+
+Add `ADMINISTRATION_TOKEN` with **Contents: Read** on `DeltaLabo/administration`
+to inventory's Streamlit Secrets. Optional `ADMINISTRATION_REPOSITORY` and
+`ADMINISTRATION_BRANCH` default to `DeltaLabo/administration` and `main`. Without a
+separate token, the app tries `GITHUB_TOKEN`, which must then also have access to
+the private administration repository. Contact/banking data is not copied or cached.
+This read-only directory access is separate from inventory's Contents write access.

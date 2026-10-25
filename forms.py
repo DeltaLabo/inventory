@@ -45,8 +45,9 @@ def show_completed(kind):
     if result is None:
         return False
     if kind in ("addition", "edit"):
-        st.success("Request submitted. Changes take effect after the pull request is approved and merged.")
-        st.link_button("View pull request on GitHub", result)
+        st.success("Addition saved. Stock is updated immediately." if kind == "addition" else "Changes saved. Inventory is updated immediately.")
+        if isinstance(result, dict):
+            st.caption(f"Product: {result['code']} · Record: {result['id']}")
     elif kind == "purchase":
         st.success("Purchase request recorded. It is now included in the quotation list.")
     else:
@@ -115,7 +116,7 @@ def addition_storage(locations, existing_code=None):
     location = st.selectbox(
         "Box", boxes, index=None, accept_new_options=True,
         placeholder="Search for or enter a box",
-        help="Choose an existing box or type a new one and press Enter. It becomes available after the addition is approved and merged.",
+        help="Choose an existing box or type a new one and press Enter. It becomes available after saving the addition.",
         key="addition_field_location",
     ) or ""
     compartment = st.number_input(
@@ -132,9 +133,9 @@ def addition_storage(locations, existing_code=None):
     return location, sublocation
 
 
-def addition_form(client, details, locations, password):
+def addition_form(client, details, locations, password, on_saved=None):
     st.subheader("Add to inventory")
-    st.caption("Complete the details; new product IDs are assigned automatically. Additions require approval.")
+    st.caption("New product IDs are assigned automatically. Your addition is saved immediately using the addition password.")
     if show_completed("addition"):
         return
     if client is None or not password:
@@ -154,7 +155,7 @@ def addition_form(client, details, locations, password):
     else:
         # Outside the form so subtypes update immediately when the type changes.
         classification = addition_classification(details)
-        st.caption("Use “Create new…” if an option is missing. It joins the catalog after the addition is approved and merged.")
+        st.caption("Use “Create new…” if an option is missing. It joins the catalog when the addition is saved.")
     storage = addition_storage(locations, existing_code)
     if storage is None:
         return
@@ -178,19 +179,21 @@ def addition_form(client, details, locations, password):
         person = st.text_input("Recorded by (name or initials)", key="addition_field_person", max_chars=100)
         project = st.text_input("Project or note (optional)", key="addition_field_project", max_chars=300)
         entered = st.text_input("Addition password", type="password", key="addition_field_password")
-        submitted = st.form_submit_button("Submit for approval")
+        submitted = st.form_submit_button("Save addition")
     if submitted:
         if not password_matches(entered, password):
             st.error("Incorrect password.")
             return
         try:
-            with st.spinner("Submitting request to GitHub…"):
-                url = client.propose_addition(request_id, item, quantity, location, sublocation, person, project, existing_code)
+            with st.spinner("Saving addition in GitHub…"):
+                result = client.add(request_id, item, quantity, location, sublocation, person, project, existing_code)
         except (ValueError, GitHubError) as error:
             st.error(str(error))
             return
-        st.session_state["addition_result"] = url
+        st.session_state["addition_result"] = result
         st.session_state.pop("addition_field_password", None)
+        if on_saved:
+            on_saved()
         st.rerun()
 
 
@@ -259,9 +262,9 @@ def withdrawal_form(client, details, locations, password, on_saved):
         st.rerun()
 
 
-def edit_form(client, details, locations, password):
+def edit_form(client, details, locations, password, on_saved=None):
     st.subheader("Edit product")
-    st.caption("Correct an existing record. Its ID stays unchanged; changes require approval.")
+    st.caption("Correct an existing record. Its ID stays unchanged; changes are saved immediately using the addition password.")
     if show_completed("edit"):
         return
     if client is None or not password:
@@ -356,17 +359,19 @@ def edit_form(client, details, locations, password):
         person = st.text_input("Recorded by (name or initials)", key="edit_field_person", max_chars=100)
         reason = st.text_input("Reason for correction", key="edit_field_reason", max_chars=300)
         entered = st.text_input("Addition password", type="password", key="edit_field_password")
-        submitted = st.form_submit_button("Submit correction for approval")
+        submitted = st.form_submit_button("Save changes")
     if submitted:
         if not password_matches(entered, password):
             st.error("Incorrect password.")
             return
         try:
-            with st.spinner("Submitting correction to GitHub…"):
-                url = client.propose_edit(request_id, code, original_item, updated_item, person, reason, original_stock, updated_stock)
+            with st.spinner("Saving changes in GitHub…"):
+                result = client.edit(request_id, code, original_item, updated_item, person, reason, original_stock, updated_stock)
         except (ValueError, GitHubError) as error:
             st.error(str(error))
             return
-        st.session_state["edit_result"] = url
+        st.session_state["edit_result"] = result
         st.session_state.pop("edit_field_password", None)
+        if on_saved:
+            on_saved()
         st.rerun()

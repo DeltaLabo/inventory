@@ -92,14 +92,14 @@ def main():
         st.stop()
     action = st.radio("What would you like to do?", ("Browse", "Add", "Edit", "Withdraw", "Purchases", "History"), horizontal=True)
     if action == "Add":
-        addition_form(client, details, locations, config["add_password"])
+        addition_form(client, details, locations, config["add_password"], live_data.clear)
     elif action == "Edit":
         issues = validate_data(details, locations)
         if issues:
             with st.expander(f"Data to review ({len(issues)})"):
                 for issue in issues:
                     st.write(f"• {issue}")
-        edit_form(client, details, locations, config["add_password"])
+        edit_form(client, details, locations, config["add_password"], live_data.clear)
     elif action == "Withdraw":
         def on_withdrawal_saved():
             live_data.clear()

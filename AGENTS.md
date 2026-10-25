@@ -1,12 +1,13 @@
 # Inventory context
 
 This is a small Streamlit inventory with public browsing, password-protected
-additions and edits via GitHub PR, and immediate withdrawals via atomic GitHub commits.
+additions, edits and withdrawals via immediate atomic GitHub commits.
 Keep it simple: no separate database or server. `app.py` is the only application
 entry point; `inventory.py` has import-safe CSV helpers and validation,
 `forms.py` holds the inventory forms, `purchases.py` holds the purchase list/form
 and quotation export, `withdrawal_history.py` holds project withdrawal reports,
-and `github_inventory.py` handles GitHub.
+`request_application.py` calculates additions/edits without writes, and
+`github_inventory.py` handles GitHub.
 UI, messages, maintained descriptive inventory text and user documentation are English.
 Preserve identifiers, brand names, URLs, physical labels and historical audit entries.
 
@@ -27,8 +28,9 @@ in America/Costa_Rica, e.g. KQZT1026. IDs remain fixed after assignment. Check c
 catalog/stock codes and atomically reserve `refs/tags/inventory-ids/<code>` to avoid
 collisions with pending/concurrent submissions. Do not delete these reservation tags.
 Submission/movement IDs remain UUIDs; they are separate from product IDs.
-Existing products reuse their original IDs. Additions create a branch and PR;
-only the owner merges them. Withdrawals change exactly one stock location and append
+Existing products reuse their original IDs. The user explicitly replaced approval
+with immediate saving: additions and edits use the addition password, write directly
+to the latest configured branch, and create no PRs or GitHub Actions. Withdrawals change exactly one stock location and append
 `movements.csv` in one commit; use non-forced ref updates and re-read after conflicts.
 Submission IDs make retries idempotent. Never retry by allocating a new ID after an
 uncertain write. Reject ambiguous products/locations and invalid or insufficient stock.
@@ -42,7 +44,7 @@ Keep network calls optional, bounded, and cached.
 Tests must mock GitHub; never submit real PRs or stock movements as a test.
 
 The top-level actions are Browse, Add, Edit, Withdraw, Purchases, History. Edits reuse the
-addition password and propose changes on `inventory/edit-<id>` branches. Prefill the
+addition password and save changes immediately with atomic audit receipts. Prefill the
 form and freeze its original snapshot until another product/location is selected.
 Compare only changed fields with the latest data before proposing an edit; preserve
 unmodified fields and never overwrite intervening withdrawals. Record before/after
@@ -68,16 +70,16 @@ reference. Historical/auxiliary CSVs intentionally retain old references and are
 not authoritative stock sources. Complete stub descriptions only from user evidence.
 
 For new additions, Type and Subtype are dependent dropdowns populated from the
-approved catalog, with "Create new…" text inputs for new choices. Render these
+saved catalog, with "Create new…" text inputs for new choices. Render these
 outside the submission form to refresh subtypes immediately, and clear the selected
 subtype when the type changes. New categories become shared choices only after
-the addition PR is merged; do not add a separate taxonomy service or database.
+the addition is saved; do not add a separate taxonomy service or database.
 Manufacturer on new additions is an optional searchable selectbox with
-`accept_new_options=True`, using approved nonempty manufacturer names as suggestions.
+`accept_new_options=True`, using saved nonempty manufacturer names as suggestions.
 Deduplicate suggestions case-insensitively without modifying existing catalog rows.
 Box on new products or first-time stock entry is a searchable selectbox with
-`accept_new_options=True`, populated from nonempty approved stock locations.
-New boxes become shared suggestions after merging the addition. Preserve existing
+`accept_new_options=True`, populated from nonempty saved stock locations.
+New boxes become shared suggestions after saving the addition. Preserve existing
 box labels and keep compartment entry separate.
 When a new box/bag must be assigned, Bag is a nonnegative integer input. Place both
 outside the submission form so an existing-occupancy warning updates immediately.
@@ -173,7 +175,27 @@ Filter the product dropdown to matching unique catalog IDs and scope stock-slot
 selection to the matching box/bag, especially for products stored in several places.
 Enable stock correction by default when filtering by storage. Reset stale product,
 slot and form state when the target changes while preserving edit concurrency checks
-and approval requirements. With both filters cleared, unassigned catalog records
+and immediate-save authorization. With both filters cleared, unassigned catalog records
 must remain editable. Do not infer identities, merge rows or change stock as a
 side effect of browsing these filters. Cover shared bags and multiple stock slots
 with mocked UI tests.
+
+Immediate-write workflow supersedes all earlier PR-approval descriptions. New
+additions and edits use GitHubInventory.add/edit, calculated against current data,
+with schema-3 requests/UUID.json receipts and the affected CSVs in one commit.
+Non-forced branch updates retry concurrent writes. The same operation UUID and
+normalized payload recover an uncertain completed save without double counting;
+changed payloads under a saved UUID are rejected. Preserve old merged PR receipts;
+never replay them or assume that missing schema-3 metadata means unapplied stock.
+Stock and catalog reads are invalidated after successful additions and edits.
+New product ID reservation tags remain necessary for concurrent issuance; keep
+historical tags too. No PR permission or workflow is required for new writes.
+Use Contents Read/write for inventory and separate read-only administration access.
+
+Assistant selections for withdrawals come from the private administration CSV via
+authenticated API access. Read/cache only ID/name, never contact or banking fields.
+The roster cache lasts five minutes with manual refresh. Require a registered ID
+and its matching canonical name on new withdrawals; append assistant_id to the
+ledger while preserving old rows. Existing completed retries can recover without
+roster access. The shared password authorizes the action; selection is not identity
+verification. Tests must mock both repositories and never create real test writes.
