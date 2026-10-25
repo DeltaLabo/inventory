@@ -12,7 +12,7 @@ Follow invoicing's repository layout: helper modules are a `scripts` package,
 source CSVs and ledgers live in `data/`, and all permanent audit receipts live in
 `data/requests/`. GitHub reads and atomic writes use these same repository-relative
 paths; never create parallel root-level copies or replay moved receipts. Shared
-branding lives in `assets/images/`, copied from invoicing, with `logo.png` used by
+branding lives in `assets/images/`, with the approved flat vector `logo.svg` used by
 the app. Product images remain in inventory_pictures. Keep `app.py` at the root
 to preserve the existing Streamlit deployment entry point. Local paths are anchored
 by `scripts/paths.py`; run validation with `python -m scripts.inventory`.
@@ -46,7 +46,8 @@ uncertain write. Reject ambiguous products/locations and invalid or insufficient
 `data/usage_log.csv` is historical only. `data/not_found.csv` and `data/smd.csv` remain
 independent auxiliary sources. No source-data migration is authorized by inference.
 Cleanup removed unused branding variants and the obsolete PR simulator in tests.
-Keep only the displayed logo in assets; do not recopy unused invoicing images.
+Use the approved flat SVG for the app; preserve original PNG source assets but
+do not recopy unused invoicing image variants.
 The fake GitHub rejects PR operations as unexpected requests. Historical receipts
 and unique auxiliary data are retained even when they are not read by the app.
 
@@ -235,3 +236,8 @@ receipts without assistant_id. Refresh assistant list clears the edit selection.
 Branding: use `DeltaLAB: inventory` for the app title and browser title. Show the
 logo in the page header at 150 CSS pixels wide (responsive on narrow screens),
 not only as the small navigation logo. Preserve stored field keys and source assets.
+
+Streamlit branding uses the approved transparent flat vector logo at
+`assets/images/logo.svg`, displayed at 150 pixels. Use the same SVG in all six
+apps. The shaded variant is a separate design asset, not the app header. Preserve
+existing PNG source assets and document/PDF logo references.

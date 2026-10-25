@@ -26,7 +26,7 @@ The layout follows the DeltaLabo invoicing repository:
 - `scripts/`: application forms, inventory helpers, GitHub persistence and reports.
 - `data/`: source CSVs, stock balances, purchase requests and withdrawal history.
 - `data/requests/`: permanent addition/edit receipts, including historical receipts.
-- `assets/images/`: shared DeltaLabo branding copied from invoicing; `logo.png`
+- `assets/images/`: shared DeltaLAB branding; the approved flat vector `logo.svg`
   is displayed in the app. Product photographs remain in their existing repository.
 - `tests/`: offline application and persistence checks.
 
@@ -339,3 +339,8 @@ to inventory's Streamlit Secrets. Optional `ASSISTANTS_REPOSITORY` and
 separate token, the app tries `GITHUB_TOKEN`, which must then also have access to
 the private assistants repository. Contact/banking data is not copied or cached.
 This read-only directory access is separate from inventory's Contents write access.
+
+Streamlit branding uses the approved transparent flat vector logo at
+`assets/images/logo.svg`, displayed at 150 pixels. Use the same SVG in all six
+apps. The shaded variant is a separate design asset, not the app header. Preserve
+existing PNG source assets and document/PDF logo references.
