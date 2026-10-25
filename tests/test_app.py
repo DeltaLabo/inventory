@@ -369,7 +369,7 @@ class AppTests(unittest.TestCase):
         with patch("github_inventory.GitHubInventory.propose_edit", return_value="https://github.com/DeltaLabo/inventory/pull/124") as edit:
             app = self.open_app()
             app.radio[0].set_value("Edit").run()
-            app.selectbox[0].select(self.code_for("DCACTMOT")).run()
+            app.selectbox(key="edit_product_choice").select(self.code_for("DCACTMOT")).run()
             app.checkbox[0].check().run()
             self.assertEqual(len(app.exception), 0)
             self.assertEqual(app.text_input(key="edit_field_location").value, "A")
@@ -385,6 +385,71 @@ class AppTests(unittest.TestCase):
             self.assertEqual(args[6]["units"], "10")
             self.assertEqual(args[7]["units"], 9)
             self.assertNotIn("available", args[7])
+
+    def test_edit_finds_shared_bag_and_submits_the_selected_products_stock(self):
+        self.configure_forms()
+        with patch("github_inventory.GitHubInventory.propose_edit", return_value="https://github.com/DeltaLabo/inventory/pull/999") as edit:
+            app = self.open_app()
+            app.radio[0].set_value("Edit").run()
+            app.selectbox(key="edit_filter_box").set_value("A").run()
+            app.selectbox(key="edit_filter_bag").set_value("12").run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertIn(app.selectbox(key="edit_product_choice").value, {"GPQM1026", "SINW1026"})
+            table = app.dataframe[0].value
+            self.assertEqual(len(table), 2)
+            self.assertEqual(set(table["Box"]), {"A"})
+            self.assertEqual(set(table["Bag"]), {"12"})
+            self.assertTrue(app.checkbox(key="edit_correct_stock").value)
+            app.selectbox(key="edit_product_choice").set_value("SINW1026").run()
+            self.assertEqual(app.text_input(key="edit_field_location").value, "A")
+            self.assertEqual(app.text_input(key="edit_field_sublocation").value, "12")
+            app.number_input(key="edit_field_units").set_value(3)
+            app.text_input(key="edit_field_person").set_value("Tester")
+            app.text_input(key="edit_field_reason").set_value("Physical count")
+            app.text_input(key="edit_field_password").set_value("test-add")
+            app.button[0].click().run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertEqual(edit.call_args.args[1], "SINW1026")
+            self.assertEqual(edit.call_args.args[6]["sublocation"], "12")
+            self.assertEqual(edit.call_args.args[7]["units"], 3)
+
+    def test_edit_box_filter_switches_stock_slot_without_carrying_previous_form_edits(self):
+        import pandas as pd
+        from inventory import load_data
+
+        self.configure_forms()
+        self.config["token"] = "test-edit-multiple-slots"
+        details, locations = load_data(Path(__file__).resolve().parents[1])
+        code = self.code_for("DCACTMOT")
+        locations = pd.concat([locations, pd.DataFrame([{
+            "code": code, "location": "TESTBOX", "sublocation": "01", "units": "7",
+        }])], ignore_index=True)
+        with patch("github_inventory.GitHubInventory.snapshot", return_value=(details, locations)):
+            app = self.open_app()
+            app.radio[0].set_value("Edit").run()
+            app.selectbox(key="edit_filter_box").set_value("A").run()
+            app.selectbox(key="edit_product_choice").set_value(code).run()
+            app.number_input(key="edit_field_units").set_value(99).run()
+            app.selectbox(key="edit_filter_box").set_value("TESTBOX").run()
+            app.selectbox(key="edit_filter_bag").set_value("1").run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertEqual(app.selectbox(key="edit_product_choice").value, code)
+            self.assertEqual(app.text_input(key="edit_field_location").value, "TESTBOX")
+            self.assertEqual(app.text_input(key="edit_field_sublocation").value, "01")
+            self.assertEqual(app.number_input(key="edit_field_units").value, 7)
+            self.assertEqual(app.selectbox(key="edit_stock_choice").value, ("TESTBOX", "01"))
+
+    def test_edit_can_find_bag_across_boxes_and_clear_filters_for_unassigned_products(self):
+        self.configure_forms()
+        app = self.open_app()
+        app.radio[0].set_value("Edit").run()
+        app.selectbox(key="edit_filter_bag").set_value("12").run()
+        self.assertEqual(len(app.exception), 0)
+        self.assertTrue(app.dataframe[0].value["Bag"].map(lambda value: int(value) == 12).all())
+        app.selectbox(key="edit_filter_bag").set_value(None).run()
+        self.assertEqual(len(app.exception), 0)
+        self.assertFalse(app.checkbox(key="edit_correct_stock").value)
+        self.assertEqual(len(app.dataframe), 0)
 
     def test_migrated_product_finds_legacy_photo_and_remains_searchable_by_old_code(self):
         from unittest.mock import Mock

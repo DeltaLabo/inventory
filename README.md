@@ -30,6 +30,13 @@ Streamlit Cloud. CSV paths are resolved relative to the source files.
   classification, manufacturer, model or specifications. Enable **Correct box,
   bag or quantities** to correct those fields. Enter who recorded the correction
   and why. The ID stays fixed. Corrections also require a merged pull request.
+  Find the record with **Find in box** and **Find in bag**. Either filter can be
+  left on All; bag numbers sort numerically and match zero-padded labels such as
+  `01` and `1` without changing the stored labels. The matching contents appear
+  in a table and the product dropdown contains only those matches. Products sharing
+  a bag remain separate. When a box or bag is selected, stock correction is enabled
+  by default and limited to the matching locations of the selected product. Clear
+  both filters to find catalog records with no registered stock location.
 - **Withdraw:** use the shared withdrawal password, select a product and its box
   and bag, and enter the quantity, project and person recording it. The balance and movement
   are saved immediately in one GitHub commit, without waiting for approval.
