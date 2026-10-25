@@ -249,7 +249,7 @@ class GitHubInventory:
         return self._save_change(request_id, submission)
 
     def edit(self, request_id, code, original_item, updated_item, person, reason,
-             original_stock=None, updated_stock=None):
+             original_stock=None, updated_stock=None, *, assistant_id=None):
         if original_stock and "available" in original_stock:
             raise ValueError("The stock format changed. Refresh the page before editing quantities.")
         submission = {
@@ -260,6 +260,8 @@ class GitHubInventory:
             "original_stock": {name: str(value).strip() for name, value in original_stock.items()} if original_stock else None,
             "updated_stock": {name: str(value).strip() for name, value in updated_stock.items()} if updated_stock is not None else None,
         }
+        if assistant_id is not None:
+            submission["assistant_id"] = required(assistant_id, "Assistant ID", 100)
         return self._save_change(request_id, submission)
 
     def _save_change(self, request_id, submission):
@@ -278,6 +280,8 @@ class GitHubInventory:
                 if saved.get("submission") != submission:
                     raise ValueError("This operation was already saved with different details. Start another operation.")
                 return saved["result"]
+            if submission["action"] == "edit":
+                assistant_name(submission.get("assistant_id"), submission["person"])
             details_text = self.read_file("data/details.csv", parent)
             locations_text = self.read_file("data/locations.csv", parent)
             if submission["action"] == "addition":
@@ -312,6 +316,7 @@ class GitHubInventory:
                         if value != original[name]:
                             stock_audit[name] = {"before": original[name], "after": value}
                 change = {"id": operation, "action": "edit", "code": code, "person": submission["person"],
+                          "assistant_id": submission["assistant_id"],
                           "reason": submission["reason"], "product_changes": audit, "stock_changes": stock_audit,
                           "original_location": submission["original_stock"]}
             changes = request_changes(change, details_text, locations_text)

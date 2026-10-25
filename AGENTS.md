@@ -225,3 +225,9 @@ and its matching canonical name on new withdrawals; append assistant_id to the
 ledger while preserving old rows. Existing completed retries can recover without
 roster access. The shared password authorizes the action; selection is not identity
 verification. Tests must mock both repositories and never create real test writes.
+
+Edit also uses the assistant dropdown for Recorded by. Require the matching
+registered ID/name before new edits and store assistant_id in the audit receipt.
+Do not fall back to free text when the roster fails. Preserve historical names and
+recover already-saved edit retries before accessing the roster, including old
+receipts without assistant_id. Refresh assistant list clears the edit selection.

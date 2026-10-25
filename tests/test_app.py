@@ -300,7 +300,7 @@ class AppTests(unittest.TestCase):
             self.assertEqual(app.dataframe[0].value["Units"].tolist(), ["7", "3"])
             app.radio[0].set_value("Edit").run()
             app.text_input(key="edit_field_description").set_value("Corrected board")
-            app.text_input(key="edit_field_person").set_value("Tester")
+            app.selectbox(key="edit_field_person").set_value("TEST00")
             app.text_input(key="edit_field_reason").set_value("Corrected name")
             app.text_input(key="edit_field_password").set_value("test-add")
             app.button[0].click().run()
@@ -434,7 +434,7 @@ class AppTests(unittest.TestCase):
             before = app.text_input(key="edit_field_description").value
             self.assertTrue(before)
             app.text_input(key="edit_field_description").set_value(before + " corrected")
-            app.text_input(key="edit_field_person").set_value("Intern")
+            app.selectbox(key="edit_field_person").set_value("TEST00")
             app.text_input(key="edit_field_reason").set_value("Verified label")
             app.text_input(key="edit_field_password").set_value("test-take")
             app.button[0].click().run()
@@ -444,6 +444,8 @@ class AppTests(unittest.TestCase):
             self.assertEqual(len(app.exception), 0)
             edit.assert_called_once()
             args = edit.call_args.args
+            self.assertEqual(args[4], "Intern")
+            self.assertEqual(edit.call_args.kwargs["assistant_id"], "TEST00")
             self.assertEqual(args[2]["description"], before)
             self.assertEqual(args[3]["description"], before + " corrected")
             self.assertIn("Changes saved", app.success[0].value)
@@ -452,6 +454,24 @@ class AppTests(unittest.TestCase):
             app.button[0].click().run()
             self.assertEqual(len(app.exception), 0)
             self.assertEqual(app.text_input(key="edit_field_password").value, "")
+
+    def test_edit_requires_assistant_selection_and_blocks_if_the_directory_is_unavailable(self):
+        from scripts.assistants import AssistantDirectoryError
+
+        self.configure_forms()
+        with patch("scripts.github_inventory.GitHubInventory.edit") as edit:
+            app = self.open_app()
+            app.radio[0].set_value("Edit").run()
+            self.assertIsNone(app.selectbox(key="edit_field_person").value)
+            app.text_input(key="edit_field_password").set_value("test-add")
+            app.button[0].click().run()
+            edit.assert_not_called()
+            self.assertIn("Select an assistant", app.error[0].value)
+            with patch("scripts.assistants.load_assistants", side_effect=AssistantDirectoryError("Directory unavailable")):
+                app.run()
+                self.assertEqual(app.error[0].value, "Directory unavailable")
+                self.assertFalse(any(button.label == "Save changes" for button in app.button))
+                edit.assert_not_called()
 
     def test_edit_product_switch_replaces_browser_fields_and_preserves_same_product_draft(self):
         from scripts.inventory import load_data
@@ -464,7 +484,7 @@ class AppTests(unittest.TestCase):
             first = app.selectbox(key="edit_product_choice").value
             app.text_input(key="edit_field_description").set_value("First product draft")
             app.button[0].click().run()
-            app.text_input(key="edit_field_person").set_value("Previous recorder")
+            app.selectbox(key="edit_field_person").set_value("TEST00")
             app.text_input(key="edit_field_reason").set_value("Previous reason")
             app.text_input(key="edit_field_password").set_value("test-add")
             code = self.code_for("DCACTMOT")
@@ -477,7 +497,8 @@ class AppTests(unittest.TestCase):
                 # its keyed field. Check the explicit browser update as well.
                 self.assertTrue(field.proto.set_value)
                 self.assertEqual(field.proto.value, expected[name])
-            for name in ("person", "reason", "password"):
+            self.assertIsNone(app.selectbox(key="edit_field_person").value)
+            for name in ("reason", "password"):
                 self.assertEqual(app.text_input(key=f"edit_field_{name}").value, "")
             app.text_input(key="edit_field_description").set_value("Corrected motor description")
             app.button[0].click().run()
@@ -489,7 +510,7 @@ class AppTests(unittest.TestCase):
                              details.loc[details["code"].eq(first), "description"].item())
             app.selectbox(key="edit_product_choice").select(code).run()
             app.text_input(key="edit_field_description").set_value("Verified motor")
-            app.text_input(key="edit_field_person").set_value("Intern")
+            app.selectbox(key="edit_field_person").set_value("TEST00")
             app.text_input(key="edit_field_reason").set_value("Verified label")
             app.text_input(key="edit_field_password").set_value("test-add")
             app.button[0].click().run()
@@ -510,7 +531,7 @@ class AppTests(unittest.TestCase):
             self.assertEqual(app.number_input(key="edit_field_units").value, 10)
             self.assertEqual(len(app.number_input), 1)
             app.number_input(key="edit_field_units").set_value(9)
-            app.text_input(key="edit_field_person").set_value("Intern")
+            app.selectbox(key="edit_field_person").set_value("TEST00")
             app.text_input(key="edit_field_reason").set_value("Physical count")
             app.text_input(key="edit_field_password").set_value("test-add")
             app.button[0].click().run()
@@ -538,7 +559,7 @@ class AppTests(unittest.TestCase):
             self.assertEqual(app.text_input(key="edit_field_location").value, "A")
             self.assertEqual(app.text_input(key="edit_field_sublocation").value, "12")
             app.number_input(key="edit_field_units").set_value(3)
-            app.text_input(key="edit_field_person").set_value("Tester")
+            app.selectbox(key="edit_field_person").set_value("TEST00")
             app.text_input(key="edit_field_reason").set_value("Physical count")
             app.text_input(key="edit_field_password").set_value("test-add")
             app.button[0].click().run()

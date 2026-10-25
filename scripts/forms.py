@@ -263,6 +263,11 @@ def withdrawal_form(client, details, locations, password, on_saved):
         st.rerun()
 
 
+def refresh_edit_assistants():
+    assistant_directory.refresh_assistants()
+    st.session_state["edit_field_person"] = None
+
+
 def edit_form(client, details, locations, password, on_saved=None):
     st.subheader("Edit product")
     st.caption("Correct an existing record. Its ID stays unchanged; changes are saved immediately using the addition password.")
@@ -270,6 +275,12 @@ def edit_form(client, details, locations, password, on_saved=None):
         return
     if client is None or not password:
         st.info("Editing is not enabled yet.")
+        return
+    try:
+        assistants = dict(assistant_directory.load_assistants())
+    except assistant_directory.AssistantDirectoryError as error:
+        st.error(str(error))
+        st.button("Refresh assistant list", key="edit_refresh_assistants", on_click=refresh_edit_assistants)
         return
     request_id = operation_id("edit")
     eligible = details[~details["code"].duplicated(keep=False)]
@@ -344,10 +355,13 @@ def edit_form(client, details, locations, password, on_saved=None):
             for name in ("location", "sublocation"):
                 st.session_state[f"edit_field_{name}"] = selected_stock[name]
             st.session_state["edit_field_units"] = int(selected_stock["units"])
-        for name in ("person", "reason", "password"):
+        st.session_state["edit_field_person"] = None
+        for name in ("reason", "password"):
             st.session_state[f"edit_field_{name}"] = ""
     original_item = st.session_state["edit_original_item"]
     original_stock = st.session_state["edit_original_stock"]
+    if st.session_state.get("edit_field_person") not in assistants:
+        st.session_state["edit_field_person"] = None
     with st.form("edit_form"):
         updated_item = {}
         for name, label in (
@@ -364,17 +378,24 @@ def edit_form(client, details, locations, password, on_saved=None):
                 "sublocation": st.text_input("Bag", key="edit_field_sublocation", max_chars=80),
                 "units": st.number_input("Units (available now)", min_value=0, step=1, key="edit_field_units"),
             }
-        person = st.text_input("Recorded by (name or initials)", key="edit_field_person", max_chars=100)
+        assistant_id = st.selectbox("Recorded by", list(assistants), index=None,
+                                    placeholder="Search for your name",
+                                    format_func=lambda code: f"{assistants[code]} ({code})",
+                                    key="edit_field_person")
         reason = st.text_input("Reason for correction", key="edit_field_reason", max_chars=300)
         entered = st.text_input("Addition password", type="password", key="edit_field_password")
         submitted = st.form_submit_button("Save changes")
+    st.button("Refresh assistant list", key="edit_refresh_assistants", on_click=refresh_edit_assistants)
     if submitted:
         if not password_matches(entered, password):
             st.error("Incorrect password.")
             return
         try:
             with st.spinner("Saving changes in GitHub…"):
-                result = client.edit(request_id, code, original_item, updated_item, person, reason, original_stock, updated_stock)
+                if assistant_id not in assistants:
+                    raise ValueError("Select an assistant from the directory.")
+                result = client.edit(request_id, code, original_item, updated_item, assistants[assistant_id], reason,
+                                     original_stock, updated_stock, assistant_id=assistant_id)
         except (ValueError, GitHubError) as error:
             st.error(str(error))
             return

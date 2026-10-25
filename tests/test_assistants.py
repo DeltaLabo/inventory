@@ -48,6 +48,22 @@ class AssistantTests(unittest.TestCase):
                     db.withdraw(uuid4().hex, "ITEM0001", "A", "01", 1, name, "Robot", assistant_id=code)
         self.assertEqual(db.refs["main"], "initial")
 
+    def test_edit_requires_a_registered_id_and_name_and_recovers_saved_retries(self):
+        db = MemoryGitHub()
+        original = db.snapshot()[0].iloc[0].to_dict()
+        updated = {"description": "Verified board"}
+        operation = uuid4().hex
+        with patch("scripts.assistants.load_assistants", return_value=(("TEST00", "Intern"),)):
+            for code, name in ((None, "Intern"), ("UNKNOWN", "Intern"), ("TEST00", "Wrong name")):
+                with self.subTest(code=code), self.assertRaises(AssistantDirectoryError):
+                    db.edit(operation, "ITEM0001", original, updated, name, "Checked", assistant_id=code)
+            self.assertEqual(db.refs["main"], "initial")
+            result = db.edit(operation, "ITEM0001", original, updated, "Intern", "Checked", assistant_id="TEST00")
+        parent = db.refs["main"]
+        with patch("scripts.assistants.load_assistants", side_effect=AssertionError("Saved retries must not need directory access")):
+            self.assertEqual(db.edit(operation, "ITEM0001", original, updated, "Intern", "Checked", assistant_id="TEST00"), result)
+        self.assertEqual(db.refs["main"], parent)
+
     def test_old_history_keeps_its_names_and_new_records_add_assistant_ids(self):
         db = MemoryGitHub()
         old = dict.fromkeys(MOVEMENT_COLUMNS, "") | {"id": uuid4().hex, "person": "Old initials", "quantity": "1"}

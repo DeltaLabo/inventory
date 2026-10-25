@@ -203,7 +203,7 @@ class GitHubInventoryTests(unittest.TestCase):
         original = read_rows(self.db.commits["initial"]["files"]["data/details.csv"], DETAIL_COLUMNS)[1][0]
         return self.db.edit(self.request_id, "ITEM0001", original,
                             {"description": "Corrected board"} if updated is None else updated,
-                            "Intern", "Verified label", original_stock, updated_stock)
+                            "Intern", "Verified label", original_stock, updated_stock, assistant_id="TEST00")
 
     def test_new_product_is_saved_atomically_without_pr_or_branch(self):
         before = deepcopy(self.db.main_files)
@@ -280,6 +280,7 @@ class GitHubInventoryTests(unittest.TestCase):
         receipt = json.loads(self.db.main_files[f"data/requests/{self.request_id}.json"])
         self.assertEqual(receipt["request"]["product_changes"]["description"]["before"], "Test board")
         self.assertEqual(receipt["request"]["reason"], "Verified label")
+        self.assertEqual(receipt["request"]["assistant_id"], "TEST00")
 
     def test_edit_quantity_and_location_preserves_other_location(self):
         original = self.stock()[0].copy()

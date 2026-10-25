@@ -48,8 +48,9 @@ The data paths resolve from the checkout, independently of the working directory
   stock immediately and records the operation in GitHub. No pull request or approval is needed.
 - **Edit:** use the addition password to correct an existing product's description,
   classification, manufacturer, model or specifications. Enable **Correct box,
-  bag or quantities** to correct those fields. Enter who recorded the correction
-  and why. The ID stays fixed. **Save changes** applies the correction immediately.
+  bag or quantities** to correct those fields. Select the assistant recording the correction
+  from the administration directory and enter the reason. The ID stays fixed.
+  **Save changes** applies the correction immediately.
   Find the record with **Find in box** and **Find in bag**. Either filter can be
   left on All; bag numbers sort numerically and match zero-padded labels such as
   `01` and `1` without changing the stored labels. The matching contents appear
@@ -323,12 +324,12 @@ Configuration references: [Streamlit secrets](https://docs.streamlit.io/deploy/s
 
 ## Private assistant directory
 
-Withdrawals select a registered assistant from `DeltaLabo/administration`, a private
+Edits and withdrawals select a registered assistant from `DeltaLabo/administration`, a private
 repository. The app reads only ID and full name from `data/asistentes.csv`, caches
 those fields for five minutes, and validates the selection before saving. Use
 **Refresh assistant list** for changes. If the directory cannot be read or the
-selection is invalid, the withdrawal is blocked; public browsing remains available.
-New movements record `assistant_id` alongside the name. Old names and blank IDs
+selection is invalid, the edit or withdrawal is blocked; public browsing remains available.
+New edit receipts and movements record `assistant_id` alongside the name. Old names and blank IDs
 remain unchanged. A dropdown prevents spelling errors; it does not independently
 authenticate a person using the shared password.
 
