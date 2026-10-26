@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "1c53dac2b6a2413181ec74b228905c99",
+  "saved_at": "2026-10-26T16:21:20.509439+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "battery accessories",
+      "subtype": "Battery holder",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Modular Battery holder slot",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 3,
+    "location": "H",
+    "sublocation": "15",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "1c53dac2b6a2413181ec74b228905c99",
+    "action": "addition",
+    "code": "COTW1026",
+    "quantity": 3,
+    "location": "H",
+    "sublocation": "15",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "COTW1026",
+      "type": "battery accessories",
+      "subtype": "Battery holder",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Modular Battery holder slot",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "1c53dac2b6a2413181ec74b228905c99",
+    "code": "COTW1026",
+    "action": "addition",
+    "quantity": 3
+  }
+}
