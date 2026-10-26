@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "0b2e6186c86947bbb1a1192d20240b70",
+  "saved_at": "2026-10-26T18:00:27.565902+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "FPC-2",
+      "manufacturer": "SEEED",
+      "model": "Seeed Studio 2.4GA-02",
+      "description": "Flexible printed circuit antenna",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "D",
+    "sublocation": "19",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "0b2e6186c86947bbb1a1192d20240b70",
+    "action": "addition",
+    "code": "OPDI1026",
+    "quantity": 2,
+    "location": "D",
+    "sublocation": "19",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "OPDI1026",
+      "type": "Accessories",
+      "subtype": "FPC-2",
+      "manufacturer": "SEEED",
+      "model": "Seeed Studio 2.4GA-02",
+      "description": "Flexible printed circuit antenna",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "0b2e6186c86947bbb1a1192d20240b70",
+    "code": "OPDI1026",
+    "action": "addition",
+    "quantity": 2
+  }
+}
