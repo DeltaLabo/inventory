@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d5ff0bd1a28b4498acece292b182f4aa",
+  "saved_at": "2026-10-26T21:08:42.745050+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "actuator",
+      "subtype": "thermoelectric cooler",
+      "manufacturer": "Gneric",
+      "model": "TEC1-12705",
+      "description": "TEC1-12705 40X40mm Peltier Module",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 6,
+    "location": "E",
+    "sublocation": "37",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "d5ff0bd1a28b4498acece292b182f4aa",
+    "action": "addition",
+    "code": "ZBYK1026",
+    "quantity": 6,
+    "location": "E",
+    "sublocation": "37",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ZBYK1026",
+      "type": "actuator",
+      "subtype": "thermoelectric cooler",
+      "manufacturer": "Gneric",
+      "model": "TEC1-12705",
+      "description": "TEC1-12705 40X40mm Peltier Module",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "d5ff0bd1a28b4498acece292b182f4aa",
+    "code": "ZBYK1026",
+    "action": "addition",
+    "quantity": 6
+  }
+}

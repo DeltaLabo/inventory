@@ -220,3 +220,4 @@ XGOS1026,sensor board,BME280,Adafruit,BME280,Barometric Pressure Temperature Hum
 NITW1026,sensor board,temperature humidity and pressure sensor,Adafruit,SHT3x,Temperature humidity Sensor Module I2C VIN GND SCL SDA,,,,
 ZGAW1026,sensor,water level sensor,Gneric,Inline flow Sensor,Inline Turbine flow sensor with Hose  Barb fittings and Braided Cable,,,,
 HLWB1026,sensor,differential pressure sensor,Gneric,200 psi Pressure Transducer with Bartb,"200 psi Pressure  Transducer Sensor with Brass Hose Barth for oil , water, air 0,5-4.5v",,,,
+ZBYK1026,actuator,thermoelectric cooler,Gneric,TEC1-12705,TEC1-12705 40X40mm Peltier Module,,,,
