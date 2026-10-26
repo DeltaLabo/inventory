@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "553907f8b74d4280bfa2f9a8fe15531c",
+  "saved_at": "2026-10-26T22:00:35.381725+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "connectors",
+      "subtype": "N-type  adapter /coaxial",
+      "manufacturer": "Gneric",
+      "model": "N Famale to N Panel Mount Adaptrer -4 Hole Flange",
+      "description": "RF Coaxial Adapter N Female to N Famale Bulkhead -4-hole Square Flange Panel Mount -50min",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "F",
+    "sublocation": "13",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "553907f8b74d4280bfa2f9a8fe15531c",
+    "action": "addition",
+    "code": "QUBI1026",
+    "quantity": 1,
+    "location": "F",
+    "sublocation": "13",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QUBI1026",
+      "type": "connectors",
+      "subtype": "N-type  adapter /coaxial",
+      "manufacturer": "Gneric",
+      "model": "N Famale to N Panel Mount Adaptrer -4 Hole Flange",
+      "description": "RF Coaxial Adapter N Female to N Famale Bulkhead -4-hole Square Flange Panel Mount -50min",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "553907f8b74d4280bfa2f9a8fe15531c",
+    "code": "QUBI1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
