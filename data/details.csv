@@ -217,3 +217,4 @@ YKQE1026,electronic modules,load cell amplifier,Gneric,HX711,Dual Chanel Load Ce
 EEVG1026,sensor board,BME280,Generic,BME280,Gravity I2C Environmental sensor board,,,,
 JLUM1026,sensor,differential pressure sensor,Generic,X0043ENFTN 200psi,FUSCH 200 PSI presure Transducer for oil Fuel Water Air 0.5-4.5v   1/8 NPT,,,,
 XGOS1026,sensor board,BME280,Adafruit,BME280,Barometric Pressure Temperature Humidity,,,,
+NITW1026,sensor board,temperature humidity and pressure sensor,Adafruit,SHT3x,Temperature humidity Sensor Module I2C VIN GND SCL SDA,,,,

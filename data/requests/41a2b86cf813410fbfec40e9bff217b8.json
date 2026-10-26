@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "41a2b86cf813410fbfec40e9bff217b8",
+  "saved_at": "2026-10-26T20:46:48.528994+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor board",
+      "subtype": "temperature humidity and pressure sensor",
+      "manufacturer": "Adafruit",
+      "model": "SHT3x",
+      "description": "Temperature humidity Sensor Module I2C VIN GND SCL SDA",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "34",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "41a2b86cf813410fbfec40e9bff217b8",
+    "action": "addition",
+    "code": "NITW1026",
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "34",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "NITW1026",
+      "type": "sensor board",
+      "subtype": "temperature humidity and pressure sensor",
+      "manufacturer": "Adafruit",
+      "model": "SHT3x",
+      "description": "Temperature humidity Sensor Module I2C VIN GND SCL SDA",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "41a2b86cf813410fbfec40e9bff217b8",
+    "code": "NITW1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
