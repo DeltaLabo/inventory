@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "03951fdcc27a4a4da8205cc9000bae1a",
+  "saved_at": "2026-10-26T21:23:27.674220+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "connectors",
+      "subtype": "pin header connecter",
+      "manufacturer": "Gneric",
+      "model": "XH2.54,2P ,3P ,4P, 5P , Kit",
+      "description": "230 pcs JST-XH2.54 ,conector kit -2/3/4/5 Pin Male",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "39",
+    "person": "Maripaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "03951fdcc27a4a4da8205cc9000bae1a",
+    "action": "addition",
+    "code": "PAXZ1026",
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "39",
+    "person": "Maripaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "PAXZ1026",
+      "type": "connectors",
+      "subtype": "pin header connecter",
+      "manufacturer": "Gneric",
+      "model": "XH2.54,2P ,3P ,4P, 5P , Kit",
+      "description": "230 pcs JST-XH2.54 ,conector kit -2/3/4/5 Pin Male",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "03951fdcc27a4a4da8205cc9000bae1a",
+    "code": "PAXZ1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}

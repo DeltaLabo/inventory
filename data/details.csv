@@ -222,3 +222,4 @@ ZGAW1026,sensor,water level sensor,Gneric,Inline flow Sensor,Inline Turbine flow
 HLWB1026,sensor,differential pressure sensor,Gneric,200 psi Pressure Transducer with Bartb,"200 psi Pressure  Transducer Sensor with Brass Hose Barth for oil , water, air 0,5-4.5v",,,,
 ZBYK1026,actuator,thermoelectric cooler,Gneric,TEC1-12705,TEC1-12705 40X40mm Peltier Module,,,,
 UOBQ1026,sensor,temperature humidity,Generic,ERHTP,ERHTP INDUSTRIAL PROBE- RELATIVE HUMIDITY TEMPERATURE AND BAROMETRIC PRESURE SENSOR 3.2-24V,,,,
+PAXZ1026,connectors,pin header connecter,Gneric,"XH2.54,2P ,3P ,4P, 5P , Kit","230 pcs JST-XH2.54 ,conector kit -2/3/4/5 Pin Male",,,,
