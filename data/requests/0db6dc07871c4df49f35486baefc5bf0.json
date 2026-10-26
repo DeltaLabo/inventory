@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "0db6dc07871c4df49f35486baefc5bf0",
+  "saved_at": "2026-10-26T16:27:54.835921+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "AC/DC Adapter",
+      "manufacturer": "Generic",
+      "model": "JSY-1230",
+      "description": "AC/DC Power Adapter",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "H",
+    "sublocation": "16",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "0db6dc07871c4df49f35486baefc5bf0",
+    "action": "addition",
+    "code": "ZSQS1026",
+    "quantity": 1,
+    "location": "H",
+    "sublocation": "16",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ZSQS1026",
+      "type": "Accessories",
+      "subtype": "AC/DC Adapter",
+      "manufacturer": "Generic",
+      "model": "JSY-1230",
+      "description": "AC/DC Power Adapter",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "0db6dc07871c4df49f35486baefc5bf0",
+    "code": "ZSQS1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
