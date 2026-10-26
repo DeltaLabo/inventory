@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "47f7d939d5314fbd93707f51b84fa7e5",
+  "saved_at": "2026-10-26T22:30:24.774143+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "radio accessories",
+      "subtype": "antenna",
+      "manufacturer": "Generic",
+      "model": "LTE-PADDLE-STICK",
+      "description": "4G LTE paddle  blade Antena High Gain with SMA Male Connector",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "F",
+    "sublocation": "16",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "47f7d939d5314fbd93707f51b84fa7e5",
+    "action": "addition",
+    "code": "OHEK1026",
+    "quantity": 1,
+    "location": "F",
+    "sublocation": "16",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "OHEK1026",
+      "type": "radio accessories",
+      "subtype": "antenna",
+      "manufacturer": "Generic",
+      "model": "LTE-PADDLE-STICK",
+      "description": "4G LTE paddle  blade Antena High Gain with SMA Male Connector",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "47f7d939d5314fbd93707f51b84fa7e5",
+    "code": "OHEK1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
