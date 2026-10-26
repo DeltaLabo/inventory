@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "cf734655556f4684943d1008cc3c5ac7",
+  "saved_at": "2026-10-26T20:21:43.339230+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "differential pressure sensor",
+      "manufacturer": "Generic",
+      "model": "X0043ENFTN 200psi",
+      "description": "FUSCH 200 PSI presure Transducer for oil Fuel Water Air 0.5-4.5v   1/8 NPT",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "32",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "cf734655556f4684943d1008cc3c5ac7",
+    "action": "addition",
+    "code": "JLUM1026",
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "32",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "JLUM1026",
+      "type": "sensor",
+      "subtype": "differential pressure sensor",
+      "manufacturer": "Generic",
+      "model": "X0043ENFTN 200psi",
+      "description": "FUSCH 200 PSI presure Transducer for oil Fuel Water Air 0.5-4.5v   1/8 NPT",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "cf734655556f4684943d1008cc3c5ac7",
+    "code": "JLUM1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
