@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "92817aac0553496cabc01f14a9eecbba",
+  "saved_at": "2026-10-26T21:29:01.022432+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "mechanical",
+      "subtype": "standoff kit",
+      "manufacturer": "Generic",
+      "model": "M3 Nylon kit",
+      "description": "M3 Nylon Standoff kit M3x6+6",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "40",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "92817aac0553496cabc01f14a9eecbba",
+    "action": "addition",
+    "code": "HBUX1026",
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "40",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HBUX1026",
+      "type": "mechanical",
+      "subtype": "standoff kit",
+      "manufacturer": "Generic",
+      "model": "M3 Nylon kit",
+      "description": "M3 Nylon Standoff kit M3x6+6",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "92817aac0553496cabc01f14a9eecbba",
+    "code": "HBUX1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
