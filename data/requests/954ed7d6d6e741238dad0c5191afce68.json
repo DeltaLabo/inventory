@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "954ed7d6d6e741238dad0c5191afce68",
+  "saved_at": "2026-10-26T15:52:34.720251+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Resistors",
+      "subtype": "Potency",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "High-power electrical resistors",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 11,
+    "location": "H",
+    "sublocation": "13",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "954ed7d6d6e741238dad0c5191afce68",
+    "action": "addition",
+    "code": "VEFJ1026",
+    "quantity": 11,
+    "location": "H",
+    "sublocation": "13",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "VEFJ1026",
+      "type": "Resistors",
+      "subtype": "Potency",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "High-power electrical resistors",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "954ed7d6d6e741238dad0c5191afce68",
+    "code": "VEFJ1026",
+    "action": "addition",
+    "quantity": 11
+  }
+}
