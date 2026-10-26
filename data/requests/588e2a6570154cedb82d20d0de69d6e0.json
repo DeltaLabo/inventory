@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "588e2a6570154cedb82d20d0de69d6e0",
+  "saved_at": "2026-10-26T21:49:25.046928+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "radio accessories",
+      "subtype": "UHF coax cable",
+      "manufacturer": "Generic",
+      "model": "RG58-NM-NM",
+      "description": "XRDS-RFN Male to axial Extension Cable",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "F",
+    "sublocation": "12",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "588e2a6570154cedb82d20d0de69d6e0",
+    "action": "addition",
+    "code": "VUHL1026",
+    "quantity": 2,
+    "location": "F",
+    "sublocation": "12",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "VUHL1026",
+      "type": "radio accessories",
+      "subtype": "UHF coax cable",
+      "manufacturer": "Generic",
+      "model": "RG58-NM-NM",
+      "description": "XRDS-RFN Male to axial Extension Cable",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "588e2a6570154cedb82d20d0de69d6e0",
+    "code": "VUHL1026",
+    "action": "addition",
+    "quantity": 2
+  }
+}
