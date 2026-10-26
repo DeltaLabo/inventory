@@ -221,3 +221,4 @@ NITW1026,sensor board,temperature humidity and pressure sensor,Adafruit,SHT3x,Te
 ZGAW1026,sensor,water level sensor,Gneric,Inline flow Sensor,Inline Turbine flow sensor with Hose  Barb fittings and Braided Cable,,,,
 HLWB1026,sensor,differential pressure sensor,Gneric,200 psi Pressure Transducer with Bartb,"200 psi Pressure  Transducer Sensor with Brass Hose Barth for oil , water, air 0,5-4.5v",,,,
 ZBYK1026,actuator,thermoelectric cooler,Gneric,TEC1-12705,TEC1-12705 40X40mm Peltier Module,,,,
+UOBQ1026,sensor,temperature humidity,Generic,ERHTP,ERHTP INDUSTRIAL PROBE- RELATIVE HUMIDITY TEMPERATURE AND BAROMETRIC PRESURE SENSOR 3.2-24V,,,,

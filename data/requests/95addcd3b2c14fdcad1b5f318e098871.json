@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "95addcd3b2c14fdcad1b5f318e098871",
+  "saved_at": "2026-10-26T21:15:24.862243+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "temperature humidity",
+      "manufacturer": "Generic",
+      "model": "ERHTP",
+      "description": "ERHTP INDUSTRIAL PROBE- RELATIVE HUMIDITY TEMPERATURE AND BAROMETRIC PRESURE SENSOR 3.2-24V",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "38",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "95addcd3b2c14fdcad1b5f318e098871",
+    "action": "addition",
+    "code": "UOBQ1026",
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "38",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "UOBQ1026",
+      "type": "sensor",
+      "subtype": "temperature humidity",
+      "manufacturer": "Generic",
+      "model": "ERHTP",
+      "description": "ERHTP INDUSTRIAL PROBE- RELATIVE HUMIDITY TEMPERATURE AND BAROMETRIC PRESURE SENSOR 3.2-24V",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "95addcd3b2c14fdcad1b5f318e098871",
+    "code": "UOBQ1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
