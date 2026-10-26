@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "574f27fe36d34e02a3d17835ca57a55e",
+  "saved_at": "2026-10-26T17:14:42.007974+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "DIP",
+      "subtype": "Microcontroller",
+      "manufacturer": "Microchip Technology",
+      "model": "PIC16F1787",
+      "description": "Programable microcontroller (MCU)",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 23,
+    "location": "D",
+    "sublocation": "15",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "574f27fe36d34e02a3d17835ca57a55e",
+    "action": "addition",
+    "code": "HZZK1026",
+    "quantity": 23,
+    "location": "D",
+    "sublocation": "15",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HZZK1026",
+      "type": "DIP",
+      "subtype": "Microcontroller",
+      "manufacturer": "Microchip Technology",
+      "model": "PIC16F1787",
+      "description": "Programable microcontroller (MCU)",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "574f27fe36d34e02a3d17835ca57a55e",
+    "code": "HZZK1026",
+    "action": "addition",
+    "quantity": 23
+  }
+}
