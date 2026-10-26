@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "7ccd504002ff41cc9477a9e94d10b46e",
+  "saved_at": "2026-10-26T15:43:47.714366+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "battery",
+      "subtype": "BMS",
+      "manufacturer": "DALY ELECTRONICS",
+      "model": "Li-ion 4s 12v BMS",
+      "description": "Stanadard Battery Management System",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "H",
+    "sublocation": "12",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "7ccd504002ff41cc9477a9e94d10b46e",
+    "action": "addition",
+    "code": "MYPH1026",
+    "quantity": 1,
+    "location": "H",
+    "sublocation": "12",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "MYPH1026",
+      "type": "battery",
+      "subtype": "BMS",
+      "manufacturer": "DALY ELECTRONICS",
+      "model": "Li-ion 4s 12v BMS",
+      "description": "Stanadard Battery Management System",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "7ccd504002ff41cc9477a9e94d10b46e",
+    "code": "MYPH1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}

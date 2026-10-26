@@ -198,3 +198,4 @@ NDBW1026,actuator,motors,Generic,TT,"DC Gearbox Motor - ""TT Motor"" - 200RPM - 
 ZPLK1026,Motors,DC,Generic,,Mini DC motors,,,,
 JMYF1026,PIC,PLC Industrial,Generic,,Open Source Industrial PLC,,,,
 TZJP1026,battery,BMS,Jiabaida,JBD-SP04S010A A2,Smart BMS (Battery management System),,,,
+MYPH1026,battery,BMS,DALY ELECTRONICS,Li-ion 4s 12v BMS,Stanadard Battery Management System,,,,
