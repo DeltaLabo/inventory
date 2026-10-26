@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "f2410e345ed24b37918a41abc52f47ab",
+  "saved_at": "2026-10-26T15:26:26.064408+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "battery",
+      "subtype": "BMS",
+      "manufacturer": "Jiabaida",
+      "model": "JBD-SP04S010A A2",
+      "description": "Smart BMS (Battery management System)",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "H",
+    "sublocation": "11",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "f2410e345ed24b37918a41abc52f47ab",
+    "action": "addition",
+    "code": "TZJP1026",
+    "quantity": 1,
+    "location": "H",
+    "sublocation": "11",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "TZJP1026",
+      "type": "battery",
+      "subtype": "BMS",
+      "manufacturer": "Jiabaida",
+      "model": "JBD-SP04S010A A2",
+      "description": "Smart BMS (Battery management System)",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "f2410e345ed24b37918a41abc52f47ab",
+    "code": "TZJP1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
