@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "bdc14eba30a54afd890bb19cdfbbda92",
+  "saved_at": "2026-10-26T16:13:36.118722+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "Analog Cabling",
+      "manufacturer": "Gneric",
+      "model": "",
+      "description": "Analog wiring kit with a rotary potentiometer",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "H",
+    "sublocation": "14",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "bdc14eba30a54afd890bb19cdfbbda92",
+    "action": "addition",
+    "code": "HQTP1026",
+    "quantity": 1,
+    "location": "H",
+    "sublocation": "14",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HQTP1026",
+      "type": "Accessories",
+      "subtype": "Analog Cabling",
+      "manufacturer": "Gneric",
+      "model": "",
+      "description": "Analog wiring kit with a rotary potentiometer",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "bdc14eba30a54afd890bb19cdfbbda92",
+    "code": "HQTP1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
