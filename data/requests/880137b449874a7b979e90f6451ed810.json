@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "880137b449874a7b979e90f6451ed810",
+  "saved_at": "2026-10-26T20:52:31.472063+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "water level sensor",
+      "manufacturer": "Gneric",
+      "model": "Inline flow Sensor",
+      "description": "Inline Turbine flow sensor with Hose  Barb fittings and Braided Cable",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "E",
+    "sublocation": "35",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "880137b449874a7b979e90f6451ed810",
+    "action": "addition",
+    "code": "ZGAW1026",
+    "quantity": 2,
+    "location": "E",
+    "sublocation": "35",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ZGAW1026",
+      "type": "sensor",
+      "subtype": "water level sensor",
+      "manufacturer": "Gneric",
+      "model": "Inline flow Sensor",
+      "description": "Inline Turbine flow sensor with Hose  Barb fittings and Braided Cable",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "880137b449874a7b979e90f6451ed810",
+    "code": "ZGAW1026",
+    "action": "addition",
+    "quantity": 2
+  }
+}
