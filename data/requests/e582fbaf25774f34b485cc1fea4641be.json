@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e582fbaf25774f34b485cc1fea4641be",
+  "saved_at": "2026-10-26T19:56:40.476883+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "electronic modules",
+      "subtype": "load cell amplifier",
+      "manufacturer": "Gneric",
+      "model": "HX711",
+      "description": "Dual Chanel Load Cell Amplifier Module 2.7-5v",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 8,
+    "location": "E",
+    "sublocation": "30",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "e582fbaf25774f34b485cc1fea4641be",
+    "action": "addition",
+    "code": "YKQE1026",
+    "quantity": 8,
+    "location": "E",
+    "sublocation": "30",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "YKQE1026",
+      "type": "electronic modules",
+      "subtype": "load cell amplifier",
+      "manufacturer": "Gneric",
+      "model": "HX711",
+      "description": "Dual Chanel Load Cell Amplifier Module 2.7-5v",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "e582fbaf25774f34b485cc1fea4641be",
+    "code": "YKQE1026",
+    "action": "addition",
+    "quantity": 8
+  }
+}
