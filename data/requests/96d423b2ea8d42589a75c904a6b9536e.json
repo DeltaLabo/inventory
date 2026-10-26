@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "96d423b2ea8d42589a75c904a6b9536e",
+  "saved_at": "2026-10-26T22:14:14.620848+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "radio accessories",
+      "subtype": "antenna",
+      "manufacturer": "YIXI",
+      "model": "YIXI-G7 SK530 X004T04TN3",
+      "description": "RTK GNS  ACTIVE ANTENA YIXI- L1 Y L2 Y L5 GPS GLONASS",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "F",
+    "sublocation": "14",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "96d423b2ea8d42589a75c904a6b9536e",
+    "action": "addition",
+    "code": "HIZQ1026",
+    "quantity": 4,
+    "location": "F",
+    "sublocation": "14",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HIZQ1026",
+      "type": "radio accessories",
+      "subtype": "antenna",
+      "manufacturer": "YIXI",
+      "model": "YIXI-G7 SK530 X004T04TN3",
+      "description": "RTK GNS  ACTIVE ANTENA YIXI- L1 Y L2 Y L5 GPS GLONASS",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "96d423b2ea8d42589a75c904a6b9536e",
+    "code": "HIZQ1026",
+    "action": "addition",
+    "quantity": 4
+  }
+}
