@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "7296ee034f604607bcb0e745b920213a",
+  "saved_at": "2026-10-26T19:16:43.927138+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "actuator",
+      "subtype": "Relay",
+      "manufacturer": "DFRobot",
+      "model": "JQC-3FF",
+      "description": "DF robot gravity digital",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "20",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "7296ee034f604607bcb0e745b920213a",
+    "action": "addition",
+    "code": "GWXY1026",
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "20",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "GWXY1026",
+      "type": "actuator",
+      "subtype": "Relay",
+      "manufacturer": "DFRobot",
+      "model": "JQC-3FF",
+      "description": "DF robot gravity digital",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "7296ee034f604607bcb0e745b920213a",
+    "code": "GWXY1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
