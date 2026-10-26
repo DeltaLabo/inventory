@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "2a8efb78fcdf43ddbcd9b34b978783ad",
+  "saved_at": "2026-10-26T19:01:23.792221+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "display/screens",
+      "subtype": "TFT Screen",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Color LCD screen with electronic control board",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "18",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "2a8efb78fcdf43ddbcd9b34b978783ad",
+    "action": "addition",
+    "code": "SGHZ1026",
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "18",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SGHZ1026",
+      "type": "display/screens",
+      "subtype": "TFT Screen",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Color LCD screen with electronic control board",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "2a8efb78fcdf43ddbcd9b34b978783ad",
+    "code": "SGHZ1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
