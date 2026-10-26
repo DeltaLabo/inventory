@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ba0b5c84f57e4369b821db4e59160128",
+  "saved_at": "2026-10-26T18:54:05.613422+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "converter",
+      "subtype": "Analógico",
+      "manufacturer": "Gneric",
+      "model": "Industrial HW-685",
+      "description": "Analog signal converter module",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 6,
+    "location": "D",
+    "sublocation": "22",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ba0b5c84f57e4369b821db4e59160128",
+    "action": "addition",
+    "code": "HXUX1026",
+    "quantity": 6,
+    "location": "D",
+    "sublocation": "22",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HXUX1026",
+      "type": "converter",
+      "subtype": "Analógico",
+      "manufacturer": "Gneric",
+      "model": "Industrial HW-685",
+      "description": "Analog signal converter module",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ba0b5c84f57e4369b821db4e59160128",
+    "code": "HXUX1026",
+    "action": "addition",
+    "quantity": 6
+  }
+}
