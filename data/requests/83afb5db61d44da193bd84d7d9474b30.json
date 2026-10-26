@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "83afb5db61d44da193bd84d7d9474b30",
+  "saved_at": "2026-10-26T17:43:43.674365+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "TFT TOUCHSCREEN",
+      "manufacturer": "Adafruit",
+      "model": "ADA1601",
+      "description": "2.8-inch color TFT LCD screen whit a resistive touch panel",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "16",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "83afb5db61d44da193bd84d7d9474b30",
+    "action": "addition",
+    "code": "OTHB1026",
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "16",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "OTHB1026",
+      "type": "Accessories",
+      "subtype": "TFT TOUCHSCREEN",
+      "manufacturer": "Adafruit",
+      "model": "ADA1601",
+      "description": "2.8-inch color TFT LCD screen whit a resistive touch panel",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "83afb5db61d44da193bd84d7d9474b30",
+    "code": "OTHB1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
