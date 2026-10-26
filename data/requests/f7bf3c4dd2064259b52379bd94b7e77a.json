@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "f7bf3c4dd2064259b52379bd94b7e77a",
+  "saved_at": "2026-10-26T19:38:52.215609+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "PHOTOINTERRUPTER",
+      "manufacturer": "Generic",
+      "model": "OPB12704",
+      "description": "OPB12704 Slotted Optical",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 8,
+    "location": "E",
+    "sublocation": "28",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "f7bf3c4dd2064259b52379bd94b7e77a",
+    "action": "addition",
+    "code": "RBGK1026",
+    "quantity": 8,
+    "location": "E",
+    "sublocation": "28",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "RBGK1026",
+      "type": "sensor",
+      "subtype": "PHOTOINTERRUPTER",
+      "manufacturer": "Generic",
+      "model": "OPB12704",
+      "description": "OPB12704 Slotted Optical",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "f7bf3c4dd2064259b52379bd94b7e77a",
+    "code": "RBGK1026",
+    "action": "addition",
+    "quantity": 8
+  }
+}
