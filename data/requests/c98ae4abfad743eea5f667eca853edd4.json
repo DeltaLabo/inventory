@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c98ae4abfad743eea5f667eca853edd4",
+  "saved_at": "2026-10-26T20:12:40.676584+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor board",
+      "subtype": "BME280",
+      "manufacturer": "Generic",
+      "model": "BME280",
+      "description": "Gravity I2C Environmental sensor board",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 8,
+    "location": "E",
+    "sublocation": "31",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "c98ae4abfad743eea5f667eca853edd4",
+    "action": "addition",
+    "code": "EEVG1026",
+    "quantity": 8,
+    "location": "E",
+    "sublocation": "31",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "EEVG1026",
+      "type": "sensor board",
+      "subtype": "BME280",
+      "manufacturer": "Generic",
+      "model": "BME280",
+      "description": "Gravity I2C Environmental sensor board",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "c98ae4abfad743eea5f667eca853edd4",
+    "code": "EEVG1026",
+    "action": "addition",
+    "quantity": 8
+  }
+}
