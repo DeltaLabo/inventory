@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "0420b8ee0e0e42d5ba45cf481e278e38",
+  "saved_at": "2026-10-26T22:25:26.304137+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "radio accessories",
+      "subtype": "antenna",
+      "manufacturer": "SEEED",
+      "model": "2.4G A-02",
+      "description": "2.4GHz  FPC flexible antena with u.fl",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 11,
+    "location": "F",
+    "sublocation": "15",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "0420b8ee0e0e42d5ba45cf481e278e38",
+    "action": "addition",
+    "code": "FWTF1026",
+    "quantity": 11,
+    "location": "F",
+    "sublocation": "15",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "FWTF1026",
+      "type": "radio accessories",
+      "subtype": "antenna",
+      "manufacturer": "SEEED",
+      "model": "2.4G A-02",
+      "description": "2.4GHz  FPC flexible antena with u.fl",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "0420b8ee0e0e42d5ba45cf481e278e38",
+    "code": "FWTF1026",
+    "action": "addition",
+    "quantity": 11
+  }
+}
