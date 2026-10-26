@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ab7b41d8533d4546bba0777dd32e715a",
+  "saved_at": "2026-10-26T17:51:15.963967+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "TFT TOUCHSCREEN",
+      "manufacturer": "Adafruit",
+      "model": "",
+      "description": "2.8-inch color TFT LCD screen whit a resistive touch panel",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "17",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ab7b41d8533d4546bba0777dd32e715a",
+    "action": "addition",
+    "code": "PSFZ1026",
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "17",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "PSFZ1026",
+      "type": "Accessories",
+      "subtype": "TFT TOUCHSCREEN",
+      "manufacturer": "Adafruit",
+      "model": "",
+      "description": "2.8-inch color TFT LCD screen whit a resistive touch panel",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ab7b41d8533d4546bba0777dd32e715a",
+    "code": "PSFZ1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
