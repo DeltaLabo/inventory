@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "7ff2aafaf69e44799fda7ae11d3a03a0",
+  "saved_at": "2026-10-26T19:45:18.725750+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "type K thermocouple",
+      "manufacturer": "Gneric",
+      "model": "type k",
+      "description": "Braided Stainless Steel Cable with",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "E",
+    "sublocation": "29",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "7ff2aafaf69e44799fda7ae11d3a03a0",
+    "action": "addition",
+    "code": "QKOS1026",
+    "quantity": 4,
+    "location": "E",
+    "sublocation": "29",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QKOS1026",
+      "type": "sensor",
+      "subtype": "type K thermocouple",
+      "manufacturer": "Gneric",
+      "model": "type k",
+      "description": "Braided Stainless Steel Cable with",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "7ff2aafaf69e44799fda7ae11d3a03a0",
+    "code": "QKOS1026",
+    "action": "addition",
+    "quantity": 4
+  }
+}

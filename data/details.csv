@@ -212,3 +212,4 @@ SGHZ1026,display/screens,TFT Screen,Generic,,Color LCD screen with electronic co
 UCVO1026,display/screens,LCD 16x2,Generic,SC160SLB-XA-GB-K,SC160SLB-XA-GB-K Blue STN White Backlinght,,,,
 GWXY1026,actuator,Relay,DFRobot,JQC-3FF,DF robot gravity digital,,,,
 RBGK1026,sensor,PHOTOINTERRUPTER,Generic,OPB12704,OPB12704 Slotted Optical,,,,
+QKOS1026,sensor,type K thermocouple,Gneric,type k,Braided Stainless Steel Cable with,,,,
