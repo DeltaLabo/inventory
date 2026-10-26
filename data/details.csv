@@ -219,3 +219,4 @@ JLUM1026,sensor,differential pressure sensor,Generic,X0043ENFTN 200psi,FUSCH 200
 XGOS1026,sensor board,BME280,Adafruit,BME280,Barometric Pressure Temperature Humidity,,,,
 NITW1026,sensor board,temperature humidity and pressure sensor,Adafruit,SHT3x,Temperature humidity Sensor Module I2C VIN GND SCL SDA,,,,
 ZGAW1026,sensor,water level sensor,Gneric,Inline flow Sensor,Inline Turbine flow sensor with Hose  Barb fittings and Braided Cable,,,,
+HLWB1026,sensor,differential pressure sensor,Gneric,200 psi Pressure Transducer with Bartb,"200 psi Pressure  Transducer Sensor with Brass Hose Barth for oil , water, air 0,5-4.5v",,,,

@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ade854c7ed814c10b1cb560027778593",
+  "saved_at": "2026-10-26T20:58:29.006097+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "differential pressure sensor",
+      "manufacturer": "Gneric",
+      "model": "200 psi Pressure Transducer with Bartb",
+      "description": "200 psi Pressure  Transducer Sensor with Brass Hose Barth for oil , water, air 0,5-4.5v",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "36",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ade854c7ed814c10b1cb560027778593",
+    "action": "addition",
+    "code": "HLWB1026",
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "36",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HLWB1026",
+      "type": "sensor",
+      "subtype": "differential pressure sensor",
+      "manufacturer": "Gneric",
+      "model": "200 psi Pressure Transducer with Bartb",
+      "description": "200 psi Pressure  Transducer Sensor with Brass Hose Barth for oil , water, air 0,5-4.5v",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ade854c7ed814c10b1cb560027778593",
+    "code": "HLWB1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
