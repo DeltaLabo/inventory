@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4f86df275c194204ab9501be81e0354a",
+  "saved_at": "2026-10-27T20:24:30.342127+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "SMD transistor",
+      "manufacturer": "Generic",
+      "model": "SMD-TRANSISTOR-SOT23-LOOSE-8PCS",
+      "description": "SMD Discrete Devices 3-pin / 5-pin Package Devices with Notched Carrier Tape Leadframe / SOT-23 SOT-89 Style Parts Loose Lot in Plastic Bag",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 12,
+    "location": "G",
+    "sublocation": "38",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "4f86df275c194204ab9501be81e0354a",
+    "action": "addition",
+    "code": "ZWYY1026",
+    "quantity": 12,
+    "location": "G",
+    "sublocation": "38",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ZWYY1026",
+      "type": "Accessories",
+      "subtype": "SMD transistor",
+      "manufacturer": "Generic",
+      "model": "SMD-TRANSISTOR-SOT23-LOOSE-8PCS",
+      "description": "SMD Discrete Devices 3-pin / 5-pin Package Devices with Notched Carrier Tape Leadframe / SOT-23 SOT-89 Style Parts Loose Lot in Plastic Bag",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "4f86df275c194204ab9501be81e0354a",
+    "code": "ZWYY1026",
+    "action": "addition",
+    "quantity": 12
+  }
+}
