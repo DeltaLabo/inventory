@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "facf3d56c3054114ac939b88f9107aa9",
+  "saved_at": "2026-10-27T19:11:42.531028+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb",
+      "subtype": "SOT23 adapter breakout board 0.95mm pitch",
+      "manufacturer": "Generic",
+      "model": "SOT23-ADAPTER-10P-0.95MM",
+      "description": "SOT23 to DIP Adapter PCB Breakout Board 10-Pin 0.95mm Pitch SOT23-6 Green - Converts SMD SOT23 to Through Hole",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "19",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "facf3d56c3054114ac939b88f9107aa9",
+    "action": "addition",
+    "code": "GNQL1026",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "19",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "GNQL1026",
+      "type": "pcb",
+      "subtype": "SOT23 adapter breakout board 0.95mm pitch",
+      "manufacturer": "Generic",
+      "model": "SOT23-ADAPTER-10P-0.95MM",
+      "description": "SOT23 to DIP Adapter PCB Breakout Board 10-Pin 0.95mm Pitch SOT23-6 Green - Converts SMD SOT23 to Through Hole",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "facf3d56c3054114ac939b88f9107aa9",
+    "code": "GNQL1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
