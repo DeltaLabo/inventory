@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4682a12a195e4cc2b1e1778f48bbb3d5",
+  "saved_at": "2026-10-27T18:02:06.786572+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "SMD power MOSFET",
+      "manufacturer": "Generic",
+      "model": "SMD-DPAK-TAPE-10PCS",
+      "description": "SMD Power Semiconductor in Embossed Tape Reel Strip TO-252 DPAK Package Large Rectangular Pockets - 10pcs in Anti-Static Bag",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "15",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "4682a12a195e4cc2b1e1778f48bbb3d5",
+    "action": "addition",
+    "code": "SHEY1026",
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "15",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SHEY1026",
+      "type": "Accessories",
+      "subtype": "SMD power MOSFET",
+      "manufacturer": "Generic",
+      "model": "SMD-DPAK-TAPE-10PCS",
+      "description": "SMD Power Semiconductor in Embossed Tape Reel Strip TO-252 DPAK Package Large Rectangular Pockets - 10pcs in Anti-Static Bag",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "4682a12a195e4cc2b1e1778f48bbb3d5",
+    "code": "SHEY1026",
+    "action": "addition",
+    "quantity": 10
+  }
+}
