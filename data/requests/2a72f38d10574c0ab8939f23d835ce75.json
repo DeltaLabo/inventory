@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "2a72f38d10574c0ab8939f23d835ce75",
+  "saved_at": "2026-10-27T17:07:36.245476+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "enclosures",
+      "subtype": "Electronics enclosure",
+      "manufacturer": "Generic",
+      "model": "125_90_40mm Trans",
+      "description": "ABS Plastic Project Box Electronics Enclosure Black Base with Smoked Transparent Top Cover 125x90x40mm (4.92x3.54x1.57in) for Arduino / PCB",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 8,
+    "location": "J",
+    "sublocation": "19",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "2a72f38d10574c0ab8939f23d835ce75",
+    "action": "addition",
+    "code": "DZWT1026",
+    "quantity": 8,
+    "location": "J",
+    "sublocation": "19",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "DZWT1026",
+      "type": "enclosures",
+      "subtype": "Electronics enclosure",
+      "manufacturer": "Generic",
+      "model": "125_90_40mm Trans",
+      "description": "ABS Plastic Project Box Electronics Enclosure Black Base with Smoked Transparent Top Cover 125x90x40mm (4.92x3.54x1.57in) for Arduino / PCB",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "2a72f38d10574c0ab8939f23d835ce75",
+    "code": "DZWT1026",
+    "action": "addition",
+    "quantity": 8
+  }
+}
