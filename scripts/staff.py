@@ -40,8 +40,12 @@ def directory_settings():
             return str(st.secrets.get(name, default))
         except (FileNotFoundError, StreamlitSecretNotFoundError):
             return default
+    repository = get("STAFF_REPOSITORY", get("ASSISTANTS_REPOSITORY", "DeltaLabo/staff")).strip()
+    # Existing deployment secrets may still contain the repository's former name.
+    if repository.casefold() == "deltalabo/assistants":
+        repository = "DeltaLabo/staff"
     return (get("STAFF_TOKEN", get("ASSISTANTS_TOKEN")) or get("GITHUB_TOKEN"),
-            get("STAFF_REPOSITORY", get("ASSISTANTS_REPOSITORY", "DeltaLabo/staff")),
+            repository,
             get("STAFF_BRANCH", get("ASSISTANTS_BRANCH", "main")))
 
 
@@ -59,7 +63,7 @@ def _load_staff(token, repository, branch):
         if text is None:
             text = client.read_file("data/input/assistants.csv", sha)
     except (GitHubError, ValueError):
-        raise StaffDirectoryError("Could not read the private staff directory. Check the staff token's repository access, then refresh the list.") from None
+        raise StaffDirectoryError("Could not read the private staff directory. Check STAFF_REPOSITORY (default: DeltaLabo/staff) and ensure STAFF_TOKEN (or the legacy ASSISTANTS_TOKEN) has Contents: Read access to that repository, then refresh the list.") from None
     try:
         return parse_staff(text)
     except csv.Error:

@@ -27,11 +27,27 @@ class AssistantTests(unittest.TestCase):
             self.assertEqual([call.args for call in client.read_file.call_args_list],
                              [("data/input/staff.csv", "pinned"), ("data/input/assistants.csv", "pinned")])
 
-    def test_directory_configuration_uses_assistants_not_the_former_administration_settings(self):
+    def test_legacy_directory_configuration_follows_the_renamed_repository(self):
         with patch.dict(os.environ, {"ASSISTANTS_TOKEN": "test-read-only", "ASSISTANTS_REPOSITORY": "DeltaLabo/assistants",
                                    "ASSISTANTS_BRANCH": "main", "ADMINISTRATION_REPOSITORY": "DeltaLabo/administration"}), \
              patch("scripts.staff.st.secrets", {}):
-            self.assertEqual(directory_settings(), ("test-read-only", "DeltaLabo/assistants", "main"))
+            self.assertEqual(directory_settings(), ("test-read-only", "DeltaLabo/staff", "main"))
+
+    def test_repository_rename_handles_new_settings_and_preserves_custom_repositories(self):
+        for repository, expected in ((" DeltaLabo/Assistants ", "DeltaLabo/staff"),
+                                     ("OtherOrg/assistants", "OtherOrg/assistants"),
+                                     ("DeltaLabo/custom-staff", "DeltaLabo/custom-staff")):
+            with self.subTest(repository=repository), \
+                 patch.dict(os.environ, {"STAFF_TOKEN": "test-only", "STAFF_REPOSITORY": repository,
+                                         "STAFF_BRANCH": "directory"}, clear=True), \
+                 patch("scripts.staff.st.secrets", {}):
+                self.assertEqual(directory_settings(), ("test-only", expected, "directory"))
+
+    def test_legacy_streamlit_secrets_follow_the_renamed_repository(self):
+        with patch.dict(os.environ, {}, clear=True), \
+             patch("scripts.staff.st.secrets", {"ASSISTANTS_TOKEN": "test-only",
+                                               "ASSISTANTS_REPOSITORY": "DeltaLabo/assistants"}):
+            self.assertEqual(directory_settings(), ("test-only", "DeltaLabo/staff", "main"))
 
     def test_directory_keeps_only_names_and_ids_and_preserves_accents(self):
         result = parse_staff("\ufeffid,nombre,cuenta,e-mail\nB00,Zoé Example,PRIVATE-ACCOUNT,private@example.com\nA00,Álex Sample,OTHER-ACCOUNT,other@example.com\n")

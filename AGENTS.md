@@ -271,3 +271,9 @@ Malformed or inaccessible canonical data must block access, not use a stale copy
 No roles are excluded from name selection. Cache only ID/name and preserve the
 historical assistant_id/id_asis keys and immutable receipts rather than migrating
 past records. There is only one authoritative personnel database.
+
+The user confirmed the repository rename to DeltaLabo/staff on 2026-10-27.
+Directory settings translate the exact former DeltaLabo/assistants repository
+name to DeltaLabo/staff, including existing legacy Streamlit Secrets. Preserve
+custom repository overrides and legacy token/branch compatibility. Tokens still
+need Contents Read access to the renamed private repository.

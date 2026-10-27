@@ -337,7 +337,11 @@ Add `STAFF_TOKEN` with **Contents: Read** on `DeltaLabo/staff`
 to inventory's Streamlit Secrets. Optional `STAFF_REPOSITORY` and
 `STAFF_BRANCH` default to `DeltaLabo/staff` and `main`. Without a
 separate token, the app tries `GITHUB_TOKEN`, which must then also have access to
-the private assistants repository. Contact/banking data is not copied or cached.
+the private staff repository. Legacy `ASSISTANTS_*` settings remain supported;
+the former repository name `DeltaLabo/assistants` automatically resolves to
+`DeltaLabo/staff`, including in existing Streamlit Secrets. After the rename,
+ensure the configured token still has **Contents: Read** access to `DeltaLabo/staff`,
+then use **Refresh staff list**. Contact/banking data is not copied or cached.
 This read-only directory access is separate from inventory's Contents write access.
 
 Streamlit branding uses the approved transparent flat vector logo at
