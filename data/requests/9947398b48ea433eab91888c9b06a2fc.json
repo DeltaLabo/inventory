@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "9947398b48ea433eab91888c9b06a2fc",
+  "saved_at": "2026-10-27T22:26:03.264247+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "EEPROM / serial memory SOIC-8",
+      "manufacturer": "Microchip Technology",
+      "model": "24LCXXX / 24CXXX SOIC-8 I2C EEPROM - 2pcs Tape Strip - 8-Pin SMD",
+      "description": "2x Small Black 8-Pin SOIC SMD EEPROM Chips in Black Carrier Tape - Same Family as Previous Microchip 24C Images - I2C Memory IC Lot",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 8,
+    "location": "G",
+    "sublocation": "58",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "9947398b48ea433eab91888c9b06a2fc",
+    "action": "addition",
+    "code": "GPIW1026",
+    "quantity": 8,
+    "location": "G",
+    "sublocation": "58",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "GPIW1026",
+      "type": "Accessories",
+      "subtype": "EEPROM / serial memory SOIC-8",
+      "manufacturer": "Microchip Technology",
+      "model": "24LCXXX / 24CXXX SOIC-8 I2C EEPROM - 2pcs Tape Strip - 8-Pin SMD",
+      "description": "2x Small Black 8-Pin SOIC SMD EEPROM Chips in Black Carrier Tape - Same Family as Previous Microchip 24C Images - I2C Memory IC Lot",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "9947398b48ea433eab91888c9b06a2fc",
+    "code": "GPIW1026",
+    "action": "addition",
+    "quantity": 8
+  }
+}
