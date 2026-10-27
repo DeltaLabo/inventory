@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ef40b526325248f38a8d1a4e57dee497",
+  "saved_at": "2026-10-27T22:18:44.765576+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "EEPROM serial memory",
+      "manufacturer": "Microchip Technology",
+      "model": "24C32 / 24LC256 / 24AAXXX Series I2C EEPROM SOIC-8 - 8-Pin SMD",
+      "description": "Small Black 8-Pin SOIC SMD EEPROM Memory Chip Marking Blurred But Same Family as Previous Microchip 24C Series Single Chip in Palm - SOIC-8 Package",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "56",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ef40b526325248f38a8d1a4e57dee497",
+    "action": "addition",
+    "code": "SYAN1026",
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "56",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SYAN1026",
+      "type": "Accessories",
+      "subtype": "EEPROM serial memory",
+      "manufacturer": "Microchip Technology",
+      "model": "24C32 / 24LC256 / 24AAXXX Series I2C EEPROM SOIC-8 - 8-Pin SMD",
+      "description": "Small Black 8-Pin SOIC SMD EEPROM Memory Chip Marking Blurred But Same Family as Previous Microchip 24C Series Single Chip in Palm - SOIC-8 Package",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ef40b526325248f38a8d1a4e57dee497",
+    "code": "SYAN1026",
+    "action": "addition",
+    "quantity": 2
+  }
+}
