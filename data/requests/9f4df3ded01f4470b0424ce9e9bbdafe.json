@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "9f4df3ded01f4470b0424ce9e9bbdafe",
+  "saved_at": "2026-10-27T19:42:10.279406+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Diode",
+      "subtype": "SMD switching diode LL4148",
+      "manufacturer": "Generic",
+      "model": "LL4148-MINI-MELF-CUT-TAPE",
+      "description": "SMD Glass Switching Diode LL4148 MiniMELF / SOD-80 Package Orange Glass in Cut Tape Strips - Multiple Strips in ESD Bag",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 94,
+    "location": "G",
+    "sublocation": "25",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "9f4df3ded01f4470b0424ce9e9bbdafe",
+    "action": "addition",
+    "code": "EIOU1026",
+    "quantity": 94,
+    "location": "G",
+    "sublocation": "25",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "EIOU1026",
+      "type": "Diode",
+      "subtype": "SMD switching diode LL4148",
+      "manufacturer": "Generic",
+      "model": "LL4148-MINI-MELF-CUT-TAPE",
+      "description": "SMD Glass Switching Diode LL4148 MiniMELF / SOD-80 Package Orange Glass in Cut Tape Strips - Multiple Strips in ESD Bag",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "9f4df3ded01f4470b0424ce9e9bbdafe",
+    "code": "EIOU1026",
+    "action": "addition",
+    "quantity": 94
+  }
+}
