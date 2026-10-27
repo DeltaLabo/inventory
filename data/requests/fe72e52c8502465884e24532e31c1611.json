@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "fe72e52c8502465884e24532e31c1611",
+  "saved_at": "2026-10-27T20:45:13.002457+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "SMD integrated circuit transistor MOSFET in tape",
+      "manufacturer": "Generic",
+      "model": "IC-SMD-5PIN-BLACK-TAPE-2PCS",
+      "description": "SMD 5-pin or 6-pin Small Black IC / Discrete Device in Carrier Tape Cut Strip 2pcs Held in Palm - Marking Not Readable Due to Blur",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "43",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "fe72e52c8502465884e24532e31c1611",
+    "action": "addition",
+    "code": "VJMV1026",
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "43",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "VJMV1026",
+      "type": "Accessories",
+      "subtype": "SMD integrated circuit transistor MOSFET in tape",
+      "manufacturer": "Generic",
+      "model": "IC-SMD-5PIN-BLACK-TAPE-2PCS",
+      "description": "SMD 5-pin or 6-pin Small Black IC / Discrete Device in Carrier Tape Cut Strip 2pcs Held in Palm - Marking Not Readable Due to Blur",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "fe72e52c8502465884e24532e31c1611",
+    "code": "VJMV1026",
+    "action": "addition",
+    "quantity": 2
+  }
+}
