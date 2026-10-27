@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "536b746801e34bbaa8c4869d08584687",
+  "saved_at": "2026-10-27T19:36:27.561712+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "RF transceiver module DRA818-UHF",
+      "manufacturer": "Generic",
+      "model": "DRA818-U-VER5.0",
+      "description": "DRA818-U UHF Voice Transceiver Module VER 5.0 - 400-470MHz Walkie Talkie / Intercom Module - 4pcs Lot on Red Foam",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "G",
+    "sublocation": "24",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "536b746801e34bbaa8c4869d08584687",
+    "action": "addition",
+    "code": "MQSB1026",
+    "quantity": 4,
+    "location": "G",
+    "sublocation": "24",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "MQSB1026",
+      "type": "Accessories",
+      "subtype": "RF transceiver module DRA818-UHF",
+      "manufacturer": "Generic",
+      "model": "DRA818-U-VER5.0",
+      "description": "DRA818-U UHF Voice Transceiver Module VER 5.0 - 400-470MHz Walkie Talkie / Intercom Module - 4pcs Lot on Red Foam",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "536b746801e34bbaa8c4869d08584687",
+    "code": "MQSB1026",
+    "action": "addition",
+    "quantity": 4
+  }
+}
