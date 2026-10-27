@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "8c847bfab9bc4494a850033664089379",
+  "saved_at": "2026-10-27T22:02:13.063691+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "DFN microcontroller",
+      "manufacturer": "Generic",
+      "model": "QFN-16 3x3mm SMD IC - Marking T205 / 13220 - 16-Pin",
+      "description": "Small Square Black QFN-16 SMD IC Chip Marking 1205 / 1616 / 13220 Style 3x3mm QFN Package Single Chip in Palm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "51",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "8c847bfab9bc4494a850033664089379",
+    "action": "addition",
+    "code": "LTIT1026",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "51",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "LTIT1026",
+      "type": "sensor",
+      "subtype": "DFN microcontroller",
+      "manufacturer": "Generic",
+      "model": "QFN-16 3x3mm SMD IC - Marking T205 / 13220 - 16-Pin",
+      "description": "Small Square Black QFN-16 SMD IC Chip Marking 1205 / 1616 / 13220 Style 3x3mm QFN Package Single Chip in Palm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "8c847bfab9bc4494a850033664089379",
+    "code": "LTIT1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
