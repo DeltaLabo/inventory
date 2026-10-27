@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "77d21570370e4f72accaece299f6d361",
+  "saved_at": "2026-10-27T17:49:46.904327+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "EEPROM / Serial Flash SOIC-8",
+      "manufacturer": "Generic",
+      "model": "SOIC8-EEPROM-8PIN",
+      "description": "SOIC-8 8-Pin SMD Memory IC EEPROM SPI Flash - Marking 7A10G / Similar to 25Q series / AT24 series - Single Unit",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "G",
+    "sublocation": "11",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "77d21570370e4f72accaece299f6d361",
+    "action": "addition",
+    "code": "AQTI1026",
+    "quantity": 4,
+    "location": "G",
+    "sublocation": "11",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "AQTI1026",
+      "type": "Accessories",
+      "subtype": "EEPROM / Serial Flash SOIC-8",
+      "manufacturer": "Generic",
+      "model": "SOIC8-EEPROM-8PIN",
+      "description": "SOIC-8 8-Pin SMD Memory IC EEPROM SPI Flash - Marking 7A10G / Similar to 25Q series / AT24 series - Single Unit",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "77d21570370e4f72accaece299f6d361",
+    "code": "AQTI1026",
+    "action": "addition",
+    "quantity": 4
+  }
+}
