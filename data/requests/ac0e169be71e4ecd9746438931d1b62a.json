@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ac0e169be71e4ecd9746438931d1b62a",
+  "saved_at": "2026-10-27T21:48:53.102371+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Resistors",
+      "subtype": "SMD thick film resistor 0402 / 0603",
+      "manufacturer": "Generic",
+      "model": "SMD-RES-CHIP-0603-8H-TAPE-8PCS",
+      "description": "SMD Chip Resistor Lot 8pcs in Black Carrier Tape Strip Inside Blue ESD Bag Held Between Fingers - Marking 8H Style Small Rectangular Chip",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "46",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ac0e169be71e4ecd9746438931d1b62a",
+    "action": "addition",
+    "code": "CTEX1026",
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "46",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "CTEX1026",
+      "type": "Resistors",
+      "subtype": "SMD thick film resistor 0402 / 0603",
+      "manufacturer": "Generic",
+      "model": "SMD-RES-CHIP-0603-8H-TAPE-8PCS",
+      "description": "SMD Chip Resistor Lot 8pcs in Black Carrier Tape Strip Inside Blue ESD Bag Held Between Fingers - Marking 8H Style Small Rectangular Chip",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ac0e169be71e4ecd9746438931d1b62a",
+    "code": "CTEX1026",
+    "action": "addition",
+    "quantity": 10
+  }
+}
