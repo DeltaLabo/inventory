@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "634cd805d4ea49ee846473d541b5d368",
+  "saved_at": "2026-10-27T14:45:11.572902+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "radio accessories",
+      "subtype": "RF Jack female connector",
+      "manufacturer": "Generic",
+      "model": "SMA-F-F-EDGE X0033BJ28T",
+      "description": "SMA Female to SMA Female Coaxial Adapter, PCB Edge Mount, Gold Plated, 50 Ohm, Bulk Pack",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 46,
+    "location": "F",
+    "sublocation": "17",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "634cd805d4ea49ee846473d541b5d368",
+    "action": "addition",
+    "code": "QJXC1026",
+    "quantity": 46,
+    "location": "F",
+    "sublocation": "17",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QJXC1026",
+      "type": "radio accessories",
+      "subtype": "RF Jack female connector",
+      "manufacturer": "Generic",
+      "model": "SMA-F-F-EDGE X0033BJ28T",
+      "description": "SMA Female to SMA Female Coaxial Adapter, PCB Edge Mount, Gold Plated, 50 Ohm, Bulk Pack",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "634cd805d4ea49ee846473d541b5d368",
+    "code": "QJXC1026",
+    "action": "addition",
+    "quantity": 46
+  }
+}
