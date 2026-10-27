@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "43bcd195abcc43c5932f8c3b5cad2b59",
+  "saved_at": "2026-10-27T19:08:35.521208+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "SMD IC 8-pin SOIC / MSOP",
+      "manufacturer": "Generic",
+      "model": "IC-SOIC8-2PCS",
+      "description": "SMD 8-Pin Integrated Circuit SOIC-8 / MSOP-8 Package - 2pcs on Anti-Static Foam in Box",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "18",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "43bcd195abcc43c5932f8c3b5cad2b59",
+    "action": "addition",
+    "code": "BGGM1026",
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "18",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BGGM1026",
+      "type": "Accessories",
+      "subtype": "SMD IC 8-pin SOIC / MSOP",
+      "manufacturer": "Generic",
+      "model": "IC-SOIC8-2PCS",
+      "description": "SMD 8-Pin Integrated Circuit SOIC-8 / MSOP-8 Package - 2pcs on Anti-Static Foam in Box",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "43bcd195abcc43c5932f8c3b5cad2b59",
+    "code": "BGGM1026",
+    "action": "addition",
+    "quantity": 2
+  }
+}
