@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ca25ca0b7eed46a88696a5e7be7a7146",
+  "saved_at": "2026-10-27T17:55:08.362676+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "connectors",
+      "subtype": "GPIO header adapter 40-pin",
+      "manufacturer": "Generic",
+      "model": "GPIO-40P-90DEG-ADAPTER",
+      "description": "2x20 Pin 40-Pin Raspberry Pi GPIO Header Adapter Board 90 Degree Right Angle Male to Female Dual Row Extension Connector Green PCB",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "13",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ca25ca0b7eed46a88696a5e7be7a7146",
+    "action": "addition",
+    "code": "EFUV1026",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "13",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "EFUV1026",
+      "type": "connectors",
+      "subtype": "GPIO header adapter 40-pin",
+      "manufacturer": "Generic",
+      "model": "GPIO-40P-90DEG-ADAPTER",
+      "description": "2x20 Pin 40-Pin Raspberry Pi GPIO Header Adapter Board 90 Degree Right Angle Male to Female Dual Row Extension Connector Green PCB",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ca25ca0b7eed46a88696a5e7be7a7146",
+    "code": "EFUV1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
