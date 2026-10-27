@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "968ef1fdf11045f1b1299499eb1ab283",
+  "saved_at": "2026-10-27T16:31:28.753611+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "hardware",
+      "subtype": "screw and nut assortment kit",
+      "manufacturer": "Generic",
+      "model": "SCREW-KIT-M3-M4-SS-10BOX",
+      "description": "M3 M4 Stainless Steel Socket Head Cap Screw Bolt Assortment Kit with Hex Nuts and Flat Washers, 10-Compartment Clear Plastic Storage Box",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "20",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "968ef1fdf11045f1b1299499eb1ab283",
+    "action": "addition",
+    "code": "NTSB1026",
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "20",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "NTSB1026",
+      "type": "hardware",
+      "subtype": "screw and nut assortment kit",
+      "manufacturer": "Generic",
+      "model": "SCREW-KIT-M3-M4-SS-10BOX",
+      "description": "M3 M4 Stainless Steel Socket Head Cap Screw Bolt Assortment Kit with Hex Nuts and Flat Washers, 10-Compartment Clear Plastic Storage Box",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "968ef1fdf11045f1b1299499eb1ab283",
+    "code": "NTSB1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
