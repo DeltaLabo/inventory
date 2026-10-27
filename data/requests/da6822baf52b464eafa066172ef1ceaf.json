@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "da6822baf52b464eafa066172ef1ceaf",
+  "saved_at": "2026-10-27T16:27:33.532212+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "capacitors",
+      "subtype": "ceramic capacitor assortment kit",
+      "manufacturer": "Generic",
+      "model": "CCAP-KIT-DISC-10BOX",
+      "description": "Ceramic Disc Capacitor Assortment Kit Brown Body 10pF-100nF with 10-Compartment Clear Plastic Storage Box",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "19",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "da6822baf52b464eafa066172ef1ceaf",
+    "action": "addition",
+    "code": "DOMR1026",
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "19",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "DOMR1026",
+      "type": "capacitors",
+      "subtype": "ceramic capacitor assortment kit",
+      "manufacturer": "Generic",
+      "model": "CCAP-KIT-DISC-10BOX",
+      "description": "Ceramic Disc Capacitor Assortment Kit Brown Body 10pF-100nF with 10-Compartment Clear Plastic Storage Box",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "da6822baf52b464eafa066172ef1ceaf",
+    "code": "DOMR1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
