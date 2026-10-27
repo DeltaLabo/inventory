@@ -1,0 +1,81 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "255f3d6fc5824de5879d176b6661627d",
+  "saved_at": "2026-10-27T16:47:11.154238+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "YKQE1026",
+    "original_item": {
+      "code": "YKQE1026",
+      "type": "electronic modules",
+      "subtype": "load cell amplifier",
+      "manufacturer": "Gneric",
+      "model": "HX711",
+      "description": "Dual Chanel Load Cell Amplifier Module 2.7-5v",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Dual Chanel Load Cell Amplifier Module 2.7-5v",
+      "type": "Sensor Board",
+      "subtype": "thermo couple amplifier module",
+      "manufacturer": "Gneric",
+      "model": "HX711",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Cantidad",
+    "original_stock": {
+      "code": "YKQE1026",
+      "location": "E",
+      "sublocation": "30",
+      "units": "8"
+    },
+    "updated_stock": {
+      "location": "E",
+      "sublocation": "30",
+      "units": "17"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "255f3d6fc5824de5879d176b6661627d",
+    "action": "edit",
+    "code": "YKQE1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Cantidad",
+    "product_changes": {
+      "type": {
+        "before": "electronic modules",
+        "after": "Sensor Board"
+      },
+      "subtype": {
+        "before": "load cell amplifier",
+        "after": "thermo couple amplifier module"
+      }
+    },
+    "stock_changes": {
+      "units": {
+        "before": "8",
+        "after": "17"
+      }
+    },
+    "original_location": {
+      "code": "YKQE1026",
+      "location": "E",
+      "sublocation": "30",
+      "units": "8"
+    }
+  },
+  "result": {
+    "id": "255f3d6fc5824de5879d176b6661627d",
+    "code": "YKQE1026",
+    "action": "edit"
+  }
+}

@@ -213,7 +213,7 @@ UCVO1026,display/screens,LCD 16x2,Generic,SC160SLB-XA-GB-K,SC160SLB-XA-GB-K Blue
 GWXY1026,actuator,Relay,DFRobot,JQC-3FF,DF robot gravity digital,,,,
 RBGK1026,sensor,PHOTOINTERRUPTER,Generic,OPB12704,OPB12704 Slotted Optical,,,,
 QKOS1026,sensor,type K thermocouple,Gneric,type k,Braided Stainless Steel Cable with,,,,
-YKQE1026,electronic modules,load cell amplifier,Gneric,HX711,Dual Chanel Load Cell Amplifier Module 2.7-5v,,,,
+YKQE1026,Sensor Board,thermo couple amplifier module,Gneric,HX711,Dual Chanel Load Cell Amplifier Module 2.7-5v,,,,
 EEVG1026,sensor board,BME280,Generic,BME280,Gravity I2C Environmental sensor board,,,,
 JLUM1026,sensor,differential pressure sensor,Generic,X0043ENFTN 200psi,FUSCH 200 PSI presure Transducer for oil Fuel Water Air 0.5-4.5v   1/8 NPT,,,,
 XGOS1026,sensor board,BME280,Adafruit,BME280,Barometric Pressure Temperature Humidity,,,,
