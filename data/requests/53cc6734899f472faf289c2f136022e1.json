@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "53cc6734899f472faf289c2f136022e1",
+  "saved_at": "2026-10-27T17:52:59.096765+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "SMD IC on tape reel",
+      "manufacturer": "Generic",
+      "model": "SMD-IC-TAPE-10PCS-ESD",
+      "description": "ESD Sensitive SMD Integrated Circuit on Cut Tape - in Anti-Static Bag with Yellow ATTENTION Observe Precautions for Handling Electrostatic Sensitive Devices MIL-STD-129 Label - Lot of 10pcs",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "12",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "53cc6734899f472faf289c2f136022e1",
+    "action": "addition",
+    "code": "DNLP1026",
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "12",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "DNLP1026",
+      "type": "Accessories",
+      "subtype": "SMD IC on tape reel",
+      "manufacturer": "Generic",
+      "model": "SMD-IC-TAPE-10PCS-ESD",
+      "description": "ESD Sensitive SMD Integrated Circuit on Cut Tape - in Anti-Static Bag with Yellow ATTENTION Observe Precautions for Handling Electrostatic Sensitive Devices MIL-STD-129 Label - Lot of 10pcs",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "53cc6734899f472faf289c2f136022e1",
+    "code": "DNLP1026",
+    "action": "addition",
+    "quantity": 10
+  }
+}
