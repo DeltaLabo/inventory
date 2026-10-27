@@ -19,7 +19,7 @@ class AppTests(unittest.TestCase):
         network_patch = patch("requests.request", side_effect=AssertionError("Tests must not access GitHub"))
         network_patch.start()
         self.addCleanup(network_patch.stop)
-        roster_patch = patch("scripts.assistants.load_assistants", return_value=(("TEST00", "Intern"), ("OTHER00", "Other intern")))
+        roster_patch = patch("scripts.staff.load_staff", return_value=(("TEST00", "Intern"), ("OTHER00", "Other intern")))
         roster_patch.start()
         self.addCleanup(roster_patch.stop)
 
@@ -457,7 +457,7 @@ class AppTests(unittest.TestCase):
             self.assertEqual(app.text_input(key="edit_field_password").value, "")
 
     def test_edit_requires_assistant_selection_and_blocks_if_the_directory_is_unavailable(self):
-        from scripts.assistants import AssistantDirectoryError
+        from scripts.staff import StaffDirectoryError
 
         self.configure_forms()
         with patch("scripts.github_inventory.GitHubInventory.edit") as edit:
@@ -467,8 +467,8 @@ class AppTests(unittest.TestCase):
             app.text_input(key="edit_field_password").set_value("test-add")
             app.button[0].click().run()
             edit.assert_not_called()
-            self.assertIn("Select an assistant", app.error[0].value)
-            with patch("scripts.assistants.load_assistants", side_effect=AssistantDirectoryError("Directory unavailable")):
+            self.assertIn("Select a staff member", app.error[0].value)
+            with patch("scripts.staff.load_staff", side_effect=StaffDirectoryError("Directory unavailable")):
                 app.run()
                 self.assertEqual(app.error[0].value, "Directory unavailable")
                 self.assertFalse(any(button.label == "Save changes" for button in app.button))

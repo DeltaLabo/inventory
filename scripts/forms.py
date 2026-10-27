@@ -8,7 +8,7 @@ import streamlit as st
 from streamlit.errors import StreamlitSecretNotFoundError
 
 from scripts.github_inventory import GitHubError, required, stock_units
-import scripts.assistants as assistant_directory
+import scripts.staff as staff_directory
 from scripts.inventory import bag_key
 
 
@@ -223,13 +223,13 @@ def withdrawal_form(client, details, locations, password, on_saved):
     if not choices:
         st.info("No available stock has a verifiable product ID, box and bag.")
         return
-    if st.button("Refresh assistant list"):
-        assistant_directory.refresh_assistants()
+    if st.button("Refresh staff list"):
+        staff_directory.refresh_staff()
         st.session_state.pop("withdrawal_field_person", None)
         st.rerun()
     try:
-        assistants = dict(assistant_directory.load_assistants())
-    except assistant_directory.AssistantDirectoryError as error:
+        assistants = dict(staff_directory.load_staff())
+    except staff_directory.StaffDirectoryError as error:
         st.error(str(error))
         return
     selected = st.selectbox("Product, box and bag", sorted(choices, key=lambda key: choices[key][0]), format_func=lambda key: choices[key][0])
@@ -251,7 +251,7 @@ def withdrawal_form(client, details, locations, password, on_saved):
             with st.spinner("Saving withdrawal in GitHub…"):
                 project = required(project, "Project")
                 if assistant_id not in assistants:
-                    raise ValueError("Select an assistant from the directory.")
+                    raise ValueError("Select a staff member from the directory.")
                 remaining = client.withdraw(request_id, *selected, quantity, assistants[assistant_id], project,
                                              assistant_id=assistant_id)
         except (ValueError, GitHubError) as error:
@@ -263,8 +263,8 @@ def withdrawal_form(client, details, locations, password, on_saved):
         st.rerun()
 
 
-def refresh_edit_assistants():
-    assistant_directory.refresh_assistants()
+def refresh_edit_staff():
+    staff_directory.refresh_staff()
     st.session_state["edit_field_person"] = None
 
 
@@ -277,10 +277,10 @@ def edit_form(client, details, locations, password, on_saved=None):
         st.info("Editing is not enabled yet.")
         return
     try:
-        assistants = dict(assistant_directory.load_assistants())
-    except assistant_directory.AssistantDirectoryError as error:
+        assistants = dict(staff_directory.load_staff())
+    except staff_directory.StaffDirectoryError as error:
         st.error(str(error))
-        st.button("Refresh assistant list", key="edit_refresh_assistants", on_click=refresh_edit_assistants)
+        st.button("Refresh staff list", key="edit_refresh_staff", on_click=refresh_edit_staff)
         return
     request_id = operation_id("edit")
     eligible = details[~details["code"].duplicated(keep=False)]
@@ -385,7 +385,7 @@ def edit_form(client, details, locations, password, on_saved=None):
         reason = st.text_input("Reason for correction", key="edit_field_reason", max_chars=300)
         entered = st.text_input("Addition password", type="password", key="edit_field_password")
         submitted = st.form_submit_button("Save changes")
-    st.button("Refresh assistant list", key="edit_refresh_assistants", on_click=refresh_edit_assistants)
+    st.button("Refresh staff list", key="edit_refresh_staff", on_click=refresh_edit_staff)
     if submitted:
         if not password_matches(entered, password):
             st.error("Incorrect password.")
@@ -393,7 +393,7 @@ def edit_form(client, details, locations, password, on_saved=None):
         try:
             with st.spinner("Saving changes in GitHub…"):
                 if assistant_id not in assistants:
-                    raise ValueError("Select an assistant from the directory.")
+                    raise ValueError("Select a staff member from the directory.")
                 result = client.edit(request_id, code, original_item, updated_item, assistants[assistant_id], reason,
                                      original_stock, updated_stock, assistant_id=assistant_id)
         except (ValueError, GitHubError) as error:

@@ -14,7 +14,7 @@ class WithdrawalHistoryTests(unittest.TestCase):
     def setUp(self):
         self.db = MemoryGitHub()
         self.details, _ = self.db.snapshot()
-        roster = patch("scripts.assistants.load_assistants", return_value=(("TEST00", "Intern"),))
+        roster = patch("scripts.staff.load_staff", return_value=(("TEST00", "Intern"),))
         roster.start()
         self.addCleanup(roster.stop)
 

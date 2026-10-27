@@ -49,7 +49,7 @@ The data paths resolve from the checkout, independently of the working directory
 - **Edit:** use the addition password to correct an existing product's description,
   classification, manufacturer, model or specifications. Enable **Correct box,
   bag or quantities** to correct those fields. Select the assistant recording the correction
-  from the assistants directory and enter the reason. The ID stays fixed.
+  from the staff directory and enter the reason. The ID stays fixed.
   **Save changes** applies the correction immediately.
   Find the record with **Find in box** and **Find in bag**. Either filter can be
   left on All; bag numbers sort numerically and match zero-padded labels such as
@@ -322,20 +322,20 @@ Configuration references: [Streamlit secrets](https://docs.streamlit.io/deploy/s
 [GitHub trees](https://docs.github.com/en/rest/git/trees),
 [GitHub references](https://docs.github.com/en/rest/git/refs).
 
-## Private assistant directory
+## Private staff directory
 
-Edits and withdrawals select a registered assistant from `DeltaLabo/assistants`, a private
-repository. The app reads only ID and full name from `data/input/assistants.csv`, caches
+Edits and withdrawals select a registered staff member from `DeltaLabo/staff`, a private
+repository. The app reads only ID and full name from `data/input/staff.csv`, caches
 those fields for five minutes, and validates the selection before saving. Use
-**Refresh assistant list** for changes. If the directory cannot be read or the
+**Refresh staff list** for changes. If the directory cannot be read or the
 selection is invalid, the edit or withdrawal is blocked; public browsing remains available.
 New edit receipts and movements record `assistant_id` alongside the name. Old names and blank IDs
 remain unchanged. A dropdown prevents spelling errors; it does not independently
 authenticate a person using the shared password.
 
-Add `ASSISTANTS_TOKEN` with **Contents: Read** on `DeltaLabo/assistants`
-to inventory's Streamlit Secrets. Optional `ASSISTANTS_REPOSITORY` and
-`ASSISTANTS_BRANCH` default to `DeltaLabo/assistants` and `main`. Without a
+Add `STAFF_TOKEN` with **Contents: Read** on `DeltaLabo/staff`
+to inventory's Streamlit Secrets. Optional `STAFF_REPOSITORY` and
+`STAFF_BRANCH` default to `DeltaLabo/staff` and `main`. Without a
 separate token, the app tries `GITHUB_TOKEN`, which must then also have access to
 the private assistants repository. Contact/banking data is not copied or cached.
 This read-only directory access is separate from inventory's Contents write access.
@@ -352,3 +352,21 @@ Optional `ADMIN_APP_URL` overrides this public link; no new secret is required.
 Existing login forms/logout controls appear in the sidebar. Passwords, session
 checks, public views and private-data gates are unchanged; no accounts/registration
 were added. Inventory keeps per-operation password fields in its submission forms.
+
+
+## Staff directory transition (2026-10-26)
+
+The personnel app is now DeltaLAB: staff, supporting Research assistant, Intern,
+Junior member, Researcher and Teaching assistant. The user will rename the private
+repo from DeltaLabo/assistants to DeltaLabo/staff and redeploy it. Do not perform
+that rename or guess a new deployment URL. Canonical personnel data is now
+data/input/staff.csv; all IDs and original personnel values remain unchanged.
+
+Use STAFF_TOKEN/REPOSITORY/BRANCH for directory access (Contents Read only), with
+legacy ASSISTANTS_* settings accepted when new settings are absent. Defaults for
+new directory configuration are DeltaLabo/staff/main. Inventory and Schedule try
+staff.csv first; only if absent do they read assistants.csv at the same commit.
+Malformed or inaccessible canonical data must block access, not use a stale copy.
+No roles are excluded from name selection. Cache only ID/name and preserve the
+historical assistant_id/id_asis keys and immutable receipts rather than migrating
+past records. There is only one authoritative personnel database.

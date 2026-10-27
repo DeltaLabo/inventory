@@ -217,9 +217,9 @@ never replay them or assume that missing schema-3 metadata means unapplied stock
 Stock and catalog reads are invalidated after successful additions and edits.
 New product ID reservation tags remain necessary for concurrent issuance; keep
 historical tags too. No PR permission or workflow is required for new writes.
-Use Contents Read/write for inventory and separate read-only assistants access.
+Use Contents Read/write for inventory and separate read-only staff access.
 
-Assistant selections for withdrawals come from the private assistants CSV via
+Staff selections for withdrawals come from the private staff CSV via
 authenticated API access. Read/cache only ID/name, never contact or banking fields.
 The roster cache lasts five minutes with manual refresh. Require a registered ID
 and its matching canonical name on new withdrawals; append assistant_id to the
@@ -227,11 +227,11 @@ ledger while preserving old rows. Existing completed retries can recover without
 roster access. The shared password authorizes the action; selection is not identity
 verification. Tests must mock both repositories and never create real test writes.
 
-Edit also uses the assistant dropdown for Recorded by. Require the matching
+Edit also uses the staff dropdown for Recorded by. Require the matching
 registered ID/name before new edits and store assistant_id in the audit receipt.
 Do not fall back to free text when the roster fails. Preserve historical names and
 recover already-saved edit retries before accessing the roster, including old
-receipts without assistant_id. Refresh assistant list clears the edit selection.
+receipts without assistant_id. Refresh staff list clears the edit selection.
 
 Branding: use `DeltaLAB: inventory` for the app title and browser title. Show the
 logo in the page header at 150 CSS pixels wide (responsive on narrow screens),
@@ -253,3 +253,21 @@ were added. Inventory keeps per-operation password fields in its submission form
 Cross-app return navigation uses Streamlit native link buttons, opening a new
 tab. HTML links targeting the current app iframe caused redirect loops on
 Community Cloud during the deployed-app audit on 2026-10-25; do not restore them.
+
+
+## Staff directory transition (2026-10-26)
+
+The personnel app is now DeltaLAB: staff, supporting Research assistant, Intern,
+Junior member, Researcher and Teaching assistant. The user will rename the private
+repo from DeltaLabo/assistants to DeltaLabo/staff and redeploy it. Do not perform
+that rename or guess a new deployment URL. Canonical personnel data is now
+data/input/staff.csv; all IDs and original personnel values remain unchanged.
+
+Use STAFF_TOKEN/REPOSITORY/BRANCH for directory access (Contents Read only), with
+legacy ASSISTANTS_* settings accepted when new settings are absent. Defaults for
+new directory configuration are DeltaLabo/staff/main. Inventory and Schedule try
+staff.csv first; only if absent do they read assistants.csv at the same commit.
+Malformed or inaccessible canonical data must block access, not use a stale copy.
+No roles are excluded from name selection. Cache only ID/name and preserve the
+historical assistant_id/id_asis keys and immutable receipts rather than migrating
+past records. There is only one authoritative personnel database.

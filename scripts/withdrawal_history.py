@@ -12,7 +12,7 @@ LABELS = {
     "timestamp": "Withdrawn at (UTC)", "project": "Project", "code": "Code",
     "description": "Current description", "quantity": "Quantity withdrawn",
     "person": "Recorded by", "location": "Box", "sublocation": "Bag",
-    "assistant_id": "Assistant ID",
+    "assistant_id": "Staff ID",
     "available_after": "Units after withdrawal", "id": "Movement ID",
 }
 

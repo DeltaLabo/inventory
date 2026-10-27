@@ -15,7 +15,7 @@ from zoneinfo import ZoneInfo
 import requests
 
 from scripts.inventory import DETAIL_COLUMNS, LOCATION_COLUMNS, parse_data
-from scripts.assistants import assistant_name
+from scripts.staff import staff_name
 
 
 MOVEMENT_COLUMNS = (
@@ -261,7 +261,7 @@ class GitHubInventory:
             "updated_stock": {name: str(value).strip() for name, value in updated_stock.items()} if updated_stock is not None else None,
         }
         if assistant_id is not None:
-            submission["assistant_id"] = required(assistant_id, "Assistant ID", 100)
+            submission["assistant_id"] = required(assistant_id, "Staff ID", 100)
         return self._save_change(request_id, submission)
 
     def _save_change(self, request_id, submission):
@@ -281,7 +281,7 @@ class GitHubInventory:
                     raise ValueError("This operation was already saved with different details. Start another operation.")
                 return saved["result"]
             if submission["action"] == "edit":
-                assistant_name(submission.get("assistant_id"), submission["person"])
+                staff_name(submission.get("assistant_id"), submission["person"])
             details_text = self.read_file("data/details.csv", parent)
             locations_text = self.read_file("data/locations.csv", parent)
             if submission["action"] == "addition":
@@ -346,7 +346,7 @@ class GitHubInventory:
         expected = {"id": operation, "code": code, "location": location, "sublocation": sublocation,
                     "quantity": str(quantity), "person": person, "project": project}
         if assistant_id is not None:
-            expected["assistant_id"] = required(assistant_id, "Assistant ID", 100)
+            expected["assistant_id"] = required(assistant_id, "Staff ID", 100)
         for attempt in range(3):
             parent = self.head()
             history_text = self.read_file("data/movements.csv", parent, optional=True)
@@ -357,7 +357,7 @@ class GitHubInventory:
                     raise ValueError("This request was already recorded with different details. Start another withdrawal.")
                 return int(previous["available_after"])
             required(project, "Project")
-            assistant_name(assistant_id, person)
+            staff_name(assistant_id, person)
             if "assistant_id" not in columns:
                 columns.append("assistant_id")
             _, details = read_rows(self.read_file("data/details.csv", parent), DETAIL_COLUMNS)

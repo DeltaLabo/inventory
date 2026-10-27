@@ -96,7 +96,7 @@ class GitHubInventoryTests(unittest.TestCase):
     def setUp(self):
         self.db = MemoryGitHub()
         self.request_id = uuid4().hex
-        roster = patch("scripts.assistants.load_assistants", return_value=(("TEST00", "Intern"), ("OTHER00", "Other intern")))
+        roster = patch("scripts.staff.load_staff", return_value=(("TEST00", "Intern"), ("OTHER00", "Other intern")))
         roster.start()
         self.addCleanup(roster.stop)
 
