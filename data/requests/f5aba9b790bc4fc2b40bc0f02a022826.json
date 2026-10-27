@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "f5aba9b790bc4fc2b40bc0f02a022826",
+  "saved_at": "2026-10-27T19:18:17.236911+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "SMD tactile push button switch in tape",
+      "manufacturer": "Generic",
+      "model": "TAC-SMD-6X6MM-TAPE",
+      "description": "SMD Miniature Tactile Push Button Switch 6x6mm Momentary Tact SPST in Embossed Carrier Tape - 2pcs Visible",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "H",
+    "sublocation": "21",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "f5aba9b790bc4fc2b40bc0f02a022826",
+    "action": "addition",
+    "code": "AAFC1026",
+    "quantity": 2,
+    "location": "H",
+    "sublocation": "21",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "AAFC1026",
+      "type": "Accessories",
+      "subtype": "SMD tactile push button switch in tape",
+      "manufacturer": "Generic",
+      "model": "TAC-SMD-6X6MM-TAPE",
+      "description": "SMD Miniature Tactile Push Button Switch 6x6mm Momentary Tact SPST in Embossed Carrier Tape - 2pcs Visible",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "f5aba9b790bc4fc2b40bc0f02a022826",
+    "code": "AAFC1026",
+    "action": "addition",
+    "quantity": 2
+  }
+}
