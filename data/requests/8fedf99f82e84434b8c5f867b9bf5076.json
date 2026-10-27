@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "8fedf99f82e84434b8c5f867b9bf5076",
+  "saved_at": "2026-10-27T19:45:00.216729+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "inductor",
+      "manufacturer": "Generic",
+      "model": "CDRH104R-SMD-INDUCTOR-8PCS",
+      "description": "SMD Shielded Power Inductor Drum Core 10x10mm CDRH Series Black Body in Embossed Carrier Tape - 8pcs in Cut Tape",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 8,
+    "location": "G",
+    "sublocation": "26",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "8fedf99f82e84434b8c5f867b9bf5076",
+    "action": "addition",
+    "code": "OISZ1026",
+    "quantity": 8,
+    "location": "G",
+    "sublocation": "26",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "OISZ1026",
+      "type": "Accessories",
+      "subtype": "inductor",
+      "manufacturer": "Generic",
+      "model": "CDRH104R-SMD-INDUCTOR-8PCS",
+      "description": "SMD Shielded Power Inductor Drum Core 10x10mm CDRH Series Black Body in Embossed Carrier Tape - 8pcs in Cut Tape",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "8fedf99f82e84434b8c5f867b9bf5076",
+    "code": "OISZ1026",
+    "action": "addition",
+    "quantity": 8
+  }
+}
