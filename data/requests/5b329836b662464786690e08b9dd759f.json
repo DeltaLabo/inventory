@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "5b329836b662464786690e08b9dd759f",
+  "saved_at": "2026-10-27T17:17:22.597452+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "LBY-056-2",
+      "subtype": "GSM / LoRa stub antenna",
+      "manufacturer": "Generic",
+      "model": "SMA-RA-STUB-50mm",
+      "description": "Mini Rubber Duck Antenna SMA Male 90 Degree Right Angle Black 2.4GHz / 433MHz / GSM Short Stub for ESP32 LoRa Module",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "J",
+    "sublocation": "21",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "5b329836b662464786690e08b9dd759f",
+    "action": "addition",
+    "code": "NNXK1026",
+    "quantity": 1,
+    "location": "J",
+    "sublocation": "21",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "NNXK1026",
+      "type": "LBY-056-2",
+      "subtype": "GSM / LoRa stub antenna",
+      "manufacturer": "Generic",
+      "model": "SMA-RA-STUB-50mm",
+      "description": "Mini Rubber Duck Antenna SMA Male 90 Degree Right Angle Black 2.4GHz / 433MHz / GSM Short Stub for ESP32 LoRa Module",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "5b329836b662464786690e08b9dd759f",
+    "code": "NNXK1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
