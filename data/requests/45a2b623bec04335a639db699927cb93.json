@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "45a2b623bec04335a639db699927cb93",
+  "saved_at": "2026-10-27T20:18:35.328579+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Resistors",
+      "subtype": "SMD low resistance",
+      "manufacturer": "Generic",
+      "model": "SMD-SHUNT-R009-2512",
+      "description": "SMD Current Sense Resistor R009 0.009 Ohm 9mΩ 1% Power Resistor Low Ohmic Shunt 2512 / 2725 Package Marking R009 in Carrier Tape - Cut Strip Lot",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 49,
+    "location": "G",
+    "sublocation": "36",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "45a2b623bec04335a639db699927cb93",
+    "action": "addition",
+    "code": "GBCX1026",
+    "quantity": 49,
+    "location": "G",
+    "sublocation": "36",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "GBCX1026",
+      "type": "Resistors",
+      "subtype": "SMD low resistance",
+      "manufacturer": "Generic",
+      "model": "SMD-SHUNT-R009-2512",
+      "description": "SMD Current Sense Resistor R009 0.009 Ohm 9mΩ 1% Power Resistor Low Ohmic Shunt 2512 / 2725 Package Marking R009 in Carrier Tape - Cut Strip Lot",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "45a2b623bec04335a639db699927cb93",
+    "code": "GBCX1026",
+    "action": "addition",
+    "quantity": 49
+  }
+}
