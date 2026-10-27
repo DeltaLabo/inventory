@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "38f0cbb84a8246219d2d37b37e185058",
+  "saved_at": "2026-10-27T19:15:31.219516+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "connectors",
+      "subtype": "pin header 2-pin 2.54mm",
+      "manufacturer": "Generic",
+      "model": "PH-2P-2.54MM-STRAIGHT",
+      "description": "2-Pin 2.54mm Pitch Straight Male Pin Header Single Row Breakaway Connector Gold Plated - 2pcs",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "20",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "38f0cbb84a8246219d2d37b37e185058",
+    "action": "addition",
+    "code": "ZIVZ1026",
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "20",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ZIVZ1026",
+      "type": "connectors",
+      "subtype": "pin header 2-pin 2.54mm",
+      "manufacturer": "Generic",
+      "model": "PH-2P-2.54MM-STRAIGHT",
+      "description": "2-Pin 2.54mm Pitch Straight Male Pin Header Single Row Breakaway Connector Gold Plated - 2pcs",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "38f0cbb84a8246219d2d37b37e185058",
+    "code": "ZIVZ1026",
+    "action": "addition",
+    "quantity": 2
+  }
+}
