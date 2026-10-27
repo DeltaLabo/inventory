@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "5921ba87643547a4a09b1adc871567b2",
+  "saved_at": "2026-10-27T21:57:34.463873+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "EEPROM SOIC-8",
+      "manufacturer": "micr",
+      "model": "AT24CXX / AT25XX - SOIC-8 400D",
+      "description": "SMD Memory IC Marking ATML / 400D / AT24C Series 8-Pin SOIC Black Package Single Chip in Palm Same as Previous ATMEC Chip",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "49",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "5921ba87643547a4a09b1adc871567b2",
+    "action": "addition",
+    "code": "DNIK1026",
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "49",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "DNIK1026",
+      "type": "Accessories",
+      "subtype": "EEPROM SOIC-8",
+      "manufacturer": "micr",
+      "model": "AT24CXX / AT25XX - SOIC-8 400D",
+      "description": "SMD Memory IC Marking ATML / 400D / AT24C Series 8-Pin SOIC Black Package Single Chip in Palm Same as Previous ATMEC Chip",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "5921ba87643547a4a09b1adc871567b2",
+    "code": "DNIK1026",
+    "action": "addition",
+    "quantity": 2
+  }
+}
