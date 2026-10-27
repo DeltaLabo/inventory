@@ -7,6 +7,7 @@ from scripts.forms import addition_form, edit_form, settings, withdrawal_form
 from scripts.github_inventory import GitHubError, GitHubInventory
 from scripts.purchases import purchases
 from scripts.withdrawal_history import live_withdrawals, withdrawal_history
+from scripts.management import live_management, management
 
 
 from scripts.paths import DATA_DIR, ASSETS_DIR
@@ -30,6 +31,17 @@ def image_url(code, previous_code=""):
 @st.cache_data(ttl=15, max_entries=4, show_spinner=False)
 def live_data(token, repository, branch):
     return GitHubInventory(token, repository, branch).snapshot()
+
+
+@st.cache_data(ttl=15, max_entries=4, show_spinner=False)
+def live_storage(token, repository, branch):
+    return GitHubInventory(token, repository, branch).storage_snapshot()
+
+
+def invalidate_data():
+    live_data.clear()
+    live_storage.clear()
+    live_management.clear()
 
 
 def clear_browse_filters():
@@ -112,19 +124,28 @@ def main():
     except (OSError, ValueError, pd.errors.ParserError) as error:
         st.error(f"Could not load inventory: {error}")
         st.stop()
-    action = st.radio("What would you like to do?", ("Browse", "Add", "Edit", "Withdraw", "Purchases", "History"), horizontal=True)
+    action = st.radio("What would you like to do?", ("Browse", "Add", "Edit", "Withdraw", "Purchases", "History", "Manage"), horizontal=True)
     if action == "Add":
-        addition_form(client, details, locations, config["add_password"], live_data.clear)
+        storage = []
+        if client:
+            try:
+                storage = live_storage(config["token"], config["repository"], config["branch"])
+            except (GitHubError, ValueError):
+                st.error("Could not read storage. Refresh before adding stock.")
+                return
+        addition_form(client, details, locations, config["add_password"], invalidate_data, storage)
     elif action == "Edit":
         issues = validate_data(details, locations)
         if issues:
             with st.expander(f"Data to review ({len(issues)})"):
                 for issue in issues:
                     st.write(f"• {issue}")
-        edit_form(client, details, locations, config["add_password"], live_data.clear)
+        edit_form(client, details, locations, config["add_password"], invalidate_data)
+    elif action == "Manage":
+        management(client, config, invalidate_data)
     elif action == "Withdraw":
         def on_withdrawal_saved():
-            live_data.clear()
+            invalidate_data()
             live_withdrawals.clear()
         withdrawal_form(client, details, locations, config["withdraw_password"], on_withdrawal_saved)
     elif action == "Purchases":
@@ -134,7 +155,7 @@ def main():
     else:
         st.subheader("Inventory")
         if client and st.button("Refresh stock"):
-            live_data.clear()
+            invalidate_data()
             st.rerun()
         browse(details, locations)
 

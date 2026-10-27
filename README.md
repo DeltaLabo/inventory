@@ -6,6 +6,33 @@ are in English. GitHub stores the data; no separate database or server is requir
 
 Live app: [DeltaLAB Inventory](https://deltalab-inventory.streamlit.app/).
 
+## Manage devices, boxes and bags
+
+Use **Manage** to create an empty box or a numbered bag inside an existing box.
+New boxes are also offered by the **Box** selector under **Add**. You can still
+type a new box directly when adding a new device or its first stock entry.
+Empty storage is saved in `data/storage.csv`; existing boxes and bags are also
+recognized from stock without changing current CSVs in advance.
+
+**Delete device** removes its catalog record and all its stock entries.
+**Delete device from one bag** removes only the selected device's storage entry,
+keeping its catalog record and other locations. Both actions show the exact
+records and current quantities before removal. Removing the last device keeps
+the now-empty box and bag registered.
+
+**Delete box** and **Delete bag** work only when there are no device storage
+entries inside, including entries with zero or unknown quantities. Move devices
+with **Edit**, or remove their storage entries first. Deleting an empty box also
+removes its empty bags. Other boxes and bags remain unchanged.
+
+Every management save requires a registered staff selection, reason and the
+existing addition password. Removals additionally require a preview and explicit
+confirmation. If any affected records change after the preview, saving stops;
+use **Refresh management data** and preview again. Updates and their audit receipts
+are committed atomically with concurrent-write checks and safe retries.
+Historical movements, previous receipts, photographs and reserved product IDs
+are retained. No stock is transferred or historical withdrawal fabricated by removal.
+
 ## Run locally
 
 From this repository:

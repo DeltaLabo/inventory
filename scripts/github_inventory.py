@@ -153,6 +153,95 @@ class GitHubInventory:
         sha = self.head()
         return parse_data(self.read_file("data/details.csv", sha), self.read_file("data/locations.csv", sha))
 
+    def _management_snapshot(self, parent):
+        from scripts.storage import STORAGE_COLUMNS, storage_rows
+
+        detail_columns, details = read_rows(self.read_file("data/details.csv", parent), DETAIL_COLUMNS)
+        location_columns, locations = read_rows(self.read_file("data/locations.csv", parent), LOCATION_COLUMNS)
+        text = self.read_file("data/storage.csv", parent, optional=True)
+        registered = read_rows(text, STORAGE_COLUMNS)[1] if text is not None else []
+        return {"details": details, "locations": locations, "storage": storage_rows(registered, locations)}, detail_columns, location_columns
+
+    def management_snapshot(self):
+        return self._management_snapshot(self.head())[0]
+
+    def storage_snapshot(self):
+        from scripts.storage import STORAGE_COLUMNS
+        text = self.read_file("data/storage.csv", self.head(), optional=True)
+        return read_rows(text, STORAGE_COLUMNS)[1] if text is not None else []
+
+    def manage(self, request_id, action, target, expected, person, reason, *, assistant_id=None):
+        from scripts.storage import STORAGE_COLUMNS, removal_preview
+        from scripts.inventory import bag_key
+
+        if action not in ("add_box", "add_bag", "delete_product", "delete_box", "delete_bag", "delete_stock"):
+            raise ValueError("Select a valid management action.")
+        allowed = {"add_box": ("location",), "add_bag": ("location", "sublocation"),
+                   "delete_product": ("code",), "delete_box": ("location",),
+                   "delete_bag": ("location", "sublocation"), "delete_stock": ("code", "location", "sublocation")}[action]
+        target = {key: required(target.get(key, ""), key.title(), 80) for key in allowed}
+        if action == "add_bag":
+            value = target["sublocation"]
+            if not value.isascii() or not value.isdigit():
+                raise ValueError("Bag must be a nonnegative integer.")
+            target["sublocation"] = str(int(value))
+        operation = UUID(request_id).hex
+        submission = {"action": action, "target": target, "expected": expected,
+                      "person": required(person, "Recorded by", 100), "reason": required(reason, "Reason"),
+                      "assistant_id": assistant_id}
+        path = f"data/requests/{operation}.json"
+        for attempt in range(5):
+            parent = self.head()
+            previous = self.read_file(path, parent, optional=True)
+            if previous is not None:
+                saved = json.loads(previous)
+                if saved.get("schema_version") != 3 or saved.get("submission") != submission:
+                    raise ValueError("This operation was already saved with different details. Start another operation.")
+                return saved["result"]
+            staff_name(assistant_id, submission["person"])
+            snapshot, detail_columns, location_columns = self._management_snapshot(parent)
+            changes = {}
+            before = None
+            if action.startswith("delete_"):
+                before = removal_preview(snapshot, action, target)
+                if expected is None or before != expected:
+                    raise ValueError("Affected records changed after the preview. Refresh and review before removing them.")
+                if action in ("delete_box", "delete_bag") and before["locations"]:
+                    raise ValueError("Only empty boxes and bags can be deleted. Move or remove their device storage entries first.")
+                for name in ("details", "locations", "storage"):
+                    snapshot[name] = [row for row in snapshot[name] if row not in before[name]]
+                if before["details"]:
+                    changes["data/details.csv"] = write_rows(detail_columns, snapshot["details"])
+                if before["locations"]:
+                    changes["data/locations.csv"] = write_rows(location_columns, snapshot["locations"])
+            else:
+                box = target["location"]
+                boxes = {row["location"] for row in snapshot["storage"]}
+                if action == "add_box":
+                    if box in boxes:
+                        raise ValueError("This box already exists.")
+                    snapshot["storage"].append({"location": box, "sublocation": ""})
+                else:
+                    if box not in boxes:
+                        raise ValueError("This box no longer exists. Refresh and select a box.")
+                    if any(row["location"] == box and bag_key(row["sublocation"]) == target["sublocation"] for row in snapshot["storage"]):
+                        raise ValueError("This bag already exists in the selected box.")
+                    snapshot["storage"].append(target)
+            # Persist occupied boxes/bags too, so removing their last device keeps empty storage.
+            changes["data/storage.csv"] = write_rows(STORAGE_COLUMNS, snapshot["storage"])
+            result = {"id": operation, "action": action, "target": target}
+            changes[path] = json.dumps({"schema_version": 3, "status": "applied", "id": operation,
+                                       "saved_at": datetime.now(timezone.utc).isoformat(),
+                                       "submission": submission, "before": before, "result": result},
+                                      ensure_ascii=False, indent=2) + "\n"
+            commit = self._commit(parent, changes, f"Manage inventory {action} {operation}")
+            try:
+                self._request("PATCH", f"/git/refs/heads/{quote(self.branch, safe='/')}", payload={"sha": commit, "force": False})
+                return result
+            except Conflict:
+                if attempt == 4:
+                    raise
+
     def purchase_snapshot(self):
         text = self.read_file("data/purchase_requests.csv", self.head(), optional=True)
         return read_rows(text, PURCHASE_COLUMNS)[1] if text is not None else []

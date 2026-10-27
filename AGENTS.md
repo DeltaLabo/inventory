@@ -1,5 +1,16 @@
 # Inventory context
 
+Changes requested on 2026-10-27 add Manage for empty boxes/bags and device
+removal. The user authorized pushing these changes later on the same day.
+Management uses the existing addition password, registered staff, a reason and
+atomic schema-3 receipts. Removal requires a frozen preview and confirmation;
+reject changes to affected rows during concurrent writes. Delete boxes/bags only
+when no device storage rows remain, even if their units are zero or unknown.
+Keep movements, receipts, photographs and ID reservation tags. Removing a device
+from one bag keeps the catalog; deleting a device removes all its stock entries.
+Optional data/storage.csv registers empty boxes (blank sublocation) and bags;
+union it with current stock so existing storage needs no source migration.
+
 This is a small Streamlit inventory with public browsing, password-protected
 additions, edits and withdrawals via immediate atomic GitHub commits.
 Keep it simple: no separate database or server. `app.py` is the only application

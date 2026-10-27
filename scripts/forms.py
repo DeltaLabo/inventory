@@ -97,7 +97,7 @@ def addition_classification(details):
     return {"type": item_type, "subtype": subtype}
 
 
-def addition_storage(locations, existing_code=None):
+def addition_storage(locations, existing_code=None, storage=()):
     if existing_code:
         assigned = locations[locations["code"].eq(existing_code)]
         if not assigned.empty:
@@ -113,7 +113,7 @@ def addition_storage(locations, existing_code=None):
             return slot
         st.info("This product has no registered box or bag. Set them for its first stock entry.")
     # These rerun independently so occupancy is visible before submission.
-    boxes = sorted({value for value in locations["location"] if value}, key=str.casefold)
+    boxes = sorted({value for value in locations["location"] if value} | {row["location"] for row in storage if row["location"]}, key=str.casefold)
     location = st.selectbox(
         "Box", boxes, index=None, accept_new_options=True,
         placeholder="Search for or enter a box",
@@ -134,7 +134,7 @@ def addition_storage(locations, existing_code=None):
     return location, sublocation
 
 
-def addition_form(client, details, locations, password, on_saved=None):
+def addition_form(client, details, locations, password, on_saved=None, storage=()):
     st.subheader("Add to inventory")
     st.caption("New product IDs are assigned automatically. Your addition is saved immediately using the addition password.")
     if show_completed("addition"):
@@ -157,7 +157,7 @@ def addition_form(client, details, locations, password, on_saved=None):
         # Outside the form so subtypes update immediately when the type changes.
         classification = addition_classification(details)
         st.caption("Use “Create new…” if an option is missing. It joins the catalog when the addition is saved.")
-    storage = addition_storage(locations, existing_code)
+    storage = addition_storage(locations, existing_code, storage)
     if storage is None:
         return
     location, sublocation = storage

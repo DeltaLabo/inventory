@@ -22,6 +22,9 @@ class AppTests(unittest.TestCase):
         roster_patch = patch("scripts.staff.load_staff", return_value=(("TEST00", "Intern"), ("OTHER00", "Other intern")))
         roster_patch.start()
         self.addCleanup(roster_patch.stop)
+        storage_patch = patch("scripts.github_inventory.GitHubInventory.storage_snapshot", return_value=[])
+        storage_patch.start()
+        self.addCleanup(storage_patch.stop)
 
     def open_app(self):
         from streamlit.testing.v1 import AppTest
@@ -133,6 +136,65 @@ class AppTests(unittest.TestCase):
         snapshot_patch = patch("scripts.github_inventory.GitHubInventory.snapshot", return_value=load_data(Path(__file__).resolve().parents[1] / "data"))
         snapshot_patch.start()
         self.addCleanup(snapshot_patch.stop)
+
+    def test_manage_creates_empty_box_and_offers_it_on_add(self):
+        from test_github_inventory import MemoryGitHub
+        from scripts.management import live_management
+
+        db = MemoryGitHub()
+        self.config.update(token="test-management-create", add_password="test-add")
+        live_management.clear()
+        with patch("scripts.github_inventory.GitHubInventory.snapshot", side_effect=db.snapshot), \
+             patch("scripts.github_inventory.GitHubInventory.management_snapshot", side_effect=db.management_snapshot), \
+             patch("scripts.github_inventory.GitHubInventory.storage_snapshot", side_effect=lambda: db._management_snapshot(db.head())[0]["storage"]), \
+             patch("scripts.github_inventory.GitHubInventory.manage", side_effect=db.manage):
+            app = self.open_app()
+            app.radio[0].set_value("Manage").run()
+            app.text_input(key="management_new_box").set_value("New empty box").run()
+            app.selectbox(key="management_field_person").set_value("TEST00")
+            app.text_input(key="management_field_reason").set_value("More storage")
+            app.text_input(key="management_field_password").set_value("wrong")
+            next(button for button in app.button if button.label == "Create storage").click().run()
+            self.assertEqual(db.head(), "initial")
+            self.assertIn("Incorrect password", app.error[0].value)
+            app.text_input(key="management_field_password").set_value("test-add")
+            next(button for button in app.button if button.label == "Create storage").click().run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertIn("saved", app.success[0].value)
+            app.radio[0].set_value("Add").run()
+            self.assertIn("New empty box", app.selectbox(key="addition_field_location").options)
+
+    def test_manage_blocks_occupied_box_and_requires_confirmation_for_device_removal(self):
+        from test_github_inventory import MemoryGitHub
+        from scripts.management import live_management
+
+        db = MemoryGitHub()
+        self.config.update(token="test-management-delete", add_password="test-add")
+        live_management.clear()
+        with patch("scripts.github_inventory.GitHubInventory.snapshot", side_effect=db.snapshot), \
+             patch("scripts.github_inventory.GitHubInventory.management_snapshot", side_effect=db.management_snapshot), \
+             patch("scripts.github_inventory.GitHubInventory.manage", side_effect=db.manage):
+            app = self.open_app()
+            app.radio[0].set_value("Manage").run()
+            app.selectbox(key="management_action").set_value("Delete box").run()
+            next(button for button in app.button if button.label == "Preview removal").click().run()
+            self.assertTrue(any("Only empty" in message.value for message in app.info))
+            self.assertFalse(any(button.label == "Remove selected records" for button in app.button))
+            app.selectbox(key="management_action").set_value("Delete device").run()
+            next(button for button in app.button if button.label == "Preview removal").click().run()
+            app.selectbox(key="management_field_person").set_value("TEST00")
+            app.text_input(key="management_field_reason").set_value("Retired device")
+            app.text_input(key="management_field_password").set_value("test-add")
+            next(button for button in app.button if button.label == "Remove selected records").click().run()
+            self.assertEqual(db.head(), "initial")
+            self.assertTrue(any("confirm" in message.value for message in app.error))
+            app.checkbox(key="management_field_confirm").check()
+            next(button for button in app.button if button.label == "Remove selected records").click().run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertEqual(db.management_snapshot()["details"], [])
+            self.assertEqual(db.management_snapshot()["locations"], [])
+            app.radio[0].set_value("Browse").run()
+            self.assertTrue(any("No matches" in message.value for message in app.info))
 
     def test_no_secrets_leaves_public_search_open_and_forms_disabled(self):
         app = self.open_app()
@@ -429,7 +491,7 @@ class AppTests(unittest.TestCase):
         self.configure_forms()
         with patch("scripts.github_inventory.GitHubInventory.edit", return_value={"id": "test-operation", "code": "TEST1026"}) as edit:
             app = self.open_app()
-            self.assertEqual(app.radio[0].options, ["Browse", "Add", "Edit", "Withdraw", "Purchases", "History"])
+            self.assertEqual(app.radio[0].options, ["Browse", "Add", "Edit", "Withdraw", "Purchases", "History", "Manage"])
             app.radio[0].set_value("Edit").run()
             self.assertEqual(len(app.exception), 0)
             before = app.text_input(key="edit_field_description").value
