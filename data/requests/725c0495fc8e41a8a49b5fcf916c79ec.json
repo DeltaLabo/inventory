@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "725c0495fc8e41a8a49b5fcf916c79ec",
+  "saved_at": "2026-10-27T20:30:06.373549+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "microcontroller DIP-28",
+      "manufacturer": "Microchip Technology",
+      "model": "PIC16F1786-I/SP",
+      "description": "PIC16F1786-I/SP 8-bit Microcontroller 28-pin SPDIP Package Marking PIC16F1786 -I/SP 1729U4S - 2pcs Lot on Anti-Static Foam",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 6,
+    "location": "G",
+    "sublocation": "40",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "725c0495fc8e41a8a49b5fcf916c79ec",
+    "action": "addition",
+    "code": "SNKL1026",
+    "quantity": 6,
+    "location": "G",
+    "sublocation": "40",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SNKL1026",
+      "type": "Accessories",
+      "subtype": "microcontroller DIP-28",
+      "manufacturer": "Microchip Technology",
+      "model": "PIC16F1786-I/SP",
+      "description": "PIC16F1786-I/SP 8-bit Microcontroller 28-pin SPDIP Package Marking PIC16F1786 -I/SP 1729U4S - 2pcs Lot on Anti-Static Foam",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "725c0495fc8e41a8a49b5fcf916c79ec",
+    "code": "SNKL1026",
+    "action": "addition",
+    "quantity": 6
+  }
+}
