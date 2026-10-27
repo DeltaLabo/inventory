@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "2cd8dc5cbe0c459287bdf3e9f1a22b01",
+  "saved_at": "2026-10-27T15:59:17.086821+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Audio modules",
+      "subtype": "VU meter + voice recorder kit",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "TAN5176 Audio Level Indicator Kit 10-LED Bar D1-D10 with TJ-56-264 ISD1820 Voice Module, KA2284 / LM3915 driver, Adjustable Sensitivity Pot R4, Mic Input + AUDIO - J1, VCC GND J2, REC Button J3, Bare PCB Green",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "15",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "2cd8dc5cbe0c459287bdf3e9f1a22b01",
+    "action": "addition",
+    "code": "ZTIO1026",
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "15",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ZTIO1026",
+      "type": "Audio modules",
+      "subtype": "VU meter + voice recorder kit",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "TAN5176 Audio Level Indicator Kit 10-LED Bar D1-D10 with TJ-56-264 ISD1820 Voice Module, KA2284 / LM3915 driver, Adjustable Sensitivity Pot R4, Mic Input + AUDIO - J1, VCC GND J2, REC Button J3, Bare PCB Green",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "2cd8dc5cbe0c459287bdf3e9f1a22b01",
+    "code": "ZTIO1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
