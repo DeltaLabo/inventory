@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ad344871bd9d4126b6d56d1603be5f20",
+  "saved_at": "2026-10-27T19:54:45.434853+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "SMD component tape",
+      "manufacturer": "Generic",
+      "model": "SMD-TAPE-CUT-14POS",
+      "description": "SMD Chip Components in Black Conductive Carrier Tape Cut Strip - 14 positions SMD Package 1206 / 0805 Size in Tape and Reel Cut",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 15,
+    "location": "G",
+    "sublocation": "29",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ad344871bd9d4126b6d56d1603be5f20",
+    "action": "addition",
+    "code": "HCYW1026",
+    "quantity": 15,
+    "location": "G",
+    "sublocation": "29",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HCYW1026",
+      "type": "Accessories",
+      "subtype": "SMD component tape",
+      "manufacturer": "Generic",
+      "model": "SMD-TAPE-CUT-14POS",
+      "description": "SMD Chip Components in Black Conductive Carrier Tape Cut Strip - 14 positions SMD Package 1206 / 0805 Size in Tape and Reel Cut",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ad344871bd9d4126b6d56d1603be5f20",
+    "code": "HCYW1026",
+    "action": "addition",
+    "quantity": 15
+  }
+}
