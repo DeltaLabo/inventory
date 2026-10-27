@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "17c5ea6107c8487d9f155652084234a0",
+  "saved_at": "2026-10-27T21:55:12.795978+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "subminiature axial fuse / SMD reed fuse in carrier tape",
+      "manufacturer": "Generic",
+      "model": "AXIAL-FUSE-RED-BODY-TAPE-3PCS",
+      "description": "Subminiature Axial Lead Fuse / Reed Type Component with Red Rectangular Epoxy Body and Silver Axial Leads 3pcs in Black Carrier Tape Strip with Cover Tape Held in Palm - Empty Pockets 2 Positions",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 3,
+    "location": "G",
+    "sublocation": "48",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "17c5ea6107c8487d9f155652084234a0",
+    "action": "addition",
+    "code": "XJZD1026",
+    "quantity": 3,
+    "location": "G",
+    "sublocation": "48",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "XJZD1026",
+      "type": "Accessories",
+      "subtype": "subminiature axial fuse / SMD reed fuse in carrier tape",
+      "manufacturer": "Generic",
+      "model": "AXIAL-FUSE-RED-BODY-TAPE-3PCS",
+      "description": "Subminiature Axial Lead Fuse / Reed Type Component with Red Rectangular Epoxy Body and Silver Axial Leads 3pcs in Black Carrier Tape Strip with Cover Tape Held in Palm - Empty Pockets 2 Positions",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "17c5ea6107c8487d9f155652084234a0",
+    "code": "XJZD1026",
+    "action": "addition",
+    "quantity": 3
+  }
+}
