@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b84bb02c6af34f8cacbb6739152bb06c",
+  "saved_at": "2026-10-27T20:13:29.847124+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "capacitors",
+      "subtype": "tantalum SMD capacitor",
+      "manufacturer": "Generic",
+      "model": "TANTALUM-CAP-477-16V-470UF-D7343",
+      "description": "Tantalum Capacitor 470uF 16V 477 Marking 16 235 KO Type D Case 7343-31 SMD Package in Carrier Tape Cut Strip - 4pcs Lot",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 6,
+    "location": "G",
+    "sublocation": "35",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "b84bb02c6af34f8cacbb6739152bb06c",
+    "action": "addition",
+    "code": "BXMK1026",
+    "quantity": 6,
+    "location": "G",
+    "sublocation": "35",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BXMK1026",
+      "type": "capacitors",
+      "subtype": "tantalum SMD capacitor",
+      "manufacturer": "Generic",
+      "model": "TANTALUM-CAP-477-16V-470UF-D7343",
+      "description": "Tantalum Capacitor 470uF 16V 477 Marking 16 235 KO Type D Case 7343-31 SMD Package in Carrier Tape Cut Strip - 4pcs Lot",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "b84bb02c6af34f8cacbb6739152bb06c",
+    "code": "BXMK1026",
+    "action": "addition",
+    "quantity": 6
+  }
+}
