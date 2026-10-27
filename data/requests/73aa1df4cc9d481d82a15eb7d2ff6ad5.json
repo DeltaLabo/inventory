@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "73aa1df4cc9d481d82a15eb7d2ff6ad5",
+  "saved_at": "2026-10-27T16:03:29.933920+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "storage & organization",
+      "subtype": "assorted component box",
+      "manufacturer": "Generic",
+      "model": "MIXED-PARTS-BOX-01",
+      "description": "Clear Plastic Organizer Box with Assorted Parts Kit - Rotary Potentiometers WH148 B10K B100K, Pilot Lamps Red Green, 5mm LEDs Yellow Red Green Blue, Electrolytic Capacitors, TO-220 Heatsinks, RM065 Blue Trimpot, Slide Switches, L298N Motor Driver",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "16",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "73aa1df4cc9d481d82a15eb7d2ff6ad5",
+    "action": "addition",
+    "code": "CZDH1026",
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "16",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "CZDH1026",
+      "type": "storage & organization",
+      "subtype": "assorted component box",
+      "manufacturer": "Generic",
+      "model": "MIXED-PARTS-BOX-01",
+      "description": "Clear Plastic Organizer Box with Assorted Parts Kit - Rotary Potentiometers WH148 B10K B100K, Pilot Lamps Red Green, 5mm LEDs Yellow Red Green Blue, Electrolytic Capacitors, TO-220 Heatsinks, RM065 Blue Trimpot, Slide Switches, L298N Motor Driver",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "73aa1df4cc9d481d82a15eb7d2ff6ad5",
+    "code": "CZDH1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
