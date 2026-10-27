@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "1dcece142ce24f4b85a698c35c42e005",
+  "saved_at": "2026-10-27T20:27:07.587286+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "capacitors",
+      "subtype": "ceramic capacitor SMD MLCC",
+      "manufacturer": "Generic",
+      "model": "SMD MLCC Ceramic Capacitor Light Beige Square Package in Clear Carrier Tape Cut Strip - 3pcs Lot",
+      "description": "SMD MLCC Ceramic Capacitor Light Beige Square Package in Clear Carrier Tape Cut Strip - 3pcs Lot",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "39",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "1dcece142ce24f4b85a698c35c42e005",
+    "action": "addition",
+    "code": "TBUG1026",
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "39",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "TBUG1026",
+      "type": "capacitors",
+      "subtype": "ceramic capacitor SMD MLCC",
+      "manufacturer": "Generic",
+      "model": "SMD MLCC Ceramic Capacitor Light Beige Square Package in Clear Carrier Tape Cut Strip - 3pcs Lot",
+      "description": "SMD MLCC Ceramic Capacitor Light Beige Square Package in Clear Carrier Tape Cut Strip - 3pcs Lot",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "1dcece142ce24f4b85a698c35c42e005",
+    "code": "TBUG1026",
+    "action": "addition",
+    "quantity": 2
+  }
+}
