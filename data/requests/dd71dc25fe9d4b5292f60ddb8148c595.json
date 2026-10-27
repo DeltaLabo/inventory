@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "dd71dc25fe9d4b5292f60ddb8148c595",
+  "saved_at": "2026-10-27T17:15:02.314594+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "GJBM1026",
+    "original_item": {
+      "code": "GJBM1026",
+      "type": "hardware",
+      "subtype": "self-tapping screw assortment kit",
+      "manufacturer": "Generic",
+      "model": "LBY-056-2",
+      "description": "LBY Philips Pan Head Self-Tapping Sheetmetal Screw Assortment Kit 600pcs 304 Stainless Steel M3x6/10/16mm M2.6x6/10/16mm M2.2x6/10/16mm M2x6/10/16mm 50pcs Each with Clear Plastic Box",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "LBY Philips Pan Head Self-Tapping Sheetmetal Screw Assortment Kit 600pcs 304 Stainless Steel M3x6/10/16mm M2.6x6/10/16mm M2.2x6/10/16mm M2x6/10/16mm 50pcs Each with Clear Plastic Box",
+      "type": "hardware",
+      "subtype": "self-tapping screw assortment kit",
+      "manufacturer": "Generic",
+      "model": "LBY-056-2",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Relleno",
+    "original_stock": {
+      "code": "GJBM1026",
+      "location": "J",
+      "sublocation": "20",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "J",
+      "sublocation": "20",
+      "units": "2"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "dd71dc25fe9d4b5292f60ddb8148c595",
+    "action": "edit",
+    "code": "GJBM1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Relleno",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "2"
+      }
+    },
+    "original_location": {
+      "code": "GJBM1026",
+      "location": "J",
+      "sublocation": "20",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "dd71dc25fe9d4b5292f60ddb8148c595",
+    "code": "GJBM1026",
+    "action": "edit"
+  }
+}
