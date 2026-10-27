@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "7e0158fcc0ee41f392cfe279cbea089a",
+  "saved_at": "2026-10-27T22:13:33.645970+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "linear voltage regulator",
+      "manufacturer": "Generic",
+      "model": "MC7805BD2T - 7805 5V 1A DPAK/D2PAK LDO Regulator",
+      "description": "ON Semiconductor MC7805BD2T 5V Positive Linear Voltage Regulator 1A D2PAK / DPAK Package Marking 7805BD2T RFNF17 G Single Chip in Palm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "G",
+    "sublocation": "54",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "7e0158fcc0ee41f392cfe279cbea089a",
+    "action": "addition",
+    "code": "NQUI1026",
+    "quantity": 4,
+    "location": "G",
+    "sublocation": "54",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "NQUI1026",
+      "type": "Accessories",
+      "subtype": "linear voltage regulator",
+      "manufacturer": "Generic",
+      "model": "MC7805BD2T - 7805 5V 1A DPAK/D2PAK LDO Regulator",
+      "description": "ON Semiconductor MC7805BD2T 5V Positive Linear Voltage Regulator 1A D2PAK / DPAK Package Marking 7805BD2T RFNF17 G Single Chip in Palm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "7e0158fcc0ee41f392cfe279cbea089a",
+    "code": "NQUI1026",
+    "action": "addition",
+    "quantity": 4
+  }
+}
