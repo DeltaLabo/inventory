@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b672f429b2604ee383d6145bc82c2d54",
+  "saved_at": "2026-10-27T19:22:39.831608+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "SMD transistor SOT-23 in tape",
+      "manufacturer": "Generic",
+      "model": "SOT23-TAPE-4PCS",
+      "description": "SMD SOT-23 Transistor / Diode in Black Conductive Embossed Carrier Tape - 4pcs in Cut Tape Strip",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "22",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "b672f429b2604ee383d6145bc82c2d54",
+    "action": "addition",
+    "code": "DKVV1026",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "22",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "DKVV1026",
+      "type": "Accessories",
+      "subtype": "SMD transistor SOT-23 in tape",
+      "manufacturer": "Generic",
+      "model": "SOT23-TAPE-4PCS",
+      "description": "SMD SOT-23 Transistor / Diode in Black Conductive Embossed Carrier Tape - 4pcs in Cut Tape Strip",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "b672f429b2604ee383d6145bc82c2d54",
+    "code": "DKVV1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
