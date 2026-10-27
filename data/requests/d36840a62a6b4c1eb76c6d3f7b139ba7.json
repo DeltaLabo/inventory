@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d36840a62a6b4c1eb76c6d3f7b139ba7",
+  "saved_at": "2026-10-27T18:06:52.366003+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "microcontroller QFP 14x14",
+      "manufacturer": "Generic",
+      "model": "ATMEGA3150-QFP14X14",
+      "description": "Atmel ATmega3150 / Mega 3150 Microcontroller QFP-64 14x14mm Package - In QFP Tray Labeled Atmel Mega 3150 - Quantity 2-3 pcs Visible",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "16",
+    "person": "Narypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "d36840a62a6b4c1eb76c6d3f7b139ba7",
+    "action": "addition",
+    "code": "SEAS1026",
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "16",
+    "person": "Narypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SEAS1026",
+      "type": "Accessories",
+      "subtype": "microcontroller QFP 14x14",
+      "manufacturer": "Generic",
+      "model": "ATMEGA3150-QFP14X14",
+      "description": "Atmel ATmega3150 / Mega 3150 Microcontroller QFP-64 14x14mm Package - In QFP Tray Labeled Atmel Mega 3150 - Quantity 2-3 pcs Visible",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "d36840a62a6b4c1eb76c6d3f7b139ba7",
+    "code": "SEAS1026",
+    "action": "addition",
+    "quantity": 2
+  }
+}
