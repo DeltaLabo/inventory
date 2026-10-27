@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "339bae4406ca419cbe64e7eaed70d77b",
+  "saved_at": "2026-10-27T22:31:23.956349+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "EEPROM serial memory SOIC-8",
+      "manufacturer": "Microchip Technology",
+      "model": "Microchip 24AA025 / 25AA Series SOIC-8 8-Pin EEPROM - Marking 28225 69M AEKH",
+      "description": "Small Black 8-Pin SOIC SMD Memory Chip Marking 28225 69M AEKH with Microchip Logo - Single Chip in Palm - I2C / SPI EEPROM Family",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "60",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "339bae4406ca419cbe64e7eaed70d77b",
+    "action": "addition",
+    "code": "JHMJ1026",
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "60",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "JHMJ1026",
+      "type": "Accessories",
+      "subtype": "EEPROM serial memory SOIC-8",
+      "manufacturer": "Microchip Technology",
+      "model": "Microchip 24AA025 / 25AA Series SOIC-8 8-Pin EEPROM - Marking 28225 69M AEKH",
+      "description": "Small Black 8-Pin SOIC SMD Memory Chip Marking 28225 69M AEKH with Microchip Logo - Single Chip in Palm - I2C / SPI EEPROM Family",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "339bae4406ca419cbe64e7eaed70d77b",
+    "code": "JHMJ1026",
+    "action": "addition",
+    "quantity": 2
+  }
+}
