@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "512535dd9a704b8187c6ad778eb63a0b",
+  "saved_at": "2026-10-27T22:11:20.986445+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "SMD tuning fork crystal / 32.768kHz clock crystal",
+      "manufacturer": "Generic",
+      "model": "FC-135 / 32.768kHz SMD Crystal - 2-Pin Cylindrical Type in Rectangular Holder",
+      "description": "Small Rectangular Brown/Black SMD Tuning Fork Crystal 32.768kHz with Bent Leads Single Piece Inside Clear Plastic Bag Marked C91C 1 - Held Between Fingers",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "53",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "512535dd9a704b8187c6ad778eb63a0b",
+    "action": "addition",
+    "code": "OIMA1026",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "53",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "OIMA1026",
+      "type": "Accessories",
+      "subtype": "SMD tuning fork crystal / 32.768kHz clock crystal",
+      "manufacturer": "Generic",
+      "model": "FC-135 / 32.768kHz SMD Crystal - 2-Pin Cylindrical Type in Rectangular Holder",
+      "description": "Small Rectangular Brown/Black SMD Tuning Fork Crystal 32.768kHz with Bent Leads Single Piece Inside Clear Plastic Bag Marked C91C 1 - Held Between Fingers",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "512535dd9a704b8187c6ad778eb63a0b",
+    "code": "OIMA1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
