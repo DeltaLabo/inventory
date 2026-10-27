@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "bddea303c8f441adb3553da5ebaf6a76",
+  "saved_at": "2026-10-27T20:06:13.838919+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "operational amplifier SMD SO-8",
+      "manufacturer": "Generic",
+      "model": "MAX4198ESA+",
+      "description": "MAX4198ESA Low Power Micropower Precision Instrumentation Amplifier SO-8 Package Marking MAX4198 ESA 632",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 6,
+    "location": "G",
+    "sublocation": "33",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "bddea303c8f441adb3553da5ebaf6a76",
+    "action": "addition",
+    "code": "JAAY1026",
+    "quantity": 6,
+    "location": "G",
+    "sublocation": "33",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "JAAY1026",
+      "type": "Accessories",
+      "subtype": "operational amplifier SMD SO-8",
+      "manufacturer": "Generic",
+      "model": "MAX4198ESA+",
+      "description": "MAX4198ESA Low Power Micropower Precision Instrumentation Amplifier SO-8 Package Marking MAX4198 ESA 632",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "bddea303c8f441adb3553da5ebaf6a76",
+    "code": "JAAY1026",
+    "action": "addition",
+    "quantity": 6
+  }
+}
