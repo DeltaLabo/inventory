@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c0051b01a0d945258b1197354059e633",
+  "saved_at": "2026-10-27T20:20:57.399663+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "operational amplifier SMD SO-8",
+      "manufacturer": "Generic",
+      "model": "IC-SO8-2580-MARKING-4PCS",
+      "description": "SMD 8-pin IC SO-8 Package Marking 2580 in Black Conductive Carrier Tape Cut Strip - 4pcs Lot",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "G",
+    "sublocation": "37",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "c0051b01a0d945258b1197354059e633",
+    "action": "addition",
+    "code": "JRJG1026",
+    "quantity": 4,
+    "location": "G",
+    "sublocation": "37",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "JRJG1026",
+      "type": "Accessories",
+      "subtype": "operational amplifier SMD SO-8",
+      "manufacturer": "Generic",
+      "model": "IC-SO8-2580-MARKING-4PCS",
+      "description": "SMD 8-pin IC SO-8 Package Marking 2580 in Black Conductive Carrier Tape Cut Strip - 4pcs Lot",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "c0051b01a0d945258b1197354059e633",
+    "code": "JRJG1026",
+    "action": "addition",
+    "quantity": 4
+  }
+}
