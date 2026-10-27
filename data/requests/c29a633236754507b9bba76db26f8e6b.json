@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c29a633236754507b9bba76db26f8e6b",
+  "saved_at": "2026-10-27T17:11:39.814273+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "hardware",
+      "subtype": "self-tapping screw assortment kit",
+      "manufacturer": "Generic",
+      "model": "LBY-056-2",
+      "description": "LBY Philips Pan Head Self-Tapping Sheetmetal Screw Assortment Kit 600pcs 304 Stainless Steel M3x6/10/16mm M2.6x6/10/16mm M2.2x6/10/16mm M2x6/10/16mm 50pcs Each with Clear Plastic Box",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "J",
+    "sublocation": "20",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "c29a633236754507b9bba76db26f8e6b",
+    "action": "addition",
+    "code": "GJBM1026",
+    "quantity": 1,
+    "location": "J",
+    "sublocation": "20",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "GJBM1026",
+      "type": "hardware",
+      "subtype": "self-tapping screw assortment kit",
+      "manufacturer": "Generic",
+      "model": "LBY-056-2",
+      "description": "LBY Philips Pan Head Self-Tapping Sheetmetal Screw Assortment Kit 600pcs 304 Stainless Steel M3x6/10/16mm M2.6x6/10/16mm M2.2x6/10/16mm M2x6/10/16mm 50pcs Each with Clear Plastic Box",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "c29a633236754507b9bba76db26f8e6b",
+    "code": "GJBM1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
