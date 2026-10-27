@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "968970d6c84f4578a5a0ed25baae40ef",
+  "saved_at": "2026-10-27T22:00:00.202205+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "EEPROM memory SOIC-14 / SOIC-16 wide",
+      "manufacturer": "Microchip Technology",
+      "model": "Microchip EEPROM SOIC-W 24CXXX / 25XXX Series - 4pcs Tape - Inside ESD Bag",
+      "description": "Microchip EEPROM / Memory IC Lot 4pcs in Black Carrier Tape Strip Inside ESD Shielding Bag - Microchip Logo Visible - SOIC 14/16 Pin Package Same Family as Previous AT24/AT25 Chips",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "G",
+    "sublocation": "50",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "968970d6c84f4578a5a0ed25baae40ef",
+    "action": "addition",
+    "code": "WEFZ1026",
+    "quantity": 4,
+    "location": "G",
+    "sublocation": "50",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "WEFZ1026",
+      "type": "Accessories",
+      "subtype": "EEPROM memory SOIC-14 / SOIC-16 wide",
+      "manufacturer": "Microchip Technology",
+      "model": "Microchip EEPROM SOIC-W 24CXXX / 25XXX Series - 4pcs Tape - Inside ESD Bag",
+      "description": "Microchip EEPROM / Memory IC Lot 4pcs in Black Carrier Tape Strip Inside ESD Shielding Bag - Microchip Logo Visible - SOIC 14/16 Pin Package Same Family as Previous AT24/AT25 Chips",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "968970d6c84f4578a5a0ed25baae40ef",
+    "code": "WEFZ1026",
+    "action": "addition",
+    "quantity": 4
+  }
+}
