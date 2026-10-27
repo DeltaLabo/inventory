@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "21a60d9f4bf447fc8b97e5ba828c3666",
+  "saved_at": "2026-10-27T19:57:29.012124+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "microcontroller 8-bit DIP-28",
+      "manufacturer": "Microchip Technology",
+      "model": "PIC16F18855-I/SP",
+      "description": "PIC16F18855 /SP 8-bit Microcontroller Flash 28-pin SPDIP / DIP-28 Package - 4pcs Lot in Anti-static Foam",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "G",
+    "sublocation": "30",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "21a60d9f4bf447fc8b97e5ba828c3666",
+    "action": "addition",
+    "code": "BNHU1026",
+    "quantity": 4,
+    "location": "G",
+    "sublocation": "30",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BNHU1026",
+      "type": "Accessories",
+      "subtype": "microcontroller 8-bit DIP-28",
+      "manufacturer": "Microchip Technology",
+      "model": "PIC16F18855-I/SP",
+      "description": "PIC16F18855 /SP 8-bit Microcontroller Flash 28-pin SPDIP / DIP-28 Package - 4pcs Lot in Anti-static Foam",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "21a60d9f4bf447fc8b97e5ba828c3666",
+    "code": "BNHU1026",
+    "action": "addition",
+    "quantity": 4
+  }
+}
