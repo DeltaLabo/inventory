@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e5b495c47afc42cd8e59fc9e4a083020",
+  "saved_at": "2026-10-27T20:02:55.621621+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "connectors",
+      "subtype": "pluggable terminal block 5-pin",
+      "manufacturer": "Generic",
+      "model": "MAX4198ESA+",
+      "description": "MAX4198ESA Low Power Micropower Precision Instrumentation Amplifier SO-8 Package Marking MAX4198 ESA 632",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "32",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "e5b495c47afc42cd8e59fc9e4a083020",
+    "action": "addition",
+    "code": "EZNV1026",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "32",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "EZNV1026",
+      "type": "connectors",
+      "subtype": "pluggable terminal block 5-pin",
+      "manufacturer": "Generic",
+      "model": "MAX4198ESA+",
+      "description": "MAX4198ESA Low Power Micropower Precision Instrumentation Amplifier SO-8 Package Marking MAX4198 ESA 632",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "e5b495c47afc42cd8e59fc9e4a083020",
+    "code": "EZNV1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
