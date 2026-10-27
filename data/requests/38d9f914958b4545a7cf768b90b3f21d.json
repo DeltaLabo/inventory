@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "38d9f914958b4545a7cf768b90b3f21d",
+  "saved_at": "2026-10-27T19:47:49.700906+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "connectors",
+      "subtype": "DC power plug adapter 90 degree",
+      "manufacturer": "Generic",
+      "model": "H2.9-DC-90DEG-ADAPTER",
+      "description": "90 Degree Angled 3.5mm 3-Pin Male Jack to Female DC Barrel Plug Adapter - L Shape Power Adapter - Labeled H2.9",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "27",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "38d9f914958b4545a7cf768b90b3f21d",
+    "action": "addition",
+    "code": "GPZY1026",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "27",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "GPZY1026",
+      "type": "connectors",
+      "subtype": "DC power plug adapter 90 degree",
+      "manufacturer": "Generic",
+      "model": "H2.9-DC-90DEG-ADAPTER",
+      "description": "90 Degree Angled 3.5mm 3-Pin Male Jack to Female DC Barrel Plug Adapter - L Shape Power Adapter - Labeled H2.9",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "38d9f914958b4545a7cf768b90b3f21d",
+    "code": "GPZY1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
