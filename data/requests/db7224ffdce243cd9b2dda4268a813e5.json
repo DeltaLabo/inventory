@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "db7224ffdce243cd9b2dda4268a813e5",
+  "saved_at": "2026-10-27T22:07:21.705092+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "ZigBee wireless RF module",
+      "manufacturer": "Generic",
+      "model": "XBee PRO S2B - XBP24BZ7WIT-004 / XBP24BZ7UIT / PRO S2B Wire Antenna",
+      "description": "Digi International XBee PRO S2B ZigBee RF Module with Wire Antenna - Blue PCB Marked FCC ID MCQ-PROS2B IC 1846A-PROS2B 2.4GHz - 20-Pin Through-Hole Form Factor - Sitting on Black Anti-Static Foam",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "52",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "db7224ffdce243cd9b2dda4268a813e5",
+    "action": "addition",
+    "code": "HWYX1026",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "52",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HWYX1026",
+      "type": "Accessories",
+      "subtype": "ZigBee wireless RF module",
+      "manufacturer": "Generic",
+      "model": "XBee PRO S2B - XBP24BZ7WIT-004 / XBP24BZ7UIT / PRO S2B Wire Antenna",
+      "description": "Digi International XBee PRO S2B ZigBee RF Module with Wire Antenna - Blue PCB Marked FCC ID MCQ-PROS2B IC 1846A-PROS2B 2.4GHz - 20-Pin Through-Hole Form Factor - Sitting on Black Anti-Static Foam",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "db7224ffdce243cd9b2dda4268a813e5",
+    "code": "HWYX1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
