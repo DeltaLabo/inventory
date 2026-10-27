@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "99f5b66877304ddb96ce58563814344a",
+  "saved_at": "2026-10-27T22:29:18.981323+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "microcontroller 8-bit PIC",
+      "manufacturer": "Microchip Technology",
+      "model": "PIC16F1786-I/SS - SSOP-28 28-Pin 8-bit MCU",
+      "description": "Microchip PIC16F1786-I/SS 8-bit Microcontroller with Analog - SSOP-28 Package - Marking PIC16F1786 -I/SS 744Q9A - Single Black Chip in Palm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "59",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "99f5b66877304ddb96ce58563814344a",
+    "action": "addition",
+    "code": "YQHM1026",
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "59",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "YQHM1026",
+      "type": "Accessories",
+      "subtype": "microcontroller 8-bit PIC",
+      "manufacturer": "Microchip Technology",
+      "model": "PIC16F1786-I/SS - SSOP-28 28-Pin 8-bit MCU",
+      "description": "Microchip PIC16F1786-I/SS 8-bit Microcontroller with Analog - SSOP-28 Package - Marking PIC16F1786 -I/SS 744Q9A - Single Black Chip in Palm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "99f5b66877304ddb96ce58563814344a",
+    "code": "YQHM1026",
+    "action": "addition",
+    "quantity": 2
+  }
+}
