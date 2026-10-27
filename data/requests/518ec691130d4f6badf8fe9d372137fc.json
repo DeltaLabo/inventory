@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "518ec691130d4f6badf8fe9d372137fc",
+  "saved_at": "2026-10-27T16:53:11.558519+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "thermocouple K-type",
+      "manufacturer": "Generic",
+      "model": "WRNT-01 / K-TYPE-1M-FG",
+      "description": "K-Type Thermocouple Temperature Sensor Probe 1m White Fiberglass Braided Wire with Blue Trace, 2-Wire Open Tip",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 9,
+    "location": "E",
+    "sublocation": "41",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "518ec691130d4f6badf8fe9d372137fc",
+    "action": "addition",
+    "code": "BMCU1026",
+    "quantity": 9,
+    "location": "E",
+    "sublocation": "41",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BMCU1026",
+      "type": "sensor",
+      "subtype": "thermocouple K-type",
+      "manufacturer": "Generic",
+      "model": "WRNT-01 / K-TYPE-1M-FG",
+      "description": "K-Type Thermocouple Temperature Sensor Probe 1m White Fiberglass Braided Wire with Blue Trace, 2-Wire Open Tip",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "518ec691130d4f6badf8fe9d372137fc",
+    "code": "BMCU1026",
+    "action": "addition",
+    "quantity": 9
+  }
+}
