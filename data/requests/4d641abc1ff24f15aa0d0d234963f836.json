@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4d641abc1ff24f15aa0d0d234963f836",
+  "saved_at": "2026-10-27T20:37:20.103589+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "SMD power inductor shielded",
+      "manufacturer": "Generic",
+      "model": "SMD-POWER-INDUCTOR-220H-10x10MM",
+      "description": "SMD Shielded Power Inductor Square Metallic Case Marking 220H 1825G 22uH / 220uH Inductor Held Between Fingers",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 5,
+    "location": "G",
+    "sublocation": "42",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "4d641abc1ff24f15aa0d0d234963f836",
+    "action": "addition",
+    "code": "EGHB1026",
+    "quantity": 5,
+    "location": "G",
+    "sublocation": "42",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "EGHB1026",
+      "type": "Accessories",
+      "subtype": "SMD power inductor shielded",
+      "manufacturer": "Generic",
+      "model": "SMD-POWER-INDUCTOR-220H-10x10MM",
+      "description": "SMD Shielded Power Inductor Square Metallic Case Marking 220H 1825G 22uH / 220uH Inductor Held Between Fingers",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "4d641abc1ff24f15aa0d0d234963f836",
+    "code": "EGHB1026",
+    "action": "addition",
+    "quantity": 5
+  }
+}
