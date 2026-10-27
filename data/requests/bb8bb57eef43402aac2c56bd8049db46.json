@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "bb8bb57eef43402aac2c56bd8049db46",
+  "saved_at": "2026-10-27T17:43:33.478399+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "connectors",
+      "subtype": "screw terminal block",
+      "manufacturer": "Generic",
+      "model": "18P-SCREW-TB-2.54MM",
+      "description": "18-Pin / 18-Position 2.54mm Pitch Screw Terminal Block Strip Connector Green/Black PCB Type Lot of 6pcs",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 12,
+    "location": "G",
+    "sublocation": "10",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "bb8bb57eef43402aac2c56bd8049db46",
+    "action": "addition",
+    "code": "RCKH1026",
+    "quantity": 12,
+    "location": "G",
+    "sublocation": "10",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "RCKH1026",
+      "type": "connectors",
+      "subtype": "screw terminal block",
+      "manufacturer": "Generic",
+      "model": "18P-SCREW-TB-2.54MM",
+      "description": "18-Pin / 18-Position 2.54mm Pitch Screw Terminal Block Strip Connector Green/Black PCB Type Lot of 6pcs",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "bb8bb57eef43402aac2c56bd8049db46",
+    "code": "RCKH1026",
+    "action": "addition",
+    "quantity": 12
+  }
+}
