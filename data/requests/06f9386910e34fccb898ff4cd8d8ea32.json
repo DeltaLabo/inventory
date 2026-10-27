@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "06f9386910e34fccb898ff4cd8d8ea32",
+  "saved_at": "2026-10-27T20:09:53.637420+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "ADC 12-bit TSSOP-16",
+      "manufacturer": "Generic",
+      "model": "AD7927BRUZ",
+      "description": "AD7927BRUZ 12-bit 8-Channel ADC with Sequencer TSSOP-16 Package Marking 7927 BRUZ",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "34",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "06f9386910e34fccb898ff4cd8d8ea32",
+    "action": "addition",
+    "code": "ECFZ1026",
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "34",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ECFZ1026",
+      "type": "Accessories",
+      "subtype": "ADC 12-bit TSSOP-16",
+      "manufacturer": "Generic",
+      "model": "AD7927BRUZ",
+      "description": "AD7927BRUZ 12-bit 8-Channel ADC with Sequencer TSSOP-16 Package Marking 7927 BRUZ",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "06f9386910e34fccb898ff4cd8d8ea32",
+    "code": "ECFZ1026",
+    "action": "addition",
+    "quantity": 2
+  }
+}
