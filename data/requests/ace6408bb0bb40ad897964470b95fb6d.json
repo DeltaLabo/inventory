@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ace6408bb0bb40ad897964470b95fb6d",
+  "saved_at": "2026-10-27T22:16:00.342424+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "load cell amplifier breakout",
+      "manufacturer": "SparkFun",
+      "model": "HX711 Load Cell Amp - SparkFun SEN-13879 / HX711 Breakout",
+      "description": "Red SparkFun Load Cell Amplifier Board HX711 24-bit ADC Module Pins RED BLK WHT GRN YLW and VDD VCC DAT CLK GND Single Board in Palm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "55",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ace6408bb0bb40ad897964470b95fb6d",
+    "action": "addition",
+    "code": "KJRF1026",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "55",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "KJRF1026",
+      "type": "Accessories",
+      "subtype": "load cell amplifier breakout",
+      "manufacturer": "SparkFun",
+      "model": "HX711 Load Cell Amp - SparkFun SEN-13879 / HX711 Breakout",
+      "description": "Red SparkFun Load Cell Amplifier Board HX711 24-bit ADC Module Pins RED BLK WHT GRN YLW and VDD VCC DAT CLK GND Single Board in Palm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ace6408bb0bb40ad897964470b95fb6d",
+    "code": "KJRF1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
