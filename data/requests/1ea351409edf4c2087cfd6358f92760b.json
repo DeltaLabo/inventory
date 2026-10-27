@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "1ea351409edf4c2087cfd6358f92760b",
+  "saved_at": "2026-10-27T17:40:09.720232+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "TVPO1026",
+    "original_item": {
+      "code": "TVPO1026",
+      "type": "connectors",
+      "subtype": "audio adapter",
+      "manufacturer": "Generic",
+      "model": "3.5MM-RA-MF-ADAPTER-6PK",
+      "description": "3.5mm TRS Male to Female Right Angle 90 Degree Audio Adapter Extension Connector Black Plastic - Lot of 6pcs",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "3.5mm TRS Male to Female Right Angle 90 Degree Audio Adapter Extension Connector Black Plastic - Lot of 6pcs",
+      "type": "connectors",
+      "subtype": "audio adapter",
+      "manufacturer": "Generic",
+      "model": "3.5MM-RA-MF-ADAPTER-6PK",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Cantidad",
+    "original_stock": {
+      "code": "TVPO1026",
+      "location": "G",
+      "sublocation": "9",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "G",
+      "sublocation": "9",
+      "units": "5"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "1ea351409edf4c2087cfd6358f92760b",
+    "action": "edit",
+    "code": "TVPO1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Cantidad",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "5"
+      }
+    },
+    "original_location": {
+      "code": "TVPO1026",
+      "location": "G",
+      "sublocation": "9",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "1ea351409edf4c2087cfd6358f92760b",
+    "code": "TVPO1026",
+    "action": "edit"
+  }
+}
