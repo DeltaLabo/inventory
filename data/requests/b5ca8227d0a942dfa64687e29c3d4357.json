@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b5ca8227d0a942dfa64687e29c3d4357",
+  "saved_at": "2026-10-27T21:43:39.853840+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "PWM controller SMD SOIC-8",
+      "manufacturer": "Generic",
+      "model": "UC3825 / UCC3825 / 3825-8AM - SOIC-8",
+      "description": "SMD PWM Controller Marking 3825 8AM AKJ4 / UCC3825 / UC3825 Style 8-Pin SOIC Package in Black Carrier Tape Strip 10pcs Lot Held Between Fingers",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "45",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "b5ca8227d0a942dfa64687e29c3d4357",
+    "action": "addition",
+    "code": "ZUCV1026",
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "45",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ZUCV1026",
+      "type": "Accessories",
+      "subtype": "PWM controller SMD SOIC-8",
+      "manufacturer": "Generic",
+      "model": "UC3825 / UCC3825 / 3825-8AM - SOIC-8",
+      "description": "SMD PWM Controller Marking 3825 8AM AKJ4 / UCC3825 / UC3825 Style 8-Pin SOIC Package in Black Carrier Tape Strip 10pcs Lot Held Between Fingers",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "b5ca8227d0a942dfa64687e29c3d4357",
+    "code": "ZUCV1026",
+    "action": "addition",
+    "quantity": 10
+  }
+}
