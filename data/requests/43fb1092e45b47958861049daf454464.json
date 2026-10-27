@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "43fb1092e45b47958861049daf454464",
+  "saved_at": "2026-10-27T20:00:10.988766+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "SMD shielded power inductor",
+      "manufacturer": "Adafruit",
+      "model": "SMD-POWER-INDUCTOR-471-470UH",
+      "description": "SMD Shielded Power Inductor 471 470uH Marked TZ 471 12x12mm SMD Package in Embossed Carrier Tape",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "31",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "43fb1092e45b47958861049daf454464",
+    "action": "addition",
+    "code": "SAUV1026",
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "31",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SAUV1026",
+      "type": "Accessories",
+      "subtype": "SMD shielded power inductor",
+      "manufacturer": "Adafruit",
+      "model": "SMD-POWER-INDUCTOR-471-470UH",
+      "description": "SMD Shielded Power Inductor 471 470uH Marked TZ 471 12x12mm SMD Package in Embossed Carrier Tape",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "43fb1092e45b47958861049daf454464",
+    "code": "SAUV1026",
+    "action": "addition",
+    "quantity": 10
+  }
+}
