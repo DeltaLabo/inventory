@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "de11f0d16ca747a2b1ec40afa43a2d79",
+  "saved_at": "2026-10-27T22:23:48.101393+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "passive components",
+      "subtype": "MLCC capacitor / SMD ceramic capacitor tape",
+      "manufacturer": "Generic",
+      "model": "MLCC SMD Capacitor Tape - 0603 / 0805 100nF / 10uF Series - 15pcs Cut Tape",
+      "description": "Strip of Small Beige/Tan Rectangular SMD Ceramic Capacitors MLCC in Black Carrier Tape Reel Cut - 15pcs Approx 0603 / 0805 Package Held Between Fingers Yellow Tape End",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 19,
+    "location": "G",
+    "sublocation": "57",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "de11f0d16ca747a2b1ec40afa43a2d79",
+    "action": "addition",
+    "code": "OPFM1026",
+    "quantity": 19,
+    "location": "G",
+    "sublocation": "57",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "OPFM1026",
+      "type": "passive components",
+      "subtype": "MLCC capacitor / SMD ceramic capacitor tape",
+      "manufacturer": "Generic",
+      "model": "MLCC SMD Capacitor Tape - 0603 / 0805 100nF / 10uF Series - 15pcs Cut Tape",
+      "description": "Strip of Small Beige/Tan Rectangular SMD Ceramic Capacitors MLCC in Black Carrier Tape Reel Cut - 15pcs Approx 0603 / 0805 Package Held Between Fingers Yellow Tape End",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "de11f0d16ca747a2b1ec40afa43a2d79",
+    "code": "OPFM1026",
+    "action": "addition",
+    "quantity": 19
+  }
+}
