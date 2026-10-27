@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "7581ec622b10444abe651b2a8cbf9336",
+  "saved_at": "2026-10-27T16:21:59.264559+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "RES-KIT-1-4W-1PCT-BOX",
+      "subtype": "RES-KIT-1-4W-1PCT-BOX",
+      "manufacturer": "Generic",
+      "model": "LED-KIT-5MM-10BOX",
+      "description": "5mm LED Assortment Kit Mixed Colors Red Green Blue Yellow Clear White with 10-Compartment Clear Plastic Storage Box",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "18",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "7581ec622b10444abe651b2a8cbf9336",
+    "action": "addition",
+    "code": "RUHG1026",
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "18",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "RUHG1026",
+      "type": "RES-KIT-1-4W-1PCT-BOX",
+      "subtype": "RES-KIT-1-4W-1PCT-BOX",
+      "manufacturer": "Generic",
+      "model": "LED-KIT-5MM-10BOX",
+      "description": "5mm LED Assortment Kit Mixed Colors Red Green Blue Yellow Clear White with 10-Compartment Clear Plastic Storage Box",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "7581ec622b10444abe651b2a8cbf9336",
+    "code": "RUHG1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
