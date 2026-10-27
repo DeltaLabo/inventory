@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "49b47df73b4c4381a5a929fe60e94fc8",
+  "saved_at": "2026-10-27T16:16:31.777562+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "passive components",
+      "subtype": "resistor assortment kit",
+      "manufacturer": "Generic",
+      "model": "RES-KIT-1-4W-1PCT-BOX",
+      "description": "Metal Film Resistor Assortment Kit 1/4W 1% with Clear Plastic Storage Box, Taped Bags Labeled, Blue Body Resistors 10R to 1M",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "17",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "49b47df73b4c4381a5a929fe60e94fc8",
+    "action": "addition",
+    "code": "JNKC1026",
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "17",
+    "person": "Maria",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "JNKC1026",
+      "type": "passive components",
+      "subtype": "resistor assortment kit",
+      "manufacturer": "Generic",
+      "model": "RES-KIT-1-4W-1PCT-BOX",
+      "description": "Metal Film Resistor Assortment Kit 1/4W 1% with Clear Plastic Storage Box, Taped Bags Labeled, Blue Body Resistors 10R to 1M",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "49b47df73b4c4381a5a929fe60e94fc8",
+    "code": "JNKC1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
