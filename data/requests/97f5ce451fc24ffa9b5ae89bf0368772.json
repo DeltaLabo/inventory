@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "97f5ce451fc24ffa9b5ae89bf0368772",
+  "saved_at": "2026-10-27T19:05:03.757351+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "SMD IC 8-pin SOIC / MSOP",
+      "manufacturer": "Generic",
+      "model": "SOT23-ADAPTER-10P-0.95MM",
+      "description": "SOT23 to DIP Adapter PCB Breakout Board 10-Pin 0.95mm Pitch SOT23-6 Green - Converts SMD SOT23 to Through Hole",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 20,
+    "location": "G",
+    "sublocation": "17",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "97f5ce451fc24ffa9b5ae89bf0368772",
+    "action": "addition",
+    "code": "DRKS1026",
+    "quantity": 20,
+    "location": "G",
+    "sublocation": "17",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "DRKS1026",
+      "type": "Accessories",
+      "subtype": "SMD IC 8-pin SOIC / MSOP",
+      "manufacturer": "Generic",
+      "model": "SOT23-ADAPTER-10P-0.95MM",
+      "description": "SOT23 to DIP Adapter PCB Breakout Board 10-Pin 0.95mm Pitch SOT23-6 Green - Converts SMD SOT23 to Through Hole",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "97f5ce451fc24ffa9b5ae89bf0368772",
+    "code": "DRKS1026",
+    "action": "addition",
+    "quantity": 20
+  }
+}
