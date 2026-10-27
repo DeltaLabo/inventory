@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "0b01ff3052964214bdfbb8b7fe581529",
+  "saved_at": "2026-10-27T19:50:44.528065+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "SMD fuse",
+      "manufacturer": "Generic",
+      "model": "SMD-FUSE-H8-1808-10PCS",
+      "description": "SMD Fuse 1808 / 1206 Package Marking H8 in Black Conductive Carrier Tape Cut Strip - 10pcs Lot Fast Acting",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "28",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "0b01ff3052964214bdfbb8b7fe581529",
+    "action": "addition",
+    "code": "SHQL1026",
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "28",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SHQL1026",
+      "type": "Accessories",
+      "subtype": "SMD fuse",
+      "manufacturer": "Generic",
+      "model": "SMD-FUSE-H8-1808-10PCS",
+      "description": "SMD Fuse 1808 / 1206 Package Marking H8 in Black Conductive Carrier Tape Cut Strip - 10pcs Lot Fast Acting",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "0b01ff3052964214bdfbb8b7fe581529",
+    "code": "SHQL1026",
+    "action": "addition",
+    "quantity": 10
+  }
+}
