@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b42b3c9f106245da84cda6ba6fb4f542",
+  "saved_at": "2026-10-27T20:49:16.227385+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "SMD power MOSFET",
+      "manufacturer": "Generic",
+      "model": "SMD-TRANSISTOR-CARRIER-SOT23-10POS",
+      "description": "SMD Transistor Package Carrier Tape Strip 10 Positions Black Carrier with Copper Leadframes - Empty Leadframe / SOT-23 SOT-89 Style Device Package in Clear Plastic Bag Held in Palm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "44",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "b42b3c9f106245da84cda6ba6fb4f542",
+    "action": "addition",
+    "code": "VXPA1026",
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "44",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "VXPA1026",
+      "type": "Accessories",
+      "subtype": "SMD power MOSFET",
+      "manufacturer": "Generic",
+      "model": "SMD-TRANSISTOR-CARRIER-SOT23-10POS",
+      "description": "SMD Transistor Package Carrier Tape Strip 10 Positions Black Carrier with Copper Leadframes - Empty Leadframe / SOT-23 SOT-89 Style Device Package in Clear Plastic Bag Held in Palm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "b42b3c9f106245da84cda6ba6fb4f542",
+    "code": "VXPA1026",
+    "action": "addition",
+    "quantity": 10
+  }
+}
