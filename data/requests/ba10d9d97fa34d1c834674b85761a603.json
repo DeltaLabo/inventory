@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ba10d9d97fa34d1c834674b85761a603",
+  "saved_at": "2026-10-27T20:32:20.000434+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "capacitors",
+      "subtype": "aluminum electrolytic capacitor SMD",
+      "manufacturer": "Generic",
+      "model": "SMD-ALU-ELEC-CAP-100UF-16V-K1P",
+      "description": "SMD Aluminum Electrolytic Capacitor 100uF 16V Marking K1P 100 16V in Carrier Tape Cut Strips with Handwritten P7 Labels - Multiple Pieces Lot",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 19,
+    "location": "G",
+    "sublocation": "41",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ba10d9d97fa34d1c834674b85761a603",
+    "action": "addition",
+    "code": "HUEK1026",
+    "quantity": 19,
+    "location": "G",
+    "sublocation": "41",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HUEK1026",
+      "type": "capacitors",
+      "subtype": "aluminum electrolytic capacitor SMD",
+      "manufacturer": "Generic",
+      "model": "SMD-ALU-ELEC-CAP-100UF-16V-K1P",
+      "description": "SMD Aluminum Electrolytic Capacitor 100uF 16V Marking K1P 100 16V in Carrier Tape Cut Strips with Handwritten P7 Labels - Multiple Pieces Lot",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ba10d9d97fa34d1c834674b85761a603",
+    "code": "HUEK1026",
+    "action": "addition",
+    "quantity": 19
+  }
+}
