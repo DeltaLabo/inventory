@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "fd06ca729ee8433d8b9902fdbb6a737f",
+  "saved_at": "2026-10-28T14:00:35.287256+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb",
+      "subtype": "control + potencia",
+      "manufacturer": "Generic",
+      "model": "MT7003 S1 2019 PCB Control + Potencia Rev.A",
+      "description": "Kit MT7003 - S1 2019 Rev.A con logo Pi - Incluye 1x PCB Potencia (In/Out +/- , U7-U9) y 1x PCB Control (para PIC18F25K22, headers 12VO/5VO, PGD/PGC, TX/RX, Pos1-4) - 2 PCBs vírgenes verdes",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "64",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "fd06ca729ee8433d8b9902fdbb6a737f",
+    "action": "addition",
+    "code": "CXWY1026",
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "64",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "CXWY1026",
+      "type": "pcb",
+      "subtype": "control + potencia",
+      "manufacturer": "Generic",
+      "model": "MT7003 S1 2019 PCB Control + Potencia Rev.A",
+      "description": "Kit MT7003 - S1 2019 Rev.A con logo Pi - Incluye 1x PCB Potencia (In/Out +/- , U7-U9) y 1x PCB Control (para PIC18F25K22, headers 12VO/5VO, PGD/PGC, TX/RX, Pos1-4) - 2 PCBs vírgenes verdes",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "fd06ca729ee8433d8b9902fdbb6a737f",
+    "code": "CXWY1026",
+    "action": "addition",
+    "quantity": 2
+  }
+}
