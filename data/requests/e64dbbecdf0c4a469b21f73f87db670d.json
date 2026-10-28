@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e64dbbecdf0c4a469b21f73f87db670d",
+  "saved_at": "2026-10-28T14:19:29.362281+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb",
+      "subtype": "SSOP breakout board",
+      "manufacturer": "Generic",
+      "model": "SOP28 to DIP28 Adapter 1.27mm Ver1.1 - 22981A-22",
+      "description": "PCB adaptador SOP4-28Pin 1.27MM a DIP - 28 pines Ver:1.1 modelo 22981A-22",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "70",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "e64dbbecdf0c4a469b21f73f87db670d",
+    "action": "addition",
+    "code": "QARH1026",
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "70",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QARH1026",
+      "type": "pcb",
+      "subtype": "SSOP breakout board",
+      "manufacturer": "Generic",
+      "model": "SOP28 to DIP28 Adapter 1.27mm Ver1.1 - 22981A-22",
+      "description": "PCB adaptador SOP4-28Pin 1.27MM a DIP - 28 pines Ver:1.1 modelo 22981A-22",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "e64dbbecdf0c4a469b21f73f87db670d",
+    "code": "QARH1026",
+    "action": "addition",
+    "quantity": 10
+  }
+}
