@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ae430d278e064a9b9b3058d4e4657559",
+  "saved_at": "2026-10-28T14:02:47.898656+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb",
+      "subtype": "SSOP breakout board",
+      "manufacturer": "Generic",
+      "model": "SSOP14 to DIP14 Adapter 0.65mm",
+      "description": "PCB adaptador SSOP14 a DIP 0.65mm pitch - 14 pines - placa verde pequeña",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "65",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ae430d278e064a9b9b3058d4e4657559",
+    "action": "addition",
+    "code": "WLYV1026",
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "65",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "WLYV1026",
+      "type": "pcb",
+      "subtype": "SSOP breakout board",
+      "manufacturer": "Generic",
+      "model": "SSOP14 to DIP14 Adapter 0.65mm",
+      "description": "PCB adaptador SSOP14 a DIP 0.65mm pitch - 14 pines - placa verde pequeña",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ae430d278e064a9b9b3058d4e4657559",
+    "code": "WLYV1026",
+    "action": "addition",
+    "quantity": 10
+  }
+}
