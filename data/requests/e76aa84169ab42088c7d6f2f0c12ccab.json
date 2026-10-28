@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e76aa84169ab42088c7d6f2f0c12ccab",
+  "saved_at": "2026-10-28T14:05:30.754675+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb",
+      "subtype": "TQFP breakout board",
+      "manufacturer": "Generic",
+      "model": "TQFP 32-64P to DIP 0.8mm Adapter",
+      "description": "PCB adaptador TQFP (32-64 Pin) 0.8mm pitch a DIP - placa verde con numeración 1-64",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "66",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "e76aa84169ab42088c7d6f2f0c12ccab",
+    "action": "addition",
+    "code": "AUXZ1026",
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "66",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "AUXZ1026",
+      "type": "pcb",
+      "subtype": "TQFP breakout board",
+      "manufacturer": "Generic",
+      "model": "TQFP 32-64P to DIP 0.8mm Adapter",
+      "description": "PCB adaptador TQFP (32-64 Pin) 0.8mm pitch a DIP - placa verde con numeración 1-64",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "e76aa84169ab42088c7d6f2f0c12ccab",
+    "code": "AUXZ1026",
+    "action": "addition",
+    "quantity": 10
+  }
+}
