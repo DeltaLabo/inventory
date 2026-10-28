@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "df7cec0484024d5db97df983cbc49103",
+  "saved_at": "2026-10-28T13:56:44.135284+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "YOZE1026",
+    "original_item": {
+      "code": "YOZE1026",
+      "type": "pcb",
+      "subtype": "SMD to DIP breakout adapter",
+      "manufacturer": "Generic",
+      "model": "TSSOP28 SSOP28 to DIP28 Adapter Board 0.65mm Pitch - SOP28 Breakout PCB",
+      "description": "Green PCB SMD Breakout Adapter Board TSSOP28 SSOP28 to DIP 0.65mm Pitch - 28-Pin Converter With Numbered Through Holes 1-28 Held In Palm - For PIC16F1786 and Similar SSOP",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Green PCB SMD Breakout Adapter Board TSSOP28 SSOP28 to DIP 0.65mm Pitch - 28-Pin Converter With Numbered Through Holes 1-28 Held In Palm - For PIC16F1786 and Similar SSOP",
+      "type": "pcb",
+      "subtype": "SMD to DIP breakout adapter",
+      "manufacturer": "Generic",
+      "model": "TSSOP28 SSOP28 to DIP28 Adapter Board 0.65mm Pitch - SOP28 Breakout PCB",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Corrección",
+    "original_stock": {
+      "code": "YOZE1026",
+      "location": "G",
+      "sublocation": "63",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "G",
+      "sublocation": "63",
+      "units": "20"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "df7cec0484024d5db97df983cbc49103",
+    "action": "edit",
+    "code": "YOZE1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Corrección",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "20"
+      }
+    },
+    "original_location": {
+      "code": "YOZE1026",
+      "location": "G",
+      "sublocation": "63",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "df7cec0484024d5db97df983cbc49103",
+    "code": "YOZE1026",
+    "action": "edit"
+  }
+}
