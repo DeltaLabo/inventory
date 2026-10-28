@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "803abae598a64c028797dc5e8e127043",
+  "saved_at": "2026-10-28T13:50:43.400910+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "connectors",
+      "subtype": "DC power jack PCB mount",
+      "manufacturer": "Generic",
+      "model": "DC-044 / DC005 / PJ-002A 5.5mm x 2.5mm DC Jack PCB Mount - 5-Pin Laptop Power Connector",
+      "description": "Laptop DC Power Jack Connector Female Barrel Type 5.5x2.5mm Center Pin - Black Plastic Housing with Metal Shield and 5 PCB Through-Hole Pins - Held Between Fingers Single Unit",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "62",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "803abae598a64c028797dc5e8e127043",
+    "action": "addition",
+    "code": "SDNV1026",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "62",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SDNV1026",
+      "type": "connectors",
+      "subtype": "DC power jack PCB mount",
+      "manufacturer": "Generic",
+      "model": "DC-044 / DC005 / PJ-002A 5.5mm x 2.5mm DC Jack PCB Mount - 5-Pin Laptop Power Connector",
+      "description": "Laptop DC Power Jack Connector Female Barrel Type 5.5x2.5mm Center Pin - Black Plastic Housing with Metal Shield and 5 PCB Through-Hole Pins - Held Between Fingers Single Unit",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "803abae598a64c028797dc5e8e127043",
+    "code": "SDNV1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
