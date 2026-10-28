@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "a4df43d69b5a4f9c9d5813c2662d8934",
+  "saved_at": "2026-10-28T14:14:33.305693+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb",
+      "subtype": "SSOP breakout board",
+      "manufacturer": "Generic",
+      "model": "SOP24 to DIP24 Adapter 1.27mm - 22581A",
+      "description": "PCB adaptador SOP24PIN 1.27MM a DIP - 24 pines numerados 1-24 - modelo 22581A",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 15,
+    "location": "G",
+    "sublocation": "68",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "a4df43d69b5a4f9c9d5813c2662d8934",
+    "action": "addition",
+    "code": "BHTW1026",
+    "quantity": 15,
+    "location": "G",
+    "sublocation": "68",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BHTW1026",
+      "type": "pcb",
+      "subtype": "SSOP breakout board",
+      "manufacturer": "Generic",
+      "model": "SOP24 to DIP24 Adapter 1.27mm - 22581A",
+      "description": "PCB adaptador SOP24PIN 1.27MM a DIP - 24 pines numerados 1-24 - modelo 22581A",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "a4df43d69b5a4f9c9d5813c2662d8934",
+    "code": "BHTW1026",
+    "action": "addition",
+    "quantity": 15
+  }
+}
