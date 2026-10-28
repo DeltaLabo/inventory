@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "6dce7d90f9614c3dbe0b710067cf195c",
+  "saved_at": "2026-10-28T13:45:12.528946+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "electrically conductive adhesive epoxy",
+      "manufacturer": "Generic",
+      "model": ": AA-DUCT 906 - Electrically Conductive Silver Epoxy",
+      "description": "Atom Adhesives AA-DUCT 906 Electrically Conductive Epoxy Silver Filled Adhesive Sample Bag Net 2.5 gm Lot # 906-0510R - Two-Part Adhesive in Small Clear Pouches Inside Ziplock - Warning Label May Cause Allergic Reaction - www.AtomAdhesives.com",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "61",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "6dce7d90f9614c3dbe0b710067cf195c",
+    "action": "addition",
+    "code": "PAEU1026",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "61",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "PAEU1026",
+      "type": "Accessories",
+      "subtype": "electrically conductive adhesive epoxy",
+      "manufacturer": "Generic",
+      "model": ": AA-DUCT 906 - Electrically Conductive Silver Epoxy",
+      "description": "Atom Adhesives AA-DUCT 906 Electrically Conductive Epoxy Silver Filled Adhesive Sample Bag Net 2.5 gm Lot # 906-0510R - Two-Part Adhesive in Small Clear Pouches Inside Ziplock - Warning Label May Cause Allergic Reaction - www.AtomAdhesives.com",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "6dce7d90f9614c3dbe0b710067cf195c",
+    "code": "PAEU1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
