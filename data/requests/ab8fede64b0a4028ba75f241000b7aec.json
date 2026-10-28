@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ab8fede64b0a4028ba75f241000b7aec",
+  "saved_at": "2026-10-28T13:53:40.524781+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb",
+      "subtype": "SMD to DIP breakout adapter",
+      "manufacturer": "Generic",
+      "model": "TSSOP28 SSOP28 to DIP28 Adapter Board 0.65mm Pitch - SOP28 Breakout PCB",
+      "description": "Green PCB SMD Breakout Adapter Board TSSOP28 SSOP28 to DIP 0.65mm Pitch - 28-Pin Converter With Numbered Through Holes 1-28 Held In Palm - For PIC16F1786 and Similar SSOP",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "63",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ab8fede64b0a4028ba75f241000b7aec",
+    "action": "addition",
+    "code": "YOZE1026",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "63",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "YOZE1026",
+      "type": "pcb",
+      "subtype": "SMD to DIP breakout adapter",
+      "manufacturer": "Generic",
+      "model": "TSSOP28 SSOP28 to DIP28 Adapter Board 0.65mm Pitch - SOP28 Breakout PCB",
+      "description": "Green PCB SMD Breakout Adapter Board TSSOP28 SSOP28 to DIP 0.65mm Pitch - 28-Pin Converter With Numbered Through Holes 1-28 Held In Palm - For PIC16F1786 and Similar SSOP",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ab8fede64b0a4028ba75f241000b7aec",
+    "code": "YOZE1026",
+    "action": "addition",
+    "quantity": 1
+  }
+}
