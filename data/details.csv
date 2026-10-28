@@ -299,3 +299,4 @@ YOZE1026,pcb,SMD to DIP breakout adapter,Generic,TSSOP28 SSOP28 to DIP28 Adapter
 CXWY1026,pcb,control + potencia,Generic,MT7003 S1 2019 PCB Control + Potencia Rev.A,"Kit MT7003 - S1 2019 Rev.A con logo Pi - Incluye 1x PCB Potencia (In/Out +/- , U7-U9) y 1x PCB Control (para PIC18F25K22, headers 12VO/5VO, PGD/PGC, TX/RX, Pos1-4) - 2 PCBs vírgenes verdes",,,,
 WLYV1026,pcb,SSOP breakout board,Generic,SSOP14 to DIP14 Adapter 0.65mm,PCB adaptador SSOP14 a DIP 0.65mm pitch - 14 pines - placa verde pequeña,,,,
 AUXZ1026,pcb,TQFP breakout board,Generic,TQFP 32-64P to DIP 0.8mm Adapter,PCB adaptador TQFP (32-64 Pin) 0.8mm pitch a DIP - placa verde con numeración 1-64,,,,
+EQYM1026,pcb,SOP breakout board,Generic,SOP10 to DIP10 Adapter 0.5mm,PCB adaptador SOP10 0.5mm pitch a DIP - 10 pines - placa verde pequeña,,,,

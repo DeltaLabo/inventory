@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "86cf542104fc4c44a67b3fd381d5e7c1",
+  "saved_at": "2026-10-28T14:09:12.507570+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb",
+      "subtype": "SOP breakout board",
+      "manufacturer": "Generic",
+      "model": "SOP10 to DIP10 Adapter 0.5mm",
+      "description": "PCB adaptador SOP10 0.5mm pitch a DIP - 10 pines - placa verde pequeña",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 46,
+    "location": "G",
+    "sublocation": "67",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "86cf542104fc4c44a67b3fd381d5e7c1",
+    "action": "addition",
+    "code": "EQYM1026",
+    "quantity": 46,
+    "location": "G",
+    "sublocation": "67",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "EQYM1026",
+      "type": "pcb",
+      "subtype": "SOP breakout board",
+      "manufacturer": "Generic",
+      "model": "SOP10 to DIP10 Adapter 0.5mm",
+      "description": "PCB adaptador SOP10 0.5mm pitch a DIP - 10 pines - placa verde pequeña",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "86cf542104fc4c44a67b3fd381d5e7c1",
+    "code": "EQYM1026",
+    "action": "addition",
+    "quantity": 46
+  }
+}
