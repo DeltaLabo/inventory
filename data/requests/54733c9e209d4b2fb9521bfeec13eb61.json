@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "54733c9e209d4b2fb9521bfeec13eb61",
+  "saved_at": "2026-10-28T14:22:26.264102+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb",
+      "subtype": "SSOP breakout board",
+      "manufacturer": "Generic",
+      "model": "SOP20 to DIP20 Adapter 1.27mm - 22981A",
+      "description": "PCB adaptador SOP20Pin 1.27MM a DIP - 20 pines modelo 22981A",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 12,
+    "location": "G",
+    "sublocation": "71",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "54733c9e209d4b2fb9521bfeec13eb61",
+    "action": "addition",
+    "code": "HTUP1026",
+    "quantity": 12,
+    "location": "G",
+    "sublocation": "71",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HTUP1026",
+      "type": "pcb",
+      "subtype": "SSOP breakout board",
+      "manufacturer": "Generic",
+      "model": "SOP20 to DIP20 Adapter 1.27mm - 22981A",
+      "description": "PCB adaptador SOP20Pin 1.27MM a DIP - 20 pines modelo 22981A",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "54733c9e209d4b2fb9521bfeec13eb61",
+    "code": "HTUP1026",
+    "action": "addition",
+    "quantity": 12
+  }
+}
