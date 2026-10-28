@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "77cb6625bfbb45518ff1b5fea565f21d",
+  "saved_at": "2026-10-28T14:17:23.118538+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb",
+      "subtype": "SSOP breakout board",
+      "manufacturer": "Generic",
+      "model": "SSOP16 to DIP16 Adapter 0.65mm V1.0",
+      "description": "PCB adaptador SSOP16 0.65MM a DIP - 16 pines - V1.0 - placa verde pequeña",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 13,
+    "location": "G",
+    "sublocation": "69",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "77cb6625bfbb45518ff1b5fea565f21d",
+    "action": "addition",
+    "code": "JRKH1026",
+    "quantity": 13,
+    "location": "G",
+    "sublocation": "69",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "JRKH1026",
+      "type": "pcb",
+      "subtype": "SSOP breakout board",
+      "manufacturer": "Generic",
+      "model": "SSOP16 to DIP16 Adapter 0.65mm V1.0",
+      "description": "PCB adaptador SSOP16 0.65MM a DIP - 16 pines - V1.0 - placa verde pequeña",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "77cb6625bfbb45518ff1b5fea565f21d",
+    "code": "JRKH1026",
+    "action": "addition",
+    "quantity": 13
+  }
+}
