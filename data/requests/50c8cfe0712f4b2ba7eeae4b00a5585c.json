@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "50c8cfe0712f4b2ba7eeae4b00a5585c",
+  "saved_at": "2026-11-02T13:48:10.118245+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "ESD protection / EMI filter IC",
+      "manufacturer": "Generic",
+      "model": "M01C - SMD EMI Filter / ESD Suppressor QFN",
+      "description": "IC marcado M01C en cinta SMD - 3 piezas en carrier tape - posible protección ESD / common mode filter QFN",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 3,
+    "location": "G",
+    "sublocation": "73",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "50c8cfe0712f4b2ba7eeae4b00a5585c",
+    "action": "addition",
+    "code": "MBBI1126",
+    "quantity": 3,
+    "location": "G",
+    "sublocation": "73",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "MBBI1126",
+      "type": "Accessories",
+      "subtype": "ESD protection / EMI filter IC",
+      "manufacturer": "Generic",
+      "model": "M01C - SMD EMI Filter / ESD Suppressor QFN",
+      "description": "IC marcado M01C en cinta SMD - 3 piezas en carrier tape - posible protección ESD / common mode filter QFN",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "50c8cfe0712f4b2ba7eeae4b00a5585c",
+    "code": "MBBI1126",
+    "action": "addition",
+    "quantity": 3
+  }
+}
