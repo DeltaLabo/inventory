@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d5b6470e385a4bd78d535b265ce87558",
+  "saved_at": "2026-11-02T13:50:37.287764+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "SMD integrated circuit transistor MOSFET in tape",
+      "manufacturer": "Generic",
+      "model": "SMD IC Tape - ESD Sensitive Package",
+      "description": "Circuito integrado SMD en cinta - en bolsa antiestática ESD con etiqueta amarilla CAUTION FOR HANDLING ELECTROSTATIC SENSITIVE DEVICES",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 12,
+    "location": "G",
+    "sublocation": "74",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "d5b6470e385a4bd78d535b265ce87558",
+    "action": "addition",
+    "code": "NRSI1126",
+    "quantity": 12,
+    "location": "G",
+    "sublocation": "74",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "NRSI1126",
+      "type": "Accessories",
+      "subtype": "SMD integrated circuit transistor MOSFET in tape",
+      "manufacturer": "Generic",
+      "model": "SMD IC Tape - ESD Sensitive Package",
+      "description": "Circuito integrado SMD en cinta - en bolsa antiestática ESD con etiqueta amarilla CAUTION FOR HANDLING ELECTROSTATIC SENSITIVE DEVICES",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "d5b6470e385a4bd78d535b265ce87558",
+    "code": "NRSI1126",
+    "action": "addition",
+    "quantity": 12
+  }
+}
