@@ -309,3 +309,4 @@ MBBI1126,Accessories,ESD protection / EMI filter IC,Generic,M01C - SMD EMI Filte
 NRSI1126,Accessories,SMD integrated circuit transistor MOSFET in tape,Generic,SMD IC Tape - ESD Sensitive Package,Circuito integrado SMD en cinta - en bolsa antiestática ESD con etiqueta amarilla CAUTION FOR HANDLING ELECTROSTATIC SENSITIVE DEVICES,,,,
 JOSE1126,passive components,crystal oscillator,Generic,HC-49S 32.768kHz Crystal,Cristal de cuarzo HC-49S 32.768 - tipo reloj RTC - encapsulado metálico de 2 pines,,,,
 XROL1126,pcb adapter,SOP breakout board,Generic,SOP28-DIP Adapter 1.27mm,PCB adaptador SOP28 a DIP28 - placa verde con serigrafía SOP28-DIP - 28 pines 1.27mm pitch - doble fila SOP en centro,,,,
+LCUP1126,pcb adapter,EMI filter / common mode choke adapter,Generic,Common Mode Choke Adapter 4-Pin to DIP,PCB adaptador mini verde para filtro EMI de 4 pines - 4 pads centrales SMD + 6 agujeros laterales - para choke de modo común,,,,

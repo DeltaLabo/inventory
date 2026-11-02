@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "a1bf237e7d2641ff805ab781e4a9eebc",
+  "saved_at": "2026-11-02T14:14:26.467164+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb adapter",
+      "subtype": "EMI filter / common mode choke adapter",
+      "manufacturer": "Generic",
+      "model": "Common Mode Choke Adapter 4-Pin to DIP",
+      "description": "PCB adaptador mini verde para filtro EMI de 4 pines - 4 pads centrales SMD + 6 agujeros laterales - para choke de modo común",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "77",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "a1bf237e7d2641ff805ab781e4a9eebc",
+    "action": "addition",
+    "code": "LCUP1126",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "77",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "LCUP1126",
+      "type": "pcb adapter",
+      "subtype": "EMI filter / common mode choke adapter",
+      "manufacturer": "Generic",
+      "model": "Common Mode Choke Adapter 4-Pin to DIP",
+      "description": "PCB adaptador mini verde para filtro EMI de 4 pines - 4 pads centrales SMD + 6 agujeros laterales - para choke de modo común",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "a1bf237e7d2641ff805ab781e4a9eebc",
+    "code": "LCUP1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
