@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "f4ee4348534341349369d3b0214cc824",
+  "saved_at": "2026-11-02T14:45:42.312150+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb adapter",
+      "subtype": "QFN / DFN8 breakout board",
+      "manufacturer": "Generic",
+      "model": "QFN8 to DIP Adapter with Capacitor Pad",
+      "description": "PCB adaptador QFN8 / DFN8 - cuadrado mini verde - marcado U1 y C1 - 8 agujeros perimetrales + pad central térmico - para ICs tipo EMI filter M01C",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "79",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "f4ee4348534341349369d3b0214cc824",
+    "action": "addition",
+    "code": "TJIK1126",
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "79",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "TJIK1126",
+      "type": "pcb adapter",
+      "subtype": "QFN / DFN8 breakout board",
+      "manufacturer": "Generic",
+      "model": "QFN8 to DIP Adapter with Capacitor Pad",
+      "description": "PCB adaptador QFN8 / DFN8 - cuadrado mini verde - marcado U1 y C1 - 8 agujeros perimetrales + pad central térmico - para ICs tipo EMI filter M01C",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "f4ee4348534341349369d3b0214cc824",
+    "code": "TJIK1126",
+    "action": "addition",
+    "quantity": 2
+  }
+}
