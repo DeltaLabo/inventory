@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "288924962fdd48dd9200b6d148f8b0c8",
+  "saved_at": "2026-11-02T15:04:09.186380+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb adapter",
+      "subtype": "SOP16 / SOIC16 breakout board",
+      "manufacturer": "Generic",
+      "model": "AE-SOP16 to DIP16 Adapter 1.27mm",
+      "description": "PCB adaptador AE-SOP16 - 16 pines 1-16 - marcado AE-SOP16 1-8 / 9-16 - verde cuadrado con pads SMD centrales y 16 agujeros perimetrales - pitch 1.27mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 3,
+    "location": "G",
+    "sublocation": "82",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "288924962fdd48dd9200b6d148f8b0c8",
+    "action": "addition",
+    "code": "FNXJ1126",
+    "quantity": 3,
+    "location": "G",
+    "sublocation": "82",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "FNXJ1126",
+      "type": "pcb adapter",
+      "subtype": "SOP16 / SOIC16 breakout board",
+      "manufacturer": "Generic",
+      "model": "AE-SOP16 to DIP16 Adapter 1.27mm",
+      "description": "PCB adaptador AE-SOP16 - 16 pines 1-16 - marcado AE-SOP16 1-8 / 9-16 - verde cuadrado con pads SMD centrales y 16 agujeros perimetrales - pitch 1.27mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "288924962fdd48dd9200b6d148f8b0c8",
+    "code": "FNXJ1126",
+    "action": "addition",
+    "quantity": 3
+  }
+}
