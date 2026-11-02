@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "80fbc880e92f42a1a4a7e949807aa0b8",
+  "saved_at": "2026-11-02T13:54:22.701108+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "passive components",
+      "subtype": "crystal oscillator",
+      "manufacturer": "Generic",
+      "model": "HC-49S 32.768kHz Crystal",
+      "description": "Cristal de cuarzo HC-49S 32.768 - tipo reloj RTC - encapsulado metálico de 2 pines",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "75",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "80fbc880e92f42a1a4a7e949807aa0b8",
+    "action": "addition",
+    "code": "JOSE1126",
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "75",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "JOSE1126",
+      "type": "passive components",
+      "subtype": "crystal oscillator",
+      "manufacturer": "Generic",
+      "model": "HC-49S 32.768kHz Crystal",
+      "description": "Cristal de cuarzo HC-49S 32.768 - tipo reloj RTC - encapsulado metálico de 2 pines",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "80fbc880e92f42a1a4a7e949807aa0b8",
+    "code": "JOSE1126",
+    "action": "addition",
+    "quantity": 10
+  }
+}
