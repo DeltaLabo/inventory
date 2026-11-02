@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ec81334c74ae4279bb0e2bab0938af3e",
+  "saved_at": "2026-11-02T14:42:41.973893+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb adapter",
+      "subtype": "SOT-223 breakout board",
+      "manufacturer": "Generic",
+      "model": "SOT223 to DIP Adapter",
+      "description": "PCB adaptador SOT223 - marcado SOT223 1-2-3 - 3 pines + pad térmico - placa verde pequeña",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 15,
+    "location": "G",
+    "sublocation": "78",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ec81334c74ae4279bb0e2bab0938af3e",
+    "action": "addition",
+    "code": "AIVL1126",
+    "quantity": 15,
+    "location": "G",
+    "sublocation": "78",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "AIVL1126",
+      "type": "pcb adapter",
+      "subtype": "SOT-223 breakout board",
+      "manufacturer": "Generic",
+      "model": "SOT223 to DIP Adapter",
+      "description": "PCB adaptador SOT223 - marcado SOT223 1-2-3 - 3 pines + pad térmico - placa verde pequeña",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ec81334c74ae4279bb0e2bab0938af3e",
+    "code": "AIVL1126",
+    "action": "addition",
+    "quantity": 15
+  }
+}
