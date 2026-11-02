@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "a936a747621743e688b4054c1a24e8b6",
+  "saved_at": "2026-11-02T14:11:31.426963+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb adapter",
+      "subtype": "SOP breakout board",
+      "manufacturer": "Generic",
+      "model": "SOP28-DIP Adapter 1.27mm",
+      "description": "PCB adaptador SOP28 a DIP28 - placa verde con serigrafía SOP28-DIP - 28 pines 1.27mm pitch - doble fila SOP en centro",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "76",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "a936a747621743e688b4054c1a24e8b6",
+    "action": "addition",
+    "code": "XROL1126",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "76",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "XROL1126",
+      "type": "pcb adapter",
+      "subtype": "SOP breakout board",
+      "manufacturer": "Generic",
+      "model": "SOP28-DIP Adapter 1.27mm",
+      "description": "PCB adaptador SOP28 a DIP28 - placa verde con serigrafía SOP28-DIP - 28 pines 1.27mm pitch - doble fila SOP en centro",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "a936a747621743e688b4054c1a24e8b6",
+    "code": "XROL1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
