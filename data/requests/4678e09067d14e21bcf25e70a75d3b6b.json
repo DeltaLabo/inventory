@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4678e09067d14e21bcf25e70a75d3b6b",
+  "saved_at": "2026-11-02T13:43:06.687271+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "passive components",
+      "subtype": "common mode choke",
+      "manufacturer": "Generic",
+      "model": "DLW21SN / ACM2012 - 90R-414 - SMD Common Mode Choke 0805/1210",
+      "description": "Filtro EMI de modo común SMD con bobinado doble de cobre - 4 terminales - en bolsa antiestática",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 6,
+    "location": "G",
+    "sublocation": "72",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "4678e09067d14e21bcf25e70a75d3b6b",
+    "action": "addition",
+    "code": "DTYA1126",
+    "quantity": 6,
+    "location": "G",
+    "sublocation": "72",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "DTYA1126",
+      "type": "passive components",
+      "subtype": "common mode choke",
+      "manufacturer": "Generic",
+      "model": "DLW21SN / ACM2012 - 90R-414 - SMD Common Mode Choke 0805/1210",
+      "description": "Filtro EMI de modo común SMD con bobinado doble de cobre - 4 terminales - en bolsa antiestática",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "4678e09067d14e21bcf25e70a75d3b6b",
+    "code": "DTYA1126",
+    "action": "addition",
+    "quantity": 6
+  }
+}
