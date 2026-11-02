@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "39b0f14ebde340939f4974ecf3307d84",
+  "saved_at": "2026-11-02T14:53:22.358816+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb adapter",
+      "subtype": "common mode choke / EMI filter breakout board",
+      "manufacturer": "Generic",
+      "model": "4-Pin Common Mode Choke to DIP Adapter",
+      "description": "PCB adaptador verde mini para filtro EMI de 4 pines - 6 agujeros (3+3) - 5 pads SMD centrales - para choke tipo DLW21SN / ACM2012",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 9,
+    "location": "G",
+    "sublocation": "80",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "39b0f14ebde340939f4974ecf3307d84",
+    "action": "addition",
+    "code": "FEJH1126",
+    "quantity": 9,
+    "location": "G",
+    "sublocation": "80",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "FEJH1126",
+      "type": "pcb adapter",
+      "subtype": "common mode choke / EMI filter breakout board",
+      "manufacturer": "Generic",
+      "model": "4-Pin Common Mode Choke to DIP Adapter",
+      "description": "PCB adaptador verde mini para filtro EMI de 4 pines - 6 agujeros (3+3) - 5 pads SMD centrales - para choke tipo DLW21SN / ACM2012",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "39b0f14ebde340939f4974ecf3307d84",
+    "code": "FEJH1126",
+    "action": "addition",
+    "quantity": 9
+  }
+}
