@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "07137871d5584c8e9afa88007f44d99c",
+  "saved_at": "2026-11-02T14:55:56.763405+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb adapter",
+      "subtype": "MSOP8 / SSOP8 / TSSOP8 breakout board",
+      "manufacturer": "Generic",
+      "model": "TSSOP8 MSOP8 to DIP8 Adapter 0.65mm",
+      "description": "PCB adaptador 0.65mm pitch - 8 pines 1-8 - marcado U1 0.65mm - para ICs SSOP/MSOP8 - verde mini con 8 agujeros perimetrales y pads SMD centrales",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 8,
+    "location": "G",
+    "sublocation": "81",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "07137871d5584c8e9afa88007f44d99c",
+    "action": "addition",
+    "code": "OCXV1126",
+    "quantity": 8,
+    "location": "G",
+    "sublocation": "81",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "OCXV1126",
+      "type": "pcb adapter",
+      "subtype": "MSOP8 / SSOP8 / TSSOP8 breakout board",
+      "manufacturer": "Generic",
+      "model": "TSSOP8 MSOP8 to DIP8 Adapter 0.65mm",
+      "description": "PCB adaptador 0.65mm pitch - 8 pines 1-8 - marcado U1 0.65mm - para ICs SSOP/MSOP8 - verde mini con 8 agujeros perimetrales y pads SMD centrales",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "07137871d5584c8e9afa88007f44d99c",
+    "code": "OCXV1126",
+    "action": "addition",
+    "quantity": 8
+  }
+}
