@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "6daa5ab80a574305b067a89089e242ae",
+  "saved_at": "2026-11-03T19:02:34.728939+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "load cell amplifier breakout",
+      "manufacturer": "Generic",
+      "model": "HX711",
+      "description": "HX711 load cell amplifier breakout module - 24-bit",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "83",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "6daa5ab80a574305b067a89089e242ae",
+    "action": "addition",
+    "code": "RPNW1126",
+    "quantity": 10,
+    "location": "G",
+    "sublocation": "83",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "RPNW1126",
+      "type": "Accessories",
+      "subtype": "load cell amplifier breakout",
+      "manufacturer": "Generic",
+      "model": "HX711",
+      "description": "HX711 load cell amplifier breakout module - 24-bit",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "6daa5ab80a574305b067a89089e242ae",
+    "code": "RPNW1126",
+    "action": "addition",
+    "quantity": 10
+  }
+}
