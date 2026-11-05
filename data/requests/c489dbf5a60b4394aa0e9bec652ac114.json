@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c489dbf5a60b4394aa0e9bec652ac114",
+  "saved_at": "2026-11-05T22:20:18.715168+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "IDC",
+      "manufacturer": "Generic",
+      "model": "DS18B20",
+      "description": "Cable cinta plana / ribbon IDC gris con conector negro, con PCB roja",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "23",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "c489dbf5a60b4394aa0e9bec652ac114",
+    "action": "addition",
+    "code": "QMUA1126",
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "23",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QMUA1126",
+      "type": "Accessories",
+      "subtype": "IDC",
+      "manufacturer": "Generic",
+      "model": "DS18B20",
+      "description": "Cable cinta plana / ribbon IDC gris con conector negro, con PCB roja",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "c489dbf5a60b4394aa0e9bec652ac114",
+    "code": "QMUA1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
