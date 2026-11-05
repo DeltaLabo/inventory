@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "9407ff22b17c4a8a8bdf30a22cda8bd7",
+  "saved_at": "2026-11-05T17:17:24.307608+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "OKFD1026",
+    "original_item": {
+      "code": "OKFD1026",
+      "type": "sensor board",
+      "subtype": "current sensor",
+      "manufacturer": "Generic",
+      "model": "ACS712",
+      "description": "Hall Effect-based linear current sensor/5V power supply; +-30 A range; 66mV/A sensitivity",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "ACS71200"
+    },
+    "updated_item": {
+      "description": "Hall Effect-based linear current sensor/5V power supply; +-30 A range; 66mV/A sensitivity",
+      "type": "sensor board",
+      "subtype": "current sensor",
+      "manufacturer": "Generic",
+      "model": "ACS712",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "OKFD1026",
+      "location": "E",
+      "sublocation": "7",
+      "units": "4"
+    },
+    "updated_stock": {
+      "location": "E",
+      "sublocation": "7",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "9407ff22b17c4a8a8bdf30a22cda8bd7",
+    "action": "edit",
+    "code": "OKFD1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "4",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "OKFD1026",
+      "location": "E",
+      "sublocation": "7",
+      "units": "4"
+    }
+  },
+  "result": {
+    "id": "9407ff22b17c4a8a8bdf30a22cda8bd7",
+    "code": "OKFD1026",
+    "action": "edit"
+  }
+}
