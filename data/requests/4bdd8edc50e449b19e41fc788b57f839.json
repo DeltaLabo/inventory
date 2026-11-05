@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4bdd8edc50e449b19e41fc788b57f839",
+  "saved_at": "2026-11-05T17:14:45.995841+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "QQVD1026",
+    "original_item": {
+      "code": "QQVD1026",
+      "type": "sensor board",
+      "subtype": "ultrasonic sensor",
+      "manufacturer": "Generic",
+      "model": "HC-SR04",
+      "description": "Ultrasonic Sensor/2400cm range/5V power supply/30 deg measuring angle",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "HCSR0400"
+    },
+    "updated_item": {
+      "description": "Ultrasonic Sensor/2400cm range/5V power supply/30 deg measuring angle",
+      "type": "sensor board",
+      "subtype": "ultrasonic sensor",
+      "manufacturer": "Generic",
+      "model": "HC-SR04",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "QQVD1026",
+      "location": "E",
+      "sublocation": "4",
+      "units": "7"
+    },
+    "updated_stock": {
+      "location": "E",
+      "sublocation": "4",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "4bdd8edc50e449b19e41fc788b57f839",
+    "action": "edit",
+    "code": "QQVD1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "7",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "QQVD1026",
+      "location": "E",
+      "sublocation": "4",
+      "units": "7"
+    }
+  },
+  "result": {
+    "id": "4bdd8edc50e449b19e41fc788b57f839",
+    "code": "QQVD1026",
+    "action": "edit"
+  }
+}
