@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "1ee11695701e4600a0464ffacdcdf373",
+  "saved_at": "2026-11-05T19:11:51.566215+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "IGGA1026",
+    "original_item": {
+      "code": "IGGA1026",
+      "type": "development board",
+      "subtype": "Arduino Mega",
+      "manufacturer": "ARDUINO",
+      "model": "DIN Rail Module",
+      "description": "Arduino Mega DIN module;2560;R3",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "MEGADIN3"
+    },
+    "updated_item": {
+      "description": "Arduino Mega DIN module;2560;R3",
+      "type": "development board",
+      "subtype": "Arduino Mega",
+      "manufacturer": "ARDUINO",
+      "model": "DIN Rail Module",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "IGGA1026",
+      "location": "R",
+      "sublocation": "3",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "R",
+      "sublocation": "3",
+      "units": "2"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "1ee11695701e4600a0464ffacdcdf373",
+    "action": "edit",
+    "code": "IGGA1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "2"
+      }
+    },
+    "original_location": {
+      "code": "IGGA1026",
+      "location": "R",
+      "sublocation": "3",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "1ee11695701e4600a0464ffacdcdf373",
+    "code": "IGGA1026",
+    "action": "edit"
+  }
+}
