@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "a2012d3b6b1e43dd849c12d3bd36fe17",
+  "saved_at": "2026-11-05T17:00:49.912154+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "TPOB1026",
+    "original_item": {
+      "code": "TPOB1026",
+      "type": "display/screens",
+      "subtype": "TFT Screen",
+      "manufacturer": "Adafruit",
+      "model": "TFT+Touch",
+      "description": "TFT and Touchscreen for Raspberry Pi 320x240 and 2.8\"",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "PITFTSCR"
+    },
+    "updated_item": {
+      "description": "TFT and Touchscreen for Raspberry Pi 320x240 and 2.8\"",
+      "type": "display/screens",
+      "subtype": "TFT Screen",
+      "manufacturer": "Adafruit",
+      "model": "TFT+Touch",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "TPOB1026",
+      "location": "D",
+      "sublocation": "10",
+      "units": "2"
+    },
+    "updated_stock": {
+      "location": "D",
+      "sublocation": "10",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "a2012d3b6b1e43dd849c12d3bd36fe17",
+    "action": "edit",
+    "code": "TPOB1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "2",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "TPOB1026",
+      "location": "D",
+      "sublocation": "10",
+      "units": "2"
+    }
+  },
+  "result": {
+    "id": "a2012d3b6b1e43dd849c12d3bd36fe17",
+    "code": "TPOB1026",
+    "action": "edit"
+  }
+}
