@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "f8809e78d7694d9082516c242a62ed08",
+  "saved_at": "2026-11-05T16:54:59.631455+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "LQYY1026",
+    "original_item": {
+      "code": "LQYY1026",
+      "type": "display/screens",
+      "subtype": "LCD 16x2",
+      "manufacturer": "Sparkfun",
+      "model": "ADM16.2K",
+      "description": "Display 16x2",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "LCD16X20"
+    },
+    "updated_item": {
+      "description": "Display 16x2",
+      "type": "display/screens",
+      "subtype": "LCD 16x2",
+      "manufacturer": "Sparkfun",
+      "model": "ADM16.2K",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "LQYY1026",
+      "location": "D",
+      "sublocation": "3",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "D",
+      "sublocation": "3",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "f8809e78d7694d9082516c242a62ed08",
+    "action": "edit",
+    "code": "LQYY1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "LQYY1026",
+      "location": "D",
+      "sublocation": "3",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "f8809e78d7694d9082516c242a62ed08",
+    "code": "LQYY1026",
+    "action": "edit"
+  }
+}
