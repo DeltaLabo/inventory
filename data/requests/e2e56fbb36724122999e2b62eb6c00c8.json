@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e2e56fbb36724122999e2b62eb6c00c8",
+  "saved_at": "2026-11-05T16:36:04.011366+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "QVJT1026",
+    "original_item": {
+      "code": "QVJT1026",
+      "type": "power",
+      "subtype": "buck;CC/CV",
+      "manufacturer": "Generic",
+      "model": "LM2596",
+      "description": "boost converter; CC/CV;3.5 and 30V at a voltage of 4V and 30V",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "LM2596DC"
+    },
+    "updated_item": {
+      "description": "boost converter; CC/CV;3.5 and 30V at a voltage of 4V and 30V",
+      "type": "power",
+      "subtype": "buck;CC/CV",
+      "manufacturer": "Generic",
+      "model": "LM2596",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "QVJT1026",
+      "location": "B",
+      "sublocation": "9",
+      "units": "2"
+    },
+    "updated_stock": {
+      "location": "B",
+      "sublocation": "9",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "e2e56fbb36724122999e2b62eb6c00c8",
+    "action": "edit",
+    "code": "QVJT1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "2",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "QVJT1026",
+      "location": "B",
+      "sublocation": "9",
+      "units": "2"
+    }
+  },
+  "result": {
+    "id": "e2e56fbb36724122999e2b62eb6c00c8",
+    "code": "QVJT1026",
+    "action": "edit"
+  }
+}
