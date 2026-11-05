@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "8d96e59a445143178a422a0411e96822",
+  "saved_at": "2026-11-05T16:49:41.650307+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "YKZW1026",
+    "original_item": {
+      "code": "YKZW1026",
+      "type": "converter",
+      "subtype": "USB converter",
+      "manufacturer": "Waveshare",
+      "model": "USB-4CH SERIAL",
+      "description": "converter for USB to 4 serial channels",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "USBTSERI"
+    },
+    "updated_item": {
+      "description": "converter for USB to 4 serial channels",
+      "type": "converter",
+      "subtype": "USB converter",
+      "manufacturer": "Waveshare",
+      "model": "USB-4CH SERIAL",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "YKZW1026",
+      "location": "C",
+      "sublocation": "7",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "C",
+      "sublocation": "7",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "8d96e59a445143178a422a0411e96822",
+    "action": "edit",
+    "code": "YKZW1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "YKZW1026",
+      "location": "C",
+      "sublocation": "7",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "8d96e59a445143178a422a0411e96822",
+    "code": "YKZW1026",
+    "action": "edit"
+  }
+}
