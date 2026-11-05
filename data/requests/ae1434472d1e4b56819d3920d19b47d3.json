@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ae1434472d1e4b56819d3920d19b47d3",
+  "saved_at": "2026-11-05T17:18:59.831402+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "MFRQ1026",
+    "original_item": {
+      "code": "MFRQ1026",
+      "type": "sensor board",
+      "subtype": "Time of flight",
+      "manufacturer": "Generic",
+      "model": "VL53L0/XV2",
+      "description": "Time of flight sensor; laser sensor",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "VL53LO1X"
+    },
+    "updated_item": {
+      "description": "Time of flight sensor; laser sensor",
+      "type": "sensor board",
+      "subtype": "Time of flight",
+      "manufacturer": "Generic",
+      "model": "VL53L0/XV2",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "MFRQ1026",
+      "location": "E",
+      "sublocation": "11",
+      "units": "5"
+    },
+    "updated_stock": {
+      "location": "E",
+      "sublocation": "11",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "ae1434472d1e4b56819d3920d19b47d3",
+    "action": "edit",
+    "code": "MFRQ1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "5",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "MFRQ1026",
+      "location": "E",
+      "sublocation": "11",
+      "units": "5"
+    }
+  },
+  "result": {
+    "id": "ae1434472d1e4b56819d3920d19b47d3",
+    "code": "MFRQ1026",
+    "action": "edit"
+  }
+}
