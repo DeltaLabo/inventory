@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "f8d96e2339dd4fd1bc49f08eedb01079",
+  "saved_at": "2026-11-05T20:05:21.035670+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "TKLD1026",
+    "original_item": {
+      "code": "TKLD1026",
+      "type": "connectors",
+      "subtype": "rectangular header",
+      "manufacturer": "Samtec",
+      "model": "NPPN-252AFCN-RC 4",
+      "description": "Rectangular connector 2-row 25x2 (50 pins)",
+      "value": "",
+      "package": "",
+      "info": "Right-angle termination",
+      "previous_code": "HEADER50"
+    },
+    "updated_item": {
+      "description": "Rectangular connector 2-row 25x2 (50 pins)",
+      "type": "connectors",
+      "subtype": "rectangular header",
+      "manufacturer": "Samtec",
+      "model": "NPPN-252AFCN-RC 4",
+      "value": "",
+      "package": "",
+      "info": "Right-angle termination"
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "TKLD1026",
+      "location": "J",
+      "sublocation": "15",
+      "units": "20"
+    },
+    "updated_stock": {
+      "location": "J",
+      "sublocation": "15",
+      "units": "18"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "f8d96e2339dd4fd1bc49f08eedb01079",
+    "action": "edit",
+    "code": "TKLD1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "20",
+        "after": "18"
+      }
+    },
+    "original_location": {
+      "code": "TKLD1026",
+      "location": "J",
+      "sublocation": "15",
+      "units": "20"
+    }
+  },
+  "result": {
+    "id": "f8d96e2339dd4fd1bc49f08eedb01079",
+    "code": "TKLD1026",
+    "action": "edit"
+  }
+}
