@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "a107eb591f2140a48e6b6c0e5582ec6e",
+  "saved_at": "2026-11-05T16:27:49.505646+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "SINW1026",
+    "original_item": {
+      "code": "SINW1026",
+      "type": "actuator",
+      "subtype": "Relay",
+      "manufacturer": "SONGLE",
+      "model": "SRD-05-VDC-SL-C",
+      "description": "two relay module/30V DC/10A/",
+      "value": "",
+      "package": "",
+      "info": "Provisional count: 2 units assigned at the user's request; physical count pending. Previous code SRD5VDCS.",
+      "previous_code": "SRD5VDCS"
+    },
+    "updated_item": {
+      "description": "two relay module/30V DC/10A/",
+      "type": "actuator",
+      "subtype": "Relay",
+      "manufacturer": "SONGLE",
+      "model": "SRD-05-VDC-SL-C",
+      "value": "",
+      "package": "",
+      "info": "Provisional count: 2 units assigned at the user's request; physical count pending. Previous code SRD5VDCS."
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "SINW1026",
+      "location": "A",
+      "sublocation": "12",
+      "units": "2"
+    },
+    "updated_stock": {
+      "location": "A",
+      "sublocation": "12",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "a107eb591f2140a48e6b6c0e5582ec6e",
+    "action": "edit",
+    "code": "SINW1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "2",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "SINW1026",
+      "location": "A",
+      "sublocation": "12",
+      "units": "2"
+    }
+  },
+  "result": {
+    "id": "a107eb591f2140a48e6b6c0e5582ec6e",
+    "code": "SINW1026",
+    "action": "edit"
+  }
+}
