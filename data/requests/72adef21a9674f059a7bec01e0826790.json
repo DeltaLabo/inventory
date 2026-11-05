@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "72adef21a9674f059a7bec01e0826790",
+  "saved_at": "2026-11-05T16:43:29.282105+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "IAOM1026",
+    "original_item": {
+      "code": "IAOM1026",
+      "type": "power",
+      "subtype": "step up-down converter module",
+      "manufacturer": "Generic",
+      "model": "TPS63020",
+      "description": "Step up - step down converter module based on the TPS63020 IC;1 piece;;input voltage range 5.5V to 36V; output voltage adjustable from 1.2V to 30V;3A max",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "UPDOWNCO"
+    },
+    "updated_item": {
+      "description": "Step up - step down converter module based on the TPS63020 IC;1 piece;;input voltage range 5.5V to 36V; output voltage adjustable from 1.2V to 30V;3A max",
+      "type": "power",
+      "subtype": "step up-down converter module",
+      "manufacturer": "Generic",
+      "model": "TPS63020",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "IAOM1026",
+      "location": "B",
+      "sublocation": "16",
+      "units": "20"
+    },
+    "updated_stock": {
+      "location": "B",
+      "sublocation": "16",
+      "units": "4"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "72adef21a9674f059a7bec01e0826790",
+    "action": "edit",
+    "code": "IAOM1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "20",
+        "after": "4"
+      }
+    },
+    "original_location": {
+      "code": "IAOM1026",
+      "location": "B",
+      "sublocation": "16",
+      "units": "20"
+    }
+  },
+  "result": {
+    "id": "72adef21a9674f059a7bec01e0826790",
+    "code": "IAOM1026",
+    "action": "edit"
+  }
+}
