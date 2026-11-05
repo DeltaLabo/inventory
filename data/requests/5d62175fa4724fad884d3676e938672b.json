@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "5d62175fa4724fad884d3676e938672b",
+  "saved_at": "2026-11-05T20:04:07.522417+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "KDQK1026",
+    "original_item": {
+      "code": "KDQK1026",
+      "type": "mechanical",
+      "subtype": "o-ring kit",
+      "manufacturer": "Universal Series",
+      "model": "O-Ring Service Kit",
+      "description": "Universal series O-ring service kit with assorted sizes",
+      "value": "",
+      "package": "",
+      "info": "Assorted sealing rings",
+      "previous_code": "ORSERKIT"
+    },
+    "updated_item": {
+      "description": "Universal series O-ring service kit with assorted sizes",
+      "type": "mechanical",
+      "subtype": "o-ring kit",
+      "manufacturer": "Universal Series",
+      "model": "O-Ring Service Kit",
+      "value": "",
+      "package": "",
+      "info": "Assorted sealing rings"
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "KDQK1026",
+      "location": "J",
+      "sublocation": "14",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "J",
+      "sublocation": "14",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "5d62175fa4724fad884d3676e938672b",
+    "action": "edit",
+    "code": "KDQK1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "KDQK1026",
+      "location": "J",
+      "sublocation": "14",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "5d62175fa4724fad884d3676e938672b",
+    "code": "KDQK1026",
+    "action": "edit"
+  }
+}
