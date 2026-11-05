@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "7a448c786dee4209922cd27dcc7822c9",
+  "saved_at": "2026-11-05T17:24:36.900652+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "XEJY1026",
+    "original_item": {
+      "code": "XEJY1026",
+      "type": "sensor board",
+      "subtype": "type K thermocouple amplifier",
+      "manufacturer": "QiFei or Generic",
+      "model": "QS2016039",
+      "description": "MAX31855; one input",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "MAX31855"
+    },
+    "updated_item": {
+      "description": "MAX31855; one input",
+      "type": "sensor board",
+      "subtype": "type K thermocouple amplifier",
+      "manufacturer": "QiFei or Generic",
+      "model": "QS2016039",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "XEJY1026",
+      "location": "E",
+      "sublocation": "18",
+      "units": "4"
+    },
+    "updated_stock": {
+      "location": "E",
+      "sublocation": "18",
+      "units": "5"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "7a448c786dee4209922cd27dcc7822c9",
+    "action": "edit",
+    "code": "XEJY1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "4",
+        "after": "5"
+      }
+    },
+    "original_location": {
+      "code": "XEJY1026",
+      "location": "E",
+      "sublocation": "18",
+      "units": "4"
+    }
+  },
+  "result": {
+    "id": "7a448c786dee4209922cd27dcc7822c9",
+    "code": "XEJY1026",
+    "action": "edit"
+  }
+}
