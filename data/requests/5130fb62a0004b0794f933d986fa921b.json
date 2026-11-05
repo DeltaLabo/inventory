@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "5130fb62a0004b0794f933d986fa921b",
+  "saved_at": "2026-11-05T16:02:17.782144+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "connectors",
+      "subtype": "power input",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conectores DC macho tipo barrel con bornera / terminal de tornillo verde para fuente de poder",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "11",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "5130fb62a0004b0794f933d986fa921b",
+    "action": "addition",
+    "code": "EGBH1126",
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "11",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "EGBH1126",
+      "type": "connectors",
+      "subtype": "power input",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conectores DC macho tipo barrel con bornera / terminal de tornillo verde para fuente de poder",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "5130fb62a0004b0794f933d986fa921b",
+    "code": "EGBH1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
