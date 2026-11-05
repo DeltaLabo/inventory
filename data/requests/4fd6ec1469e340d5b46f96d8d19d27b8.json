@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4fd6ec1469e340d5b46f96d8d19d27b8",
+  "saved_at": "2026-11-05T19:05:26.607256+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "FLKV1026",
+    "original_item": {
+      "code": "FLKV1026",
+      "type": "connectors",
+      "subtype": "pin angle connectors",
+      "manufacturer": "SAMTEC",
+      "model": "TMM-106-01-LD-RA",
+      "description": "Connectors with 12 pins at a angle of 90°",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "CMM12PIN"
+    },
+    "updated_item": {
+      "description": "Connectors with 12 pins at a angle of 90°",
+      "type": "connectors",
+      "subtype": "pin angle connectors",
+      "manufacturer": "SAMTEC",
+      "model": "TMM-106-01-LD-RA",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "FLKV1026",
+      "location": "H",
+      "sublocation": "10",
+      "units": "100"
+    },
+    "updated_stock": {
+      "location": "H",
+      "sublocation": "10",
+      "units": "98"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "4fd6ec1469e340d5b46f96d8d19d27b8",
+    "action": "edit",
+    "code": "FLKV1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "100",
+        "after": "98"
+      }
+    },
+    "original_location": {
+      "code": "FLKV1026",
+      "location": "H",
+      "sublocation": "10",
+      "units": "100"
+    }
+  },
+  "result": {
+    "id": "4fd6ec1469e340d5b46f96d8d19d27b8",
+    "code": "FLKV1026",
+    "action": "edit"
+  }
+}
