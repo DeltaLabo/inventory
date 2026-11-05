@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "df59110c1d244d339a06ef7b0e1cce7d",
+  "saved_at": "2026-11-05T15:32:09.550619+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "TRIAD",
+      "model": "WSU075-3200",
+      "description": "Fuente de poder / Adaptador AC a DC 7.5V 3.2A con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "3",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "df59110c1d244d339a06ef7b0e1cce7d",
+    "action": "addition",
+    "code": "EQCO1126",
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "3",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "EQCO1126",
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "TRIAD",
+      "model": "WSU075-3200",
+      "description": "Fuente de poder / Adaptador AC a DC 7.5V 3.2A con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "df59110c1d244d339a06ef7b0e1cce7d",
+    "code": "EQCO1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
