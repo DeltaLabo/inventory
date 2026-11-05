@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "de2c33ea85404768bd274a9fc0409ed2",
+  "saved_at": "2026-11-05T19:42:38.409199+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "NNAY1026",
+    "original_item": {
+      "code": "NNAY1026",
+      "type": "fasteners",
+      "subtype": "washer assortment",
+      "manufacturer": "",
+      "model": "",
+      "description": "box with assorted pressure washers of different sizes;1 box;;includes washers of 6;8;10;12 mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "WASHSETS"
+    },
+    "updated_item": {
+      "description": "box with assorted pressure washers of different sizes;1 box;;includes washers of 6;8;10;12 mm",
+      "type": "fasteners",
+      "subtype": "washer assortment",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "NNAY1026",
+      "location": "I",
+      "sublocation": "2",
+      "units": "0"
+    },
+    "updated_stock": {
+      "location": "I",
+      "sublocation": "2",
+      "units": "1"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "de2c33ea85404768bd274a9fc0409ed2",
+    "action": "edit",
+    "code": "NNAY1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "0",
+        "after": "1"
+      }
+    },
+    "original_location": {
+      "code": "NNAY1026",
+      "location": "I",
+      "sublocation": "2",
+      "units": "0"
+    }
+  },
+  "result": {
+    "id": "de2c33ea85404768bd274a9fc0409ed2",
+    "code": "NNAY1026",
+    "action": "edit"
+  }
+}
