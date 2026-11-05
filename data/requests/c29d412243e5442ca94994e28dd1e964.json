@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c29d412243e5442ca94994e28dd1e964",
+  "saved_at": "2026-11-05T16:39:36.973500+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "XPAP1026",
+    "original_item": {
+      "code": "XPAP1026",
+      "type": "power",
+      "subtype": "power entry module",
+      "manufacturer": "Schurter",
+      "model": "IEC C14",
+      "description": "IEC C14 power entry module with switch and fuse;1 piece;;used for AC mains input connection in power supplies",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "CONNEC14"
+    },
+    "updated_item": {
+      "description": "IEC C14 power entry module with switch and fuse;1 piece;;used for AC mains input connection in power supplies",
+      "type": "power",
+      "subtype": "power entry module",
+      "manufacturer": "Schurter",
+      "model": "IEC C14",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "XPAP1026",
+      "location": "B",
+      "sublocation": "14",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "B",
+      "sublocation": "14",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "c29d412243e5442ca94994e28dd1e964",
+    "action": "edit",
+    "code": "XPAP1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "XPAP1026",
+      "location": "B",
+      "sublocation": "14",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "c29d412243e5442ca94994e28dd1e964",
+    "code": "XPAP1026",
+    "action": "edit"
+  }
+}
