@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "9c38ffe2cedc4dcca33ed0d551f225ab",
+  "saved_at": "2026-11-05T17:22:48.906330+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "BMVU1026",
+    "original_item": {
+      "code": "BMVU1026",
+      "type": "sensor board",
+      "subtype": "ICM20948",
+      "manufacturer": "ICM",
+      "model": "20948",
+      "description": "9 DoF Motion sensor (gyroscope compass accelerometer)",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "ICM20948"
+    },
+    "updated_item": {
+      "description": "9 DoF Motion sensor (gyroscope compass accelerometer)",
+      "type": "sensor board",
+      "subtype": "ICM20948",
+      "manufacturer": "ICM",
+      "model": "20948",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "BMVU1026",
+      "location": "E",
+      "sublocation": "15",
+      "units": "0"
+    },
+    "updated_stock": {
+      "location": "E",
+      "sublocation": "15",
+      "units": "26"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "9c38ffe2cedc4dcca33ed0d551f225ab",
+    "action": "edit",
+    "code": "BMVU1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "0",
+        "after": "26"
+      }
+    },
+    "original_location": {
+      "code": "BMVU1026",
+      "location": "E",
+      "sublocation": "15",
+      "units": "0"
+    }
+  },
+  "result": {
+    "id": "9c38ffe2cedc4dcca33ed0d551f225ab",
+    "code": "BMVU1026",
+    "action": "edit"
+  }
+}
