@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "80423da275a64efeb89bd2e764d4efa6",
+  "saved_at": "2026-11-05T19:23:35.445635+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "DDCR1026",
+    "original_item": {
+      "code": "DDCR1026",
+      "type": "PCB accessories",
+      "subtype": "Terminal Connectors",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "2-pin PCB screw terminal block connector",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "TWOPINCN"
+    },
+    "updated_item": {
+      "description": "2-pin PCB screw terminal block connector",
+      "type": "PCB accessories",
+      "subtype": "Terminal Connectors",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "DDCR1026",
+      "location": "R",
+      "sublocation": "10",
+      "units": "150"
+    },
+    "updated_stock": {
+      "location": "R",
+      "sublocation": "10",
+      "units": "140"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "80423da275a64efeb89bd2e764d4efa6",
+    "action": "edit",
+    "code": "DDCR1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "150",
+        "after": "140"
+      }
+    },
+    "original_location": {
+      "code": "DDCR1026",
+      "location": "R",
+      "sublocation": "10",
+      "units": "150"
+    }
+  },
+  "result": {
+    "id": "80423da275a64efeb89bd2e764d4efa6",
+    "code": "DDCR1026",
+    "action": "edit"
+  }
+}
