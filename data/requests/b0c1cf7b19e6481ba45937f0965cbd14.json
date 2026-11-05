@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b0c1cf7b19e6481ba45937f0965cbd14",
+  "saved_at": "2026-11-05T16:41:35.265844+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "HJSS1026",
+    "original_item": {
+      "code": "HJSS1026",
+      "type": "power",
+      "subtype": "solid state switchs",
+      "manufacturer": "FPMOK",
+      "model": "SSR-25 DA",
+      "description": "Solid State",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "SLSTAT25"
+    },
+    "updated_item": {
+      "description": "Solid State",
+      "type": "power",
+      "subtype": "solid state switchs",
+      "manufacturer": "FPMOK",
+      "model": "SSR-25 DA",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "HJSS1026",
+      "location": "B",
+      "sublocation": "15",
+      "units": "2"
+    },
+    "updated_stock": {
+      "location": "B",
+      "sublocation": "15",
+      "units": "3"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "b0c1cf7b19e6481ba45937f0965cbd14",
+    "action": "edit",
+    "code": "HJSS1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "2",
+        "after": "3"
+      }
+    },
+    "original_location": {
+      "code": "HJSS1026",
+      "location": "B",
+      "sublocation": "15",
+      "units": "2"
+    }
+  },
+  "result": {
+    "id": "b0c1cf7b19e6481ba45937f0965cbd14",
+    "code": "HJSS1026",
+    "action": "edit"
+  }
+}
