@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "141f94ddb8744ac59f5019e0ecc45b2d",
+  "saved_at": "2026-11-05T19:49:13.682775+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "QNWW1026",
+    "original_item": {
+      "code": "QNWW1026",
+      "type": "passives",
+      "subtype": "resistor",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "kit of resistances",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "RESIKIT1"
+    },
+    "updated_item": {
+      "description": "kit of resistances",
+      "type": "passives",
+      "subtype": "resistor",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "QNWW1026",
+      "location": "I",
+      "sublocation": "11",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "I",
+      "sublocation": "11",
+      "units": "2"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "141f94ddb8744ac59f5019e0ecc45b2d",
+    "action": "edit",
+    "code": "QNWW1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "2"
+      }
+    },
+    "original_location": {
+      "code": "QNWW1026",
+      "location": "I",
+      "sublocation": "11",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "141f94ddb8744ac59f5019e0ecc45b2d",
+    "code": "QNWW1026",
+    "action": "edit"
+  }
+}
