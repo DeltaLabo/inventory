@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "9b443d2fe40144db8754e1038818f84c",
+  "saved_at": "2026-11-05T16:14:42.879658+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "KFRY1026",
+    "original_item": {
+      "code": "KFRY1026",
+      "type": "actuator",
+      "subtype": "servo",
+      "manufacturer": "Tower Pro",
+      "model": "MG90S",
+      "description": "Microservo",
+      "value": "180 degrees; 5V; 1.8 kg/cm; 0.1s/60 degrees",
+      "package": "",
+      "info": "",
+      "previous_code": "MG90STP0"
+    },
+    "updated_item": {
+      "description": "Microservo",
+      "type": "actuator",
+      "subtype": "servo",
+      "manufacturer": "Tower Pro",
+      "model": "MG90S",
+      "value": "180 degrees; 5V; 1.8 kg/cm; 0.1s/60 degrees",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "KFRY1026",
+      "location": "A",
+      "sublocation": "3",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "A",
+      "sublocation": "3",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "9b443d2fe40144db8754e1038818f84c",
+    "action": "edit",
+    "code": "KFRY1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "KFRY1026",
+      "location": "A",
+      "sublocation": "3",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "9b443d2fe40144db8754e1038818f84c",
+    "code": "KFRY1026",
+    "action": "edit"
+  }
+}
