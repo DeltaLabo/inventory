@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e6a07925870d49d38bd6872a7214c3bf",
+  "saved_at": "2026-11-05T20:01:30.508740+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "KMAE1026",
+    "original_item": {
+      "code": "KMAE1026",
+      "type": "DIN accesories",
+      "subtype": "plug-in bridge",
+      "manufacturer": "Allen-Bradley",
+      "model": "1492-WD3",
+      "description": "Plug-in bridge for terminal blocks Two circuits",
+      "value": "",
+      "package": "DIN rail compatible",
+      "info": "",
+      "previous_code": "PLUGDWD3"
+    },
+    "updated_item": {
+      "description": "Plug-in bridge for terminal blocks Two circuits",
+      "type": "DIN accesories",
+      "subtype": "plug-in bridge",
+      "manufacturer": "Allen-Bradley",
+      "model": "1492-WD3",
+      "value": "",
+      "package": "DIN rail compatible",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "KMAE1026",
+      "location": "J",
+      "sublocation": "10",
+      "units": "4"
+    },
+    "updated_stock": {
+      "location": "J",
+      "sublocation": "10",
+      "units": "10"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "e6a07925870d49d38bd6872a7214c3bf",
+    "action": "edit",
+    "code": "KMAE1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "4",
+        "after": "10"
+      }
+    },
+    "original_location": {
+      "code": "KMAE1026",
+      "location": "J",
+      "sublocation": "10",
+      "units": "4"
+    }
+  },
+  "result": {
+    "id": "e6a07925870d49d38bd6872a7214c3bf",
+    "code": "KMAE1026",
+    "action": "edit"
+  }
+}
