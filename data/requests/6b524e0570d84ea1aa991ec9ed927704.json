@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "6b524e0570d84ea1aa991ec9ed927704",
+  "saved_at": "2026-11-05T16:31:09.846401+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "VUMQ1026",
+    "original_item": {
+      "code": "VUMQ1026",
+      "type": "power",
+      "subtype": "buck; CC/CV",
+      "manufacturer": "Atnsinc",
+      "model": "XL4015",
+      "description": "buck converter; CV/CV; 3.5A 50W",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "BUCKP50W"
+    },
+    "updated_item": {
+      "description": "buck converter; CV/CV; 3.5A 50W",
+      "type": "power",
+      "subtype": "buck; CC/CV",
+      "manufacturer": "Atnsinc",
+      "model": "XL4015",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "VUMQ1026",
+      "location": "B",
+      "sublocation": "1",
+      "units": "19"
+    },
+    "updated_stock": {
+      "location": "B",
+      "sublocation": "1",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "6b524e0570d84ea1aa991ec9ed927704",
+    "action": "edit",
+    "code": "VUMQ1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "19",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "VUMQ1026",
+      "location": "B",
+      "sublocation": "1",
+      "units": "19"
+    }
+  },
+  "result": {
+    "id": "6b524e0570d84ea1aa991ec9ed927704",
+    "code": "VUMQ1026",
+    "action": "edit"
+  }
+}
