@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "a84b9f095dd94d729e87804ab5ccef79",
+  "saved_at": "2026-11-05T21:15:58.886557+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "temperature humidity",
+      "manufacturer": "Generic",
+      "model": "DS18B20",
+      "description": "Sensor de temperatura tipo sonda impermeable DS18B20 con cable negro largo, 1 unidad",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "42",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "a84b9f095dd94d729e87804ab5ccef79",
+    "action": "addition",
+    "code": "HYRL1126",
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "42",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HYRL1126",
+      "type": "sensor",
+      "subtype": "temperature humidity",
+      "manufacturer": "Generic",
+      "model": "DS18B20",
+      "description": "Sensor de temperatura tipo sonda impermeable DS18B20 con cable negro largo, 1 unidad",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "a84b9f095dd94d729e87804ab5ccef79",
+    "code": "HYRL1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
