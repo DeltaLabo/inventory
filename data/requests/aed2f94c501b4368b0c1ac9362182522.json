@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "aed2f94c501b4368b0c1ac9362182522",
+  "saved_at": "2026-11-05T19:53:20.357950+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "DREU1026",
+    "original_item": {
+      "code": "DREU1026",
+      "type": "fasteners",
+      "subtype": "screws",
+      "manufacturer": "SUTEMRIBOR",
+      "model": "Screws",
+      "description": "from M2 M3 and M4 size",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "TORNM234"
+    },
+    "updated_item": {
+      "description": "from M2 M3 and M4 size",
+      "type": "fasteners",
+      "subtype": "screws",
+      "manufacturer": "SUTEMRIBOR",
+      "model": "Screws",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "DREU1026",
+      "location": "J",
+      "sublocation": "2",
+      "units": "5"
+    },
+    "updated_stock": {
+      "location": "J",
+      "sublocation": "2",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "aed2f94c501b4368b0c1ac9362182522",
+    "action": "edit",
+    "code": "DREU1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "5",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "DREU1026",
+      "location": "J",
+      "sublocation": "2",
+      "units": "5"
+    }
+  },
+  "result": {
+    "id": "aed2f94c501b4368b0c1ac9362182522",
+    "code": "DREU1026",
+    "action": "edit"
+  }
+}
