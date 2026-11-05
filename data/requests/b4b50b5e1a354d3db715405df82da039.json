@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b4b50b5e1a354d3db715405df82da039",
+  "saved_at": "2026-11-05T15:53:17.953056+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "Generic",
+      "model": "RK-3100500",
+      "description": "Fuente de poder / Adaptador AC a DC 31V 500mA con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "9",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "b4b50b5e1a354d3db715405df82da039",
+    "action": "addition",
+    "code": "ZZQE1126",
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "9",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ZZQE1126",
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "Generic",
+      "model": "RK-3100500",
+      "description": "Fuente de poder / Adaptador AC a DC 31V 500mA con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "b4b50b5e1a354d3db715405df82da039",
+    "code": "ZZQE1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
