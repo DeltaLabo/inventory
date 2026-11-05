@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "6bf5b90459c1443a8bd47bab8047e957",
+  "saved_at": "2026-11-05T16:29:27.974317+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "TLJR1026",
+    "original_item": {
+      "code": "TLJR1026",
+      "type": "actuator",
+      "subtype": "Relay",
+      "manufacturer": "Hf",
+      "model": "JQC-3FF",
+      "description": "one relay module/5V DC/10A to 277VAC/15A to 125VAC",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "JQC3FF5V"
+    },
+    "updated_item": {
+      "description": "one relay module/5V DC/10A to 277VAC/15A to 125VAC",
+      "type": "actuator",
+      "subtype": "Relay",
+      "manufacturer": "Hf",
+      "model": "JQC-3FF",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "TLJR1026",
+      "location": "A",
+      "sublocation": "14",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "A",
+      "sublocation": "14",
+      "units": "6"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "6bf5b90459c1443a8bd47bab8047e957",
+    "action": "edit",
+    "code": "TLJR1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "6"
+      }
+    },
+    "original_location": {
+      "code": "TLJR1026",
+      "location": "A",
+      "sublocation": "14",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "6bf5b90459c1443a8bd47bab8047e957",
+    "code": "TLJR1026",
+    "action": "edit"
+  }
+}
