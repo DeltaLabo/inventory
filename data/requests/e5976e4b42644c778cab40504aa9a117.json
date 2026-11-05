@@ -1,0 +1,77 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e5976e4b42644c778cab40504aa9a117",
+  "saved_at": "2026-11-05T19:58:44.525104+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "RHLY1026",
+    "original_item": {
+      "code": "RHLY1026",
+      "type": "PCB accessories",
+      "subtype": "Terminal Connectors",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "4-pin PCB screw terminal block connector",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "FOURPINC"
+    },
+    "updated_item": {
+      "description": "Borneras",
+      "type": "PCB accessories",
+      "subtype": "Terminal Connectors",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "RHLY1026",
+      "location": "I",
+      "sublocation": "8",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "I",
+      "sublocation": "8",
+      "units": "4"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "e5976e4b42644c778cab40504aa9a117",
+    "action": "edit",
+    "code": "RHLY1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {
+      "description": {
+        "before": "4-pin PCB screw terminal block connector",
+        "after": "Borneras"
+      }
+    },
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "4"
+      }
+    },
+    "original_location": {
+      "code": "RHLY1026",
+      "location": "I",
+      "sublocation": "8",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "e5976e4b42644c778cab40504aa9a117",
+    "code": "RHLY1026",
+    "action": "edit"
+  }
+}
