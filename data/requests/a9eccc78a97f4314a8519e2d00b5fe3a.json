@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "a9eccc78a97f4314a8519e2d00b5fe3a",
+  "saved_at": "2026-11-05T16:58:59.525421+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "RNOB1026",
+    "original_item": {
+      "code": "RNOB1026",
+      "type": "PIC",
+      "subtype": "PIC microcontroller",
+      "manufacturer": "MICROCHIP",
+      "model": "181798P",
+      "description": "Fast switch",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "PIC16F87"
+    },
+    "updated_item": {
+      "description": "Fast switch",
+      "type": "PIC",
+      "subtype": "PIC microcontroller",
+      "manufacturer": "MICROCHIP",
+      "model": "181798P",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "RNOB1026",
+      "location": "D",
+      "sublocation": "8",
+      "units": "23"
+    },
+    "updated_stock": {
+      "location": "D",
+      "sublocation": "8",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "a9eccc78a97f4314a8519e2d00b5fe3a",
+    "action": "edit",
+    "code": "RNOB1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "23",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "RNOB1026",
+      "location": "D",
+      "sublocation": "8",
+      "units": "23"
+    }
+  },
+  "result": {
+    "id": "a9eccc78a97f4314a8519e2d00b5fe3a",
+    "code": "RNOB1026",
+    "action": "edit"
+  }
+}
