@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "45cc31a488474128b3ce96d2b684aee5",
+  "saved_at": "2026-11-05T17:11:34.491318+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "CLTU1026",
+    "original_item": {
+      "code": "CLTU1026",
+      "type": "sensor board",
+      "subtype": "BME280",
+      "manufacturer": "GY",
+      "model": "GY-BMEP",
+      "description": "Absolute barometric pressure sensor; temperature sensor; humidity sensor",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "BME280SB"
+    },
+    "updated_item": {
+      "description": "Absolute barometric pressure sensor; temperature sensor; humidity sensor",
+      "type": "sensor board",
+      "subtype": "BME280",
+      "manufacturer": "GY",
+      "model": "GY-BMEP",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "CLTU1026",
+      "location": "E",
+      "sublocation": "1",
+      "units": "11"
+    },
+    "updated_stock": {
+      "location": "E",
+      "sublocation": "1",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "45cc31a488474128b3ce96d2b684aee5",
+    "action": "edit",
+    "code": "CLTU1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "11",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "CLTU1026",
+      "location": "E",
+      "sublocation": "1",
+      "units": "11"
+    }
+  },
+  "result": {
+    "id": "45cc31a488474128b3ce96d2b684aee5",
+    "code": "CLTU1026",
+    "action": "edit"
+  }
+}
