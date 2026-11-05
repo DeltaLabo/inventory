@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "01f934811a9a4e39845f90411cc83a31",
+  "saved_at": "2026-11-05T16:53:49.990110+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "JWPC1026",
+    "original_item": {
+      "code": "JWPC1026",
+      "type": "development board",
+      "subtype": "ESP32",
+      "manufacturer": "XIAO",
+      "model": "S3",
+      "description": "XIAO microcontroller based on ESP32S3",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "XIAO32S3"
+    },
+    "updated_item": {
+      "description": "XIAO microcontroller based on ESP32S3",
+      "type": "development board",
+      "subtype": "ESP32",
+      "manufacturer": "XIAO",
+      "model": "S3",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "JWPC1026",
+      "location": "D",
+      "sublocation": "1",
+      "units": "33"
+    },
+    "updated_stock": {
+      "location": "D",
+      "sublocation": "1",
+      "units": "8"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "01f934811a9a4e39845f90411cc83a31",
+    "action": "edit",
+    "code": "JWPC1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "33",
+        "after": "8"
+      }
+    },
+    "original_location": {
+      "code": "JWPC1026",
+      "location": "D",
+      "sublocation": "1",
+      "units": "33"
+    }
+  },
+  "result": {
+    "id": "01f934811a9a4e39845f90411cc83a31",
+    "code": "JWPC1026",
+    "action": "edit"
+  }
+}
