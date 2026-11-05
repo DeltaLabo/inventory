@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "320a449bd6c94b808fce2188fdf0fff0",
+  "saved_at": "2026-11-05T15:41:19.920167+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "Generic",
+      "model": "DE-35-D0120015",
+      "description": "Fuente de poder / Adaptador AC a DC 12V 150mA con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "6",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "320a449bd6c94b808fce2188fdf0fff0",
+    "action": "addition",
+    "code": "YQUH1126",
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "6",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "YQUH1126",
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "Generic",
+      "model": "DE-35-D0120015",
+      "description": "Fuente de poder / Adaptador AC a DC 12V 150mA con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "320a449bd6c94b808fce2188fdf0fff0",
+    "code": "YQUH1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
