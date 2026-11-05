@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e5f29a12172b4c259a95cc1807f6bb90",
+  "saved_at": "2026-11-05T16:32:26.719106+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "ZLLT1026",
+    "original_item": {
+      "code": "ZLLT1026",
+      "type": "power",
+      "subtype": "solar panel",
+      "manufacturer": "Generic",
+      "model": "1627003155",
+      "description": "Polycristal solar cell 113x210",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "SP113210"
+    },
+    "updated_item": {
+      "description": "Polycristal solar cell 113x210",
+      "type": "power",
+      "subtype": "solar panel",
+      "manufacturer": "Generic",
+      "model": "1627003155",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "ZLLT1026",
+      "location": "B",
+      "sublocation": "5",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "B",
+      "sublocation": "5",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "e5f29a12172b4c259a95cc1807f6bb90",
+    "action": "edit",
+    "code": "ZLLT1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "ZLLT1026",
+      "location": "B",
+      "sublocation": "5",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "e5f29a12172b4c259a95cc1807f6bb90",
+    "code": "ZLLT1026",
+    "action": "edit"
+  }
+}
