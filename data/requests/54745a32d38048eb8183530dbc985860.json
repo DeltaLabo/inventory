@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "54745a32d38048eb8183530dbc985860",
+  "saved_at": "2026-11-05T20:03:09.920526+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "GBME1026",
+    "original_item": {
+      "code": "GBME1026",
+      "type": "DIN accesories",
+      "subtype": "Assembly Kit",
+      "manufacturer": "",
+      "model": "",
+      "description": "DIN rail accessory mounting kit",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "DINPLKIT"
+    },
+    "updated_item": {
+      "description": "DIN rail accessory mounting kit",
+      "type": "DIN accesories",
+      "subtype": "Assembly Kit",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "GBME1026",
+      "location": "J",
+      "sublocation": "13",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "J",
+      "sublocation": "13",
+      "units": "4"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "54745a32d38048eb8183530dbc985860",
+    "action": "edit",
+    "code": "GBME1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "4"
+      }
+    },
+    "original_location": {
+      "code": "GBME1026",
+      "location": "J",
+      "sublocation": "13",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "54745a32d38048eb8183530dbc985860",
+    "code": "GBME1026",
+    "action": "edit"
+  }
+}
