@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "8fed228251904cf7957760b6ce5b403d",
+  "saved_at": "2026-11-05T15:50:02.722697+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "Generic",
+      "model": "2420",
+      "description": "Fuente de poder / Adaptador AC a DC 24V 2A con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "8",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "8fed228251904cf7957760b6ce5b403d",
+    "action": "addition",
+    "code": "RLAS1126",
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "8",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "RLAS1126",
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "Generic",
+      "model": "2420",
+      "description": "Fuente de poder / Adaptador AC a DC 24V 2A con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "8fed228251904cf7957760b6ce5b403d",
+    "code": "RLAS1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
