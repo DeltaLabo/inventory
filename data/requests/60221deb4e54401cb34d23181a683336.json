@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "60221deb4e54401cb34d23181a683336",
+  "saved_at": "2026-11-05T15:22:29.841398+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "Generic",
+      "model": "0630",
+      "description": "Fuente de poder / Adaptador AC a DC 6V 3A con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "2",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "60221deb4e54401cb34d23181a683336",
+    "action": "addition",
+    "code": "SMBB1126",
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "2",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SMBB1126",
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "Generic",
+      "model": "0630",
+      "description": "Fuente de poder / Adaptador AC a DC 6V 3A con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "60221deb4e54401cb34d23181a683336",
+    "code": "SMBB1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
