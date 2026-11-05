@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b4c27ad7341745208f6d7f4c166a208a",
+  "saved_at": "2026-11-05T16:57:23.158192+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "RBAE1026",
+    "original_item": {
+      "code": "RBAE1026",
+      "type": "development board",
+      "subtype": "HELTEC ESP32",
+      "manufacturer": "HELTEC",
+      "model": "WiFi_LoRa_32_V2",
+      "description": "Microcontroller dev board based on the ESP32",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "HELESPV2"
+    },
+    "updated_item": {
+      "description": "Microcontroller dev board based on the ESP32",
+      "type": "development board",
+      "subtype": "HELTEC ESP32",
+      "manufacturer": "HELTEC",
+      "model": "WiFi_LoRa_32_V2",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "RBAE1026",
+      "location": "D",
+      "sublocation": "6",
+      "units": "3"
+    },
+    "updated_stock": {
+      "location": "D",
+      "sublocation": "6",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "b4c27ad7341745208f6d7f4c166a208a",
+    "action": "edit",
+    "code": "RBAE1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "3",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "RBAE1026",
+      "location": "D",
+      "sublocation": "6",
+      "units": "3"
+    }
+  },
+  "result": {
+    "id": "b4c27ad7341745208f6d7f4c166a208a",
+    "code": "RBAE1026",
+    "action": "edit"
+  }
+}
