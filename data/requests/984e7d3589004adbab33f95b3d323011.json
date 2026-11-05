@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "984e7d3589004adbab33f95b3d323011",
+  "saved_at": "2026-11-05T19:56:15.032432+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "FJYE1026",
+    "original_item": {
+      "code": "FJYE1026",
+      "type": "",
+      "subtype": "",
+      "manufacturer": "",
+      "model": "",
+      "description": "",
+      "value": "",
+      "package": "",
+      "info": "Incomplete record; retained as a separate product based on its registered stock.",
+      "previous_code": "NSYTRAAB"
+    },
+    "updated_item": {
+      "description": "",
+      "type": "",
+      "subtype": "",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": "Incomplete record; retained as a separate product based on its registered stock."
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "FJYE1026",
+      "location": "J",
+      "sublocation": "7",
+      "units": "8"
+    },
+    "updated_stock": {
+      "location": "J",
+      "sublocation": "7",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "984e7d3589004adbab33f95b3d323011",
+    "action": "edit",
+    "code": "FJYE1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "8",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "FJYE1026",
+      "location": "J",
+      "sublocation": "7",
+      "units": "8"
+    }
+  },
+  "result": {
+    "id": "984e7d3589004adbab33f95b3d323011",
+    "code": "FJYE1026",
+    "action": "edit"
+  }
+}
