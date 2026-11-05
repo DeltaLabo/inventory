@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "32412175bc144bd29789f7ab0c9598c4",
+  "saved_at": "2026-11-05T16:35:11.762331+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "LWWQ1026",
+    "original_item": {
+      "code": "LWWQ1026",
+      "type": "battery accessories",
+      "subtype": "charger module type C",
+      "manufacturer": "",
+      "model": "",
+      "description": "Lithium Battery Charger USB interface Fast Charging Board with protection circuit",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "CHARGERB"
+    },
+    "updated_item": {
+      "description": "Lithium Battery Charger USB interface Fast Charging Board with protection circuit",
+      "type": "battery accessories",
+      "subtype": "charger module type C",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "LWWQ1026",
+      "location": "B",
+      "sublocation": "8",
+      "units": "29"
+    },
+    "updated_stock": {
+      "location": "B",
+      "sublocation": "8",
+      "units": "28"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "32412175bc144bd29789f7ab0c9598c4",
+    "action": "edit",
+    "code": "LWWQ1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "29",
+        "after": "28"
+      }
+    },
+    "original_location": {
+      "code": "LWWQ1026",
+      "location": "B",
+      "sublocation": "8",
+      "units": "29"
+    }
+  },
+  "result": {
+    "id": "32412175bc144bd29789f7ab0c9598c4",
+    "code": "LWWQ1026",
+    "action": "edit"
+  }
+}
