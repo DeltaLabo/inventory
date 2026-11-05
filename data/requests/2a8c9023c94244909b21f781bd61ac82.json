@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "2a8c9023c94244909b21f781bd61ac82",
+  "saved_at": "2026-11-05T15:35:10.624594+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "Generic",
+      "model": "0910",
+      "description": "Fuente de poder / Adaptador AC a DC 9V 1A con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 5,
+    "location": "Cables Potencia",
+    "sublocation": "4",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "2a8c9023c94244909b21f781bd61ac82",
+    "action": "addition",
+    "code": "ZBTE1126",
+    "quantity": 5,
+    "location": "Cables Potencia",
+    "sublocation": "4",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ZBTE1126",
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "Generic",
+      "model": "0910",
+      "description": "Fuente de poder / Adaptador AC a DC 9V 1A con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "2a8c9023c94244909b21f781bd61ac82",
+    "code": "ZBTE1126",
+    "action": "addition",
+    "quantity": 5
+  }
+}
