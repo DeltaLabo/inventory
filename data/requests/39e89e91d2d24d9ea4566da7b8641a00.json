@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "39e89e91d2d24d9ea4566da7b8641a00",
+  "saved_at": "2026-11-05T17:56:47.103295+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "VJHU1026",
+    "original_item": {
+      "code": "VJHU1026",
+      "type": "",
+      "subtype": "",
+      "manufacturer": "",
+      "model": "",
+      "description": "",
+      "value": "",
+      "package": "",
+      "info": "Incomplete record; retained as a separate product based on its registered stock.",
+      "previous_code": "SIM76000"
+    },
+    "updated_item": {
+      "description": "",
+      "type": "",
+      "subtype": "",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": "Incomplete record; retained as a separate product based on its registered stock."
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "VJHU1026",
+      "location": "F",
+      "sublocation": "8",
+      "units": "12"
+    },
+    "updated_stock": {
+      "location": "F",
+      "sublocation": "8",
+      "units": "8"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "39e89e91d2d24d9ea4566da7b8641a00",
+    "action": "edit",
+    "code": "VJHU1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "12",
+        "after": "8"
+      }
+    },
+    "original_location": {
+      "code": "VJHU1026",
+      "location": "F",
+      "sublocation": "8",
+      "units": "12"
+    }
+  },
+  "result": {
+    "id": "39e89e91d2d24d9ea4566da7b8641a00",
+    "code": "VJHU1026",
+    "action": "edit"
+  }
+}
