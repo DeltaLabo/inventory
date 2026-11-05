@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "8c7082fb70f74694af0e43ed8fc5bc40",
+  "saved_at": "2026-11-05T19:44:53.784833+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "DJMG1026",
+    "original_item": {
+      "code": "DJMG1026",
+      "type": "fasteners",
+      "subtype": "sheetmetal screw assortment",
+      "manufacturer": "",
+      "model": "Philips pan head",
+      "description": "self-tapping sheetmetal screw assortment kit;2 boxes;;includes multiple sizes of Philips pan head screws",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "SCREWSET"
+    },
+    "updated_item": {
+      "description": "self-tapping sheetmetal screw assortment kit;2 boxes;;includes multiple sizes of Philips pan head screws",
+      "type": "fasteners",
+      "subtype": "sheetmetal screw assortment",
+      "manufacturer": "",
+      "model": "Philips pan head",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "DJMG1026",
+      "location": "I",
+      "sublocation": "4",
+      "units": "2"
+    },
+    "updated_stock": {
+      "location": "I",
+      "sublocation": "4",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "8c7082fb70f74694af0e43ed8fc5bc40",
+    "action": "edit",
+    "code": "DJMG1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "2",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "DJMG1026",
+      "location": "I",
+      "sublocation": "4",
+      "units": "2"
+    }
+  },
+  "result": {
+    "id": "8c7082fb70f74694af0e43ed8fc5bc40",
+    "code": "DJMG1026",
+    "action": "edit"
+  }
+}
