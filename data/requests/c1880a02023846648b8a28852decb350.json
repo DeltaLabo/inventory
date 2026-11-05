@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c1880a02023846648b8a28852decb350",
+  "saved_at": "2026-11-05T19:14:34.713032+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "ISWB1026",
+    "original_item": {
+      "code": "ISWB1026",
+      "type": "PCB accessories",
+      "subtype": "PCB for ML3915",
+      "manufacturer": "WWZMDiB",
+      "model": "",
+      "description": "10 Segme el Indicator DIY kt FN",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "SEGMEPCB"
+    },
+    "updated_item": {
+      "description": "10 Segme el Indicator DIY kt FN",
+      "type": "PCB accessories",
+      "subtype": "PCB for ML3915",
+      "manufacturer": "WWZMDiB",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "ISWB1026",
+      "location": "R",
+      "sublocation": "9",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "R",
+      "sublocation": "9",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "c1880a02023846648b8a28852decb350",
+    "action": "edit",
+    "code": "ISWB1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "ISWB1026",
+      "location": "R",
+      "sublocation": "9",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "c1880a02023846648b8a28852decb350",
+    "code": "ISWB1026",
+    "action": "edit"
+  }
+}
