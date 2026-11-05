@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c38f083a2716411a85c670c02c60ed91",
+  "saved_at": "2026-11-05T16:56:25.736461+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "MKDX1026",
+    "original_item": {
+      "code": "MKDX1026",
+      "type": "development board",
+      "subtype": "HELTEC ESP32",
+      "manufacturer": "HELTEC",
+      "model": "WiFi_LoRa_32_V3",
+      "description": "Microcontroller dev board based on the ESP32",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "HELESPV3"
+    },
+    "updated_item": {
+      "description": "Microcontroller dev board based on the ESP32",
+      "type": "development board",
+      "subtype": "HELTEC ESP32",
+      "manufacturer": "HELTEC",
+      "model": "WiFi_LoRa_32_V3",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "MKDX1026",
+      "location": "D",
+      "sublocation": "5",
+      "units": "5"
+    },
+    "updated_stock": {
+      "location": "D",
+      "sublocation": "5",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "c38f083a2716411a85c670c02c60ed91",
+    "action": "edit",
+    "code": "MKDX1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "5",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "MKDX1026",
+      "location": "D",
+      "sublocation": "5",
+      "units": "5"
+    }
+  },
+  "result": {
+    "id": "c38f083a2716411a85c670c02c60ed91",
+    "code": "MKDX1026",
+    "action": "edit"
+  }
+}
