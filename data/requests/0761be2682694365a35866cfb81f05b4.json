@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "0761be2682694365a35866cfb81f05b4",
+  "saved_at": "2026-11-05T16:38:15.225642+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "UGBK1026",
+    "original_item": {
+      "code": "UGBK1026",
+      "type": "power",
+      "subtype": "step down(buck)",
+      "manufacturer": "Gneric",
+      "model": "LM2596",
+      "description": "step down;input range 4.5V to 40V; output range 1.25V to 35V DC",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "STEPDOWN"
+    },
+    "updated_item": {
+      "description": "step down;input range 4.5V to 40V; output range 1.25V to 35V DC",
+      "type": "power",
+      "subtype": "step down(buck)",
+      "manufacturer": "Gneric",
+      "model": "LM2596",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "UGBK1026",
+      "location": "B",
+      "sublocation": "11",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "B",
+      "sublocation": "11",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "0761be2682694365a35866cfb81f05b4",
+    "action": "edit",
+    "code": "UGBK1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "UGBK1026",
+      "location": "B",
+      "sublocation": "11",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "0761be2682694365a35866cfb81f05b4",
+    "code": "UGBK1026",
+    "action": "edit"
+  }
+}
