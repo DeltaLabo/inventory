@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ffe1d0b013464cb38646c4d9106718b9",
+  "saved_at": "2026-11-05T17:16:07.663766+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "WHNS1026",
+    "original_item": {
+      "code": "WHNS1026",
+      "type": "sensor board",
+      "subtype": "limit switch sensor",
+      "manufacturer": "Generic",
+      "model": "Makerbot.com",
+      "description": "Limit Switch made by MakerBot.com",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "MBOTFC00"
+    },
+    "updated_item": {
+      "description": "Limit Switch made by MakerBot.com",
+      "type": "sensor board",
+      "subtype": "limit switch sensor",
+      "manufacturer": "Generic",
+      "model": "Makerbot.com",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "WHNS1026",
+      "location": "E",
+      "sublocation": "5",
+      "units": "4"
+    },
+    "updated_stock": {
+      "location": "E",
+      "sublocation": "5",
+      "units": "3"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "ffe1d0b013464cb38646c4d9106718b9",
+    "action": "edit",
+    "code": "WHNS1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "4",
+        "after": "3"
+      }
+    },
+    "original_location": {
+      "code": "WHNS1026",
+      "location": "E",
+      "sublocation": "5",
+      "units": "4"
+    }
+  },
+  "result": {
+    "id": "ffe1d0b013464cb38646c4d9106718b9",
+    "code": "WHNS1026",
+    "action": "edit"
+  }
+}
