@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d7e58c272eed48dfad3defe03c14369f",
+  "saved_at": "2026-11-05T17:04:33.209506+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "IGGO1026",
+    "original_item": {
+      "code": "IGGO1026",
+      "type": "",
+      "subtype": "",
+      "manufacturer": "",
+      "model": "",
+      "description": "",
+      "value": "",
+      "package": "",
+      "info": "Incomplete record; retained as a separate product based on its registered stock.",
+      "previous_code": "RF433MHZ"
+    },
+    "updated_item": {
+      "description": "",
+      "type": "",
+      "subtype": "",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": "Incomplete record; retained as a separate product based on its registered stock."
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "IGGO1026",
+      "location": "D",
+      "sublocation": "13",
+      "units": "4"
+    },
+    "updated_stock": {
+      "location": "D",
+      "sublocation": "13",
+      "units": "2"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "d7e58c272eed48dfad3defe03c14369f",
+    "action": "edit",
+    "code": "IGGO1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "4",
+        "after": "2"
+      }
+    },
+    "original_location": {
+      "code": "IGGO1026",
+      "location": "D",
+      "sublocation": "13",
+      "units": "4"
+    }
+  },
+  "result": {
+    "id": "d7e58c272eed48dfad3defe03c14369f",
+    "code": "IGGO1026",
+    "action": "edit"
+  }
+}
