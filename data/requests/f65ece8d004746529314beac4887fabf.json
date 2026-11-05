@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "f65ece8d004746529314beac4887fabf",
+  "saved_at": "2026-11-05T20:06:20.839231+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "XIHV1026",
+    "original_item": {
+      "code": "XIHV1026",
+      "type": "",
+      "subtype": "",
+      "manufacturer": "",
+      "model": "",
+      "description": "",
+      "value": "",
+      "package": "",
+      "info": "Incomplete record; retained as a separate product based on its registered stock.",
+      "previous_code": "POWPOTEN"
+    },
+    "updated_item": {
+      "description": "",
+      "type": "",
+      "subtype": "",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": "Incomplete record; retained as a separate product based on its registered stock."
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "XIHV1026",
+      "location": "J",
+      "sublocation": "16",
+      "units": "25"
+    },
+    "updated_stock": {
+      "location": "J",
+      "sublocation": "16",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "f65ece8d004746529314beac4887fabf",
+    "action": "edit",
+    "code": "XIHV1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "25",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "XIHV1026",
+      "location": "J",
+      "sublocation": "16",
+      "units": "25"
+    }
+  },
+  "result": {
+    "id": "f65ece8d004746529314beac4887fabf",
+    "code": "XIHV1026",
+    "action": "edit"
+  }
+}
