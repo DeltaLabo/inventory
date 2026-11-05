@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "940de39490054f318dcb70d1c903fc01",
+  "saved_at": "2026-11-05T16:00:10.517280+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "connectors",
+      "subtype": "power input",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conectores / Puntas adaptadoras DC macho tipo barrel para fuente de poder",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "10",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "940de39490054f318dcb70d1c903fc01",
+    "action": "addition",
+    "code": "DJEW1126",
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "10",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "DJEW1126",
+      "type": "connectors",
+      "subtype": "power input",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conectores / Puntas adaptadoras DC macho tipo barrel para fuente de poder",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "940de39490054f318dcb70d1c903fc01",
+    "code": "DJEW1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
