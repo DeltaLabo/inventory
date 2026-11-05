@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4761c950ffe24935a6b62717a7c1041e",
+  "saved_at": "2026-11-05T19:43:31.126225+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "NMGP1026",
+    "original_item": {
+      "code": "NMGP1026",
+      "type": "PCB accessories",
+      "subtype": "JST XH assortment",
+      "manufacturer": "",
+      "model": "",
+      "description": "4 boxes with JST XH connectors (2 3 4 and 5 pins);4 boxes;;includes connectors of 2;3;4;5 pins",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "JSTXHSET"
+    },
+    "updated_item": {
+      "description": "4 boxes with JST XH connectors (2 3 4 and 5 pins);4 boxes;;includes connectors of 2;3;4;5 pins",
+      "type": "PCB accessories",
+      "subtype": "JST XH assortment",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "NMGP1026",
+      "location": "I",
+      "sublocation": "3",
+      "units": "4"
+    },
+    "updated_stock": {
+      "location": "I",
+      "sublocation": "3",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "4761c950ffe24935a6b62717a7c1041e",
+    "action": "edit",
+    "code": "NMGP1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "4",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "NMGP1026",
+      "location": "I",
+      "sublocation": "3",
+      "units": "4"
+    }
+  },
+  "result": {
+    "id": "4761c950ffe24935a6b62717a7c1041e",
+    "code": "NMGP1026",
+    "action": "edit"
+  }
+}
