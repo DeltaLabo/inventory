@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "de95f13c31764d719a30c0d194ea012f",
+  "saved_at": "2026-11-05T21:02:28.272447+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "Componentes Electrónicos",
+      "manufacturer": "Generic",
+      "model": "B0D949DPR1",
+      "description": "Encoder rotatorio con perilla / knob cap negro, paquete de 5 piezas",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "J",
+    "sublocation": "22",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "de95f13c31764d719a30c0d194ea012f",
+    "action": "addition",
+    "code": "MDJQ1126",
+    "quantity": 4,
+    "location": "J",
+    "sublocation": "22",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "MDJQ1126",
+      "type": "Accessories",
+      "subtype": "Componentes Electrónicos",
+      "manufacturer": "Generic",
+      "model": "B0D949DPR1",
+      "description": "Encoder rotatorio con perilla / knob cap negro, paquete de 5 piezas",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "de95f13c31764d719a30c0d194ea012f",
+    "code": "MDJQ1126",
+    "action": "addition",
+    "quantity": 4
+  }
+}
