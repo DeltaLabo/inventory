@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "2cfd770e34b24c33a8cccb1f3a99063f",
+  "saved_at": "2026-11-05T15:47:50.675422+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "Lenovo",
+      "model": "92P1156",
+      "description": "Cargador / Adaptador AC para laptop Lenovo 65W 20V 3.25A con conector DC",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "7",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "2cfd770e34b24c33a8cccb1f3a99063f",
+    "action": "addition",
+    "code": "PDNF1126",
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "7",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "PDNF1126",
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "Lenovo",
+      "model": "92P1156",
+      "description": "Cargador / Adaptador AC para laptop Lenovo 65W 20V 3.25A con conector DC",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "2cfd770e34b24c33a8cccb1f3a99063f",
+    "code": "PDNF1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
