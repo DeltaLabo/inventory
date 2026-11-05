@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "94d0e63575c34fc7924570b4d32c3964",
+  "saved_at": "2026-11-05T16:25:24.458503+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "GPQM1026",
+    "original_item": {
+      "code": "GPQM1026",
+      "type": "actuator",
+      "subtype": "Relay",
+      "manufacturer": "SONGLE",
+      "model": "SRD-05-VDC-SL-C",
+      "description": "four relay module/30V DC/10A/",
+      "value": "",
+      "package": "",
+      "info": "Provisional count: 4 units assigned at the user's request; physical count pending. Previous code SRD5VDCS.",
+      "previous_code": "SRD5VDCS"
+    },
+    "updated_item": {
+      "description": "four relay module/30V DC/10A/",
+      "type": "actuator",
+      "subtype": "Relay",
+      "manufacturer": "SONGLE",
+      "model": "SRD-05-VDC-SL-C",
+      "value": "",
+      "package": "",
+      "info": "Provisional count: 4 units assigned at the user's request; physical count pending. Previous code SRD5VDCS."
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "GPQM1026",
+      "location": "A",
+      "sublocation": "12",
+      "units": "4"
+    },
+    "updated_stock": {
+      "location": "A",
+      "sublocation": "12",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "94d0e63575c34fc7924570b4d32c3964",
+    "action": "edit",
+    "code": "GPQM1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "4",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "GPQM1026",
+      "location": "A",
+      "sublocation": "12",
+      "units": "4"
+    }
+  },
+  "result": {
+    "id": "94d0e63575c34fc7924570b4d32c3964",
+    "code": "GPQM1026",
+    "action": "edit"
+  }
+}
