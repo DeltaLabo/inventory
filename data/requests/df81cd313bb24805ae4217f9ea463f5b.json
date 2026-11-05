@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "df81cd313bb24805ae4217f9ea463f5b",
+  "saved_at": "2026-11-05T17:27:17.834249+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "VZRW1026",
+    "original_item": {
+      "code": "VZRW1026",
+      "type": "sensor",
+      "subtype": "current sensor",
+      "manufacturer": "YAGEO",
+      "model": "CRCW0603",
+      "description": "3 watt 0.025 ohm Current Sense Resistor - Through hole",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "CSRESIST"
+    },
+    "updated_item": {
+      "description": "3 watt 0.025 ohm Current Sense Resistor - Through hole",
+      "type": "sensor",
+      "subtype": "current sensor",
+      "manufacturer": "YAGEO",
+      "model": "CRCW0603",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "VZRW1026",
+      "location": "E",
+      "sublocation": "20",
+      "units": "25"
+    },
+    "updated_stock": {
+      "location": "E",
+      "sublocation": "20",
+      "units": "19"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "df81cd313bb24805ae4217f9ea463f5b",
+    "action": "edit",
+    "code": "VZRW1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "25",
+        "after": "19"
+      }
+    },
+    "original_location": {
+      "code": "VZRW1026",
+      "location": "E",
+      "sublocation": "20",
+      "units": "25"
+    }
+  },
+  "result": {
+    "id": "df81cd313bb24805ae4217f9ea463f5b",
+    "code": "VZRW1026",
+    "action": "edit"
+  }
+}
