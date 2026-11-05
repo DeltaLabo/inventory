@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "210088cb909c438a857d30d034c0c27f",
+  "saved_at": "2026-11-05T17:10:53.731227+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "NLTX1026",
+    "original_item": {
+      "code": "NLTX1026",
+      "type": "sensor board",
+      "subtype": "BMP280",
+      "manufacturer": "GY",
+      "model": "GY-BMP280",
+      "description": "Absolute barometric pressure sensor; temperature sensor",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "BMP280SB"
+    },
+    "updated_item": {
+      "description": "Absolute barometric pressure sensor; temperature sensor",
+      "type": "sensor board",
+      "subtype": "BMP280",
+      "manufacturer": "GY",
+      "model": "GY-BMP280",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "NLTX1026",
+      "location": "E",
+      "sublocation": "1",
+      "units": "11"
+    },
+    "updated_stock": {
+      "location": "E",
+      "sublocation": "1",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "210088cb909c438a857d30d034c0c27f",
+    "action": "edit",
+    "code": "NLTX1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "11",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "NLTX1026",
+      "location": "E",
+      "sublocation": "1",
+      "units": "11"
+    }
+  },
+  "result": {
+    "id": "210088cb909c438a857d30d034c0c27f",
+    "code": "NLTX1026",
+    "action": "edit"
+  }
+}
