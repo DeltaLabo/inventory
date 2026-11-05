@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "1e45a96931e94095b04d3515a096241b",
+  "saved_at": "2026-11-05T19:51:05.076605+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "STCT1026",
+    "original_item": {
+      "code": "STCT1026",
+      "type": "sensor board",
+      "subtype": "GPS module",
+      "manufacturer": "Walfront",
+      "model": "VK2828U7G5LF",
+      "description": "GPS Module",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "GPSMODUL"
+    },
+    "updated_item": {
+      "description": "GPS Module",
+      "type": "sensor board",
+      "subtype": "GPS module",
+      "manufacturer": "Walfront",
+      "model": "VK2828U7G5LF",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "STCT1026",
+      "location": "I",
+      "sublocation": "13",
+      "units": "37"
+    },
+    "updated_stock": {
+      "location": "I",
+      "sublocation": "13",
+      "units": "36"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "1e45a96931e94095b04d3515a096241b",
+    "action": "edit",
+    "code": "STCT1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "37",
+        "after": "36"
+      }
+    },
+    "original_location": {
+      "code": "STCT1026",
+      "location": "I",
+      "sublocation": "13",
+      "units": "37"
+    }
+  },
+  "result": {
+    "id": "1e45a96931e94095b04d3515a096241b",
+    "code": "STCT1026",
+    "action": "edit"
+  }
+}
