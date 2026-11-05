@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "f805fbd654ab42d3900fe255b2310554",
+  "saved_at": "2026-11-05T16:48:06.509911+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "HJFW1026",
+    "original_item": {
+      "code": "HJFW1026",
+      "type": "converter",
+      "subtype": "USB converter",
+      "manufacturer": "Waveshare",
+      "model": "USB-RS232/485/TTL/UART",
+      "description": "converter for USB to RS232/485/TTL or UART",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "USBTR232"
+    },
+    "updated_item": {
+      "description": "converter for USB to RS232/485/TTL or UART",
+      "type": "converter",
+      "subtype": "USB converter",
+      "manufacturer": "Waveshare",
+      "model": "USB-RS232/485/TTL/UART",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "HJFW1026",
+      "location": "C",
+      "sublocation": "6",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "C",
+      "sublocation": "6",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "f805fbd654ab42d3900fe255b2310554",
+    "action": "edit",
+    "code": "HJFW1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "HJFW1026",
+      "location": "C",
+      "sublocation": "6",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "f805fbd654ab42d3900fe255b2310554",
+    "code": "HJFW1026",
+    "action": "edit"
+  }
+}
