@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "2ee3ba1c8b484cf689136cbb6ecd764d",
+  "saved_at": "2026-11-05T17:50:36.021715+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "WQMB1026",
+    "original_item": {
+      "code": "WQMB1026",
+      "type": "radio accessories",
+      "subtype": "antenna",
+      "manufacturer": "SEEED",
+      "model": "BH2210240004",
+      "description": "2.4GHz rod antenna for XIAO ESP32C3",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "A24GXIAO"
+    },
+    "updated_item": {
+      "description": "2.4GHz rod antenna for XIAO ESP32C3",
+      "type": "radio accessories",
+      "subtype": "antenna",
+      "manufacturer": "SEEED",
+      "model": "BH2210240004",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "WQMB1026",
+      "location": "F",
+      "sublocation": "5",
+      "units": "5"
+    },
+    "updated_stock": {
+      "location": "F",
+      "sublocation": "5",
+      "units": "4"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "2ee3ba1c8b484cf689136cbb6ecd764d",
+    "action": "edit",
+    "code": "WQMB1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "5",
+        "after": "4"
+      }
+    },
+    "original_location": {
+      "code": "WQMB1026",
+      "location": "F",
+      "sublocation": "5",
+      "units": "5"
+    }
+  },
+  "result": {
+    "id": "2ee3ba1c8b484cf689136cbb6ecd764d",
+    "code": "WQMB1026",
+    "action": "edit"
+  }
+}
