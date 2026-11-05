@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e02a4c20562f428d861f7bd3cfba4e91",
+  "saved_at": "2026-11-05T17:30:37.212578+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "IUWU1026",
+    "original_item": {
+      "code": "IUWU1026",
+      "type": "sensor board",
+      "subtype": "light sensor",
+      "manufacturer": "Adafruit",
+      "model": "VEML7700",
+      "description": "ambient light sensor lux units I2C",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "LIGHVEML"
+    },
+    "updated_item": {
+      "description": "ambient light sensor lux units I2C",
+      "type": "sensor board",
+      "subtype": "light sensor",
+      "manufacturer": "Adafruit",
+      "model": "VEML7700",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "IUWU1026",
+      "location": "E",
+      "sublocation": "23",
+      "units": "13"
+    },
+    "updated_stock": {
+      "location": "E",
+      "sublocation": "23",
+      "units": "10"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "e02a4c20562f428d861f7bd3cfba4e91",
+    "action": "edit",
+    "code": "IUWU1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "13",
+        "after": "10"
+      }
+    },
+    "original_location": {
+      "code": "IUWU1026",
+      "location": "E",
+      "sublocation": "23",
+      "units": "13"
+    }
+  },
+  "result": {
+    "id": "e02a4c20562f428d861f7bd3cfba4e91",
+    "code": "IUWU1026",
+    "action": "edit"
+  }
+}
