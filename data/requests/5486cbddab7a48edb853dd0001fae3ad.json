@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "5486cbddab7a48edb853dd0001fae3ad",
+  "saved_at": "2026-11-05T16:46:51.341281+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "VLED1026",
+    "original_item": {
+      "code": "VLED1026",
+      "type": "development board",
+      "subtype": "STM32L073",
+      "manufacturer": "ST",
+      "model": "NUCLEO-L073RZ",
+      "description": "Arm Cortex M0+/STM32L073",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "NUCLEO64"
+    },
+    "updated_item": {
+      "description": "Arm Cortex M0+/STM32L073",
+      "type": "development board",
+      "subtype": "STM32L073",
+      "manufacturer": "ST",
+      "model": "NUCLEO-L073RZ",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "VLED1026",
+      "location": "C",
+      "sublocation": "2",
+      "units": "4"
+    },
+    "updated_stock": {
+      "location": "C",
+      "sublocation": "2",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "5486cbddab7a48edb853dd0001fae3ad",
+    "action": "edit",
+    "code": "VLED1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "4",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "VLED1026",
+      "location": "C",
+      "sublocation": "2",
+      "units": "4"
+    }
+  },
+  "result": {
+    "id": "5486cbddab7a48edb853dd0001fae3ad",
+    "code": "VLED1026",
+    "action": "edit"
+  }
+}
