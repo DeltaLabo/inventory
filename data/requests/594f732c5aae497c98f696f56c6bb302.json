@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "594f732c5aae497c98f696f56c6bb302",
+  "saved_at": "2026-11-05T17:53:10.456697+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "WHCK1026",
+    "original_item": {
+      "code": "WHCK1026",
+      "type": "radio accessories",
+      "subtype": "FM antenna 700-1800MHz",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "ANTGSMFM"
+    },
+    "updated_item": {
+      "description": "",
+      "type": "radio accessories",
+      "subtype": "FM antenna 700-1800MHz",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "WHCK1026",
+      "location": "F",
+      "sublocation": "6",
+      "units": "4"
+    },
+    "updated_stock": {
+      "location": "F",
+      "sublocation": "6",
+      "units": "3"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "594f732c5aae497c98f696f56c6bb302",
+    "action": "edit",
+    "code": "WHCK1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "4",
+        "after": "3"
+      }
+    },
+    "original_location": {
+      "code": "WHCK1026",
+      "location": "F",
+      "sublocation": "6",
+      "units": "4"
+    }
+  },
+  "result": {
+    "id": "594f732c5aae497c98f696f56c6bb302",
+    "code": "WHCK1026",
+    "action": "edit"
+  }
+}
