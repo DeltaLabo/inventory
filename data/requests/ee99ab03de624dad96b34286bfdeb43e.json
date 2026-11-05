@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ee99ab03de624dad96b34286bfdeb43e",
+  "saved_at": "2026-11-05T19:25:29.395805+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "DELT1026",
+    "original_item": {
+      "code": "DELT1026",
+      "type": "PCB accessories",
+      "subtype": "Test points",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Test points for PCBs",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "TESTPOIN"
+    },
+    "updated_item": {
+      "description": "Test points for PCBs",
+      "type": "PCB accessories",
+      "subtype": "Test points",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "DELT1026",
+      "location": "R",
+      "sublocation": "11",
+      "units": "102"
+    },
+    "updated_stock": {
+      "location": "R",
+      "sublocation": "11",
+      "units": "100"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "ee99ab03de624dad96b34286bfdeb43e",
+    "action": "edit",
+    "code": "DELT1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "102",
+        "after": "100"
+      }
+    },
+    "original_location": {
+      "code": "DELT1026",
+      "location": "R",
+      "sublocation": "11",
+      "units": "102"
+    }
+  },
+  "result": {
+    "id": "ee99ab03de624dad96b34286bfdeb43e",
+    "code": "DELT1026",
+    "action": "edit"
+  }
+}
