@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "046b21ec527f4bada91f2c7d021565de",
+  "saved_at": "2026-11-05T16:22:35.013734+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "VXYY1026",
+    "original_item": {
+      "code": "VXYY1026",
+      "type": "actuator",
+      "subtype": "servo",
+      "manufacturer": "Tower Pro",
+      "model": "SG92R",
+      "description": "Micro servo;180 degrees;3V to 6V DC",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "SG93R180"
+    },
+    "updated_item": {
+      "description": "Micro servo;180 degrees;3V to 6V DC",
+      "type": "actuator",
+      "subtype": "servo",
+      "manufacturer": "Tower Pro",
+      "model": "SG92R",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "VXYY1026",
+      "location": "A",
+      "sublocation": "6",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "A",
+      "sublocation": "6",
+      "units": "2"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "046b21ec527f4bada91f2c7d021565de",
+    "action": "edit",
+    "code": "VXYY1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "2"
+      }
+    },
+    "original_location": {
+      "code": "VXYY1026",
+      "location": "A",
+      "sublocation": "6",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "046b21ec527f4bada91f2c7d021565de",
+    "code": "VXYY1026",
+    "action": "edit"
+  }
+}
