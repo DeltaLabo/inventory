@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "36f00ae4a9a4465f9eb0d70c48be3f38",
+  "saved_at": "2026-11-05T17:06:01.189280+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "NYQQ1026",
+    "original_item": {
+      "code": "NYQQ1026",
+      "type": "electronic modules",
+      "subtype": "clock",
+      "manufacturer": "Generic",
+      "model": "DS3231",
+      "description": "real time clock",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "RTC3231R"
+    },
+    "updated_item": {
+      "description": "real time clock",
+      "type": "electronic modules",
+      "subtype": "clock",
+      "manufacturer": "Generic",
+      "model": "DS3231",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "NYQQ1026",
+      "location": "D",
+      "sublocation": "12",
+      "units": "0"
+    },
+    "updated_stock": {
+      "location": "D",
+      "sublocation": "12",
+      "units": "1"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "36f00ae4a9a4465f9eb0d70c48be3f38",
+    "action": "edit",
+    "code": "NYQQ1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "0",
+        "after": "1"
+      }
+    },
+    "original_location": {
+      "code": "NYQQ1026",
+      "location": "D",
+      "sublocation": "12",
+      "units": "0"
+    }
+  },
+  "result": {
+    "id": "36f00ae4a9a4465f9eb0d70c48be3f38",
+    "code": "NYQQ1026",
+    "action": "edit"
+  }
+}
