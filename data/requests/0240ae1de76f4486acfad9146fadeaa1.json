@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "0240ae1de76f4486acfad9146fadeaa1",
+  "saved_at": "2026-11-05T16:59:45.465365+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "YEWJ1026",
+    "original_item": {
+      "code": "YEWJ1026",
+      "type": "transceiver board",
+      "subtype": "RF Transceiver",
+      "manufacturer": "HopeRF",
+      "model": "sx1276",
+      "description": "Radio frequency module based on LoRa1276",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "RFLORA12"
+    },
+    "updated_item": {
+      "description": "Radio frequency module based on LoRa1276",
+      "type": "transceiver board",
+      "subtype": "RF Transceiver",
+      "manufacturer": "HopeRF",
+      "model": "sx1276",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "YEWJ1026",
+      "location": "D",
+      "sublocation": "9",
+      "units": "33"
+    },
+    "updated_stock": {
+      "location": "D",
+      "sublocation": "9",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "0240ae1de76f4486acfad9146fadeaa1",
+    "action": "edit",
+    "code": "YEWJ1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "33",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "YEWJ1026",
+      "location": "D",
+      "sublocation": "9",
+      "units": "33"
+    }
+  },
+  "result": {
+    "id": "0240ae1de76f4486acfad9146fadeaa1",
+    "code": "YEWJ1026",
+    "action": "edit"
+  }
+}
