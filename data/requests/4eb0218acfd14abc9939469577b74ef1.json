@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4eb0218acfd14abc9939469577b74ef1",
+  "saved_at": "2026-11-05T15:38:33.632079+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "Black & Decker",
+      "model": "UA120020E",
+      "description": "Fuente de poder Black & Decker Class 2 AC 12V 200mA con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "5",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "4eb0218acfd14abc9939469577b74ef1",
+    "action": "addition",
+    "code": "DRQZ1126",
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "5",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "DRQZ1126",
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "Black & Decker",
+      "model": "UA120020E",
+      "description": "Fuente de poder Black & Decker Class 2 AC 12V 200mA con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "4eb0218acfd14abc9939469577b74ef1",
+    "code": "DRQZ1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
