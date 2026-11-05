@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4223023bddf34e0db39ea461a49799e6",
+  "saved_at": "2026-11-05T19:07:57.494634+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "LGMT1026",
+    "original_item": {
+      "code": "LGMT1026",
+      "type": "development board",
+      "subtype": "Arduino Uno",
+      "manufacturer": "ARDUINO",
+      "model": "Arduino Uno R4 Minima",
+      "description": "Microcontroller dev board based on the RENESAS R7FA4M1AB3CFM 48 MHz Arm(R) Cortex(R)-M4",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "UNOR4MIN"
+    },
+    "updated_item": {
+      "description": "Microcontroller dev board based on the RENESAS R7FA4M1AB3CFM 48 MHz Arm(R) Cortex(R)-M4",
+      "type": "development board",
+      "subtype": "Arduino Uno",
+      "manufacturer": "ARDUINO",
+      "model": "Arduino Uno R4 Minima",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "LGMT1026",
+      "location": "R",
+      "sublocation": "0",
+      "units": "18"
+    },
+    "updated_stock": {
+      "location": "R",
+      "sublocation": "0",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "4223023bddf34e0db39ea461a49799e6",
+    "action": "edit",
+    "code": "LGMT1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "18",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "LGMT1026",
+      "location": "R",
+      "sublocation": "0",
+      "units": "18"
+    }
+  },
+  "result": {
+    "id": "4223023bddf34e0db39ea461a49799e6",
+    "code": "LGMT1026",
+    "action": "edit"
+  }
+}
