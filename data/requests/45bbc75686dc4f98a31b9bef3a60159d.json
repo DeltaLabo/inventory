@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "45bbc75686dc4f98a31b9bef3a60159d",
+  "saved_at": "2026-11-05T20:07:14.220310+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "EFWI1026",
+    "original_item": {
+      "code": "EFWI1026",
+      "type": "passives",
+      "subtype": "power resistor",
+      "manufacturer": "TE Connectivity",
+      "model": "Wirewound",
+      "description": "Wirewound resistors Through Hole 1.5 ohms 5% 300ppm 2",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "POWRE1R5"
+    },
+    "updated_item": {
+      "description": "Wirewound resistors Through Hole 1.5 ohms 5% 300ppm 2",
+      "type": "passives",
+      "subtype": "power resistor",
+      "manufacturer": "TE Connectivity",
+      "model": "Wirewound",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "EFWI1026",
+      "location": "J",
+      "sublocation": "17",
+      "units": "40"
+    },
+    "updated_stock": {
+      "location": "J",
+      "sublocation": "17",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "45bbc75686dc4f98a31b9bef3a60159d",
+    "action": "edit",
+    "code": "EFWI1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "40",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "EFWI1026",
+      "location": "J",
+      "sublocation": "17",
+      "units": "40"
+    }
+  },
+  "result": {
+    "id": "45bbc75686dc4f98a31b9bef3a60159d",
+    "code": "EFWI1026",
+    "action": "edit"
+  }
+}
