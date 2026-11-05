@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "8a5e59a08cc246649c3b1fe3ac8f2bfc",
+  "saved_at": "2026-11-05T15:15:50.853900+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "JCM",
+      "model": "250-5A5V1A",
+      "description": "Fuente de poder / Adaptador AC a DC 5V 1A con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "1",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "8a5e59a08cc246649c3b1fe3ac8f2bfc",
+    "action": "addition",
+    "code": "ATAZ1126",
+    "quantity": 1,
+    "location": "Cables Potencia",
+    "sublocation": "1",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ATAZ1126",
+      "type": "Wire",
+      "subtype": "Potency",
+      "manufacturer": "JCM",
+      "model": "250-5A5V1A",
+      "description": "Fuente de poder / Adaptador AC a DC 5V 1A con conector DC macho",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "8a5e59a08cc246649c3b1fe3ac8f2bfc",
+    "code": "ATAZ1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
