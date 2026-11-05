@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "03412c1f53d44ec28693b33b603536fa",
+  "saved_at": "2026-11-05T16:33:13.206553+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "ELVC1026",
+    "original_item": {
+      "code": "ELVC1026",
+      "type": "power",
+      "subtype": "power source",
+      "manufacturer": "MEAN WELL",
+      "model": "IRM-60-24ST",
+      "description": "power source; 120-240VAC input to 24VDC output",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "FACT24DC"
+    },
+    "updated_item": {
+      "description": "power source; 120-240VAC input to 24VDC output",
+      "type": "power",
+      "subtype": "power source",
+      "manufacturer": "MEAN WELL",
+      "model": "IRM-60-24ST",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "ELVC1026",
+      "location": "B",
+      "sublocation": "6",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "B",
+      "sublocation": "6",
+      "units": "0"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "03412c1f53d44ec28693b33b603536fa",
+    "action": "edit",
+    "code": "ELVC1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "0"
+      }
+    },
+    "original_location": {
+      "code": "ELVC1026",
+      "location": "B",
+      "sublocation": "6",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "03412c1f53d44ec28693b33b603536fa",
+    "code": "ELVC1026",
+    "action": "edit"
+  }
+}
