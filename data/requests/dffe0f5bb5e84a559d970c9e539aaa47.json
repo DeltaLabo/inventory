@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "dffe0f5bb5e84a559d970c9e539aaa47",
+  "saved_at": "2026-11-05T19:46:50.398486+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "VITR1026",
+    "original_item": {
+      "code": "VITR1026",
+      "type": "",
+      "subtype": "",
+      "manufacturer": "",
+      "model": "",
+      "description": "",
+      "value": "",
+      "package": "",
+      "info": "Incomplete record; retained as a separate product based on its registered stock.",
+      "previous_code": "LEDSETS1"
+    },
+    "updated_item": {
+      "description": "",
+      "type": "",
+      "subtype": "",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": "Incomplete record; retained as a separate product based on its registered stock."
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "VITR1026",
+      "location": "I",
+      "sublocation": "7",
+      "units": "2"
+    },
+    "updated_stock": {
+      "location": "I",
+      "sublocation": "7",
+      "units": "1"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "dffe0f5bb5e84a559d970c9e539aaa47",
+    "action": "edit",
+    "code": "VITR1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "2",
+        "after": "1"
+      }
+    },
+    "original_location": {
+      "code": "VITR1026",
+      "location": "I",
+      "sublocation": "7",
+      "units": "2"
+    }
+  },
+  "result": {
+    "id": "dffe0f5bb5e84a559d970c9e539aaa47",
+    "code": "VITR1026",
+    "action": "edit"
+  }
+}
