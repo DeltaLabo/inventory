@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "113f65d1f7bf4034b641ba0ede2d4f94",
+  "saved_at": "2026-11-05T17:43:12.379124+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "XPMS1026",
+    "original_item": {
+      "code": "XPMS1026",
+      "type": "radio accessories",
+      "subtype": "SMA coax cable",
+      "manufacturer": "TUOLNK",
+      "model": "X002VLR7ZN",
+      "description": "SMA male to SMA male coax cable",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "SMAMTM6I"
+    },
+    "updated_item": {
+      "description": "SMA male to SMA male coax cable",
+      "type": "radio accessories",
+      "subtype": "SMA coax cable",
+      "manufacturer": "TUOLNK",
+      "model": "X002VLR7ZN",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "XPMS1026",
+      "location": "F",
+      "sublocation": "1",
+      "units": "8"
+    },
+    "updated_stock": {
+      "location": "F",
+      "sublocation": "1",
+      "units": "5"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "113f65d1f7bf4034b641ba0ede2d4f94",
+    "action": "edit",
+    "code": "XPMS1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "8",
+        "after": "5"
+      }
+    },
+    "original_location": {
+      "code": "XPMS1026",
+      "location": "F",
+      "sublocation": "1",
+      "units": "8"
+    }
+  },
+  "result": {
+    "id": "113f65d1f7bf4034b641ba0ede2d4f94",
+    "code": "XPMS1026",
+    "action": "edit"
+  }
+}
