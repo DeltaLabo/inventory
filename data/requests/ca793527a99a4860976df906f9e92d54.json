@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ca793527a99a4860976df906f9e92d54",
+  "saved_at": "2026-11-06T14:08:45.721797+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "TJZG1026",
+    "original_item": {
+      "code": "TJZG1026",
+      "type": "battery",
+      "subtype": "alkaline batteries",
+      "manufacturer": "several",
+      "model": "",
+      "description": "batteries/Carbon-Zinc/9V",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "BTTERYSV"
+    },
+    "updated_item": {
+      "description": "batteries/Carbon-Zinc/9V",
+      "type": "battery",
+      "subtype": "alkaline batteries",
+      "manufacturer": "several",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "TJZG1026",
+      "location": "S",
+      "sublocation": "3",
+      "units": "6"
+    },
+    "updated_stock": {
+      "location": "S",
+      "sublocation": "3",
+      "units": "4"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "ca793527a99a4860976df906f9e92d54",
+    "action": "edit",
+    "code": "TJZG1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "6",
+        "after": "4"
+      }
+    },
+    "original_location": {
+      "code": "TJZG1026",
+      "location": "S",
+      "sublocation": "3",
+      "units": "6"
+    }
+  },
+  "result": {
+    "id": "ca793527a99a4860976df906f9e92d54",
+    "code": "TJZG1026",
+    "action": "edit"
+  }
+}
