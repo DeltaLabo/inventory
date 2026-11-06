@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b4e3fe2b2f944f9596f45ae6e3b18647",
+  "saved_at": "2026-11-06T19:14:32.144770+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "BRKH1126",
+    "original_item": {
+      "code": "BRKH1126",
+      "type": "Accessories",
+      "subtype": "Componentes Electrónicos",
+      "manufacturer": "Generic",
+      "model": "B0BV8ZQ81F",
+      "description": "Módulo adaptador Mini SD Card con pines, paquete de 6 piezas",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Módulo adaptador Mini SD Card con pines, paquete de 6 piezas",
+      "type": "Accessories",
+      "subtype": "Componentes Electrónicos",
+      "manufacturer": "Generic",
+      "model": "B0BV8ZQ81F",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Corrección",
+    "original_stock": {
+      "code": "BRKH1126",
+      "location": "J",
+      "sublocation": "23",
+      "units": "4"
+    },
+    "updated_stock": {
+      "location": "J",
+      "sublocation": "23",
+      "units": "3"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "b4e3fe2b2f944f9596f45ae6e3b18647",
+    "action": "edit",
+    "code": "BRKH1126",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Corrección",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "4",
+        "after": "3"
+      }
+    },
+    "original_location": {
+      "code": "BRKH1126",
+      "location": "J",
+      "sublocation": "23",
+      "units": "4"
+    }
+  },
+  "result": {
+    "id": "b4e3fe2b2f944f9596f45ae6e3b18647",
+    "code": "BRKH1126",
+    "action": "edit"
+  }
+}
