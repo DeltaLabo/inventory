@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e6a9e9471dfc43588ffe2739eadf26c0",
+  "saved_at": "2026-11-06T19:03:21.927081+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb",
+      "subtype": "PCB Module / Breakout Board",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Small green PCB module with IC and pin header, in sealed anti-static bag",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "84",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "e6a9e9471dfc43588ffe2739eadf26c0",
+    "action": "addition",
+    "code": "CJLE1126",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "84",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "CJLE1126",
+      "type": "pcb",
+      "subtype": "PCB Module / Breakout Board",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Small green PCB module with IC and pin header, in sealed anti-static bag",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "e6a9e9471dfc43588ffe2739eadf26c0",
+    "code": "CJLE1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
