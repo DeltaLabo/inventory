@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "32ac09f4be4445d088cc2baeee68435c",
+  "saved_at": "2026-11-06T17:50:28.678198+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "XGOS1026",
+    "original_item": {
+      "code": "XGOS1026",
+      "type": "sensor board",
+      "subtype": "BME280",
+      "manufacturer": "Adafruit",
+      "model": "BME280",
+      "description": "Barometric Pressure Temperature Humidity",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Barometric Pressure Temperature Humidity",
+      "type": "sensor board",
+      "subtype": "BME280",
+      "manufacturer": "Adafruit",
+      "model": "BME280",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actulización",
+    "original_stock": {
+      "code": "XGOS1026",
+      "location": "E",
+      "sublocation": "33",
+      "units": "14"
+    },
+    "updated_stock": {
+      "location": "E",
+      "sublocation": "33",
+      "units": "24"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "32ac09f4be4445d088cc2baeee68435c",
+    "action": "edit",
+    "code": "XGOS1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actulización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "14",
+        "after": "24"
+      }
+    },
+    "original_location": {
+      "code": "XGOS1026",
+      "location": "E",
+      "sublocation": "33",
+      "units": "14"
+    }
+  },
+  "result": {
+    "id": "32ac09f4be4445d088cc2baeee68435c",
+    "code": "XGOS1026",
+    "action": "edit"
+  }
+}
