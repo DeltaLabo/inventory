@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "615c452bed8e49d5a5d40e7dcc1a6b14",
+  "saved_at": "2026-11-06T20:16:30.251152+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "battery",
+      "subtype": "Li-ion Battery Pack Lot",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Lot of Li-ion battery packs, various sizes wrapped in black / yellow tape, includes 1x PKCELL ICR18650 6600mAh 3.7V blue pack, 1x pack with visible BMS PCB, 1x pack labeled 3-celda, with red/black wires and various connectors",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 6,
+    "location": "S",
+    "sublocation": "9",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "615c452bed8e49d5a5d40e7dcc1a6b14",
+    "action": "addition",
+    "code": "BCDL1126",
+    "quantity": 6,
+    "location": "S",
+    "sublocation": "9",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BCDL1126",
+      "type": "battery",
+      "subtype": "Li-ion Battery Pack Lot",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Lot of Li-ion battery packs, various sizes wrapped in black / yellow tape, includes 1x PKCELL ICR18650 6600mAh 3.7V blue pack, 1x pack with visible BMS PCB, 1x pack labeled 3-celda, with red/black wires and various connectors",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "615c452bed8e49d5a5d40e7dcc1a6b14",
+    "code": "BCDL1126",
+    "action": "addition",
+    "quantity": 6
+  }
+}
