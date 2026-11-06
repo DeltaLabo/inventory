@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "2a73f041c7634cb891dbc1f8a3c15fbc",
+  "saved_at": "2026-11-06T16:15:32.210612+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "XXQO1026",
+    "original_item": {
+      "code": "XXQO1026",
+      "type": "power",
+      "subtype": "solid state switchs",
+      "manufacturer": "FQFER",
+      "model": "SSR-40 DD",
+      "description": "Solid State",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "SOSTATMO"
+    },
+    "updated_item": {
+      "description": "Solid State",
+      "type": "power",
+      "subtype": "solid state switchs",
+      "manufacturer": "FQFER",
+      "model": "SSR-40 DD",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "XXQO1026",
+      "location": "B",
+      "sublocation": "7",
+      "units": "4"
+    },
+    "updated_stock": {
+      "location": "B",
+      "sublocation": "7",
+      "units": "6"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "2a73f041c7634cb891dbc1f8a3c15fbc",
+    "action": "edit",
+    "code": "XXQO1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "4",
+        "after": "6"
+      }
+    },
+    "original_location": {
+      "code": "XXQO1026",
+      "location": "B",
+      "sublocation": "7",
+      "units": "4"
+    }
+  },
+  "result": {
+    "id": "2a73f041c7634cb891dbc1f8a3c15fbc",
+    "code": "XXQO1026",
+    "action": "edit"
+  }
+}
