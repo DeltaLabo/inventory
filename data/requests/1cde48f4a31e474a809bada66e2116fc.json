@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "1cde48f4a31e474a809bada66e2116fc",
+  "saved_at": "2026-11-06T17:05:57.257912+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "electronic modules",
+      "subtype": "ESP8266 WiFi Module",
+      "manufacturer": "Generic",
+      "model": "ESP-01 / ESP8266",
+      "description": "ESP8266 ESP-01 WiFi Module with integrated PCB antenna, in sealed anti-static bag",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 16,
+    "location": "D",
+    "sublocation": "24",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "1cde48f4a31e474a809bada66e2116fc",
+    "action": "addition",
+    "code": "FKDA1126",
+    "quantity": 16,
+    "location": "D",
+    "sublocation": "24",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "FKDA1126",
+      "type": "electronic modules",
+      "subtype": "ESP8266 WiFi Module",
+      "manufacturer": "Generic",
+      "model": "ESP-01 / ESP8266",
+      "description": "ESP8266 ESP-01 WiFi Module with integrated PCB antenna, in sealed anti-static bag",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "1cde48f4a31e474a809bada66e2116fc",
+    "code": "FKDA1126",
+    "action": "addition",
+    "quantity": 16
+  }
+}
