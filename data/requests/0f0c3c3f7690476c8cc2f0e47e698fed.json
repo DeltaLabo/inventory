@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "0f0c3c3f7690476c8cc2f0e47e698fed",
+  "saved_at": "2026-11-06T19:37:35.444613+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Adapter",
+      "subtype": "USB Video Capture / Grabber",
+      "manufacturer": "Generic",
+      "model": "USB 2.0 Video Grabber",
+      "description": "USB 2.0 Video Grabber with Audio, S-Video / RCA PAL/NTSC, Plug & Play",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "F",
+    "sublocation": "19",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "0f0c3c3f7690476c8cc2f0e47e698fed",
+    "action": "addition",
+    "code": "MQWY1126",
+    "quantity": 1,
+    "location": "F",
+    "sublocation": "19",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "MQWY1126",
+      "type": "Adapter",
+      "subtype": "USB Video Capture / Grabber",
+      "manufacturer": "Generic",
+      "model": "USB 2.0 Video Grabber",
+      "description": "USB 2.0 Video Grabber with Audio, S-Video / RCA PAL/NTSC, Plug & Play",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "0f0c3c3f7690476c8cc2f0e47e698fed",
+    "code": "MQWY1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
