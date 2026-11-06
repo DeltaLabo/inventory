@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "2600de3ef86f4663b3023098f06cd3ff",
+  "saved_at": "2026-11-06T13:57:46.802457+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "KFCE1026",
+    "original_item": {
+      "code": "KFCE1026",
+      "type": "battery accessories",
+      "subtype": "18650 cell spacer",
+      "manufacturer": "",
+      "model": "",
+      "description": "spacer for 18650 electrochemical cells",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "SPAC1865"
+    },
+    "updated_item": {
+      "description": "spacer for 18650 electrochemical cells",
+      "type": "battery accessories",
+      "subtype": "18650 cell spacer",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "KFCE1026",
+      "location": "S",
+      "sublocation": "1",
+      "units": "172"
+    },
+    "updated_stock": {
+      "location": "S",
+      "sublocation": "1",
+      "units": "150"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "2600de3ef86f4663b3023098f06cd3ff",
+    "action": "edit",
+    "code": "KFCE1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "172",
+        "after": "150"
+      }
+    },
+    "original_location": {
+      "code": "KFCE1026",
+      "location": "S",
+      "sublocation": "1",
+      "units": "172"
+    }
+  },
+  "result": {
+    "id": "2600de3ef86f4663b3023098f06cd3ff",
+    "code": "KFCE1026",
+    "action": "edit"
+  }
+}
