@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "6281108c592f41a9b5ce059c13301b44",
+  "saved_at": "2026-11-06T16:45:27.275929+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "RWOI1126",
+    "original_item": {
+      "code": "RWOI1126",
+      "type": "Consumible",
+      "subtype": "Heat Shrink Tubing",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "6-pack of 18650 battery holders, 3-slot, black plastic with metal contacts, in sealed bag",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "6-pack of 18650 battery holders, 3-slot, black plastic with metal contacts, in sealed bag",
+      "type": "Consumible",
+      "subtype": "Heat Shrink Tubing",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Corrección",
+    "original_stock": {
+      "code": "RWOI1126",
+      "location": "H",
+      "sublocation": "24",
+      "units": "4"
+    },
+    "updated_stock": {
+      "location": "B",
+      "sublocation": "24",
+      "units": "4"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "6281108c592f41a9b5ce059c13301b44",
+    "action": "edit",
+    "code": "RWOI1126",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Corrección",
+    "product_changes": {},
+    "stock_changes": {
+      "location": {
+        "before": "H",
+        "after": "B"
+      }
+    },
+    "original_location": {
+      "code": "RWOI1126",
+      "location": "H",
+      "sublocation": "24",
+      "units": "4"
+    }
+  },
+  "result": {
+    "id": "6281108c592f41a9b5ce059c13301b44",
+    "code": "RWOI1126",
+    "action": "edit"
+  }
+}
