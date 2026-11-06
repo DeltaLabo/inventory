@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "da7f98cccd374d8cb3e566c60563a8a1",
+  "saved_at": "2026-11-06T15:49:17.330594+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Consumible",
+      "subtype": "Heat Shrink Tubing",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Black heat shrink tubing, 12mm inside diameter, 2m / 78.74in length, in ziplock bag",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 5,
+    "location": "Área de Ensamblaje",
+    "sublocation": "5",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "da7f98cccd374d8cb3e566c60563a8a1",
+    "action": "addition",
+    "code": "HCSY1126",
+    "quantity": 5,
+    "location": "Área de Ensamblaje",
+    "sublocation": "5",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HCSY1126",
+      "type": "Consumible",
+      "subtype": "Heat Shrink Tubing",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Black heat shrink tubing, 12mm inside diameter, 2m / 78.74in length, in ziplock bag",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "da7f98cccd374d8cb3e566c60563a8a1",
+    "code": "HCSY1126",
+    "action": "addition",
+    "quantity": 5
+  }
+}
