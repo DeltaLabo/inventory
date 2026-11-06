@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4bbf97263eb64827a383d6f8529a9fb1",
+  "saved_at": "2026-11-06T14:20:16.241616+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Consumible",
+      "subtype": "Heat Shrink Tubing",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Assorted black heat shrink tubing kit in transparent compartment organizer box, various diameters and lengths",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 3,
+    "location": "Área de Ensamblaje",
+    "sublocation": "1",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "4bbf97263eb64827a383d6f8529a9fb1",
+    "action": "addition",
+    "code": "WMLU1126",
+    "quantity": 3,
+    "location": "Área de Ensamblaje",
+    "sublocation": "1",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "WMLU1126",
+      "type": "Consumible",
+      "subtype": "Heat Shrink Tubing",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Assorted black heat shrink tubing kit in transparent compartment organizer box, various diameters and lengths",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "4bbf97263eb64827a383d6f8529a9fb1",
+    "code": "WMLU1126",
+    "action": "addition",
+    "quantity": 3
+  }
+}
