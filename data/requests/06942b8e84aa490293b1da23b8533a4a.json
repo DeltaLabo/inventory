@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "06942b8e84aa490293b1da23b8533a4a",
+  "saved_at": "2026-11-06T19:50:34.956479+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Adapter",
+      "subtype": "USB-C Breakout Board",
+      "manufacturer": "Adafruit",
+      "model": "",
+      "description": "USB-C Breakout boards, small PCBs with USB-C connector, Adafruit",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 6,
+    "location": "H",
+    "sublocation": "23",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "06942b8e84aa490293b1da23b8533a4a",
+    "action": "addition",
+    "code": "GOWJ1126",
+    "quantity": 6,
+    "location": "H",
+    "sublocation": "23",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "GOWJ1126",
+      "type": "Adapter",
+      "subtype": "USB-C Breakout Board",
+      "manufacturer": "Adafruit",
+      "model": "",
+      "description": "USB-C Breakout boards, small PCBs with USB-C connector, Adafruit",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "06942b8e84aa490293b1da23b8533a4a",
+    "code": "GOWJ1126",
+    "action": "addition",
+    "quantity": 6
+  }
+}
