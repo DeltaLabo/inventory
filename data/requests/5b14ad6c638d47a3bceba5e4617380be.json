@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "5b14ad6c638d47a3bceba5e4617380be",
+  "saved_at": "2026-11-06T17:20:19.274722+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Wire",
+      "subtype": "USB to CT-32 Adapter",
+      "manufacturer": "Generic",
+      "model": "LD-C100",
+      "description": "LD-C100 USB to CT-32 adapter cable, in sealed anti-static bag",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "H",
+    "sublocation": "22",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "5b14ad6c638d47a3bceba5e4617380be",
+    "action": "addition",
+    "code": "MKHL1126",
+    "quantity": 1,
+    "location": "H",
+    "sublocation": "22",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "MKHL1126",
+      "type": "Wire",
+      "subtype": "USB to CT-32 Adapter",
+      "manufacturer": "Generic",
+      "model": "LD-C100",
+      "description": "LD-C100 USB to CT-32 adapter cable, in sealed anti-static bag",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "5b14ad6c638d47a3bceba5e4617380be",
+    "code": "MKHL1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
