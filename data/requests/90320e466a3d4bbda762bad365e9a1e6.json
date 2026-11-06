@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "90320e466a3d4bbda762bad365e9a1e6",
+  "saved_at": "2026-11-06T20:53:25.364436+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "DHQH1026",
+    "original_item": {
+      "code": "DHQH1026",
+      "type": "sensor board",
+      "subtype": "YL-69 moisture sensor",
+      "manufacturer": "Generic",
+      "model": "YL-69",
+      "description": "Board of the Moisture sensor YL-69",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "YL069000"
+    },
+    "updated_item": {
+      "description": "Board of the Moisture sensor YL-69",
+      "type": "sensor board",
+      "subtype": "YL-69 moisture sensor",
+      "manufacturer": "Generic",
+      "model": "YL-69",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "DHQH1026",
+      "location": "E",
+      "sublocation": "9",
+      "units": "4"
+    },
+    "updated_stock": {
+      "location": "E",
+      "sublocation": "9",
+      "units": "5"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "90320e466a3d4bbda762bad365e9a1e6",
+    "action": "edit",
+    "code": "DHQH1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "4",
+        "after": "5"
+      }
+    },
+    "original_location": {
+      "code": "DHQH1026",
+      "location": "E",
+      "sublocation": "9",
+      "units": "4"
+    }
+  },
+  "result": {
+    "id": "90320e466a3d4bbda762bad365e9a1e6",
+    "code": "DHQH1026",
+    "action": "edit"
+  }
+}
