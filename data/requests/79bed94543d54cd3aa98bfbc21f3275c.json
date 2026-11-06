@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "79bed94543d54cd3aa98bfbc21f3275c",
+  "saved_at": "2026-11-06T18:01:32.536581+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "electronic modules",
+      "subtype": "RS485 Interface Module",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Grove - RS485 Module, RS-485 communication interface board with Grove connector and cable, in sealed bag",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "F",
+    "sublocation": "18",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "79bed94543d54cd3aa98bfbc21f3275c",
+    "action": "addition",
+    "code": "SXCB1126",
+    "quantity": 4,
+    "location": "F",
+    "sublocation": "18",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SXCB1126",
+      "type": "electronic modules",
+      "subtype": "RS485 Interface Module",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Grove - RS485 Module, RS-485 communication interface board with Grove connector and cable, in sealed bag",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "79bed94543d54cd3aa98bfbc21f3275c",
+    "code": "SXCB1126",
+    "action": "addition",
+    "quantity": 4
+  }
+}
