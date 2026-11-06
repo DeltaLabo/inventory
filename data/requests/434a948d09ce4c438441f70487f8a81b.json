@@ -1,0 +1,85 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "434a948d09ce4c438441f70487f8a81b",
+  "saved_at": "2026-11-06T16:23:11.729893+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "MOIX1026",
+    "original_item": {
+      "code": "MOIX1026",
+      "type": "",
+      "subtype": "",
+      "manufacturer": "",
+      "model": "",
+      "description": "",
+      "value": "",
+      "package": "",
+      "info": "Incomplete record; retained as a separate product based on its registered stock.",
+      "previous_code": "S51SERVO"
+    },
+    "updated_item": {
+      "description": "kit microservo",
+      "type": "Motor",
+      "subtype": "Servo",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": "Incomplete record; retained as a separate product based on its registered stock."
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "MOIX1026",
+      "location": "A",
+      "sublocation": "5",
+      "units": "19"
+    },
+    "updated_stock": {
+      "location": "A",
+      "sublocation": "5",
+      "units": "2"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "434a948d09ce4c438441f70487f8a81b",
+    "action": "edit",
+    "code": "MOIX1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {
+      "description": {
+        "before": "",
+        "after": "kit microservo"
+      },
+      "type": {
+        "before": "",
+        "after": "Motor"
+      },
+      "subtype": {
+        "before": "",
+        "after": "Servo"
+      }
+    },
+    "stock_changes": {
+      "units": {
+        "before": "19",
+        "after": "2"
+      }
+    },
+    "original_location": {
+      "code": "MOIX1026",
+      "location": "A",
+      "sublocation": "5",
+      "units": "19"
+    }
+  },
+  "result": {
+    "id": "434a948d09ce4c438441f70487f8a81b",
+    "code": "MOIX1026",
+    "action": "edit"
+  }
+}
