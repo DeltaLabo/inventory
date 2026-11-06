@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "7142734ba2c6434cacd56a9d55102c5c",
+  "saved_at": "2026-11-06T20:03:11.966234+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "GENM1026",
+    "original_item": {
+      "code": "GENM1026",
+      "type": "converter",
+      "subtype": "DC-DC",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "XL4015 DC-DC Buck Converter Module",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "XL4015 DC-DC Buck Converter Module",
+      "type": "converter",
+      "subtype": "DC-DC",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "GENM1026",
+      "location": "B",
+      "sublocation": "23",
+      "units": "7"
+    },
+    "updated_stock": {
+      "location": "B",
+      "sublocation": "23",
+      "units": "9"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "7142734ba2c6434cacd56a9d55102c5c",
+    "action": "edit",
+    "code": "GENM1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "7",
+        "after": "9"
+      }
+    },
+    "original_location": {
+      "code": "GENM1026",
+      "location": "B",
+      "sublocation": "23",
+      "units": "7"
+    }
+  },
+  "result": {
+    "id": "7142734ba2c6434cacd56a9d55102c5c",
+    "code": "GENM1026",
+    "action": "edit"
+  }
+}
