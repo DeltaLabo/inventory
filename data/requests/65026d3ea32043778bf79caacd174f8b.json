@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "65026d3ea32043778bf79caacd174f8b",
+  "saved_at": "2026-11-06T19:30:17.260978+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "Filter / HEPA Filter",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Round white pleated filter with black plastic rim and pull tab",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "J",
+    "sublocation": "24",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "65026d3ea32043778bf79caacd174f8b",
+    "action": "addition",
+    "code": "REAX1126",
+    "quantity": 1,
+    "location": "J",
+    "sublocation": "24",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "REAX1126",
+      "type": "Accessories",
+      "subtype": "Filter / HEPA Filter",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Round white pleated filter with black plastic rim and pull tab",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "65026d3ea32043778bf79caacd174f8b",
+    "code": "REAX1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
