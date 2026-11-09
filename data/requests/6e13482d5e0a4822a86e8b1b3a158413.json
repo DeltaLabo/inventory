@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "6e13482d5e0a4822a86e8b1b3a158413",
+  "saved_at": "2026-11-09T21:46:19.569417+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Bornes Grises (2 entradas)",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "54",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "6e13482d5e0a4822a86e8b1b3a158413",
+    "action": "addition",
+    "code": "DXLF1126",
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "54",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "DXLF1126",
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Bornes Grises (2 entradas)",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "6e13482d5e0a4822a86e8b1b3a158413",
+    "code": "DXLF1126",
+    "action": "addition",
+    "quantity": 100
+  }
+}
