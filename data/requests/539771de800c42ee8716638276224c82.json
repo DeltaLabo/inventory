@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "539771de800c42ee8716638276224c82",
+  "saved_at": "2026-11-09T20:19:12.882891+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "EVDH1126",
+    "original_item": {
+      "code": "EVDH1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Elástico Grueso",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Elástico Grueso",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Corrección",
+    "original_stock": {
+      "code": "EVDH1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "23",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "23",
+      "units": "1"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "539771de800c42ee8716638276224c82",
+    "action": "edit",
+    "code": "EVDH1126",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Corrección",
+    "product_changes": {
+      "type": {
+        "before": "Organizador #1",
+        "after": "Organizador #2"
+      }
+    },
+    "stock_changes": {},
+    "original_location": {
+      "code": "EVDH1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "23",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "539771de800c42ee8716638276224c82",
+    "code": "EVDH1126",
+    "action": "edit"
+  }
+}
