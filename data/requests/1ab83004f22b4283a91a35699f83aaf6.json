@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "1ab83004f22b4283a91a35699f83aaf6",
+  "saved_at": "2026-11-09T21:36:19.158870+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conector de entrada de alimentacion",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 19,
+    "location": "Área de Ensamblaje",
+    "sublocation": "50",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "1ab83004f22b4283a91a35699f83aaf6",
+    "action": "addition",
+    "code": "IAJN1126",
+    "quantity": 19,
+    "location": "Área de Ensamblaje",
+    "sublocation": "50",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "IAJN1126",
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conector de entrada de alimentacion",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "1ab83004f22b4283a91a35699f83aaf6",
+    "code": "IAJN1126",
+    "action": "addition",
+    "quantity": 19
+  }
+}
