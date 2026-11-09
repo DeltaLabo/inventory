@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "0b6593c91e564570a9084b700218964b",
+  "saved_at": "2026-11-09T20:49:51.918510+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Pie de goma",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "Área de Ensamblaje",
+    "sublocation": "35",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "0b6593c91e564570a9084b700218964b",
+    "action": "addition",
+    "code": "LMRS1126",
+    "quantity": 4,
+    "location": "Área de Ensamblaje",
+    "sublocation": "35",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "LMRS1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Pie de goma",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "0b6593c91e564570a9084b700218964b",
+    "code": "LMRS1126",
+    "action": "addition",
+    "quantity": 4
+  }
+}
