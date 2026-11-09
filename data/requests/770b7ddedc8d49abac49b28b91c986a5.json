@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "770b7ddedc8d49abac49b28b91c986a5",
+  "saved_at": "2026-11-09T17:01:13.136318+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "inductor",
+      "manufacturer": "Generic",
+      "model": "CD54",
+      "description": "Inductor SMD de potencia blindado encapsulado redondo negro con marca 330 - 2 piezas en cinta carrier tape de 12mm - bobina de cobre visible en laterales - montaje superficial",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "89",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "770b7ddedc8d49abac49b28b91c986a5",
+    "action": "addition",
+    "code": "TSUX1126",
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "89",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "TSUX1126",
+      "type": "Accessories",
+      "subtype": "inductor",
+      "manufacturer": "Generic",
+      "model": "CD54",
+      "description": "Inductor SMD de potencia blindado encapsulado redondo negro con marca 330 - 2 piezas en cinta carrier tape de 12mm - bobina de cobre visible en laterales - montaje superficial",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "770b7ddedc8d49abac49b28b91c986a5",
+    "code": "TSUX1126",
+    "action": "addition",
+    "quantity": 2
+  }
+}
