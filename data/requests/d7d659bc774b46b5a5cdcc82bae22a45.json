@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d7d659bc774b46b5a5cdcc82bae22a45",
+  "saved_at": "2026-11-09T17:55:39.460687+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Duet 2 Conectores",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 22,
+    "location": "Área de Ensamblaje",
+    "sublocation": "7",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "d7d659bc774b46b5a5cdcc82bae22a45",
+    "action": "addition",
+    "code": "VQRT1126",
+    "quantity": 22,
+    "location": "Área de Ensamblaje",
+    "sublocation": "7",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "VQRT1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Duet 2 Conectores",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "d7d659bc774b46b5a5cdcc82bae22a45",
+    "code": "VQRT1126",
+    "action": "addition",
+    "quantity": 22
+  }
+}
