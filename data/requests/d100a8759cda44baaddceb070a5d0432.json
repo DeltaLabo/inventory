@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d100a8759cda44baaddceb070a5d0432",
+  "saved_at": "2026-11-09T15:10:22.240138+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Sensor Board",
+      "subtype": "pH sensor interface",
+      "manufacturer": "Generic",
+      "model": "pH Sensor Module BNC - pH-4502C",
+      "description": "Módulo interfaz analógico para sonda de pH con conector BNC hembra - PCB verde con 2 potenciómetros W103/W104 para calibración, pinout To Do Po G G U+ - para electrodo de pH",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "47",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "d100a8759cda44baaddceb070a5d0432",
+    "action": "addition",
+    "code": "LYWO1126",
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "47",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "LYWO1126",
+      "type": "Sensor Board",
+      "subtype": "pH sensor interface",
+      "manufacturer": "Generic",
+      "model": "pH Sensor Module BNC - pH-4502C",
+      "description": "Módulo interfaz analógico para sonda de pH con conector BNC hembra - PCB verde con 2 potenciómetros W103/W104 para calibración, pinout To Do Po G G U+ - para electrodo de pH",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "d100a8759cda44baaddceb070a5d0432",
+    "code": "LYWO1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
