@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "24888169d74c4aafb4129aaf0f463027",
+  "saved_at": "2026-11-09T21:08:35.486169+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tarjetas de sublimación=2 , llaveros=2",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "Área de Ensamblaje",
+    "sublocation": "43",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "24888169d74c4aafb4129aaf0f463027",
+    "action": "addition",
+    "code": "TSAM1126",
+    "quantity": 4,
+    "location": "Área de Ensamblaje",
+    "sublocation": "43",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "TSAM1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tarjetas de sublimación=2 , llaveros=2",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "24888169d74c4aafb4129aaf0f463027",
+    "code": "TSAM1126",
+    "action": "addition",
+    "quantity": 4
+  }
+}
