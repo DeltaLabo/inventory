@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "378ffd0fd330406ab58a8bf4eca3159d",
+  "saved_at": "2026-11-09T20:25:33.032529+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Arandelas",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 16,
+    "location": "Área de Ensamblaje",
+    "sublocation": "28",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "378ffd0fd330406ab58a8bf4eca3159d",
+    "action": "addition",
+    "code": "PXJP1126",
+    "quantity": 16,
+    "location": "Área de Ensamblaje",
+    "sublocation": "28",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "PXJP1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Arandelas",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "378ffd0fd330406ab58a8bf4eca3159d",
+    "code": "PXJP1126",
+    "action": "addition",
+    "quantity": 16
+  }
+}
