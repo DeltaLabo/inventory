@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "415be0c4d1aa43a197114110c0204d96",
+  "saved_at": "2026-11-09T17:17:59.150273+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "load cell amplifier breakout",
+      "manufacturer": "Avia Semiconductor",
+      "model": "HX711 Dual Channel 24-bit Precision A/D Converter",
+      "description": "Módulo amplificador para celdas de carga PCB verde - header P2 E+ E- A- A+ B- B+ dual channel - header P1 GND DT SCK VCC - IC U1 HX711 SOP-16 en centro - 2 agujeros de montaje - marcado 58927",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "90",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "415be0c4d1aa43a197114110c0204d96",
+    "action": "addition",
+    "code": "BOAI1126",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "90",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BOAI1126",
+      "type": "Accessories",
+      "subtype": "load cell amplifier breakout",
+      "manufacturer": "Avia Semiconductor",
+      "model": "HX711 Dual Channel 24-bit Precision A/D Converter",
+      "description": "Módulo amplificador para celdas de carga PCB verde - header P2 E+ E- A- A+ B- B+ dual channel - header P1 GND DT SCK VCC - IC U1 HX711 SOP-16 en centro - 2 agujeros de montaje - marcado 58927",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "415be0c4d1aa43a197114110c0204d96",
+    "code": "BOAI1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
