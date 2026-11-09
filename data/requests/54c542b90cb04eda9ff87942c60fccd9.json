@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "54c542b90cb04eda9ff87942c60fccd9",
+  "saved_at": "2026-11-09T20:05:51.300687+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "JTCF1126",
+    "original_item": {
+      "code": "JTCF1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Letras Acrílico",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Letras Acrílico",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Corrección",
+    "original_stock": {
+      "code": "JTCF1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "18",
+      "units": "28"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "18",
+      "units": "28"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "54c542b90cb04eda9ff87942c60fccd9",
+    "action": "edit",
+    "code": "JTCF1126",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Corrección",
+    "product_changes": {
+      "type": {
+        "before": "Organizador #1",
+        "after": "Organizador #2"
+      }
+    },
+    "stock_changes": {},
+    "original_location": {
+      "code": "JTCF1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "18",
+      "units": "28"
+    }
+  },
+  "result": {
+    "id": "54c542b90cb04eda9ff87942c60fccd9",
+    "code": "JTCF1126",
+    "action": "edit"
+  }
+}
