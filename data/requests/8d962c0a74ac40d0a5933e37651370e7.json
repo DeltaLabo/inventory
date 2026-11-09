@@ -1,0 +1,77 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "8d962c0a74ac40d0a5933e37651370e7",
+  "saved_at": "2026-11-09T19:59:35.318085+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "QJIR1126",
+    "original_item": {
+      "code": "QJIR1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Dedos 3D",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Dedos 3D",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Corrección",
+    "original_stock": {
+      "code": "QJIR1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "29",
+      "units": "12"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "19",
+      "units": "12"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "8d962c0a74ac40d0a5933e37651370e7",
+    "action": "edit",
+    "code": "QJIR1126",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Corrección",
+    "product_changes": {
+      "type": {
+        "before": "Organizador #1",
+        "after": "Organizador #2"
+      }
+    },
+    "stock_changes": {
+      "sublocation": {
+        "before": "29",
+        "after": "19"
+      }
+    },
+    "original_location": {
+      "code": "QJIR1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "29",
+      "units": "12"
+    }
+  },
+  "result": {
+    "id": "8d962c0a74ac40d0a5933e37651370e7",
+    "code": "QJIR1126",
+    "action": "edit"
+  }
+}
