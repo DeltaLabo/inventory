@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "6d045af64f1c433a9899fac7ebde7283",
+  "saved_at": "2026-11-09T22:21:01.651327+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Mini electric grinding machine S-31A",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "73",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "6d045af64f1c433a9899fac7ebde7283",
+    "action": "addition",
+    "code": "ULNX1126",
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "73",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ULNX1126",
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Mini electric grinding machine S-31A",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "6d045af64f1c433a9899fac7ebde7283",
+    "code": "ULNX1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
