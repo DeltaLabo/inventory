@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "8fce6c112573449bb94c3e80f9cc0397",
+  "saved_at": "2026-11-09T20:21:33.790691+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "BZQH1126",
+    "original_item": {
+      "code": "BZQH1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Molde Flex Protesis 3D",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Molde Flex Protesis 3D",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Corrección",
+    "original_stock": {
+      "code": "BZQH1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "25",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "25",
+      "units": "1"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "8fce6c112573449bb94c3e80f9cc0397",
+    "action": "edit",
+    "code": "BZQH1126",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Corrección",
+    "product_changes": {
+      "type": {
+        "before": "Organizador #1",
+        "after": "Organizador #2"
+      }
+    },
+    "stock_changes": {},
+    "original_location": {
+      "code": "BZQH1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "25",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "8fce6c112573449bb94c3e80f9cc0397",
+    "code": "BZQH1126",
+    "action": "edit"
+  }
+}
