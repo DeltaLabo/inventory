@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "6a9f31bd58dd4964b4bf6aed60556523",
+  "saved_at": "2026-11-09T20:20:24.532888+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "MEVS1126",
+    "original_item": {
+      "code": "MEVS1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Carrete protesis",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Carrete protesis",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Corrección",
+    "original_stock": {
+      "code": "MEVS1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "24",
+      "units": "6"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "24",
+      "units": "6"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "6a9f31bd58dd4964b4bf6aed60556523",
+    "action": "edit",
+    "code": "MEVS1126",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Corrección",
+    "product_changes": {
+      "type": {
+        "before": "Organizador #1",
+        "after": "Organizador #2"
+      }
+    },
+    "stock_changes": {},
+    "original_location": {
+      "code": "MEVS1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "24",
+      "units": "6"
+    }
+  },
+  "result": {
+    "id": "6a9f31bd58dd4964b4bf6aed60556523",
+    "code": "MEVS1126",
+    "action": "edit"
+  }
+}
