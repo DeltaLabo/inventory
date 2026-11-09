@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "6dd8271d2c2f4da7b81fad42d22ecb6a",
+  "saved_at": "2026-11-09T16:22:40.941344+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "piezo vibration sensor",
+      "manufacturer": "TE Connectivity",
+      "model": "LDT0-028K",
+      "description": "Sensor piezoeléctrico flexible tipo film transparente con 2 terminales crimpados - etiqueta dorada con logo TE y www.te.com - lámina PVDF para detección de vibración / flexión",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "51",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "6dd8271d2c2f4da7b81fad42d22ecb6a",
+    "action": "addition",
+    "code": "OAFS1126",
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "51",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "OAFS1126",
+      "type": "sensor",
+      "subtype": "piezo vibration sensor",
+      "manufacturer": "TE Connectivity",
+      "model": "LDT0-028K",
+      "description": "Sensor piezoeléctrico flexible tipo film transparente con 2 terminales crimpados - etiqueta dorada con logo TE y www.te.com - lámina PVDF para detección de vibración / flexión",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "6dd8271d2c2f4da7b81fad42d22ecb6a",
+    "code": "OAFS1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
