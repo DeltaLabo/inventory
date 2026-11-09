@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "3959b9690f364a8590e2da823086bc08",
+  "saved_at": "2026-11-09T19:32:21.456946+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "X,Y,Z Cube 3D",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 9,
+    "location": "Área de Ensamblaje",
+    "sublocation": "21",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "3959b9690f364a8590e2da823086bc08",
+    "action": "addition",
+    "code": "HIOE1126",
+    "quantity": 9,
+    "location": "Área de Ensamblaje",
+    "sublocation": "21",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HIOE1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "X,Y,Z Cube 3D",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "3959b9690f364a8590e2da823086bc08",
+    "code": "HIOE1126",
+    "action": "addition",
+    "quantity": 9
+  }
+}
