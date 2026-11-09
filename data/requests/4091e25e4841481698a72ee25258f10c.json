@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4091e25e4841481698a72ee25258f10c",
+  "saved_at": "2026-11-09T20:28:06.660033+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Termo encogible=2 Largos , 7 Pequeños",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 9,
+    "location": "Área de Ensamblaje",
+    "sublocation": "29",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "4091e25e4841481698a72ee25258f10c",
+    "action": "addition",
+    "code": "UZEZ1126",
+    "quantity": 9,
+    "location": "Área de Ensamblaje",
+    "sublocation": "29",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "UZEZ1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Termo encogible=2 Largos , 7 Pequeños",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "4091e25e4841481698a72ee25258f10c",
+    "code": "UZEZ1126",
+    "action": "addition",
+    "quantity": 9
+  }
+}
