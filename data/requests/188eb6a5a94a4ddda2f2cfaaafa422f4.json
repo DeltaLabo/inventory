@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "188eb6a5a94a4ddda2f2cfaaafa422f4",
+  "saved_at": "2026-11-09T18:25:38.353117+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos para Madera",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 228,
+    "location": "Área de Ensamblaje",
+    "sublocation": "10",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "188eb6a5a94a4ddda2f2cfaaafa422f4",
+    "action": "addition",
+    "code": "WVQL1126",
+    "quantity": 228,
+    "location": "Área de Ensamblaje",
+    "sublocation": "10",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "WVQL1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos para Madera",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "188eb6a5a94a4ddda2f2cfaaafa422f4",
+    "code": "WVQL1126",
+    "action": "addition",
+    "quantity": 228
+  }
+}
