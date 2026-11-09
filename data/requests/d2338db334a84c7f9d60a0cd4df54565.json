@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d2338db334a84c7f9d60a0cd4df54565",
+  "saved_at": "2026-11-09T22:12:53.303966+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conector rápido en T / Tira de pines macho / Conector tipo JSTPH",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 120,
+    "location": "Área de Ensamblaje",
+    "sublocation": "68",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "d2338db334a84c7f9d60a0cd4df54565",
+    "action": "addition",
+    "code": "VTLU1126",
+    "quantity": 120,
+    "location": "Área de Ensamblaje",
+    "sublocation": "68",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "VTLU1126",
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conector rápido en T / Tira de pines macho / Conector tipo JSTPH",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "d2338db334a84c7f9d60a0cd4df54565",
+    "code": "VTLU1126",
+    "action": "addition",
+    "quantity": 120
+  }
+}
