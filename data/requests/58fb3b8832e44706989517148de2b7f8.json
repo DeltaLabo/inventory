@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "58fb3b8832e44706989517148de2b7f8",
+  "saved_at": "2026-11-09T19:46:28.480842+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Molde Flex Protesis 3D",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "25",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "58fb3b8832e44706989517148de2b7f8",
+    "action": "addition",
+    "code": "BZQH1126",
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "25",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BZQH1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Molde Flex Protesis 3D",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "58fb3b8832e44706989517148de2b7f8",
+    "code": "BZQH1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
