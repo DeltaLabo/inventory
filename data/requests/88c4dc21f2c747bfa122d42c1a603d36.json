@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "88c4dc21f2c747bfa122d42c1a603d36",
+  "saved_at": "2026-11-09T14:15:08.608348+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb",
+      "subtype": "RTC board circular",
+      "manufacturer": "Generic",
+      "model": "RTC Round Board DS3231 + ATmega - Rev C",
+      "description": "PCB circular negra Rev C - con microcontrolador ATmega SMD, RTC DS3231/SO, header I2C GND RST SCL SDA y pines para LEDs y reed switch - marcada PCB TOP CT10 REED SWITCH",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "85",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "88c4dc21f2c747bfa122d42c1a603d36",
+    "action": "addition",
+    "code": "XVEG1126",
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "85",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "XVEG1126",
+      "type": "pcb",
+      "subtype": "RTC board circular",
+      "manufacturer": "Generic",
+      "model": "RTC Round Board DS3231 + ATmega - Rev C",
+      "description": "PCB circular negra Rev C - con microcontrolador ATmega SMD, RTC DS3231/SO, header I2C GND RST SCL SDA y pines para LEDs y reed switch - marcada PCB TOP CT10 REED SWITCH",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "88c4dc21f2c747bfa122d42c1a603d36",
+    "code": "XVEG1126",
+    "action": "addition",
+    "quantity": 2
+  }
+}
