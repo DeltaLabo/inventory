@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "aa43e32ea6ff458fbeb09ef5e1a97f17",
+  "saved_at": "2026-11-09T17:12:09.710773+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Sensor Board",
+      "subtype": "sound / microphone",
+      "manufacturer": "Generic",
+      "model": "KY-038 Microphone Sound Sensor Module",
+      "description": "Módulo sensor de sonido con micrófono electret metálico - comparador LM393 - potenciómetro azul para ajuste de sensibilidad/umbral - 4 pines AO GND + DO - 2 LEDs - PCB roja con agujero de montaje",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "52",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "aa43e32ea6ff458fbeb09ef5e1a97f17",
+    "action": "addition",
+    "code": "BZVM1126",
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "52",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BZVM1126",
+      "type": "Sensor Board",
+      "subtype": "sound / microphone",
+      "manufacturer": "Generic",
+      "model": "KY-038 Microphone Sound Sensor Module",
+      "description": "Módulo sensor de sonido con micrófono electret metálico - comparador LM393 - potenciómetro azul para ajuste de sensibilidad/umbral - 4 pines AO GND + DO - 2 LEDs - PCB roja con agujero de montaje",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "aa43e32ea6ff458fbeb09ef5e1a97f17",
+    "code": "BZVM1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
