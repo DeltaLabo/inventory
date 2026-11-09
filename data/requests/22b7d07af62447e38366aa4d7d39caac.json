@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "22b7d07af62447e38366aa4d7d39caac",
+  "saved_at": "2026-11-09T20:53:41.553610+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Piezas varias",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "36",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "22b7d07af62447e38366aa4d7d39caac",
+    "action": "addition",
+    "code": "HXWU1126",
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "36",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HXWU1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Piezas varias",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "22b7d07af62447e38366aa4d7d39caac",
+    "code": "HXWU1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
