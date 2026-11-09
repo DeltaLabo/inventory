@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "2ebdfb0b53e844319a69d3e2ea6361ca",
+  "saved_at": "2026-11-09T19:51:54.524972+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "development board",
+      "subtype": "MCU / WiFi BLE",
+      "manufacturer": "Generic",
+      "model": "ESP32-S3 DevKitC-1",
+      "description": "Placa de desarrollo negra ESP32 dual USB-C - modulo metalico ESP32-WROOM abajo - botones BOOT y RST - 3 LEDs + RGB - regulador 3.3V - pines 38+",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "27",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "2ebdfb0b53e844319a69d3e2ea6361ca",
+    "action": "addition",
+    "code": "YBUP1126",
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "27",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "YBUP1126",
+      "type": "development board",
+      "subtype": "MCU / WiFi BLE",
+      "manufacturer": "Generic",
+      "model": "ESP32-S3 DevKitC-1",
+      "description": "Placa de desarrollo negra ESP32 dual USB-C - modulo metalico ESP32-WROOM abajo - botones BOOT y RST - 3 LEDs + RGB - regulador 3.3V - pines 38+",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "2ebdfb0b53e844319a69d3e2ea6361ca",
+    "code": "YBUP1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
