@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "54af467fb5e44fc7a07022618a29c18c",
+  "saved_at": "2026-11-09T19:37:05.171079+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Velcro",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "Área de Ensamblaje",
+    "sublocation": "22",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "54af467fb5e44fc7a07022618a29c18c",
+    "action": "addition",
+    "code": "QYHN1126",
+    "quantity": 2,
+    "location": "Área de Ensamblaje",
+    "sublocation": "22",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QYHN1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Velcro",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "54af467fb5e44fc7a07022618a29c18c",
+    "code": "QYHN1126",
+    "action": "addition",
+    "quantity": 2
+  }
+}
