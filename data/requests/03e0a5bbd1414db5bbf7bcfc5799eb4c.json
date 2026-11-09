@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "03e0a5bbd1414db5bbf7bcfc5799eb4c",
+  "saved_at": "2026-11-09T20:09:31.266623+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "TTFI1126",
+    "original_item": {
+      "code": "TTFI1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Piezas Varias 3D",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Piezas Varias 3D",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Corrección",
+    "original_stock": {
+      "code": "TTFI1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "20",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "20",
+      "units": "1"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "03e0a5bbd1414db5bbf7bcfc5799eb4c",
+    "action": "edit",
+    "code": "TTFI1126",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Corrección",
+    "product_changes": {
+      "type": {
+        "before": "Organizador #1",
+        "after": "Organizador #2"
+      }
+    },
+    "stock_changes": {},
+    "original_location": {
+      "code": "TTFI1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "20",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "03e0a5bbd1414db5bbf7bcfc5799eb4c",
+    "code": "TTFI1126",
+    "action": "edit"
+  }
+}
