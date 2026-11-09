@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "0c931ccc00f848a4ba5cc7cb39de222f",
+  "saved_at": "2026-11-09T21:13:16.310025+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Gasa metálica mediana",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 20,
+    "location": "Área de Ensamblaje",
+    "sublocation": "45",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "0c931ccc00f848a4ba5cc7cb39de222f",
+    "action": "addition",
+    "code": "ZAJL1126",
+    "quantity": 20,
+    "location": "Área de Ensamblaje",
+    "sublocation": "45",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ZAJL1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Gasa metálica mediana",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "0c931ccc00f848a4ba5cc7cb39de222f",
+    "code": "ZAJL1126",
+    "action": "addition",
+    "quantity": 20
+  }
+}
