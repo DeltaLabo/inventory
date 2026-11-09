@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "aaff85ab04794cfdb76766c78d998e74",
+  "saved_at": "2026-11-09T20:02:18.574086+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "NIOO1126",
+    "original_item": {
+      "code": "NIOO1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Piezas Varias 3D",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Piezas Varias 3D",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Corrección",
+    "original_stock": {
+      "code": "NIOO1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "17",
+      "units": "3"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "17",
+      "units": "3"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "aaff85ab04794cfdb76766c78d998e74",
+    "action": "edit",
+    "code": "NIOO1126",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Corrección",
+    "product_changes": {
+      "type": {
+        "before": "Organizador #1",
+        "after": "Organizador #2"
+      }
+    },
+    "stock_changes": {},
+    "original_location": {
+      "code": "NIOO1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "17",
+      "units": "3"
+    }
+  },
+  "result": {
+    "id": "aaff85ab04794cfdb76766c78d998e74",
+    "code": "NIOO1126",
+    "action": "edit"
+  }
+}
