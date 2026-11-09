@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "7fe1efacac0e4f73a394f52e78b8037e",
+  "saved_at": "2026-11-09T20:59:29.355232+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tornillos varios",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 93,
+    "location": "Área de Ensamblaje",
+    "sublocation": "39",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "7fe1efacac0e4f73a394f52e78b8037e",
+    "action": "addition",
+    "code": "IPGA1126",
+    "quantity": 93,
+    "location": "Área de Ensamblaje",
+    "sublocation": "39",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "IPGA1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tornillos varios",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "7fe1efacac0e4f73a394f52e78b8037e",
+    "code": "IPGA1126",
+    "action": "addition",
+    "quantity": 93
+  }
+}
