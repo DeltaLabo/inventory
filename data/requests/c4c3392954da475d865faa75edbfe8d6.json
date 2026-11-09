@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c4c3392954da475d865faa75edbfe8d6",
+  "saved_at": "2026-11-09T15:34:48.541692+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "IC socket",
+      "manufacturer": "Generic",
+      "model": "DIP-28 IC Socket 0.3 inch",
+      "description": "Zócalo DIP 28 pines angosto - negro - contactos plateados para montaje de CI en PCB",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 6,
+    "location": "I",
+    "sublocation": "21",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "c4c3392954da475d865faa75edbfe8d6",
+    "action": "addition",
+    "code": "ZWBT1126",
+    "quantity": 6,
+    "location": "I",
+    "sublocation": "21",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ZWBT1126",
+      "type": "Accessories",
+      "subtype": "IC socket",
+      "manufacturer": "Generic",
+      "model": "DIP-28 IC Socket 0.3 inch",
+      "description": "Zócalo DIP 28 pines angosto - negro - contactos plateados para montaje de CI en PCB",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "c4c3392954da475d865faa75edbfe8d6",
+    "code": "ZWBT1126",
+    "action": "addition",
+    "quantity": 6
+  }
+}
