@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "2d86d9ced74141648627166554a10ebe",
+  "saved_at": "2026-11-09T21:52:06.500974+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tapon conicos de goma / Tapas adhesivas circulares",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 410,
+    "location": "Área de Ensamblaje",
+    "sublocation": "57",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "2d86d9ced74141648627166554a10ebe",
+    "action": "addition",
+    "code": "HRWD1126",
+    "quantity": 410,
+    "location": "Área de Ensamblaje",
+    "sublocation": "57",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HRWD1126",
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tapon conicos de goma / Tapas adhesivas circulares",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "2d86d9ced74141648627166554a10ebe",
+    "code": "HRWD1126",
+    "action": "addition",
+    "quantity": 410
+  }
+}
