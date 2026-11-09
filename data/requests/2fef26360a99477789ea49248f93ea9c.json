@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "2fef26360a99477789ea49248f93ea9c",
+  "saved_at": "2026-11-09T17:32:06.847783+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "connectors",
+      "subtype": "fuse holder clip PCB mount",
+      "manufacturer": "Generic",
+      "model": "BLX-A / PCB Fuse Clip Holder 5x20mm",
+      "description": "Portafusibles PCB de clip doble negro con contactos metálicos plateados - tipo clip para montaje en placa - agujero central de fijación - para fusible cilíndrico de vidrio 5x20mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 3,
+    "location": "E",
+    "sublocation": "53",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "2fef26360a99477789ea49248f93ea9c",
+    "action": "addition",
+    "code": "KZDA1126",
+    "quantity": 3,
+    "location": "E",
+    "sublocation": "53",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "KZDA1126",
+      "type": "connectors",
+      "subtype": "fuse holder clip PCB mount",
+      "manufacturer": "Generic",
+      "model": "BLX-A / PCB Fuse Clip Holder 5x20mm",
+      "description": "Portafusibles PCB de clip doble negro con contactos metálicos plateados - tipo clip para montaje en placa - agujero central de fijación - para fusible cilíndrico de vidrio 5x20mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "2fef26360a99477789ea49248f93ea9c",
+    "code": "KZDA1126",
+    "action": "addition",
+    "quantity": 3
+  }
+}
