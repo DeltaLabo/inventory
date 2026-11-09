@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "12b91e0a62f94e83b3a14c08a535c5a9",
+  "saved_at": "2026-11-09T22:17:17.874531+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos,arandelas y tuercas negras",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "71",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "12b91e0a62f94e83b3a14c08a535c5a9",
+    "action": "addition",
+    "code": "TJKI1126",
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "71",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "TJKI1126",
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos,arandelas y tuercas negras",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "12b91e0a62f94e83b3a14c08a535c5a9",
+    "code": "TJKI1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
