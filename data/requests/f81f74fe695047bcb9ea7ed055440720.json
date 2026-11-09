@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "f81f74fe695047bcb9ea7ed055440720",
+  "saved_at": "2026-11-09T19:29:57.373244+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Piezas Varias 3D",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "20",
+    "person": "Maryapz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "f81f74fe695047bcb9ea7ed055440720",
+    "action": "addition",
+    "code": "TTFI1126",
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "20",
+    "person": "Maryapz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "TTFI1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Piezas Varias 3D",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "f81f74fe695047bcb9ea7ed055440720",
+    "code": "TTFI1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
