@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e7ff0ec212a5477a8427a3ed53680a24",
+  "saved_at": "2026-11-09T18:29:32.914246+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Led's",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 54,
+    "location": "Área de Ensamblaje",
+    "sublocation": "12",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "e7ff0ec212a5477a8427a3ed53680a24",
+    "action": "addition",
+    "code": "QOPH1126",
+    "quantity": 54,
+    "location": "Área de Ensamblaje",
+    "sublocation": "12",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QOPH1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Led's",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "e7ff0ec212a5477a8427a3ed53680a24",
+    "code": "QOPH1126",
+    "action": "addition",
+    "quantity": 54
+  }
+}
