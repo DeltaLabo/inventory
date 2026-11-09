@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "7a838bf7cdb44af4b428006cd39d5dfc",
+  "saved_at": "2026-11-09T16:11:56.709389+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor board",
+      "subtype": "GPS module",
+      "manufacturer": "Beitian",
+      "model": "BE-180 GPS - S/N 202401053728",
+      "description": "Módulo GPS miniatura con blindaje metálico y conector JST SH de 4 pines - pines PPS, RX, TX, VCC, GND",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "22",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "7a838bf7cdb44af4b428006cd39d5dfc",
+    "action": "addition",
+    "code": "SJUS1126",
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "22",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SJUS1126",
+      "type": "sensor board",
+      "subtype": "GPS module",
+      "manufacturer": "Beitian",
+      "model": "BE-180 GPS - S/N 202401053728",
+      "description": "Módulo GPS miniatura con blindaje metálico y conector JST SH de 4 pines - pines PPS, RX, TX, VCC, GND",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "7a838bf7cdb44af4b428006cd39d5dfc",
+    "code": "SJUS1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
