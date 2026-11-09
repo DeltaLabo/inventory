@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "77bd9948250242938d67210cb3ddde81",
+  "saved_at": "2026-11-09T19:55:48.524081+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Arandelas",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 19,
+    "location": "Área de Ensamblaje",
+    "sublocation": "27",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "77bd9948250242938d67210cb3ddde81",
+    "action": "addition",
+    "code": "TUGT1126",
+    "quantity": 19,
+    "location": "Área de Ensamblaje",
+    "sublocation": "27",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "TUGT1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Arandelas",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "77bd9948250242938d67210cb3ddde81",
+    "code": "TUGT1126",
+    "action": "addition",
+    "quantity": 19
+  }
+}
