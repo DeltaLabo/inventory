@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c1c771ce598940b4b574677b4d181f6c",
+  "saved_at": "2026-11-09T21:55:31.469321+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos,tuercas,entre otros.",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "59",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "c1c771ce598940b4b574677b4d181f6c",
+    "action": "addition",
+    "code": "ZVLX1126",
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "59",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ZVLX1126",
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos,tuercas,entre otros.",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "c1c771ce598940b4b574677b4d181f6c",
+    "code": "ZVLX1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
