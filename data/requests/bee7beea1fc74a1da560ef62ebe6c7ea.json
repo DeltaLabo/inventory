@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "bee7beea1fc74a1da560ef62ebe6c7ea",
+  "saved_at": "2026-11-09T21:04:04.447701+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resistencias",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 193,
+    "location": "Área de Ensamblaje",
+    "sublocation": "41",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "bee7beea1fc74a1da560ef62ebe6c7ea",
+    "action": "addition",
+    "code": "YLPQ1126",
+    "quantity": 193,
+    "location": "Área de Ensamblaje",
+    "sublocation": "41",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "YLPQ1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resistencias",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "bee7beea1fc74a1da560ef62ebe6c7ea",
+    "code": "YLPQ1126",
+    "action": "addition",
+    "quantity": 193
+  }
+}
