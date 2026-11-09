@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "2c3191723ca743938cc7b956a66266e4",
+  "saved_at": "2026-11-09T19:54:18.627763+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tuerca Keps=4 , Tornillos=8",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 12,
+    "location": "Área de Ensamblaje",
+    "sublocation": "26",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "2c3191723ca743938cc7b956a66266e4",
+    "action": "addition",
+    "code": "UPHR1126",
+    "quantity": 12,
+    "location": "Área de Ensamblaje",
+    "sublocation": "26",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "UPHR1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tuerca Keps=4 , Tornillos=8",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "2c3191723ca743938cc7b956a66266e4",
+    "code": "UPHR1126",
+    "action": "addition",
+    "quantity": 12
+  }
+}
