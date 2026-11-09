@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "65adb98442274717a6b6d521044c275b",
+  "saved_at": "2026-11-09T22:14:52.260312+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Perillas / Potenciometros / Terminales de crimpado metalico",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 35,
+    "location": "Área de Ensamblaje",
+    "sublocation": "69",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "65adb98442274717a6b6d521044c275b",
+    "action": "addition",
+    "code": "AMZU1126",
+    "quantity": 35,
+    "location": "Área de Ensamblaje",
+    "sublocation": "69",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "AMZU1126",
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Perillas / Potenciometros / Terminales de crimpado metalico",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "65adb98442274717a6b6d521044c275b",
+    "code": "AMZU1126",
+    "action": "addition",
+    "quantity": 35
+  }
+}
