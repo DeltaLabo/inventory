@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "688f17cafda442beb25d20260da141c7",
+  "saved_at": "2026-11-09T21:48:17.783456+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Bornes Negros (2 entradas) / Bornes Naranjas (2 entradas)",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 14,
+    "location": "Área de Ensamblaje",
+    "sublocation": "55",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "688f17cafda442beb25d20260da141c7",
+    "action": "addition",
+    "code": "BYOO1126",
+    "quantity": 14,
+    "location": "Área de Ensamblaje",
+    "sublocation": "55",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BYOO1126",
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Bornes Negros (2 entradas) / Bornes Naranjas (2 entradas)",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "688f17cafda442beb25d20260da141c7",
+    "code": "BYOO1126",
+    "action": "addition",
+    "quantity": 14
+  }
+}
