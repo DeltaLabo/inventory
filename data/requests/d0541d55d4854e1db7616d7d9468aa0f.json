@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d0541d55d4854e1db7616d7d9468aa0f",
+  "saved_at": "2026-11-09T15:55:42.098426+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor board",
+      "subtype": "EMG muscle sensor",
+      "manufacturer": "Advancer Technologies",
+      "model": "MyoWare Muscle Sensor AT-04-001",
+      "description": "Sensor EMG MyoWare para medir actividad muscular - PCB roja con 2 botones metálicos tipo snap para electrodos, switch ON/OFF, LED indicador, pines RAW, SHLD, GND, Gain - 3 electrodos adhesivos COVIDIEN - 1 electrodo con cable negro conectado",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "48",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "d0541d55d4854e1db7616d7d9468aa0f",
+    "action": "addition",
+    "code": "RUQR1126",
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "48",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "RUQR1126",
+      "type": "sensor board",
+      "subtype": "EMG muscle sensor",
+      "manufacturer": "Advancer Technologies",
+      "model": "MyoWare Muscle Sensor AT-04-001",
+      "description": "Sensor EMG MyoWare para medir actividad muscular - PCB roja con 2 botones metálicos tipo snap para electrodos, switch ON/OFF, LED indicador, pines RAW, SHLD, GND, Gain - 3 electrodos adhesivos COVIDIEN - 1 electrodo con cable negro conectado",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "d0541d55d4854e1db7616d7d9468aa0f",
+    "code": "RUQR1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
