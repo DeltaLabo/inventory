@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "21ce213153b6424ab968ee7dd6c2857c",
+  "saved_at": "2026-11-09T16:16:28.503603+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Sensor Board",
+      "subtype": "current / power monitor",
+      "manufacturer": "Generic",
+      "model": "INA219 DC Current Monitor",
+      "description": "Módulo sensor de corriente y potencia DC INA219 con resistor shunt R100 (0.1 ohm) - bornera verde de 2 pines Vin+ Vin- - interfaz I2C SDA SCL - PCB azul con 4 agujeros de montaje - montado sobre conector rojo tipo protoboard",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "50",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "21ce213153b6424ab968ee7dd6c2857c",
+    "action": "addition",
+    "code": "OCAK1126",
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "50",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "OCAK1126",
+      "type": "Sensor Board",
+      "subtype": "current / power monitor",
+      "manufacturer": "Generic",
+      "model": "INA219 DC Current Monitor",
+      "description": "Módulo sensor de corriente y potencia DC INA219 con resistor shunt R100 (0.1 ohm) - bornera verde de 2 pines Vin+ Vin- - interfaz I2C SDA SCL - PCB azul con 4 agujeros de montaje - montado sobre conector rojo tipo protoboard",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "21ce213153b6424ab968ee7dd6c2857c",
+    "code": "OCAK1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
