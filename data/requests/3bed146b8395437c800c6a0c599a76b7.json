@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "3bed146b8395437c800c6a0c599a76b7",
+  "saved_at": "2026-11-09T15:48:27.107970+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Motors",
+      "subtype": "motor driver",
+      "manufacturer": "ST Microelectronics",
+      "model": "L298N Dual H-Bridge Motor Driver Module",
+      "description": "Módulo driver puente H dual L298N con disipador negro - PCB roja con 2 capacitores 220uF 35V - borneras azules para motores y alimentación - pines ENA IN1 IN2 IN3 IN4 ENB",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "C",
+    "sublocation": "11",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "3bed146b8395437c800c6a0c599a76b7",
+    "action": "addition",
+    "code": "SCRC1126",
+    "quantity": 1,
+    "location": "C",
+    "sublocation": "11",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SCRC1126",
+      "type": "Motors",
+      "subtype": "motor driver",
+      "manufacturer": "ST Microelectronics",
+      "model": "L298N Dual H-Bridge Motor Driver Module",
+      "description": "Módulo driver puente H dual L298N con disipador negro - PCB roja con 2 capacitores 220uF 35V - borneras azules para motores y alimentación - pines ENA IN1 IN2 IN3 IN4 ENB",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "3bed146b8395437c800c6a0c599a76b7",
+    "code": "SCRC1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
