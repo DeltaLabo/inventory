@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "0ed7676399d94ddb9b1fe25d91d78e1d",
+  "saved_at": "2026-11-09T20:38:26.333647+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Arandelas pequeñas",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 67,
+    "location": "Área de Ensamblaje",
+    "sublocation": "32",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "0ed7676399d94ddb9b1fe25d91d78e1d",
+    "action": "addition",
+    "code": "GOVE1126",
+    "quantity": 67,
+    "location": "Área de Ensamblaje",
+    "sublocation": "32",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "GOVE1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Arandelas pequeñas",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "0ed7676399d94ddb9b1fe25d91d78e1d",
+    "code": "GOVE1126",
+    "action": "addition",
+    "quantity": 67
+  }
+}
