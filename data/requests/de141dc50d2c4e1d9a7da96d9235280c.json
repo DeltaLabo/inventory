@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "de141dc50d2c4e1d9a7da96d9235280c",
+  "saved_at": "2026-11-09T21:23:25.516321+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tornillo punta fina",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 306,
+    "location": "Área de Ensamblaje",
+    "sublocation": "47",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "de141dc50d2c4e1d9a7da96d9235280c",
+    "action": "addition",
+    "code": "LALT1126",
+    "quantity": 306,
+    "location": "Área de Ensamblaje",
+    "sublocation": "47",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "LALT1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tornillo punta fina",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "de141dc50d2c4e1d9a7da96d9235280c",
+    "code": "LALT1126",
+    "action": "addition",
+    "quantity": 306
+  }
+}
