@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e6aa21fb2efb41d695988dd2ed2ed96d",
+  "saved_at": "2026-11-09T19:27:55.116410+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Dedos 3D",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 12,
+    "location": "Área de Ensamblaje",
+    "sublocation": "29",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "e6aa21fb2efb41d695988dd2ed2ed96d",
+    "action": "addition",
+    "code": "QJIR1126",
+    "quantity": 12,
+    "location": "Área de Ensamblaje",
+    "sublocation": "29",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QJIR1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Dedos 3D",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "e6aa21fb2efb41d695988dd2ed2ed96d",
+    "code": "QJIR1126",
+    "action": "addition",
+    "quantity": 12
+  }
+}
