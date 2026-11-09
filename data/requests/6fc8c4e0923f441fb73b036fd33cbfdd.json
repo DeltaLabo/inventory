@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "6fc8c4e0923f441fb73b036fd33cbfdd",
+  "saved_at": "2026-11-09T14:20:43.457017+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "connectors",
+      "subtype": "thermocouple connector type K",
+      "manufacturer": "Generic",
+      "model": "IEC K Type Mini Thermocouple Plug",
+      "description": "2 conectores miniatura para termocupla tipo K IEC - color verde estándar - macho de 2 pines planos - marcados IEC K y RS",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "E",
+    "sublocation": "45",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "6fc8c4e0923f441fb73b036fd33cbfdd",
+    "action": "addition",
+    "code": "NWMO1126",
+    "quantity": 2,
+    "location": "E",
+    "sublocation": "45",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "NWMO1126",
+      "type": "connectors",
+      "subtype": "thermocouple connector type K",
+      "manufacturer": "Generic",
+      "model": "IEC K Type Mini Thermocouple Plug",
+      "description": "2 conectores miniatura para termocupla tipo K IEC - color verde estándar - macho de 2 pines planos - marcados IEC K y RS",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "6fc8c4e0923f441fb73b036fd33cbfdd",
+    "code": "NWMO1126",
+    "action": "addition",
+    "quantity": 2
+  }
+}
