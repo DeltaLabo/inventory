@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "47de2c0fe52442b9b18805c0e4837340",
+  "saved_at": "2026-11-09T14:37:19.508372+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "power",
+      "subtype": "solar panel",
+      "manufacturer": "SAPPORO ROBOTICS",
+      "model": "RF5254 - 53x36mm Mini Solar Panel",
+      "description": "Mini panel solar 53x36mm - cara frontal policristalino negro, cara posterior verde con marcas + y - y texto SAPPORO ROBOTICS RF5254 53x36mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "B",
+    "sublocation": "26",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "47de2c0fe52442b9b18805c0e4837340",
+    "action": "addition",
+    "code": "UTDD1126",
+    "quantity": 2,
+    "location": "B",
+    "sublocation": "26",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "UTDD1126",
+      "type": "power",
+      "subtype": "solar panel",
+      "manufacturer": "SAPPORO ROBOTICS",
+      "model": "RF5254 - 53x36mm Mini Solar Panel",
+      "description": "Mini panel solar 53x36mm - cara frontal policristalino negro, cara posterior verde con marcas + y - y texto SAPPORO ROBOTICS RF5254 53x36mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "47de2c0fe52442b9b18805c0e4837340",
+    "code": "UTDD1126",
+    "action": "addition",
+    "quantity": 2
+  }
+}
