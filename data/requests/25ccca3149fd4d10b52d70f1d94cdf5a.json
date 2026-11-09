@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "25ccca3149fd4d10b52d70f1d94cdf5a",
+  "saved_at": "2026-11-09T22:02:02.277553+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Carcasa de conector Dupont / Conector tipo JSTPH / Conector empalme rapido",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 377,
+    "location": "Área de Ensamblaje",
+    "sublocation": "62",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "25ccca3149fd4d10b52d70f1d94cdf5a",
+    "action": "addition",
+    "code": "MAHB1126",
+    "quantity": 377,
+    "location": "Área de Ensamblaje",
+    "sublocation": "62",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "MAHB1126",
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Carcasa de conector Dupont / Conector tipo JSTPH / Conector empalme rapido",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "25ccca3149fd4d10b52d70f1d94cdf5a",
+    "code": "MAHB1126",
+    "action": "addition",
+    "quantity": 377
+  }
+}
