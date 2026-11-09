@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4bbf70fc0b184734a00fc11f7bed246b",
+  "saved_at": "2026-11-09T20:22:16.337556+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "UPHR1126",
+    "original_item": {
+      "code": "UPHR1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tuerca Keps=4 , Tornillos=8",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Tuerca Keps=4 , Tornillos=8",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Corrección",
+    "original_stock": {
+      "code": "UPHR1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "26",
+      "units": "12"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "26",
+      "units": "12"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "4bbf70fc0b184734a00fc11f7bed246b",
+    "action": "edit",
+    "code": "UPHR1126",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Corrección",
+    "product_changes": {
+      "type": {
+        "before": "Organizador #1",
+        "after": "Organizador #3"
+      }
+    },
+    "stock_changes": {},
+    "original_location": {
+      "code": "UPHR1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "26",
+      "units": "12"
+    }
+  },
+  "result": {
+    "id": "4bbf70fc0b184734a00fc11f7bed246b",
+    "code": "UPHR1126",
+    "action": "edit"
+  }
+}
