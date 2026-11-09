@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c8bd78928bcf42a899ef56296ee0b939",
+  "saved_at": "2026-11-09T19:09:24.939524+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Potenciometros=11     ,     Capacitores ceramicos=9 ,  Capacitores Electrolíticos=7 ,  Condensador electrolíticos=19  ,  Resistencias=21 ,  Inductor radial con núcleo de Tambor=4 ,  Sensor de tipo ranura=5 ,  Condensadores de tanatlio SMD=3",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 90,
+    "location": "Área de Ensamblaje",
+    "sublocation": "14",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "c8bd78928bcf42a899ef56296ee0b939",
+    "action": "addition",
+    "code": "OYDX1126",
+    "quantity": 90,
+    "location": "Área de Ensamblaje",
+    "sublocation": "14",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "OYDX1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Potenciometros=11     ,     Capacitores ceramicos=9 ,  Capacitores Electrolíticos=7 ,  Condensador electrolíticos=19  ,  Resistencias=21 ,  Inductor radial con núcleo de Tambor=4 ,  Sensor de tipo ranura=5 ,  Condensadores de tanatlio SMD=3",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "c8bd78928bcf42a899ef56296ee0b939",
+    "code": "OYDX1126",
+    "action": "addition",
+    "quantity": 90
+  }
+}
