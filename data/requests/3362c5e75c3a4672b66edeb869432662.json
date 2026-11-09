@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "3362c5e75c3a4672b66edeb869432662",
+  "saved_at": "2026-11-09T19:11:45.422112+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Gasas",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "15",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "3362c5e75c3a4672b66edeb869432662",
+    "action": "addition",
+    "code": "SRVZ1126",
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "15",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SRVZ1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Gasas",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "3362c5e75c3a4672b66edeb869432662",
+    "code": "SRVZ1126",
+    "action": "addition",
+    "quantity": 100
+  }
+}
