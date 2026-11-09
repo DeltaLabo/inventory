@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "bf25d45edc6a42ea871d664d66ec654f",
+  "saved_at": "2026-11-09T14:09:23.092385+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Sensor Board",
+      "subtype": "heart rate sensor",
+      "manufacturer": "Generic",
+      "model": "KY-039 Heartbeat Sensor Module - 4990064",
+      "description": "Módulo sensor de ritmo cardíaco KY-039 - detector de pulso por fotopletismografía con LED IR y PCB KY-039",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "44",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "bf25d45edc6a42ea871d664d66ec654f",
+    "action": "addition",
+    "code": "LDOK1126",
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "44",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "LDOK1126",
+      "type": "Sensor Board",
+      "subtype": "heart rate sensor",
+      "manufacturer": "Generic",
+      "model": "KY-039 Heartbeat Sensor Module - 4990064",
+      "description": "Módulo sensor de ritmo cardíaco KY-039 - detector de pulso por fotopletismografía con LED IR y PCB KY-039",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "bf25d45edc6a42ea871d664d66ec654f",
+    "code": "LDOK1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
