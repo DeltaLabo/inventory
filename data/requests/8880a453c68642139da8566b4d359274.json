@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "8880a453c68642139da8566b4d359274",
+  "saved_at": "2026-11-09T17:42:09.520159+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Wire",
+      "subtype": "adhesive cable tie mount / base",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Bolsa a granel de bases autoadhesivas negras cuadradas para cinchos / bridas - base con cinta doble cara beige - ranura para pasar zip tie - ∼20x20mm / 3/4\" tamaño",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 500,
+    "location": "Área de Ensamblaje",
+    "sublocation": "6",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "8880a453c68642139da8566b4d359274",
+    "action": "addition",
+    "code": "ETQU1126",
+    "quantity": 500,
+    "location": "Área de Ensamblaje",
+    "sublocation": "6",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ETQU1126",
+      "type": "Wire",
+      "subtype": "adhesive cable tie mount / base",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Bolsa a granel de bases autoadhesivas negras cuadradas para cinchos / bridas - base con cinta doble cara beige - ranura para pasar zip tie - ∼20x20mm / 3/4\" tamaño",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "8880a453c68642139da8566b4d359274",
+    "code": "ETQU1126",
+    "action": "addition",
+    "quantity": 500
+  }
+}
