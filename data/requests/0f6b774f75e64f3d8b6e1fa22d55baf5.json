@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "0f6b774f75e64f3d8b6e1fa22d55baf5",
+  "saved_at": "2026-11-09T17:06:04.998828+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "development board",
+      "subtype": "FTDI USB to Serial TTL",
+      "manufacturer": "SparkFun Electronics",
+      "model": "SparkFun FTDI Basic Breakout 3.3V - DEV-09873 / FTDI FT232RL USB to UART",
+      "description": "Placa FTDI Basic Breakout roja con conector USB Mini-B - chip FT232RL SSOP-28 - jumper selector 3.3V / 5V - header hembra de 6 pines DTR RXI TXO 3V3 CTS GND (GRN BLK) compatible Arduino Pro Mini - LEDs TX RX - SparkFun version",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "25",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "0f6b774f75e64f3d8b6e1fa22d55baf5",
+    "action": "addition",
+    "code": "EUOR1126",
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "25",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "EUOR1126",
+      "type": "development board",
+      "subtype": "FTDI USB to Serial TTL",
+      "manufacturer": "SparkFun Electronics",
+      "model": "SparkFun FTDI Basic Breakout 3.3V - DEV-09873 / FTDI FT232RL USB to UART",
+      "description": "Placa FTDI Basic Breakout roja con conector USB Mini-B - chip FT232RL SSOP-28 - jumper selector 3.3V / 5V - header hembra de 6 pines DTR RXI TXO 3V3 CTS GND (GRN BLK) compatible Arduino Pro Mini - LEDs TX RX - SparkFun version",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "0f6b774f75e64f3d8b6e1fa22d55baf5",
+    "code": "EUOR1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
