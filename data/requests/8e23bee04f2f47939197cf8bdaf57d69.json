@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "8e23bee04f2f47939197cf8bdaf57d69",
+  "saved_at": "2026-11-09T18:27:15.334117+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Engranes",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 15,
+    "location": "Área de Ensamblaje",
+    "sublocation": "11",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "8e23bee04f2f47939197cf8bdaf57d69",
+    "action": "addition",
+    "code": "EVPG1126",
+    "quantity": 15,
+    "location": "Área de Ensamblaje",
+    "sublocation": "11",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "EVPG1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Engranes",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "8e23bee04f2f47939197cf8bdaf57d69",
+    "code": "EVPG1126",
+    "action": "addition",
+    "quantity": 15
+  }
+}
