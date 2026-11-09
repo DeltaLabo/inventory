@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d3b3f2f8fb8745b587833ceca788bf3f",
+  "saved_at": "2026-11-09T22:03:44.240637+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conectores eléctricos impermeables",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 17,
+    "location": "Área de Ensamblaje",
+    "sublocation": "63",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "d3b3f2f8fb8745b587833ceca788bf3f",
+    "action": "addition",
+    "code": "HGRT1126",
+    "quantity": 17,
+    "location": "Área de Ensamblaje",
+    "sublocation": "63",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HGRT1126",
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conectores eléctricos impermeables",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "d3b3f2f8fb8745b587833ceca788bf3f",
+    "code": "HGRT1126",
+    "action": "addition",
+    "quantity": 17
+  }
+}
