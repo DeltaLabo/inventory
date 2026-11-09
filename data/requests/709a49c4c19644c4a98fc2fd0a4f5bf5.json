@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "709a49c4c19644c4a98fc2fd0a4f5bf5",
+  "saved_at": "2026-11-09T19:42:38.112010+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Carrete protesis",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 6,
+    "location": "Área de Ensamblaje",
+    "sublocation": "24",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "709a49c4c19644c4a98fc2fd0a4f5bf5",
+    "action": "addition",
+    "code": "MEVS1126",
+    "quantity": 6,
+    "location": "Área de Ensamblaje",
+    "sublocation": "24",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "MEVS1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Carrete protesis",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "709a49c4c19644c4a98fc2fd0a4f5bf5",
+    "code": "MEVS1126",
+    "action": "addition",
+    "quantity": 6
+  }
+}
