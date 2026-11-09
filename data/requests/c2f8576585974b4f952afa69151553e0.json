@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c2f8576585974b4f952afa69151553e0",
+  "saved_at": "2026-11-09T21:24:42.851515+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tornillo 1/8x3/4",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 25,
+    "location": "Área de Ensamblaje",
+    "sublocation": "48",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "c2f8576585974b4f952afa69151553e0",
+    "action": "addition",
+    "code": "HDXD1126",
+    "quantity": 25,
+    "location": "Área de Ensamblaje",
+    "sublocation": "48",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HDXD1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tornillo 1/8x3/4",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "c2f8576585974b4f952afa69151553e0",
+    "code": "HDXD1126",
+    "action": "addition",
+    "quantity": 25
+  }
+}
