@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "24ce167638964d7f806669fa90fda02d",
+  "saved_at": "2026-11-09T21:26:44.015851+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tuerca Galv 3/8",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 16,
+    "location": "Área de Ensamblaje",
+    "sublocation": "49",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "24ce167638964d7f806669fa90fda02d",
+    "action": "addition",
+    "code": "BNWA1126",
+    "quantity": 16,
+    "location": "Área de Ensamblaje",
+    "sublocation": "49",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BNWA1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tuerca Galv 3/8",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "24ce167638964d7f806669fa90fda02d",
+    "code": "BNWA1126",
+    "action": "addition",
+    "quantity": 16
+  }
+}
