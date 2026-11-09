@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "31c1d88ab42742cabe644c5064894935",
+  "saved_at": "2026-11-09T22:07:37.695228+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Puertos ethernet",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 35,
+    "location": "Área de Ensamblaje",
+    "sublocation": "65",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "31c1d88ab42742cabe644c5064894935",
+    "action": "addition",
+    "code": "CJCY1126",
+    "quantity": 35,
+    "location": "Área de Ensamblaje",
+    "sublocation": "65",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "CJCY1126",
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Puertos ethernet",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "31c1d88ab42742cabe644c5064894935",
+    "code": "CJCY1126",
+    "action": "addition",
+    "quantity": 35
+  }
+}
