@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ee9c74125ce947faa840414e6fe27b7a",
+  "saved_at": "2026-11-09T21:15:13.102626+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Gasa metálica grande",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "Área de Ensamblaje",
+    "sublocation": "46",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ee9c74125ce947faa840414e6fe27b7a",
+    "action": "addition",
+    "code": "CCOH1126",
+    "quantity": 4,
+    "location": "Área de Ensamblaje",
+    "sublocation": "46",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "CCOH1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Gasa metálica grande",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ee9c74125ce947faa840414e6fe27b7a",
+    "code": "CCOH1126",
+    "action": "addition",
+    "quantity": 4
+  }
+}
