@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "2ff796f0372b4387838cd2de88c02a11",
+  "saved_at": "2026-11-09T21:43:27.426764+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Interruptor negro (4 pines) / Conectores electricos negros",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 189,
+    "location": "Área de Ensamblaje",
+    "sublocation": "52",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "2ff796f0372b4387838cd2de88c02a11",
+    "action": "addition",
+    "code": "DRGO1126",
+    "quantity": 189,
+    "location": "Área de Ensamblaje",
+    "sublocation": "52",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "DRGO1126",
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Interruptor negro (4 pines) / Conectores electricos negros",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "2ff796f0372b4387838cd2de88c02a11",
+    "code": "DRGO1126",
+    "action": "addition",
+    "quantity": 189
+  }
+}
