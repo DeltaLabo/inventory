@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "961aa877bbb1480c95e31801ec41a7f8",
+  "saved_at": "2026-11-09T21:05:20.074205+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tornillos",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 24,
+    "location": "Área de Ensamblaje",
+    "sublocation": "42",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "961aa877bbb1480c95e31801ec41a7f8",
+    "action": "addition",
+    "code": "ZUKD1126",
+    "quantity": 24,
+    "location": "Área de Ensamblaje",
+    "sublocation": "42",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ZUKD1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tornillos",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "961aa877bbb1480c95e31801ec41a7f8",
+    "code": "ZUKD1126",
+    "action": "addition",
+    "quantity": 24
+  }
+}
