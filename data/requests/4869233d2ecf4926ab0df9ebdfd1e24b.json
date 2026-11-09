@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4869233d2ecf4926ab0df9ebdfd1e24b",
+  "saved_at": "2026-11-09T16:04:46.744362+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "PCB accessories",
+      "subtype": "optical encoder",
+      "manufacturer": "3D Systems",
+      "model": "Part # 401380 - EC Board R15450A",
+      "description": "Placa verde pequeña de 3D Systems con sensor óptico tipo ranura (photointerrupter) en CON1/CON2 - 2 optoacopladores SMD U1/U2 - 2 agujeros de montaje con ojal metálico - sticker S/N EC R15450A 01-3098 - lado reverso con 3 conectores JST de 4 y 5 pines etiquetados B-Out, Ex, P-Jet",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "R",
+    "sublocation": "14",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "4869233d2ecf4926ab0df9ebdfd1e24b",
+    "action": "addition",
+    "code": "KEVA1126",
+    "quantity": 1,
+    "location": "R",
+    "sublocation": "14",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "KEVA1126",
+      "type": "PCB accessories",
+      "subtype": "optical encoder",
+      "manufacturer": "3D Systems",
+      "model": "Part # 401380 - EC Board R15450A",
+      "description": "Placa verde pequeña de 3D Systems con sensor óptico tipo ranura (photointerrupter) en CON1/CON2 - 2 optoacopladores SMD U1/U2 - 2 agujeros de montaje con ojal metálico - sticker S/N EC R15450A 01-3098 - lado reverso con 3 conectores JST de 4 y 5 pines etiquetados B-Out, Ex, P-Jet",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "4869233d2ecf4926ab0df9ebdfd1e24b",
+    "code": "KEVA1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
