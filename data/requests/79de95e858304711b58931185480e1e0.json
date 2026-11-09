@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "79de95e858304711b58931185480e1e0",
+  "saved_at": "2026-11-09T19:21:22.288025+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Piezas Varias 3D",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 61,
+    "location": "Área de Ensamblaje",
+    "sublocation": "16",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "79de95e858304711b58931185480e1e0",
+    "action": "addition",
+    "code": "QAXQ1126",
+    "quantity": 61,
+    "location": "Área de Ensamblaje",
+    "sublocation": "16",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QAXQ1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Piezas Varias 3D",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "79de95e858304711b58931185480e1e0",
+    "code": "QAXQ1126",
+    "action": "addition",
+    "quantity": 61
+  }
+}
