@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "afdf0e70d4364c89bc611da66ae5f6a8",
+  "saved_at": "2026-11-09T19:56:06.725442+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Wire",
+      "subtype": "USB to CT-62 CAT",
+      "manufacturer": "Generic",
+      "model": "LD-C100",
+      "description": "Cable negro enrollado USB a Mini-DIN 8 pin CT-62",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "H",
+    "sublocation": "24",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "afdf0e70d4364c89bc611da66ae5f6a8",
+    "action": "addition",
+    "code": "VMSG1126",
+    "quantity": 1,
+    "location": "H",
+    "sublocation": "24",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "VMSG1126",
+      "type": "Wire",
+      "subtype": "USB to CT-62 CAT",
+      "manufacturer": "Generic",
+      "model": "LD-C100",
+      "description": "Cable negro enrollado USB a Mini-DIN 8 pin CT-62",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "afdf0e70d4364c89bc611da66ae5f6a8",
+    "code": "VMSG1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
