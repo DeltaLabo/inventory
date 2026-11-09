@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "a587cf9c50b44b42845cb28e9cf7fa0d",
+  "saved_at": "2026-11-09T21:40:33.492537+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Interruptor rojo  (2 pines)",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 81,
+    "location": "Área de Ensamblaje",
+    "sublocation": "51",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "a587cf9c50b44b42845cb28e9cf7fa0d",
+    "action": "addition",
+    "code": "XWAG1126",
+    "quantity": 81,
+    "location": "Área de Ensamblaje",
+    "sublocation": "51",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "XWAG1126",
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Interruptor rojo  (2 pines)",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "a587cf9c50b44b42845cb28e9cf7fa0d",
+    "code": "XWAG1126",
+    "action": "addition",
+    "quantity": 81
+  }
+}
