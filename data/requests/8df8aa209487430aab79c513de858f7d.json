@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "8df8aa209487430aab79c513de858f7d",
+  "saved_at": "2026-11-09T21:57:09.360961+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Amass MR30 (2 pines) / Amass MR30 (3 pines) / Amass XT60E-F (2 pines)",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 187,
+    "location": "Área de Ensamblaje",
+    "sublocation": "60",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "8df8aa209487430aab79c513de858f7d",
+    "action": "addition",
+    "code": "WRWP1126",
+    "quantity": 187,
+    "location": "Área de Ensamblaje",
+    "sublocation": "60",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "WRWP1126",
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Amass MR30 (2 pines) / Amass MR30 (3 pines) / Amass XT60E-F (2 pines)",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "8df8aa209487430aab79c513de858f7d",
+    "code": "WRWP1126",
+    "action": "addition",
+    "quantity": 187
+  }
+}
