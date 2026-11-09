@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "bf6a23df061b40bd8cf3d9570a837abe",
+  "saved_at": "2026-11-09T17:22:35.404408+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Protection Board",
+      "subtype": "Li-Po Protection",
+      "manufacturer": "Generic",
+      "model": "1S 3.7V Li-ion Protection Board",
+      "description": "Placa miniatura verde ultra delgada de protección de batería - 2 MOSFETs negros SOT-23 dual + resistencias R1 R2 (10K) y capacitores C1 C2 - largo ∼20mm - marcado 1623 en PCB",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "S",
+    "sublocation": "10",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "bf6a23df061b40bd8cf3d9570a837abe",
+    "action": "addition",
+    "code": "IQTL1126",
+    "quantity": 1,
+    "location": "S",
+    "sublocation": "10",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "IQTL1126",
+      "type": "Protection Board",
+      "subtype": "Li-Po Protection",
+      "manufacturer": "Generic",
+      "model": "1S 3.7V Li-ion Protection Board",
+      "description": "Placa miniatura verde ultra delgada de protección de batería - 2 MOSFETs negros SOT-23 dual + resistencias R1 R2 (10K) y capacitores C1 C2 - largo ∼20mm - marcado 1623 en PCB",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "bf6a23df061b40bd8cf3d9570a837abe",
+    "code": "IQTL1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
