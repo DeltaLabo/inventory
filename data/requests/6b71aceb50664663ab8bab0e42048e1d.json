@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "6b71aceb50664663ab8bab0e42048e1d",
+  "saved_at": "2026-11-09T21:49:40.216222+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Aislante de plastico (Rojo y Negro) / Conector tipo Banana (Macho) / Conector tipo Banana (Macho)",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 352,
+    "location": "Área de Ensamblaje",
+    "sublocation": "56",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "6b71aceb50664663ab8bab0e42048e1d",
+    "action": "addition",
+    "code": "CPKO1126",
+    "quantity": 352,
+    "location": "Área de Ensamblaje",
+    "sublocation": "56",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "CPKO1126",
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Aislante de plastico (Rojo y Negro) / Conector tipo Banana (Macho) / Conector tipo Banana (Macho)",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "6b71aceb50664663ab8bab0e42048e1d",
+    "code": "CPKO1126",
+    "action": "addition",
+    "quantity": 352
+  }
+}
