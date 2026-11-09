@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ed34b559749d400391e04dca66ddb02a",
+  "saved_at": "2026-11-09T20:30:29.093555+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Buck's",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "Área de Ensamblaje",
+    "sublocation": "30",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ed34b559749d400391e04dca66ddb02a",
+    "action": "addition",
+    "code": "WQEM1126",
+    "quantity": 2,
+    "location": "Área de Ensamblaje",
+    "sublocation": "30",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "WQEM1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Buck's",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ed34b559749d400391e04dca66ddb02a",
+    "code": "WQEM1126",
+    "action": "addition",
+    "quantity": 2
+  }
+}
