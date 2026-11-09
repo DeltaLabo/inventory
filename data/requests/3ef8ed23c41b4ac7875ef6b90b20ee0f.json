@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "3ef8ed23c41b4ac7875ef6b90b20ee0f",
+  "saved_at": "2026-11-09T20:48:29.422463+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "O-rings",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "Área de Ensamblaje",
+    "sublocation": "34",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "3ef8ed23c41b4ac7875ef6b90b20ee0f",
+    "action": "addition",
+    "code": "CBJL1126",
+    "quantity": 4,
+    "location": "Área de Ensamblaje",
+    "sublocation": "34",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "CBJL1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "O-rings",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "3ef8ed23c41b4ac7875ef6b90b20ee0f",
+    "code": "CBJL1126",
+    "action": "addition",
+    "quantity": 4
+  }
+}
