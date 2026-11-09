@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "34dc692f11bd40018ba9e43cef6aed41",
+  "saved_at": "2026-11-09T22:11:04.119266+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Rollos de cables",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 6,
+    "location": "Área de Ensamblaje",
+    "sublocation": "67",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "34dc692f11bd40018ba9e43cef6aed41",
+    "action": "addition",
+    "code": "AMSW1126",
+    "quantity": 6,
+    "location": "Área de Ensamblaje",
+    "sublocation": "67",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "AMSW1126",
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Rollos de cables",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "34dc692f11bd40018ba9e43cef6aed41",
+    "code": "AMSW1126",
+    "action": "addition",
+    "quantity": 6
+  }
+}
