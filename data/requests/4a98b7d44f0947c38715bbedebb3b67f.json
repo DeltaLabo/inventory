@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4a98b7d44f0947c38715bbedebb3b67f",
+  "saved_at": "2026-11-09T16:50:17.230293+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "converter",
+      "subtype": "USB to RS485",
+      "manufacturer": "Generic",
+      "model": "USB to RS485 Converter",
+      "description": "Adaptador convertidor USB-A a RS485 con bornera verde de 2 pines A/B - carcasa plástica negra con logo USB - tipo dongle directo sin cable - protección ESD",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "C",
+    "sublocation": "12",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "4a98b7d44f0947c38715bbedebb3b67f",
+    "action": "addition",
+    "code": "FCVS1126",
+    "quantity": 1,
+    "location": "C",
+    "sublocation": "12",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "FCVS1126",
+      "type": "converter",
+      "subtype": "USB to RS485",
+      "manufacturer": "Generic",
+      "model": "USB to RS485 Converter",
+      "description": "Adaptador convertidor USB-A a RS485 con bornera verde de 2 pines A/B - carcasa plástica negra con logo USB - tipo dongle directo sin cable - protección ESD",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "4a98b7d44f0947c38715bbedebb3b67f",
+    "code": "FCVS1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
