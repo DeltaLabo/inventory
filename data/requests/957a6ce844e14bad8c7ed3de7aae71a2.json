@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "957a6ce844e14bad8c7ed3de7aae71a2",
+  "saved_at": "2026-11-09T20:55:50.611315+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tornillos y Tuercas",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 47,
+    "location": "Área de Ensamblaje",
+    "sublocation": "37",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "957a6ce844e14bad8c7ed3de7aae71a2",
+    "action": "addition",
+    "code": "OKQR1126",
+    "quantity": 47,
+    "location": "Área de Ensamblaje",
+    "sublocation": "37",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "OKQR1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tornillos y Tuercas",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "957a6ce844e14bad8c7ed3de7aae71a2",
+    "code": "OKQR1126",
+    "action": "addition",
+    "quantity": 47
+  }
+}
