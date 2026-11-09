@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "56dd5e8b2c8d43a6941af02859cbf472",
+  "saved_at": "2026-11-09T21:10:20.831529+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Gasa metálica pequeña",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 34,
+    "location": "Área de Ensamblaje",
+    "sublocation": "44",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "56dd5e8b2c8d43a6941af02859cbf472",
+    "action": "addition",
+    "code": "DPAP1126",
+    "quantity": 34,
+    "location": "Área de Ensamblaje",
+    "sublocation": "44",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "DPAP1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Gasa metálica pequeña",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "56dd5e8b2c8d43a6941af02859cbf472",
+    "code": "DPAP1126",
+    "action": "addition",
+    "quantity": 34
+  }
+}
