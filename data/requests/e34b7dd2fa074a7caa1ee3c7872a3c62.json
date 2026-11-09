@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e34b7dd2fa074a7caa1ee3c7872a3c62",
+  "saved_at": "2026-11-09T18:40:52.418857+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Soldadura (Estaño)",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "13",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "e34b7dd2fa074a7caa1ee3c7872a3c62",
+    "action": "addition",
+    "code": "CFPA1126",
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "13",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "CFPA1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Soldadura (Estaño)",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "e34b7dd2fa074a7caa1ee3c7872a3c62",
+    "code": "CFPA1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
