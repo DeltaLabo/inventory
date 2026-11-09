@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "6ac4bc216599464db344b7e686411404",
+  "saved_at": "2026-11-09T15:29:34.328028+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Storage",
+      "subtype": "NVMe M.2 SSD",
+      "manufacturer": "SK hynix",
+      "model": "HFM256GDJTNG-8310A",
+      "description": "SSD M.2 2280 NVMe 256GB con disipador/ bracket metálico - PCB verde SK Hynix - etiqueta con 256GB, PCIe Gen3 x4 - con tornillo y cubierta metálica para laptop Lenovo",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "86",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "6ac4bc216599464db344b7e686411404",
+    "action": "addition",
+    "code": "JUIC1126",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "86",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "JUIC1126",
+      "type": "Storage",
+      "subtype": "NVMe M.2 SSD",
+      "manufacturer": "SK hynix",
+      "model": "HFM256GDJTNG-8310A",
+      "description": "SSD M.2 2280 NVMe 256GB con disipador/ bracket metálico - PCB verde SK Hynix - etiqueta con 256GB, PCIe Gen3 x4 - con tornillo y cubierta metálica para laptop Lenovo",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "6ac4bc216599464db344b7e686411404",
+    "code": "JUIC1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
