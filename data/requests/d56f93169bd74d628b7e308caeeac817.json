@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d56f93169bd74d628b7e308caeeac817",
+  "saved_at": "2026-11-09T20:23:19.704037+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "TUGT1126",
+    "original_item": {
+      "code": "TUGT1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Arandelas",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Arandelas",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Corrección",
+    "original_stock": {
+      "code": "TUGT1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "27",
+      "units": "19"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "27",
+      "units": "19"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "d56f93169bd74d628b7e308caeeac817",
+    "action": "edit",
+    "code": "TUGT1126",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Corrección",
+    "product_changes": {
+      "type": {
+        "before": "Organizador #1",
+        "after": "Organizador #3"
+      }
+    },
+    "stock_changes": {},
+    "original_location": {
+      "code": "TUGT1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "27",
+      "units": "19"
+    }
+  },
+  "result": {
+    "id": "d56f93169bd74d628b7e308caeeac817",
+    "code": "TUGT1126",
+    "action": "edit"
+  }
+}
