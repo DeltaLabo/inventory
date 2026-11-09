@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4ab1583ee741486e8eb91ea2d061f627",
+  "saved_at": "2026-11-09T22:16:20.895551+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Cosas de soldadura / Puntas de Cautín",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 18,
+    "location": "Área de Ensamblaje",
+    "sublocation": "70",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "4ab1583ee741486e8eb91ea2d061f627",
+    "action": "addition",
+    "code": "WFZA1126",
+    "quantity": 18,
+    "location": "Área de Ensamblaje",
+    "sublocation": "70",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "WFZA1126",
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Cosas de soldadura / Puntas de Cautín",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "4ab1583ee741486e8eb91ea2d061f627",
+    "code": "WFZA1126",
+    "action": "addition",
+    "quantity": 18
+  }
+}
