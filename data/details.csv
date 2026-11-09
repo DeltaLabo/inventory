@@ -357,3 +357,4 @@ UTDD1126,power,solar panel,SAPPORO ROBOTICS,RF5254 - 53x36mm Mini Solar Panel,"M
 LYWO1126,Sensor Board,pH sensor interface,Generic,pH Sensor Module BNC - pH-4502C,"Módulo interfaz analógico para sonda de pH con conector BNC hembra - PCB verde con 2 potenciómetros W103/W104 para calibración, pinout To Do Po G G U+ - para electrodo de pH",,,,
 JUIC1126,Storage,NVMe M.2 SSD,SK hynix,HFM256GDJTNG-8310A,"SSD M.2 2280 NVMe 256GB con disipador/ bracket metálico - PCB verde SK Hynix - etiqueta con 256GB, PCIe Gen3 x4 - con tornillo y cubierta metálica para laptop Lenovo",,,,
 ZWBT1126,Accessories,IC socket,Generic,DIP-28 IC Socket 0.3 inch,Zócalo DIP 28 pines angosto - negro - contactos plateados para montaje de CI en PCB,,,,
+PEDQ1126,pcb,adapter board,Generic,SOP8 to DIP8 Adapter 0.65mm,Placa adaptadora SMD a DIP SOP8 a DIP8 - PCB verde pequeña con 8 pads numerados 1-8 - pitch 0.65mm,,,,

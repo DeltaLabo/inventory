@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ad4da88fe1df4e7297c0ff5402b4659c",
+  "saved_at": "2026-11-09T15:42:13.448461+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb",
+      "subtype": "adapter board",
+      "manufacturer": "Generic",
+      "model": "SOP8 to DIP8 Adapter 0.65mm",
+      "description": "Placa adaptadora SMD a DIP SOP8 a DIP8 - PCB verde pequeña con 8 pads numerados 1-8 - pitch 0.65mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 9,
+    "location": "G",
+    "sublocation": "87",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ad4da88fe1df4e7297c0ff5402b4659c",
+    "action": "addition",
+    "code": "PEDQ1126",
+    "quantity": 9,
+    "location": "G",
+    "sublocation": "87",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "PEDQ1126",
+      "type": "pcb",
+      "subtype": "adapter board",
+      "manufacturer": "Generic",
+      "model": "SOP8 to DIP8 Adapter 0.65mm",
+      "description": "Placa adaptadora SMD a DIP SOP8 a DIP8 - PCB verde pequeña con 8 pads numerados 1-8 - pitch 0.65mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ad4da88fe1df4e7297c0ff5402b4659c",
+    "code": "PEDQ1126",
+    "action": "addition",
+    "quantity": 9
+  }
+}
