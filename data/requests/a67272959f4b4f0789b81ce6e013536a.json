@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "a67272959f4b4f0789b81ce6e013536a",
+  "saved_at": "2026-11-09T19:45:24.813302+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "connectors",
+      "subtype": "push-to-connect straight union",
+      "manufacturer": "Generic",
+      "model": "Straight Union Push Connector",
+      "description": "Conector neumático recto de unión push-fit negro con anillos blancos",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "J",
+    "sublocation": "26",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "a67272959f4b4f0789b81ce6e013536a",
+    "action": "addition",
+    "code": "IWIF1126",
+    "quantity": 1,
+    "location": "J",
+    "sublocation": "26",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "IWIF1126",
+      "type": "connectors",
+      "subtype": "push-to-connect straight union",
+      "manufacturer": "Generic",
+      "model": "Straight Union Push Connector",
+      "description": "Conector neumático recto de unión push-fit negro con anillos blancos",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "a67272959f4b4f0789b81ce6e013536a",
+    "code": "IWIF1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
