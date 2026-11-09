@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "882de63dc9084b609dc482b86472d06a",
+  "saved_at": "2026-11-09T21:58:24.339223+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conector tipo Banana (Hembra) Pequeño Rojo / Conector tipo Banana (Hembra) Pequeño Negro",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 227,
+    "location": "Área de Ensamblaje",
+    "sublocation": "61",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "882de63dc9084b609dc482b86472d06a",
+    "action": "addition",
+    "code": "BMMD1126",
+    "quantity": 227,
+    "location": "Área de Ensamblaje",
+    "sublocation": "61",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BMMD1126",
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conector tipo Banana (Hembra) Pequeño Rojo / Conector tipo Banana (Hembra) Pequeño Negro",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "882de63dc9084b609dc482b86472d06a",
+    "code": "BMMD1126",
+    "action": "addition",
+    "quantity": 227
+  }
+}
