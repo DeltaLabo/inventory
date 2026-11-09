@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c6ad8a15fbf34436b8d2b82c8bd6e06a",
+  "saved_at": "2026-11-09T16:31:50.498530+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "pcb adapter",
+      "subtype": "SOP/MSOP to DIP adapter",
+      "manufacturer": "Generic",
+      "model": "SOP8 to DIP8 0.65mm pitch adapter board",
+      "description": "Placa adaptadora verde de paso 0.65mm de SOP-8/MSOP-8 a DIP-8 - IC negro de 8 pines soldado en el centro - pines numerados 1-8 - montada sobre base plástica blanca tipo header - texto 0.65mm y U-10",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "88",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "c6ad8a15fbf34436b8d2b82c8bd6e06a",
+    "action": "addition",
+    "code": "LBXY1126",
+    "quantity": 2,
+    "location": "G",
+    "sublocation": "88",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "LBXY1126",
+      "type": "pcb adapter",
+      "subtype": "SOP/MSOP to DIP adapter",
+      "manufacturer": "Generic",
+      "model": "SOP8 to DIP8 0.65mm pitch adapter board",
+      "description": "Placa adaptadora verde de paso 0.65mm de SOP-8/MSOP-8 a DIP-8 - IC negro de 8 pines soldado en el centro - pines numerados 1-8 - montada sobre base plástica blanca tipo header - texto 0.65mm y U-10",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "c6ad8a15fbf34436b8d2b82c8bd6e06a",
+    "code": "LBXY1126",
+    "action": "addition",
+    "quantity": 2
+  }
+}
