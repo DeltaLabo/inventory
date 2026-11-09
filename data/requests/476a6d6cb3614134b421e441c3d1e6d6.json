@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "476a6d6cb3614134b421e441c3d1e6d6",
+  "saved_at": "2026-11-09T18:01:27.223288+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "t.t Piezas",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 3,
+    "location": "Área de Ensamblaje",
+    "sublocation": "9",
+    "person": "Maryppaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "476a6d6cb3614134b421e441c3d1e6d6",
+    "action": "addition",
+    "code": "JTNA1126",
+    "quantity": 3,
+    "location": "Área de Ensamblaje",
+    "sublocation": "9",
+    "person": "Maryppaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "JTNA1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "t.t Piezas",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "476a6d6cb3614134b421e441c3d1e6d6",
+    "code": "JTNA1126",
+    "action": "addition",
+    "quantity": 3
+  }
+}
