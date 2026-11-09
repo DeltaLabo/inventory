@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "634b008faa2a4c8196450d55d3220b74",
+  "saved_at": "2026-11-09T20:45:45.582712+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Teflón",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "Área de Ensamblaje",
+    "sublocation": "33",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "634b008faa2a4c8196450d55d3220b74",
+    "action": "addition",
+    "code": "CRYA1126",
+    "quantity": 4,
+    "location": "Área de Ensamblaje",
+    "sublocation": "33",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "CRYA1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Teflón",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "634b008faa2a4c8196450d55d3220b74",
+    "code": "CRYA1126",
+    "action": "addition",
+    "quantity": 4
+  }
+}
