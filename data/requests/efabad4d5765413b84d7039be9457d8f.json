@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "efabad4d5765413b84d7039be9457d8f",
+  "saved_at": "2026-11-09T20:58:13.843977+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tornillo punta Broca",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 97,
+    "location": "Área de Ensamblaje",
+    "sublocation": "38",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "efabad4d5765413b84d7039be9457d8f",
+    "action": "addition",
+    "code": "BPYG1126",
+    "quantity": 97,
+    "location": "Área de Ensamblaje",
+    "sublocation": "38",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BPYG1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tornillo punta Broca",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "efabad4d5765413b84d7039be9457d8f",
+    "code": "BPYG1126",
+    "action": "addition",
+    "quantity": 97
+  }
+}
