@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "562aa54776eb4917a168e3a46f3cc0c0",
+  "saved_at": "2026-11-09T19:23:19.768661+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Piezas Varias 3D",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 3,
+    "location": "Área de Ensamblaje",
+    "sublocation": "17",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "562aa54776eb4917a168e3a46f3cc0c0",
+    "action": "addition",
+    "code": "NIOO1126",
+    "quantity": 3,
+    "location": "Área de Ensamblaje",
+    "sublocation": "17",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "NIOO1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Piezas Varias 3D",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "562aa54776eb4917a168e3a46f3cc0c0",
+    "code": "NIOO1126",
+    "action": "addition",
+    "quantity": 3
+  }
+}
