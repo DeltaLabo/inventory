@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "a496b515e6b14fb5bb3bedfa44b5085d",
+  "saved_at": "2026-11-09T15:59:58.670772+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Sensor Board",
+      "subtype": "pH sensor interface",
+      "manufacturer": "Generic",
+      "model": ": PH-4502C pH Sensor Module - V2.0 - pH0-14 Version",
+      "description": "Módulo interfaz analógico para sonda de pH con conector BNC hembra - PCB negra con 2 potenciómetros azules W103 para calibración, conector JST XH de 3 pines para temperatura, tira de pines Po So Do To G G V+ - para electrodo de pH analógico",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "49",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "a496b515e6b14fb5bb3bedfa44b5085d",
+    "action": "addition",
+    "code": "FSST1126",
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "49",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "FSST1126",
+      "type": "Sensor Board",
+      "subtype": "pH sensor interface",
+      "manufacturer": "Generic",
+      "model": ": PH-4502C pH Sensor Module - V2.0 - pH0-14 Version",
+      "description": "Módulo interfaz analógico para sonda de pH con conector BNC hembra - PCB negra con 2 potenciómetros azules W103 para calibración, conector JST XH de 3 pines para temperatura, tira de pines Po So Do To G G V+ - para electrodo de pH analógico",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "a496b515e6b14fb5bb3bedfa44b5085d",
+    "code": "FSST1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
