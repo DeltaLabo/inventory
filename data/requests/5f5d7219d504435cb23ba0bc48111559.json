@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "5f5d7219d504435cb23ba0bc48111559",
+  "saved_at": "2026-11-09T22:06:36.725200+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Rollos de cables",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 9,
+    "location": "Área de Ensamblaje",
+    "sublocation": "64",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "5f5d7219d504435cb23ba0bc48111559",
+    "action": "addition",
+    "code": "XMRF1126",
+    "quantity": 9,
+    "location": "Área de Ensamblaje",
+    "sublocation": "64",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "XMRF1126",
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Rollos de cables",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "5f5d7219d504435cb23ba0bc48111559",
+    "code": "XMRF1126",
+    "action": "addition",
+    "quantity": 9
+  }
+}
