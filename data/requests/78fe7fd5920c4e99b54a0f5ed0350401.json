@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "78fe7fd5920c4e99b54a0f5ed0350401",
+  "saved_at": "2026-11-09T14:26:45.485219+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "electronic modules",
+      "subtype": "micro SD card adapter",
+      "manufacturer": "Generic",
+      "model": "Micro SD Card Adapter Module SPI",
+      "description": "Módulo lector de tarjeta micro SD a SPI - PCB azul con slot metálico - breakout 6 pines - interfaz 3.3V",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "E",
+    "sublocation": "46",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "78fe7fd5920c4e99b54a0f5ed0350401",
+    "action": "addition",
+    "code": "BTGG1126",
+    "quantity": 2,
+    "location": "E",
+    "sublocation": "46",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BTGG1126",
+      "type": "electronic modules",
+      "subtype": "micro SD card adapter",
+      "manufacturer": "Generic",
+      "model": "Micro SD Card Adapter Module SPI",
+      "description": "Módulo lector de tarjeta micro SD a SPI - PCB azul con slot metálico - breakout 6 pines - interfaz 3.3V",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "78fe7fd5920c4e99b54a0f5ed0350401",
+    "code": "BTGG1126",
+    "action": "addition",
+    "quantity": 2
+  }
+}
