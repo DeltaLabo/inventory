@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "6dee9a6ea05b4e619e144e54cb6c7bd5",
+  "saved_at": "2026-11-09T21:02:34.583655+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tornillo Hexagonal",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 6,
+    "location": "Área de Ensamblaje",
+    "sublocation": "40",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "6dee9a6ea05b4e619e144e54cb6c7bd5",
+    "action": "addition",
+    "code": "WHUR1126",
+    "quantity": 6,
+    "location": "Área de Ensamblaje",
+    "sublocation": "40",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "WHUR1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Tornillo Hexagonal",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "6dee9a6ea05b4e619e144e54cb6c7bd5",
+    "code": "WHUR1126",
+    "action": "addition",
+    "quantity": 6
+  }
+}
