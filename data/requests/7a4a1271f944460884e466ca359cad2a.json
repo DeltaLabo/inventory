@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "7a4a1271f944460884e466ca359cad2a",
+  "saved_at": "2026-11-09T17:27:48.870306+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "development board",
+      "subtype": "MCU / WiFi BLE",
+      "manufacturer": "Seeed Studio",
+      "model": "XIAO-ESP32-C3",
+      "description": "Placa de desarrollo miniatura Seeed Studio XIAO con USB-C - tamaño 21x17.5mm pulgar - botones Boot/Reset y conector antena externa u.FL - pines castellated SMD",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "26",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "7a4a1271f944460884e466ca359cad2a",
+    "action": "addition",
+    "code": "TPXI1126",
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "26",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "TPXI1126",
+      "type": "development board",
+      "subtype": "MCU / WiFi BLE",
+      "manufacturer": "Seeed Studio",
+      "model": "XIAO-ESP32-C3",
+      "description": "Placa de desarrollo miniatura Seeed Studio XIAO con USB-C - tamaño 21x17.5mm pulgar - botones Boot/Reset y conector antena externa u.FL - pines castellated SMD",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "7a4a1271f944460884e466ca359cad2a",
+    "code": "TPXI1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
