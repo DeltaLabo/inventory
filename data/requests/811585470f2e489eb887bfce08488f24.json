@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "811585470f2e489eb887bfce08488f24",
+  "saved_at": "2026-11-09T14:30:55.063033+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "power",
+      "subtype": "buck; CC/CV",
+      "manufacturer": "Generic",
+      "model": "XL4015 CC-CV Buck Module 5A",
+      "description": "Módulo convertidor DC-DC step-down ajustable con control de voltaje y corriente - PCB roja con bobina toroidal, 2 potenciómetros W103, capacitores 100V y 35V, borneras azules entrada/salida",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "B",
+    "sublocation": "25",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "811585470f2e489eb887bfce08488f24",
+    "action": "addition",
+    "code": "IYGI1126",
+    "quantity": 1,
+    "location": "B",
+    "sublocation": "25",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "IYGI1126",
+      "type": "power",
+      "subtype": "buck; CC/CV",
+      "manufacturer": "Generic",
+      "model": "XL4015 CC-CV Buck Module 5A",
+      "description": "Módulo convertidor DC-DC step-down ajustable con control de voltaje y corriente - PCB roja con bobina toroidal, 2 potenciómetros W103, capacitores 100V y 35V, borneras azules entrada/salida",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "811585470f2e489eb887bfce08488f24",
+    "code": "IYGI1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
