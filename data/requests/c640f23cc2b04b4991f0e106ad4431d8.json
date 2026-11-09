@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c640f23cc2b04b4991f0e106ad4431d8",
+  "saved_at": "2026-11-09T20:01:15.564907+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "load cell amplifier breakout",
+      "manufacturer": "Generic",
+      "model": "HX711 Breakout Board",
+      "description": "Modulo verde pequeño XFW-HX711 con chip HX711 24-bit ADC - pines E+ E- A- A+ B- B+ para celda de carga y GND DT SCK VCC digital",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "91",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "c640f23cc2b04b4991f0e106ad4431d8",
+    "action": "addition",
+    "code": "XJIG1126",
+    "quantity": 1,
+    "location": "G",
+    "sublocation": "91",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "XJIG1126",
+      "type": "Accessories",
+      "subtype": "load cell amplifier breakout",
+      "manufacturer": "Generic",
+      "model": "HX711 Breakout Board",
+      "description": "Modulo verde pequeño XFW-HX711 con chip HX711 24-bit ADC - pines E+ E- A- A+ B- B+ para celda de carga y GND DT SCK VCC digital",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "c640f23cc2b04b4991f0e106ad4431d8",
+    "code": "XJIG1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
