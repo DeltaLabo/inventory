@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d9e2fa4fe699458b9a68a0614241af7f",
+  "saved_at": "2026-11-09T14:04:01.514885+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "connectors",
+      "subtype": "USB data cable",
+      "manufacturer": "SWAGUY",
+      "model": "USB-A to Micro USB Braided Cable",
+      "description": "Cable USB-A a Micro USB trenzado gris - marca SWAGUY - con amarra plástica blanca - longitud ∼1m",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "R",
+    "sublocation": "13",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "d9e2fa4fe699458b9a68a0614241af7f",
+    "action": "addition",
+    "code": "QJED1126",
+    "quantity": 1,
+    "location": "R",
+    "sublocation": "13",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QJED1126",
+      "type": "connectors",
+      "subtype": "USB data cable",
+      "manufacturer": "SWAGUY",
+      "model": "USB-A to Micro USB Braided Cable",
+      "description": "Cable USB-A a Micro USB trenzado gris - marca SWAGUY - con amarra plástica blanca - longitud ∼1m",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "d9e2fa4fe699458b9a68a0614241af7f",
+    "code": "QJED1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
