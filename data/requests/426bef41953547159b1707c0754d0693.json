@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "426bef41953547159b1707c0754d0693",
+  "saved_at": "2026-11-10T14:02:54.866449+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Probeta Compresión",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 11,
+    "location": "Área de Ensamblaje",
+    "sublocation": "74",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "426bef41953547159b1707c0754d0693",
+    "action": "addition",
+    "code": "CBCX1126",
+    "quantity": 11,
+    "location": "Área de Ensamblaje",
+    "sublocation": "74",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "CBCX1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Probeta Compresión",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "426bef41953547159b1707c0754d0693",
+    "code": "CBCX1126",
+    "action": "addition",
+    "quantity": 11
+  }
+}
