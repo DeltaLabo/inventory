@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d8e35b5459454d9f8047bb3398228a97",
+  "saved_at": "2026-11-10T14:08:23.067276+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Probeta Tensión",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 8,
+    "location": "Área de Ensamblaje",
+    "sublocation": "76",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "d8e35b5459454d9f8047bb3398228a97",
+    "action": "addition",
+    "code": "LHNE1126",
+    "quantity": 8,
+    "location": "Área de Ensamblaje",
+    "sublocation": "76",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "LHNE1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "",
+      "model": "",
+      "description": "Probeta Tensión",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "d8e35b5459454d9f8047bb3398228a97",
+    "code": "LHNE1126",
+    "action": "addition",
+    "quantity": 8
+  }
+}
