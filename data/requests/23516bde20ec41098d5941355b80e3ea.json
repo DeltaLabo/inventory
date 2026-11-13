@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "23516bde20ec41098d5941355b80e3ea",
+  "saved_at": "2026-11-13T21:10:18.060202+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "M2.6x6mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "102",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "23516bde20ec41098d5941355b80e3ea",
+    "action": "addition",
+    "code": "NFLN1126",
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "102",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "NFLN1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "M2.6x6mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "23516bde20ec41098d5941355b80e3ea",
+    "code": "NFLN1126",
+    "action": "addition",
+    "quantity": 100
+  }
+}
