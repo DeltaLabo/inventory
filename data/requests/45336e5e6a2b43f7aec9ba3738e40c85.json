@@ -1,0 +1,77 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "45336e5e6a2b43f7aec9ba3738e40c85",
+  "saved_at": "2026-11-13T17:08:49.124479+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "OUMU1026",
+    "original_item": {
+      "code": "OUMU1026",
+      "type": "connectors",
+      "subtype": "lever wire connector assortment",
+      "manufacturer": "Wago",
+      "model": "221",
+      "description": "Stag 2-way quick connector",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "LEVERCON"
+    },
+    "updated_item": {
+      "description": "Stag 2;3;5-way quick connector",
+      "type": "connectors",
+      "subtype": "lever wire connector assortment",
+      "manufacturer": "Wago",
+      "model": "221",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "Cantidad",
+    "original_stock": {
+      "code": "OUMU1026",
+      "location": "Área de Ensamblaje",
+      "sublocation": "87",
+      "units": "52"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "87",
+      "units": "64"
+    },
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "45336e5e6a2b43f7aec9ba3738e40c85",
+    "action": "edit",
+    "code": "OUMU1026",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "Cantidad",
+    "product_changes": {
+      "description": {
+        "before": "Stag 2-way quick connector",
+        "after": "Stag 2;3;5-way quick connector"
+      }
+    },
+    "stock_changes": {
+      "units": {
+        "before": "52",
+        "after": "64"
+      }
+    },
+    "original_location": {
+      "code": "OUMU1026",
+      "location": "Área de Ensamblaje",
+      "sublocation": "87",
+      "units": "52"
+    }
+  },
+  "result": {
+    "id": "45336e5e6a2b43f7aec9ba3738e40c85",
+    "code": "OUMU1026",
+    "action": "edit"
+  }
+}

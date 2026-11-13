@@ -135,7 +135,7 @@ HJFW1026,converter,USB converter,Waveshare,USB-RS232/485/TTL/UART,converter for 
 YKZW1026,converter,USB converter,Waveshare,USB-4CH SERIAL,converter for USB to 4 serial channels,,,,USBTSERI
 PBJN1026,connectors,Mouser Electronics,M20-9990245, 5V-EXT 5V-INT,,,,,M20Z9990
 FLKV1026,connectors,pin angle connectors,SAMTEC,TMM-106-01-LD-RA,Connectors with 12 pins at a angle of 90°,,,,CMM12PIN
-OUMU1026,connectors,lever wire connector assortment,Wago,221,Stag 2-way quick connector,,,,LEVERCON
+OUMU1026,connectors,lever wire connector assortment,Wago,221,Stag 2;3;5-way quick connector,,,,LEVERCON
 TKLD1026,connectors,rectangular header,Samtec,NPPN-252AFCN-RC 4,Rectangular connector 2-row 25x2 (50 pins),,,Right-angle termination,HEADER50
 RNOB1026,PIC,PIC microcontroller,MICROCHIP,181798P,Fast switch,,,,PIC16F87
 RPNO1026,PIC,PIC microcontroller,Microchip Technology,PIC16F1786,Fast switching,,,,PIC16F17
