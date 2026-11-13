@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "1213c93b836a4a2fbf143bb57509a43b",
+  "saved_at": "2026-11-13T16:05:06.488598+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "M2.5 washers",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "78",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "1213c93b836a4a2fbf143bb57509a43b",
+    "action": "addition",
+    "code": "FBZC1126",
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "78",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "FBZC1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "M2.5 washers",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "1213c93b836a4a2fbf143bb57509a43b",
+    "code": "FBZC1126",
+    "action": "addition",
+    "quantity": 100
+  }
+}
