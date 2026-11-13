@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "39062ec1af5a45f08786bf1f12ccaade",
+  "saved_at": "2026-11-13T22:14:09.864830+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.3x15MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "110",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "39062ec1af5a45f08786bf1f12ccaade",
+    "action": "addition",
+    "code": "QSIC1126",
+    "quantity": 1,
+    "location": "Área de Ensamblaje",
+    "sublocation": "110",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QSIC1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.3x15MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "39062ec1af5a45f08786bf1f12ccaade",
+    "code": "QSIC1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
