@@ -1,0 +1,80 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "0aec255cc6744aff9cb531c7926f2c73",
+  "saved_at": "2026-11-13T17:43:54.453594+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "CBUC1026",
+    "original_item": {
+      "code": "CBUC1026",
+      "type": "passives",
+      "subtype": "glass fuse",
+      "manufacturer": "Unknown",
+      "model": "523-4725",
+      "description": "fuse for protection/4A/125V",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "FUSE0239"
+    },
+    "updated_item": {
+      "description": "fuse for protection/4A/125V",
+      "type": "passives",
+      "subtype": "glass fuse",
+      "manufacturer": "Unknown",
+      "model": "523-4725",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "Cambio de posicion",
+    "original_stock": {
+      "code": "CBUC1026",
+      "location": "I",
+      "sublocation": "1",
+      "units": "16"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "88",
+      "units": "10"
+    },
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "0aec255cc6744aff9cb531c7926f2c73",
+    "action": "edit",
+    "code": "CBUC1026",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "Cambio de posicion",
+    "product_changes": {},
+    "stock_changes": {
+      "location": {
+        "before": "I",
+        "after": "Área de Ensamblaje"
+      },
+      "sublocation": {
+        "before": "1",
+        "after": "88"
+      },
+      "units": {
+        "before": "16",
+        "after": "10"
+      }
+    },
+    "original_location": {
+      "code": "CBUC1026",
+      "location": "I",
+      "sublocation": "1",
+      "units": "16"
+    }
+  },
+  "result": {
+    "id": "0aec255cc6744aff9cb531c7926f2c73",
+    "code": "CBUC1026",
+    "action": "edit"
+  }
+}
