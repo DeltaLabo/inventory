@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "5c761e9484654631ac76d020b1f1cc97",
+  "saved_at": "2026-11-13T22:29:18.443433+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.3x10MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "114",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "5c761e9484654631ac76d020b1f1cc97",
+    "action": "addition",
+    "code": "SRWF1126",
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "114",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SRWF1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.3x10MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "5c761e9484654631ac76d020b1f1cc97",
+    "code": "SRWF1126",
+    "action": "addition",
+    "quantity": 60
+  }
+}
