@@ -1,0 +1,76 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b561aa6676cf42fda8213d11a82f7e2c",
+  "saved_at": "2026-11-13T15:58:04.537939+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "NNAY1026",
+    "original_item": {
+      "code": "NNAY1026",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "M2 washers",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "WASHSETS"
+    },
+    "updated_item": {
+      "description": "M2 washers",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "Cambio de posicion",
+    "original_stock": {
+      "code": "NNAY1026",
+      "location": "Organizador #1",
+      "sublocation": "consumable",
+      "units": "100"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "77",
+      "units": "100"
+    },
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "b561aa6676cf42fda8213d11a82f7e2c",
+    "action": "edit",
+    "code": "NNAY1026",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "Cambio de posicion",
+    "product_changes": {},
+    "stock_changes": {
+      "location": {
+        "before": "Organizador #1",
+        "after": "Área de Ensamblaje"
+      },
+      "sublocation": {
+        "before": "consumable",
+        "after": "77"
+      }
+    },
+    "original_location": {
+      "code": "NNAY1026",
+      "location": "Organizador #1",
+      "sublocation": "consumable",
+      "units": "100"
+    }
+  },
+  "result": {
+    "id": "b561aa6676cf42fda8213d11a82f7e2c",
+    "code": "NNAY1026",
+    "action": "edit"
+  }
+}
