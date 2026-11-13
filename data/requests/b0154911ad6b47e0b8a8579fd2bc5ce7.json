@@ -1,0 +1,85 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b0154911ad6b47e0b8a8579fd2bc5ce7",
+  "saved_at": "2026-11-13T17:05:51.777771+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "OUMU1026",
+    "original_item": {
+      "code": "OUMU1026",
+      "type": "connectors",
+      "subtype": "lever wire connector assortment",
+      "manufacturer": "Wago",
+      "model": "221",
+      "description": "assortment of lever wire connectors for splicing;1 box;;includes assorted Wago 221 lever connectors",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "LEVERCON"
+    },
+    "updated_item": {
+      "description": "Stag 2-way quick connector",
+      "type": "connectors",
+      "subtype": "lever wire connector assortment",
+      "manufacturer": "Wago",
+      "model": "221",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "Cambio de posicicon",
+    "original_stock": {
+      "code": "OUMU1026",
+      "location": "I",
+      "sublocation": "12",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "87",
+      "units": "52"
+    },
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "b0154911ad6b47e0b8a8579fd2bc5ce7",
+    "action": "edit",
+    "code": "OUMU1026",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "Cambio de posicicon",
+    "product_changes": {
+      "description": {
+        "before": "assortment of lever wire connectors for splicing;1 box;;includes assorted Wago 221 lever connectors",
+        "after": "Stag 2-way quick connector"
+      }
+    },
+    "stock_changes": {
+      "location": {
+        "before": "I",
+        "after": "Área de Ensamblaje"
+      },
+      "sublocation": {
+        "before": "12",
+        "after": "87"
+      },
+      "units": {
+        "before": "1",
+        "after": "52"
+      }
+    },
+    "original_location": {
+      "code": "OUMU1026",
+      "location": "I",
+      "sublocation": "12",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "b0154911ad6b47e0b8a8579fd2bc5ce7",
+    "code": "OUMU1026",
+    "action": "edit"
+  }
+}
