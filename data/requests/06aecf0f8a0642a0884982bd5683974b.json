@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "06aecf0f8a0642a0884982bd5683974b",
+  "saved_at": "2026-11-13T22:23:05.117494+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.3x25",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "112",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "06aecf0f8a0642a0884982bd5683974b",
+    "action": "addition",
+    "code": "CTOR1126",
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "112",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "CTOR1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.3x25",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "06aecf0f8a0642a0884982bd5683974b",
+    "code": "CTOR1126",
+    "action": "addition",
+    "quantity": 60
+  }
+}
