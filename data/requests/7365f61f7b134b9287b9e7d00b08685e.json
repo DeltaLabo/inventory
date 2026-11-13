@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "7365f61f7b134b9287b9e7d00b08685e",
+  "saved_at": "2026-11-13T21:00:12.895250+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2.6x16mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "100",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "7365f61f7b134b9287b9e7d00b08685e",
+    "action": "addition",
+    "code": "ESVZ1126",
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "100",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ESVZ1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2.6x16mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "7365f61f7b134b9287b9e7d00b08685e",
+    "code": "ESVZ1126",
+    "action": "addition",
+    "quantity": 100
+  }
+}
