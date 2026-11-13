@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "f5b37d2a4a9a4a26b488ffec8da3b69a",
+  "saved_at": "2026-11-13T21:36:33.877627+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2.2x6mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "105",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "f5b37d2a4a9a4a26b488ffec8da3b69a",
+    "action": "addition",
+    "code": "TUZR1126",
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "105",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "TUZR1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2.2x6mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "f5b37d2a4a9a4a26b488ffec8da3b69a",
+    "code": "TUZR1126",
+    "action": "addition",
+    "quantity": 100
+  }
+}
