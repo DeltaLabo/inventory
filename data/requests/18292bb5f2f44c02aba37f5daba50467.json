@@ -1,0 +1,62 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "18292bb5f2f44c02aba37f5daba50467",
+  "saved_at": "2026-11-13T19:54:36.025546+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "OUMU1026",
+    "original_item": {
+      "code": "OUMU1026",
+      "type": "connectors",
+      "subtype": "lever wire connector assortment",
+      "manufacturer": "Wago",
+      "model": "221",
+      "description": "Stag 2;3;5-way quick connector",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "LEVERCON"
+    },
+    "updated_item": {
+      "description": "Stag 2;3;5-way quick connector",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Wago",
+      "model": "221",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "Cambio de posicion",
+    "original_stock": null,
+    "updated_stock": null,
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "18292bb5f2f44c02aba37f5daba50467",
+    "action": "edit",
+    "code": "OUMU1026",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "Cambio de posicion",
+    "product_changes": {
+      "type": {
+        "before": "connectors",
+        "after": "Organizador #1"
+      },
+      "subtype": {
+        "before": "lever wire connector assortment",
+        "after": "consumable"
+      }
+    },
+    "stock_changes": {},
+    "original_location": null
+  },
+  "result": {
+    "id": "18292bb5f2f44c02aba37f5daba50467",
+    "code": "OUMU1026",
+    "action": "edit"
+  }
+}
