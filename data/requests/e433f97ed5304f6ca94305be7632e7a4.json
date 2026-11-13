@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e433f97ed5304f6ca94305be7632e7a4",
+  "saved_at": "2026-11-13T16:16:17.754398+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "M4 washers",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 30,
+    "location": "Área de Ensamblaje",
+    "sublocation": "80",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "e433f97ed5304f6ca94305be7632e7a4",
+    "action": "addition",
+    "code": "AVUO1126",
+    "quantity": 30,
+    "location": "Área de Ensamblaje",
+    "sublocation": "80",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "AVUO1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "M4 washers",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "e433f97ed5304f6ca94305be7632e7a4",
+    "code": "AVUO1126",
+    "action": "addition",
+    "quantity": 30
+  }
+}
