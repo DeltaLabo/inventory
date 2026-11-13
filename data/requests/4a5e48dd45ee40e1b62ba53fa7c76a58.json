@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4a5e48dd45ee40e1b62ba53fa7c76a58",
+  "saved_at": "2026-11-13T20:06:39.118537+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Nuts and bolts; M4x8mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "Área de Ensamblaje",
+    "sublocation": "89",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "4a5e48dd45ee40e1b62ba53fa7c76a58",
+    "action": "addition",
+    "code": "UEIH1126",
+    "quantity": 10,
+    "location": "Área de Ensamblaje",
+    "sublocation": "89",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "UEIH1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Nuts and bolts; M4x8mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "4a5e48dd45ee40e1b62ba53fa7c76a58",
+    "code": "UEIH1126",
+    "action": "addition",
+    "quantity": 10
+  }
+}
