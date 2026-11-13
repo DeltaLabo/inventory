@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "78ca6be83ab4401eb489b029c3a221a7",
+  "saved_at": "2026-11-13T21:30:40.811511+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2.2x16mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "103",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "78ca6be83ab4401eb489b029c3a221a7",
+    "action": "addition",
+    "code": "JYCW1126",
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "103",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "JYCW1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2.2x16mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "78ca6be83ab4401eb489b029c3a221a7",
+    "code": "JYCW1126",
+    "action": "addition",
+    "quantity": 100
+  }
+}
