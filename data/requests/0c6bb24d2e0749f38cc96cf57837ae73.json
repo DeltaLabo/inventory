@@ -1,0 +1,93 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "0c6bb24d2e0749f38cc96cf57837ae73",
+  "saved_at": "2026-11-13T20:46:05.059103+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "GJBM1026",
+    "original_item": {
+      "code": "GJBM1026",
+      "type": "hardware",
+      "subtype": "self-tapping screw assortment kit",
+      "manufacturer": "Generic",
+      "model": "LBY-056-2",
+      "description": "LBY Philips Pan Head Self-Tapping Sheetmetal Screw Assortment Kit 600pcs 304 Stainless Steel M3x6/10/16mm M2.6x6/10/16mm M2.2x6/10/16mm M2x6/10/16mm 50pcs Each with Clear Plastic Box",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "M3x16mm",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "LBY-056-2",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "GJBM1026",
+      "location": "J",
+      "sublocation": "20",
+      "units": "2"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "97",
+      "units": "100"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "0c6bb24d2e0749f38cc96cf57837ae73",
+    "action": "edit",
+    "code": "GJBM1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {
+      "description": {
+        "before": "LBY Philips Pan Head Self-Tapping Sheetmetal Screw Assortment Kit 600pcs 304 Stainless Steel M3x6/10/16mm M2.6x6/10/16mm M2.2x6/10/16mm M2x6/10/16mm 50pcs Each with Clear Plastic Box",
+        "after": "M3x16mm"
+      },
+      "type": {
+        "before": "hardware",
+        "after": "Organizador #2"
+      },
+      "subtype": {
+        "before": "self-tapping screw assortment kit",
+        "after": "consumable"
+      }
+    },
+    "stock_changes": {
+      "location": {
+        "before": "J",
+        "after": "Área de Ensamblaje"
+      },
+      "sublocation": {
+        "before": "20",
+        "after": "97"
+      },
+      "units": {
+        "before": "2",
+        "after": "100"
+      }
+    },
+    "original_location": {
+      "code": "GJBM1026",
+      "location": "J",
+      "sublocation": "20",
+      "units": "2"
+    }
+  },
+  "result": {
+    "id": "0c6bb24d2e0749f38cc96cf57837ae73",
+    "code": "GJBM1026",
+    "action": "edit"
+  }
+}
