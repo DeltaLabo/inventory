@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "45b7c99c5e6a47efb83c977d0ec9bbd7",
+  "saved_at": "2026-11-13T22:25:39.170787+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "113",
+    "person": "Maryapz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "45b7c99c5e6a47efb83c977d0ec9bbd7",
+    "action": "addition",
+    "code": "CIDW1126",
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "113",
+    "person": "Maryapz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "CIDW1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "45b7c99c5e6a47efb83c977d0ec9bbd7",
+    "code": "CIDW1126",
+    "action": "addition",
+    "quantity": 60
+  }
+}
