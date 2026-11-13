@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e013f317e1314e0c860b75674c3f2c96",
+  "saved_at": "2026-11-13T21:45:11.227800+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2x6mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "108",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "e013f317e1314e0c860b75674c3f2c96",
+    "action": "addition",
+    "code": "PPBY1126",
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "108",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "PPBY1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2x6mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "e013f317e1314e0c860b75674c3f2c96",
+    "code": "PPBY1126",
+    "action": "addition",
+    "quantity": 100
+  }
+}
