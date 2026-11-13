@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "428c9bae39cd4485a666138e7719879f",
+  "saved_at": "2026-11-13T20:10:13.071433+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Nuts and bolts; M4x12mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "Área de Ensamblaje",
+    "sublocation": "91",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "428c9bae39cd4485a666138e7719879f",
+    "action": "addition",
+    "code": "IIUV1126",
+    "quantity": 10,
+    "location": "Área de Ensamblaje",
+    "sublocation": "91",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "IIUV1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Nuts and bolts; M4x12mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "428c9bae39cd4485a666138e7719879f",
+    "code": "IIUV1126",
+    "action": "addition",
+    "quantity": 10
+  }
+}
