@@ -1,0 +1,76 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "7ac899442c61426aae202d5624adbfc7",
+  "saved_at": "2026-11-13T17:42:06.125208+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "ICAU1026",
+    "original_item": {
+      "code": "ICAU1026",
+      "type": "passives",
+      "subtype": "fuse",
+      "manufacturer": "SIBA",
+      "model": "70 172 40",
+      "description": "FF 500mA/DMI 1000V",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "SIBAFF05"
+    },
+    "updated_item": {
+      "description": "FF 500mA/DMI 1000V",
+      "type": "passives",
+      "subtype": "fuse",
+      "manufacturer": "SIBA",
+      "model": "70 172 40",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "Cambio de posicion",
+    "original_stock": {
+      "code": "ICAU1026",
+      "location": "I",
+      "sublocation": "1",
+      "units": "3"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "88",
+      "units": "3"
+    },
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "7ac899442c61426aae202d5624adbfc7",
+    "action": "edit",
+    "code": "ICAU1026",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "Cambio de posicion",
+    "product_changes": {},
+    "stock_changes": {
+      "location": {
+        "before": "I",
+        "after": "Área de Ensamblaje"
+      },
+      "sublocation": {
+        "before": "1",
+        "after": "88"
+      }
+    },
+    "original_location": {
+      "code": "ICAU1026",
+      "location": "I",
+      "sublocation": "1",
+      "units": "3"
+    }
+  },
+  "result": {
+    "id": "7ac899442c61426aae202d5624adbfc7",
+    "code": "ICAU1026",
+    "action": "edit"
+  }
+}
