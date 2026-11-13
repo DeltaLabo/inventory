@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4baa685e11ee4c0b938ca0f807be29a8",
+  "saved_at": "2026-11-13T22:10:38.350679+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.33x15MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 77,
+    "location": "Área de Ensamblaje",
+    "sublocation": "109",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "4baa685e11ee4c0b938ca0f807be29a8",
+    "action": "addition",
+    "code": "KZGZ1126",
+    "quantity": 77,
+    "location": "Área de Ensamblaje",
+    "sublocation": "109",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "KZGZ1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.33x15MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "4baa685e11ee4c0b938ca0f807be29a8",
+    "code": "KZGZ1126",
+    "action": "addition",
+    "quantity": 77
+  }
+}
