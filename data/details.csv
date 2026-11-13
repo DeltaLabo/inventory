@@ -49,7 +49,7 @@ ZFZG1026,passives,power resistor,DALE,M2228,wirewound power resistor;chassis mou
 NFHV1026,passives,power resistor,DALE,M2205,wirewound power resistor;chassis mount,0.3,RH50,,RESP0R30
 IXAE1026,passives,power resistor,DALE,M21334,wirewound power resistor;chassis mount,0.75,RH50,,RESP0R75
 NPCR1026,passives,PCB resistor,PINGCON,JT1001,PINGCON SAMPLE BOOK,,,,RESBOOK0
-CBUC1026,passives,glass fuse,Unknown,523-4725,fuse for protection/4A/125V,,,,FUSE0239
+CBUC1026,Organizador #1,consumable,Generic,523-4725,fuse for protection/4A/125V,,,,FUSE0239
 YANF1026,Organizador #1,consumable,Unknown,T3.75A 250V,3.75A/250V,,,,FU101000
 ICAU1026,Organizador #1,consumable,SIBA,70 172 40,FF 500mA/DMI 1000V,,,,SIBAFF05
 WTZN1026,passives,ceramic capacitor assortment,Longruner,,multilayer ceramic capacitor kit with 10 values;2 boxes;;includes assorted values of multilayer ceramic capacitors,,,,CAPKIT01
