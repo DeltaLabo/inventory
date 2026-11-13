@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d2877259f6d74e14bf6534fba6ec5f1c",
+  "saved_at": "2026-11-13T20:56:19.837348+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M3x6mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "99",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "d2877259f6d74e14bf6534fba6ec5f1c",
+    "action": "addition",
+    "code": "SNWP1126",
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "99",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SNWP1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M3x6mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "d2877259f6d74e14bf6534fba6ec5f1c",
+    "code": "SNWP1126",
+    "action": "addition",
+    "quantity": 100
+  }
+}
