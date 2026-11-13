@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "86435a602a5343d2af36414337130e0f",
+  "saved_at": "2026-11-13T21:42:08.383319+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2x10mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "107",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "86435a602a5343d2af36414337130e0f",
+    "action": "addition",
+    "code": "NWEV1126",
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "107",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "NWEV1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2x10mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "86435a602a5343d2af36414337130e0f",
+    "code": "NWEV1126",
+    "action": "addition",
+    "quantity": 100
+  }
+}
