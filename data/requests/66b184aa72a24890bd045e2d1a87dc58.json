@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "66b184aa72a24890bd045e2d1a87dc58",
+  "saved_at": "2026-11-13T20:15:58.921974+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Nuts and bolts; M5x16mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "Área de Ensamblaje",
+    "sublocation": "94",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "66b184aa72a24890bd045e2d1a87dc58",
+    "action": "addition",
+    "code": "MMEL1126",
+    "quantity": 10,
+    "location": "Área de Ensamblaje",
+    "sublocation": "94",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "MMEL1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Nuts and bolts; M5x16mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "66b184aa72a24890bd045e2d1a87dc58",
+    "code": "MMEL1126",
+    "action": "addition",
+    "quantity": 10
+  }
+}
