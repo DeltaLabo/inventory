@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "5d1f1a786a1f42d7a6ecfd1eb27a4e09",
+  "saved_at": "2026-11-13T20:08:18.026132+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Nuts and bolts; M5x8mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "Área de Ensamblaje",
+    "sublocation": "90",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "5d1f1a786a1f42d7a6ecfd1eb27a4e09",
+    "action": "addition",
+    "code": "TAWX1126",
+    "quantity": 10,
+    "location": "Área de Ensamblaje",
+    "sublocation": "90",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "TAWX1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Nuts and bolts; M5x8mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "5d1f1a786a1f42d7a6ecfd1eb27a4e09",
+    "code": "TAWX1126",
+    "action": "addition",
+    "quantity": 10
+  }
+}
