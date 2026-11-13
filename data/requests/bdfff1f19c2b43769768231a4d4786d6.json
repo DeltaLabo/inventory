@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "bdfff1f19c2b43769768231a4d4786d6",
+  "saved_at": "2026-11-13T16:33:17.061634+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "M5 washers",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 30,
+    "location": "Área de Ensamblaje",
+    "sublocation": "81",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "bdfff1f19c2b43769768231a4d4786d6",
+    "action": "addition",
+    "code": "DLZD1126",
+    "quantity": 30,
+    "location": "Área de Ensamblaje",
+    "sublocation": "81",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "DLZD1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "M5 washers",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "bdfff1f19c2b43769768231a4d4786d6",
+    "code": "DLZD1126",
+    "action": "addition",
+    "quantity": 30
+  }
+}
