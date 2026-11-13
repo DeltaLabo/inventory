@@ -1,0 +1,62 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "eca0bc30657b41fa86bfd455de77e4f5",
+  "saved_at": "2026-11-13T19:55:37.425264+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "YANF1026",
+    "original_item": {
+      "code": "YANF1026",
+      "type": "passives",
+      "subtype": "glass fuse",
+      "manufacturer": "Unknown",
+      "model": "T3.75A 250V",
+      "description": "3.75A/250V",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "FU101000"
+    },
+    "updated_item": {
+      "description": "3.75A/250V",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Unknown",
+      "model": "T3.75A 250V",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "Cambio de posicion",
+    "original_stock": null,
+    "updated_stock": null,
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "eca0bc30657b41fa86bfd455de77e4f5",
+    "action": "edit",
+    "code": "YANF1026",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "Cambio de posicion",
+    "product_changes": {
+      "type": {
+        "before": "passives",
+        "after": "Organizador #1"
+      },
+      "subtype": {
+        "before": "glass fuse",
+        "after": "consumable"
+      }
+    },
+    "stock_changes": {},
+    "original_location": null
+  },
+  "result": {
+    "id": "eca0bc30657b41fa86bfd455de77e4f5",
+    "code": "YANF1026",
+    "action": "edit"
+  }
+}
