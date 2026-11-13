@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "f0a7d3c973024673b65c736558ac7916",
+  "saved_at": "2026-11-13T21:33:31.459963+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2.2x10mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "104",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "f0a7d3c973024673b65c736558ac7916",
+    "action": "addition",
+    "code": "OFPC1126",
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "104",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "OFPC1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2.2x10mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "f0a7d3c973024673b65c736558ac7916",
+    "code": "OFPC1126",
+    "action": "addition",
+    "quantity": 100
+  }
+}
