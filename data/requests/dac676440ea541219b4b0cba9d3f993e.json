@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "dac676440ea541219b4b0cba9d3f993e",
+  "saved_at": "2026-11-13T21:04:14.256466+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2.6x10mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "101",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "dac676440ea541219b4b0cba9d3f993e",
+    "action": "addition",
+    "code": "YPWC1126",
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "101",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "YPWC1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2.6x10mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "dac676440ea541219b4b0cba9d3f993e",
+    "code": "YPWC1126",
+    "action": "addition",
+    "quantity": 100
+  }
+}
