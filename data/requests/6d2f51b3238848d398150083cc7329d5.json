@@ -1,0 +1,80 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "6d2f51b3238848d398150083cc7329d5",
+  "saved_at": "2026-11-13T16:55:21.579653+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "RHLY1026",
+    "original_item": {
+      "code": "RHLY1026",
+      "type": "PCB accessories",
+      "subtype": "Terminal Connectors",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Borneras",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "FOURPINC"
+    },
+    "updated_item": {
+      "description": "Borneras",
+      "type": "PCB accessories",
+      "subtype": "Terminal Connectors",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "Cambio de posicicon",
+    "original_stock": {
+      "code": "RHLY1026",
+      "location": "I",
+      "sublocation": "8",
+      "units": "4"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "86",
+      "units": "49"
+    },
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "6d2f51b3238848d398150083cc7329d5",
+    "action": "edit",
+    "code": "RHLY1026",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "Cambio de posicicon",
+    "product_changes": {},
+    "stock_changes": {
+      "location": {
+        "before": "I",
+        "after": "Área de Ensamblaje"
+      },
+      "sublocation": {
+        "before": "8",
+        "after": "86"
+      },
+      "units": {
+        "before": "4",
+        "after": "49"
+      }
+    },
+    "original_location": {
+      "code": "RHLY1026",
+      "location": "I",
+      "sublocation": "8",
+      "units": "4"
+    }
+  },
+  "result": {
+    "id": "6d2f51b3238848d398150083cc7329d5",
+    "code": "RHLY1026",
+    "action": "edit"
+  }
+}
