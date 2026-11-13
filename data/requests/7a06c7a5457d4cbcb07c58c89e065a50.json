@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "7a06c7a5457d4cbcb07c58c89e065a50",
+  "saved_at": "2026-11-13T21:38:40.373056+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2x16mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "106",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "7a06c7a5457d4cbcb07c58c89e065a50",
+    "action": "addition",
+    "code": "KJRZ1126",
+    "quantity": 100,
+    "location": "Área de Ensamblaje",
+    "sublocation": "106",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "KJRZ1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Tornillos M2x16mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "7a06c7a5457d4cbcb07c58c89e065a50",
+    "code": "KJRZ1126",
+    "action": "addition",
+    "quantity": 100
+  }
+}
