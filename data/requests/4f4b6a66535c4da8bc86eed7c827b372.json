@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4f4b6a66535c4da8bc86eed7c827b372",
+  "saved_at": "2026-11-13T22:18:40.965401+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.3x2MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "111",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "4f4b6a66535c4da8bc86eed7c827b372",
+    "action": "addition",
+    "code": "LJBX1126",
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "111",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "LJBX1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.3x2MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "4f4b6a66535c4da8bc86eed7c827b372",
+    "code": "LJBX1126",
+    "action": "addition",
+    "quantity": 60
+  }
+}
