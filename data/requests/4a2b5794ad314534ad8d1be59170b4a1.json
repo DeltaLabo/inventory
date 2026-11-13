@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4a2b5794ad314534ad8d1be59170b4a1",
+  "saved_at": "2026-11-13T16:48:34.123895+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "M12 washers",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "Área de Ensamblaje",
+    "sublocation": "85",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "4a2b5794ad314534ad8d1be59170b4a1",
+    "action": "addition",
+    "code": "GWVF1126",
+    "quantity": 10,
+    "location": "Área de Ensamblaje",
+    "sublocation": "85",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "GWVF1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "M12 washers",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "4a2b5794ad314534ad8d1be59170b4a1",
+    "code": "GWVF1126",
+    "action": "addition",
+    "quantity": 10
+  }
+}
