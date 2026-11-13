@@ -1,0 +1,97 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "5a1d83009e7342019a94c3b6037a73c3",
+  "saved_at": "2026-11-13T15:48:40.520608+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "NNAY1026",
+    "original_item": {
+      "code": "NNAY1026",
+      "type": "fasteners",
+      "subtype": "washer assortment",
+      "manufacturer": "",
+      "model": "",
+      "description": "box with assorted pressure washers of different sizes;1 box;;includes washers of 6;8;10;12 mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "WASHSETS"
+    },
+    "updated_item": {
+      "description": "M2 washers",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "Cambio de posicion",
+    "original_stock": {
+      "code": "NNAY1026",
+      "location": "I",
+      "sublocation": "2",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "Organizador #1",
+      "sublocation": "consumable",
+      "units": "100"
+    },
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "5a1d83009e7342019a94c3b6037a73c3",
+    "action": "edit",
+    "code": "NNAY1026",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "Cambio de posicion",
+    "product_changes": {
+      "description": {
+        "before": "box with assorted pressure washers of different sizes;1 box;;includes washers of 6;8;10;12 mm",
+        "after": "M2 washers"
+      },
+      "type": {
+        "before": "fasteners",
+        "after": "Organizador #1"
+      },
+      "subtype": {
+        "before": "washer assortment",
+        "after": "consumable"
+      },
+      "manufacturer": {
+        "before": "",
+        "after": "Generic"
+      }
+    },
+    "stock_changes": {
+      "location": {
+        "before": "I",
+        "after": "Organizador #1"
+      },
+      "sublocation": {
+        "before": "2",
+        "after": "consumable"
+      },
+      "units": {
+        "before": "1",
+        "after": "100"
+      }
+    },
+    "original_location": {
+      "code": "NNAY1026",
+      "location": "I",
+      "sublocation": "2",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "5a1d83009e7342019a94c3b6037a73c3",
+    "code": "NNAY1026",
+    "action": "edit"
+  }
+}
