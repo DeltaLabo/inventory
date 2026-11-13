@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b459ce752e6f43b8ba59f00161aace55",
+  "saved_at": "2026-11-13T20:18:55.856138+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Nuts and bolts; M4x20mm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 8,
+    "location": "Área de Ensamblaje",
+    "sublocation": "95",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "b459ce752e6f43b8ba59f00161aace55",
+    "action": "addition",
+    "code": "IZZA1126",
+    "quantity": 8,
+    "location": "Área de Ensamblaje",
+    "sublocation": "95",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "IZZA1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Nuts and bolts; M4x20mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "b459ce752e6f43b8ba59f00161aace55",
+    "code": "IZZA1126",
+    "action": "addition",
+    "quantity": 8
+  }
+}
