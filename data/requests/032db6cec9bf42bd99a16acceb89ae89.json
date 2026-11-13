@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "032db6cec9bf42bd99a16acceb89ae89",
+  "saved_at": "2026-11-13T16:41:19.091392+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "M8 washers",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 20,
+    "location": "Área de Ensamblaje",
+    "sublocation": "83",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "032db6cec9bf42bd99a16acceb89ae89",
+    "action": "addition",
+    "code": "XKDW1126",
+    "quantity": 20,
+    "location": "Área de Ensamblaje",
+    "sublocation": "83",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "XKDW1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "M8 washers",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "032db6cec9bf42bd99a16acceb89ae89",
+    "code": "XKDW1126",
+    "action": "addition",
+    "quantity": 20
+  }
+}
