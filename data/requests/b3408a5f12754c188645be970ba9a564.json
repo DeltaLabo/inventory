@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b3408a5f12754c188645be970ba9a564",
+  "saved_at": "2026-11-13T20:05:11.141733+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "NTSB1026",
+    "original_item": {
+      "code": "NTSB1026",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Nuts and bolts; M5x12mm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Nuts and bolts; M5x12mm",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "Cambio de posicion",
+    "original_stock": {
+      "code": "NTSB1026",
+      "location": "Área de Ensamblaje",
+      "sublocation": "89",
+      "units": "10"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "92",
+      "units": "10"
+    },
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "b3408a5f12754c188645be970ba9a564",
+    "action": "edit",
+    "code": "NTSB1026",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "Cambio de posicion",
+    "product_changes": {},
+    "stock_changes": {
+      "sublocation": {
+        "before": "89",
+        "after": "92"
+      }
+    },
+    "original_location": {
+      "code": "NTSB1026",
+      "location": "Área de Ensamblaje",
+      "sublocation": "89",
+      "units": "10"
+    }
+  },
+  "result": {
+    "id": "b3408a5f12754c188645be970ba9a564",
+    "code": "NTSB1026",
+    "action": "edit"
+  }
+}
