@@ -1,0 +1,89 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "143a00b9b91e497cb0489602402dab5b",
+  "saved_at": "2026-11-13T19:50:01.975495+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "NTSB1026",
+    "original_item": {
+      "code": "NTSB1026",
+      "type": "hardware",
+      "subtype": "screw and nut assortment kit",
+      "manufacturer": "Generic",
+      "model": "SCREW-KIT-M3-M4-SS-10BOX",
+      "description": "M3 M4 Stainless Steel Socket Head Cap Screw Bolt Assortment Kit with Hex Nuts and Flat Washers, 10-Compartment Clear Plastic Storage Box",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Nuts and bolts; M5x12mm",
+      "type": "hardware",
+      "subtype": "screw and nut assortment kit",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "Cambio de posicion",
+    "original_stock": {
+      "code": "NTSB1026",
+      "location": "I",
+      "sublocation": "20",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "89",
+      "units": "10"
+    },
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "143a00b9b91e497cb0489602402dab5b",
+    "action": "edit",
+    "code": "NTSB1026",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "Cambio de posicion",
+    "product_changes": {
+      "description": {
+        "before": "M3 M4 Stainless Steel Socket Head Cap Screw Bolt Assortment Kit with Hex Nuts and Flat Washers, 10-Compartment Clear Plastic Storage Box",
+        "after": "Nuts and bolts; M5x12mm"
+      },
+      "model": {
+        "before": "SCREW-KIT-M3-M4-SS-10BOX",
+        "after": ""
+      }
+    },
+    "stock_changes": {
+      "location": {
+        "before": "I",
+        "after": "Área de Ensamblaje"
+      },
+      "sublocation": {
+        "before": "20",
+        "after": "89"
+      },
+      "units": {
+        "before": "1",
+        "after": "10"
+      }
+    },
+    "original_location": {
+      "code": "NTSB1026",
+      "location": "I",
+      "sublocation": "20",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "143a00b9b91e497cb0489602402dab5b",
+    "code": "NTSB1026",
+    "action": "edit"
+  }
+}
