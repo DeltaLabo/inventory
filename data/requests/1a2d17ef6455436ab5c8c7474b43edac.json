@@ -1,0 +1,76 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "1a2d17ef6455436ab5c8c7474b43edac",
+  "saved_at": "2026-11-16T18:57:54.759564+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "ISLO1026",
+    "original_item": {
+      "code": "ISLO1026",
+      "type": "DIN accesories",
+      "subtype": "plug-in bridge",
+      "manufacturer": "Allen-Bradley",
+      "model": "1492-WTF3",
+      "description": "Plug-in bridge for terminal blocks  Three circuits",
+      "value": "",
+      "package": "DIN rail compatible",
+      "info": "",
+      "previous_code": "PLUG20F3"
+    },
+    "updated_item": {
+      "description": "Plug-in bridge for terminal blocks  Three circuits",
+      "type": "DIN accesories",
+      "subtype": "plug-in bridge",
+      "manufacturer": "Allen-Bradley",
+      "model": "1492-WTF3",
+      "value": "",
+      "package": "DIN rail compatible",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "ISLO1026",
+      "location": "J",
+      "sublocation": "11",
+      "units": "8"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "134",
+      "units": "8"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "1a2d17ef6455436ab5c8c7474b43edac",
+    "action": "edit",
+    "code": "ISLO1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "location": {
+        "before": "J",
+        "after": "Área de Ensamblaje"
+      },
+      "sublocation": {
+        "before": "11",
+        "after": "134"
+      }
+    },
+    "original_location": {
+      "code": "ISLO1026",
+      "location": "J",
+      "sublocation": "11",
+      "units": "8"
+    }
+  },
+  "result": {
+    "id": "1a2d17ef6455436ab5c8c7474b43edac",
+    "code": "ISLO1026",
+    "action": "edit"
+  }
+}
