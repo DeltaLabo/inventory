@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "977017190c9c420b8aa8fecfd77891be",
+  "saved_at": "2026-11-16T15:09:31.777456+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.6x10MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "124",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "977017190c9c420b8aa8fecfd77891be",
+    "action": "addition",
+    "code": "ZIJY1126",
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "124",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ZIJY1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.6x10MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "977017190c9c420b8aa8fecfd77891be",
+    "code": "ZIJY1126",
+    "action": "addition",
+    "quantity": 60
+  }
+}
