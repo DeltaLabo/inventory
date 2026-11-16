@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "838f37b5e8104b4b9673a521787e212e",
+  "saved_at": "2026-11-16T14:02:09.317794+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resorte 0.4x20MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "116",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "838f37b5e8104b4b9673a521787e212e",
+    "action": "addition",
+    "code": "DNAU1126",
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "116",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "DNAU1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resorte 0.4x20MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "838f37b5e8104b4b9673a521787e212e",
+    "code": "DNAU1126",
+    "action": "addition",
+    "quantity": 60
+  }
+}
