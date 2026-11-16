@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ed4d6f55893244d9915b3d594f986543",
+  "saved_at": "2026-11-16T14:05:28.748742+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.4x25MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "117",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ed4d6f55893244d9915b3d594f986543",
+    "action": "addition",
+    "code": "KXYY1126",
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "117",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "KXYY1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.4x25MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ed4d6f55893244d9915b3d594f986543",
+    "code": "KXYY1126",
+    "action": "addition",
+    "quantity": 60
+  }
+}
