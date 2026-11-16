@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ba66422613d14e44872683d7fda719f8",
+  "saved_at": "2026-11-16T14:11:00.739939+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.4x30MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 59,
+    "location": "Área de Ensamblaje",
+    "sublocation": "118",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ba66422613d14e44872683d7fda719f8",
+    "action": "addition",
+    "code": "LMLI1126",
+    "quantity": 59,
+    "location": "Área de Ensamblaje",
+    "sublocation": "118",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "LMLI1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.4x30MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ba66422613d14e44872683d7fda719f8",
+    "code": "LMLI1126",
+    "action": "addition",
+    "quantity": 59
+  }
+}
