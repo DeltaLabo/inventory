@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "335da005a2aa41da81806dd32fc4fef4",
+  "saved_at": "2026-11-16T14:52:31.708760+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.5x20MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "121",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "335da005a2aa41da81806dd32fc4fef4",
+    "action": "addition",
+    "code": "OYCO1126",
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "121",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "OYCO1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.5x20MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "335da005a2aa41da81806dd32fc4fef4",
+    "code": "OYCO1126",
+    "action": "addition",
+    "quantity": 60
+  }
+}
