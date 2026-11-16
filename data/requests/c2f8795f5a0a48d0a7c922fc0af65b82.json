@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c2f8795f5a0a48d0a7c922fc0af65b82",
+  "saved_at": "2026-11-16T15:40:30.980866+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes0.7x10MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 40,
+    "location": "Área de Ensamblaje",
+    "sublocation": "129",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "c2f8795f5a0a48d0a7c922fc0af65b82",
+    "action": "addition",
+    "code": "KOWW1126",
+    "quantity": 40,
+    "location": "Área de Ensamblaje",
+    "sublocation": "129",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "KOWW1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes0.7x10MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "c2f8795f5a0a48d0a7c922fc0af65b82",
+    "code": "KOWW1126",
+    "action": "addition",
+    "quantity": 40
+  }
+}
