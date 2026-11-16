@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d10cdaf2d53a41df81b7650b52bd4cce",
+  "saved_at": "2026-11-16T13:55:12.548305+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.3x15MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "115",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "d10cdaf2d53a41df81b7650b52bd4cce",
+    "action": "addition",
+    "code": "EBPU1126",
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "115",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "EBPU1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.3x15MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "d10cdaf2d53a41df81b7650b52bd4cce",
+    "code": "EBPU1126",
+    "action": "addition",
+    "quantity": 60
+  }
+}
