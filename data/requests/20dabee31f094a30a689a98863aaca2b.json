@@ -1,0 +1,76 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "20dabee31f094a30a689a98863aaca2b",
+  "saved_at": "2026-11-16T19:44:40.011971+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "ZSVI1026",
+    "original_item": {
+      "code": "ZSVI1026",
+      "type": "panel accessories",
+      "subtype": "mounting bracket",
+      "manufacturer": "Jienk",
+      "model": "X003R8225J",
+      "description": "C45 DIN rail mounting bracket",
+      "value": "",
+      "package": "DIN",
+      "info": "",
+      "previous_code": "MOUNTC45"
+    },
+    "updated_item": {
+      "description": "C45 DIN rail mounting bracket",
+      "type": "panel accessories",
+      "subtype": "mounting bracket",
+      "manufacturer": "Jienk",
+      "model": "X003R8225J",
+      "value": "",
+      "package": "DIN",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "ZSVI1026",
+      "location": "J",
+      "sublocation": "5",
+      "units": "29"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "136",
+      "units": "29"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "20dabee31f094a30a689a98863aaca2b",
+    "action": "edit",
+    "code": "ZSVI1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "location": {
+        "before": "J",
+        "after": "Área de Ensamblaje"
+      },
+      "sublocation": {
+        "before": "5",
+        "after": "136"
+      }
+    },
+    "original_location": {
+      "code": "ZSVI1026",
+      "location": "J",
+      "sublocation": "5",
+      "units": "29"
+    }
+  },
+  "result": {
+    "id": "20dabee31f094a30a689a98863aaca2b",
+    "code": "ZSVI1026",
+    "action": "edit"
+  }
+}
