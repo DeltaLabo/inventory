@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "754f724ee98443af87fd8eb258de2ce1",
+  "saved_at": "2026-11-16T15:45:00.335964+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "UZYW1126",
+    "original_item": {
+      "code": "UZYW1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Resortes",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Corrección",
+    "original_stock": {
+      "code": "UZYW1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "130",
+      "units": "40"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "130",
+      "units": "20"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "754f724ee98443af87fd8eb258de2ce1",
+    "action": "edit",
+    "code": "UZYW1126",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Corrección",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "40",
+        "after": "20"
+      }
+    },
+    "original_location": {
+      "code": "UZYW1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "130",
+      "units": "40"
+    }
+  },
+  "result": {
+    "id": "754f724ee98443af87fd8eb258de2ce1",
+    "code": "UZYW1126",
+    "action": "edit"
+  }
+}
