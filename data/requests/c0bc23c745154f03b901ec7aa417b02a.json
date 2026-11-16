@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c0bc23c745154f03b901ec7aa417b02a",
+  "saved_at": "2026-11-16T15:49:17.910367+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.7x25MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 20,
+    "location": "Área de Ensamblaje",
+    "sublocation": "132",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "c0bc23c745154f03b901ec7aa417b02a",
+    "action": "addition",
+    "code": "LISW1126",
+    "quantity": 20,
+    "location": "Área de Ensamblaje",
+    "sublocation": "132",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "LISW1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.7x25MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "c0bc23c745154f03b901ec7aa417b02a",
+    "code": "LISW1126",
+    "action": "addition",
+    "quantity": 20
+  }
+}
