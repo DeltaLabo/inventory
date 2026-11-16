@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d7de1eb6775d43c799d7d66745b88a48",
+  "saved_at": "2026-11-16T18:50:06.862132+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "UTSB1026",
+    "original_item": {
+      "code": "UTSB1026",
+      "type": "DIN accesories",
+      "subtype": "din rail end support",
+      "manufacturer": "Schneider Electric",
+      "model": "NSYTRAABV35",
+      "description": "End support for DIN rail E/NS 35 N",
+      "value": "",
+      "package": "",
+      "info": "Plastic snap-on",
+      "previous_code": "ENDS35MM"
+    },
+    "updated_item": {
+      "description": "End support for DIN rail E/NS 35 N",
+      "type": "DIN accesories",
+      "subtype": "din rail end support",
+      "manufacturer": "Schneider Electric",
+      "model": "NSYTRAABV35",
+      "value": "",
+      "package": "",
+      "info": "Plastic snap-on"
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "UTSB1026",
+      "location": "J",
+      "sublocation": "9",
+      "units": "8"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "9",
+      "units": "8"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "d7de1eb6775d43c799d7d66745b88a48",
+    "action": "edit",
+    "code": "UTSB1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "location": {
+        "before": "J",
+        "after": "Área de Ensamblaje"
+      }
+    },
+    "original_location": {
+      "code": "UTSB1026",
+      "location": "J",
+      "sublocation": "9",
+      "units": "8"
+    }
+  },
+  "result": {
+    "id": "d7de1eb6775d43c799d7d66745b88a48",
+    "code": "UTSB1026",
+    "action": "edit"
+  }
+}
