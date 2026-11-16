@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "0e02ffbcc4f24fcea8e4de98885a4b71",
+  "saved_at": "2026-11-16T14:49:24.532858+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.5x15MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "120",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "0e02ffbcc4f24fcea8e4de98885a4b71",
+    "action": "addition",
+    "code": "MNEE1126",
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "120",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "MNEE1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.5x15MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "0e02ffbcc4f24fcea8e4de98885a4b71",
+    "code": "MNEE1126",
+    "action": "addition",
+    "quantity": 60
+  }
+}
