@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "6eb304e9eb9648adbc6c070da614a662",
+  "saved_at": "2026-11-16T14:17:36.693026+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.5x10MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "119",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "6eb304e9eb9648adbc6c070da614a662",
+    "action": "addition",
+    "code": "EDHA1126",
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "119",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "EDHA1126",
+      "type": "Organizador #2",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.5x10MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "6eb304e9eb9648adbc6c070da614a662",
+    "code": "EDHA1126",
+    "action": "addition",
+    "quantity": 60
+  }
+}
