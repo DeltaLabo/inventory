@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "f4e0c79b86b1416b8dd0d4848bf8cc5f",
+  "saved_at": "2026-11-16T15:43:28.425919+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 40,
+    "location": "Área de Ensamblaje",
+    "sublocation": "130",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "f4e0c79b86b1416b8dd0d4848bf8cc5f",
+    "action": "addition",
+    "code": "UZYW1126",
+    "quantity": 40,
+    "location": "Área de Ensamblaje",
+    "sublocation": "130",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "UZYW1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "f4e0c79b86b1416b8dd0d4848bf8cc5f",
+    "code": "UZYW1126",
+    "action": "addition",
+    "quantity": 40
+  }
+}
