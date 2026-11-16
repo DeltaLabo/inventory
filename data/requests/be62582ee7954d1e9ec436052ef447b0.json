@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "be62582ee7954d1e9ec436052ef447b0",
+  "saved_at": "2026-11-16T15:27:04.144671+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 40,
+    "location": "Área de Ensamblaje",
+    "sublocation": "126",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "be62582ee7954d1e9ec436052ef447b0",
+    "action": "addition",
+    "code": "GIAV1126",
+    "quantity": 40,
+    "location": "Área de Ensamblaje",
+    "sublocation": "126",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "GIAV1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "be62582ee7954d1e9ec436052ef447b0",
+    "code": "GIAV1126",
+    "action": "addition",
+    "quantity": 40
+  }
+}
