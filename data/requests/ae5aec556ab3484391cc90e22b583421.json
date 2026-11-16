@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ae5aec556ab3484391cc90e22b583421",
+  "saved_at": "2026-11-16T14:57:08.413233+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.5x25MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "122",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ae5aec556ab3484391cc90e22b583421",
+    "action": "addition",
+    "code": "BUTB1126",
+    "quantity": 60,
+    "location": "Área de Ensamblaje",
+    "sublocation": "122",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BUTB1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.5x25MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ae5aec556ab3484391cc90e22b583421",
+    "code": "BUTB1126",
+    "action": "addition",
+    "quantity": 60
+  }
+}
