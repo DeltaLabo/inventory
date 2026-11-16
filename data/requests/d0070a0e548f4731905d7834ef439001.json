@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d0070a0e548f4731905d7834ef439001",
+  "saved_at": "2026-11-16T15:28:27.151601+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.6x25MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 40,
+    "location": "Área de Ensamblaje",
+    "sublocation": "127",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "d0070a0e548f4731905d7834ef439001",
+    "action": "addition",
+    "code": "KEHU1126",
+    "quantity": 40,
+    "location": "Área de Ensamblaje",
+    "sublocation": "127",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "KEHU1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.6x25MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "d0070a0e548f4731905d7834ef439001",
+    "code": "KEHU1126",
+    "action": "addition",
+    "quantity": 40
+  }
+}
