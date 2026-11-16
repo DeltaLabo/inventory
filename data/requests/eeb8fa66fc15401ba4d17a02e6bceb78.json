@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "eeb8fa66fc15401ba4d17a02e6bceb78",
+  "saved_at": "2026-11-16T15:15:50.607291+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.6x15MM",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 40,
+    "location": "Área de Ensamblaje",
+    "sublocation": "125",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "eeb8fa66fc15401ba4d17a02e6bceb78",
+    "action": "addition",
+    "code": "KACI1126",
+    "quantity": 40,
+    "location": "Área de Ensamblaje",
+    "sublocation": "125",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "KACI1126",
+      "type": "Organizador #3",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Resortes 0.6x15MM",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "eeb8fa66fc15401ba4d17a02e6bceb78",
+    "code": "KACI1126",
+    "action": "addition",
+    "quantity": 40
+  }
+}
