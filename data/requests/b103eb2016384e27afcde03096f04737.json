@@ -1,0 +1,76 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b103eb2016384e27afcde03096f04737",
+  "saved_at": "2026-11-16T19:00:44.363574+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "OGSF1026",
+    "original_item": {
+      "code": "OGSF1026",
+      "type": "DIN accesories",
+      "subtype": "ground terminal block",
+      "manufacturer": "Woertz",
+      "model": "3436/4V",
+      "description": "Protective conductor terminal block for DIN rail 35mm",
+      "value": "",
+      "package": "",
+      "info": "DIN rail compatible",
+      "previous_code": "GNDN35MM"
+    },
+    "updated_item": {
+      "description": "Protective conductor terminal block for DIN rail 35mm",
+      "type": "DIN accesories",
+      "subtype": "ground terminal block",
+      "manufacturer": "Woertz",
+      "model": "3436/4V",
+      "value": "",
+      "package": "",
+      "info": "DIN rail compatible"
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "OGSF1026",
+      "location": "J",
+      "sublocation": "12",
+      "units": "2"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "135",
+      "units": "2"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "b103eb2016384e27afcde03096f04737",
+    "action": "edit",
+    "code": "OGSF1026",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "location": {
+        "before": "J",
+        "after": "Área de Ensamblaje"
+      },
+      "sublocation": {
+        "before": "12",
+        "after": "135"
+      }
+    },
+    "original_location": {
+      "code": "OGSF1026",
+      "location": "J",
+      "sublocation": "12",
+      "units": "2"
+    }
+  },
+  "result": {
+    "id": "b103eb2016384e27afcde03096f04737",
+    "code": "OGSF1026",
+    "action": "edit"
+  }
+}
