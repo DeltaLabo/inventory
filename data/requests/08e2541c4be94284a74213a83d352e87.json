@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "08e2541c4be94284a74213a83d352e87",
+  "saved_at": "2026-11-17T21:58:53.342872+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "Temperature",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "waterproof DS18B20 temperature sensors with stainless steel probe and black cable",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 24,
+    "location": "E",
+    "sublocation": "54",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "08e2541c4be94284a74213a83d352e87",
+    "action": "addition",
+    "code": "OWSG1126",
+    "quantity": 24,
+    "location": "E",
+    "sublocation": "54",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "OWSG1126",
+      "type": "sensor",
+      "subtype": "Temperature",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "waterproof DS18B20 temperature sensors with stainless steel probe and black cable",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "08e2541c4be94284a74213a83d352e87",
+    "code": "OWSG1126",
+    "action": "addition",
+    "quantity": 24
+  }
+}
