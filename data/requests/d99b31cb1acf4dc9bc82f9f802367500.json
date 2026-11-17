@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d99b31cb1acf4dc9bc82f9f802367500",
+  "saved_at": "2026-11-17T21:39:23.875991+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "Disipador de calor",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Disipador de calor negro de aluminio con aletas",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 56,
+    "location": "C",
+    "sublocation": "13",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "d99b31cb1acf4dc9bc82f9f802367500",
+    "action": "addition",
+    "code": "QASA1126",
+    "quantity": 56,
+    "location": "C",
+    "sublocation": "13",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QASA1126",
+      "type": "Accessories",
+      "subtype": "Disipador de calor",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Disipador de calor negro de aluminio con aletas",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "d99b31cb1acf4dc9bc82f9f802367500",
+    "code": "QASA1126",
+    "action": "addition",
+    "quantity": 56
+  }
+}
