@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "bea07592c04146cdb2cd77d9c509b407",
+  "saved_at": "2026-11-17T21:46:21.578621+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "DIN accesories",
+      "subtype": "Riel DIN",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Rieles DIN fijos de 20cm, metálicos dorados",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 36,
+    "location": "J",
+    "sublocation": "27",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "bea07592c04146cdb2cd77d9c509b407",
+    "action": "addition",
+    "code": "YYEG1126",
+    "quantity": 36,
+    "location": "J",
+    "sublocation": "27",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "YYEG1126",
+      "type": "DIN accesories",
+      "subtype": "Riel DIN",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Rieles DIN fijos de 20cm, metálicos dorados",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "bea07592c04146cdb2cd77d9c509b407",
+    "code": "YYEG1126",
+    "action": "addition",
+    "quantity": 36
+  }
+}
