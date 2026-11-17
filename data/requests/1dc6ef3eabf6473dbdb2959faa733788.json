@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "1dc6ef3eabf6473dbdb2959faa733788",
+  "saved_at": "2026-11-17T22:05:30.236453+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "Temperature",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "termistores NTC B3950,MF52B con cable",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 16,
+    "location": "E",
+    "sublocation": "55",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "1dc6ef3eabf6473dbdb2959faa733788",
+    "action": "addition",
+    "code": "GCRO1126",
+    "quantity": 16,
+    "location": "E",
+    "sublocation": "55",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "GCRO1126",
+      "type": "sensor",
+      "subtype": "Temperature",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "termistores NTC B3950,MF52B con cable",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "1dc6ef3eabf6473dbdb2959faa733788",
+    "code": "GCRO1126",
+    "action": "addition",
+    "quantity": 16
+  }
+}
