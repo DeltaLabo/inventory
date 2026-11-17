@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "caa9e4f2375e44498ceec101c5470214",
+  "saved_at": "2026-11-17T22:12:18.781197+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "temperature humidity",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "módulos sensor 843_1 con pines VIN, GND, SCL, SDA, placa negra pequeña con agujeros de montaje",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 15,
+    "location": "E",
+    "sublocation": "56",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "caa9e4f2375e44498ceec101c5470214",
+    "action": "addition",
+    "code": "AHPV1126",
+    "quantity": 15,
+    "location": "E",
+    "sublocation": "56",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "AHPV1126",
+      "type": "sensor",
+      "subtype": "temperature humidity",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "módulos sensor 843_1 con pines VIN, GND, SCL, SDA, placa negra pequeña con agujeros de montaje",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "caa9e4f2375e44498ceec101c5470214",
+    "code": "AHPV1126",
+    "action": "addition",
+    "quantity": 15
+  }
+}
