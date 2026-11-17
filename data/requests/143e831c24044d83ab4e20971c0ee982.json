@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "143e831c24044d83ab4e20971c0ee982",
+  "saved_at": "2026-11-17T20:39:38.251423+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "BMMD1126",
+    "original_item": {
+      "code": "BMMD1126",
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conector tipo Banana (Hembra) Pequeño Rojo / Conector tipo Banana (Hembra) Pequeño Negro",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Conector tipo Banana (Hembra) Pequeño Rojo / Conector tipo Banana (Hembra) Pequeño Negro",
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "Actualización",
+    "original_stock": {
+      "code": "BMMD1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "61",
+      "units": "227"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "61",
+      "units": "1000"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "143e831c24044d83ab4e20971c0ee982",
+    "action": "edit",
+    "code": "BMMD1126",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "Actualización",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "227",
+        "after": "1000"
+      }
+    },
+    "original_location": {
+      "code": "BMMD1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "61",
+      "units": "227"
+    }
+  },
+  "result": {
+    "id": "143e831c24044d83ab4e20971c0ee982",
+    "code": "BMMD1126",
+    "action": "edit"
+  }
+}
