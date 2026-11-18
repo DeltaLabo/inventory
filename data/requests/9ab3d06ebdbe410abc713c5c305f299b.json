@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "9ab3d06ebdbe410abc713c5c305f299b",
+  "saved_at": "2026-11-18T14:03:56.795101+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conectores  XT30 macho",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 24,
+    "location": "Área de Ensamblaje",
+    "sublocation": "138",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "9ab3d06ebdbe410abc713c5c305f299b",
+    "action": "addition",
+    "code": "IVBP1126",
+    "quantity": 24,
+    "location": "Área de Ensamblaje",
+    "sublocation": "138",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "IVBP1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conectores  XT30 macho",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "9ab3d06ebdbe410abc713c5c305f299b",
+    "code": "IVBP1126",
+    "action": "addition",
+    "quantity": 24
+  }
+}
