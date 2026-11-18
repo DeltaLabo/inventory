@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "2866c9a4ebae439da6d1b8cce134a8f1",
+  "saved_at": "2026-11-18T13:59:48.893076+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conectores XT30 hembra",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 24,
+    "location": "Área de Ensamblaje",
+    "sublocation": "137",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "2866c9a4ebae439da6d1b8cce134a8f1",
+    "action": "addition",
+    "code": "YJJW1126",
+    "quantity": 24,
+    "location": "Área de Ensamblaje",
+    "sublocation": "137",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "YJJW1126",
+      "type": "Organizador #1",
+      "subtype": "consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conectores XT30 hembra",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "2866c9a4ebae439da6d1b8cce134a8f1",
+    "code": "YJJW1126",
+    "action": "addition",
+    "quantity": 24
+  }
+}
