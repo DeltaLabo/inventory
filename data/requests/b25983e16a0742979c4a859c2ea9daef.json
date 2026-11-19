@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b25983e16a0742979c4a859c2ea9daef",
+  "saved_at": "2026-11-19T17:32:32.112988+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "BNYK1026",
+    "original_item": {
+      "code": "BNYK1026",
+      "type": "fasteners",
+      "subtype": "cable glands",
+      "manufacturer": "",
+      "model": "",
+      "description": "Kit with cable glands (water sealers) class IP68 size PG16 PG13.5 PG11 PG9 PG7",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "CABLEGLA"
+    },
+    "updated_item": {
+      "description": "Kit with cable glands (water sealers) class IP68 size PG16 PG13.5 PG11 PG9 PG7",
+      "type": "fasteners",
+      "subtype": "cable glands",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "cambio de cantidad",
+    "original_stock": {
+      "code": "BNYK1026",
+      "location": "J",
+      "sublocation": "3",
+      "units": "52"
+    },
+    "updated_stock": {
+      "location": "J",
+      "sublocation": "3",
+      "units": "97"
+    },
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "b25983e16a0742979c4a859c2ea9daef",
+    "action": "edit",
+    "code": "BNYK1026",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "cambio de cantidad",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "52",
+        "after": "97"
+      }
+    },
+    "original_location": {
+      "code": "BNYK1026",
+      "location": "J",
+      "sublocation": "3",
+      "units": "52"
+    }
+  },
+  "result": {
+    "id": "b25983e16a0742979c4a859c2ea9daef",
+    "code": "BNYK1026",
+    "action": "edit"
+  }
+}
