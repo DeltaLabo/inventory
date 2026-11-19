@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "1edc77c92a364647bd4fa7360705943a",
+  "saved_at": "2026-11-19T17:58:50.382538+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "Temperature Probe",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Sonda de temperatura de acero inoxidable con rosca de montaje, vaina corta y prensaestopa M12x1.5 en la parte superior",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 4,
+    "location": "E",
+    "sublocation": "57",
+    "person": "kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "1edc77c92a364647bd4fa7360705943a",
+    "action": "addition",
+    "code": "QMUP1126",
+    "quantity": 4,
+    "location": "E",
+    "sublocation": "57",
+    "person": "kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QMUP1126",
+      "type": "sensor",
+      "subtype": "Temperature Probe",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Sonda de temperatura de acero inoxidable con rosca de montaje, vaina corta y prensaestopa M12x1.5 en la parte superior",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "1edc77c92a364647bd4fa7360705943a",
+    "code": "QMUP1126",
+    "action": "addition",
+    "quantity": 4
+  }
+}
