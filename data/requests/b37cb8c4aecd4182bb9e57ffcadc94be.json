@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b37cb8c4aecd4182bb9e57ffcadc94be",
+  "saved_at": "2026-11-19T19:25:14.804635+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Bearing",
+      "subtype": "Deep Groove Ball Bearing",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Caja Surtida de Rodamientos de Bolas - Acero Cromado",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "23",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "b37cb8c4aecd4182bb9e57ffcadc94be",
+    "action": "addition",
+    "code": "LSNC1126",
+    "quantity": 1,
+    "location": "I",
+    "sublocation": "23",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "LSNC1126",
+      "type": "Bearing",
+      "subtype": "Deep Groove Ball Bearing",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Caja Surtida de Rodamientos de Bolas - Acero Cromado",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "b37cb8c4aecd4182bb9e57ffcadc94be",
+    "code": "LSNC1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
