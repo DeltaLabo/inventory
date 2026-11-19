@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "84ec8f70b8a74e0fb6fecc70c8fd7deb",
+  "saved_at": "2026-11-19T19:48:34.961504+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "Thermistor NTC",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Lote de sensores de temperatura tipo cartucho / vaina de acero inoxidable con cable negro y conector blanco JST-XH de 2 pines",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 39,
+    "location": "E",
+    "sublocation": "59",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "84ec8f70b8a74e0fb6fecc70c8fd7deb",
+    "action": "addition",
+    "code": "ICFS1126",
+    "quantity": 39,
+    "location": "E",
+    "sublocation": "59",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "ICFS1126",
+      "type": "sensor",
+      "subtype": "Thermistor NTC",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Lote de sensores de temperatura tipo cartucho / vaina de acero inoxidable con cable negro y conector blanco JST-XH de 2 pines",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "84ec8f70b8a74e0fb6fecc70c8fd7deb",
+    "code": "ICFS1126",
+    "action": "addition",
+    "quantity": 39
+  }
+}
