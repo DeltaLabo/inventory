@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c360ea8397294b53b3055dbd0397801d",
+  "saved_at": "2026-11-19T20:55:06.409926+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "magnet",
+      "subtype": "neodymium",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Lote de imanes de neodimio en forma de anillo",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 12,
+    "location": "I",
+    "sublocation": "24",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "c360ea8397294b53b3055dbd0397801d",
+    "action": "addition",
+    "code": "RHFD1126",
+    "quantity": 12,
+    "location": "I",
+    "sublocation": "24",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "RHFD1126",
+      "type": "magnet",
+      "subtype": "neodymium",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Lote de imanes de neodimio en forma de anillo",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "c360ea8397294b53b3055dbd0397801d",
+    "code": "RHFD1126",
+    "action": "addition",
+    "quantity": 12
+  }
+}
