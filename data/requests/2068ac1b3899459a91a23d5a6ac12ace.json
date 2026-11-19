@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "2068ac1b3899459a91a23d5a6ac12ace",
+  "saved_at": "2026-11-19T17:35:29.225363+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "storage & organization",
+      "subtype": "Boxes",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Cajitas",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 10,
+    "location": "J",
+    "sublocation": "28",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "2068ac1b3899459a91a23d5a6ac12ace",
+    "action": "addition",
+    "code": "TRDB1126",
+    "quantity": 10,
+    "location": "J",
+    "sublocation": "28",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "TRDB1126",
+      "type": "storage & organization",
+      "subtype": "Boxes",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Cajitas",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "2068ac1b3899459a91a23d5a6ac12ace",
+    "code": "TRDB1126",
+    "action": "addition",
+    "quantity": 10
+  }
+}
