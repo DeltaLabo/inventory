@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "799938c85b9d44dfb7ec20dec30060a1",
+  "saved_at": "2026-11-19T16:25:47.185531+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Interruptor rojo  (4 pines)",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 50,
+    "location": "Área de Ensamblaje",
+    "sublocation": "139",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "799938c85b9d44dfb7ec20dec30060a1",
+    "action": "addition",
+    "code": "RCUD1126",
+    "quantity": 50,
+    "location": "Área de Ensamblaje",
+    "sublocation": "139",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "RCUD1126",
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Interruptor rojo  (4 pines)",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "799938c85b9d44dfb7ec20dec30060a1",
+    "code": "RCUD1126",
+    "action": "addition",
+    "quantity": 50
+  }
+}
