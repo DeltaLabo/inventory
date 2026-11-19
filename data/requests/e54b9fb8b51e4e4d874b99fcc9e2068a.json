@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e54b9fb8b51e4e4d874b99fcc9e2068a",
+  "saved_at": "2026-11-19T21:10:33.496161+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "electronic modules",
+      "subtype": "MOSFET Switch",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo interruptor electrónico de alta corriente con MOSFET de potencia, placa PCB negra compacta con 2 terminales de cobre de alta corriente",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 20,
+    "location": "D",
+    "sublocation": "28",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "e54b9fb8b51e4e4d874b99fcc9e2068a",
+    "action": "addition",
+    "code": "UTSJ1126",
+    "quantity": 20,
+    "location": "D",
+    "sublocation": "28",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "UTSJ1126",
+      "type": "electronic modules",
+      "subtype": "MOSFET Switch",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo interruptor electrónico de alta corriente con MOSFET de potencia, placa PCB negra compacta con 2 terminales de cobre de alta corriente",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "e54b9fb8b51e4e4d874b99fcc9e2068a",
+    "code": "UTSJ1126",
+    "action": "addition",
+    "quantity": 20
+  }
+}
