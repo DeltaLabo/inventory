@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "909241533ac4425faba6f01f8ec838d3",
+  "saved_at": "2026-11-19T16:53:57.425847+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "IAJN1126",
+    "original_item": {
+      "code": "IAJN1126",
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Conector de entrada de alimentacion",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Conector de entrada de alimentacion",
+      "type": "Organizador Blanco #1",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "Cantidad",
+    "original_stock": {
+      "code": "IAJN1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "50",
+      "units": "19"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "50",
+      "units": "60"
+    },
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "909241533ac4425faba6f01f8ec838d3",
+    "action": "edit",
+    "code": "IAJN1126",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "Cantidad",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "19",
+        "after": "60"
+      }
+    },
+    "original_location": {
+      "code": "IAJN1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "50",
+      "units": "19"
+    }
+  },
+  "result": {
+    "id": "909241533ac4425faba6f01f8ec838d3",
+    "code": "IAJN1126",
+    "action": "edit"
+  }
+}
