@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "420f9d5ee34241ee86431d44637422e3",
+  "saved_at": "2026-11-23T21:40:57.648852+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "BMFO1126",
+    "original_item": {
+      "code": "BMFO1126",
+      "type": "Accessories",
+      "subtype": "Heat Exchanger / Water Cooling Block",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Heat exchanger / Intercambiador de calor, aluminum water cooling block in white box",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Heat exchanger / Intercambiador de calor, aluminum water cooling block in white box",
+      "type": "Accessories",
+      "subtype": "Heat Exchanger / Water Cooling Block",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Marypaz Mora Zamora",
+    "reason": "cambio de cantidad",
+    "original_stock": {
+      "code": "BMFO1126",
+      "location": "J",
+      "sublocation": "25",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "J",
+      "sublocation": "25",
+      "units": "4"
+    },
+    "assistant_id": "JJL38"
+  },
+  "request": {
+    "id": "420f9d5ee34241ee86431d44637422e3",
+    "action": "edit",
+    "code": "BMFO1126",
+    "person": "Marypaz Mora Zamora",
+    "assistant_id": "JJL38",
+    "reason": "cambio de cantidad",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "4"
+      }
+    },
+    "original_location": {
+      "code": "BMFO1126",
+      "location": "J",
+      "sublocation": "25",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "420f9d5ee34241ee86431d44637422e3",
+    "code": "BMFO1126",
+    "action": "edit"
+  }
+}
