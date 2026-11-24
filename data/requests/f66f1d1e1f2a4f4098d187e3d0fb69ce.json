@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "f66f1d1e1f2a4f4098d187e3d0fb69ce",
+  "saved_at": "2026-11-24T21:43:20.295056+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Electronic",
+      "subtype": "Conector / Fitting de Agua",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Pack de 6 fittings metálicos G1/4 macho a espiga para manguera, con O-ring azul, para conexión de agua / enfriamiento líquido",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 6,
+    "location": "T",
+    "sublocation": "16",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "f66f1d1e1f2a4f4098d187e3d0fb69ce",
+    "action": "addition",
+    "code": "KZQS1126",
+    "quantity": 6,
+    "location": "T",
+    "sublocation": "16",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "KZQS1126",
+      "type": "Electronic",
+      "subtype": "Conector / Fitting de Agua",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Pack de 6 fittings metálicos G1/4 macho a espiga para manguera, con O-ring azul, para conexión de agua / enfriamiento líquido",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "f66f1d1e1f2a4f4098d187e3d0fb69ce",
+    "code": "KZQS1126",
+    "action": "addition",
+    "quantity": 6
+  }
+}
