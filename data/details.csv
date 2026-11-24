@@ -522,3 +522,4 @@ VDQT1126,Communication Module,CAN Bus Transceiver,Generic,,Módulo transceptor C
 BZXN1126,Communication Module,LoRa Radio,Generic,,"Módulo de radio LoRa de largo alcance en placa PCB azul Adafruit con blindaje metálico plateado, pines de conexión SPI y antena integrada en placa",,,,
 EXNP1126,Electronic,Solenoid Valve,Generic,,"Electroválvula solenoide Humphrey 120V 50/60Hz, 0-125 PSI, uso intermitente",,,,
 LOCY1126,Electronic,Solenoid Valve,Generic,,"Electroválvula solenoide de latón 2 vías NC AD06-02B-A, 120V/60Hz - 220V/50Hz, 16W, 0-0.15MPa",,,,
+CPNR1126,Motor,Gearbox Motor,Generic,,"Motor DC con caja reductora Greartisan ZGA37RG31.61, DC 12V, salida 100 RPM, motor ZYTD520 3000r/min, No A6207",,,,

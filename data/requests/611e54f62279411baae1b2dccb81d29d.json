@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "611e54f62279411baae1b2dccb81d29d",
+  "saved_at": "2026-11-24T20:42:07.242025+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Motor",
+      "subtype": "Gearbox Motor",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Motor DC con caja reductora Greartisan ZGA37RG31.61, DC 12V, salida 100 RPM, motor ZYTD520 3000r/min, No A6207",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "6",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "611e54f62279411baae1b2dccb81d29d",
+    "action": "addition",
+    "code": "CPNR1126",
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "6",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "CPNR1126",
+      "type": "Motor",
+      "subtype": "Gearbox Motor",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Motor DC con caja reductora Greartisan ZGA37RG31.61, DC 12V, salida 100 RPM, motor ZYTD520 3000r/min, No A6207",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "611e54f62279411baae1b2dccb81d29d",
+    "code": "CPNR1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
