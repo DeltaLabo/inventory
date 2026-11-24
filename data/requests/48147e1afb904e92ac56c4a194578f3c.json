@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "48147e1afb904e92ac56c4a194578f3c",
+  "saved_at": "2026-11-24T21:19:23.916127+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Electronic",
+      "subtype": "Water Pump",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Bomba de agua sumergible DC sin escobillas ZC-T40, DC 12V 1.05A 12.6W, Zhongchuang, con rosca entrada/salida",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "13",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "48147e1afb904e92ac56c4a194578f3c",
+    "action": "addition",
+    "code": "VZVC1126",
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "13",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "VZVC1126",
+      "type": "Electronic",
+      "subtype": "Water Pump",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Bomba de agua sumergible DC sin escobillas ZC-T40, DC 12V 1.05A 12.6W, Zhongchuang, con rosca entrada/salida",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "48147e1afb904e92ac56c4a194578f3c",
+    "code": "VZVC1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
