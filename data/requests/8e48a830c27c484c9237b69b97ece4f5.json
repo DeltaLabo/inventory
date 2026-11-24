@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "8e48a830c27c484c9237b69b97ece4f5",
+  "saved_at": "2026-11-24T21:29:12.591332+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Electronic",
+      "subtype": "Válvula Solenoide / Sensor de Flujo",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Ensamble de válvula solenoide de agua plástica blanca NC con bobina + sensor de flujo de agua negro con acoples de manguera, cable 3 pines",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "15",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "8e48a830c27c484c9237b69b97ece4f5",
+    "action": "addition",
+    "code": "WRSF1126",
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "15",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "WRSF1126",
+      "type": "Electronic",
+      "subtype": "Válvula Solenoide / Sensor de Flujo",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Ensamble de válvula solenoide de agua plástica blanca NC con bobina + sensor de flujo de agua negro con acoples de manguera, cable 3 pines",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "8e48a830c27c484c9237b69b97ece4f5",
+    "code": "WRSF1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
