@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "62765e4046df4ec4856043202dacf0f7",
+  "saved_at": "2026-11-24T14:34:20.391925+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "Water Flow",
+      "manufacturer": "Generic",
+      "model": "YF-S201",
+      "description": "Sensor de flujo de agua YF-S201 con conexiones de bronce",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "T",
+    "sublocation": "1",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "62765e4046df4ec4856043202dacf0f7",
+    "action": "addition",
+    "code": "INFX1126",
+    "quantity": 2,
+    "location": "T",
+    "sublocation": "1",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "INFX1126",
+      "type": "sensor",
+      "subtype": "Water Flow",
+      "manufacturer": "Generic",
+      "model": "YF-S201",
+      "description": "Sensor de flujo de agua YF-S201 con conexiones de bronce",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "62765e4046df4ec4856043202dacf0f7",
+    "code": "INFX1126",
+    "action": "addition",
+    "quantity": 2
+  }
+}
