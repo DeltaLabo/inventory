@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "674eb06721064165b5ad92f8434cdf7e",
+  "saved_at": "2026-11-24T21:01:45.095383+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Electronic",
+      "subtype": "Disipador de Calor / Heatsink",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Disipador de calor de aluminio negro anodizado, tipo aleta, rectangular",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "9",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "674eb06721064165b5ad92f8434cdf7e",
+    "action": "addition",
+    "code": "BJQO1126",
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "9",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BJQO1126",
+      "type": "Electronic",
+      "subtype": "Disipador de Calor / Heatsink",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Disipador de calor de aluminio negro anodizado, tipo aleta, rectangular",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "674eb06721064165b5ad92f8434cdf7e",
+    "code": "BJQO1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
