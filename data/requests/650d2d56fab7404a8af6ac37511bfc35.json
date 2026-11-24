@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "650d2d56fab7404a8af6ac37511bfc35",
+  "saved_at": "2026-11-24T15:20:45.325074+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "EPSI1026",
+    "original_item": {
+      "code": "EPSI1026",
+      "type": "sensor board",
+      "subtype": "joystick module",
+      "manufacturer": "",
+      "model": "",
+      "description": "joystick module for Arduino projects;1 piece;;includes X-Y axis control and push button",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "JOYSTCK1"
+    },
+    "updated_item": {
+      "description": "joystick module for Arduino projects;1 piece;;includes X-Y axis control and push button",
+      "type": "sensor board",
+      "subtype": "joystick module",
+      "manufacturer": "",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "Cambio de cantidad",
+    "original_stock": {
+      "code": "EPSI1026",
+      "location": "E",
+      "sublocation": "24",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "E",
+      "sublocation": "24",
+      "units": "3"
+    },
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "650d2d56fab7404a8af6ac37511bfc35",
+    "action": "edit",
+    "code": "EPSI1026",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "Cambio de cantidad",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "3"
+      }
+    },
+    "original_location": {
+      "code": "EPSI1026",
+      "location": "E",
+      "sublocation": "24",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "650d2d56fab7404a8af6ac37511bfc35",
+    "code": "EPSI1026",
+    "action": "edit"
+  }
+}
