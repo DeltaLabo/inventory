@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "d58a953f96ed40fd924dcff74a239e8f",
+  "saved_at": "2026-11-24T21:40:34.113001+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor board",
+      "subtype": "Módulo de Sensores / ADC",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "módulo de 4 canales de sensores de temperatura / adquisición analógica con salida SPI./ Módulo de 4 canales de entrada para sensores, con borneras +/- por canal 0-3, interfaz SPI SCK/SDO/CS, alimentación 5V, PCB verde",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "60",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "d58a953f96ed40fd924dcff74a239e8f",
+    "action": "addition",
+    "code": "SNVR1126",
+    "quantity": 1,
+    "location": "E",
+    "sublocation": "60",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "SNVR1126",
+      "type": "sensor board",
+      "subtype": "Módulo de Sensores / ADC",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "módulo de 4 canales de sensores de temperatura / adquisición analógica con salida SPI./ Módulo de 4 canales de entrada para sensores, con borneras +/- por canal 0-3, interfaz SPI SCK/SDO/CS, alimentación 5V, PCB verde",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "d58a953f96ed40fd924dcff74a239e8f",
+    "code": "SNVR1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
