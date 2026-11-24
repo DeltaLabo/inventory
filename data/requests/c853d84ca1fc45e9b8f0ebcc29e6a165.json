@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "c853d84ca1fc45e9b8f0ebcc29e6a165",
+  "saved_at": "2026-11-24T20:50:56.480708+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Electronic",
+      "subtype": "Bridge Rectifier",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Puente rectificador BDL50-10, 50A 1000V, carcasa metálica con 4 terminales Faston, + / - / AC / AC",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "8",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "c853d84ca1fc45e9b8f0ebcc29e6a165",
+    "action": "addition",
+    "code": "RMMR1126",
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "8",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "RMMR1126",
+      "type": "Electronic",
+      "subtype": "Bridge Rectifier",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Puente rectificador BDL50-10, 50A 1000V, carcasa metálica con 4 terminales Faston, + / - / AC / AC",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "c853d84ca1fc45e9b8f0ebcc29e6a165",
+    "code": "RMMR1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
