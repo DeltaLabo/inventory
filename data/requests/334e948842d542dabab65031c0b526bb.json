@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "334e948842d542dabab65031c0b526bb",
+  "saved_at": "2026-11-24T14:46:18.747592+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Electronic",
+      "subtype": "Water Pump",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Bomba de agua DC 12V sumergible IP68, Hmax 4-6M, Qmax 600-800L/H, con conexiones de bronce",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "T",
+    "sublocation": "3",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "334e948842d542dabab65031c0b526bb",
+    "action": "addition",
+    "code": "DDSW1126",
+    "quantity": 2,
+    "location": "T",
+    "sublocation": "3",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "DDSW1126",
+      "type": "Electronic",
+      "subtype": "Water Pump",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Bomba de agua DC 12V sumergible IP68, Hmax 4-6M, Qmax 600-800L/H, con conexiones de bronce",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "334e948842d542dabab65031c0b526bb",
+    "code": "DDSW1126",
+    "action": "addition",
+    "quantity": 2
+  }
+}
