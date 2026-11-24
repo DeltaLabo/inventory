@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "fbf1d00b770a43c8a8b1afed72d8217f",
+  "saved_at": "2026-11-24T15:14:38.504728+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "AFTZ1026",
+    "original_item": {
+      "code": "AFTZ1026",
+      "type": "development board",
+      "subtype": "Arduino Mega",
+      "manufacturer": "ARDUINO",
+      "model": "Arduino Mega 2560 Rev3",
+      "description": "Microcontroller dev board based on the ATmega2560",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": "ARDMEGA3"
+    },
+    "updated_item": {
+      "description": "Microcontroller dev board based on the ATmega2560",
+      "type": "development board",
+      "subtype": "Arduino Mega",
+      "manufacturer": "ARDUINO",
+      "model": "Arduino Mega 2560 Rev3",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "cambio de cantidad",
+    "original_stock": {
+      "code": "AFTZ1026",
+      "location": "R",
+      "sublocation": "1",
+      "units": "1"
+    },
+    "updated_stock": {
+      "location": "R",
+      "sublocation": "1",
+      "units": "6"
+    },
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "fbf1d00b770a43c8a8b1afed72d8217f",
+    "action": "edit",
+    "code": "AFTZ1026",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "cambio de cantidad",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "1",
+        "after": "6"
+      }
+    },
+    "original_location": {
+      "code": "AFTZ1026",
+      "location": "R",
+      "sublocation": "1",
+      "units": "1"
+    }
+  },
+  "result": {
+    "id": "fbf1d00b770a43c8a8b1afed72d8217f",
+    "code": "AFTZ1026",
+    "action": "edit"
+  }
+}
