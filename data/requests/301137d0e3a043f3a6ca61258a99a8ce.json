@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "301137d0e3a043f3a6ca61258a99a8ce",
+  "saved_at": "2026-11-24T21:08:30.038951+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Electronic",
+      "subtype": "Water Pump",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Bomba de agua sumergible 15W multifuncional, con protección anti-seco, alta eficiencia, bajo ruido, CE, en caja",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "11",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "301137d0e3a043f3a6ca61258a99a8ce",
+    "action": "addition",
+    "code": "QWZS1126",
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "11",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QWZS1126",
+      "type": "Electronic",
+      "subtype": "Water Pump",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Bomba de agua sumergible 15W multifuncional, con protección anti-seco, alta eficiencia, bajo ruido, CE, en caja",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "301137d0e3a043f3a6ca61258a99a8ce",
+    "code": "QWZS1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
