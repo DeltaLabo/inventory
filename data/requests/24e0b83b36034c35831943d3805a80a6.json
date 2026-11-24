@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "24e0b83b36034c35831943d3805a80a6",
+  "saved_at": "2026-11-24T14:38:56.790189+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Motor",
+      "subtype": "DC",
+      "manufacturer": "",
+      "model": "12V 3000RPM",
+      "description": "motor DC 12V 3000 RPM con encoder.",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "2",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "24e0b83b36034c35831943d3805a80a6",
+    "action": "addition",
+    "code": "IEYH1126",
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "2",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "IEYH1126",
+      "type": "Motor",
+      "subtype": "DC",
+      "manufacturer": "",
+      "model": "12V 3000RPM",
+      "description": "motor DC 12V 3000 RPM con encoder.",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "24e0b83b36034c35831943d3805a80a6",
+    "code": "IEYH1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
