@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ccfde05b2e6e4b35b54abbc7230f894b",
+  "saved_at": "2026-11-24T20:46:56.362770+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Electronic",
+      "subtype": "Power Transformer",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Transformador de poder LP-433, entrada 120V AC, salida bajo voltaje AC, núcleo EI con base metálica",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "7",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ccfde05b2e6e4b35b54abbc7230f894b",
+    "action": "addition",
+    "code": "BMZX1126",
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "7",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BMZX1126",
+      "type": "Electronic",
+      "subtype": "Power Transformer",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Transformador de poder LP-433, entrada 120V AC, salida bajo voltaje AC, núcleo EI con base metálica",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ccfde05b2e6e4b35b54abbc7230f894b",
+    "code": "BMZX1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
