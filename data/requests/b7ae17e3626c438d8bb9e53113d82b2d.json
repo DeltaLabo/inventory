@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "b7ae17e3626c438d8bb9e53113d82b2d",
+  "saved_at": "2026-11-24T21:11:14.242865+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Electronic",
+      "subtype": "Ventilador / Cooling Fan",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo doble de ventiladores axiales DC 12V 120mm, marco negro con rejilla metálica cromada, cables rojo/negro/amarillo, montados en par",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "12",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "b7ae17e3626c438d8bb9e53113d82b2d",
+    "action": "addition",
+    "code": "JEGT1126",
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "12",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "JEGT1126",
+      "type": "Electronic",
+      "subtype": "Ventilador / Cooling Fan",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo doble de ventiladores axiales DC 12V 120mm, marco negro con rejilla metálica cromada, cables rojo/negro/amarillo, montados en par",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "b7ae17e3626c438d8bb9e53113d82b2d",
+    "code": "JEGT1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
