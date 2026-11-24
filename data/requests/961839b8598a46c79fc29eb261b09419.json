@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "961839b8598a46c79fc29eb261b09419",
+  "saved_at": "2026-11-24T20:22:00.514399+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Electronic",
+      "subtype": "Solenoid Valve",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Electroválvula solenoide Humphrey 120V 50/60Hz, 0-125 PSI, uso intermitente",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "4",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "961839b8598a46c79fc29eb261b09419",
+    "action": "addition",
+    "code": "EXNP1126",
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "4",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "EXNP1126",
+      "type": "Electronic",
+      "subtype": "Solenoid Valve",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Electroválvula solenoide Humphrey 120V 50/60Hz, 0-125 PSI, uso intermitente",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "961839b8598a46c79fc29eb261b09419",
+    "code": "EXNP1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}

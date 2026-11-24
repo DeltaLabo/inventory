@@ -520,3 +520,4 @@ DDSW1126,Electronic,Water Pump,Generic,,"Bomba de agua DC 12V sumergible IP68, H
 JSMN1126,Motors,Brushless Outrunner,Generic,,"Motor brushless sin escobillas tipo outrunner con carcasa de aluminio color naranja y plateado, eje metálico y cables trifásicos",,,,
 VDQT1126,Communication Module,CAN Bus Transceiver,Generic,,Módulo transceptor CAN Bus en placa PCB azul pequeña con bornera azul de 2 pines para bus CAN y pines de conexión lógica de 4 pines,,,,
 BZXN1126,Communication Module,LoRa Radio,Generic,,"Módulo de radio LoRa de largo alcance en placa PCB azul Adafruit con blindaje metálico plateado, pines de conexión SPI y antena integrada en placa",,,,
+EXNP1126,Electronic,Solenoid Valve,Generic,,"Electroválvula solenoide Humphrey 120V 50/60Hz, 0-125 PSI, uso intermitente",,,,
