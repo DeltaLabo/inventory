@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "27e0370d75634c6eb00f605ca839e0b2",
+  "saved_at": "2026-11-24T19:57:43.555605+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Communication Module",
+      "subtype": "LoRa Radio",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo de radio LoRa de largo alcance en placa PCB azul Adafruit con blindaje metálico plateado, pines de conexión SPI y antena integrada en placa",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 3,
+    "location": "A",
+    "sublocation": "17",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "27e0370d75634c6eb00f605ca839e0b2",
+    "action": "addition",
+    "code": "BZXN1126",
+    "quantity": 3,
+    "location": "A",
+    "sublocation": "17",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "BZXN1126",
+      "type": "Communication Module",
+      "subtype": "LoRa Radio",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo de radio LoRa de largo alcance en placa PCB azul Adafruit con blindaje metálico plateado, pines de conexión SPI y antena integrada en placa",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "27e0370d75634c6eb00f605ca839e0b2",
+    "code": "BZXN1126",
+    "action": "addition",
+    "quantity": 3
+  }
+}
