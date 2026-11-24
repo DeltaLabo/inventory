@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "681d98f8bbce457b9b3315ffab9ab5ef",
+  "saved_at": "2026-11-24T20:34:17.524230+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Electronic",
+      "subtype": "Solenoid Valve",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Electroválvula solenoide de latón 2 vías NC AD06-02B-A, 120V/60Hz - 220V/50Hz, 16W, 0-0.15MPa",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "5",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "681d98f8bbce457b9b3315ffab9ab5ef",
+    "action": "addition",
+    "code": "LOCY1126",
+    "quantity": 1,
+    "location": "T",
+    "sublocation": "5",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "LOCY1126",
+      "type": "Electronic",
+      "subtype": "Solenoid Valve",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Electroválvula solenoide de latón 2 vías NC AD06-02B-A, 120V/60Hz - 220V/50Hz, 16W, 0-0.15MPa",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "681d98f8bbce457b9b3315ffab9ab5ef",
+    "code": "LOCY1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
