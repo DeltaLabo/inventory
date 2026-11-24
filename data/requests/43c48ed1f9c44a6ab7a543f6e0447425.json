@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "43c48ed1f9c44a6ab7a543f6e0447425",
+  "saved_at": "2026-11-24T19:45:38.899240+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Motors",
+      "subtype": "Brushless Outrunner",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Motor brushless sin escobillas tipo outrunner con carcasa de aluminio color naranja y plateado, eje metálico y cables trifásicos",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "C",
+    "sublocation": "14",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "43c48ed1f9c44a6ab7a543f6e0447425",
+    "action": "addition",
+    "code": "JSMN1126",
+    "quantity": 1,
+    "location": "C",
+    "sublocation": "14",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "JSMN1126",
+      "type": "Motors",
+      "subtype": "Brushless Outrunner",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Motor brushless sin escobillas tipo outrunner con carcasa de aluminio color naranja y plateado, eje metálico y cables trifásicos",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "43c48ed1f9c44a6ab7a543f6e0447425",
+    "code": "JSMN1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
