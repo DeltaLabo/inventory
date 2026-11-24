@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "618df0975ae5410aa04af81d61650dc3",
+  "saved_at": "2026-11-24T21:23:07.306943+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Electronic",
+      "subtype": "Accesorio de Cableado / Cable Management",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Canaleta ranurada para cables en PVC gris azulado, tipo U con tapa, con ranuras laterales y agujeros de montaje",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 5,
+    "location": "T",
+    "sublocation": "14",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "618df0975ae5410aa04af81d61650dc3",
+    "action": "addition",
+    "code": "TJNI1126",
+    "quantity": 5,
+    "location": "T",
+    "sublocation": "14",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "TJNI1126",
+      "type": "Electronic",
+      "subtype": "Accesorio de Cableado / Cable Management",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Canaleta ranurada para cables en PVC gris azulado, tipo U con tapa, con ranuras laterales y agujeros de montaje",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "618df0975ae5410aa04af81d61650dc3",
+    "code": "TJNI1126",
+    "action": "addition",
+    "quantity": 5
+  }
+}
