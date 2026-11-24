@@ -518,3 +518,4 @@ INFX1126,sensor,Water Flow,Generic,YF-S201,Sensor de flujo de agua YF-S201 con c
 IEYH1126,Motor,DC,,12V 3000RPM,motor DC 12V 3000 RPM con encoder.,,,,
 DDSW1126,Electronic,Water Pump,Generic,,"Bomba de agua DC 12V sumergible IP68, Hmax 4-6M, Qmax 600-800L/H, con conexiones de bronce",,,,
 JSMN1126,Motors,Brushless Outrunner,Generic,,"Motor brushless sin escobillas tipo outrunner con carcasa de aluminio color naranja y plateado, eje metálico y cables trifásicos",,,,
+VDQT1126,Communication Module,CAN Bus Transceiver,Generic,,Módulo transceptor CAN Bus en placa PCB azul pequeña con bornera azul de 2 pines para bus CAN y pines de conexión lógica de 4 pines,,,,

@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "9cae86e115c744ff853aadee4d0280ad",
+  "saved_at": "2026-11-24T19:50:54.923784+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Communication Module",
+      "subtype": "CAN Bus Transceiver",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo transceptor CAN Bus en placa PCB azul pequeña con bornera azul de 2 pines para bus CAN y pines de conexión lógica de 4 pines",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "A",
+    "sublocation": "16",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "9cae86e115c744ff853aadee4d0280ad",
+    "action": "addition",
+    "code": "VDQT1126",
+    "quantity": 2,
+    "location": "A",
+    "sublocation": "16",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "VDQT1126",
+      "type": "Communication Module",
+      "subtype": "CAN Bus Transceiver",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo transceptor CAN Bus en placa PCB azul pequeña con bornera azul de 2 pines para bus CAN y pines de conexión lógica de 4 pines",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "9cae86e115c744ff853aadee4d0280ad",
+    "code": "VDQT1126",
+    "action": "addition",
+    "quantity": 2
+  }
+}
