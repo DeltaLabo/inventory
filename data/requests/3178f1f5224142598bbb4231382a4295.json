@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "3178f1f5224142598bbb4231382a4295",
+  "saved_at": "2026-11-25T19:46:07.231046+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "IMU",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo sensor IMU ICM-20948 en placa PCB negra pequeña con pines de conexión SPI",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "A",
+    "sublocation": "22",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "3178f1f5224142598bbb4231382a4295",
+    "action": "addition",
+    "code": "LKUA1126",
+    "quantity": 2,
+    "location": "A",
+    "sublocation": "22",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "LKUA1126",
+      "type": "sensor",
+      "subtype": "IMU",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo sensor IMU ICM-20948 en placa PCB negra pequeña con pines de conexión SPI",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "3178f1f5224142598bbb4231382a4295",
+    "code": "LKUA1126",
+    "action": "addition",
+    "quantity": 2
+  }
+}
