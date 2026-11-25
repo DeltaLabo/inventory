@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "143e09b756e044b59b7cf284543f518f",
+  "saved_at": "2026-11-25T20:08:32.834391+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "radio accessories",
+      "subtype": "antenna",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Antena flexible tipo sticker negra de Seeed Studio con cable coaxial negro delgado y conector dorado U.FL",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "F",
+    "sublocation": "20",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "143e09b756e044b59b7cf284543f518f",
+    "action": "addition",
+    "code": "KWDN1126",
+    "quantity": 1,
+    "location": "F",
+    "sublocation": "20",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "KWDN1126",
+      "type": "radio accessories",
+      "subtype": "antenna",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Antena flexible tipo sticker negra de Seeed Studio con cable coaxial negro delgado y conector dorado U.FL",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "143e09b756e044b59b7cf284543f518f",
+    "code": "KWDN1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
