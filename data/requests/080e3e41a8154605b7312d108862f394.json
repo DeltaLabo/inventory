@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "080e3e41a8154605b7312d108862f394",
+  "saved_at": "2026-11-25T14:38:05.148783+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "CZOU1126",
+    "original_item": {
+      "code": "CZOU1126",
+      "type": "sensor",
+      "subtype": "Sensor de Corriente",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo sensor de corriente DC en placa PCB azul con resistencia shunt R100, bornera verde de 2 pines para medición y pines de conexión I2C",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Módulo sensor de corriente DC en placa PCB azul con resistencia shunt R100, bornera verde de 2 pines para medición y pines de conexión I2C",
+      "type": "sensor",
+      "subtype": "Sensor de Corriente",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "cambio de cantidad",
+    "original_stock": {
+      "code": "CZOU1126",
+      "location": "E",
+      "sublocation": "61",
+      "units": "2"
+    },
+    "updated_stock": {
+      "location": "E",
+      "sublocation": "61",
+      "units": "3"
+    },
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "080e3e41a8154605b7312d108862f394",
+    "action": "edit",
+    "code": "CZOU1126",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "cambio de cantidad",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "2",
+        "after": "3"
+      }
+    },
+    "original_location": {
+      "code": "CZOU1126",
+      "location": "E",
+      "sublocation": "61",
+      "units": "2"
+    }
+  },
+  "result": {
+    "id": "080e3e41a8154605b7312d108862f394",
+    "code": "CZOU1126",
+    "action": "edit"
+  }
+}
