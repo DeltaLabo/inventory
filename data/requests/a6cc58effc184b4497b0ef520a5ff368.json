@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "a6cc58effc184b4497b0ef520a5ff368",
+  "saved_at": "2026-11-25T15:43:23.684643+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Módulo de Relé",
+      "subtype": "Relé de 2 Canales",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo de 2 relés en placa PCB negra con 2 relés negros HUIKE, borneras azules de 3 pines para salida y pines de control con LEDs indicadores y optoacopladores",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "A",
+    "sublocation": "20",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "a6cc58effc184b4497b0ef520a5ff368",
+    "action": "addition",
+    "code": "QPCQ1126",
+    "quantity": 1,
+    "location": "A",
+    "sublocation": "20",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QPCQ1126",
+      "type": "Módulo de Relé",
+      "subtype": "Relé de 2 Canales",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo de 2 relés en placa PCB negra con 2 relés negros HUIKE, borneras azules de 3 pines para salida y pines de control con LEDs indicadores y optoacopladores",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "a6cc58effc184b4497b0ef520a5ff368",
+    "code": "QPCQ1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}

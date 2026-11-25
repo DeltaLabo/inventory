@@ -538,3 +538,4 @@ GJDY1126,sensor,IMU,Generic,,"Módulo sensor IMU de 6 ejes en placa PCB azul peq
 IBRP1126,led display modules,LED de Alta Potencia,Generic,,"LED de alta potencia blanco en encapsulado redondo metálico con lente plástica transparente y punto amarillo fosforescente central, con 2 terminales laterales de soldadura",,,,
 CZOU1126,sensor,Sensor de Corriente,Generic,,"Módulo sensor de corriente DC en placa PCB azul con resistencia shunt R100, bornera verde de 2 pines para medición y pines de conexión I2C",,,,
 KNLI1126,battery,Batería LiPo,Shenzhen Lixiang,,Batería de polímero de litio,,,,
+QPCQ1126,Módulo de Relé,Relé de 2 Canales,Generic,,"Módulo de 2 relés en placa PCB negra con 2 relés negros HUIKE, borneras azules de 3 pines para salida y pines de control con LEDs indicadores y optoacopladores",,,,
