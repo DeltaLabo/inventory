@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "f8205391b44445f6a9af071da00841b9",
+  "saved_at": "2026-11-25T15:55:51.810525+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "storage & organization",
+      "subtype": "Calibration Weights",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Juego de 2 pesas de calibración cilíndricas de acero inoxidable de 1g, 2g, 5g, 10g, 20g, 50g, 100g",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "J",
+    "sublocation": "29",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "f8205391b44445f6a9af071da00841b9",
+    "action": "addition",
+    "code": "MNWT1126",
+    "quantity": 1,
+    "location": "J",
+    "sublocation": "29",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "MNWT1126",
+      "type": "storage & organization",
+      "subtype": "Calibration Weights",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Juego de 2 pesas de calibración cilíndricas de acero inoxidable de 1g, 2g, 5g, 10g, 20g, 50g, 100g",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "f8205391b44445f6a9af071da00841b9",
+    "code": "MNWT1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
