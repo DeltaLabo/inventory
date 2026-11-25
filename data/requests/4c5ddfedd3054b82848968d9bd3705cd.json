@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "4c5ddfedd3054b82848968d9bd3705cd",
+  "saved_at": "2026-11-25T14:02:29.330280+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "actuator",
+      "subtype": "servo",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Servomotor estándar de carcasa plástica negra con engranajes metálicos, cable de 3 hilos y brazo / horn circular negro instalado",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 5,
+    "location": "A",
+    "sublocation": "18",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "4c5ddfedd3054b82848968d9bd3705cd",
+    "action": "addition",
+    "code": "LBAX1126",
+    "quantity": 5,
+    "location": "A",
+    "sublocation": "18",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "LBAX1126",
+      "type": "actuator",
+      "subtype": "servo",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Servomotor estándar de carcasa plástica negra con engranajes metálicos, cable de 3 hilos y brazo / horn circular negro instalado",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "4c5ddfedd3054b82848968d9bd3705cd",
+    "code": "LBAX1126",
+    "action": "addition",
+    "quantity": 5
+  }
+}
