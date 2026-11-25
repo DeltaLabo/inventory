@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ac7b1b1272914fa980a7388838cc960d",
+  "saved_at": "2026-11-25T15:13:08.266790+00:00",
+  "submission": {
+    "action": "edit",
+    "code": "XWQB1126",
+    "original_item": {
+      "code": "XWQB1126",
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Switches / Protector para riel DIN",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    },
+    "updated_item": {
+      "description": "Switches / Protector para riel DIN",
+      "type": "Organizador Blanco #2",
+      "subtype": "Consumable",
+      "manufacturer": "Generic",
+      "model": "",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "person": "Kevin Ramírez Ugarte",
+    "reason": "cambio cantidad",
+    "original_stock": {
+      "code": "XWQB1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "66",
+      "units": "23"
+    },
+    "updated_stock": {
+      "location": "Área de Ensamblaje",
+      "sublocation": "66",
+      "units": "12"
+    },
+    "assistant_id": "YZQ01"
+  },
+  "request": {
+    "id": "ac7b1b1272914fa980a7388838cc960d",
+    "action": "edit",
+    "code": "XWQB1126",
+    "person": "Kevin Ramírez Ugarte",
+    "assistant_id": "YZQ01",
+    "reason": "cambio cantidad",
+    "product_changes": {},
+    "stock_changes": {
+      "units": {
+        "before": "23",
+        "after": "12"
+      }
+    },
+    "original_location": {
+      "code": "XWQB1126",
+      "location": "Área de Ensamblaje",
+      "sublocation": "66",
+      "units": "23"
+    }
+  },
+  "result": {
+    "id": "ac7b1b1272914fa980a7388838cc960d",
+    "code": "XWQB1126",
+    "action": "edit"
+  }
+}
