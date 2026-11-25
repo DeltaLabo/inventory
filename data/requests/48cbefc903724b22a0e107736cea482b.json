@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "48cbefc903724b22a0e107736cea482b",
+  "saved_at": "2026-11-25T19:19:13.728874+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Microcontrolador",
+      "subtype": "Placa de Desarrollo - ESP32",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Placa de desarrollo mini Seeed Studio XIAO ESP32-S3 en PCB negra pequeña con puerto USB-C, shield metálico blanco con logo Seeed Studio y conector dorado de antena U.FL",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 3,
+    "location": "A",
+    "sublocation": "21",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "48cbefc903724b22a0e107736cea482b",
+    "action": "addition",
+    "code": "PHMS1126",
+    "quantity": 3,
+    "location": "A",
+    "sublocation": "21",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "PHMS1126",
+      "type": "Microcontrolador",
+      "subtype": "Placa de Desarrollo - ESP32",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Placa de desarrollo mini Seeed Studio XIAO ESP32-S3 en PCB negra pequeña con puerto USB-C, shield metálico blanco con logo Seeed Studio y conector dorado de antena U.FL",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "48cbefc903724b22a0e107736cea482b",
+    "code": "PHMS1126",
+    "action": "addition",
+    "quantity": 3
+  }
+}

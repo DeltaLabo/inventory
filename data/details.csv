@@ -540,3 +540,4 @@ CZOU1126,sensor,Sensor de Corriente,Generic,,"Módulo sensor de corriente DC en 
 KNLI1126,battery,Batería LiPo,Shenzhen Lixiang,,Batería de polímero de litio,,,,
 QPCQ1126,Módulo de Relé,Relé de 2 Canales,Generic,,"Módulo de 2 relés en placa PCB negra con 2 relés negros HUIKE, borneras azules de 3 pines para salida y pines de control con LEDs indicadores y optoacopladores",,,,
 MNWT1126,storage & organization,Calibration Weights,Generic,,"Juego de 2 pesas de calibración cilíndricas de acero inoxidable de 1g, 2g, 5g, 10g, 20g, 50g, 100g",,,,
+PHMS1126,Microcontrolador,Placa de Desarrollo - ESP32,Generic,,"Placa de desarrollo mini Seeed Studio XIAO ESP32-S3 en PCB negra pequeña con puerto USB-C, shield metálico blanco con logo Seeed Studio y conector dorado de antena U.FL",,,,
