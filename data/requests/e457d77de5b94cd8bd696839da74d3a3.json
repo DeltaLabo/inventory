@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "e457d77de5b94cd8bd696839da74d3a3",
+  "saved_at": "2026-11-25T14:27:17.840778+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "led display modules",
+      "subtype": "LED de Alta Potencia",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "LED de alta potencia blanco en encapsulado redondo metálico con lente plástica transparente y punto amarillo fosforescente central, con 2 terminales laterales de soldadura",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 100,
+    "location": "R",
+    "sublocation": "15",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "e457d77de5b94cd8bd696839da74d3a3",
+    "action": "addition",
+    "code": "IBRP1126",
+    "quantity": 100,
+    "location": "R",
+    "sublocation": "15",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "IBRP1126",
+      "type": "led display modules",
+      "subtype": "LED de Alta Potencia",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "LED de alta potencia blanco en encapsulado redondo metálico con lente plástica transparente y punto amarillo fosforescente central, con 2 terminales laterales de soldadura",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "e457d77de5b94cd8bd696839da74d3a3",
+    "code": "IBRP1126",
+    "action": "addition",
+    "quantity": 100
+  }
+}
