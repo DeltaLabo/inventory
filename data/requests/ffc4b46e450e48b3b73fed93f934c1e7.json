@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ffc4b46e450e48b3b73fed93f934c1e7",
+  "saved_at": "2026-11-25T14:06:31.602594+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "sensor",
+      "subtype": "IMU",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo sensor IMU de 6 ejes en placa PCB azul pequeña con chip central negro y pines de conexión I2C, con marcaje de ejes X / Y",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 2,
+    "location": "A",
+    "sublocation": "19",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ffc4b46e450e48b3b73fed93f934c1e7",
+    "action": "addition",
+    "code": "GJDY1126",
+    "quantity": 2,
+    "location": "A",
+    "sublocation": "19",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "GJDY1126",
+      "type": "sensor",
+      "subtype": "IMU",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo sensor IMU de 6 ejes en placa PCB azul pequeña con chip central negro y pines de conexión I2C, con marcaje de ejes X / Y",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ffc4b46e450e48b3b73fed93f934c1e7",
+    "code": "GJDY1126",
+    "action": "addition",
+    "quantity": 2
+  }
+}
