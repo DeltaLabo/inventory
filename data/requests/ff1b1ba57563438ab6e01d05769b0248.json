@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "ff1b1ba57563438ab6e01d05769b0248",
+  "saved_at": "2026-11-25T15:31:03.785444+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "battery",
+      "subtype": "Batería LiPo",
+      "manufacturer": "Shenzhen Lixiang",
+      "model": "",
+      "description": "Batería de polímero de litio",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "S",
+    "sublocation": "11",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "ff1b1ba57563438ab6e01d05769b0248",
+    "action": "addition",
+    "code": "KNLI1126",
+    "quantity": 1,
+    "location": "S",
+    "sublocation": "11",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "KNLI1126",
+      "type": "battery",
+      "subtype": "Batería LiPo",
+      "manufacturer": "Shenzhen Lixiang",
+      "model": "",
+      "description": "Batería de polímero de litio",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "ff1b1ba57563438ab6e01d05769b0248",
+    "code": "KNLI1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}

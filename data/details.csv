@@ -537,3 +537,4 @@ LBAX1126,actuator,servo,Generic,,"Servomotor estándar de carcasa plástica negr
 GJDY1126,sensor,IMU,Generic,,"Módulo sensor IMU de 6 ejes en placa PCB azul pequeña con chip central negro y pines de conexión I2C, con marcaje de ejes X / Y",,,,
 IBRP1126,led display modules,LED de Alta Potencia,Generic,,"LED de alta potencia blanco en encapsulado redondo metálico con lente plástica transparente y punto amarillo fosforescente central, con 2 terminales laterales de soldadura",,,,
 CZOU1126,sensor,Sensor de Corriente,Generic,,"Módulo sensor de corriente DC en placa PCB azul con resistencia shunt R100, bornera verde de 2 pines para medición y pines de conexión I2C",,,,
+KNLI1126,battery,Batería LiPo,Shenzhen Lixiang,,Batería de polímero de litio,,,,
