@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "a428f95449964ebba4e01c3771c0cabf",
+  "saved_at": "2026-11-26T15:42:23.116686+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "electronic modules",
+      "subtype": "Módulo GNSS RTK de Alta Precisión",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo GPS RTK u-blox ZED-F9P en placa PCB negra URTK-1.1 con chip de metal plateado, conector SMA dorado para antena, conector U.FL RF1",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "29",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "a428f95449964ebba4e01c3771c0cabf",
+    "action": "addition",
+    "code": "KDAD1126",
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "29",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "KDAD1126",
+      "type": "electronic modules",
+      "subtype": "Módulo GNSS RTK de Alta Precisión",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Módulo GPS RTK u-blox ZED-F9P en placa PCB negra URTK-1.1 con chip de metal plateado, conector SMA dorado para antena, conector U.FL RF1",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "a428f95449964ebba4e01c3771c0cabf",
+    "code": "KDAD1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
