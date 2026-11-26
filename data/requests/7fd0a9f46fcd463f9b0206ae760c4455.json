@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "7fd0a9f46fcd463f9b0206ae760c4455",
+  "saved_at": "2026-11-26T15:46:20.529048+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "electronic modules",
+      "subtype": "Módulo de Cámara",
+      "manufacturer": "ArduCam",
+      "model": "",
+      "description": "Módulo de cámara Raspberry Pi Camera en placa PCB verde pequeña con lente negro circular al centro y cable plano flexible blanco tipo FFC / CSI",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "30",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "7fd0a9f46fcd463f9b0206ae760c4455",
+    "action": "addition",
+    "code": "HKFB1126",
+    "quantity": 1,
+    "location": "D",
+    "sublocation": "30",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "HKFB1126",
+      "type": "electronic modules",
+      "subtype": "Módulo de Cámara",
+      "manufacturer": "ArduCam",
+      "model": "",
+      "description": "Módulo de cámara Raspberry Pi Camera en placa PCB verde pequeña con lente negro circular al centro y cable plano flexible blanco tipo FFC / CSI",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "7fd0a9f46fcd463f9b0206ae760c4455",
+    "code": "HKFB1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}

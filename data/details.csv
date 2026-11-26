@@ -544,3 +544,4 @@ PHMS1126,Microcontrolador,Placa de Desarrollo - ESP32,Generic,,"Placa de desarro
 LKUA1126,sensor,IMU,Generic,,Módulo sensor IMU ICM-20948 en placa PCB negra pequeña con pines de conexión SPI,,,,
 KWDN1126,radio accessories,antenna,Generic,,Antena flexible tipo sticker negra de Seeed Studio con cable coaxial negro delgado y conector dorado U.FL,,,,
 KDAD1126,electronic modules,Módulo GNSS RTK de Alta Precisión,Generic,,"Módulo GPS RTK u-blox ZED-F9P en placa PCB negra URTK-1.1 con chip de metal plateado, conector SMA dorado para antena, conector U.FL RF1",,,,
+HKFB1126,electronic modules,Módulo de Cámara,ArduCam,,Módulo de cámara Raspberry Pi Camera en placa PCB verde pequeña con lente negro circular al centro y cable plano flexible blanco tipo FFC / CSI,,,,
