@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "63aad6702ee945eda2b073ffb3a866d0",
+  "saved_at": "2026-11-26T15:51:03.912263+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "Accessories",
+      "subtype": "Cable FFC",
+      "manufacturer": "Arducam",
+      "model": "",
+      "description": "Cable plano flexible naranja tipo FFC de Arducam con contactos dorados en ambos extremos, modelo UC-376",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 1,
+    "location": "H",
+    "sublocation": "25",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "63aad6702ee945eda2b073ffb3a866d0",
+    "action": "addition",
+    "code": "QNAF1126",
+    "quantity": 1,
+    "location": "H",
+    "sublocation": "25",
+    "person": "Kevin",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "QNAF1126",
+      "type": "Accessories",
+      "subtype": "Cable FFC",
+      "manufacturer": "Arducam",
+      "model": "",
+      "description": "Cable plano flexible naranja tipo FFC de Arducam con contactos dorados en ambos extremos, modelo UC-376",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "63aad6702ee945eda2b073ffb3a866d0",
+    "code": "QNAF1126",
+    "action": "addition",
+    "quantity": 1
+  }
+}
