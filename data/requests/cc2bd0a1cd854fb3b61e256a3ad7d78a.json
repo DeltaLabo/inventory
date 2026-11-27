@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "applied",
+  "id": "cc2bd0a1cd854fb3b61e256a3ad7d78a",
+  "saved_at": "2026-11-27T16:13:30.978548+00:00",
+  "submission": {
+    "action": "addition",
+    "item": {
+      "type": "DIN accesories",
+      "subtype": "Riel DIN",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Riel DIN metálico perforado 35mm, acero zincado dorado, con 8 ranuras ovaladas de montaje, tramo aprox 15cm",
+      "value": "",
+      "package": "",
+      "info": ""
+    },
+    "quantity": 60,
+    "location": "J",
+    "sublocation": "30",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null
+  },
+  "request": {
+    "id": "cc2bd0a1cd854fb3b61e256a3ad7d78a",
+    "action": "addition",
+    "code": "FNLT1126",
+    "quantity": 60,
+    "location": "J",
+    "sublocation": "30",
+    "person": "Marypaz",
+    "project": "",
+    "existing_code": null,
+    "item": {
+      "code": "FNLT1126",
+      "type": "DIN accesories",
+      "subtype": "Riel DIN",
+      "manufacturer": "Generic",
+      "model": "",
+      "description": "Riel DIN metálico perforado 35mm, acero zincado dorado, con 8 ranuras ovaladas de montaje, tramo aprox 15cm",
+      "value": "",
+      "package": "",
+      "info": "",
+      "previous_code": ""
+    }
+  },
+  "result": {
+    "id": "cc2bd0a1cd854fb3b61e256a3ad7d78a",
+    "code": "FNLT1126",
+    "action": "addition",
+    "quantity": 60
+  }
+}
